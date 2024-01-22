@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles This Week</title>
+
+
+    
+
+<link href="CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header"></header>
+  
+  <ul class="navigation">
+   <li><a href="index.html" class="active"title="Home">Home</a></li>
+  <li><a href="#" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~1 What is Flex Box? ~</p>
+  <img src="Articles/2024/1-Flexbox/1-What-Is-Flexbox/Flexbox-Logo-Raw.png" width="293" height="296" class="responsiveImage" >
+  
+  <p>&nbsp;</p>
+<h1>What is Flexbox?</h1>
+    <p class="LeftPMidBlack">Flexbox was introduced in October of 2017. It is the latest  and greatest way of positioning things on a web page. It makes things easier to  layout and it is completely responsive.</p>
+    <p class="LeftPMidBlack">With flexbox you start out with a container in your layout  and then you can position everything within it.</p>
+    <p class="LeftPMidBlack">Flexbox layout works very well for small-scale layouts, but  a <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">grid</a> layout may work better for larger scale layouts.</p>
+    <p class="LeftPMidBlack">&nbsp;</p>
+    <h1>A little of the basics and terminology</h1>
+    <p class="LeftPMidBlack">Flexbox comes with a whole slew of properties straight out  of the box and ready to be used. Some of these are intended to be used on the  container, where your layout objects will reside, and some of them will go on  the smaller child elements inside of the container.</p>
+    <p class="LeftPMidBlack">&nbsp;</p>
+    <p class="LeftPMidBlack">First, we might need to visualize exactly what we are  working with, when our program is deciphering this Flexbox object.</p>
+    <p class="LeftPMidBlack">Items can be laid out in two different ways. It can follow  the main axis (from main-start to main-end)</p>
+    <img src="Articles/2024/1-Flexbox/1-What-Is-Flexbox/Images/1.png" width="585" height="268" class="wideImg">
+<p class="LeftPMidBlack">&nbsp;</p>
+    <p class="LeftPMidBlack">…OR, the Cross axis (from cross-start to cross-end)</p>
+    <img src="Articles/2024/1-Flexbox/1-What-Is-Flexbox/Images/2.png" width="707" height="262" class="wideImg">
+<p class="LeftPMidBlack">&nbsp;</p>
+    <p class="LeftPMidBlack"><strong>main axis-</strong> The main axis of the flex container is the  primary axis, where the flex items are laid out. But beware, it is not always  horizontal. The main axis will depend on the flex-direction property (explained  below).</p>
+    <p class="LeftPMidBlack">&nbsp;</p>
+    <img src="Articles/2024/1-Flexbox/1-What-Is-Flexbox/Images/3.png" width="728" height="244" class="wideImg">
+<p class="LeftPMidBlack">&nbsp;</p>
+    <p class="LeftPMidBlack"><strong>main-start | main-end –</strong> The flex items are put into  the container starting from main-start and going to main-end.</p>
+    <img src="Articles/2024/1-Flexbox/1-What-Is-Flexbox/Images/4.png" width="585" height="268" class="wideImg">
+<p class="LeftPMidBlack">&nbsp;</p>
+    <p class="LeftPMidBlack">&nbsp;</p>
+    <p class="LeftPMidBlack"><strong>main size-</strong> A flex item&rsquo;s width or height, whichever  is in the main dimension, is the item&rsquo;s main size. </p>
+    <img src="Articles/2024/1-Flexbox/1-What-Is-Flexbox/Images/5.png" width="550" height="253" class="wideImg">
+<p class="LeftPMidBlack">&nbsp;</p>
+    <p class="LeftPMidBlack"><strong>cross axis-</strong> The axis perpendicular to the main axis  is called the cross axis. Its direction depends on the main axis direction. The  main axis in our example goes horizontal, when you want something to be  perpendicular it will form a cross. So, in our case the cross axis will be  vertical. You will see that the two lines together will form a cross.</p>
+    <p class="LeftPMidBlack">&nbsp;</p>
+    <img src="Articles/2024/1-Flexbox/1-What-Is-Flexbox/Images/6.png" width="720" height="329" class="wideImg">
+<p class="LeftPMidBlack">&nbsp;</p>
+    <p class="LeftPMidBlack"><strong>cross-start | cross-end – </strong>Flex lines are filled with  items and placed into the container starting on the cross-start side of the  flex container and going toward the cross-end side.</p>
+    <p class="LeftPMidBlack">&nbsp;</p>
+    <img src="Articles/2024/1-Flexbox/1-What-Is-Flexbox/Images/7.png" width="573" height="291" class="wideImg">
+<p class="LeftPMidBlack"><strong>cross size –</strong> The width or height of a flex item,  whichever is in the cross dimension, is the item&rsquo;s cross size. The cross size  property is whichever of &lsquo;width&rsquo; or &lsquo;height&rsquo; that is in the cross dimension.</p>
+    <p class="LeftPMidBlack">&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>

@@ -1,0 +1,314 @@
+@charset "utf-8";
+@import url("DarkOnLight.css");
+/* CSS Document */
+
+/* Main Page CSS Setup*/
+.wrapper {
+  display: flex;  
+ flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center; 
+  min-height: 450px;
+  box-shadow: 2px 3px 8px black;
+  border-radius: 20px;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+	background-color: black;
+	background-image: url(../Images/banner_1200.png);
+	height: 430px;
+	background-repeat: no-repeat;
+}
+
+
+
+
+
+.footer {
+	background-color: #020d25;
+	color: #9e8c69;
+	text-align: center;
+	box-shadow: 2px 3px 8px #424344;
+	border-radius: 2px;
+	padding-top: 40px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+
+
+
+
+.main {
+	text-align: left;
+	background:#111111;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 40px;
+}
+.oneColumnDiv {
+	text-align: left;
+	background:#111111;
+	height: 100px;
+	padding: 10px;
+}
+
+
+
+
+
+
+
+.aside-1 {
+  background: black;
+   box-shadow: 2px 3px 8px #424344;
+  border-radius: 15px;
+  padding-bottom: 40px;
+}
+
+
+
+.aside-2 {
+  background: black;
+   box-shadow: 2px 3px 8px #424344;
+  border-radius: 15px;
+  color: Silver;
+  padding-bottom: 40px;
+}
+
+
+.dropShadow {
+	box-shadow: 2px 3px 8px black;
+  border-radius: 20px;
+	
+	 
+	 }
+
+
+/*Dark theme*/
+
+.pGold {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: #eae6ad;
+	padding-right: 20%;
+	padding-left: 20%;
+	line-height: 22px;
+}
+
+.h2Silver {
+	color: Silver;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	padding-right: auto;
+	padding-left: auto;
+	text-align: center;
+	
+	}
+	
+	
+.LH2Silver{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24px;
+	color: Silver;
+	padding-right: 5%;
+	padding-left: 5%;
+	line-height: 22px;
+	font-weight: 500;
+	text-align: left;
+	}
+
+
+.pSilver {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: Silver;
+	padding-right: 5%;
+	padding-left: 5%;
+	line-height: 22px;
+	font-weight: 500;
+	text-align: left;
+	}
+	
+	
+.H2LBrown {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24px;
+	color: #9e8c69;
+	padding-right: 5%;
+	padding-left: 5%;
+	line-height: 22px;
+	font-weight: 500;
+	text-align: left;	
+	
+	}	
+	
+	
+.h2Gold {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #D5DBA4;
+	;
+	font-size: 30px;
+	font-weight: 500;
+	text-align: center;
+}
+	
+	
+	
+.pFadedSilver {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #999999;
+	font-size: 13px;
+	font-weight: 500;
+	text-align: center;
+	line-height: 20px;
+	padding-right: 20%;
+	padding-left: 20%;
+}
+
+
+
+
+	
+	
+.coverImage {
+
+	background-repeat: no-repeat;
+	background-size: cover;
+}	
+	
+body {
+  padding: 2em; 
+  background-color:#00050f;
+}
+
+
+/* Navigation CSS Setup*/
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  
+  list-style: none;
+  margin: 0; 
+  background: #020d26;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+   color: #9e8c69;
+}
+
+.navigation a:hover {
+  color: #C4B97B;
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255,0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+
+
+
+/*media Queries*/
+
+@media all and (min-width: 300px) {
+  .aside { flex: 1 0 0; }
+ .header{ background-image: url(../Images/banner_425_small.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	height: 110px;
+  
+}
+
+.wideImg {
+    width: 70%;
+	height:auto;
+  }
+  
+  
+.image {
+    width: 100%;
+	height:auto;
+  }
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
+ .header{ background-image: url(../Images/banner_625_small.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	height: 160px;
+  
+}
+
+.wideImg {
+    width: 90%;
+  }
+
+
+
+@media all and (min-width: 800px) {
+  .aside { flex: 1 0 0; }
+ .header{ background-image: url(../Images/banner_825.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	height: 300px;
+  
+}
+
+@media all and (min-width: 1200px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+  
+  .header{
+	background-image: url(../Images/banner_1200.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	height: 430px;
+}
+
+
+
+.main {
+	
+	padding-top: 50px;
+}
+
+
+
+
+
+  
+}
+
+
+}

@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+  main.ul {
+	6font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	color: #DBDBDB;
+	line-height: 70;
+	padding-left: 50px;
+}
+.main .LeftPSilver li {
+	padding-left: 0px;
+	
+}
+.main .LeftPSilver  {
+	font-size: 14px;
+	font-family: "MS Serif", "New York", serif;
+	
+}
+
+.main ul li {
+	list-style-type: none;
+}
+
+  
+.main .LeftPSilver li {
+	margin-left: 60px;
+}
+
+.starList ul {
+	color: #DADADA;	
+	line-height 50px;
+	}
+	
+	.starList ul li {
+	list-style-image: url(../Images/About/Star-for-List.png);	
+	}.main .starList li {
+	font-family: Helvetica, Arial, sans-serif;
+	margin-left: 7%;
+	line-height: 35px;
+	font-size: 13px;
+	font-weight: 900;
+	color: #9e8c69;
+	list-style-image: url(../Images/About/Star-for-List.png);
+}
