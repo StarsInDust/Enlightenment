@@ -96,6 +96,7 @@
 .responsiveImage  {
 	box-shadow: 2px 3px 8px black;
   border-radius: 20px;
+  margin-bottom: 20Px;
 	
 }
 	
@@ -188,3 +189,53 @@ font-family:"Times New Roman",serif;
 color:red;
 font-weight:bold;
 }
+
+.workCited {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: 700;
+	color: #27789E;
+	text-align: center;	
+	}
+
+.blueEmphasis {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 15px;
+	font-style: italic;
+	color: #27789E;
+	font-weight: 600;
+	line-height: 1em;
+	display: inline;
+}
+	
+
+
+
+/*Author and Date for Article Page*/
+
+.author {
+	font-family: 'Open+Sans', normal;
+	font-size:12px;
+	line-height: 2px;
+	font-weight: bold;
+	color: #486A84;
+	font-style: normal;
+	padding: 10px;
+	margin-top: 30px;
+	letter-spacing: 3px;
+	margin-bottom: 20px;
+	text-align: left;
+	line-height: 150%;
+	
+}
+
+.articleDate{
+	font-family: "Times New Roman", Times, serif;
+	text-align: right;
+	color: #486A84;
+	margin-right: 20px;
+	padding-right: 20px;	
+	line-height: 150%;
+	
+	}
+
