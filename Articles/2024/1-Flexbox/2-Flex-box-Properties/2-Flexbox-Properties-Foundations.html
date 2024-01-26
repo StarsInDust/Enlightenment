@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Flex-Box Properties Foundations</title>
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.code {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:3.0pt;
+margin-left:0in;
+font-size:10.0pt;
+font-family:"Courier New";
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~2 Flex-Box Properties Foundations~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >1/29/2024</p>
+   
+   <br>
+<br>
+
+<img src="Images/1.png" width="243" height="193" class="responsiveImage">
+<h2>The original way of doing things</h2>
+<p class="MsoNormal">Let&rsquo;s first take a look at how things were done in the  beginning. We had:</p>
+<p class="MsoNormal">&nbsp;</p>
+<h3>Block</h3>
+<p class="MsoNormal">The default behavior of any HTML document is to display  their items in a block style fashion. When you are using this method, you will  find that you div will take up an entire line. </p>
+<p class="MsoNormal">This really doesn&rsquo;t even matter if you set up the width of  each item to be 100% or not. If you set you width to be lower than 100%, you  text and words might not take up the full width of the page, but that div will  still take up one line of space and push the next element to be down below it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h3>HTML</h3>
+<p class="code" style="text-indent:63.0pt;">&lt;div class=&quot;box blue&quot;&gt;  1 &lt;/div&gt;</p>
+<p class="code" style="text-indent:63.0pt;">&lt;div class=&quot;box red&quot;&gt;  2 &lt;/div&gt;</p>
+<p class="code" style="text-indent:63.0pt;">&lt;div class=&quot;box  purple&quot;&gt; 3 &lt;/div&gt;</p>
+<p class="code" style="text-indent:63.0pt;">&lt;div class=&quot;box  orange&quot;&gt; 4 &lt;/div&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/2.png" width="630" height="213" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h3>CSS</h3>
+<p class="code">&nbsp;</p>
+<p class="code">.box {</p>
+<p class="code">      border-bottom: 2px  solid black;</p>
+<p class="code">      height: 50px;</p>
+<p class="code">      color: #FFF;</p>
+<p class="code">}</p>
+<p class="code">.box.red {</p>
+<p class="code">      background-color:  #F00;</p>
+<p class="code">}</p>
+<p class="code"> .box.blue {</p>
+<p class="code">      background-color:  #00F;</p>
+<p class="code">}</p>
+<p class="code">.box.purple {</p>
+<p class="code">      background-color:  #6B00D7;</p>
+<p class="code">}</p>
+<p class="code">.box.orange {</p>
+<p class="code">      background-color:  #FF6F28;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h2>Setting the block width to 30%</h2>
+<p class="MsoNormal">Now let&rsquo;s set that block to 30%</p>
+<p class="MsoNormal">&nbsp;</p>
+<h3>CSS</h3>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">.box {</p>
+<p class="code">      border-bottom: 2px  solid black;</p>
+<p class="code">      height: 50px;</p>
+<p class="code">      color: #FFF;</p>
+<p class="code">      <span style="background:yellow; ">width: 30%;</span></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<img src="Images/3.png" width="629" height="254" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">See, above how it took the 4 divs and stacked them one on  top of the other. So, we still do not have them in a row.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h2>To set the box to be in the same row, or inline</h2>
+<h3>CSS</h3>
+<p class="code">.box {</p>
+<p class="code">      display: inline;</p>
+<p class="code">      border-bottom: 2px  solid black;</p>
+<p class="code">      height: 50px;</p>
+<p class="code">      color: #FFF;</p>
+<p class="code">      width: 30%;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Hmmmm… those boxes are just a bit small, but we do have them  next to each other.</p>
+<img src="Images/4.png" width="629" height="131" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h2>Inline-Block</h2>
+<p class="MsoNormal">You can use a &lt;span&gt; instead of a div, but let&rsquo;s increase  the width of those boxes just a bit. </p>
+<p class="MsoNormal">You will see that if you try to set an inline element&rsquo;s  width, you can fight it all day, and it just will not work. In order to set a  width and have your boxes set in a row, you must set it to <strong>inline-block</strong>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h3>CSS</h3>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">.box {</p>
+<p class="code">  border-bottom: 2px solid  black;</p>
+<p class="code">  <span style="background:yellow; ">width: 20%;</span></p>
+<p class="code">  height: 50px;</p>
+<p class="code">  display: <span style="background:yellow; ">inline-block</span>;</p>
+<p class="code">  color: #FFF;</p>
+<p class="code">      </p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<img src="Images/5.png" width="386" height="138" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Ok, well now that works, but what happens if we set that  width to 30% and then resize it to be the width of a smart phone.</p>
+<p class="MsoNormal">Yes, inline block is not all that flexible, and just one box  at the bottom of this layout seem just about…well, off.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/6.png" width="545" height="207" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h2>FLEX-BOX</h2>
+<p class="MsoNormal">This is where our new flex-box layout steps in and outshines  that old ancient way of doing things. Flex-box is not a property, as is the  case with block or inline. Flexbox is a module, which contain many properties  belonging to itself. In some ways you can kind of think of this module thing as  a type of container itself. But flex-box does have its own property named  container, and we are going to learn about that next.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/7.png" width="457" height="300" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h3>The Container</h3>
+<p class="MsoNormal">If we want the elements on our page to be flexible, we are  going to first need to set them into a container. Think of a container like a  layer, you can have multiple containers on your page, and if you want different  sections of your page to flex independently of one another, you will need to  put each flexible section into its own container.</p>
+<p class="MsoNormal">Only use the display property of flex on the container, not  on the elements that it contains. Even though, you could nest containers. The  individual items inside of it should not have their display set to flex.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/8.png" width="354" height="198" class="responsiveImage">
+<p class="MsoNormal">Let&rsquo;s look at what happens if we simply place some divs into  a container and set that container to display as flex. The boxes now will  resize with the width of the page. It will not overflow its container, and one  single box will not end off on a line by itself.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/9.png" width="629" height="137" class="wideImg">
+<img src="Images/10.png" width="505" height="197" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h2>Centering Elements with Flex</h2>
+<p class="MsoNormal">If you want those items to be centered inside of the flex  row of items, we us justify-content: center; Let&rsquo;s change the width of the box  to 10% so we are able to demonstrate the centering a bit better</p>
+<p class="MsoNormal">&nbsp;</p>
+<h3>CSS</h3>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">.box {</p>
+<p class="code">  border-bottom: 2px solid  black;</p>
+<p class="code">  <span style="background:yellow; ">width: 10%;</span></p>
+<p class="code">  height: 50px;</p>
+<p class="code">  color: #FFF;</p>
+<p class="code">      </p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">.container {</p>
+<p class="code">  display: flex;</p>
+<p class="code">  <span style="background:yellow; ">justify-content: center;</span></p>
+<p class="code">  background: gray;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<img src="Images/11.png" width="632" height="183" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h2>The Difference between flex and inline-flex</h2>
+<p class="MsoNormal">Ok, so what is the difference between using just plain flex  or stating that it is actually inline flex that you want.</p>
+<p class="MsoNormal">Well, what the addition of that inline text is on your flex  item is that it makes the container take up the necessary space which matches  the size of its inner elements, or children as they are sometimes referred to,  and lets add just a bit of padding to the box as well.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h3>CSS</h3>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">.box {</p>
+<p class="code">  border-bottom: 2px solid  black;</p>
+<p class="code">  <span style="background:yellow; ">width: 30%;</span></p>
+<p class="code"><span style="background:yellow; ">  padding: 40px;</span></p>
+<p class="code">  height: 50px;</p>
+<p class="code">  color: #FFF;    </p>
+<p class="code">}</p>
+<p class="code">.container {</p>
+<p class="code">  <span style="background:yellow; ">display: inline-flex;</span></p>
+<p class="code">  background: gray;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/12.png" width="630" height="243" class="wideImg">
+
+
+
+
+
+<!--Main Article -->
+ <br>
+<br>
+
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+</aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
