@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles This Week</title>
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~3 More Flex-Box Properties ~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >2/5/2024</p>
+   
+  <h2><a name="_back_to_top">Table of Contents</a></h2>
+   
+   
+   
+<br>
+<p class="tableOfContents"><a href="#_Simple_centering">Simple Centering</a></p>
+   <p class="tableOfContents"><a href="#_Flex_Direction">flex direction</a></p>
+   <p class="tableOfContents"><a href="#_What_does_>" class="tableOfContents">What does &gt;* mean</a></p>
+   <p class="tableOfContents"><a href="#_The_wrap_property,">The wrap property with gap  and &gt;*</a></p>
+   <p class="tableOfContents"><a href="#_Gap_Property">The gap property</a></p>
+   <p class="tableOfContents"><a href="#_Justify_Content">The justify-content property</a></p>
+   <p class="tableOfContents"><a href="#_Align_Items">The align-items property</a></p>
+   <p class="tableOfContents"><a href="#_Understanding_the_flex-grow,">Understanding the  flex-grow, flex-shrink and flex basis</a></p>
+   <p class="tableOfContents"><a href="#_Order">The order property</a><span class="MsoHyperlink"> </span></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Images/1.png" width="229" height="202" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <h2>Parent -Child Relationship</h2>
+   <p class="MsoNormal">With Flex-box you are working with a parent (the container)  and the child or children (individual div or elements in the container). You  always want to throw your children into the parent. The parent will have the  flex property attached to it; the children will not have the flex property  attached to it. They just flex because their parent told them to.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Images/2.png" width="634" height="306" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="code">&nbsp;</p>
+   <h2>Now for some examples:</h2>
+   <h2><a name="_Simple_centering"></a>Simple centering</h2>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<br>
+
+   <img src="Images/3.png" width="485" height="234" class="wideImg">
+   
+   
+<p class="MsoNormal">Go <a href="Extra-Files/HTML-And-CSS-Codes.html#_Toc157524633">here</a> to find code</p>
+
+
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <h2><a name="_Flex_Direction"></a>Flex Direction</h2>
+  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<br>
+   <p class="MsoNormal">Instead of using display, as the property for the container,  we could change it to flex. The flex-direction takes a few attributes. Think of  the flex container as something that will lay out its elements in either a  horizontal, or a vertical direction. In other words, in either a row, or a  column.</p>
+   <p class="MsoNormal">So, we can use row, or column. But then flex wants to give  us just a bit more, and throws in a way in which we can reverse the items that  we specify for each one of them so, we can do this:</p>
+   <ul>
+     <li>row (default)</li>
+     <li>row-reverse</li>
+     <li>column</li>
+     <li>column-reverse</li>
+     <br>
+
+   </ul>
+   <p class="MsoNormal">Since row is the default, let&rsquo;s try using one of these  techniques and set the flex-direction to be column, and see how that works. As  we work further in this tutorial, we will be working on putting some space  between those boxes.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Images/4.png" width="495" height="282" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+   <p class="MsoNormal">You might want to add some height to the containers so the  column doesn&rsquo;t look stuck to the bottom of the page.</p>
+   <p class="MsoNormal">Go<a href="Extra-Files/HTML-And-CSS-Codes.html#_Toc157524636"> here</a> for the HTML and CSS code for flex-direction:column</p>
+   <p class="MsoNormal">&nbsp;</p>
+   
+   <h2><a name="_What_does_>"></a>What does <span class="boldBlue">&gt; *</span> mean when working with  flexbox?</h2>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<br>
+   <p class="MsoNormal">The <strong>&gt;</strong> sign indicates that the container wants to  talk to its children. So, when you see a <strong>&gt;</strong> think listen up kids I am  talking to you. In this case the container is talking to all of the <strong>div</strong> tags it has inside of it. In this case the kids have a class of .box.</p>
+   <p class="MsoNormal">Now the star<strong> *</strong> after the <strong>&gt; </strong>sign means that  the parent wants to talk to <strong>ALL</strong> of its children. So, in this case in the  CSS, we are writing code that all of the kids, or <strong>div.boxes</strong> have to  adhere to.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <h2><a name="_The_wrap_property,"></a>The wrap property, with Gap and &gt;*</h2>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<br>
+   <p class="MsoNormal">I needed to explain that &gt;* because the wrap property,  all though useful can be quite a finicky fella.</p>
+   <h3>The wrap property</h3>
+   <p class="MsoNormal">You will find that by default when you set the container to  flex, everything will try to fit on the same row, but that isn&rsquo;t exactly the  behavior that you might want, sometime you want your boxes to wrap around. Go <a href="#_Gap_Property">here</a> to learn about the <a name="_Hlk157256724"><strong>gap</strong> property, here to learn about the </a><a href="#_Justify_Content"><strong>justify-content</strong></a> property, and <a href="#_Understanding_the_flex-grow,">here </a> to learn about <strong>what those numbers mean</strong> after the <strong>&gt;*</strong>. </p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">You put the flex-wrap on the container. It has 3 different  settings.</p>
+   <ul>
+     <li class="listIndent">nowrap (default) all items on same line</li>
+     <li class="listIndent">wrap: will wrap around top to bottom</li>
+     <li class="listIndent">wrap-reverse: will wrap around bottom to top</li>
+     <span class="listIndent"><br>
+     </span><br>
+
+   </ul>
+   <p class="MsoNormal">The 4 illustrations below will show what the boxes will do  when you narrow the screen on your web page. Try the properties out on your own  to actually see them in action.</p>
+   <img src="Images/5.png" width="604" height="245" class="wideImg">
+
+   <img src="Images/8.png" width="618" height="640" class="wideImg">
+  
+ 
+   <img src="Images/9.png" width="359" height="413">
+   <p class="MsoNormal">&nbsp;</p>
+
+   <ul>
+     <br>
+<br>
+
+   </ul>
+   <p class="MsoNormal">  </p>
+   <p class="code">&nbsp;</p>
+   <h3><a name="_Gap_Property"></a>Gap Property</h3>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<br>
+   <p class="MsoNormal">The <strong>gap</strong> property is what we can use to put the space  in-between the boxes. This can be set to any thing that you want, but I just  set mine to be 5 px. It doesn&rsquo;t add any space around the outside edges of the  boxes. The space is only given to the interior of the grid of boxes. The first  thing you will need to do is to set your container to flex.</p>
+   <ul>
+    <br>
+<br>
+
+   </ul>
+   <p class="code">.container {</p>
+   <p class="code">  display: flex; </p>
+   <p class="code">}</p>
+   <p class="code">&nbsp;</p>
+   <p class="MsoNormal">You can add any one of the 4 settings below underneath where  you set the display: flex; inside the code for the container. So, you can set  the container gap to be any of the following. The size of the gap is up to you.  As you can see, the first one will set a gap for row and gap all in one  setting, if you want the row and the column to be different settings, you would  use the second example below. Or, you could just set the row and column  separately as demonstrated in the last two lines of code.</p>
+   <p class="code">&nbsp;</p>
+   <img src="Images/10.png" width="400" height="423" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Go <a href="Extra-Files/HTML-And-CSS-Codes.html#_Toc157524639">here</a> to view the HTML and CSS for the Justify-content:space-between | gap |flex-wrap</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <h3><a name="_Justify_Content"></a>Justify Content</h3>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<br>
+   <p class="MsoNormal">The justify-content is what you would use when you want to  define the alinement of your boxes along the main axis. You would put this on  the parent element, or in our case the .container. It has 6 different settings.  Some browsers are not in full compliance with this property just yet, but for  the most part, you can use it.</p>
+   <ul>
+     <li class="listIndent"><a name="_Hlk157261267"></a><a name="_Hlk157259128">Flex-start</a></li>
+     <li class="listIndent">Flex-end</li>
+     <li class="listIndent">Center</li>
+     <li class="listIndent">Space-between</li>
+     <li class="listIndent">Space-around</li>
+     <li class="listIndent">Space-evenly </li>
+   </ul>
+   <ul>
+     <br>
+<br>
+
+<p><span class="BoldRed"> Watch it,</span> if you are finding that your code might not be listening to you when you want your boxes to move around on the page, look closely at all of your code. You might have something written that specifically tells your boxes to be doing something else, like the first setting that we made in this tutorial. If you have centered your boxes, and forgot to remove that code, then your boxes will just ignore you.</p>
+
+<p>Also make sure any media queries come last in your CSS code page, or your styling will also try to ignore you. </p>
+
+   </ul>
+   <img src="Images/11.png" width="345" height="518" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <h3>Justify content:flex end</h3>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Images/12.png" width="629" height="202" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">In order to make this work, we will have to remove that auto  setting on the margin, because that will just center everything. </p>
+   <p class="MsoNormal">&nbsp;</p>
+   <h2>Space-between</h2>
+   <p class="MsoNormal">If you use space-between the space in-between each box will  become either wider or narrower, depending on the width of the page.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Images/13.png" width="613" height="329" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Go <a href="Extra-Files/HTML-And-CSS-Codes.html#_Toc157524642">here</a> to view the code for Justify-content: flex-end</p>
+   <p class="MsoNormal">Go <a href="Extra-Files/HTML-And-CSS-Codes.html#_Toc157524645">here</a> to view the code for justify-content: space-between</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <h3>The difference between justify-content and align -items</h3>
+   <p class="MsoNormal">Justify-content controls all of the items that are placed on  the main axis, align-items will control all of the items on the cross axis. So,  the difference between moving items right, and left, and up and down, on your  web page.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Images/14.png" width="600" height="281" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <h4><strong>&nbsp;</strong></h4>
+   <p class="MsoNormal">&nbsp;</p>
+   <h2><a name="_Align_Items"></a>Align Items</h2>
+  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<br>
+   <p class="MsoNormal">The align-items property will decide the behavior of how  items are arranged on the cross axis. </p>
+   <ul>
+     <li>flex-start</li>
+     <li>flex-end</li>
+     <li>center</li>
+     <li>baseline</li>
+     <li>first baseline</li>
+     <li>last baseline</li>
+     <li>start</li>
+     <li>end</li>
+     <li>self-start</li>
+     <li>self-end</li>
+     <li><span style="line-height:115%; font-size:16.0pt; color:#0D0D0D; ">+…</span> safe | unsafe;</li>
+     <br>
+<br>
+
+   </ul>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Images/15.png" width="465" height="470" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Again, you will be adding this property to the container or  parent object.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Images/16.png" width="574" height="395" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">The code for the above is just a bit more complicated  because none of the browsers seem to want to play nice with it, so we have to  make code to accommodate a lot of them. To see the code for the html and CSS  you can go <a href="Extra-Files/HTML-And-CSS-Codes.html#_Toc157524648">here</a>.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="code">&nbsp;</p>
+   <p class="code">&nbsp;</p>
+   <h2>Align Items example 2</h2>
+   <p class="MsoNormal">Align-Items is a way in which you can align elements on the  cross axis. This would be the up-down or vertical alignment.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Images/17.png" width="384" height="267" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Go <a href="Extra-Files/HTML-And-CSS-Codes.html#_Toc157524651">here</a> to see the HTML and CSS for align-Items: center</p>
+   <p class="MsoNormal">Now look at the CSS, where we used the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:14.0pt; ">&gt;*</span></span> remember by  using this on the style rule, we are able to target all of the div&rsquo;s (children)  inside of the container which is the parent. We also used a flex of 1. Setting  it to flex: 1 means that it will shrink by a size of 1, but that the other two  setting of flex-grow, flex-shrink and flex basis will remain at it default  setting. You can go <a href="#_Understanding_the_flex-grow,">here</a> to read  what all of these settings actually mean.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><img src="Images/17 a.png" width="239" height="120" border="0" class="responsiveImage"></p>
+  
+   <br>
+<br>
+
+   <h2><a name="_Hlk157449423"></a><a name="_Understanding_the_flex-grow,"></a>Understanding the flex-grow, flex-shrink and  flex basis</h2>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<br>
+   <p class="MsoNormal">You may have noticed in an example on our external webpage  and also on a previous example shown closer to the beginning of this tutorial, that  we used some numbers after the shorthand of <span class="BlueBoldenChar"><span style="font-size:14.0pt; ">&gt;*</span></span> to talk to the children  of the container. Here I will explain what those numbers mean.</p>
+   <p class="MsoNormal">The child div&rsquo;s of the container will come with some default  properties. We may not see them, but they are there. This doesn&rsquo;t mean that we  can not overwrite them if we wanted to do so. One such property is the:</p>
+   <p class="MsoNormal"> <strong>flex: 0 1 auto</strong></p>
+   <p class="MsoNormal"> This is the default  flex value. These numbers are a sort of shorthand, and what they are doing is  setting 3 values at the same time.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Images/18.png" width="189" height="103" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">You can think of this rule like this:</p>
+   <p class="MsoNormal">.child {</p>
+   <p class="MsoNormal">  flex: [flex-grow]  [flex-shrink] [flex-basis];</p>
+   <p class="MsoNormal">}</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><span class="MsoIntenseEmphasis">/* or... */</span></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">.child {</p>
+   <p class="MsoNormal">  flex: [max] [min]  [ideal size];</p>
+   <p class="MsoNormal">}</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">So, when we set our first setting to 0, we are telling flex  that we do not want our div&rsquo;s to grow any larger, that 2<sup>nd</sup>  setting is how much we want our divs to  shrink. Since we want it to be responsive and shrink for something like a cell  phone size, this setting is specified as 1. Then our final setting is what our  idea size for this div would be. As you can imagine, you can change these  numbers, and the one that you might want to change the majority of the time  would be your idea size for your div. And as I said, that would be your last  setting.</p>
+   <p class="MsoNormal">In the example, on our external page here,  I wrote out the full code for the grow, shrink  and basis property, but flex actually would prefer you to use shorthand. So,  you should do your work to look more like this:</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Images/19.png" width="215" height="90" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Now to see this one in action you will want to stretch out  your page and bring it back to a cell phone size. The illustration below is  just an image, you need to play with these settings yourself, to see what they  do.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Images/20.png" width="735" height="180" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">You can use these settings that you can find <a href="Extra-Files/HTML-And-CSS-Codes.html#_Toc157524654">here</a> for grow| shrink | basis for starters</p>
+   <p class="code">&nbsp;</p>
+   <h2><a name="_Order"></a>Order</h2>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<br>
+   <img src="Images/21.png" width="840" height="173" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">The last property that we will be looking at will be the  order property. By default, what ever way that you lay out your divs in your  HTML will be the way that your layout will be, but you can change that to have  your divs be laid out on your page in a different way then what you have in  your HTML code. And this little behavior can be a bit of fun.</p>
+   <p class="MsoNormal">You can find the html and CSS code for order<a href="Extra-Files/HTML-And-CSS-Codes.html#_Toc157524657"> here</a></p>
+<p class="LeftPMidBlack">&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>

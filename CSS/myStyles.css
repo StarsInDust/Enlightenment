@@ -172,8 +172,29 @@
 	padding-left: 20%;
 }
 
+.listIndent {
+	margin-left: 25px;
+	list-style-type: none;
+}
+.boldBlue {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: 800;
+	color: #03C;
+}
 
 
+span.BoldRed, .BoldRed {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:10.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
 
 
 	
@@ -228,6 +249,26 @@ body {
 	color: #C4B97B;
 	text-decoration: underline;
 }
+
+
+
+.tableOfContents a {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-decoration: none;
+	display:block;
+	font-weight: bold;
+	text-align: left;
+	color: black;
+	line-height: 10px;
+}
+
+
+.tableOfContents a:hover {
+	color: #646464;
+	text-decoration: underline;
+}
+
+
 
 
 
@@ -334,4 +375,3 @@ body {
 
 
 }
-
