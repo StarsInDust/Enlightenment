@@ -1,0 +1,11 @@
+.parent {
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+  
+    height: 300px; /* This can be anything */
+  
+  }
