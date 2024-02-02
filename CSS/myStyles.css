@@ -4,18 +4,26 @@
 
 /* Main Page CSS Setup*/
 .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;  
- flex-flow: row wrap;
+ -webkit-box-orient: horizontal;  
+ -webkit-box-direction: normal;  
+     -ms-flex-flow: row wrap;  
+         flex-flow: row wrap;
   font-weight: bold;
   text-align: center; 
   min-height: 450px;
-  box-shadow: 2px 3px 8px black;
+  -webkit-box-shadow: 2px 3px 8px black;
+          box-shadow: 2px 3px 8px black;
   border-radius: 20px;
 }
 
 .wrapper > * {
   padding: 10px;
-  flex: 1 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
 }
 
 .header {
@@ -33,7 +41,8 @@
 	background-color: #020d25;
 	color: #9e8c69;
 	text-align: center;
-	box-shadow: 2px 3px 8px #424344;
+	-webkit-box-shadow: 2px 3px 8px #424344;
+	        box-shadow: 2px 3px 8px #424344;
 	border-radius: 2px;
 	padding-top: 40px;
 	padding-right: 10px;
@@ -67,7 +76,8 @@
 
 .aside-1 {
   background: black;
-   box-shadow: 2px 3px 8px #424344;
+   -webkit-box-shadow: 2px 3px 8px #424344;
+           box-shadow: 2px 3px 8px #424344;
   border-radius: 15px;
   padding-bottom: 40px;
 }
@@ -76,7 +86,8 @@
 
 .aside-2 {
   background: black;
-   box-shadow: 2px 3px 8px #424344;
+   -webkit-box-shadow: 2px 3px 8px #424344;
+           box-shadow: 2px 3px 8px #424344;
   border-radius: 15px;
   color: Silver;
   padding-bottom: 40px;
@@ -84,7 +95,8 @@
 
 
 .dropShadow {
-	box-shadow: 2px 3px 8px black;
+	-webkit-box-shadow: 2px 3px 8px black;
+	        box-shadow: 2px 3px 8px black;
   border-radius: 20px;
 	
 	 
@@ -214,9 +226,16 @@ body {
 /* Navigation CSS Setup*/
 
 .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   
   list-style: none;
   margin: 0; 
@@ -277,13 +296,17 @@ body {
 
 @media all and (max-width: 800px) {
   .navigation {
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
 @media all and (max-width: 600px) {
   .navigation {
-    flex-flow: column wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
     padding: 0;
   }
   .navigation a { 
@@ -303,7 +326,7 @@ body {
 /*media Queries*/
 
 @media all and (min-width: 300px) {
-  .aside { flex: 1 0 0; }
+  .aside { -webkit-box-flex: 1; -ms-flex: 1 0 0px; flex: 1 0 0; }
  .header{ background-image: url(../Images/banner_425_small.png);
 	background-repeat: no-repeat;
 	background-position: center bottom;
@@ -322,7 +345,7 @@ body {
 	height:auto;
   }
 @media all and (min-width: 600px) {
-  .aside { flex: 1 0 0; }
+  .aside { -webkit-box-flex: 1; -ms-flex: 1 0 0px; flex: 1 0 0; }
  .header{ background-image: url(../Images/banner_625_small.png);
 	background-repeat: no-repeat;
 	background-position: center bottom;
@@ -337,7 +360,7 @@ body {
 
 
 @media all and (min-width: 800px) {
-  .aside { flex: 1 0 0; }
+  .aside { -webkit-box-flex: 1; -ms-flex: 1 0 0px; flex: 1 0 0; }
  .header{ background-image: url(../Images/banner_825.png);
 	background-repeat: no-repeat;
 	background-position: center bottom;
@@ -346,11 +369,11 @@ body {
 }
 
 @media all and (min-width: 1200px) {
-  .main    { flex: 3 0px; }
-  .aside-1 { order: 1; } 
-  .main    { order: 2; }
-  .aside-2 { order: 3; }
-  .footer  { order: 4; }
+  .main    { -webkit-box-flex: 3; -ms-flex: 3 0px; flex: 3 0px; }
+  .aside-1 { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; } 
+  .main    { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+  .aside-2 { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
+  .footer  { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; }
   
   .header{
 	background-image: url(../Images/banner_1200.png);
@@ -375,3 +398,4 @@ body {
 
 
 }
+}}

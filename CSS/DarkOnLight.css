@@ -94,7 +94,8 @@
 
 
 .responsiveImage  {
-	box-shadow: 2px 3px 8px black;
+	-webkit-box-shadow: 2px 3px 8px black;
+	        box-shadow: 2px 3px 8px black;
   border-radius: 20px;
   margin-bottom: 20Px;
 	
@@ -107,7 +108,7 @@
     content: '';
     padding: 0.5em;
 	
-	width:75%:
+	width:75%
 	/*min-width: 100%;*/
   }
 
