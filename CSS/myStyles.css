@@ -208,8 +208,44 @@ color:red;
 font-weight:bold;
 }
 
-
+p.code {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:3.0pt;
+margin-left:0in;
+font-size:10.0pt;
+font-family:"Courier New";
+}
 	
+	
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+
+
+.tableOfContentHeading {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24px;
+	color: #9e8c69;
+	padding-right: 5%;
+	padding-left: 5%;
+	line-height: 22px;
+	font-weight: 500;
+	text-align: left;	
+	
+	}	
+
+
+
+
+
 	
 .coverImage {
 
