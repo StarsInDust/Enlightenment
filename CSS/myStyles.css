@@ -383,8 +383,12 @@ body {
   }
   
  .cartoonImg {
-	width: 90%;
+	width: 70%;
 	height: auto;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
 }
  
 .image {
