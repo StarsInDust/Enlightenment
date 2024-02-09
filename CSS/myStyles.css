@@ -408,7 +408,12 @@ body {
     width: 90%;
   }
 
-
+ .cartoonImg {
+	width: 90%;
+	height: auto;
+	
+}
+ 
 
 @media all and (min-width: 800px) {
   .aside { -webkit-box-flex: 1; -ms-flex: 1 0 0px; flex: 1 0 0; }
