@@ -382,7 +382,11 @@ body {
 	height:auto;
   }
   
-  
+ .cartoonImg {
+	width: 90%;
+	height: auto;
+}
+ 
 .image {
     width: 100%;
 	height:auto;
