@@ -251,7 +251,14 @@ font-weight:bold;
 
 	background-repeat: no-repeat;
 	background-size: cover;
-}	
+}
+
+
+.cartoonImg {
+	width: 100%;
+	height: auto;
+}
+	
 	
 body {
   padding: 2em; 
