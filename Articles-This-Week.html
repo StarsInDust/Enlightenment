@@ -7,38 +7,84 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles This Week</title>
-    
-    
-    
- <meta name="title" content=" 3 More Flex-Box Properties">
+    <title>4 Working With All Browsers</title>
+
+
+
+<meta name="title" content="4 Working With All Browsers ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="Flexbox, Flex-box properties, CSS, Website Design"/>
+<meta name="keywords" content="Flexbox, Autoprefixer, Visual Studio, CSS, Web Design"/>
 
 
-<meta name="description" content="This article is the third part of a series involving flexbox and CSS for web design. It will be showcasing even more properties for the flexbox technology."/>
+<meta name="description" content="This article explains how we can easily add an Autoprefixer to Visual Studio to help the flexbox CSS work with all browsers "/>
 
-<meta name="category" content="Website Design">
+<meta name="category" content="Flex-Box, CSS, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Wednesday, January 31, 2024" />
+<meta name="revised" content="Sunday, February 4, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/3-More-Flex-Box-Properties.html">
-   
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/1-Flexbox/4-Working-With-All-Browsers/4-Working-With-All-Browsers.html">
 
 
     
 
 <link href="CSS/myStyles.css" rel="stylesheet" type="text/css">
 <link href="CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
 
+
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1.a {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-decoration: none;
+	display:block;
+	font-weight: 900;
+	text-align: center;
+	color: #C93;
+	line-height: 10px;
+	font-size: 16px;
+}
+
+
+p.MsoToc1.a:hover {
+	
+	
+	}
+
+
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.Heading1Char {
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+font-weight:bold;
+}
+-->
+</style>
 </head>
 
 
@@ -62,266 +108,113 @@
   
   <!--Main Article -->
   
-  <p class="h2Black" >~3 More Flex-Box Properties ~</p>
+  <p class="h2Black" >~4 Working With All Browsers~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >2/5/2024</p>
+   <p class="articleDate" style="text-align:right" >2/12/2024</p>
    
-  <h2><a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></h2>
-   
-   
-   
-<br>
-<p class="tableOfContents"><a href="#_Simple_centering">Simple Centering</a></p>
-   <p class="tableOfContents"><a href="#_Flex_Direction">flex direction</a></p>
-   <p class="tableOfContents"><a href="#_What_does_>" class="tableOfContents">What does &gt;* mean</a></p>
-   <p class="tableOfContents"><a href="#_The_wrap_property,">The wrap property with gap  and &gt;*</a></p>
-   <p class="tableOfContents"><a href="#_Gap_Property">The gap property</a></p>
-   <p class="tableOfContents"><a href="#_Justify_Content">The justify-content property</a></p>
-   <p class="tableOfContents"><a href="#_Align_Items">The align-items property</a></p>
-   <p class="tableOfContents"><a href="#_Understanding_the_flex-grow,">Understanding the  flex-grow, flex-shrink and flex basis</a></p>
-   <p class="tableOfContents"><a href="#_Order">The order property</a><span class="MsoHyperlink"> </span></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/1.png" width="229" height="202" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <h2>Parent -Child Relationship</h2>
-   <p class="MsoNormal">With Flex-box you are working with a parent (the container)  and the child or children (individual div or elements in the container). You  always want to throw your children into the parent. The parent will have the  flex property attached to it; the children will not have the flex property  attached to it. They just flex because their parent told them to.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/2.png" width="634" height="306" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="code">&nbsp;</p>
-   <h2>Now for some examples:</h2>
-   <h2><a name="_Simple_centering"></a>Simple centering</h2>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<br>
-
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/3.png" width="485" height="234" class="wideImg">
-   
-   
-<p class="MsoNormal">Go <a href="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Extra-Files/HTML-And-CSS-Codes.html#_Toc157524633">here</a> to find code</p>
-
-
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <h2><a name="_Flex_Direction"></a>Flex Direction</h2>
-  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<br>
-   <p class="MsoNormal">Instead of using display, as the property for the container,  we could change it to flex. The flex-direction takes a few attributes. Think of  the flex container as something that will lay out its elements in either a  horizontal, or a vertical direction. In other words, in either a row, or a  column.</p>
-   <p class="MsoNormal">So, we can use row, or column. But then flex wants to give  us just a bit more, and throws in a way in which we can reverse the items that  we specify for each one of them so, we can do this:</p>
-   <ul>
-     <li>row (default)</li>
-     <li>row-reverse</li>
-     <li>column</li>
-     <li>column-reverse</li>
-     <br>
-
-   </ul>
-   <p class="MsoNormal">Since row is the default, let&rsquo;s try using one of these  techniques and set the flex-direction to be column, and see how that works. As  we work further in this tutorial, we will be working on putting some space  between those boxes.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/4.png" width="495" height="282" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-   <p class="MsoNormal">You might want to add some height to the containers so the  column doesn&rsquo;t look stuck to the bottom of the page.</p>
-   <p class="MsoNormal">Go<a href="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Extra-Files/HTML-And-CSS-Codes.html#_Toc157524636"> here</a> for the HTML and CSS code for flex-direction:column</p>
-   <p class="MsoNormal">&nbsp;</p>
-   
-   <h2><a name="_What_does_>"></a>What does <span class="boldBlue">&gt; *</span> mean when working with  flexbox?</h2>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<br>
-   <p class="MsoNormal">The <strong>&gt;</strong> sign indicates that the container wants to  talk to its children. So, when you see a <strong>&gt;</strong> think listen up kids I am  talking to you. In this case the container is talking to all of the <strong>div</strong> tags it has inside of it. In this case the kids have a class of .box.</p>
-   <p class="MsoNormal">Now the star<strong> *</strong> after the <strong>&gt; </strong>sign means that  the parent wants to talk to <strong>ALL</strong> of its children. So, in this case in the  CSS, we are writing code that all of the kids, or <strong>div.boxes</strong> have to  adhere to.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <h2><a name="_The_wrap_property,"></a>The wrap property, with Gap and &gt;*</h2>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<br>
-   <p class="MsoNormal">I needed to explain that &gt;* because the wrap property,  all though useful can be quite a finicky fella.</p>
-   <h3>The wrap property</h3>
-   <p class="MsoNormal">You will find that by default when you set the container to  flex, everything will try to fit on the same row, but that isn&rsquo;t exactly the  behavior that you might want, sometime you want your boxes to wrap around. Go <a href="#_Gap_Property">here</a> to learn about the <a name="_Hlk157256724"><strong>gap</strong> property, here to learn about the </a><a href="#_Justify_Content"><strong>justify-content</strong></a> property, and <a href="#_Understanding_the_flex-grow,">here </a> to learn about <strong>what those numbers mean</strong> after the <strong>&gt;*</strong>. </p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">You put the flex-wrap on the container. It has 3 different  settings.</p>
-   <ul>
-     <li class="listIndent">nowrap (default) all items on same line</li>
-     <li class="listIndent">wrap: will wrap around top to bottom</li>
-     <li class="listIndent">wrap-reverse: will wrap around bottom to top</li>
-     <span class="listIndent"><br>
-     </span><br>
-
-   </ul>
-   <p class="MsoNormal">The 4 illustrations below will show what the boxes will do  when you narrow the screen on your web page. Try the properties out on your own  to actually see them in action.</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/5.png" width="604" height="245" class="wideImg">
-
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/8.png" width="618" height="640" class="wideImg">
-  
- 
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/9.png" width="359" height="413">
-   <p class="MsoNormal">&nbsp;</p>
-
-   <ul>
-     <br>
-<br>
-
-   </ul>
-   <p class="MsoNormal">  </p>
-   <p class="code">&nbsp;</p>
-   <h3><a name="_Gap_Property"></a>Gap Property</h3>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<br>
-   <p class="MsoNormal">The <strong>gap</strong> property is what we can use to put the space  in-between the boxes. This can be set to any thing that you want, but I just  set mine to be 5 px. It doesn&rsquo;t add any space around the outside edges of the  boxes. The space is only given to the interior of the grid of boxes. The first  thing you will need to do is to set your container to flex.</p>
-   <ul>
-    <br>
-<br>
-
-   </ul>
-   <p class="code">.container {</p>
-   <p class="code">  display: flex; </p>
-   <p class="code">}</p>
-   <p class="code">&nbsp;</p>
-   <p class="MsoNormal">You can add any one of the 4 settings below underneath where  you set the display: flex; inside the code for the container. So, you can set  the container gap to be any of the following. The size of the gap is up to you.  As you can see, the first one will set a gap for row and gap all in one  setting, if you want the row and the column to be different settings, you would  use the second example below. Or, you could just set the row and column  separately as demonstrated in the last two lines of code.</p>
-   <p class="code">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/10.png" width="400" height="423" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Go <a href="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Extra-Files/HTML-And-CSS-Codes.html#_Toc157524639">here</a> to view the HTML and CSS for the Justify-content:space-between | gap |flex-wrap</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <h3><a name="_Justify_Content"></a>Justify Content</h3>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<br>
-   <p class="MsoNormal">The justify-content is what you would use when you want to  define the alinement of your boxes along the main axis. You would put this on  the parent element, or in our case the .container. It has 6 different settings.  Some browsers are not in full compliance with this property just yet, but for  the most part, you can use it.</p>
-   <ul>
-     <li class="listIndent"><a name="_Hlk157261267"></a><a name="_Hlk157259128">Flex-start</a></li>
-     <li class="listIndent">Flex-end</li>
-     <li class="listIndent">Center</li>
-     <li class="listIndent">Space-between</li>
-     <li class="listIndent">Space-around</li>
-     <li class="listIndent">Space-evenly </li>
-   </ul>
-   <ul>
-     <br>
-<br>
-
-<p><span class="BoldRed"> Watch it,</span> if you are finding that your code might not be listening to you when you want your boxes to move around on the page, look closely at all of your code. You might have something written that specifically tells your boxes to be doing something else, like the first setting that we made in this tutorial. If you have centered your boxes, and forgot to remove that code, then your boxes will just ignore you.</p>
-
-<p>Also make sure any media queries come last in your CSS code page, or your styling will also try to ignore you. </p>
-
-   </ul>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/11.png" width="345" height="518" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-   <h3>Justify content:flex end</h3>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/12.png" width="629" height="202" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">In order to make this work, we will have to remove that auto  setting on the margin, because that will just center everything. </p>
-   <p class="MsoNormal">&nbsp;</p>
-   <h2>Space-between</h2>
-   <p class="MsoNormal">If you use space-between the space in-between each box will  become either wider or narrower, depending on the width of the page.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/13.png" width="613" height="329" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Go <a href="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Extra-Files/HTML-And-CSS-Codes.html#_Toc157524642">here</a> to view the code for Justify-content: flex-end</p>
-   <p class="MsoNormal">Go <a href="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Extra-Files/HTML-And-CSS-Codes.html#_Toc157524645">here</a> to view the code for justify-content: space-between</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <h3>The difference between justify-content and align -items</h3>
-   <p class="MsoNormal">Justify-content controls all of the items that are placed on  the main axis, align-items will control all of the items on the cross axis. So,  the difference between moving items right, and left, and up and down, on your  web page.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/14.png" width="600" height="281" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <h4><strong>&nbsp;</strong></h4>
-   <p class="MsoNormal">&nbsp;</p>
-   <h2><a name="_Align_Items"></a>Align Items</h2>
-  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<br>
-   <p class="MsoNormal">The align-items property will decide the behavior of how  items are arranged on the cross axis. </p>
-   <ul>
-     <li>flex-start</li>
-     <li>flex-end</li>
-     <li>center</li>
-     <li>baseline</li>
-     <li>first baseline</li>
-     <li>last baseline</li>
-     <li>start</li>
-     <li>end</li>
-     <li>self-start</li>
-     <li>self-end</li>
-     <li><span style="line-height:115%; font-size:16.0pt; color:#0D0D0D; ">+…</span> safe | unsafe;</li>
-     <br>
-<br>
-
-   </ul>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/15.png" width="465" height="470" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Again, you will be adding this property to the container or  parent object.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/16.png" width="574" height="395" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">The code for the above is just a bit more complicated  because none of the browsers seem to want to play nice with it, so we have to  make code to accommodate a lot of them. To see the code for the html and CSS  you can go <a href="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Extra-Files/HTML-And-CSS-Codes.html#_Toc157524648">here</a>.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="code">&nbsp;</p>
-   <p class="code">&nbsp;</p>
-   <h2>Align Items example 2</h2>
-   <p class="MsoNormal">Align-Items is a way in which you can align elements on the  cross axis. This would be the up-down or vertical alignment.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/17.png" width="384" height="267" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Go <a href="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Extra-Files/HTML-And-CSS-Codes.html#_Toc157524651">here</a> to see the HTML and CSS for align-Items: center</p>
-   <p class="MsoNormal">Now look at the CSS, where we used the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:14.0pt; ">&gt;*</span></span> remember by  using this on the style rule, we are able to target all of the div&rsquo;s (children)  inside of the container which is the parent. We also used a flex of 1. Setting  it to flex: 1 means that it will shrink by a size of 1, but that the other two  setting of flex-grow, flex-shrink and flex basis will remain at it default  setting. You can go <a href="#_Understanding_the_flex-grow,">here</a> to read  what all of these settings actually mean.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal"><img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/17 a.png" width="239" height="120" border="0" class="responsiveImage"></p>
-  
    <br>
-<br>
-
-   <h2><a name="_Hlk157449423"></a><a name="_Understanding_the_flex-grow,"></a>Understanding the flex-grow, flex-shrink and  flex basis</h2>
+   <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+   <p class="tableOfContents"><a href="#_Toc157779082" class="tableOfContents">Setting Your Visual Studio Settings</a></p>
+   <p class="tableOfContents"><a href="#_Toc157779083" class="tableOfContents">Making Changes to JSON   File</a></p>
+   <p class="tableOfContents"><a href="#_Toc157779084" class="tableOfContents">To turn on your   Autoprefixer</a></p>
+   <p class="tableOfContents"><a href="#_Toc157779085" >Prefix an Entire CSS Page</a></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/1.png" width="274" height="192" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Flexbox for the most part works pretty well, but it doesn&rsquo;t  always play nice with others. This is where vendor prefixing will come in  handy.</p>
+   <p class="MsoNormal">There is something called the autoprefixer, which will help  you with this, but you will need to install it in Visual Studio Code.</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Open Visual Studio</span></strong></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/2.png" width="372" height="257" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Go to the left side and click on this icon that looks like 4  boxes with the top right one shooting out to the right.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/3.png" width="69" height="64" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Add to the search bar the text &ldquo;autoprefixer&rdquo; to find the  extension that you will need.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/4.png" width="369" height="278" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Click on the blue button for it  that says &ldquo;Install&rdquo;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/5.png" width="558" height="151" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">You will see the information for  the Autoprefixer on the right-hand side</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/6.png" width="628" height="279" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <h1><a name="_Toc157779082">Setting Your Visual Studio Settings</a></h1>
    <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<br>
-   <p class="MsoNormal">You may have noticed in an example on our external webpage  and also on a previous example shown closer to the beginning of this tutorial, that  we used some numbers after the shorthand of <span class="BlueBoldenChar"><span style="font-size:14.0pt; ">&gt;*</span></span> to talk to the children  of the container. Here I will explain what those numbers mean.</p>
-   <p class="MsoNormal">The child div&rsquo;s of the container will come with some default  properties. We may not see them, but they are there. This doesn&rsquo;t mean that we  can not overwrite them if we wanted to do so. One such property is the:</p>
-   <p class="MsoNormal"> <strong>flex: 0 1 auto</strong></p>
-   <p class="MsoNormal"> This is the default  flex value. These numbers are a sort of shorthand, and what they are doing is  setting 3 values at the same time.</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Open Settings in Visual  Studio</span></strong></p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong>Go to this wheel icon on the bottom left hand side of Visual Studio code.</p>
    <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/18.png" width="189" height="103" class="responsiveImage">
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/6a.png" width="156" height="145">
+   <h1><a name="_Toc157779083">Making Changes to JSON File</a></h1>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">You are looking for the workspace settings for JSON, or you  will not be able to edit it.</p>
+   <p class="MsoNormal">write workspace JSON in the search bar like this, and then click on this blue link here</p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/8.png" width="622" height="266" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">You can think of this rule like this:</p>
-   <p class="MsoNormal">.child {</p>
-   <p class="MsoNormal">  flex: [flex-grow]  [flex-shrink] [flex-basis];</p>
-   <p class="MsoNormal">}</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">You want to add some code to  the JSON File</span></strong></p>
+   <p class="MsoNormal">You will need to start by adding <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">2 commas</span></span> to make this work.  One comma goes after the last list item in the list, and another comma will be  following the last curly brace. In order to add another item, the previous item  must be closed out like this. Commas tell JSON that there is another item to  look at.</p>
+   <p class="MsoNormal">Add a comma here, and here.</p>
    <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal"><span class="MsoIntenseEmphasis">/* or... */</span></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">.child {</p>
-   <p class="MsoNormal">  flex: [max] [min]  [ideal size];</p>
-   <p class="MsoNormal">}</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">So, when we set our first setting to 0, we are telling flex  that we do not want our div&rsquo;s to grow any larger, that 2<sup>nd</sup>  setting is how much we want our divs to  shrink. Since we want it to be responsive and shrink for something like a cell  phone size, this setting is specified as 1. Then our final setting is what our  idea size for this div would be. As you can imagine, you can change these  numbers, and the one that you might want to change the majority of the time  would be your idea size for your div. And as I said, that would be your last  setting.</p>
-   <p class="MsoNormal">In the example, on our external page here,  I wrote out the full code for the grow, shrink  and basis property, but flex actually would prefer you to use shorthand. So,  you should do your work to look more like this:</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/19.png" width="215" height="90" class="responsiveImage">
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/9.png" width="622" height="223" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Now to see this one in action you will want to stretch out  your page and bring it back to a cell phone size. The illustration below is  just an image, you need to play with these settings yourself, to see what they  do.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/20.png" width="735" height="180" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">You can use these settings that you can find <a href="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Extra-Files/HTML-And-CSS-Codes.html#_Toc157524654">here</a> for grow| shrink | basis for starters</p>
+   <p class="MsoNormal">This is the code that you will be adding above,  after that last command and before the yellow  curly brace:</p>
+   <p class="code">&quot;autoprefixer.options&quot;: { &quot;browsers&quot;: [  &quot;last 4 versions&quot;, &quot;ie &gt;= 9&quot;, &quot;&gt; 5%&quot; ] }</p>
    <p class="code">&nbsp;</p>
-   <h2><a name="_Order"></a>Order</h2>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<br>
-   <img src="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Images/21.png" width="840" height="173" class="wideImg">
+   <p class="code">&nbsp;</p>
+   <p class="MsoNormal">Make sure that yellow curly brace closes out the entire code  for the JSON file. You can see that the code is correct if you color coding is  not showing red.</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Restart Visual Studio</span></strong></p>
+   <p class="MsoNormal">Now you will want to shut down and restart Visual Studio</p>
+   <p class="MsoNormal">Select text you want prefixed</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/10.png" width="510" height="144" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">The last property that we will be looking at will be the  order property. By default, what ever way that you lay out your divs in your  HTML will be the way that your layout will be, but you can change that to have  your divs be laid out on your page in a different way then what you have in  your HTML code. And this little behavior can be a bit of fun.</p>
-   <p class="MsoNormal">You can find the html and CSS code for order<a href="Articles/2024/1-Flexbox/3-More-Flex-Box-Properties/Extra-Files/HTML-And-CSS-Codes.html#_Toc157524657"> here</a></p>
-<p class="LeftPMidBlack">&nbsp;</p>
+   <h1><a name="_Toc157779084">To turn ON your Autoprefixer</a></h1>
+  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal">Select the text that you want to prefix and then hit <span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; ">F1</span></span>,  then from the drop down at the top of the app choose: </p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Autoprefixer:Run</span></strong></p>
+   <p class="MsoNormal"><span class="Heading1Char"><span style="font-size:14.0pt; ">&nbsp;</span></span></p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/11.png" width="631" height="103" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Now look at our code. it added all those web fixes for us,  so…. <span class="Heading1Char"><span style="font-size:14.0pt; ">IT  WORKS!</span></span></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/12.png" width="539" height="233" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <h1><a name="_Toc157779085">Prefix an Entire CSS Page</a></h1>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal">Now you can select all of your CSS on a CSS file and  Autoprefixer will figure out what needs and what doesn&rsquo;t need the prefix added  to it. No need for you to just select the specific areas, where you might think  things should go.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/13.png" width="630" height="451" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Press F1 on your Keyboard and select Autoprefixer:Run from  the dropdown</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/14.png" width="629" height="105" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Now you will notice all of your tags have been added to the  code for you.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/15.png" width="631" height="422" class="wideImg">
 <p class="pMidBlack">&nbsp;</p>
+
  
   <!--Main Article -->
- 
+  
+  
+  
+  <br>
+<br>
+
  
 </article>
   
@@ -338,7 +231,7 @@
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-  </aside>
+</aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
