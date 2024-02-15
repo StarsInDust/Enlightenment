@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Two Column Design</title>
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~7 Two-Column Design~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >3/4/2024</p>
+   
+   <br>
+<br>
+
+<img src="Images/1.png" width="270" height="241" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This tutorial will be on how to make a two-column layout  using flexbox. I use this design on my own website, in the presentation of my  archived articles.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" class="wideImg" >
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">As you will see, this code will just be inserted into a pre-existing  web layout.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/3.png" class="wideImg" >
+<p class="MsoNormal">&nbsp;</p>
+<h2>&nbsp;</h2>
+<h2>&nbsp;</h2>
+<h2>Your image size for the first column</h2>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/4.png" width="381" height="143" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Remember, this 2- column section&rsquo;s code will only be an  insert to the main content on your own site. Your website will not resemble  mine, except for the 2- column section.</p>
+<br>
+
+<img src="Images/5.png" class="wideImg" >
+
+<br>
+
+<p class="MsoNormal">&nbsp;</p>
+<h1>Pseudo-Elements</h1>
+<p class="MsoNormal">Most of the code in this tutorial is fairly easy to  understand, but the one thing that does stand out is the use of the  pseudo-element, you can recognize the pseudo-element because you will see a  double colon in the declaration of the class rule. So, I will go into an  additional example here, before starting the actual tutorial.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The code using the pseudo-element with the double colon will  put a tilde before and after the text that I have written below. </p>
+<p class="MsoNormal">&nbsp;</p>
+<h2>HTML</h2>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/6.png" width="190" height="39" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You will see from the CSS, that we have a tag of content,  this is what we want to make appear before or after the text. I put a tilde in  the tag, so when I run the webpage, I will see a tilde show up before and after  the &ldquo;Hello There!&rdquo; text, even though it was never specified in the HTML, only  in the CSS. We also styled the tilde in each one of the pseudo-element tags. It  is just a piece of magic that we can do.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h2>CSS</h2>
+<p class="MsoNormal" style="text-indent:.5in;">&nbsp;</p>
+<img src="Images/7.png" width="208" height="236" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This is what this will look like with the styled tilde set  to the rule::before and ::after</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Images/8.png" width="224" height="69" class="responsiveImage">
+<h1>Why use this for Box-sizing?</h1>
+<p class="MsoNormal">The above is an explanation of Pseudo elements, and how they  are used; however, you will see that in our code, it is being used on  box-sizing. The star is used to say that they want this best practiced used on  all of the elements, and even any pseudo-elements, the comma is used to  separate the rules automatically with this code.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">If you set the box -sizing to border-box as it was done  here, both of our divs will include padding and boarder.  Sometimes, you might put padding on one div  and not on the other. This sort of thing could throw off the sizing, and one  div could be wider than the other. If you set box-sizing to border-box, you do  not have to keep track of such trivial matters, your code will do that for you,  and make each div the same size regardless. This is a more uniform look for  your layout.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/9.png" width="221" height="74" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">There are other Pseudo-elements too, and if you want to  learn more about them. You can go to W3schools <a href="https://www.w3schools.com/css/css_pseudo_elements.asp">Here</a>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You can go <a href="The-Code.html">HERE</a> to see our Code for our 2 column design insert.</p>
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>

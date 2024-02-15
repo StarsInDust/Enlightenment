@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Code</title>
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~The Code Two-Column Design~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >3/4/2024</p>
+   
+   <br>
+<br>
+
+<h1>HTML</h1>
+<p class="code">&lt;div class=&quot;container&quot;&gt;</p>
+<p class="code">        &lt;div  class=&quot;content&quot;&gt;</p>
+<p class="code">          &lt;div  class=&quot;col left&quot;&gt;</p>
+<p class="code">            &lt;img  src=&quot;Images/two-column-design.png&quot; title=&quot;&quot;  alt=&quot;&quot;/&gt;</p>
+<p class="code">          &lt;/div&gt;</p>
+<p class="code">          &lt;div  class=&quot;col right&quot;&gt;</p>
+<p class="code">          &lt;h2  class=&quot;h2Gold&quot;&gt;Two-Column Design &lt;/h2&gt;</p>
+<p class="code">            &lt;p  class=&quot;LeftPSilver&quot;&gt;This is what a flexible, two column design  will look like. I have placed an image in the first div, and then the text goes  into the second div. &lt;/p&gt;</p>
+<p class="code">            </p>
+<p class="code">            &lt;p  class=&quot;LeftPSilver&quot;&gt;If you attempt to do this yourself, you will  need an image inside of your site. The image size that I used for this image is  270 px X 241 px&lt;/p&gt;</p>
+<p class="code">          &lt;/div&gt;</p>
+<p class="code">        &lt;/div&gt;</p>
+<p class="code">    &lt;/div&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1>&nbsp;</h1>
+<h1>CSS</h1>
+<p class="code">&lt;style type=&quot;text/css&quot;&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">*, ::after, ::before {</p>
+<p class="code">    box-sizing: border-box;</p>
+<p class="code">  }</p>
+<p class="code">  </p>
+<p class="code">  </p>
+<p class="code">  </p>
+<p class="code">  body {</p>
+<p class="code">    margin: 0;</p>
+<p class="code">    font-family:sans-serif;</p>
+<p class="code">    font-size: 1rem;</p>
+<p class="code">    font-weight: 400;</p>
+<p class="code">    line-height: 1.5;</p>
+<p class="code">    color: #212529;</p>
+<p class="code">  }</p>
+<p class="code">  img {</p>
+<p class="code">      max-width: 100%;</p>
+<p class="code">      padding-top: 3px;</p>
+<p class="code">      padding-right: 3px;</p>
+<p class="code">      padding-bottom: 3px;</p>
+<p class="code">      padding-left: 40px;</p>
+<p class="code">  }</p>
+<p class="code">  .container {</p>
+<p class="code">    width: 100%;</p>
+<p class="code">    max-width: 1140px;</p>
+<p class="code">    margin: 0 auto;</p>
+<p class="code">    padding-left: 15px;</p>
+<p class="code">    padding-right: 15px;</p>
+<p class="code">  }</p>
+<p class="code">  .content {</p>
+<p class="code">    display: -ms-flexbox;</p>
+<p class="code">    display: flex;</p>
+<p class="code">    -ms-flex-wrap: wrap;</p>
+<p class="code">    flex-wrap: wrap;</p>
+<p class="code">    margin-left: -15px;</p>
+<p class="code">    margin-right: -15px;</p>
+<p class="code">  }</p>
+<p class="code">  .content .col {</p>
+<p class="code">    -ms-flex: 0 0 50%;</p>
+<p class="code">    flex: 0 0 50%;</p>
+<p class="code">    max-width: 50%;</p>
+<p class="code">    padding-left: 15px;</p>
+<p class="code">    padding-right: 15px;</p>
+<p class="code">  }</p>
+<p class="code">.main {</p>
+<p class="code">      background-color:  #111111;    </p>
+<p class="code">}</p>
+<p class="code">  .footer {</p>
+<p class="code">      height: 100px;</p>
+<p class="code">      background-color:  black;</p>
+<p class="code">  }</p>
+<p class="code">  </p>
+<p class="code"> .LeftPSilver {</p>
+<p class="code">      font-family:  Helvetica, Arial, sans-serif;</p>
+<p class="code">      font-size: 13px;</p>
+<p class="code">      color: Silver;</p>
+<p class="code">      padding-right: 5%;</p>
+<p class="code">      padding-left: 5%;</p>
+<p class="code">      line-height: 22px;</p>
+<p class="code">      font-weight: 500;</p>
+<p class="code">      text-align: left;</p>
+<p class="code">}</p>
+<p class="code">      </p>
+<p class="code">      </p>
+<p class="code">      .h2Gold {</p>
+<p class="code">      font-family: Georgia,  &quot;Times New Roman&quot;, Times, serif;</p>
+<p class="code">      color: #D5DBA4;</p>
+<p class="code">      ;</p>
+<p class="code">      font-size: 30px;</p>
+<p class="code">      font-weight: 500;</p>
+<p class="code">      text-align: center;</p>
+<p class="code">}</p>
+<p class="code">      </p>
+<p class="code">  </p>
+<p class="code">  @media(max-width: 767px){</p>
+<p class="code">    .content .col {</p>
+<p class="code">      -ms-flex: 0 0 100%;</p>
+<p class="code">      flex: 0 0 100%;</p>
+<p class="code">      max-width: 100%;</p>
+<p class="code">    }</p>
+<p class="code">  }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&lt;/style&gt;</p>
+<p class="code">&nbsp;</p>
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
