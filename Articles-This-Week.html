@@ -7,19 +7,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4 Working With All Browsers</title>
-
-
-
-<meta name="title" content="4 Working With All Browsers ">
+    <title>5- Flex-Box Product Page</title>
+    
+    
+<meta name="title" content="5 Flex-Box Product Page ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="Flexbox, Autoprefixer, Visual Studio, CSS, Web Design"/>
+<meta name="keywords" content="Flexbox, Product Page, Visual Studio, CSS, Web Design"/>
 
 
-<meta name="description" content="This article explains how we can easily add an Autoprefixer to Visual Studio to help the flexbox CSS work with all browsers "/>
+<meta name="description" content="This article explains how to display a product page within your own website. "/>
 
 <meta name="category" content="Flex-Box, CSS, Web Design">
 
@@ -28,9 +27,10 @@
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Sunday, February 4, 2024" />
+<meta name="revised" content="Friday, February 9, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/1-Flexbox/4-Working-With-All-Browsers/4-Working-With-All-Browsers.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/5-Flex-Box-Product-Page.html">
+
 
 
     
@@ -40,7 +40,34 @@
 <style type="text/css">
 <!--
 
-
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+span.Heading1Char {
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+font-weight:bold;
+}
 -->
 </style>
 <style type="text/css">
@@ -55,33 +82,19 @@ font-size:16.0pt;
 font-family:"Calibri Light",sans-serif;
 color:#2F5496;
 }
-p.MsoToc1.a {
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	text-decoration: none;
-	display:block;
-	font-weight: 900;
-	text-align: center;
-	color: #C93;
-	line-height: 10px;
-	font-size: 16px;
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
 }
-
-
-p.MsoToc1.a:hover {
-	
-	
-	}
-
-
-span.BlueBoldenChar {
-font-family:"Times New Roman",serif;
-color:blue;
-font-weight:bold;
-}
-span.Heading1Char {
-font-family:"Calibri Light",sans-serif;
-color:#2F5496;
-font-weight:bold;
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
 }
 -->
 </style>
@@ -108,130 +121,143 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~4 Working With All Browsers~</p>
+  <p class="h2Black" >~5- Flex-Box Product Page~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >2/12/2024</p>
+   <p class="articleDate" style="text-align:right" >1/22/2024</p>
    
-   <br>
-   <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-   <p class="tableOfContents"><a href="#_Toc157779082" class="tableOfContents">Setting Your Visual Studio Settings</a></p>
-   <p class="tableOfContents"><a href="#_Toc157779083" class="tableOfContents">Making Changes to JSON   File</a></p>
-   <p class="tableOfContents"><a href="#_Toc157779084" class="tableOfContents">To turn on your   Autoprefixer</a></p>
-   <p class="tableOfContents"><a href="#_Toc157779085" >Prefix an Entire CSS Page</a></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/1.png" width="274" height="192" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Flexbox for the most part works pretty well, but it doesn&rsquo;t  always play nice with others. This is where vendor prefixing will come in  handy.</p>
-   <p class="MsoNormal">There is something called the autoprefixer, which will help  you with this, but you will need to install it in Visual Studio Code.</p>
-   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Open Visual Studio</span></strong></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/2.png" width="372" height="257" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Go to the left side and click on this icon that looks like 4  boxes with the top right one shooting out to the right.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/3.png" width="69" height="64" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Add to the search bar the text &ldquo;autoprefixer&rdquo; to find the  extension that you will need.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/4.png" width="369" height="278" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Click on the blue button for it  that says &ldquo;Install&rdquo;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/5.png" width="558" height="151" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">You will see the information for  the Autoprefixer on the right-hand side</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/6.png" width="628" height="279" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <h1><a name="_Toc157779082">Setting Your Visual Studio Settings</a></h1>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Open Settings in Visual  Studio</span></strong></p>
-   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong>Go to this wheel icon on the bottom left hand side of Visual Studio code.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/6a.png" width="156" height="145">
-   <h1><a name="_Toc157779083">Making Changes to JSON File</a></h1>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">You are looking for the workspace settings for JSON, or you  will not be able to edit it.</p>
-   <p class="MsoNormal">write workspace JSON in the search bar like this, and then click on this blue link here</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/8.png" width="622" height="266" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">You want to add some code to  the JSON File</span></strong></p>
-   <p class="MsoNormal">You will need to start by adding <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">2 commas</span></span> to make this work.  One comma goes after the last list item in the list, and another comma will be  following the last curly brace. In order to add another item, the previous item  must be closed out like this. Commas tell JSON that there is another item to  look at.</p>
-   <p class="MsoNormal">Add a comma here, and here.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/9.png" width="622" height="223" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">This is the code that you will be adding above,  after that last command and before the yellow  curly brace:</p>
-   <p class="code">&quot;autoprefixer.options&quot;: { &quot;browsers&quot;: [  &quot;last 4 versions&quot;, &quot;ie &gt;= 9&quot;, &quot;&gt; 5%&quot; ] }</p>
-   <p class="code">&nbsp;</p>
-   <p class="code">&nbsp;</p>
-   <p class="MsoNormal">Make sure that yellow curly brace closes out the entire code  for the JSON file. You can see that the code is correct if you color coding is  not showing red.</p>
-   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Restart Visual Studio</span></strong></p>
-   <p class="MsoNormal">Now you will want to shut down and restart Visual Studio</p>
-   <p class="MsoNormal">Select text you want prefixed</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/10.png" width="510" height="144" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <h1><a name="_Toc157779084">To turn ON your Autoprefixer</a></h1>
-  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal">Select the text that you want to prefix and then hit <span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; ">F1</span></span>,  then from the drop down at the top of the app choose: </p>
-   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Autoprefixer:Run</span></strong></p>
-   <p class="MsoNormal"><span class="Heading1Char"><span style="font-size:14.0pt; ">&nbsp;</span></span></p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/11.png" width="631" height="103" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Now look at our code. it added all those web fixes for us,  so…. <span class="Heading1Char"><span style="font-size:14.0pt; ">IT  WORKS!</span></span></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/12.png" width="539" height="233" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <h1><a name="_Toc157779085">Prefix an Entire CSS Page</a></h1>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal">Now you can select all of your CSS on a CSS file and  Autoprefixer will figure out what needs and what doesn&rsquo;t need the prefix added  to it. No need for you to just select the specific areas, where you might think  things should go.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/13.png" width="630" height="451" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Press F1 on your Keyboard and select Autoprefixer:Run from  the dropdown</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/14.png" width="629" height="105" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Now you will notice all of your tags have been added to the  code for you.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/4-Working-With-All-Browsers/Images/15.png" width="631" height="422" class="wideImg">
-<p class="pMidBlack">&nbsp;</p>
+   
+   
+ <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
 
+   <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc158977368" class="tableOfContents">The   Select Options Dropdown</a></span></p>
+   <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc158977369">The   Products Layout</a></span></p>
+   <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc158977370">Using   Flex grow</a></span></p>
+   <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc158977371">Restrict   Maximum Size of Images</a></span></p>
+   <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc158977372">Adding   a Button to the Product Card</a></span></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
  
-  <!--Main Article -->
-  
-  
-  
-  <br>
-<br>
-
- 
-</article>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/1.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">The code that I will be presenting in this Product page  tutorial will be like an insert to a pre-existing web page that you already  have.</p>
+    <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/1-a-small.png" class="wideImg" >
+   <p class="MsoNormal">&nbsp;</p>
+   <h1><a name="_Toc158977368">The Select Options Dropdown</a></h1>
+    <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal">Creating this dropdown might seem a bit in-depth, but really  there is not too much to it, and it should not give you any nightmares just  thinking about attempting it.</p>
+   <p class="MsoNormal">We will be putting this select dropdown widget inside of a  navigation. We can call this navigation anything we want but for now we will  just be giving it a class of product-filter, since that is what it will be  doing.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The HTML</span></strong></p>
+   <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/2.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Next thing that we will be doing is to give it a heading.  This would reflect what we wanted to sell. I just put &ldquo;Watches&rdquo; in for the  heading, but of course you can use anything here that you want. Place this h1  above the navigation section.</p>
+   <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/3.png" class="responsiveImage" >
+   <p class="MsoNormal">The next thing that we will specify inside of the  navigation, is our select widget, we will give this the class name of &ldquo;sort.&rdquo;</p>
+    <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/4.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Inside of the div &ldquo;sort&rdquo; which is our select widget, we are  going to have two dropdown options. We will put each of these dropdown options  in their own divs, and give these two the class with the name of  &ldquo;collection-sort&rdquo;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Each drop down will consist of a label, so we know what we  are selecting and then the select-option, To create this, we will be putting  the option tag with the value inside of a tag named select. </p>
+   <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/5.png" class="wideImg" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The CSS</span></strong></p>
+   <p class="MsoNormal">Since, in the HTML, we placed this entire thing into the  navigation, which we named &ldquo;product-filter&rdquo;, we will use that to be our flex  element. So, we will set the display of product-filter to flex.</p>
+    <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/6.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Setting the .sort div to flex</span></strong></p>
+   <p class="MsoNormal">If you look at your html, you will see that we placed our  two div options into another div with a class name of .sort. We can nest our  flex containers, which is just what we are doing with sort, this is because we  will set sort to be displayed as flex, inside of the product-filter div that we  have already designated as a flex container.</p>
+  <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/7.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The CSS for the .sort</span></strong></p>
+    <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/7a.png" class="responsiveImage" >
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Setting the .collection-sort  div</span></strong></p>
+   <p class="MsoNormal">We are giving our drop-down options to display as flex, yes  this is yet another flex container to be placed inside of the outer two  containers. Then we want the labels of Filter by: and Sort by: to sit on top of  the two dropdowns, so we set this container direction to be column. I also  added a bit of padding so that the two widgets have a tiny bit of space between  them.</p>
+    <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/8.png" class="wideImg" >
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+   <p class="MsoNormal">When we save, and run it in a browser, you should have this:</p>
+    <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/9.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <h1><a name="_Toc158977369">The Products Layout</a></h1>
+ <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Note-</span></span> <span class="MsoIntenseEmphasis">You want to make sure that all of your product images  are the same size. Create a background image, the size that you want. Slide all  of your products onto this background image, one by one, and then save your  images.</span></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><strong>The HTML</strong></p>
+   <p class="MsoNormal">In the html, right under the navigation section, we want to  create our product display for the page</p>
+   <p><img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/10.png" class="responsiveImage" ></p>
+   <p>&nbsp; </p>
+   <p class="MsoNormal">Inside of this section tag, we want to start adding the  images and descriptions of our products. We will start with just one, and then  work from there.</p>
+    <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/11.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Note-</span></span> <span class="MsoIntenseEmphasis">You will probably want to link this card somewhere to  an individual product page. you could add a button in the info, link the  titles, or even wrap the entire card in an anchor tag.</span></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Right below the section that we highlighted in yellow and  before the closing section tag is where you will want to add additional  products.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Now you want to add that yellow section, to create 9 more  cards to work with. Remember that this is the tag that you are putting all of  those product cards into. This section was placed under the navigation</p>
+    <p><img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/12.png" class="responsiveImage" ></p>
+    <p>&nbsp; </p>
+    <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The CSS for the .products  section</span></strong></p>
+   <p class="MsoNormal">Before you set the following rules for the .products  section, you will find that the products are just dropping down in a single  column. That is because it was following the rule that you had set for the  dropdown box in the navigation, which was with a flex direction of column. We  want this to do something different so we will be giving it, its own flex  container and setting that container to have its contents wrap.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/13.png" class="responsiveImage" >
+   <p class="MsoNormal">As you can see, here the products are no longer in a single  column, and now the products will wrap, when the page is widened or narrowed.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/14.png" class="wideImg" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Using flex-wrap: wrap will force the items onto the next  row, once the page is narrowed enough that it does not fit.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <h1><a name="_Toc158977370">Using Flex grow</a></h1>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal">We want to take further control on how things move on the  page by taking advantage of flex-grow. We will start out by placing everything  on one row by simply setting flex-grow:1; This will be done on each one of the  product cards</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">To do this, we want to add some more properties to the  .products rule. Like this:</p>
+   <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/15.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Now we want to add a bit of the padding. The padding will  actually go on the .product-card rule. I am only adding a 1% padding to my  cards, so they have just a bit of space between them.</p>
+    <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/16.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/17.png" class="wideImg" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <h1><a name="_Toc158977371">Restrict Maximum Size of Images</a></h1>
+    <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal">You do not want your images growing too large and  distorting. To prevent this, we can add this code to our CSS</p>
+  <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/18.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <h1><a name="_Toc158977372">Adding a Button to the Product Card</a></h1>
+ <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+ <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/19.png" class="wideImg" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The HTML</span></strong></p>
+    <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/20.png" class="wideImg" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The CSS</span></strong></p>
+   <p class="MsoNormal">We will be styling both the container and the product  button. We are surrounding the button with a div tag and naming the class, the  buttonContainer, because that is what it will be. We are setting the display  for the buttonContainer to flex. Also, we want the center align it both  horizontally and vertically so it will set exactly center in the div. And then  we set the flex-grow to be 1.</p>
+   <p class="MsoNormal">&nbsp;</p>
+ <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/21.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Now this is for the styling for button itself</p>
+  <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/22.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">I also did a bit of restyling of some of the text, so that  it looked a little better on the page</p>
+    <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/23.png" class="responsiveImage" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">So, now my page looks like this:</p>
+   <img src="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/Images/24.png" class="wideImg" >
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">You can go <span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; "><a href="Articles/2024/1-Flexbox/5-Flex-Box-Product-Page/The-Code-for-Product-Page.html">here</a></span></span> to get the full HTML and CSS for  this product page</p>
+<p class="tableOfContentHeading">&nbsp;</p></article><aside class="aside aside-1">
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-</aside>
+  </aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
