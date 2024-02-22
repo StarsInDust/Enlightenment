@@ -134,8 +134,9 @@
 .responsiveImage  {
 	-webkit-box-shadow: 2px 3px 8px black;
 	        box-shadow: 2px 3px 8px black;
-  border-radius: 20px;
+  border-radius: 10px;
   margin-bottom: 20Px;
+	 margin-top: 20Px;
 	
 }
 	
@@ -296,6 +297,10 @@ font-weight:bold;
 .wideImg {
     width: 70%;
 	height:auto;
+	
+ margin-bottom: 20Px;
+	 margin-top: 20Px;
+	
   }
   
  .cartoonImg {

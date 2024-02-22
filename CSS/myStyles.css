@@ -382,6 +382,8 @@ body {
 .wideImg {
     width: 70%;
 	height:auto;
+  margin-bottom: 20Px;
+	 margin-top: 20Px;
   }
   
  .cartoonImg {
