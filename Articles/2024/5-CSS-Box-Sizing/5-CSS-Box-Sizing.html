@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+
+
+    
+
+<link href="../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~Box Sizing~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >4/8/2024</p>
+   
+   <br>
+<br>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+<p class="tableOfContents"><a href="#_Toc160609705">What   is Box Sizing?</a></p>
+<p class="tableOfContents"><a href="#_Toc160609706">Test   this out for yourself</a></p>
+<p class="tableOfContents"><a href="#_Toc160609707">How   can we fix this Box Sizing Madness?</a></p>
+<p class="tableOfContents"><a href="#_Toc160609708">What   happens when we add text?</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="BlueBolden">1</p>
+<h1><a name="_Toc160609705">What is Box Sizing?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Well, box sizing is when you tell an element, like a div or  an image to be a certain size; you expect it to be that size; and then it  confuses the mess out of you when it comes in at some other size.</p>
+<p class="MsoNormal">This is because (by default), an web element will not just  be the width and the height alone. Oh, it would be so simple if it would. It  wants to include both what you state as the padding, and even the border. Thank  goodness that the margin is the space around and out side of an element, or the  darn thing would be throwing that in too.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="BlueBolden">2</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc160609706">Test this out for yourself</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You can test this madness out for yourself if you make 3  different divs. Give each div the same width and height and then give one a  border and one some padding. Leave the first div with just the width and the  height</p>
+<p class="BlueBolden">3</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<p class="BlueBolden"><strong><span style="font-weight:normal; ">4</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
+<p class="BlueBolden"><strong><span style="font-weight:normal; ">5</span></strong></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc160609707">How can we fix this Box Sizing Madness?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Yes, this can be absolutely enough to drive a young web site  developer to lose there ever-loving mind. Especially when you have no idea  where this extra sizing is coming from and you go and add even more padding and  borders, and the darn thing just gets more and more unruly. </p>
+<p class="MsoNormal">Why these people who write these initial codes did not think  about this is beyond me, but alas, we do have a fix for this. Even if we have  to write our own rules to fix it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="BlueBolden">6</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Ok, now this is what I used to fix this problem. Add this to  your CSS</p>
+<p class="BlueBolden">7</p>
+<h1><a name="_Toc160609708">What happens when we add text?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Well, since we gave our boxes a specific height and width  here, if we were to add text, it would over flow the boxes.</p>
+<p class="MsoNormal">The last box here had the <strong>height</strong> in the CSS changed  to <strong>auto</strong>, so that it would not overflow.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="BlueBolden">8</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Additionally, you could just leave the height off, in your CSS  code, and the box would accommodate the overflow of the text automatically.</p>
+<p class="MsoNormal">In the red box, we just left the height blank, and it worked  fine.</p>
+<p class="BlueBolden">9</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">So, where the box-sizing fix can be great for making sure  that the width of your boxes are the same width, without the hassle of always  having to figure in the border size and padding, it could break things in other  places, especially if we do not understand what is going on.</p>
+<p class="MsoNormal">However, fixing this common problem really was not all that  hard, and let us discover some of the other inner workings of our CSS. </p>
+</article>
+<aside class="aside aside-1">
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
