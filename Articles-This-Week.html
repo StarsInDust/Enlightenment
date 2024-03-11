@@ -7,31 +7,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7 Two Column Design</title>
+    <title>8 Web Page Design</title>
 
-
-<meta name="title" content="7 Two-Column Design ">
+<meta name="title" content="8 Web Page Design ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="Flexbox, Two Column Design, Visual Studio, CSS, Web Design"/>
+<meta name="keywords" content="Flexbox, Web Page Design, Visual Studio, CSS, Web Design"/>
 
 
-<meta name="description" content="This article explains how we can easily create a two-column responsive design, using flexbox technology "/>
+<meta name="description" content="This article explains how to create a web page using Flex- box "/>
 
-<meta name="category" content="Two Column design, Flex-Box, CSS, Web Design">
+<meta name="category" content="Flex-Box, Web Page Design, CSS, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Thursday, February 15, 2024" />
+<meta name="revised" content="Thursday, February 22, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/1-Flexbox/7-Two-column-Design/7-Two-Column-Design.html">
-
-
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/1-Flexbox/8-Web-Page-Design/8-Web-Page-Design.html">
 
 
     
@@ -64,10 +61,14 @@ line-height:115%;
 font-size:11.0pt;
 font-family:"Calibri",sans-serif;
 }
-span.MsoHyperlink {
-color:#0563C1;
-text-decoration:underline;
-text-underline:single;
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
 }
 -->
 </style>
@@ -77,7 +78,7 @@ text-underline:single;
 <body>
 
 <div class="wrapper">
-<header class="header">Header</header>
+  <header class="header">Header</header>
   
   <ul class="navigation">
    <li><a href="index.html" class="active"title="Home">Home</a></li>
@@ -94,82 +95,143 @@ text-underline:single;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~7 Two-Column Design~</p>
+  <p class="h2Black" >~8 Web Page Design~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >3/4/2024</p>
+   <p class="articleDate" style="text-align:right" >3/11/2024</p>
    
    <br>
- 
-  <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc158982214">Your   image size for the first column</a></span></p>
-   <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc158982215">Pseudo-Elements</a></span></p>
-   <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc158982216">Why   use this for Box-sizing?</a></span></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/7-Two-column-Design/Images/1.png" width="270" height="241">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">This tutorial will be on how to make a two-column layout  using flexbox. I use this design on my own website, in the presentation of my  archived articles.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/7-Two-column-Design/Images/2.png" width="617" height="392" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">As you will see, this code will just be inserted into a pre-existing  web layout.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/7-Two-column-Design/Images/3.png" width="607" height="385" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <h2>&nbsp;</h2>
-   <h2>&nbsp;</h2>
-   <h1><a name="_Toc158982214">Your image size for the first column</a></h1>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/7-Two-column-Design/Images/4.png" width="381" height="143" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Remember, this 2- column section&rsquo;s code will only be an  insert to the main content on your own site. Your website will not resemble  mine, except for the 2- column section.</p>
-   <img src="Articles/2024/1-Flexbox/7-Two-column-Design/Images/5.png" width="766" height="369" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-   <h1><a name="_Toc158982215">Pseudo-Elements</a></h1>
-    <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Most of the code in this tutorial is fairly easy to  understand, but the one thing that does stand out is the use of the  pseudo-element, you can recognize the pseudo-element because you will see a  double colon in the declaration of the class rule. So, I will go into an  additional example here, before starting the actual tutorial.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">The code using the pseudo-element with the double colon will  put a tilde before and after the text that I have written below. </p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal"><strong>HTML</strong></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/7-Two-column-Design/Images/6.png" width="190" height="39" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">You will see from the CSS, that we have a tag of content,  this is what we want to make appear before or after the text. I put a tilde in  the tag, so when I run the webpage, I will see a tilde show up before and after  the &ldquo;Hello There!&rdquo; text, even though it was never specified in the HTML, only  in the CSS. We also styled the tilde in each one of the pseudo-element tags. It  is just a piece of magic that we can do.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal"><strong>CSS</strong></p>
-   <p class="MsoNormal" style="text-indent:.5in;">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/7-Two-column-Design/Images/7.png" width="208" height="236" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">This is what this will look like with the styled tilde set  to the rule::before and ::after</p>
-   <p class="BlueBolden">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/7-Two-column-Design/Images/8.png" width="224" height="69" class="responsiveImage">
-<h1><a name="_Toc158982216">Why use this for Box-sizing?</a></h1>
-    <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">The above is an explanation of Pseudo elements, and how they  are used; however, you will see that in our code, it is being used on  box-sizing. The star is used to say that they want this best practiced used on  all of the elements, and even any pseudo-elements, the comma is used to  separate the rules automatically with this code.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">If you set the box -sizing to border-box as it was done  here, both of our divs will include padding and boarder.  Sometimes, you might put padding on one div  and not on the other. This sort of thing could throw off the sizing, and one  div could be wider than the other. If you set box-sizing to border-box, you do  not have to keep track of such trivial matters, your code will do that for you,  and make each div the same size regardless. This is a more uniform look for  your layout.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/1-Flexbox/7-Two-column-Design/Images/9.png" width="221" height="74" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">There are other Pseudo-elements too, and if you want to  learn more about them. You can go to W3schools <a href="https://www.w3schools.com/css/css_pseudo_elements.asp">Here</a>.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">You can go <a href="Articles/2024/1-Flexbox/7-Two-column-Design/The-Code.html">HERE</a> to see our Code for our 2 - column design insert.</p>
+<br>
 
-   <!--Main Article -->
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+
+<p class="tableOfContents"><a href="#_Toc159319300">The Layout</a></p>
+<p class="tableOfContents"><a href="#_Toc159319301">The Banner</a></p>
+<p class="tableOfContents"><a href="#_Toc159319302">The Navigation</a></p>
+<p class="tableOfContents"><a href="#_Toc159319303">Changing the background colors   of the page</a></p>
+<p class="tableOfContents"><a href="#_Toc159319304">Ordering our Divs</a></p>
+<p class="tableOfContents"><a href="#_Toc159319305">Using span tag to take a   div out of the order</a></p>
+<p class="tableOfContents"><a href="#_Toc159319306">This is how I would   arrange things if I wanted ALL my divs to be apart of order</a></p>
+<p class="tableOfContents"><a href="#_Toc159319307">The Cartoon Div</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/1.png" width="270" height="241" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc159319300">The Layout</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">This tutorial will show you the same web page that I used  for my own site. There are many designs that you can use for flexbox, but I do  happen to favor this one. It is very flexible. It contains the main section in  the middle, at full size. It has a side bar section on each side. These side bars  can be used for anything. Such as images, or hyperlinks to other sections of  your site or even external sites.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/2.png" width="997" height="835" class="wideImg"></p>
+<p>&nbsp; </p>
+<p class="MsoNormal">When the page is reduced in width, you will notice that the  center, main section goes to the top of the page, and the two side bars swoop  underneath of the main section to form a sort of pedestal for your main dialog.  If you leave these two sidebars blank, it really tends to look like a sort of  platform holding up the middle section.</p>
+<p class="MsoNormal">The orange arrows are pointing out the side bars which moved  to the bottom of the main section, at a tablet size width.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/3.png" width="529" height="312" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc159319301">The Banner</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The Banner will be placed in the header tag on the web page.  This is probably one of the most interesting things in this design. That is  because it tends to morph into something else with each screen width reduction.  But, in reality, you are behind this magic. We will be using both media  queries, as well as different sized banner sizes. Instead of hard-cording our  images in the html, we will be making all of our switching in the CSS.</p>
+<br>
+
+<p class="MsoNormal">As you can see by the sizing, what actually works best for  screen size may not actually fit perfectly in what the suggested Official specifications  of the sizes may tell you.</p>
+<br>
+
+<p class="MsoNormal">The top size in the images below, are the official size, and what I actually used for these images are stated below that.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/4.png" width="695" height="274" class="wideImg"></p>
+<p>&nbsp; </p>
+<p class="MsoNormal">Look at the <strong>html</strong> for the header. This is where the  banner is located, and yet as I stated before, it is not hard-coded in the html tag. That is because  we are loading the banners from the CSS.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/5.png" width="294" height="95" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now look at the <strong>CSS</strong>. We start by loading the <strong>1200</strong> size banner in the regular CSS code.</p>
+<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/6.png" width="418" height="129" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">Now we do the rest of the  magic in the media queries.</span></p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Watch it,</span></span> you want to  always make sure that your media queries come last in your style sheet. That is  because if you start writing regular rules under the queries, you will find  your CSS is simply not listening to you.</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> if you are  working with <strong>min-width</strong> in your media queries, you want to make sure that  you start with your <strong>smallest screen size first</strong>. That is why we are  starting with our screen size of 300. Of course, if you are using max-width,  you will need to start with your largest size first. Order matters, when it  comes to writing media queries.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/7.png" width="467" height="731" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc159319302">The Navigation</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">Ok, let&rsquo;s take a look at the navigation next. Notice that  our navigational links are sitting on the right side of the webpage. We are  doing that by setting <strong>the justify- content</strong> to <strong>flex-end</strong>. We are  also adding a bit of styling to both the anchor link and the hover.</p>
+<p class="MsoNormal">As you can see, all of our <strong>flex</strong> stuff is going into  the main rule of .navigation, itself.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/8.png" width="396" height="376" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1>&nbsp;</h1>
+<h1><a name="_Toc159319303">Changing the background colors of the page</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We are dealing with 3 divs in the html to create the 3  sectional layout. We have the main section, and also the two asides. We had  colored our asides background to the color black. But what is the name of our Main  section. Well, that would be main.</p>
+<p class="MsoNormal">Here we changed our main section from dark grey to teal.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/9.png" width="773" height="481" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/10.png" width="596" height="185" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc159319304">Ordering our Divs</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">If you take a look at how we ordered our divs in the html,  you will find that the <strong><span style="color:#2E74B5; ">main</span></strong> is listed first, and the two asides come  after it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/11.png" width="462" height="294" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We are going to do the reordering of these divs in the CSS  media queries. When we are on the largest screen size. We do not want our main  div to be on top, but we want it sitting inside of the two asides on either  side of it. So, we want our main div, at size 1200 screen size to be sitting at  order number 2. </p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Look at our CSS for the 1200 size and you will see that move  made here. The footer will be taking our 4<sup>th</sup> position on the bottom.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/12.png" width="417" height="231" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc159319305">Using span tag to take a div out of the order</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You will notice that I had taken the div with the cartoon  out when it came to ordering the other sections. I did that by using a span tag  on it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/13.png" width="455" height="111" class="wideImg"></p>
+<p>&nbsp; </p>
+<p class="MsoNormal">When I told this section to do its own thing, I could use  the same rule as aside 2 and just take it out of the dizzying spin of the other  3 divs, by stating that it would be using a span. That says that I just want to  be left alone, and sit where I specified in the html section.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/14.png" width="365" height="113" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc159319306">This is how I would arrange things if I wanted <u>ALL</u> my divs to be apart of order</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> just  remember if you do make this change, you will still need to put all media  queries at the bottom of your CSS sheet. If you try to put this rule on your  html page, it will not want to listen to you.</p>
+<p class="MsoNormal">I changed my div to be called .aside-3, and then gave it  these rules</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/15.png" width="479" height="99" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> remember  that once you have taken your aside out of aside-2 and started to call it,  aside-3, that it no longer has any rules attached to it. So, you will need to  copy the rule for aside-2, and rewrite a new rule for aside-3</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/16.png" width="281" height="142" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Then in your media queries you need to add this new aside-3  into this query using the order property</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/17.png" width="302" height="128" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc159319307">The Cartoon Div</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Ok, weather you create an aside-3, or just use a span to  create this div, which we are putting a Garfield cartoon into, you will find  that when your image is squeezed into the cell phone size, that it will want to  overflow, its container. In order to prevent that we are going to throw some  new rules into our media queries for our 300 size. So, these are our new rules  for that image.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/18.png" width="517" height="415" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<p class="MsoNormal">The rest of the CSS in either the media queries or the  regular rules, is just placed there for additional styling of the elements on  the page.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You can go <strong><span style="color:#1F4E79; "><a href="Articles/2024/1-Flexbox/8-Web-Page-Design/The-Code.html">HERE</a></span></strong> to see the code for this webpage.</p>
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
  
  
 </article>
