@@ -7,28 +7,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8 Web Page Design</title>
+    <title>Media Queries</title>
 
-<meta name="title" content="8 Web Page Design ">
+<meta name="title" content="Media Queries ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="Flexbox, Web Page Design, Visual Studio, CSS, Web Design"/>
+<meta name="keywords" content="Media Queries, Visual Studio, CSS, Web Design"/>
 
 
-<meta name="description" content="This article explains how to create a web page using Flex- box "/>
+<meta name="description" content="This article explains how to use Media Queries to aide in Web site page flexibility. "/>
 
-<meta name="category" content="Flex-Box, Web Page Design, CSS, Web Design">
+<meta name="category" content="Media Queries, CSS, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Thursday, February 22, 2024" />
+<meta name="revised" content="Monday, February 26, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/1-Flexbox/8-Web-Page-Design/8-Web-Page-Design.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/2-Media-Queries/Media-Queries.html">
 
 
     
@@ -52,6 +52,16 @@ font-weight:bold;
 </style>
 <style type="text/css">
 <!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
 p.MsoToc1 {
 margin-top:0in;
 margin-right:0in;
@@ -61,13 +71,18 @@ line-height:115%;
 font-size:11.0pt;
 font-family:"Calibri",sans-serif;
 }
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
+}
 span.MsoIntenseEmphasis {
 color:#4472C4;
 font-style:italic;
 }
-span.BoldRedChar {
+span.BlueBoldenChar {
 font-family:"Times New Roman",serif;
-color:red;
+color:blue;
 font-weight:bold;
 }
 -->
@@ -95,143 +110,125 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~8 Web Page Design~</p>
+  <p class="h2Black" >~Media Queries~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >3/11/2024</p>
+   <p class="articleDate" style="text-align:right" >3/18/2024</p>
    
    <br>
-<br>
-
-<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-
-<p class="tableOfContents"><a href="#_Toc159319300">The Layout</a></p>
-<p class="tableOfContents"><a href="#_Toc159319301">The Banner</a></p>
-<p class="tableOfContents"><a href="#_Toc159319302">The Navigation</a></p>
-<p class="tableOfContents"><a href="#_Toc159319303">Changing the background colors   of the page</a></p>
-<p class="tableOfContents"><a href="#_Toc159319304">Ordering our Divs</a></p>
-<p class="tableOfContents"><a href="#_Toc159319305">Using span tag to take a   div out of the order</a></p>
-<p class="tableOfContents"><a href="#_Toc159319306">This is how I would   arrange things if I wanted ALL my divs to be apart of order</a></p>
-<p class="tableOfContents"><a href="#_Toc159319307">The Cartoon Div</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/1.png" width="270" height="241" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<h1><a name="_Toc159319300">The Layout</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">This tutorial will show you the same web page that I used  for my own site. There are many designs that you can use for flexbox, but I do  happen to favor this one. It is very flexible. It contains the main section in  the middle, at full size. It has a side bar section on each side. These side bars  can be used for anything. Such as images, or hyperlinks to other sections of  your site or even external sites.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/2.png" width="997" height="835" class="wideImg"></p>
-<p>&nbsp; </p>
-<p class="MsoNormal">When the page is reduced in width, you will notice that the  center, main section goes to the top of the page, and the two side bars swoop  underneath of the main section to form a sort of pedestal for your main dialog.  If you leave these two sidebars blank, it really tends to look like a sort of  platform holding up the middle section.</p>
-<p class="MsoNormal">The orange arrows are pointing out the side bars which moved  to the bottom of the main section, at a tablet size width.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/3.png" width="529" height="312" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc159319301">The Banner</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">The Banner will be placed in the header tag on the web page.  This is probably one of the most interesting things in this design. That is  because it tends to morph into something else with each screen width reduction.  But, in reality, you are behind this magic. We will be using both media  queries, as well as different sized banner sizes. Instead of hard-cording our  images in the html, we will be making all of our switching in the CSS.</p>
-<br>
-
-<p class="MsoNormal">As you can see by the sizing, what actually works best for  screen size may not actually fit perfectly in what the suggested Official specifications  of the sizes may tell you.</p>
-<br>
-
-<p class="MsoNormal">The top size in the images below, are the official size, and what I actually used for these images are stated below that.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/4.png" width="695" height="274" class="wideImg"></p>
-<p>&nbsp; </p>
-<p class="MsoNormal">Look at the <strong>html</strong> for the header. This is where the  banner is located, and yet as I stated before, it is not hard-coded in the html tag. That is because  we are loading the banners from the CSS.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/5.png" width="294" height="95" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now look at the <strong>CSS</strong>. We start by loading the <strong>1200</strong> size banner in the regular CSS code.</p>
-<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/6.png" width="418" height="129" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">Now we do the rest of the  magic in the media queries.</span></p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Watch it,</span></span> you want to  always make sure that your media queries come last in your style sheet. That is  because if you start writing regular rules under the queries, you will find  your CSS is simply not listening to you.</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> if you are  working with <strong>min-width</strong> in your media queries, you want to make sure that  you start with your <strong>smallest screen size first</strong>. That is why we are  starting with our screen size of 300. Of course, if you are using max-width,  you will need to start with your largest size first. Order matters, when it  comes to writing media queries.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/7.png" width="467" height="731" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<h1><a name="_Toc159319302">The Navigation</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">Ok, let&rsquo;s take a look at the navigation next. Notice that  our navigational links are sitting on the right side of the webpage. We are  doing that by setting <strong>the justify- content</strong> to <strong>flex-end</strong>. We are  also adding a bit of styling to both the anchor link and the hover.</p>
-<p class="MsoNormal">As you can see, all of our <strong>flex</strong> stuff is going into  the main rule of .navigation, itself.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/8.png" width="396" height="376" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1>&nbsp;</h1>
-<h1><a name="_Toc159319303">Changing the background colors of the page</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">We are dealing with 3 divs in the html to create the 3  sectional layout. We have the main section, and also the two asides. We had  colored our asides background to the color black. But what is the name of our Main  section. Well, that would be main.</p>
-<p class="MsoNormal">Here we changed our main section from dark grey to teal.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/9.png" width="773" height="481" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/10.png" width="596" height="185" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc159319304">Ordering our Divs</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">If you take a look at how we ordered our divs in the html,  you will find that the <strong><span style="color:#2E74B5; ">main</span></strong> is listed first, and the two asides come  after it.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/11.png" width="462" height="294" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">We are going to do the reordering of these divs in the CSS  media queries. When we are on the largest screen size. We do not want our main  div to be on top, but we want it sitting inside of the two asides on either  side of it. So, we want our main div, at size 1200 screen size to be sitting at  order number 2. </p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Look at our CSS for the 1200 size and you will see that move  made here. The footer will be taking our 4<sup>th</sup> position on the bottom.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/12.png" width="417" height="231" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<h1><a name="_Toc159319305">Using span tag to take a div out of the order</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You will notice that I had taken the div with the cartoon  out when it came to ordering the other sections. I did that by using a span tag  on it.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/13.png" width="455" height="111" class="wideImg"></p>
-<p>&nbsp; </p>
-<p class="MsoNormal">When I told this section to do its own thing, I could use  the same rule as aside 2 and just take it out of the dizzying spin of the other  3 divs, by stating that it would be using a span. That says that I just want to  be left alone, and sit where I specified in the html section.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/14.png" width="365" height="113" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<h1><a name="_Toc159319306">This is how I would arrange things if I wanted <u>ALL</u> my divs to be apart of order</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> just  remember if you do make this change, you will still need to put all media  queries at the bottom of your CSS sheet. If you try to put this rule on your  html page, it will not want to listen to you.</p>
-<p class="MsoNormal">I changed my div to be called .aside-3, and then gave it  these rules</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/15.png" width="479" height="99" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> remember  that once you have taken your aside out of aside-2 and started to call it,  aside-3, that it no longer has any rules attached to it. So, you will need to  copy the rule for aside-2, and rewrite a new rule for aside-3</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/16.png" width="281" height="142" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Then in your media queries you need to add this new aside-3  into this query using the order property</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/17.png" width="302" height="128" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<h1><a name="_Toc159319307">The Cartoon Div</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Ok, weather you create an aside-3, or just use a span to  create this div, which we are putting a Garfield cartoon into, you will find  that when your image is squeezed into the cell phone size, that it will want to  overflow, its container. In order to prevent that we are going to throw some  new rules into our media queries for our 300 size. So, these are our new rules  for that image.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/1-Flexbox/8-Web-Page-Design/Images/18.png" width="517" height="415" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<p class="MsoNormal">The rest of the CSS in either the media queries or the  regular rules, is just placed there for additional styling of the elements on  the page.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You can go <strong><span style="color:#1F4E79; "><a href="Articles/2024/1-Flexbox/8-Web-Page-Design/The-Code.html">HERE</a></span></strong> to see the code for this webpage.</p>
-<p>&nbsp;</p>
-<p class="pMidBlack">&nbsp;</p>
  
-  <!--Main Article -->
+   <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+  <br>
+
+   
+   
+   <p class="tableOfContents"><a href="#_Toc159755087" >What   are CSS Media Queries?</a></span></p>
+   
+   
+   
+   <p class="tableOfContents" ><a href="#_Toc159755088">What   are some of the quirks of Media Queries?</a></span></p>
+   <p class="tableOfContents" ><a href="#_Toc159755089">Unfamiliar   Naming and color Coding</a></span></p>
+   <p class="tableOfContents" ><a href="#_Toc159755090">What   is Media Query Doing?</a></span></p>
+   <p class="tableOfContents" ><a href="#_Toc159755091">Syntax   of media type targeting</a></span></p>
+   <p class="tableOfContents" ><a href="#_Toc159755092">Specifying certain Tasks at Certain Sizes</a></span></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/2-Media-Queries/Images/1.png" width="270" height="241" class="responsiveImage">
+<h1><a name="_Toc159755087">What are CSS Media  Queries?</a></h1>
+  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Media queries help our webpages in becoming more fluid. Even  though there tends to be some controversial information on when media queries actually  came into being, with some saying that they were introduced in CSS2, which was in  its final completion phase, when CSS3 was released in 1999.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/2-Media-Queries/Images/2.png" width="400" height="256" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Some of the later dates of its creation, sound a bit more  plausible because cell phones, and tablets in the beginning era of web page  creation were not quite as prevalent, and there simply was not that great of a  need for our pages to be fluid in sizing. So, from what I have gathered there  seems to have been some working draft for these things starting as early as in  2001, but it did not actually become a recommendation by W3C until June, 19<sup>th</sup> of 2012.  And then some proposed  corrections were published as recently as April 5<sup>th</sup>, 2022.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <h1><a name="_Toc159755088">What are some of the quirks of Media Queries?</a></h1>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Multiple Banner Images</span></strong></p>
+   <p class="MsoNormal">Media Queries, are pretty good at being able to take care of  some of the issues that things like flexbox have not yet been able to resolve,  but it is not that they come completely free of all issues.</p>
+   <p class="MsoNormal">For example, you will find that flex box will not be able to  completely handle your banner images, and so they will not look correct with  different sized devices. But while you can use media queries, and they work  very well; now you are faced with creating a separate image for every single  one of your different media types. And that is no small task.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">As I stated in my last tutorial, Web Page design. These are  your official sizes listed in large font size, but the sizes that actually  worked for my own devices were a bit different, and those sizes I listed below them  in the smaller font. You might even have to do your own finagling for things to  work for your own designs.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/2-Media-Queries/Images/3.png" width="695" height="274" class="wideImg">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS Placement for Media  Queries</span></strong></p>
+   <p class="MsoNormal">Another issue that you will find to be a bit maddening about  these media queries, is there insistence on where they want to be placed in  your code. You <strong><span style="font-family:'Calibri',sans-serif; ">MUST</span></strong>, place  these media queries at the bottom of your CSS code. If you try to list any  other normal rule underneath of it, you will find that your CSS simply will not  listen to you. And if you find that your CSS is not paying you any attention, a  very good place to look is if your App for making web pages have automatically  thrown your new rule, under your media queries, and if it has, you will have to  drag it back up into a more appropriate position in your code.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/2-Media-Queries/Images/4.png" width="280" height="280" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><a name="orderMatters"><strong><span style="font-family:'Calibri',sans-serif; ">Order Matters</span></strong></a></p>
+   <p class="MsoNormal"> <a href="#_Toc159755090">back </a><span class="MsoIntenseEmphasis"> </span></p>
+   <p class="MsoNormal">I am going over some of the things that I have already  stated in my last tutorial, but learning how to use your media queries  correctly will be important, and reviewing this stuff can&rsquo;t hurt.</p>
+   <p class="MsoNormal">if you are working with <strong>min-width</strong> in your media  queries, you want to make sure that you start with your <strong>smallest screen size  first</strong>. That is why we are starting with our screen size of 300. Of course,  if you are using max-width, you will need to start with your largest size  first. Order matters, when it comes to writing media queries.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/2-Media-Queries/Images/5.png" width="467" height="731" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <h1><a name="_Toc159755089">Unfamiliar Naming and color Coding</a></h1>
+  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">If you are coming into media queries for the first time, the  syntax itself might seem a bit scary, but there isn&rsquo;t all that much to them. For  example, they are in that reddish brown color, so that you can distinguish them  from the regular rules you have in your CSS, and hopefully not forget that all  the code that does look this strange is placed last, and after all of your  regular rules.</p>
+   <p class="MsoNormal">The <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">@</span></span> sign in the media query rule, is just a part of its naming convention and is  further used to show this rule apart from being a normal rule.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/2-Media-Queries/Images/6.png" width="300" height="270" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <h1><a name="_Toc159755090">What is Media Query Doing?</a></h1>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Customized Experience</span></strong></p>
+   <p class="MsoNormal">Well, just in case you haven&rsquo;t figured out by now, media  queries are telling your web page that it wants it to act differently depending  on what dimensions it is being viewed at. You do not want an absolutely  humongous web image to be displayed at a cell phone size, any more than you  would want a tiny image to be showing on your desktop. You want your user to  feel as if their visual experience is being designed especially for them, and  with media queries essentially, they are. </p>
+   <p class="MsoNormal">You put the size that you want the rule to apply to inside  of the parenthesis following the media query declaration. You will state if  these rules will be following a min-width or max-width line of reasoning and  depending on what you chose, you will make sure that the order of these rules  are placed correctly, as stated earlier in this article <a href="#orderMatters">here</a>.</p>
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Media Targeting</span></strong></p>
+   <p class="MsoNormal">You can target specific media using media queries.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/2-Media-Queries/Images/7.png" width="531" height="354" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <h1><a name="_Toc159755091">Syntax of media type targeting</a></h1>
+  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="blueEmphasis">…Ok fine, a list. But how do we actually use this, and where  do we put it. </p>
+   <p class="blueEmphasis">&nbsp;</p>
+   <p class="blueEmphasis">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">You will need to start by creating different CSS documents.  One for print, and one for screen, and target those in the heading of the html  document like this. You see, <span style="color:red; ">media</span>, is built-in,  and it just works when you use it because someone wrote all of the code for it  to work under the hood. So, say <span style="color:red; ">media</span> <span style="color:blue; ">= &ldquo;print&rdquo;</span> and it knows how to handle that.</p>
+   <img src="Articles/2024/2-Media-Queries/Images/8.png" width="626" height="187" class="wideImg">
+<p class="MsoNormal">This is how the different rules are written in the appropriate  CSS document.</p>
+   <p class="MsoNormal"><a name="_Hlk159752863"><span class="MsoIntenseEmphasis">screen.css </span></a></p>
+   <img src="Articles/2024/2-Media-Queries/Images/9.png" width="323" height="128" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">print.css </span></p>
+ <img src="Articles/2024/2-Media-Queries/Images/10.png" width="291" height="129" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/2-Media-Queries/Images/11.png" width="574" height="694" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <h1><a name="_Toc159755092">Specifying certain Tasks at Certain Sizes</a></h1>
+   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Sometimes you might want things to behave differently in  your styling layout based on the size of the device. For example, if you want  to order different divs differently, if it gives your user a better visual user  experience. You can use media queries, and the <strong><span style="font-family:'Calibri',sans-serif; ">order</span></strong> property to get this one done.</p>
+   <p class="MsoNormal">We explained how we were doing this in our last tutorial on  web page design also, but here is a short review again.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><span class="MsoIntenseEmphasis">Specify how you want your  layout to be at your smaller screen sizes in your html.</span></p>
+   <p class="MsoNormal"><span class="MsoIntenseEmphasis">&nbsp;</span></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Articles/2024/2-Media-Queries/Images/12.png" width="462" height="294" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal"><span class="MsoIntenseEmphasis">Do the reordering of the divs  at the largest size</span></p>
+   <img src="Articles/2024/2-Media-Queries/Images/13.png" width="417" height="231" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">&nbsp;</span></p>
+   <p class="MsoNormal"><span class="MsoIntenseEmphasis">&nbsp;</span></p>
+   <img src="Articles/2024/2-Media-Queries/Images/14.png" width="752" height="353" class="wideImg">
+<p class="MsoNormal" style="margin-left:-31.5pt;text-indent:-27.0pt;">&nbsp;</p>
+
+   <!--Main Article -->
  
  
 </article>
@@ -249,7 +246,7 @@ font-weight:bold;
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-  </aside>
+</aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
