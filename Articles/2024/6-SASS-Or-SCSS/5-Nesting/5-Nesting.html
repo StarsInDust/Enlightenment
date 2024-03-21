@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Nesting</title>
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~5 Nesting~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/13/2024</p>
+   
+   <br>
+<br>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="tableOfContents"><a href="#_Toc161903887">What is Nesting?</a></p>
+<p class="tableOfContents"><a href="#_Toc161903888">To turn back on your   Watch SASS</a></p>
+<p class="tableOfContents"><a href="#_Toc161903889">This is how you Nest</a></p>
+<p class="tableOfContents"><a href="#_Toc161903890">Writing a Class instead   of targeting the class directly</a></p>
+<p class="tableOfContents"><a href="#_Toc161903891">Using the Shortcut of   Ampersand $ when nesting</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p>&nbsp;</p>
+<p class="BlueBolden"><img src="Images/1.png" width="271" height="245" class="responsiveImage"></p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc161903887">What is Nesting?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Nesting is something which is considered by some to be one  of the best things with SASS, but depending on how large the file is, you  should be careful with using too much nesting.</p>
+<p class="MsoNormal">Let&rsquo;s take a look at our paragraph in the html file. You  will see that we have a div, and that div has a class of main.</p>
+<img src="Images/2.png" width="752" height="184" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Hlk160975682"></a><a name="_Toc161903888">To turn back on your Watch SASS</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You might have to  go back to settings, put SASS in the search bar, and go to the wheel here</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/3.png" width="624" height="162" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">At the bottom,  choose WATCH SASS</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<img src="Images/4.png" width="311" height="74" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">If your file is watching SASS </span></strong></p>
+<img src="Images/5.png" width="842" height="277" class="wideImg">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Go to your SCSS file</span></strong></p>
+<p class="code"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span><span style="font-family:Consolas; font-size:10.5pt; color:#D7BA7D; ">.</span>main {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; width: 75%;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; margin: 0 auto;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; }</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">You will see this written in  your regular CSS</span></strong></p>
+<p><img src="Images/6.png" width="508" height="279" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc161903889">This is how you Nest</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Back to the <strong><span style="line-height:115%; font-size:14.0pt; ">main.SCSS</span></strong><span style="font-size:14.0pt; "> </span>file</p>
+<p class="MsoNormal">When you nest, you can go inside of the rule that you just  wrote for .main, and add these style properties to them. We want to target that  paragraph in the html that we saw in the .main rule.</p>
+<p class="code">.main {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; width: 75%;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; margin: 0 auto;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; p {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; font-weight:map-get($font-weights,  bold);</p>
+<p class="code">&nbsp; &nbsp; }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Look at what it wrote in the regular CSS file for us, when  we made those changes in SCSS.</p>
+<img src="Images/7.png" width="622" height="274" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to the html file to test  it, remember you will only get the file structure if you try to view the  main.css file.</p>
+<img src="Images/8.png" width="622" height="246" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">View it with the Live Server</p>
+<img src="Images/9.png" width="94" height="34" class="responsiveImage">
+<p class="MsoNormal">And our text is now bold</p>
+<img src="Images/10.png" width="910" height="242" class="wideImg">
+<h1><a name="_Toc161903890">Writing a Class instead of targeting the class  directly</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go back to the SCSS and erase that part that we just wrote  and change it to a class.</p>
+<p class="code">.main {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; width: 75%;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; margin: 0 auto;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; .main__p {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; font-weight:map-get($font-weights,  bold);</p>
+<p class="code">&nbsp; &nbsp; }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; }</p>
+<p class="MsoNormal">Remember that with a class we also have to change it in the  html to have a class attached to the paragraph. Add the class of main__p to  your paragraph tag.</p>
+<img src="Images/11.png" width="341" height="166" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc161903891">Using the Shortcut of Ampersand $ when nesting</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Look at how we used it in the <strong><span style="font-size:14.0pt; ">SCSS</span></strong></p>
+<img src="Images/12.png" width="493" height="216" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We can also write our SCSS code like this with the  ampersand.</p>
+<p class="code"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span>.main {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; width: 75%;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; margin: 0 auto;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &amp;__p {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; font-weight:map-get($font-weights,  bold);</p>
+<p class="code">&nbsp; &nbsp; }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">But to actually write this ampersand thing out right, we  need to have a pound sign before it and then wrap the ampersand in curly braces  like this. Oh, and we are also adding a hover.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">&nbsp;.main {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; width: 75%;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; margin: 0 auto;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; #{&amp;}__p {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; font-weight:map-get($font-weights,  bold);</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; &amp;:hover {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color:chocolate;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p class="code">&nbsp; &nbsp; }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Our regular CSS code will compile to this:</p>
+
+<img src="Images/13.png" width="829" height="448" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to the HTML file to view this in the browser</p>
+
+<img src="Images/14.png" width="731" height="310" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Live Server</p>
+
+<img src="Images/15.png" width="166" height="54" class="responsiveImage">
+<p class="MsoNormal">And this is what it looks like:</p>
+
+<img src="Images/16.png" width="736" height="207" class="wideImg">
+<p class="MsoNormal">and when we hover:</p>
+
+<img src="Images/17.png" width="739" height="203" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Our Regular CSS code will look like this.</p>
+
+<img src="Images/18.png" width="602" height="367" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p>&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
