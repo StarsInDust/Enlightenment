@@ -7,28 +7,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Queries</title>
+    <title>CSS Transitions</title>
 
-<meta name="title" content="Media Queries ">
+<meta name="title" content=" CSS Transitions ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="Media Queries, Visual Studio, CSS, Web Design"/>
+<meta name="keywords" content="Transitions, Visual Studio, CSS, Web Design"/>
 
 
-<meta name="description" content="This article explains how to use Media Queries to aide in Web site page flexibility. "/>
+<meta name="description" content="This article explains how we can use transitions to animate our page elements, in a very simple manner. "/>
 
-<meta name="category" content="Media Queries, CSS, Web Design">
+<meta name="category" content="Transitions, CSS, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Monday, February 26, 2024" />
+<meta name="revised" content="Friday, March 1, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/2-Media-Queries/Media-Queries.html">
+<meta name="url" content=" http://localhost/Enlightenment/Articles/2024/3-CSS-Transitions/3-CSS-Transitions.html">
+
 
 
     
@@ -71,18 +72,18 @@ line-height:115%;
 font-size:11.0pt;
 font-family:"Calibri",sans-serif;
 }
-span.MsoHyperlink {
-color:#0563C1;
-text-decoration:underline;
-text-underline:single;
-}
 span.MsoIntenseEmphasis {
 color:#4472C4;
 font-style:italic;
 }
-span.BlueBoldenChar {
-font-family:"Times New Roman",serif;
-color:blue;
+span.MsoBookTitle {
+letter-spacing:.25pt;
+font-weight:bold;
+font-style:italic;
+}
+span.Heading1Char {
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
 font-weight:bold;
 }
 -->
@@ -110,125 +111,190 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~Media Queries~</p>
+  <p class="h2Black" >~CSS Transitions~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >3/18/2024</p>
+   <p class="articleDate" style="text-align:right" >3/25/2024</p>
    
    <br>
- 
-   <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-  <br>
+<br>
 
-   
-   
-   <p class="tableOfContents"><a href="#_Toc159755087" >What   are CSS Media Queries?</a></span></p>
-   
-   
-   
-   <p class="tableOfContents" ><a href="#_Toc159755088">What   are some of the quirks of Media Queries?</a></span></p>
-   <p class="tableOfContents" ><a href="#_Toc159755089">Unfamiliar   Naming and color Coding</a></span></p>
-   <p class="tableOfContents" ><a href="#_Toc159755090">What   is Media Query Doing?</a></span></p>
-   <p class="tableOfContents" ><a href="#_Toc159755091">Syntax   of media type targeting</a></span></p>
-   <p class="tableOfContents" ><a href="#_Toc159755092">Specifying certain Tasks at Certain Sizes</a></span></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/2-Media-Queries/Images/1.png" width="270" height="241" class="responsiveImage">
-<h1><a name="_Toc159755087">What are CSS Media  Queries?</a></h1>
-  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Media queries help our webpages in becoming more fluid. Even  though there tends to be some controversial information on when media queries actually  came into being, with some saying that they were introduced in CSS2, which was in  its final completion phase, when CSS3 was released in 1999.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/2-Media-Queries/Images/2.png" width="400" height="256" class="responsiveImage">
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+
+<p class="tableOfContents"><a href="#_Toc160021409">What are CSS Transitions?</a></p>
+<p class="tableOfContents"><a href="#_Toc160021410">The Hover Event</a></p>
+<p class="tableOfContents"><a href="#_Toc160021411">To set up the code</a></p>
+<p class="tableOfContents"><a href="#_Toc160021412">Speed Curve of   Transitions</a></p>
+<p class="tableOfContents"><a href="#_Toc160021413">Transform</a></p>
+<p class="tableOfContents"><a href="#_Toc160021414">Translate</a></p>
+<p class="tableOfContents"><a href="#_Toc160021415">Using Autoprefixer</a></p>
 <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Some of the later dates of its creation, sound a bit more  plausible because cell phones, and tablets in the beginning era of web page  creation were not quite as prevalent, and there simply was not that great of a  need for our pages to be fluid in sizing. So, from what I have gathered there  seems to have been some working draft for these things starting as early as in  2001, but it did not actually become a recommendation by W3C until June, 19<sup>th</sup> of 2012.  And then some proposed  corrections were published as recently as April 5<sup>th</sup>, 2022.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <h1><a name="_Toc159755088">What are some of the quirks of Media Queries?</a></h1>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Multiple Banner Images</span></strong></p>
-   <p class="MsoNormal">Media Queries, are pretty good at being able to take care of  some of the issues that things like flexbox have not yet been able to resolve,  but it is not that they come completely free of all issues.</p>
-   <p class="MsoNormal">For example, you will find that flex box will not be able to  completely handle your banner images, and so they will not look correct with  different sized devices. But while you can use media queries, and they work  very well; now you are faced with creating a separate image for every single  one of your different media types. And that is no small task.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">As I stated in my last tutorial, Web Page design. These are  your official sizes listed in large font size, but the sizes that actually  worked for my own devices were a bit different, and those sizes I listed below them  in the smaller font. You might even have to do your own finagling for things to  work for your own designs.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/2-Media-Queries/Images/3.png" width="695" height="274" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2024/3-CSS-Transitions/Images/1.png" width="267" height="236" class="responsiveImage"></p>
+<h1><a name="_Toc160021409">What are CSS Transitions?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Transitions are an easy type of animation that you can do  with elements on your web pages. They are fairly simple to understand, so don&rsquo;t  get scared off right from the start of this thing.</p>
+<p class="MsoNormal">To create a transition effect, you will need to specify two  things</p>
+<ol>
+  <li>The property that you want to mess with</li>
+  <li>And the time you want it to take,  for the property to be messed with</li>
+</ol>
+<p class="MsoNormal">Well, I suppose before we can even begin trying to  transition anything, we are going to need something to transition. That is  easy, we got a div and we know how to use it; ahem…make it a box.</p>
+
+<img src="Articles/2024/3-CSS-Transitions/Images/2.png" width="499" height="373" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Oh, yeah just tell me what I am, and how much time I got.</p>
+<img src="Articles/2024/3-CSS-Transitions/Images/3.png" width="500" height="371" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc160021410">The Hover Event</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now what will we use to transition us? The hover event is  something most of us have already used. After all, this is done any time we  want to transition the color of a button, or a hyperlink to look different when  a user interacts with it. And the change will take effect, whenever that user  hovers a mouse over it. So, a hover event is also the perfect mechanism to use,  when we want to enable simple animation.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc160021411">To set up the code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">If you just set your code to target div, you will find that  all of your divs will be affected, and that is probably not what you want. So,  best to create a div in your html, and then give it a class name, where we are  only targeting that div alone.</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The Html</span></strong></p>
+<img src="Articles/2024/3-CSS-Transitions/Images/4.png" width="199" height="65" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">Notice that in order to  create a simple animation like this, the only code which might be unfamiliar is  just one line. So, if you learn to use the property <strong>transition</strong>, on top  of what you already know, then you are animating. </span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The CSS</span></strong></p>
+<img src="Articles/2024/3-CSS-Transitions/Images/5.png" width="277" height="212" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now if you run it, and hover over your rectangle, you will  find that your height of the shape is taking 4 seconds to reach its full size,  while the width is only taking 3 seconds. Because that is what was specified in  our <strong><em>transition</em></strong> code. </p>
+<p class="MsoNormal">Go <a href="Articles/2024/3-CSS-Transitions/Transitions/Transitions-Testing.html" target="_blank">Here</a> to view this in action</p>
+<img src="Articles/2024/3-CSS-Transitions/Images/6.png" width="622" height="210" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc160021412">Speed Curve of Transitions</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The speed curve, is something that will allow you to  determine how fast the element you are working on, starts to do what you want  it to do, and then also how fast, at the end that you want the element to stop  doing what you want it to do. </p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You can set your speed curve at different settings,  something like the speeds on a fan, except that you are working with speeds at  the beginning and end of the movement of your object. And even if it might be a  cool effect, unlike a fan, these speeds do nothing to cool you off.</p>
+<img src="Articles/2024/3-CSS-Transitions/Images/7.png" width="618" height="275" class="wideImg">
+<p class="MsoNormal">This is how you would write this timing function in your  code</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<p class="code">&lt;h1&gt; Transitions!&lt;/h1&gt;</p>
+<p class="code"> </p>
+<p class="code">&lt;p&gt;Hover over the div elements below, to see the different  speed curves:&lt;/p&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&lt;div class=&quot;div1&quot;&gt;linear&lt;/div&gt;&lt;br&gt;</p>
+<p class="code">&lt;div class=&quot;div2&quot;&gt;ease&lt;/div&gt;&lt;br&gt;</p>
+<p class="code">&lt;div class=&quot;div3&quot;&gt;ease-in&lt;/div&gt;&lt;br&gt;</p>
+<p class="code">&lt;div class=&quot;div4&quot;&gt;ease-out&lt;/div&gt;&lt;br&gt;</p>
+<p class="code">&lt;div  class=&quot;div5&quot;&gt;ease-in-out&lt;/div&gt;&lt;br&gt;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">.div1,.div2,.div3,.div4,.div5 {</p>
+<p class="code">      width: 250px;</p>
+<p class="code">      height: 130px;</p>
+<p class="code">      background: green;</p>
+<p class="code">      transition: width 2s;</p>
+<p class="code">      font-family:  &quot;Times New Roman&quot;, Times, serif;</p>
+<p class="code">      font-size: 36px;</p>
+<p class="code">      color: #D3CBBC;</p>
+<p class="code">      text-align: center;</p>
+<p class="code">      vertical-align:  middle;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">.div1 {transition-timing-function: linear;}</p>
+<p class="code">.div2 {transition-timing-function: ease;}</p>
+<p class="code">.div3 {transition-timing-function: ease-in;}</p>
+<p class="code">.div4 {transition-timing-function: ease-out;}</p>
+<p class="code">.div5 {transition-timing-function: ease-in-out;}</p>
+<p class="code">&nbsp;</p>
+<p class="code">.div1:hover {</p>
+<p class="code">  width: 400px;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">.div2:hover {</p>
+<p class="code">  width: 400px;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">.div3:hover {</p>
+<p class="code">  width: 400px;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">.div4:hover {</p>
+<p class="code">  width: 400px;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">.div5:hover {</p>
+<p class="code">  width: 400px;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">Go <a href="Articles/2024/3-CSS-Transitions/Transitions/2 Transitions-Testing.html" target="_blank">Here</a> to View This</p>
+<img src="Articles/2024/3-CSS-Transitions/Images/8.png" width="540" height="373" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Transition Delay</span></strong></p>
+<p class="MsoNormal">You can set a transition delay. Now all this will do is to  set a time for the animation to wait, before it starts doing what it wants to  do. Of course, if you are setting this delay in the hover event, your user will  expect it to be doing something as soon as they start to hover over it, if it  is giving the user a delay, they will think it is broken. However, you may want  to add it to the load property for your page. Anyways, here is this delay  thing. Use it in your animation if you want.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/3-CSS-Transitions/Images/9.png" width="191" height="33" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; "> Transition duration</span></strong></p>
+<p class="MsoNormal">You could also add a duration, but we have already been  setting how many seconds we want our animation to take in our code. So, this just  does the same thing that we have already been doing. </p>
+<img src="Articles/2024/3-CSS-Transitions/Images/10.png" width="217" height="33" class="responsiveImage">
+<h1><a name="_Toc160021413">Transform</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This is just a very simple look into animating some of your  properties. If you want to get into some of your more intense properties you  will need to use Transform. Using transform will allow you to maneuver things  like rotate, move, skew, and scale. </p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">Scale</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<img src="Articles/2024/3-CSS-Transitions/Images/11.png" width="218" height="71" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
+<img src="Articles/2024/3-CSS-Transitions/Images/12.png" width="280" height="210" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">Rotate</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<img src="Articles/2024/3-CSS-Transitions/Images/13.png" width="221" height="31" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
+<img src="Articles/2024/3-CSS-Transitions/Images/14.png" width="306" height="221" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">Skew</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+
+<img src="Articles/2024/3-CSS-Transitions/Images/15.png" width="210" height="25">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
+<img src="Articles/2024/3-CSS-Transitions/Images/16.png" width="303" height="264" class="responsiveImage"> </span></strong></p>
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS Placement for Media  Queries</span></strong></p>
-   <p class="MsoNormal">Another issue that you will find to be a bit maddening about  these media queries, is there insistence on where they want to be placed in  your code. You <strong><span style="font-family:'Calibri',sans-serif; ">MUST</span></strong>, place  these media queries at the bottom of your CSS code. If you try to list any  other normal rule underneath of it, you will find that your CSS simply will not  listen to you. And if you find that your CSS is not paying you any attention, a  very good place to look is if your App for making web pages have automatically  thrown your new rule, under your media queries, and if it has, you will have to  drag it back up into a more appropriate position in your code.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/2-Media-Queries/Images/4.png" width="280" height="280" class="responsiveImage">
+<img src="Articles/2024/3-CSS-Transitions/Images/17.png" width="269" height="244" class="responsiveImage">
+<h1><a name="_Toc160021414">Translate</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal"><a name="orderMatters"><strong><span style="font-family:'Calibri',sans-serif; ">Order Matters</span></strong></a></p>
-   <p class="MsoNormal"> <a href="#_Toc159755090">back </a><span class="MsoIntenseEmphasis"> </span></p>
-   <p class="MsoNormal">I am going over some of the things that I have already  stated in my last tutorial, but learning how to use your media queries  correctly will be important, and reviewing this stuff can&rsquo;t hurt.</p>
-   <p class="MsoNormal">if you are working with <strong>min-width</strong> in your media  queries, you want to make sure that you start with your <strong>smallest screen size  first</strong>. That is why we are starting with our screen size of 300. Of course,  if you are using max-width, you will need to start with your largest size  first. Order matters, when it comes to writing media queries.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/2-Media-Queries/Images/5.png" width="467" height="731" class="responsiveImage">
+<p class="MsoNormal">Translate is another property that allows simple animations  of our object. If you would like to have your element move from one position  into another on the page, you would use <strong><span style="font-family:'Calibri',sans-serif; ">Translate</span></strong>.</p>
 <p class="MsoNormal">&nbsp;</p>
-   <h1><a name="_Toc159755089">Unfamiliar Naming and color Coding</a></h1>
-  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">If you are coming into media queries for the first time, the  syntax itself might seem a bit scary, but there isn&rsquo;t all that much to them. For  example, they are in that reddish brown color, so that you can distinguish them  from the regular rules you have in your CSS, and hopefully not forget that all  the code that does look this strange is placed last, and after all of your  regular rules.</p>
-   <p class="MsoNormal">The <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">@</span></span> sign in the media query rule, is just a part of its naming convention and is  further used to show this rule apart from being a normal rule.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/2-Media-Queries/Images/6.png" width="300" height="270" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-   <h1><a name="_Toc159755090">What is Media Query Doing?</a></h1>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Customized Experience</span></strong></p>
-   <p class="MsoNormal">Well, just in case you haven&rsquo;t figured out by now, media  queries are telling your web page that it wants it to act differently depending  on what dimensions it is being viewed at. You do not want an absolutely  humongous web image to be displayed at a cell phone size, any more than you  would want a tiny image to be showing on your desktop. You want your user to  feel as if their visual experience is being designed especially for them, and  with media queries essentially, they are. </p>
-   <p class="MsoNormal">You put the size that you want the rule to apply to inside  of the parenthesis following the media query declaration. You will state if  these rules will be following a min-width or max-width line of reasoning and  depending on what you chose, you will make sure that the order of these rules  are placed correctly, as stated earlier in this article <a href="#orderMatters">here</a>.</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<img src="Articles/2024/3-CSS-Transitions/Images/18.png" width="210" height="28" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Media Targeting</span></strong></p>
-   <p class="MsoNormal">You can target specific media using media queries.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/2-Media-Queries/Images/7.png" width="531" height="354" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
+<p class="MsoNormal">You will notice that we are adding a new way of adding a  hover, and that is by placing it directly into the .moveIt rule. We will use  the <strong>&amp;</strong> sign, a <strong>colon</strong>, and the word <strong>hove</strong>r to get this  done.</p>
+<img src="Articles/2024/3-CSS-Transitions/Images/19.png" width="306" height="210" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri', sans-serif;">Go<a href="Articles/2024/3-CSS-Transitions/Transitions/3 Transitions-Testing.html" target="_blank"> Here</a> to view this</span></strong></p>
 <p class="MsoNormal">&nbsp;</p>
-   <h1><a name="_Toc159755091">Syntax of media type targeting</a></h1>
-  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="blueEmphasis">…Ok fine, a list. But how do we actually use this, and where  do we put it. </p>
-   <p class="blueEmphasis">&nbsp;</p>
-   <p class="blueEmphasis">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">You will need to start by creating different CSS documents.  One for print, and one for screen, and target those in the heading of the html  document like this. You see, <span style="color:red; ">media</span>, is built-in,  and it just works when you use it because someone wrote all of the code for it  to work under the hood. So, say <span style="color:red; ">media</span> <span style="color:blue; ">= &ldquo;print&rdquo;</span> and it knows how to handle that.</p>
-   <img src="Articles/2024/2-Media-Queries/Images/8.png" width="626" height="187" class="wideImg">
-<p class="MsoNormal">This is how the different rules are written in the appropriate  CSS document.</p>
-   <p class="MsoNormal"><a name="_Hlk159752863"><span class="MsoIntenseEmphasis">screen.css </span></a></p>
-   <img src="Articles/2024/2-Media-Queries/Images/9.png" width="323" height="128" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">print.css </span></p>
- <img src="Articles/2024/2-Media-Queries/Images/10.png" width="291" height="129" class="responsiveImage">
+<h1><a name="_Toc160021415">Using Autoprefixer</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/2-Media-Queries/Images/11.png" width="574" height="694" class="responsiveImage">
+<p class="MsoNormal">You can use the Autoprefixer in Visual Studio, to make sure  everything works correctly on all browsers. Remember we had gone over using  this add-on in our chapter on working on all browsers, which you can find <a href="https://starsindust.github.io/Enlightenment/Articles/2024/1-Flexbox/4-Working-With-All-Browsers/4-Working-With-All-Browsers.html" target="_blank">here</a>.</p>
+<p class="MsoNormal">You have to remember that if you do use this Autoprefixer,  that it will only recognize code from the CSS file, and if you placed your code  in the heading of the document, you will have to copy it all into a CSS file,  highlight it and then use <strong>Autoprefixer</strong> by hitting <strong>F1</strong>, and  choosing it from the dropdown.</p>
 <p class="MsoNormal">&nbsp;</p>
-   <h1><a name="_Toc159755092">Specifying certain Tasks at Certain Sizes</a></h1>
-   <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">Sometimes you might want things to behave differently in  your styling layout based on the size of the device. For example, if you want  to order different divs differently, if it gives your user a better visual user  experience. You can use media queries, and the <strong><span style="font-family:'Calibri',sans-serif; ">order</span></strong> property to get this one done.</p>
-   <p class="MsoNormal">We explained how we were doing this in our last tutorial on  web page design also, but here is a short review again.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal"><span class="MsoIntenseEmphasis">Specify how you want your  layout to be at your smaller screen sizes in your html.</span></p>
-   <p class="MsoNormal"><span class="MsoIntenseEmphasis">&nbsp;</span></p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2024/2-Media-Queries/Images/12.png" width="462" height="294" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoBookTitle">Autoprefixer:Run</span></p>
+<p class="MsoNormal"><span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; ">&nbsp;</span></span></p>
+<img src="Articles/2024/3-CSS-Transitions/Images/20.png" width="626" height="110" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal"><span class="MsoIntenseEmphasis">Do the reordering of the divs  at the largest size</span></p>
-   <img src="Articles/2024/2-Media-Queries/Images/13.png" width="417" height="231" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">&nbsp;</span></p>
-   <p class="MsoNormal"><span class="MsoIntenseEmphasis">&nbsp;</span></p>
-   <img src="Articles/2024/2-Media-Queries/Images/14.png" width="752" height="353" class="wideImg">
-<p class="MsoNormal" style="margin-left:-31.5pt;text-indent:-27.0pt;">&nbsp;</p>
-
-   <!--Main Article -->
+<p class="MsoNormal">Notice how -webkit, and -ms   was added in some places in your code</p>
+<img src="Articles/2024/3-CSS-Transitions/Images/21.png" width="420" height="304" class="responsiveImage">
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
  
  
 </article>
@@ -246,7 +312,7 @@ font-weight:bold;
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-</aside>
+  </aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
