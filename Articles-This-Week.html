@@ -7,28 +7,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Transitions</title>
-
-<meta name="title" content=" CSS Transitions ">
+    <title>A Few CSS Techniques</title>
+    
+    
+    <meta name="title" content="A few CSS Techniques ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="Transitions, Visual Studio, CSS, Web Design"/>
+<meta name="keywords" content="CSS Techniques,  CSS, Visual Studio, Web Design"/>
 
 
-<meta name="description" content="This article explains how we can use transitions to animate our page elements, in a very simple manner. "/>
+<meta name="description" content="This article explains how we can apply a few fancy CSS techniques to make our pages more engaging "/>
 
-<meta name="category" content="Transitions, CSS, Web Design">
+<meta name="category" content="A few CSS Techniques, CSS, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Friday, March 1, 2024" />
+<meta name="revised" content="Sunday, March 3, 2024" />
 
-<meta name="url" content=" http://localhost/Enlightenment/Articles/2024/3-CSS-Transitions/3-CSS-Transitions.html">
+<meta name="url" content https://starsindust.github.io/Enlightenment/Articles/2024/4-A-Few-CSS-Techniques/4-A-Few-CSS-Techniques.html">
 
 
 
@@ -72,18 +73,15 @@ line-height:115%;
 font-size:11.0pt;
 font-family:"Calibri",sans-serif;
 }
-span.MsoIntenseEmphasis {
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
+}
+span.MsoIntenseReference {
+font-variant:small-caps;
 color:#4472C4;
-font-style:italic;
-}
-span.MsoBookTitle {
 letter-spacing:.25pt;
-font-weight:bold;
-font-style:italic;
-}
-span.Heading1Char {
-font-family:"Calibri Light",sans-serif;
-color:#2F5496;
 font-weight:bold;
 }
 -->
@@ -111,187 +109,129 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~CSS Transitions~</p>
+  <p class="h2Black" >~A Few CSS Techniques~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >3/25/2024</p>
+   <p class="articleDate" style="text-align:right" >4/1/2024</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
 
-<p class="tableOfContents"><a href="#_Toc160021409">What are CSS Transitions?</a></p>
-<p class="tableOfContents"><a href="#_Toc160021410">The Hover Event</a></p>
-<p class="tableOfContents"><a href="#_Toc160021411">To set up the code</a></p>
-<p class="tableOfContents"><a href="#_Toc160021412">Speed Curve of   Transitions</a></p>
-<p class="tableOfContents"><a href="#_Toc160021413">Transform</a></p>
-<p class="tableOfContents"><a href="#_Toc160021414">Translate</a></p>
-<p class="tableOfContents"><a href="#_Toc160021415">Using Autoprefixer</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/3-CSS-Transitions/Images/1.png" width="267" height="236" class="responsiveImage"></p>
-<h1><a name="_Toc160021409">What are CSS Transitions?</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Transitions are an easy type of animation that you can do  with elements on your web pages. They are fairly simple to understand, so don&rsquo;t  get scared off right from the start of this thing.</p>
-<p class="MsoNormal">To create a transition effect, you will need to specify two  things</p>
-<ol>
-  <li>The property that you want to mess with</li>
-  <li>And the time you want it to take,  for the property to be messed with</li>
-</ol>
-<p class="MsoNormal">Well, I suppose before we can even begin trying to  transition anything, we are going to need something to transition. That is  easy, we got a div and we know how to use it; ahem…make it a box.</p>
 
-<img src="Articles/2024/3-CSS-Transitions/Images/2.png" width="499" height="373" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Oh, yeah just tell me what I am, and how much time I got.</p>
-<img src="Articles/2024/3-CSS-Transitions/Images/3.png" width="500" height="371" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc160021410">The Hover Event</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now what will we use to transition us? The hover event is  something most of us have already used. After all, this is done any time we  want to transition the color of a button, or a hyperlink to look different when  a user interacts with it. And the change will take effect, whenever that user  hovers a mouse over it. So, a hover event is also the perfect mechanism to use,  when we want to enable simple animation.</p>
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc160021411">To set up the code</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">If you just set your code to target div, you will find that  all of your divs will be affected, and that is probably not what you want. So,  best to create a div in your html, and then give it a class name, where we are  only targeting that div alone.</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The Html</span></strong></p>
-<img src="Articles/2024/3-CSS-Transitions/Images/4.png" width="199" height="65" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">Notice that in order to  create a simple animation like this, the only code which might be unfamiliar is  just one line. So, if you learn to use the property <strong>transition</strong>, on top  of what you already know, then you are animating. </span></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The CSS</span></strong></p>
-<img src="Articles/2024/3-CSS-Transitions/Images/5.png" width="277" height="212" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now if you run it, and hover over your rectangle, you will  find that your height of the shape is taking 4 seconds to reach its full size,  while the width is only taking 3 seconds. Because that is what was specified in  our <strong><em>transition</em></strong> code. </p>
-<p class="MsoNormal">Go <a href="Articles/2024/3-CSS-Transitions/Transitions/Transitions-Testing.html" target="_blank">Here</a> to view this in action</p>
-<img src="Articles/2024/3-CSS-Transitions/Images/6.png" width="622" height="210" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc160021412">Speed Curve of Transitions</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">The speed curve, is something that will allow you to  determine how fast the element you are working on, starts to do what you want  it to do, and then also how fast, at the end that you want the element to stop  doing what you want it to do. </p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You can set your speed curve at different settings,  something like the speeds on a fan, except that you are working with speeds at  the beginning and end of the movement of your object. And even if it might be a  cool effect, unlike a fan, these speeds do nothing to cool you off.</p>
-<img src="Articles/2024/3-CSS-Transitions/Images/7.png" width="618" height="275" class="wideImg">
-<p class="MsoNormal">This is how you would write this timing function in your  code</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
-<p class="code">&lt;h1&gt; Transitions!&lt;/h1&gt;</p>
-<p class="code"> </p>
-<p class="code">&lt;p&gt;Hover over the div elements below, to see the different  speed curves:&lt;/p&gt;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&lt;div class=&quot;div1&quot;&gt;linear&lt;/div&gt;&lt;br&gt;</p>
-<p class="code">&lt;div class=&quot;div2&quot;&gt;ease&lt;/div&gt;&lt;br&gt;</p>
-<p class="code">&lt;div class=&quot;div3&quot;&gt;ease-in&lt;/div&gt;&lt;br&gt;</p>
-<p class="code">&lt;div class=&quot;div4&quot;&gt;ease-out&lt;/div&gt;&lt;br&gt;</p>
-<p class="code">&lt;div  class=&quot;div5&quot;&gt;ease-in-out&lt;/div&gt;&lt;br&gt;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
-<p class="code">&nbsp;</p>
-<p class="code">.div1,.div2,.div3,.div4,.div5 {</p>
-<p class="code">      width: 250px;</p>
-<p class="code">      height: 130px;</p>
-<p class="code">      background: green;</p>
-<p class="code">      transition: width 2s;</p>
-<p class="code">      font-family:  &quot;Times New Roman&quot;, Times, serif;</p>
-<p class="code">      font-size: 36px;</p>
-<p class="code">      color: #D3CBBC;</p>
-<p class="code">      text-align: center;</p>
-<p class="code">      vertical-align:  middle;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">.div1 {transition-timing-function: linear;}</p>
-<p class="code">.div2 {transition-timing-function: ease;}</p>
-<p class="code">.div3 {transition-timing-function: ease-in;}</p>
-<p class="code">.div4 {transition-timing-function: ease-out;}</p>
-<p class="code">.div5 {transition-timing-function: ease-in-out;}</p>
-<p class="code">&nbsp;</p>
-<p class="code">.div1:hover {</p>
-<p class="code">  width: 400px;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">.div2:hover {</p>
-<p class="code">  width: 400px;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">.div3:hover {</p>
-<p class="code">  width: 400px;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">.div4:hover {</p>
-<p class="code">  width: 400px;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">.div5:hover {</p>
-<p class="code">  width: 400px;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">Go <a href="Articles/2024/3-CSS-Transitions/Transitions/2 Transitions-Testing.html" target="_blank">Here</a> to View This</p>
-<img src="Articles/2024/3-CSS-Transitions/Images/8.png" width="540" height="373" class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Transition Delay</span></strong></p>
-<p class="MsoNormal">You can set a transition delay. Now all this will do is to  set a time for the animation to wait, before it starts doing what it wants to  do. Of course, if you are setting this delay in the hover event, your user will  expect it to be doing something as soon as they start to hover over it, if it  is giving the user a delay, they will think it is broken. However, you may want  to add it to the load property for your page. Anyways, here is this delay  thing. Use it in your animation if you want.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/3-CSS-Transitions/Images/9.png" width="191" height="33" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; "> Transition duration</span></strong></p>
-<p class="MsoNormal">You could also add a duration, but we have already been  setting how many seconds we want our animation to take in our code. So, this just  does the same thing that we have already been doing. </p>
-<img src="Articles/2024/3-CSS-Transitions/Images/10.png" width="217" height="33" class="responsiveImage">
-<h1><a name="_Toc160021413">Transform</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">This is just a very simple look into animating some of your  properties. If you want to get into some of your more intense properties you  will need to use Transform. Using transform will allow you to maneuver things  like rotate, move, skew, and scale. </p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">Scale</span></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
-<img src="Articles/2024/3-CSS-Transitions/Images/11.png" width="218" height="71" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
-<img src="Articles/2024/3-CSS-Transitions/Images/12.png" width="280" height="210" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">Rotate</span></p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
-<img src="Articles/2024/3-CSS-Transitions/Images/13.png" width="221" height="31" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
-<img src="Articles/2024/3-CSS-Transitions/Images/14.png" width="306" height="221" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">Skew</span></p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc160271437">Box   Shadows</a></span></p>
 
-<img src="Articles/2024/3-CSS-Transitions/Images/15.png" width="210" height="25">
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc160271438">CSS   Rounded Corners</a></span></p>
+
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc160271439">Gradients   using Transparency</a></span></p>
+
+
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/1.png" width="270" height="243" class="responsiveImage">
+<h1><a name="_Toc160271437">Box Shadows</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Box- shadows are a really cool effect that you can add to  something like a div. Here I made a div look like a box, by giving it a color,  width, and height, and then I gave it the most simplest of shadows. This shadow  will only specify a width and a height.</p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/2.png" width="279" height="193" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/3.png" width="193" height="35" class="responsiveImage">
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
-<img src="Articles/2024/3-CSS-Transitions/Images/16.png" width="303" height="264" class="responsiveImage"> </span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/4.png" width="272" height="139" class="responsiveImage">
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<img src="Articles/2024/3-CSS-Transitions/Images/17.png" width="269" height="244" class="responsiveImage">
-<h1><a name="_Toc160021414">Translate</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Translate is another property that allows simple animations  of our object. If you would like to have your element move from one position  into another on the page, you would use <strong><span style="font-family:'Calibri',sans-serif; ">Translate</span></strong>.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><a name="_Hlk160193712"><span class="MsoIntenseReference">Add  a Color to Box-Shadow</span></a></p>
+<p class="MsoNormal">All you need to do to add a color to the box-shadow is to  just add it</p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/5.png" width="207" height="154" class="responsiveImage">
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
-<img src="Articles/2024/3-CSS-Transitions/Images/18.png" width="210" height="28" class="responsiveImage">
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/6.png" width="192" height="32" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/7.png" width="277" height="147">
+<p class="MsoNormal"><span class="MsoIntenseReference">Add a Blur Effect to the  shadow</span></p>
+
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/8.png" width="213" height="143" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<p><img src="Articles/2024/4-A-Few-CSS-Techniques/Images/9.png" width="192" height="26" class="responsiveImage"></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">If you want a blur added you add that in-between the height  and the color in the CSS rule like this.</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
-<p class="MsoNormal">You will notice that we are adding a new way of adding a  hover, and that is by placing it directly into the .moveIt rule. We will use  the <strong>&amp;</strong> sign, a <strong>colon</strong>, and the word <strong>hove</strong>r to get this  done.</p>
-<img src="Articles/2024/3-CSS-Transitions/Images/19.png" width="306" height="210" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri', sans-serif;">Go<a href="Articles/2024/3-CSS-Transitions/Transitions/3 Transitions-Testing.html" target="_blank"> Here</a> to view this</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/10.png" width="304" height="138" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Add a Spread Radius of the  Shadow</span></p>
+
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/11.png" width="220" height="164" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<p><img src="Articles/2024/4-A-Few-CSS-Techniques/Images/12.png" width="193" height="27" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<p class="MsoNormal">We add this right before the color is defined in the rule,  like this</p>
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc160021415">Using Autoprefixer</a></h1>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/13.png" width="324" height="138" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Set the inset Parameter</span></p>
+<p class="MsoNormal">If you want to change the shadow to the other side, you  would do that by specifying <strong><span style="line-height:115%; font-size:16.0pt; ">inset</span></strong>,  right after the color definition in the rule. However, when you set the inset,  and then set a spread radius, the spread radius will effect the top box and not  the shadow underneath of it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/14.png" width="201" height="130" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/15.png" width="199" height="28" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/16.png" width="346" height="140" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<h1><a name="_Toc160271438">CSS Rounded Corners</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You can use the Autoprefixer in Visual Studio, to make sure  everything works correctly on all browsers. Remember we had gone over using  this add-on in our chapter on working on all browsers, which you can find <a href="https://starsindust.github.io/Enlightenment/Articles/2024/1-Flexbox/4-Working-With-All-Browsers/4-Working-With-All-Browsers.html" target="_blank">here</a>.</p>
-<p class="MsoNormal">You have to remember that if you do use this Autoprefixer,  that it will only recognize code from the CSS file, and if you placed your code  in the heading of the document, you will have to copy it all into a CSS file,  highlight it and then use <strong>Autoprefixer</strong> by hitting <strong>F1</strong>, and  choosing it from the dropdown.</p>
+<p class="MsoNormal">You can give your div the appearance of rounded corners by  using the border- radius. </p>
+<p class="MsoNormal">I have set different border-radius on each one. </p>
+<p class="MsoNormal">The first div takes a background color. The second div is  just taking a border color, and the third div is taking an image. Make sure  your image is in the same folder as your code and your image is linked  correctly with the correct name.</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/17.png" width="189" height="300" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoBookTitle">Autoprefixer:Run</span></p>
-<p class="MsoNormal"><span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; ">&nbsp;</span></span></p>
-<img src="Articles/2024/3-CSS-Transitions/Images/20.png" width="626" height="110" class="wideImg">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The HTML</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/18.png" width="233" height="95" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The CSS</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/19.png" width="231" height="400" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<h1><a name="_Toc160271439">Gradients using Transparency</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Notice how -webkit, and -ms   was added in some places in your code</p>
-<img src="Articles/2024/3-CSS-Transitions/Images/21.png" width="420" height="304" class="responsiveImage">
+<p class="MsoNormal">The last one that we will be working with today is how to  make a div with a gradient. It will also be using some transparency.</p>
+<p class="MsoNormal">CSS gradients will support transparency and it gives the div  that fading of color effect. I will only be presenting 2 types of gradient effects, but if you want to learn about a few other types, you can go <a href="https://www.w3schools.com/csS/css3_gradients.asp" target="_blank">here</a> to  W3schools.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Gradient with Transparency</span></p>
+<p class="MsoNormal">We will be creating the gradient inside of the background-image. This might sound somewhat strange at first, but after  thinking about it creating the gradient inside of the <strong><span style="line-height:115%; font-size:12.0pt; ">background-image</span></strong><span style="font-size:12.0pt; "> </span>does make sense, since it is  a type of background for the div.</p>
+<p class="MsoNormal">This will be a linear gradient and it will start on the left  and move to the right. If you look at the rule, you will see that it is stated  in there <strong><span style="font-size:12.0pt; ">to right</span></strong>,  and that is what is telling it its direction to take.</p>
+<p class="MsoNormal">It will be using rgba colors to represent the colors. If you  put 255 in the first position, you get all red, 255 in the second position, you  get all green, and 255 in the third position you get all blue. You will find  that I have placed it in the <strong><span style="line-height:115%; font-size:14.0pt; ">b</span></strong> (third position), so I get all blue. The little <strong><span style="line-height:115%; font-size:14.0pt; ">a </span></strong>at the end of the rgba stands for  alpha and that is what is making the left side appear to be transparent. Alpha  is a value that is set from 0 to 1. Setting it at 0 will make it all  transparent, and 1 will mean no transparency.</p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/20.png" width="619" height="252" class="wideImg">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/21.png" width="224" height="34" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/22.png" width="515" height="194" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Plain Gradient</span></p>
+<p class="MsoNormal">You can find a color pallet online, and then just take the  colors to create a gradient</p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/23.png" width="550" height="232" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/24.png" width="569" height="231" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/25.png" width="221" height="37" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
+<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/26.png" width="345" height="174" class="responsiveImage">
 <p>&nbsp;</p>
+    
+    <p class="LeftPMidBlack">You can go <a href="Articles/2024/4-A-Few-CSS-Techniques/1-Testing-a-few-CSS-Techniques/Testing-a-few-CSS-Techniques.html" target="_blank">here</a> to check out what these different techniques look like, for your self.</p>
 <p class="pMidBlack">&nbsp;</p>
  
   <!--Main Article -->
@@ -312,7 +252,7 @@ font-weight:bold;
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-  </aside>
+</aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
