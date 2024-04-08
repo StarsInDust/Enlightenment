@@ -7,31 +7,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Few CSS Techniques</title>
-    
-    
-    <meta name="title" content="A few CSS Techniques ">
+    <title>Box Sizing</title>
+
+<meta name="title" content="Box-Sizing ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="CSS Techniques,  CSS, Visual Studio, Web Design"/>
+<meta name="keywords" content="Box Sizing, Visual Studio, CSS, Web Design"/>
 
 
-<meta name="description" content="This article explains how we can apply a few fancy CSS techniques to make our pages more engaging "/>
+<meta name="description" content="This article explains how we can use box-sizing to fix some strange measurement behavior from CSS "/>
 
-<meta name="category" content="A few CSS Techniques, CSS, Web Design">
+<meta name="category" content="Box-Sizing, CSS, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Sunday, March 3, 2024" />
+<meta name="revised" content="Thursday, March 7, 2024" />
 
-<meta name="url" content https://starsindust.github.io/Enlightenment/Articles/2024/4-A-Few-CSS-Techniques/4-A-Few-CSS-Techniques.html">
-
-
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/5-CSS-Box-Sizing/5-CSS-Box-Sizing.html">
 
     
 
@@ -73,16 +70,14 @@ line-height:115%;
 font-size:11.0pt;
 font-family:"Calibri",sans-serif;
 }
+-->
+</style>
+<style type="text/css">
+<!--
 span.MsoHyperlink {
 color:#0563C1;
 text-decoration:underline;
 text-underline:single;
-}
-span.MsoIntenseReference {
-font-variant:small-caps;
-color:#4472C4;
-letter-spacing:.25pt;
-font-weight:bold;
 }
 -->
 </style>
@@ -109,150 +104,77 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~A Few CSS Techniques~</p>
+  <p class="h2Black" >~Box Sizing~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >4/1/2024</p>
+   <p class="articleDate" style="text-align:right" >4/8/2024</p>
    
    <br>
 <br>
 
-<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p><p>&nbsp;</p>
+<p class="tableOfContents"><a href="#_Toc160609705">What   is Box Sizing?</a></p>
+<p class="tableOfContents"><a href="#_Toc160609706">Test   this out for yourself</a></p>
+<p class="tableOfContents"><a href="#_Toc160609707">How   can we fix this Box Sizing Madness?</a></p>
+<p class="tableOfContents"><a href="#_Toc160609708">What   happens when we add text?</a></p>
 <p class="MsoNormal">&nbsp;</p>
-
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc160271437">Box   Shadows</a></span></p>
-
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc160271438">CSS   Rounded Corners</a></span></p>
-
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc160271439">Gradients   using Transparency</a></span></p>
-
-
+<p></span></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/1.png" width="270" height="243" class="responsiveImage">
-<h1><a name="_Toc160271437">Box Shadows</a></h1>
+<img src="Articles/2024/5-CSS-Box-Sizing/Images/1.png" width="270" height="241" class="responsiveImage">
+<h1><a name="_Toc160609705">What is Box Sizing?</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Box- shadows are a really cool effect that you can add to  something like a div. Here I made a div look like a box, by giving it a color,  width, and height, and then I gave it the most simplest of shadows. This shadow  will only specify a width and a height.</p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/2.png" width="279" height="193" class="responsiveImage">
+<p class="MsoNormal">Well, box sizing is when you tell an element, like a div or  an image to be a certain size; you expect it to be that size; and then it  confuses the mess out of you when it comes in at some other size.</p>
+<p class="MsoNormal">This is because (by default), a web element will not just  be the width and the height alone. Oh, it would be so simple if it would. It  wants to include both what you state as the padding, and even the border. Thank  goodness that the margin is the space around and out side of an element, or the  darn thing would be throwing that in too.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/3.png" width="193" height="35" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/4.png" width="272" height="139" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<p class="MsoNormal"><a name="_Hlk160193712"><span class="MsoIntenseReference">Add  a Color to Box-Shadow</span></a></p>
-<p class="MsoNormal">All you need to do to add a color to the box-shadow is to  just add it</p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/5.png" width="207" height="154" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/6.png" width="192" height="32" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/7.png" width="277" height="147">
-<p class="MsoNormal"><span class="MsoIntenseReference">Add a Blur Effect to the  shadow</span></p>
-
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/8.png" width="213" height="143" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
-<p><img src="Articles/2024/4-A-Few-CSS-Techniques/Images/9.png" width="192" height="26" class="responsiveImage"></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">If you want a blur added you add that in-between the height  and the color in the CSS rule like this.</p>
+<img src="Articles/2024/5-CSS-Box-Sizing/Images/2.png" width="504" height="360" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/10.png" width="304" height="138" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Add a Spread Radius of the  Shadow</span></p>
-
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/11.png" width="220" height="164" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
-<p><img src="Articles/2024/4-A-Few-CSS-Techniques/Images/12.png" width="193" height="27" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<p class="MsoNormal">We add this right before the color is defined in the rule,  like this</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/13.png" width="324" height="138" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Set the inset Parameter</span></p>
-<p class="MsoNormal">If you want to change the shadow to the other side, you  would do that by specifying <strong><span style="line-height:115%; font-size:16.0pt; ">inset</span></strong>,  right after the color definition in the rule. However, when you set the inset,  and then set a spread radius, the spread radius will effect the top box and not  the shadow underneath of it.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/14.png" width="201" height="130" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/15.png" width="199" height="28" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/16.png" width="346" height="140" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<h1><a name="_Toc160271438">CSS Rounded Corners</a></h1>
+<h1><a name="_Toc160609706">Test this out for yourself</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You can give your div the appearance of rounded corners by  using the border- radius. </p>
-<p class="MsoNormal">I have set different border-radius on each one. </p>
-<p class="MsoNormal">The first div takes a background color. The second div is  just taking a border color, and the third div is taking an image. Make sure  your image is in the same folder as your code and your image is linked  correctly with the correct name.</p>
+<p class="MsoNormal">You can test this madness out for yourself if you make 4  different divs. Give each div the same width and height and then give one a  border and one some padding. Leave the first div with just the width and the  height</p>
+<img src="Articles/2024/5-CSS-Box-Sizing/Images/3.png" width="361" height="617" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
+<img src="Articles/2024/5-CSS-Box-Sizing/Images/4.png" width="170" height="161" class="responsiveImage">
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/17.png" width="189" height="300" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
+<img src="Articles/2024/5-CSS-Box-Sizing/Images/5.png" width="358" height="628" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The HTML</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/18.png" width="233" height="95" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The CSS</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/19.png" width="231" height="400" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<h1><a name="_Toc160271439">Gradients using Transparency</a></h1>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc160609707">How can we fix this Box Sizing Madness?</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">The last one that we will be working with today is how to  make a div with a gradient. It will also be using some transparency.</p>
-<p class="MsoNormal">CSS gradients will support transparency and it gives the div  that fading of color effect. I will only be presenting 2 types of gradient effects, but if you want to learn about a few other types, you can go <a href="https://www.w3schools.com/csS/css3_gradients.asp" target="_blank">here</a> to  W3schools.</p>
+<p class="MsoNormal">Yes, this can be absolutely enough to drive a young web site  developer to lose their ever-loving mind. Especially when you have no idea  where this extra sizing is coming from and you go and add even more padding and  borders, and the darn thing just gets more and more unruly. </p>
+<p class="MsoNormal">Why these people who write these initial codes did not think  about this is beyond me, but alas, we do have a fix for this. Even if we have  to write our own rules to fix it.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Gradient with Transparency</span></p>
-<p class="MsoNormal">We will be creating the gradient inside of the background-image. This might sound somewhat strange at first, but after  thinking about it creating the gradient inside of the <strong><span style="line-height:115%; font-size:12.0pt; ">background-image</span></strong><span style="font-size:12.0pt; "> </span>does make sense, since it is  a type of background for the div.</p>
-<p class="MsoNormal">This will be a linear gradient and it will start on the left  and move to the right. If you look at the rule, you will see that it is stated  in there <strong><span style="font-size:12.0pt; ">to right</span></strong>,  and that is what is telling it its direction to take.</p>
-<p class="MsoNormal">It will be using rgba colors to represent the colors. If you  put 255 in the first position, you get all red, 255 in the second position, you  get all green, and 255 in the third position you get all blue. You will find  that I have placed it in the <strong><span style="line-height:115%; font-size:14.0pt; ">b</span></strong> (third position), so I get all blue. The little <strong><span style="line-height:115%; font-size:14.0pt; ">a </span></strong>at the end of the rgba stands for  alpha and that is what is making the left side appear to be transparent. Alpha  is a value that is set from 0 to 1. Setting it at 0 will make it all  transparent, and 1 will mean no transparency.</p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/20.png" width="619" height="252" class="wideImg">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/21.png" width="224" height="34" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/22.png" width="515" height="194" class="responsiveImage">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Plain Gradient</span></p>
-<p class="MsoNormal">You can find a color pallet online, and then just take the  colors to create a gradient</p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/23.png" width="550" height="232" class="wideImg">
+<img src="Articles/2024/5-CSS-Box-Sizing/Images/6.png" width="347" height="567" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/24.png" width="569" height="231" class="wideImg">
+<p class="MsoNormal">Ok, now this is what I used to fix this problem. Add this to  your CSS</p>
+<img src="Articles/2024/5-CSS-Box-Sizing/Images/7.png" width="217" height="68" class="responsiveImage">
+<h1><a name="_Toc160609708">What happens when we add text?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/25.png" width="221" height="37" class="responsiveImage">
+<p class="MsoNormal">Well, since we gave our boxes a specific height and width  here, if we were to add text, it would over flow the boxes.</p>
+<p class="MsoNormal">The last box here had the <strong>height</strong> in the CSS changed  to <strong>auto</strong>, so that it would not overflow.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
-<img src="Articles/2024/4-A-Few-CSS-Techniques/Images/26.png" width="345" height="174" class="responsiveImage">
-<p>&nbsp;</p>
-    
-    <p class="LeftPMidBlack">You can go <a href="Articles/2024/4-A-Few-CSS-Techniques/1-Testing-a-few-CSS-Techniques/Testing-a-few-CSS-Techniques.html" target="_blank">here</a> to check out what these different techniques look like, for your self.</p>
-<p class="pMidBlack">&nbsp;</p>
- 
-  <!--Main Article -->
- 
- 
+<img src="Articles/2024/5-CSS-Box-Sizing/Images/8.png" width="565" height="652" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Additionally, you could just leave the height off, in your CSS  code, and the box would accommodate the overflow of the text automatically.</p>
+<p class="MsoNormal">In the red box, we just left the height blank, and it worked  fine.</p>
+<img src="Articles/2024/5-CSS-Box-Sizing/Images/9.png" width="577" height="620" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">So, where the box-sizing fix can be great for making sure  that the width of your boxes are the same width, without the hassle of always  having to figure in the border size and padding, it could break things in other  places, especially if we do not understand what is going on.</p>
+<p class="MsoNormal">However, fixing this common problem really was not all that  hard, and let us discover some of the other inner workings of our CSS. </p>
 </article>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+<aside class="aside aside-1">
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-</aside>
+  </aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
