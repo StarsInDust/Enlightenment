@@ -282,7 +282,7 @@ font-weight:bold;
 <p class="MsoNormal"><span class="MsoIntenseReference">syntax</span></p>
 <p class="MsoNormal"><strong><span style="line-height:115%; font-size:12.0pt; color:#920000; ">map-get</span></strong><span style="font-size:12.0pt; color:#C00000; "> </span>(<strong><span style="font-size:12.0pt; ">map,  value</span></strong>)</p>
 <img src="Images/Webpage Images/16.png" width="441" height="114" class="responsiveImage">
-<p class="MsoNormal">Further down in this tutoral, when we call this function, you will notice that we are replacing $font-weights  with the actual official CSS name of font-weight. Then we use a colon, and then  we use the function name we created above of &ldquo;weight.&rdquo; Inside of the  parenthesis is where we fill in our place-holder, with the value of either  bold, or regular. You will see from this next example that our function holds  all the code now to tell it that the value of regular is what we want to be  pulling from font-weight. </p>
+<p class="MsoNormal">Further down in this tutoral, when we call this function, you will notice that we are replacing $font-weights  with the actual official CSS name of font-weight. Then we use a colon, and then  we use the function name we created above of &ldquo;weight.&rdquo; Inside of the  parenthesis is where we fill in our place-holder, with the value of either  bold, or regular. You will see from this next code example that our function holds  all the code now to tell it that the value of regular is what we want to be  pulling from font-weight. </p>
 <p class="MsoNormal">Look below, we are starting out with our official name of  font weight with a colon after it.</p>
 <img src="Images/Webpage Images/17.png" width="177" height="69" class="responsiveImage">
 <p class="MsoNormal">You can find this official CSS in many places but here is  the link to the reference by W3schools</p>
@@ -323,7 +323,7 @@ font-weight:bold;
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> remember if  you do not have <a href="file:///C:/xampp/htdocs/Enlightenment/Articles/2024/6-SASS-Or-SCSS/2%20Creating%20the%20Project.docx">Watch  SASS</a> on, you will not be able to view this.</p>
 <p class="MsoNormal"><strong><span style="font-size:14.0pt; ">Save</span></strong> that SASS file and then switch back to the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span><span style="font-size:14.0pt; "> </span>file. And it now is flexible  with size of viewport.</p>
-<p class="MsoNormal">Yes, it looks bad, without a gap between columns, but we  will fix that. And you will find that by default, if you have more than one  paragraph inside of one div, it will default to columns.</p>
+<p class="MsoNormal">Yes, it looks bad, without a gap between columns, but we  will fix that. And you will find that by default, if you have more than one  paragraph inside of one div, it will default to rows.</p>
 <p class="MsoNormal"><img src="Images/Webpage Images/24.png" width="1168" height="246" class="wideImg"></p>
 <p class="MsoNormal">&nbsp;</p>
 
@@ -333,20 +333,24 @@ font-weight:bold;
 <p class="BlueBolden">&nbsp;</p>
 <img src="Images/Webpage Images/25.png" width="375" class="responsiveImage">
 <p class="MsoNormal">Inside of your <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.SCSS</span></span> file</p>
-<img src="Images/Webpage Images/26.png" width="334" height="134" class="responsiveImage">
+<p>You will want to add these next 4 line inside of your .main rule in your SCSS file, like this:</p>
+<p><img src="Images/Webpage Images/26.png" width="334" height="134" class="responsiveImage">
+</p>
+<p class="MsoNormal">The below lines of code are the lines of code that you will want to cut.</p>
 <p class="MsoNormal"><img src="Images/Webpage Images/27.png" width="326" height="77" class="responsiveImage"></p>
 <p class="MsoNormal">Cut those top 3 lines from the rule properties that we just  added to .main, and put them into our new mixin. We are also adding a gap to  make the in-between sections of the paragraphs look better.</p>
 <img src="Images/Webpage Images/28.png" width="407" height="204" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You are going to place the mixin before your first tag,  which for us is the body tag, and after the maps</p>
-<p class="MsoNormal">section.</p>
+<p class="MsoNormal">You are going to place the mixin before your first tag,  which for us is the body tag, and after the maps section; inside of your SCSS file.</p>
+<p class="MsoNormal">&nbsp;</p>
 <img src="Images/Webpage Images/29.png" width="371" height="311" class="responsiveImage">
 <h1> <a name="_Toc163797732">How to  include the mixin in your CSS rule</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">Now that you have defined the mixin, you need to know how to  place it into your rule so that our .main can use it.</p>
 <p><img src="Images/Webpage Images/30.png" width="236" height="45"></p>
+<p>You will want to add that @include into your .main rule, just as it is demonstrated below.</p>
 <p><img src="Images/Webpage Images/31.png" width="328" height="353" class="responsiveImage"> </p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">Now, <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">Save it,</span></span> and go back to <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span>,  to test the code</p>
@@ -360,8 +364,7 @@ font-weight:bold;
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">Remember to <a href="file:///C:/xampp/htdocs/Enlightenment/Articles/2024/6-SASS-Or-SCSS/2%20Creating%20the%20Project.docx">turn  on SASS</a></p>
-<p class="MsoNormal">In our <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span> file</p>
-<img src="Images/Webpage Images/34.png" width="624" height="281" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">In Our <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main. SCSS</span></span> file</p>
 <p class="MsoNormal">go to our @mixin <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">flexCenter </span></span>and pass in  the variable of <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">$direction</span></span></p>
 <p class="MsoNormal">Then inside the rule, add the line that says <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">flex-direction:  $direction;</span></span></p>
@@ -378,8 +381,8 @@ font-weight:bold;
 <img src="Images/Webpage Images/35.png" width="356" height="222" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now go to the rule for .main, and make changes to use this  new argument of direction. We add parenthesis and inside, we fill in the blank  for $direction. We now want our paragraphs to display in a row, instead of a  direction.</p>
-<p class="MsoNormal">column is what we want, this time, for the direction of our  paragraphs inside of the div. So, column is what we place inside of the  parenthesis for our mixin call for flexCenter.</p>
+<p class="MsoNormal">Now go to the rule for .main, and make changes to use this  new argument of $direction. We add parenthesis and inside, we fill in the blank  for $direction. We now want our paragraphs to display in a column, And so column is placed inside here, in place of the $direction that was originally placed in the mixin definition for flexCenter.</p>
+<p class="MsoNormal">&nbsp;</p>
 <img src="Images/Webpage Images/36.png" width="371" height="75" class="responsiveImage">
 <p class="MsoNormal">So, now the display is in a column instead of the rows that  we had before.</p>
 <img src="Images/Webpage Images/37.png" width="620" height="141" class="wideImg">
