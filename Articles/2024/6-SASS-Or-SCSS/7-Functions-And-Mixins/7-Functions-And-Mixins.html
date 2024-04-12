@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Functions and Mix-Ins</title>
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
+}
+span.MsoIntenseReference {
+font-variant:small-caps;
+color:#4472C4;
+letter-spacing:.25pt;
+font-weight:bold;
+}
+p.greyEmphasisCxSpFirst {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:0in;
+margin-left:2.9pt;
+font-size:10.5pt;
+font-family:"Arial",sans-serif;
+color:#A6A6A6;
+border:none windowtext 1.0pt;
+padding:0in;
+background:#F9F9F9;
+}
+p.greyEmphasisCxSpLast {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:0in;
+margin-left:2.9pt;
+font-size:10.5pt;
+font-family:"Arial",sans-serif;
+color:#A6A6A6;
+border:none windowtext 1.0pt;
+padding:0in;
+background:#F9F9F9;
+}
+span.boldBlueChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+span.BigDarkBoldChar {
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~7 Functions and Mix-Ins~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/27/2024</p>
+   
+   <br>
+<br>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163797723">What   is a Variable?</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163797724">Return   or to not Return that is the question<span style="display:none; text-underline:none; color:windowtext; text-decoration:none; ">. </span></a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163797725">What   is an Argument?</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163797726">Seeing   an argument in action</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163797727">What   is a Function?</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163797728">What   is map-get?</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163797729">Creating   your first SCSS function</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163797730">Mix-ins</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163797731">Creating   a Mix-In</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163797732">How   to include the mixin in your CSS rule<span style="color:windowtext; text-decoration:none; ">. </span></a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163797733">Mixins   Arguments</a></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Make sure you have <a href="file:///C:/xampp/htdocs/Enlightenment/Articles/2024/6-SASS-Or-SCSS/2%20Creating%20the%20Project.docx">watch  SASS</a> on</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/Webpage Images/1.png" width="475" class="responsiveImage" >
+<h1><a name="_Toc163797723">What is a Variable?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/Webpage Images/2.png" width="333" class="responsiveImage" >
+<p class="MsoNormal">In this next illustration we have a variable named small, but  when called, it will always tell you it is 12px. At least in this circumstance  because that is what we have declared the variable $small to be holding.</p>
+<p class="greyEmphasisCxSpFirst">small is 12px; that is what I am; call my name,  and I will give you just that -- 12px.</p>
+<p class="greyEmphasisCxSpLast">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:normal;"><span style="font-family:'var(--sl-font-family--code)',serif; font-size:14.0pt; color:#009592; ">$small: 12px;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Images/Webpage Images/3.png" width="440" height="274" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Basically, if you really think about it, that is what all  variables are; they are just place-holders to hold <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">data</span></span> stuff. So, move over  memory, I am pushing in my variables, and now I got some room to put some of my  stuff.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc163797724">Return or to not Return that is the question</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The <strong><span style="line-height:115%; font-size:12.0pt; color:#2F5496; ">return</span></strong> statement can be confusing when presented in the function. Sometimes you will  see the return keyword at the end of a function, and sometimes not. But why is  it needed, and when is it not needed? </p>
+<img src="Images/Webpage Images/4.png" width="399" class="responsiveImage" >
+<p class="MsoNormal">Well, if you are doing any sort of a calculation, then you  will need a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">return</span></span> statement. For example, if you are adding two numbers together; the program  needs to know this information in order to calculate the sum; and so, that  answer needs to be returned. In our function in the next illustration, you will  see that we are using the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">map-get</span></span> function. This is a sort of calculation, or  manipulation (or functionality), to map something to a value. </p>
+<p class="MsoNormal">A function is always two parts, you have the definition then  you have a section of the code that needs to run this function. The second part  will call the function to get the information it needs; but since these two  sections of code need to be in connection to one another to communicate, the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">return</span></span> key word is  used (and needed) to make this connection, and pass information.</p>
+<img src="Images/Webpage Images/5.png" width="494" height="214" class="wideImg">
+<p class="MsoNormal">The function call would fill in the place holder with &ldquo;something,&rdquo;  the function definition would then use what was returned with this &ldquo;something&rdquo; from  the call&rsquo;s parentheses, and plug it into its equation, to customize its  manipulation, for the calling function.</p>
+<img src="Images/Webpage Images/6.png" width="447" height="120" class="responsiveImage">
+<p class="MsoNormal">But in the instance of a simple print statement, the return  is not needed.</p>
+<img src="Images/Webpage Images/7.png" width="375" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">…or anyways, it is very rare if anyone will return a print  statement. That is because print is only used to show information to a human,  and the program really isn&rsquo;t taking and using that information for anything at  all. So, since it is text that is not needed to run the program, it does not  need to pass information back and forth between the calling code and the  function&rsquo;s definition.</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> be aware  that your <span class="boldBlueChar"><span style="font-size:12.0pt; ">return</span></span> keyword must always be used at the end of the function. This is because <span class="boldBlueChar"><span style="font-size:12.0pt; ">return </span></span>is a mechanism  which will always throw you out of your function, and fling you back into your  calling section&rsquo;s code. If you do not want to be thrown out of your function  prematurely then you need to be very aware of where you are placing this key  word.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc163797725">What is an Argument?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Sometimes it is helpful to include arguments when writing  out your function. An argument is a list of variables; placed inside of  parenthesis; and following the name of the function.</p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-size:12.0pt; color:#C00000; ">@</span><span style="color:#993300; ">function </span><span style="color:#323E4F; ">name</span></strong><span style="color:#323E4F; "> </span>(<a name="_Hlk163213464"><strong><span style="font-size:12.0pt; color:#2F5496; ">$</span>argument1</strong></a>, <strong><span style="font-size:12.0pt; color:#2F5496; ">$</span>argument2</strong>, <strong><span style="font-size:12.0pt; color:#2F5496; ">$</span>argument3</strong>…) {</p>
+<p class="MsoNormal">                                SCSS  rules, inside function block</p>
+<p class="MsoNormal">}</p>
+<p class="MsoNormal">If you add an argument to the function&rsquo;s behavior, it will  allow it to be customized individually each time that function is called (needed)  to be used somewhere else in the code.</p>
+<img src="Images/Webpage Images/8.png" width="343" height="34" class="responsiveImage">
+<p class="MsoNormal">Look at the line of code above, $color is actually an  official SCSS variable, and it will represent the color of your font. So, each  time you call on this function, and reference this variable, it will already  know what to do with @color and how to handle it. Using variables as arguments  in your code is great, because they are interchangeable, and can be made to  handle very specifically, any code that wants to use it. Even though you might  want to create and customize your own variables, using official variables can  be a great option; because they come ready-made; straight out of the box, and  are there for you to use anytime that you want to use them.</p>
+<p class="MsoNormal">Arguments are great, and throwing them into the parenthesis,  after the name of a function, gives the function their own variables to use  locally. This means that it just belongs to this function, and will not work  outside of it, unless you <span class="boldBlueChar"><span style="font-size:12.0pt; ">@return</span></span> it. The calling code will need access to this information, and so the return  keyword gives it this perfect line of communication.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/Webpage Images/9.png" width="450" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc163797726">Seeing an argument in action</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">As stated above, $amount is just a variable, that we created  to be used in our function. For this example, $amount will take a default value  of 100%, as a key/value pair. </p>
+<p class="MsoNormal">We will then be using this $amount value with the <span class="boldBlueChar"><span style="font-size:12.0pt; ">hue</span></span> function. The <span class="boldBlueChar"><span style="font-size:12.0pt; ">hue</span></span> function, like  $color variable is official SCSS named code, and so we can just use it, and it  will know what to do.  Our <span class="boldBlueChar"><span style="font-size:12.0pt; ">hue</span></span> function will be  taking our $color variable as an argument.  The <span class="boldBlueChar"><span style="font-size:12.0pt; ">hue</span></span> function, comes  pre-loaded with a range from 0 to 360 degrees. Because that is how the  developers of the SCSS class library determined it to work, when they created  this code.</p>
+<p class="MsoNormal">Below you see that <span class="boldBlueChar"><span style="font-size:12.0pt; ">hue</span></span> is taking the variable $color  and then adding that amount of 180 degrees to it. This will flip the color in  the reverse direction. </p>
+<img src="Images/Webpage Images/10.png" width="500" height="20" class="responsiveImage">
+<img src="Images/Webpage Images/11.png" width="543" height="206" class="responsiveImage">
+<p class="MsoNormal">  </p>
+<h1><a name="_Toc163797727">What is a Function?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Images/Webpage Images/12.png" width="270" height="241" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">Let&rsquo;s dive into this  function, variable, argument thing just a bit deeper.</span></p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-size:14.0pt; color:blue; ">*Note</span></strong>-In our illustration above, you will see that our <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">place-holder</span></span> variable, which is in the parenthesis in the first line, is actually going to  be the same thing that will be our <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">value</span></span> variable, in the  second line of our code. So, the place-holder will be filled in with our value,  and both the value, and the place-holder values will be the exact same thing. </p>
+<p class="MsoNormal"><span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">Functions,</span></span> in Sass, are very similar to  functions that are in JavaScript. So, if you are familiar with JavaScript, you  should find this function stuff to be much easier to get the hang of.</p>
+<p class="MsoNormal">Actually, this <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">function</span></span> thing is  something that you would use if you do not want to keep repeating the same code  over and over. You can call a function&rsquo;s name anywhere in your code, and it is  just as if we had written the full code right there in that spot. So, it  becomes this type of mechanism that repeats itself all over the place to do its  magic. And all you have to do is call it&rsquo;s name.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Filling in the place holder</span></p>
+<p class="MsoNormal">Notice how we had put that place-holder in the parenthesis  in the first line of our function code in the illustration above. We could have  used any name here that we want, but what it is, is a type of place holder.  Once we use a variable, as an argument in the function&rsquo;s first line, we have  the space later on in the code to fill in the blank, that it created, with what  we want.  We also have access to use this  variable in the body of the function&rsquo;s code. It is basically just holding the  door open in memory, to put something in there.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">In the example below, you will see that we filled in the  place-holder with the word regular. This makes sense here, because regular is a  type of font-weight, and font-weight is what we mapped our made-up variable of  the name of &ldquo;$weight&rdquo; to; so now anytime we use this, our SCSS code will know  that the font-weight needs to be set to regular. We could just call it like  this anywhere in our code, and our function will know to do it magic and turn  our font into regular weight setting. How cool is that.</p>
+<p class="MsoNormal">Now what is really awesome is that what is in the  parentheses is a variable (*interchangeable), and you could change it to any of  the pre-determined font-weights that you want. </p>
+<img src="Images/Webpage Images/13.png" width="404" height="151" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Try changing the word in the parentheses to Bold and watch a  whole lot of Bold magic start taking shape with your fonts.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/Webpage Images/14.png" width="270" height="241" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc163797728">What is map-get?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">By using <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">map-get</span></span>, in SCSS, we can take several  values, and then throw them into a single variable. You can kind of think of  these parenthesis, as a way to wrangle in your multiple values, and put them  into a group. When the program sees these parenthesis with stuff in them, it  knows this stuff goes together in some way. </p>
+<p class="MsoNormal">So, inside of these parenthesis we are using what we want to  map, and its value. These are called <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">key: value</span></span> pairs, at  times this is referred to as <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">map,key</span></span>, which can  certainly be confusing, to say the least. But anyways, to continue, the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">map, key</span></span> is inside of parenthesis, so we know this stuff goes together. We separate  these pairs, inside of those parenthesis with commas.</p>
+<p class="MsoNormal">Notice, in the table below, how we take the value, on the  right side of the equation, and throw it into the map on the left side. Look at  our variable $font-sizes. This means that anytime we say &ldquo;small&rdquo; it will mean  12px. normal will stipulate 18px, and large will specify 24px.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Take this for instance: </p>
+<img src="Images/Webpage Images/15.png" width="752" height="198" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc163797729">Creating your first SCSS function</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to your <strong><span style="font-size:14.0pt; ">main.scss</span></strong><span style="font-size:14.0pt; "> </span>file</p>
+<p class="MsoNormal">We are going to be placing this function right under our import  statements in our main.scss file. </p>
+<p class="MsoNormal">In our example, the $weight-name is where we are going to  place the value. Since this is a font weight, our value will be either regular  or bold. </p>
+<p class="MsoNormal">$weight-name as a variable is being used as a place holder  for either bold or regular, in the map-get function. We will be filling in (bold/regular)  when we call it later on in the code. By setting the argument to be  $weight-name in the parenthesis, it also initializes it (so-to-speak) and  enables us now to use our new variable inside of the function block.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">syntax</span></p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-size:12.0pt; color:#920000; ">map-get</span></strong><span style="font-size:12.0pt; color:#C00000; "> </span>(<strong><span style="font-size:12.0pt; ">map,  value</span></strong>)</p>
+<img src="Images/Webpage Images/16.png" width="441" height="114" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-size:14.0pt; color:blue; ">Notice</span></strong> how in this code we are replacing $font-weights  with the actual official CSS name of font-weight. Then we use a colon, and then  we use the function name we created above of &ldquo;weight.&rdquo; Inside of the  parenthesis is where we fill in our place-holder, with the value of either  bold, or regular. You will see from this next example that our function holds  all the code now to tell it that the value of regular is what we want to be  pulling from font-weight. </p>
+<p class="MsoNormal">Look below, we are starting out with our official name of  font weight with a colon after it.</p>
+<img src="Images/Webpage Images/17.png" width="177" height="69" class="responsiveImage">
+<p class="MsoNormal">You can find this official CSS in many places but here is  the link to the reference by W3schools</p>
+<p class="MsoNormal"><a href="https://www.w3schools.com/cssref/pr_font_weight.php">https://www.w3schools.com/cssref/pr_font_weight.php</a></p>
+<img src="Images/Webpage Images/18.png" width="724" height="571" class="wideImg">
+<p class="MsoNormal">Now what is coming after the colon and the official CSS  property of font-weight is us using our function name of weight by calling it,  and filling in the option of regular. This will show our font at a regular  weight. If we filled it in with bold, then it would show our font-weight as  bold.</p>
+<img src="Images/Webpage Images/19.png" width="418" height="310" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">bold </span></p>
+<img src="Images/Webpage Images/20.png" width="868" height="93" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">regular</span></p>
+<img src="Images/Webpage Images/21.png" width="624" height="57" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc163797730">Mix-ins</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Mix-ins are similar to functions.</p>
+<p class="MsoNormal">Go to the <strong><span style="font-size:14.0pt; ">index.html</span></strong><span style="font-size:14.0pt; "> </span>file and add another paragraph;  if you have been following along with our previous tutorials, you should have  this file already created.</p>
+<p class="MsoNormal">highlight the entire paragraph on the page, and <strong><span style="font-size:14.0pt; ">alt- shift -down arrow</span></strong>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it</span></span>, do not  duplicate the entire div with the class of main, we are only duplicating the  paragraph within it.</p>
+<img src="Images/Webpage Images/22.png" width="631" height="361" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Back in the <strong><span style="font-size:14.0pt; ">main.SCSS</span></strong>.</p>
+<p class="MsoNormal">Add the top 4 lines to your <strong><span style="font-size:14.0pt; ">.main</span></strong><span style="font-size:14.0pt; "> </span>rule</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; display:flex;</p>
+<p class="code">&nbsp; &nbsp; justify-content: center;</p>
+<p class="code">&nbsp; &nbsp; align-items: center;</p>
+<p class="code">&nbsp; &nbsp; padding-top: 5%;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/Webpage Images/23.png" width="480" height="402" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> remember if  you do not have <a href="file:///C:/xampp/htdocs/Enlightenment/Articles/2024/6-SASS-Or-SCSS/2%20Creating%20the%20Project.docx">Watch  SASS</a> on, you will not be able to view this.</p>
+<p class="MsoNormal"><strong><span style="font-size:14.0pt; ">Save</span></strong> that SASS file and then switch back to the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span><span style="font-size:14.0pt; "> </span>file. And it now is flexible  with size of viewport.</p>
+<p class="MsoNormal">Yes, it looks bad, without a gap between columns, but we  will fix that. And you will find that by default, if you have more than one  paragraph inside of one div, it will default to columns.</p>
+<p class="MsoNormal"><img src="Images/Webpage Images/24.png" width="1168" height="246" class="wideImg"></p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc163797731">Creating a Mix-In</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Images/Webpage Images/25.png" width="375" class="responsiveImage">
+<p class="MsoNormal">Inside of your <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.SCSS</span></span> file</p>
+<img src="Images/Webpage Images/26.png" width="334" height="134" class="responsiveImage">
+<p class="MsoNormal"><img src="Images/Webpage Images/27.png" width="326" height="77" class="responsiveImage"></p>
+<p class="MsoNormal">Cut those top 3 lines from the rule properties that we just  added to .main, and put them into our new mixin. We are also adding a gap to  make the in-between sections of the paragraphs look better.</p>
+<img src="Images/Webpage Images/28.png" width="407" height="204" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You are going to place the mixin before your first tag,  which for us is the body tag, and after the maps</p>
+<p class="MsoNormal">section.</p>
+<img src="Images/Webpage Images/29.png" width="371" height="311" class="responsiveImage">
+<h1> <a name="_Toc163797732">How to  include the mixin in your CSS rule</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now that you have defined the mixin, you need to know how to  place it into your rule so that our .main can use it.</p>
+<p><img src="Images/Webpage Images/30.png" width="236" height="45"></p>
+<p><img src="Images/Webpage Images/31.png" width="328" height="353" class="responsiveImage"> </p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now, <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">Save it,</span></span> and go back to <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span>,  to test the code</p>
+<p class="MsoNormal">… and here you see it is still reading the code correctly!</p>
+<img src="Images/Webpage Images/32.png" width="600"  class="wideImg">
+<p class="MsoNormal" style="text-indent:-63.0pt;">&nbsp;</p>
+<p class="MsoNormal">…and when we hover, you will see that it is also still  listening to our code.</p>
+<img src="Images/Webpage Images/33.png" width="600" class="wideImg" >
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc163797733">Mixins Arguments</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Remember to <a href="file:///C:/xampp/htdocs/Enlightenment/Articles/2024/6-SASS-Or-SCSS/2%20Creating%20the%20Project.docx">turn  on SASS</a></p>
+<p class="MsoNormal">In our <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span> file</p>
+<img src="Images/Webpage Images/34.png" width="624" height="281" class="wideImg">
+<p class="MsoNormal">In Our <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main. SCSS</span></span> file</p>
+<p class="MsoNormal">go to our @mixin <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">flexCenter </span></span>and pass in  the variable of <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">$direction</span></span></p>
+<p class="MsoNormal">Then inside the rule, add the line that says <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">flex-direction:  $direction;</span></span></p>
+<p class="code">@mixin flexCenter($direction) {</p>
+<p class="code">    display:flex;</p>
+<p class="code">    justify-content:  center;</p>
+<p class="code">    align-items: center;</p>
+<p class="code">    gap: 35px;</p>
+<p class="code">    flex-direction:  $direction;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/Webpage Images/35.png" width="356" height="222" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now go to the rule for .main, and make changes to use this  new argument of direction. We add parenthesis and inside, we fill in the blank  for $direction. We now want our paragraphs to display in a row, instead of a  direction.</p>
+<p class="MsoNormal">column is what we want, this time, for the direction of our  paragraphs inside of the div. So, column is what we place inside of the  parenthesis for our mixin call for flexCenter.</p>
+<img src="Images/Webpage Images/36.png" width="371" height="75" class="responsiveImage">
+<p class="MsoNormal">So, now the display is in a column instead of the rows that  we had before.</p>
+<img src="Images/Webpage Images/37.png" width="620" height="141" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
