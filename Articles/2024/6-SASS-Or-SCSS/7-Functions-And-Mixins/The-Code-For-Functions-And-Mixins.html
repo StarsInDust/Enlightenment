@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Code for Functions and Mixins</title>
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~The Code for Functions and Mixins~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/27/2024</p>
+   
+   <br>
+   <p class="LeftPMidBlack"><a href="7-Functions-And-Mixins.html">Back to Main Tutorial</a></p>
+<p>&nbsp;</p>
+   
+<br>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163815912">The   Html</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163815913">main.scss</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163815914">_variables.scss</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc163815915">_resets.scss</a></span></p>
+
+
+
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc163815912">The Html</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&lt;!DOCTYPE html&gt;</p>
+<p class="code">&lt;html lang=&quot;en&quot;&gt;</p>
+<p class="code">&lt;head&gt;</p>
+<p class="code">    &lt;meta  charset=&quot;UTF-8&quot;&gt;</p>
+<p class="code">    &lt;meta  name=&quot;viewport&quot; content=&quot;width=device-width,  initial-scale=1.0&quot;&gt;</p>
+<p class="code">    &lt;link rel  =&quot;stylesheet&quot; href=&quot;.\css\main.css&quot;&gt;</p>
+<p class="code">     &lt;title&gt;Sass&lt;/title&gt;</p>
+<p class="code">&lt;/head&gt;</p>
+<p class="code">&lt;body&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &lt;div  class=&quot;main&quot;&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        &lt;p class  =&quot;main__p&quot;&gt;Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Temporibus rem voluptatum accusantium itaque atque eum rerum velit  veniam, ratione architecto, officiis ab impedit ut assumenda quisquam. Ipsum  autem laboriosam illum nobis facere, unde ea, aut nesciunt eius, a voluptas non  iste consequatur soluta molestiae doloribus quae esse iusto? Vel, id!&lt;/p&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        &lt;p class  =&quot;main__p&quot;&gt;Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Temporibus rem voluptatum accusantium itaque atque eum rerum velit  veniam, ratione architecto, officiis ab impedit ut assumenda quisquam. Ipsum  autem laboriosam illum nobis facere, unde ea, aut nesciunt eius, a voluptas non  iste consequatur soluta molestiae doloribus quae esse iusto? Vel, id!&lt;/p&gt;</p>
+<p class="code">        </p>
+<p class="code">        &lt;/div&gt;</p>
+<p class="code">        </p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    </p>
+<p class="code">&lt;/body&gt;</p>
+<p class="code">&lt;/html&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc163815913">main.scss</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">@import'./resets';</p>
+<p class="code">@import'./variables';</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">@function weight($weight-name) {</p>
+<p class="code">    @return  map-get($font-weights, $weight-name);</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">   </p>
+<p class="code">&nbsp;</p>
+<p class="code">   </p>
+<p class="code">$font-weights:(</p>
+<p class="code">        </p>
+<p class="code">    &quot;regular&quot;:  400,</p>
+<p class="code">    &quot;medium&quot;:  500,</p>
+<p class="code">    &quot;bold&quot;: 700</p>
+<p class="code">    </p>
+<p class="code">    ); </p>
+<p class="code">&nbsp;</p>
+<p class="code">$font-colors: (</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &quot;light&quot;:  #f2e8d4,</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &quot;middle&quot;:  #9b8559,</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &quot;dark&quot;:  #1e1401</p>
+<p class="code">    </p>
+<p class="code">    </p>
+<p class="code">);</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">@mixin flexCenter($direction) {</p>
+<p class="code">    display:flex;</p>
+<p class="code">    justify-content:  center;</p>
+<p class="code">    align-items: center;</p>
+<p class="code">    gap: 35px;</p>
+<p class="code">    flex-direction:  $direction;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">body {</p>
+<p class="code">&nbsp;</p>
+<p class="code">    background:  $primary-color;</p>
+<p class="code">    font-weight:  map-get($font-weights, regular);</p>
+<p class="code">    color:  map-get($font-colors, light);</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">.main {</p>
+<p class="code">&nbsp;</p>
+<p class="code">    @include  flexCenter(row);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    padding-top: 5%;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    width: 75%;</p>
+<p class="code">    margin: 0 auto;</p>
+<p class="code">&nbsp;</p>
+<p class="code">#{&amp;}__p {</p>
+<p class="code">&nbsp;</p>
+<p class="code">     font-weight:weight(medium);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;:hover {</p>
+<p class="code">&nbsp;</p>
+<p class="code">        color:chocolate;</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc163815914">_variables.scss</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    $primary-color:  #09191F;</p>
+<p class="code">    $secondary-color:  #153B47;</p>
+<p class="code">    $accent-color: #3D606E;</p>
+<p class="code">    $text-color: #fff;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc163815915">_resets.scss</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="code">* {</p>
+<p class="code">&nbsp;</p>
+<p class="code">    box-sizing: border-box;</p>
+<p class="code">    margin:0;</p>
+<p class="code">    padding:0;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="LeftPMidBlack"><a href="7-Functions-And-Mixins.html">Back to Main Tutorial</a></p>
+<p>&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
