@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 Math Operators</title>
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
+}
+span.MsoIntenseReference {
+font-variant:small-caps;
+color:#4472C4;
+letter-spacing:.25pt;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~11 Math Operators~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >6/24/2024</p>
+   
+   <br>
+<br>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+
+
+<p class="tableOfContents"><a href="#_Toc164590156">How   to use Math operators in SCSS/ CSS</a></span></p>
+<p class="tableOfContents"><a href="#_Toc164590157">When   you can and cannot mix Operators</a></span></p>
+<p class="tableOfContents"><a href="#_Toc164590158">For   More Information</a></span></p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+<img src="Images/1.png" width="270" height="241" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Turn on <a href="../2-Creating-The-Project/2-Creating-The-Projects.html" target="_blank">Watch  SASS </a><span class="MsoHyperlink"> </span></p>
+<p class="MsoNormal"><span class="MsoHyperlink"><span style="text-decoration:none; ">&nbsp;</span></span></p>
+<p class="MsoNormal"><span class="MsoHyperlink"><span style="text-decoration:none; ">&nbsp;</span></span></p>
+<h1><a name="_Toc164590156">How to use Math operators in SCSS/ CSS</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">This is just going to be a rather fast, simple tutorial to  introduce you to how we would go about using math operators in calculations in  SASS. And the differences of just using regular CSS and how you would do those  same calculations.</p>
+<p class="MsoNormal">In regular CSS, you need to wrap your equation in a calc  method, but in SASS, we can just do the calculation.</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Regular CSS</span></p>
+<img src="Images/2.png" width="249" height="42" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">SASS</span></p>
+<img src="Images/3.png" width="204" height="40" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal">When we subtract 55% from the width of our paragraph, it  does now look like crap</p>
+<img src="Images/4.png" width="328" height="202" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<h1><a name="_Toc164590157">When you can and cannot mix Operators</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">In regular CSS we can mix types when we deal with  calculations, but in SASS you cannot mix type.</p>
+<p class="MsoNormal">YES, YOU CAN</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Regular CSS</span></p>
+<img src="Images/5.png" width="264" height="37" class="responsiveImage">
+<p class="MsoNormal">Now if you were to remove the calc method and just run it as  a Sass calculation, with the mixing of the % sign and the px measure, you will  find that the program is no longer listening to you and will just sit at the  last measurement style that you wrote correctly.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">NO, YOU CAN&rsquo;T</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">SASS</span></p>
+<img src="Images/6.png" width="371" height="71" class="responsiveImage">
+<p class="BlueBolden"><span class="MsoIntenseReference"><span style="font-weight:normal; ">&nbsp;</span></span></p>
+<h1><a name="_Toc164590158">For More Information</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal"><img src="Images/7.png" width="300" class="responsiveImage" ></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">If you would really want to do a deeper dive into this area  of Math Operators, you can go to these sites</p>
+<p class="MsoNormal"><span class="MsoIntenseReference"><a href="https://sass-lang.com/documentation/operators/numeric/" target="_blank">SASS-Lang</a></span></p>
+<p class="MsoNormal"><a href="https://sass-lang.com/documentation/operators/numeric/"></a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference"><a href="https://www.javatpoint.com/sass-operators" target="_blank">Javapoint</a></span></p>
+<p class="MsoNormal"><a href="https://www.javatpoint.com/sass-operators"></a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference"><a href="https://www.geeksforgeeks.org/sass-operators" target="_blank">Geeks for Geeks</a></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+</aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
