@@ -1,0 +1,26 @@
+.home{
+    height:100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    background: url('../img/home-image.jpg');
+    background-size:cover;
+
+    &__name{
+        font-size: 3.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #fff;
+
+        &--last {
+            color: $secondary-color;
+            font-weight: 300;
+
+        }
+
+    }
+
+}
+
+
+
