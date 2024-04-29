@@ -7,10 +7,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1 Installing the Programs for SASS</title>
+    <title>2 Creating The Projects</title>
 
-
-<meta name="title" content="1 Installing the Programs for SASS ">
+<meta name="title" content="2 Creating the Projects ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
@@ -18,7 +17,7 @@
 <meta name="keywords" content="SASS, Visual Studio, CSS, Web Design"/>
 
 
-<meta name="description" content="This article explains how to install programs for SASS to use in Visual Studio Code "/>
+<meta name="description" content="This article explains how to start a new project"/>
 
 <meta name="category" content="SASS, CSS, Visual Studio Code, Web Design">
 
@@ -29,9 +28,7 @@
 
 <meta name="revised" content="Monday, March 18, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/1-Installing-The-Programs-For-SASS/1-Installing-The-Programs-For-SASS.html">
-
-
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/2-Creating-The-Projects.html">
 
 
     
@@ -84,6 +81,11 @@ font-family:"Times New Roman",serif;
 color:red;
 font-weight:bold;
 }
+span.boldBlueChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
 -->
 </style>
 </head>
@@ -109,96 +111,127 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~1 Installing the Programs for SASS~</p>
+  <p class="h2Black" >~2 Creating The Projects~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >4/22/2024</p>
+   <p class="articleDate" style="text-align:right" >4/29/2024</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"><a href="#_Toc161568785">What is SASS?</a></p>
-<p class="tableOfContents"><a href="#_Toc161568786">What do you need to write   this new CSS?</a></p>
-<p class="tableOfContents"><a href="#_Toc161568787">How do we add the SASS   Compiler in VS Code?</a></p>
 <p class="MsoNormal">&nbsp;</p>
+<p class="tableOfContents"><a href="#_Toc161569908">To turn back on your Watch SASS</a></p>
+<p class="tableOfContents"><a href="#_Toc161569909">Starting the Project</a></p>
+<p class="tableOfContents"><a href="#_Toc161569910">Emmet Short cut for   creating HTML Boiler Plate code</a></p>
+<p class="tableOfContents"><a href="#_Toc161569911">The link for the Style   Sheet</a></p>
+<p class="tableOfContents"><a href="#_Toc161569912">Setting up the folder and   files for the SCSS</a></p>
+<p class="tableOfContents"><a href="#_Toc161569913">The CSS Folder Automatic   Generation</a></p>
+<p class="tableOfContents"><a href="#_Toc161569914">Testing our SCSS file</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/1-Installing-The-Programs-For-SASS/Images/1.png" width="270" height="241" class="responsiveImage">
 <p class="MsoNormal"><span class="MsoHyperlink"><span style="text-decoration:none; ">&nbsp;</span></span></p>
-<h1><a name="_Toc161568785">What is SASS?</a></h1>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/1.png" width="286" height="259" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoHyperlink"><span style="text-decoration:none; ">&nbsp;</span></span></p>
+<h1><a name="_Toc161569908">To turn back on your Watch SASS</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Sass is a CSS extension language. In other words, when we  use Sass, we can do more cool stuff then if we were just resorting to using CSS  on its own. The acronym SASS stands for Syntactically Awesome Style sheets. It  is completely compatible with all versions of CSS.</p>
-<p class="MsoNormal">The reason that SASS was created was that it reduces the  repetition that is sometimes found when using CSS. It also is a timesaver to  use. It was introduced in 2006 by Hampton Calin and Natalie Weizenbaum. The  best part about SASS is that it is free to use.</p>
-<h1><a name="_Toc161568786">What do you need to write this new CSS?</a></h1>
+<p class="MsoNormal">If you do not see Watch Sass in the task bar, try stretching out the Visual Studio app, then looking at the far left of the bar. Or you could go back to settings, put SASS in the  search bar, and go to the wheel here.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/2.png" width="624" height="162" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">At the bottom, choose WATCH SASS</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/3.png" width="311" height="74" class="responsiveImage">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc161569909">Starting the Project</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Your browser does not exactly know how to read SASS, so when  we write SASS, we will have the extra step of turning it back into CSS, which  our browsers do know how to use. This is not exactly all that difficult, as  Visual Studio Code has an extension which will do that for us.</p>
-<p class="MsoNormal">These are the things that you are going to need before you  can start using SASS.</p>
-<ul>
-  <li>Visual Studio Code</li>
-  <li>Live Sass Compiler (a Visual Studio Code  Extension)</li>
-  <li>Live Server (a Visual Studio Code Extension)</li>
-</ul>
+<p class="MsoNormal">You want to start by opening Visual Studio Code</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/4.png" width="62" height="62" class="responsiveImage">
+<p class="MsoNormal">Create a new folder</p>
+<p class="MsoNormal">You will want to create a new folder for your SASS project  somewhere on your computer, or you could just hover and create the new folder  right inside of Visual Studio code</p>
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc161568787">How do we add the SASS Compiler in VS Code?</a></h1>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/5.png" width="461" height="193" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Then open it, you want to create a dist folder, and an  index.html file, inside of that. Hovering right here in the Visual Studio, will  allow you to see the icons, where you can select to create both a new folder,  and a new html file.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/6.png" width="234" height="152" class="responsiveImage">
+<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Watch it,</span></span> Notice that  we are placing the index.html inside of the dist folder, you know it is inside  because it is indented from the dist folder.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/7.png" width="342" height="235" class="responsiveImage">
+<h1><a name="_Toc161569910">Emmet Short cut for creating HTML Boiler Plate code</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Open Visual Studio Code</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/1-Installing-The-Programs-For-SASS/Images/2.png" width="62" height="62" class="responsiveImage">
-<p class="MsoNormal">Go to your Extension tab on the left side of Program</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/1-Installing-The-Programs-For-SASS/Images/3.png" width="77" height="72" class="responsiveImage">
+<p class="MsoNormal">Shift-exclamation-Enter will give you the boiler plate code</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/8.png" width="643" height="357" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Put <strong><span style="font-family:'Calibri',sans-serif; ">live sass</span></strong> in  the search box</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/1-Installing-The-Programs-For-SASS/Images/4.png" width="277" height="305" class="responsiveImage">
-
-<p class="MsoNormal">Then go to settings in Visual studio at the bottom left</p>
-
-<img src="Articles/2024/6-SASS-Or-SCSS/1-Installing-The-Programs-For-SASS/Images/5.png" width="133" height="135" class="responsiveImage">
-<p class="MsoNormal">Search for <strong><span style="font-family:'Calibri',sans-serif; ">sass</span></strong></p>
-<p class="MsoNormal">You want to be able to edit in<strong><span style="font-family:'Calibri',sans-serif; "> json</span></strong></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/1-Installing-The-Programs-For-SASS/Images/6.png" width="168" height="202" class="responsiveImage">
+<p class="MsoNormal">We can just name the project <strong><span style="font-family:'Calibri',sans-serif; ">SASS</span></strong></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/9.png" width="624" height="223" class="wideImg">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<h1><a name="_Toc161569911">The link for the Style Sheet</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Scroll down until you see the <strong><span style="font-family:'Calibri',sans-serif; ">format</span></strong> settings. Click the link <strong><span style="font-family:'Calibri',sans-serif; ">Edit in settings.json</span></strong></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/1-Installing-The-Programs-For-SASS/Images/7.png" width="373" height="101" class="responsiveImage">
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> Ok, now  this is <span class="boldBlueChar"><span style="font-size:12.0pt; ">important</span></span>!  Because when we are linking to the style sheet from our HTML file, we <span class="BoldRedChar"><span style="font-size:12.0pt; ">DO NOT</span></span> use <strong>SASS</strong> or <strong>SCSS</strong>, which is  another name for this. Since browsers do not understand this technology, it  must be turned back into regular CSS before it can be processed by the browser.</p>
+<p class="MsoNormal">We have not yet made our style sheet yet, but this is what  the link will look like</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/10.png" width="624" height="189" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">We want to change where we want to save our SASS to, by  default it will say null</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/1-Installing-The-Programs-For-SASS/Images/8.png" width="323" height="121" class="responsiveImage">
+<p class="MsoNormal">SCSS is the newer version of SASS, as it does not use the  more difficult syntax form which entails braces and semi-colons. For this  tutorial, we will be dealing with the easier version of SCSS, but it is all  just as Sassy to me.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">We want to save our stuff to the dist folder, and we can do  that by changing it to this.</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/1-Installing-The-Programs-For-SASS/Images/9.png" width="386" height="166" class="responsiveImage">
-<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Watch it, </span></span>while you  are still in Setting you must select <strong><span style="font-family:'Calibri',sans-serif; ">Watch SASS</span></strong> at  the bottom of the task bar.</p>
-<p class="MsoNormal">Make sure you are set to <strong><span style="font-size:12.0pt; ">LIVE SASS COMP</span></strong><span style="font-size:12.0pt; "> </span>in the <strong><span style="font-size:12.0pt; ">OutPut</span></strong></p>
-<p class="MsoNormal">Then you should be seeing this in the output tab</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/1-Installing-The-Programs-For-SASS/Images/10.png" width="626" height="283" class="wideImg">
+<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Note-</span></span> Make sure you  add this line to make this connection to your style sheet</p>
+<p class="code">&nbsp;</p>
+<p class="code">&lt;link rel =&quot;stylesheet&quot; href=&quot;.\css\main.css&quot;&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/10.png" width="624" height="189" class="wideImg"></p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc161569912">Setting up the folder and files for the SCSS</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This time, make sure that you are outside of the dist  folder, we will be setting up this folder in the root of folder.</p>
+<p class="MsoNormal">Check the indent of the new folder, it should be at the same  level as the dist folder and not indented.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/11.png" width="267" height="214" class="responsiveImage">
+<p class="MsoNormal">Inside of that new folder, create the <strong><span style="line-height:115%; font-size:14.0pt; ">main.scss</span></strong><span style="font-size:14.0pt; "> </span>file. Your file folders and  file indents should now look like this.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/12.png" width="225" height="223" class="responsiveImage">
+<p class="MsoNormal">Open that main.scss file in Visual Studio</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/13.png" width="323" height="97" class="responsiveImage">
+<p class="MsoNormal">You may have to go back to your setting to turn back on SASS, if you do not see it in the task bar at the bottom. Click on the setting wheel at the left side of the app, and look at the bottom for it. It might need to be turned on from here.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/14.png" width="625" height="164" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now if you click on the taskbar that says <strong><span style="font-size:12.0pt; ">Watch Sass</span></strong>, you will see  an output in the <strong><span style="font-size:12.0pt; ">terminal</span></strong> pop up.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/15.png" width="621" height="193" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc161569913">The CSS Folder Automatic Generation</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Since you clicked on that Watch Sass button at the bottom,  it has automatically created a CSS folder for you. You did not create this  folder. It is automatically generated for you when you hit that SASS button.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/16.png" width="254" height="259" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">If you open up that folder, you will see two files, that  were also automatically generated for you.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/17.png" width="318" height="300" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc161569914">Testing our SCSS file</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Make sure you are in your scss file and not any other file.  Remember things start out here and then it is recognized by the Watch Sass, and  turned into CSS.</p>
+<p class="MsoNormal">Here we will just test some simple CSS, since we know that  SCSS also recognizes CSS.</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/18.png" width="389" height="182" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p>&nbsp;</p>
- 
-  <!--Main Article -->
- 
- 
-</article>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
-  <p class="LeftPMidBlack">&nbsp;</p>
-  
-  
-  </aside>
-  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> Make sure  you save for things to work</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/19.png" width="312" height="344" class="responsiveImage">
+<p class="MsoNormal">Now go and look at your CSS file, because as soon as you  saved the SASS compiler automatically wrote your code into the CSS file. </p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/20.png" width="581" height="221" class="wideImg">
+<p class="MsoNormal">If you have <strong><span style="font-size:14.0pt; ">Live Server</span></strong><span style="font-size:14.0pt; "> </span>installed  inside of your Visual Studio Code, you can hit that and view what you did  inside of a browser</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> make sure  before you hit your live server, you are on your <strong><span style="font-size:14.0pt; ">index.html</span></strong><span style="font-size:14.0pt; "> </span>file, or you will just be seeing some weird files.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/21.png" width="274" height="63" class="responsiveImage">
+<p class="MsoNormal">Yeah, that is some bright sunshine on a webpage there.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/Images/22.png" width="415" height="255" class="responsiveImage">
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> when using  SCSS, <strong><span style="font-size:12.0pt; ">never modify the CSS  file</span></strong>, you only want to modify the SCSS file, and have that write all  of your CSS code for you.</p>
+<p>&nbsp;</p></article><aside class="aside aside-2">
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
