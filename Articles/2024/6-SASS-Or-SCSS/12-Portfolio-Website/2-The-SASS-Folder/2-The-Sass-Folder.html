@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 The SASS Folder</title>
+    
+    <meta name="title" content="2 The SASS Folder ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content="The SASS folder, Visual Studio, CSS, Web Design"/>
+
+
+<meta name="description" content="This article explains how to set up your Sass Folder"/>
+
+<meta name="category" content="SASS, CSS, Visual Studio Code, Web Design">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Monday, May 20, 2024 />
+
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/2-The-SASS-Folder/2-The-Sass-Folder.html">
+
+
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.Heading1Char {
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+font-weight:bold;
+}
+span.boldBlueChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.MsoIntenseReference {
+font-variant:small-caps;
+color:#4472C4;
+letter-spacing:.25pt;
+font-weight:bold;
+}
+span.BigDarkBoldChar {
+font-weight:bold;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~2 The SASS Folder~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >7/15/2024</p>
+   
+   <br>
+<br>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+<p class="tableOfContents"><a href="#_Toc165097972">Writing the _config partial file</a></p>
+<p class="tableOfContents"><a href="#_Toc165097973">The Main.scss file</a></p>
+<p class="tableOfContents"><a href="#_Toc165097974">The body code</a></p>
+<p class="tableOfContents"><a href="#_Toc165097975">What is vh and rem?</a></p>
+<p class="tableOfContents"><a href="#_Toc165097976">h1-H3 and Header Code</a></p>
+<p class="tableOfContents"><a href="#_Toc165097977">The Navigation Code</a></p>
+<p class="tableOfContents"><a href="#_Toc165097978">The Main Code</a></p>
+<p class="tableOfContents"><a href="#_Toc165097979">Setting the Social Icons   to Sit Above the Footer</a></p>
+<p class="tableOfContents"><a href="#_Toc165097980">Testing</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="images/1.png" width="270" height="241" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Make sure you are in the root, that means outside of that  dist folder. This folder is for your SCSS and it needs to be created outside of  that dist folder.</p>
+<img src="images/2.png" width="333" height="164" class="responsiveImage">
+<p class="MsoNormal">Inside of that <span class="boldBlue">scss</span> file, create a file called <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">main.scss</span></span></p>
+<img src="images/3.png" width="543" height="206" class="responsiveImage">
+<p class="MsoNormal">Inside of that same scss folder, we will create a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">partial _config</span></span></p>
+<img src="images/4.png" width="257" height="226" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">In a large workflow, we would actually create a partial for  all of our elements. This is not a large project, but we will still be looking  at that work method in this tutorial, so we can be more familiar with it, when  we do need to step into larger projects.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><a name="_Toc165097972"><span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; ">Writing the _config partial file</span></span></a>.</p>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="code">$primary-color:#320001;</p>
+<p class="code">$secondary-color:#e8854c;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">* {</p>
+<p class="code">    box-sizing: border-box;</p>
+<p class="code">    margin: 0;</p>
+<p class="code">    padding: 0;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<img src="images/5.png" width="487" height="268" class="responsiveImage">
+<h1><a name="_Toc165097973">The Main.scss file</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Open up the <span class="boldBlue">main.scss</span> file that we had just set up. We need  to import that config file that we just created, so our main file will have  access to it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">@import&quot;config&quot;;</p>
+<p class="code">&nbsp;</p>
+<img src="images/6.png" width="545" height="215" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165097974">The body code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="code">body {</p>
+<p class="code">    background:  $primary-color;</p>
+<p class="code">    color:#fff;</p>
+<p class="code">    height: 100vh;</p>
+<p class="code">    font-family:'Segoe UI',  Tahoma, Geneva, Verdana, sans-serif;</p>
+<p class="code">    line-height: 1;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="images/7.png" width="625" height="188" class="wideImg">
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165097975">What is vh and rem?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Using <span class="boldBlueChar"><span style="font-size:12.0pt; ">vh</span></span> here for the height will give us 100% of the available viewport, which is what  we want.</p>
+<p class="MsoNormal">Using <span class="boldBlueChar"><span style="font-size:12.0pt; ">rem</span></span>,  just means that the font-size is based on whatever the body font-size was set  to. If you set your body font size to 12, setting rem to 1 will be 12, setting  rem size to 2 would be 24, or twice the size and so on… The default font size  is actually 16, so if you do not set the font then rem would be based on 16,  and twice that would be 32…</p>
+<p class="MsoNormal">On the other hand, pixels are an absolute unit, when you set  your pixels to something like 24px, that is what it will be, it will not be  flexible based on the font size that you happen to want to use. So, you can say  that because of this rem is more responsive, or customizable.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165097976">h1-H3 and Header Code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="code">h1, h2, h3 {</p>
+<p class="code">&nbsp;</p>
+<p class="code">    font-weight: 400;</p>
+<p class="code">    padding: 8px;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">a{</p>
+<p class="code">    color:#fff;</p>
+<p class="code">    text-decoration: none;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">header {</p>
+<p class="code">    position: fixed;</p>
+<p class="code">    z-index: 2;</p>
+<p class="code">    width: 100%;</p>
+<p class="code">    padding: 1rem;</p>
+<p class="code">} </p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="images/8.png" width="455" height="333" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165097977">The Navigation Code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Inside of the main.scss file</p>
+<img src="images/9.png" width="495" height="227" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<h1><a name="_Toc165097978">The Main Code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">This code is also inside of the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.scss</span></span> file </p>
+<p class="MsoNormal">Notice that we have nested some of the code in the .main  class rule. The Social icons and the hover were nested inside of the rule.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">main {</p>
+<p class="code">&nbsp;</p>
+<p class="code">    height: 100%;</p>
+<p class="code">    width: 100%;</p>
+<p class="code">    padding-top: 100px;</p>
+<p class="code">    </p>
+<p class="code">&nbsp;</p>
+<p class="code">    .social-icons {</p>
+<p class="code">        position: fixed;</p>
+<p class="code">        bottom: 3rem;</p>
+<p class="code">        left: 1rem;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        a {</p>
+<p class="code">            padding:  0.4rem;</p>
+<p class="code">&nbsp;</p>
+<p class="code">            &amp;:hover {</p>
+<p class="code">&nbsp;</p>
+<p class="code">               color:  $secondary-color;</p>
+<p class="code">            }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165097979">Setting the Social Icons to Sit Above the Footer</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<img src="images/10.png" width="143" height="62" class="responsiveImage">
+<p class="MsoNormal">We have set the position of the .social-icons to be fixed,  and at the bottom of the page. We will also set the footer to be fixed and at  the bottom of the page. But we want the social icons to sit on top of the  footer. So, what we do is set the <span class="boldBlueChar"><span style="font-size:12.0pt; ">bottom</span></span> of the social media icons to be <span class="boldBlueChar"><span style="font-size:12.0pt; ">3rem</span></span>. If you want the  icons to rest even higher than this, you would set the bottom to be 4rem. But it is here where  you can maneuver where the icons will sit in relation to both the bottom of the page, as well as, to the footer text.</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Warning</span></span>, we have not  exactly set up the footer tag yet so you will not see that copyright message  until we do. I was only demonstrating how we want the icons to rest 3 rem above  the bottom.</p>
+<img src="images/11.png" width="523" height="439" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<p class="code"><span class="MsoIntenseReference">The Footer Code</span></p>
+<p class="code">&nbsp;</p>
+<p class="code"><a name="_Hlk167101914">footer {</a></p>
+<p class="code">&nbsp;</p>
+<p class="code">    font-size: 1rem;</p>
+<p class="code">    position: fixed;</p>
+<p class="code">    bottom: 0.2rem;</p>
+<p class="code">    left: 1rem;</p>
+<p class="code">    text-align: left;</p>
+<p class="code">    padding: 1rem;</p>
+<p class="code">    color:#fff;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="MsoNormal">Notice how we set the footer to rest 0.2 above the bottom.  This is not only setting the positioning to have space above the botton of the page, but it is less then the 3 rems that we set for the social media icons, so this will sit below them. Again, since the  footer is at a fixed position at the bottom, we need to set where we want it to  sit above the bottom.</p>
+
+<img src="images/12.png" width="335" height="239" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165097980">Testing</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="code">&nbsp;</p>
+<p class="boldBlue">BEFORE TESTING</p>
+<p class="BoldRed">Turn on SASS</p>
+<img src="images/13.png" width="289" height="80" class="responsiveImage">
+<p class="MsoNormal">Now if everything worked correctly you can open up your dist  folder and you will see your new CSS folder with two new files that were automatically created.This folder now contains both a   <span class="boldBlue">main.css</span> and a <span class="boldBlue">main.css.map</span> file. And all of that SASS code,that we just wrote, was  converted into regular CSS, which browsers understand.</p>
+<img src="images/14.png" width="313" height="244" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You can test your page by using Live server, but without any real css styles incorporated, it still does not look great.</p>
+<p class="MsoNormal">GO TO <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">INDEX.HTML</span></span> to view page</p>
+<p class="MsoNormal">This is what the hover looks like</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="images/15.png" width="622" height="179" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This is what the entire page  looks like right now</p>
+<img src="images/16.png" width="620" height="444" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p>&nbsp;</p>
+    
+  <p class="LeftPMidBlack">&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+</aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
