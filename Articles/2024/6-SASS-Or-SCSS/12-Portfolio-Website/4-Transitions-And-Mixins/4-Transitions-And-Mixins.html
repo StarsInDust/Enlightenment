@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Transitions and Mixins</title>
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.ItalicBlueChar {
+color:#3333FF;
+font-weight:bold;
+font-style:italic;
+}
+span.boldBlueChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~4 Transitions and Mixins~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >7/29/2024</p>
+   
+   <br>
+<br>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167271627">The   _config.scss file</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167271628">Creating   the @mixin Transition</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167271629">Assigning   the @mixin to be used Somewhere</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167271630">The   main.scss file</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167271631">Testing   the Hover Color Change</a></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="tableOfContents"><a href="Code-For-Transitions-And-Mixins.html" target="_blank">You can go here to view the code</a>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/1.png" width="270" height="241" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Here we will be creating a transition to smoothly transition  into the hover color change of the social icons.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc167271627">The _config.scss file</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">We will be creating the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">@mixin </span></span>inside of the <span class="ItalicBlueChar">_config.scss</span> file. So, open that file.</p>
+<p class="MsoNormal">When we write out this rule, we will be setting it to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">all</span></span>. This will allow us to reuse  this transition. We could just set it to color, or position or something  specific. But since we want to be able to reuse this transition, we will set it  to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">all</span></span>.</p>
+<p class="MsoNormal">Transition is the property, notice that we only use spaces  to separate the three attributes of the Transition rule; what we want to  target: how long we want it to take: and the specific transaction we want to  use.</p>
+<p class="MsoNormal">You can go <a href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">here</a> to W3schools  learn more about transition </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="393" height="220" class="responsiveImage">
+<h1><a name="_Toc167271628">Creating the @mixin Transition</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">This transition will make our social icons slow down and  smoothly transition to the desired set color, when we hover over each icon.</p>
+<p class="MsoNormal">Look at what is inside of the @mixin code block. The  property of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">transition</span></span>,  is put behind a colon wall. And, what you want to set the property&rsquo;s attributes  to represent, is set behind a semi-colon wall. Then you are just wrapping the  entire thing all up in curly braces. </p>
+<p class="MsoNormal">Ok, so the above was just a type of memory technique, to reinforce  what is going on in the code below.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">@mixin transition-ease {</p>
+<p class="code">&nbsp;</p>
+<p class="code">    transition: all 0.5s  ease-in-out;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/3.png" width="622" height="338" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc167271629">Assigning the @mixin to be used Somewhere</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<h1><a name="_Toc167271630">The main.scss file</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">In order to use our new <span class="boldBlueChar"><span style="font-size:12.0pt; ">@mixin</span></span>, we need to <span class="boldBlueChar"><span style="font-size:12.0pt; ">@include</span></span> it  somewhere. Here we want to target the hover, on our <span class="boldBlueChar"><span style="font-size:12.0pt; ">social icons</span></span>, which are  inside of the <span class="ItalicBlueChar">.main</span> rule. </p>
+
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">  @include transition-ease;</p>
+
+<p>&nbsp;</p>
+<p class="MsoNormal">You will want to write this <span class="boldBlue">@include</span> code inside of your social icons rule, as shown below.</p>
+<p class="code">&nbsp;</p>
+<img src="Images/4.png" width="623" height="393" class="wideImg">
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc167271631">Testing the Hover Color Change</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now when you hover over your icons, you will notice that the  hover-color changes slowly, it eases the transition of the color change.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/5.png" width="249" height="141" class="responsiveImage">
+<p class="boldBlue">&nbsp;</p>
+<p class="tableOfContents"><a href="Code-For-Transitions-And-Mixins.html" target="_blank">You can go here to view the code.</a></p>
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Code for Transitions and Mixins</title>
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~The Code for Transitions and Mixins~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >7/29/2024</p>
+   <p class="tableOfContents"><a href="4-Transitions-And-Mixins.html">Click Here to get back to Main Tutoral Page</a></p>
+   <p><br>
+  <br>
+     
+   </p>
+   <p class="MsoNormal">The Code for the transitions. This will allow a smooth  transition to occur when we hover our mouse over the social media icons.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+<h1>The _config file</h1>
+<p class="code">$primary-color:#320001;</p>
+<p class="code">$secondary-color:#e8854c;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">* {</p>
+<p class="code">    box-sizing: border-box;</p>
+<p class="code">    margin: 0;</p>
+<p class="code">    padding: 0;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><span style="background:yellow; ">@mixin  transition-ease {</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">    transition: all 0.5s ease-in-out;</span></p>
+<p class="code"><span style="background:yellow; ">}</span></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1>The main.scss file</h1>
+<p class="code">&nbsp;</p>
+<p class="code">@import&quot;config&quot;;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">body {</p>
+<p class="code">    background:  $primary-color;</p>
+<p class="code">    color:set-text-color($primary-color);</p>
+<p class="code">    height: 100vh;</p>
+<p class="code">    font-family:'Segoe UI',  Tahoma, Geneva, Verdana, sans-serif;</p>
+<p class="code">    line-height: 1;</p>
+<p class="code">}</p>
+<p class="code">h1, h2, h3 {</p>
+<p class="code">&nbsp;</p>
+<p class="code">    font-weight: 400;</p>
+<p class="code">    padding: 8px;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">a{</p>
+<p class="code">     color:set-text-color($primary-color);</p>
+<p class="code">    text-decoration: none;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">header {</p>
+<p class="code">    position: fixed;</p>
+<p class="code">    z-index: 2;</p>
+<p class="code">    width: 100%;</p>
+<p class="code">    padding: 1rem;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">.nav ul li{</p>
+<p class="code">&nbsp;</p>
+<p class="code">    display: inline-flex;</p>
+<p class="code">   </p>
+<p class="code">   </p>
+<p class="code">    justify-content:  space-between;</p>
+<p class="code">    top: 0px;</p>
+<p class="code">   </p>
+<p class="code">    </p>
+<p class="code">    color: white;</p>
+<p class="code">    padding: 10px 20px;</p>
+<p class="code">&nbsp;</p>
+<p class="code"> }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">main {</p>
+<p class="code">&nbsp;</p>
+<p class="code">    height: 100%;</p>
+<p class="code">    width: 100%;</p>
+<p class="code">    padding-top: 100px;</p>
+<p class="code">    </p>
+<p class="code">&nbsp;</p>
+<p class="code">    .social-icons {</p>
+<p class="code">        position: fixed;</p>
+<p class="code">        bottom: 3rem;</p>
+<p class="code">        left: 1rem;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        a {</p>
+<p class="code">            padding:  0.4rem;</p>
+<p class="code">&nbsp;</p>
+<p class="code">            <span style="background:yellow; ">@include transition-ease;</span></p>
+<p class="code">&nbsp;</p>
+<p class="code">            &amp;:hover {</p>
+<p class="code">&nbsp;</p>
+<p class="code">               color:  $secondary-color;</p>
+<p class="code">            }</p>
+<p class="code">&nbsp;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">footer {</p>
+<p class="code">&nbsp;</p>
+<p class="code">   </p>
+<p class="code">    font-size: 1rem;</p>
+<p class="code">    position: fixed;</p>
+<p class="code">    bottom: 0.2rem;</p>
+<p class="code">    left: 1rem;</p>
+<p class="code">    text-align: left;</p>
+<p class="code">    padding: 1rem;</p>
+<p class="code">     color:set-text-color($primary-color);</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p>&nbsp;</p>
+
+ <p class="tableOfContents"><a href="4-Transitions-And-Mixins.html">Click Here to get back to Main Tutoral Page</a></p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
