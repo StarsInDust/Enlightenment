@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 The Hamburger Menu</title>
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.MsoIntenseReference {
+font-variant:small-caps;
+color:#4472C4;
+letter-spacing:.25pt;
+font-weight:bold;
+}
+span.boldBlueChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~6 The Hamburger Menu~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >8/12/2024</p>
+   
+   <br>
+<br>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+<p class="tableOfContents"> <a href="#_Toc165481807">Turn on Sass </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481808">Creating the   Partial Menu File </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481809">The code for   the _menu.scss file </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481810">@include the   partial file </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481811">The Menu-btn   for the Hamburger Menu </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481812">To Add the   Before pseudo code </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481813">To Test the   menu code </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481814">To Add the   After pseudo code </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481815">Changing the   bottom bar to not be the same width </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481816">Animate the   hamburger </a></p>
+<p class="MsoNormal">&nbsp; </p>
+<img src="Images/1.png" width="270" height="239" class="responsiveImage">
+<h1><a name="_Toc165481807">Turn on  Sass</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">In Visual Studio</span><strong><span style="font-variant:small-caps; letter-spacing:.25pt; color:#4472C4; "> </span></strong></p>
+<p class="MsoNormal">Remember to turn on your Watch Sass</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="116" height="44" class="responsiveImage">
+<h1><a name="_Toc165481808">Creating the Partial Menu File</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Here we are going to start working on our menu. To begin  this, we will create a new partial file to deal with just the menus in this  site, like we did with our home page.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Create a new file</p>
+<p><img src="Images/3.png" width="271" height="128" class="responsiveImage"></p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<p class="MsoNormal">Name it<span class="boldBlue"> _menu.scss</span></p>
+<img src="Images/4.png" width="267" height="160" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165481809">The code for the _menu.scss file</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="code">.menu-btn {</p>
+<p class="code">    position:absolute;</p>
+<p class="code">    z-index: 1;</p>
+<p class="code">    right: 1rem;</p>
+<p class="code">    top:1rem;</p>
+<p class="code">    height: 20px;</p>
+<p class="code">    width: 28px;</p>
+<p class="code">    cursor: pointer;</p>
+<p class="code">    @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;__burger {</p>
+<p class="code">    position:absolute;</p>
+<p class="code">    right: 0;</p>
+<p class="code">    top: 0.5;</p>
+<p class="code">    height: 3px;</p>
+<p class="code">    width: 28px;</p>
+<p class="code">    background:  set-text-color($primary-color);</p>
+<p class="code">    @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Notice how  the <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">burger</span></span> menu was nested inside of the  menu-btn class using the <span class="boldBlueChar"><span style="font-size:12.0pt; ">&amp;__</span></span></p>
+<p class="MsoNormal">In CSS we used to use just dot notation for a child element to reach the parent; but in SASS, we use the ampersand with a double underscore.</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Images/5.png" width="580" height="444" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165481810">@include the partial file</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Remember to <span class="boldBlue">Import</span> this partial at the top of the <span class="blueEmphasis">main.scss</span> file</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/6.png" width="596" height="144" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Hlk165467994"></a><a name="_Toc165481811">The Menu-btn for the Hamburger Menu</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal"><a name="_Hlk165466298"><span class="MsoIntenseReference">Go  to the index.html file.</span></a></p>
+<p class="MsoNormal">If you look at the html code, you will see that the menu  button is basically a wrapper. We will be using this as a click event. Within  the menu-btn, we will have our bars for the hamburger. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/7.png" width="472" height="82" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Go to the _menu partial  file.</span><strong><span style="color:#4472C4; "> </span></strong></p>
+<p class="MsoNormal">When we wrote the code in the menu partial for the nested  hamburger, all that we had configured, so far was the middle bar. You will  notice in the menu partial, that we set this middle bar to a width of 28px. Now  we are going to use pseudo elements to create the other bars of the hamburger.</p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-size:16.0pt; color:red; ">*</span></strong> <strong><span style="color:red; ">Careful</span></strong>, on this  one, if you do not put in both a width and a height for our hamburger line, it  will not show up</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165481812">To Add the Before pseudo code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal"><strong><span style="color:red; ">*Watch it</span></strong>, do not  include any space when you write the <span class="boldBlue">&amp;::</span>before or it will not work.</p>
+<p class="MsoNormal">The reason that we need that empty content tag to begin with (below), is that it creates a type of invisible element, which we can style with SASS. It must be here, or your styles will not have anything to work with. You will figure this out real fast if you forget and leave that first line out.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">&amp;::before {</p>
+<p class="code">&nbsp;</p>
+<p class="code">        content: '';</p>
+<p class="code">        position: absolute;</p>
+<p class="code">        top: -8px;</p>
+<p class="code">        width: 28px;</p>
+<p class="code">        height: 3px;</p>
+<p class="code">        background:  set-text-color($primary-color);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/8.png" width="622" height="553" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165481813">To Test the menu code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Go to the index.html file.</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/9.png" width="244" height="165" class="responsiveImage">
+<h1><a name="_Toc165481814">To Add the After pseudo code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">We need this line to go under the middle line, so we need to increase that <span class="boldBlue">top</span> property. This will move this element down underneath that middle line. To do this, we just remove the <span class="boldBlue">– </span>sign in front of the 8px.</p>
+<p class="MsoNormal"><a name="_Hlk165468566"><strong><span style="color:red; ">*Watch it</span></strong>,  do not include any space when you write the <span class="boldBlue">&amp;::</span>after or it will not work.</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&amp;::after { </p>
+<p class="code">&nbsp;</p>
+<p class="code">        content: '';</p>
+<p class="code">        position: absolute;</p>
+<p class="code">        <span style="background:yellow; ">top: 8px;</span></p>
+<p class="code">        width: 28px;</p>
+<p class="code">        height: 3px;</p>
+<p class="code">        background:  set-text-color($primary-color);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    }</p>
+<img src="Images/10.png" width="561" height="500" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal" >Now your hamburger menu should look like this, with a line above and below that middle line.</p>
+<p class="code">&nbsp;</p>
+<img src="Images/11.png" width="202" height="151" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165481815">Changing the bottom bar to not be the same width</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">This is easy just change the width in the &amp;::after to  be:</p>
+<p class="BlueBolden">width: 20px;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">.menu-btn {</p>
+<p class="code">    position:absolute;</p>
+<p class="code">    z-index: 1;</p>
+<p class="code">    right: 1rem;</p>
+<p class="code">    top:1rem;</p>
+<p class="code">    height: 20px;</p>
+<p class="code">    width: 28px;</p>
+<p class="code">    cursor: pointer;</p>
+<p class="code">    @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;__burger {</p>
+<p class="code">    position:absolute;</p>
+<p class="code">    right: 0;</p>
+<p class="code">    top: 0.5;</p>
+<p class="code">    height: 3px;</p>
+<p class="code">    width: 28px;</p>
+<p class="code">    background:  set-text-color($primary-color);</p>
+<p class="code">    @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;::before {</p>
+<p class="code">&nbsp;</p>
+<p class="code">        content: '';</p>
+<p class="code">        position: absolute;</p>
+<p class="code">        top: -8px;</p>
+<p class="code">        width: 28px;</p>
+<p class="code">        height: 3px;</p>
+<p class="code">        background:  set-text-color($primary-color);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;::after { </p>
+<p class="code">&nbsp;</p>
+<p class="code">        content: '';</p>
+<p class="code">        position: absolute;</p>
+<p class="code">        top: 8px;</p>
+<p class="code">        <span style="background:yellow; ">width: 20px;</span></p>
+<p class="code">        height: 3px;</p>
+<p class="code">        background:  set-text-color($primary-color);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/12.png" width="622" height="618" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal" >Now that bottom line should look like this.</p>
+<p class="MsoNormal" ><img src="Images/13.png" width="237" height="167" class="responsiveImage"></p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal" >And this is what the hamburger menu should look like on the web page, sitting in the upper right-hand corner.</p>
+<img src="Images/14.png" width="622" height="410" class="wideImg">
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165481816">Animate the hamburger</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">We will be using Java script to make the hamburger menu interactive</p>
+<p class="code">&amp;::after { </p>
+<p class="code">&nbsp;</p>
+<p class="code">        content: '';</p>
+<p class="code">        position: absolute;</p>
+<p class="code">        top: 8px;</p>
+<p class="code">        width: 20px;</p>
+<p class="code">        height: 3px;</p>
+<p class="code">        background:  set-text-color($primary-color);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        </p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;.open{</p>
+<p class="code">        transform:  rotate(720deg);</p>
+<p class="code">        background:  transparent;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Watch it,</span></span> right now,  this code will not do anything. In our next tutorial, we will be looking at  doing the JavaScript for it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/15.png" width="507" height="451" class="responsiveImage">
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
