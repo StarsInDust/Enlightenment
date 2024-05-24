@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Code for the JavaScript File</title>
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~The Code for the JavaScript File~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >8/19/2024</p>
+   
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+  <p class="tableOfContents"><a href="7-The-JavaScript-File.html" target="_blank">Go Here to get Back to Main Tutorial</a></p>
+   <p><br>
+     <br>
+     
+   </p>
+   <h1><a name="_Toc165544282">main.js file</a></h1>
+<p class="code">const menuBtn = document.querySelector('.menu-btn');</p>
+<p class="code">const hamburger = document.querySelector('.menu-btn__burger');</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">let showMenu = false;</p>
+<p class="code">&nbsp;</p>
+<p class="code">menuBtn.addEventListener('click', toggleMenu);</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">function toggleMenu() {</p>
+<p class="code">    if(!showMenu) {</p>
+<p class="code">         hamburger.classList.add('open');</p>
+<p class="code">&nbsp;</p>
+<p class="code">        showMenu = true;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    } else {</p>
+<p class="code">         hamburger.classList.remove('open');</p>
+<p class="code">&nbsp;</p>
+<p class="code">        showMenu = false;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165544281">main.scss file</a></h1>
+<p class="code">.menu-btn {</p>
+<p class="code">    position:absolute;</p>
+<p class="code">    z-index: 1;</p>
+<p class="code">    right: 1rem;</p>
+<p class="code">    top:1rem;</p>
+<p class="code">    height: 20px;</p>
+<p class="code">    width: 28px;</p>
+<p class="code">    cursor: pointer;</p>
+<p class="code">    @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;__burger {</p>
+<p class="code">    position:absolute;</p>
+<p class="code">    right: 0;</p>
+<p class="code">    top: 0.5;</p>
+<p class="code">    height: 3px;</p>
+<p class="code">    width: 28px;</p>
+<p class="code">    background:  set-text-color($primary-color);</p>
+<p class="code">    @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;::before {</p>
+<p class="code">&nbsp;</p>
+<p class="code">        content: '';</p>
+<p class="code">        position: absolute;</p>
+<p class="code">        top: -8px;</p>
+<p class="code">        width: 28px;</p>
+<p class="code">        height: 3px;</p>
+<p class="code">        background:  set-text-color($primary-color);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;::after { </p>
+<p class="code">&nbsp;</p>
+<p class="code">        content: '';</p>
+<p class="code">        position: absolute;</p>
+<p class="code">        top: 8px;</p>
+<p class="code">        width: 20px;</p>
+<p class="code">        height: 3px;</p>
+<p class="code">        background:  set-text-color($primary-color);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        </p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;.open{</p>
+<p class="code">        transform:  rotate(720deg);</p>
+<p class="code">        background:  transparent;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        &amp;::before {</p>
+<p class="code">&nbsp;</p>
+<p class="code">            transform:  rotate(45deg) translate(5px, 8px);</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code">        &amp;::after{</p>
+<p class="code">            width: 28px;</p>
+<p class="code">            transform:  rotate(-45deg) translate(3px, -7px);</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="tableOfContents"><a href="7-The-JavaScript-File.html" target="_blank">Go Here to get Back to Main Tutorial</a></p>
+<p>&nbsp;</p>
+    
+    <p class="LeftPMidBlack">&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
