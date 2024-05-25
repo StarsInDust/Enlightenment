@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 The Navigation Sass Code</title>
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.MsoIntenseReference {
+font-variant:small-caps;
+color:#4472C4;
+letter-spacing:.25pt;
+font-weight:bold;
+}
+span.boldBlueChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+span.BigDarkBoldChar {
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~8 The Navigation Sass Code ~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >8/26/2024</p>
+   
+   <br>
+<br>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+<p class="tableOfContents"><a href="#_Toc166752370">Turn on Sass</a></p>
+<p class="tableOfContents"><a href="#_Toc166752371">The .nav Class</a></p>
+<p class="tableOfContents"><a href="#_Toc166752372">The Java Script for the   Nav Menu</a></p>
+<p class="tableOfContents"><a href="#_Toc166752373">Testing the Page</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Images/1.png" width="268" height="241" class="responsiveImage"></p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<h1><a name="_Toc166752370">Turn on Sass</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">In Visual Studio</span><strong><span style="font-variant:small-caps; letter-spacing:.25pt; color:#4472C4; "> </span></strong></p>
+<p class="MsoNormal">Remember to turn on your Watch Sass</p>
+
+<img src="Images/2.png" width="120" height="37" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">Inside the main.scss</span></p>
+<p class="MsoNormal">We will be making changes to our navigation, so the original  code that we wrote in the <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">main.scss</span></span> will no longer be needed. You can just comment it out for now.</p>
+<p class="MsoNormal">Right now the menu, is looking very good with the styles intact.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<img src="Images/3.png" width="560" height="99" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now when you comment this code out…</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<img src="Images/4.png" width="489" height="280" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Your menu will now appear ugly and like this, on your  webpage, when the code is commented out. Don't worry, we will be redoing these styles, for the navigation, in the next sections of this tutorial.</p>
+
+<img src="Images/5.png" width="312" height="124" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Inside of the _menu.scss  file</span></p>
+<h1><a name="_Toc166752371">The .nav Class</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">You want to create a new nav Class. Inside of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">_menu.scss</span></span> file, go  to the very last closing curly brace on the page, you will be creating this new  class underneath that closing brace.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<img src="Images/6.png" width="407" height="244" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">In this next code, you will see we will be making the <span class="boldBlueChar"><span style="font-size:12.0pt; ">vw</span></span> to be <span class="boldBlueChar"><span style="font-size:12.0pt; ">100vw</span></span>, which makes it  100% of the viewport width. The <span class="boldBlueChar"><span style="font-size:12.0pt; ">opacity</span></span> set to <span class="boldBlueChar"><span style="font-size:12.0pt; ">0.98</span></span> will only allow  us to see just a hint of our background image, on the screen. We set the translateY to be a -100  %. This means that our menu has been moved upward and off the screen.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">.nav {</p>
+<p class="code">    position: fixed;</p>
+<p class="code">    top: 0;</p>
+<p class="code">    left: 0;</p>
+<p class="code">    width: <span style="background:yellow; ">100vw</span>;</p>
+<p class="code">    opacity: <span style="background:yellow; ">0.98</span>;</p>
+<p class="code">    visibility: hidden;</p>
+<p class="code">  </p>
+<p class="code">    &amp;.open {</p>
+<p class="code">      visibility: visible;</p>
+<p class="code">    }</p>
+<p class="code">  </p>
+<p class="code">    .menu-nav {</p>
+<p class="code">      display: flex;</p>
+<p class="code">      flex-flow: column  wrap;</p>
+<p class="code">      align-items: center;</p>
+<p class="code">      justify-content:  center;</p>
+<p class="code">      height: 100vh;</p>
+<p class="code">      overflow: hidden;</p>
+<p class="code">      background:  $primary-color;</p>
+<p class="code">      list-style-type:  none;</p>
+<p class="code">      padding-right: 1rem;</p>
+<p class="code">      transform:  translateY(-100%);</p>
+<p class="code">      @include  transition-ease;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Images/7.png" width="452" height="503" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Remember</span></span> when you  test it, you must be on the <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">index.html</span></span> page, or you will only get  gobbety-gook on the screen.</p>
+<p class="MsoNormal">Yes, you will not see the menu, because it is starting out  at a position, which is moved upward and off the screen.</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/8.png" width="613" height="405" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Now to write the code to  move the menu down ward.</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="code">&amp;.open {</p>
+<p class="code">        transform:  translateY(0);</p>
+<p class="code">      }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Warning</span></span>, now do not  expect this code to do anything yet. We need to write the Java Script first in  the Java Script file.</p>
+<img src="Images/9.png" width="512" height="567" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc166752372">The Java Script for the Nav Menu</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Go to your <span class="boldBlueChar"><span style="font-size:12.0pt; ">main.js</span></span> file, which is inside of your <span class="boldBlueChar"><span style="font-size:12.0pt; ">dist</span></span> folder.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Write another Two constants  at top</span></p>
+<p class="code">const nav = document.querySelector('.nav');</p>
+<p class="code">const menuNav = document.querySelector('.menu-nav');</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/10.png" width="623" height="139" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Changes to the function  toggleMenu</span></p>
+<p class="MsoNormal">When we start to write our code, we want to put that code  here:</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Images/11.png" width="547" height="241" class="wideImg">
+<p class="BlueBolden"><span class="MsoIntenseReference"><span style="font-weight:normal; ">&nbsp;</span></span></p>
+<p class="code">&nbsp;</p>
+<p class="code">       nav.classList.add('open');</p>
+<p class="code">       menuNav.classList.add('open');</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">      </p>
+<img src="Images/12.png" width="561" height="279" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now copy those two lines of code, because we need to do the  same thing after the else clause when we remove the <span class="boldBlue">open</span> class from the menu.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/13.png" width="489" height="143" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You will need to change the word <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">add</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">remove</span></span> in both lines.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code" style="text-indent:.5in;">      nav.classList.<span style="background:yellow; ">remove</span>('open');</p>
+<p class="code" style="text-indent:.5in;">       menuNav.classList.<span style="background:yellow; ">remove</span>('open');</p>
+<p class="code" style="text-indent:.5in;">&nbsp;</p>
+<p class="code" style="text-indent:.5in;">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/14.png" width="416" height="155" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">const menuBtn = document.querySelector('.menu-btn');</p>
+<p class="code">const hamburger = document.querySelector('.menu-btn__burger');</p>
+<p class="code">const nav = document.querySelector('.nav');</p>
+<p class="code">const menuNav = document.querySelector('.menu-nav');</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">let showMenu = false;</p>
+<p class="code">&nbsp;</p>
+<p class="code">menuBtn.addEventListener('click', toggleMenu);</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">function toggleMenu() {</p>
+<p class="code">    if(!showMenu) {</p>
+<p class="code">       hamburger.classList.add('open');</p>
+<p class="code">       nav.classList.add('open');</p>
+<p class="code">       menuNav.classList.add('open');</p>
+<p class="code">      </p>
+<p class="code">  </p>
+<p class="code">      showMenu = true;</p>
+<p class="code">    } else {</p>
+<p class="code">       hamburger.classList.remove('open');</p>
+<p class="code">       nav.classList.remove('open');</p>
+<p class="code">       menuNav.classList.remove('open');</p>
+<p class="code">      </p>
+<p class="code">  </p>
+<p class="code">      showMenu = false;</p>
+<p class="code">    }</p>
+<p class="code">  }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p><img src="Images/15.png" width="622" height="520" class="wideImg"></p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc166752373">Testing the Page</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Make sure you go back to the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span> page to test  the code out.</p>
+<p class="MsoNormal">This is what the page looks like when you first arrive.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<img src="Images/16.png" width="627" height="363" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Click on the Hamburger button, in the far upper right-hand  corner of the webpage.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<img src="Images/17.png" width="87" height="109" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now your menu part comes down and covers the page and the  page looks like this, with just a hint of the main home page showing below</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<img src="Images/18.png" width="621" height="361" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Click on that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> again, in the far upper  right-hand corner, and it shows the home page again</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/19.png" width="625" height="366" class="wideImg">
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
