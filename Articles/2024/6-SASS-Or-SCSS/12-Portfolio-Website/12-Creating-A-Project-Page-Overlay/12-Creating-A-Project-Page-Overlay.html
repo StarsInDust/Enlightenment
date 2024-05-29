@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Creating a Project Page Overlay</title>
+
+
+
+<meta name="title" content="12 Creating a Project Page Overlay">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content="Transparent Page Overlay, SASS, Visual Studio, CSS, Web Design"/>
+
+
+<meta name="description" content="This article explains how to create a slightly transparent overlay for a section of your page’s content"/>
+
+<meta name="category" content="Creating a Project Page Overlay, SASS, CSS, Visual Studio Code, Web Design">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Wednesday, May 29, 2024" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/12-Creating-A-Project-Page-Overlay.html">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
+}
+span.MsoIntenseReference {
+font-variant:small-caps;
+color:#4472C4;
+letter-spacing:.25pt;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~12 Creating a Project Page Overlay~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >9/23/2024</p>
+   
+   <br>
+<br>
+
+<p class="MsoNormal">&nbsp;</p>
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863914">Turn   on Sass</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863915">Creating   the pseudo element in the &amp;__item rule</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863916">Create   the hover event to show the item</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863917">Styling   the buttons</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863918">Targeting   Individual buttons</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863919">Testing   the Project</a></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<img src="Images/1.png" width="269" height="239" class="responsiveImage">
+<h1><a name="_Toc167863884"></a><a name="_Toc167863914">Turn on Sass</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">In Visual Studio</span><strong><span style="font-variant:small-caps; letter-spacing:.25pt; color:#4472C4; "> </span></strong></p>
+<p class="MsoNormal">Remember to turn on your Watch Sass</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Images/2.png" width="120" height="39" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc167863885"></a><a name="_Toc167863915">Creating the pseudo element in the &amp;__item rule</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">This code below will be creating the overlay that will come  up over the image.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Inside of the projects.scss</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/3.png" width="178" height="69" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">This code will be written inside of the &amp;__item, and  right below the closing brace for the img tag code.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">&amp;::after {</p>
+<p class="code">&nbsp;</p>
+<p class="code">          content:'';</p>
+<p class="code">           position:absolute;</p>
+<p class="code">          top: 100%;</p>
+<p class="code">          left:0;</p>
+<p class="code">          height: 100%;</p>
+<p class="code">          width: 100%;</p>
+<p class="code">           background:$secondary-color;</p>
+<p class="code">          opacity: 0;</p>
+<p class="code">          @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/4.png" width="515" height="424" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">If you try and see the overlay right now on the page, it  will not be showing, because the item is hidden to begin with.</p>
+<h1><a name="_Toc167863886"></a><a name="_Toc167863916">Create the hover event to show the item</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This will move the orange overlay upward.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">&amp;:hover {</p>
+<p class="code">          &amp;::after {</p>
+<p class="code">            top: 0;</p>
+<p class="code">            opacity: 0.9;</p>
+<p class="code">          }</p>
+<p class="code">&nbsp;</p>
+<img src="Images/5.png" width="526" height="532" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Now if you hover over it now, it will look like this</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/6.png" width="624" height="484" class="wideImg">
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc167863887"></a><a name="_Toc167863917">Styling the buttons</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">We are now going to styling the buttons on the page which  are here</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/7.png" width="209" height="108" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We will be writing this code right above the code for the  .social-icons</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">&amp;__btns {</p>
+<p class="code">    position: absolute;</p>
+<p class="code">    top:0;</p>
+<p class="code">    height: 100%;</p>
+<p class="code">    width:100%;</p>
+<p class="code">    z-index: 1;</p>
+<p class="code">    display: grid;</p>
+<p class="code">    grid-template-columns:  repeat(2,1fr);</p>
+<p class="code">    align-items: center;</p>
+<p class="code">    text-align: center;</p>
+<p class="code">  }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/8.png" width="490" height="264" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now if you test your projects page, it should look like this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/9.png" width="623" height="588" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc167863888"></a><a name="_Toc167863918">Targeting Individual buttons</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="code">&amp;__btn {</p>
+<p class="code">  </p>
+<p class="code">    color: #fff;</p>
+<p class="code">    @include  transition-ease;</p>
+<p class="code">  </p>
+<p class="code">      &amp;:hover {</p>
+<p class="code">      color:#000;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/10.png" width="424" height="180" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc167863889"></a><a name="_Toc167863919">Testing the Project</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">This is what this will look like if you hover over both the  image and one of the buttons. The button color is white, and it will change to  black, when it is hovered over.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/11.png" width="460" height="472" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
