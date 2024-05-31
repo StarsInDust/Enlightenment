@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Code for Reponsive Sites</title>
+    
+    <link rel="shortcut icon" href="../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+span.boldBlueChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~The Code for Reponsive Sites~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >10/7/2024</p>
+   
+   <br>
+<br>
+
+<p class="tableOfContents"><a href="14-Responsive-Sites.html" target="_blank">To get back to the Main Tutorial</a></p>
+
+<h1>&nbsp;</h1>
+<h1>config file.scss</h1>
+<p class="code">$primary-color:#320001;</p>
+<p class="code">$secondary-color:#e8854c;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">* {</p>
+<p class="code">    box-sizing: border-box;</p>
+<p class="code">    margin: 0;</p>
+<p class="code">    padding: 0;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">@mixin transition-ease {</p>
+<p class="code">&nbsp;</p>
+<p class="code">    transition: all 0.5s  ease-in-out;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">@function set-text-color($color){</p>
+<p class="code">&nbsp;</p>
+<p class="code">    @if (lightness($color)  &gt; 40%) {</p>
+<p class="code">&nbsp;</p>
+<p class="code">        @return #000;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    } @else {</p>
+<p class="code">        </p>
+<p class="code">        @return #fff;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">@mixin media-sm{</p>
+<p class="code">    @media screen and  (min-width: 400px) {</p>
+<p class="code">        @content;</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">@mixin media-md{</p>
+<p class="code">    @media screen and  (min-width: 768px) {</p>
+<p class="code">        @content;</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">@mixin media-lg{</p>
+<p class="code">    @media screen and  (min-width: 1024px) {</p>
+<p class="code">        @content;</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">@mixin media-xl{</p>
+<p class="code">    @media screen and  (min-width: 1600px) {</p>
+<p class="code">        @content;</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<h1>_responsive.scss</h1>
+<p class="MsoNormal">@include media-sm {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">  .projects {</p>
+<p class="MsoNormal">    &amp;__bio-image {</p>
+<p class="MsoNormal">      width: 130vw;</p>
+<p class="MsoNormal">      </p>
+<p class="MsoNormal">    }</p>
+<p class="MsoNormal">  }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">@include media-md {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    .menu-btn {</p>
+<p class="MsoNormal">        </p>
+<p class="MsoNormal">        visibility:  hidden;</p>
+<p class="MsoNormal">    }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    .nav {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">        visibility:  visible;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">        .menu-nav {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">            display:  block;</p>
+<p class="MsoNormal">            transform:  translateY(0);</p>
+<p class="MsoNormal">            height:  100%;</p>
+<p class="MsoNormal">             background:transparent;</p>
+<p class="MsoNormal">             text-align: right;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">             &amp;__item {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">                 display: inline;</p>
+<p class="MsoNormal">                 padding-right: 1.5rem;</p>
+<p class="MsoNormal">            }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">             &amp;__link {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">                 font-size: 1.5 rem;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">            }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">        }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    .about__bio {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">        font-size:  1.5rem;</p>
+<p class="MsoNormal">    }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    .projects {</p>
+<p class="MsoNormal">         &amp;__bio-image {</p>
+<p class="MsoNormal">          height:  55vh;</p>
+<p class="MsoNormal">        }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">        &amp;__items {</p>
+<p class="MsoNormal">           grid-template-columns: repeat(2, 1fr);</p>
+<p class="MsoNormal">        }</p>
+<p class="MsoNormal">         .text-secondary {</p>
+<p class="MsoNormal">          font-size:  3rem;</p>
+<p class="MsoNormal">        }</p>
+<p class="MsoNormal">      }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    .contact__list {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">       grid-template-columns: repeat(2, 1fr);</p>
+<p class="MsoNormal">    }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">@include media-lg {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">  .projects {</p>
+<p class="MsoNormal">    </p>
+<p class="MsoNormal">    &amp;__items {</p>
+<p class="MsoNormal">       grid-template-columns: repeat(3, 1fr);</p>
+<p class="MsoNormal">    }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">  }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">  .contact__list {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">     grid-template-columns: repeat(3, 1fr);</p>
+<p class="MsoNormal">  }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">@include media-xl{</p>
+<p class="MsoNormal">  .projects__bio-image  {</p>
+<p class="MsoNormal">  </p>
+<p class="MsoNormal">    height: 70vh;</p>
+<p class="MsoNormal">  }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">  .about__bio-image {</p>
+<p class="MsoNormal">  </p>
+<p class="MsoNormal">    height: 70vh;</p>
+<p class="MsoNormal">  }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>main.scss</h1>
+<p class="MsoNormal">The only reason I am adding this code is because we added  the <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">@import  responsive</span></span> partial file at the top of the page to get it to work.</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">@import&quot;config&quot;;</p>
+<p class="MsoNormal">@import&quot;home&quot;;</p>
+<p class="MsoNormal">@import&quot;menu&quot;;</p>
+<p class="MsoNormal">@import&quot;about&quot;;</p>
+<p class="MsoNormal">@import&quot;projects&quot;;</p>
+<p class="MsoNormal">@import&quot;contact&quot;;</p>
+<p class="MsoNormal">@import&quot;responsive&quot;;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">body {</p>
+<p class="MsoNormal">    background:  $primary-color;</p>
+<p class="MsoNormal">     color:set-text-color($primary-color);</p>
+<p class="MsoNormal">    height: 100vh;</p>
+<p class="MsoNormal">    font-family:'Segoe  UI', Tahoma, Geneva, Verdana, sans-serif;</p>
+<p class="MsoNormal">    line-height: 1;</p>
+<p class="MsoNormal">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">h1, h2, h3 {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    font-weight: 400;</p>
+<p class="MsoNormal">    padding: 8px;</p>
+<p class="MsoNormal">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">a{</p>
+<p class="MsoNormal">     color:set-text-color($primary-color);</p>
+<p class="MsoNormal">    text-decoration:  none;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">.text-secondary {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    color:  $secondary-color;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">header {</p>
+<p class="MsoNormal">    position: fixed;</p>
+<p class="MsoNormal">    z-index: 2;</p>
+<p class="MsoNormal">    width: 100%;</p>
+<p class="MsoNormal">    padding: 1rem;</p>
+<p class="MsoNormal">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"> /*.nav ul li{</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    display:  inline-flex;</p>
+<p class="MsoNormal">   </p>
+<p class="MsoNormal">   </p>
+<p class="MsoNormal">    justify-content:  space-between;</p>
+<p class="MsoNormal">    top: 0px;</p>
+<p class="MsoNormal">   </p>
+<p class="MsoNormal">    </p>
+<p class="MsoNormal">    color: white;</p>
+<p class="MsoNormal">    padding: 10px  20px;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"> }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"> */</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">main {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    height: 100%;</p>
+<p class="MsoNormal">    width: 100%;</p>
+<p class="MsoNormal">    padding-top:  100px;</p>
+<p class="MsoNormal">    </p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    .social-icons {</p>
+<p class="MsoNormal">        position:  fixed;</p>
+<p class="MsoNormal">        bottom: 3rem;</p>
+<p class="MsoNormal">        left: 1rem;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">        a {</p>
+<p class="MsoNormal">            padding:  0.4rem;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">            @include  transition-ease;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">             &amp;:hover {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">               color:  $secondary-color;</p>
+<p class="MsoNormal">            }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">        }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    }</p>
+<p class="MsoNormal">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">footer {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">   </p>
+<p class="MsoNormal">    font-size: 1rem;</p>
+<p class="MsoNormal">    position: fixed;</p>
+<p class="MsoNormal">    bottom: 0.2rem;</p>
+<p class="MsoNormal">    left: 1rem;</p>
+<p class="MsoNormal">    text-align: left;</p>
+<p class="MsoNormal">    padding: 1rem;</p>
+<p class="MsoNormal">     color:set-text-color($primary-color);</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="tableOfContents"><a href="14-Responsive-Sites.html" target="_blank">To get back to the Main Tutorial</a></p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
