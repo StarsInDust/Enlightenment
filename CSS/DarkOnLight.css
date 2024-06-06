@@ -191,7 +191,7 @@ font-family: Helvetica, Arial, sans-serif;
 
 
 span.bolded{
-	font-color: black;
+	color: black;
 	font-weight: 900;
 	font-size: 17px;
 	color: #000;
