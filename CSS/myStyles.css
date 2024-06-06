@@ -399,6 +399,8 @@ body {
     width: 100%;
 	height:auto;
   }
+  
+}
 @media all and (min-width: 600px) {
   .aside { -webkit-box-flex: 1; -ms-flex: 1 0 0px; flex: 1 0 0; }
  .header{ background-image: url(../Images/banner_625_small.png);
@@ -418,7 +420,7 @@ body {
 	
 }
  
-
+}
 @media all and (min-width: 800px) {
   .aside { -webkit-box-flex: 1; -ms-flex: 1 0 0px; flex: 1 0 0; }
  .header{ background-image: url(../Images/banner_825.png);
@@ -426,6 +428,7 @@ body {
 	background-position: center bottom;
 	height: 300px;
   
+}
 }
 
 @media all and (min-width: 1200px) {
@@ -441,7 +444,7 @@ body {
 	background-position: center bottom;
 	height: 430px;
 }
-
+}
 
 
 .main {

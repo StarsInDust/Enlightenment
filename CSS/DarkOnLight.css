@@ -327,6 +327,8 @@ font-weight:bold;
     width: 100%;
 	height:auto;
   }
+  
+}
 @media all and (min-width: 600px) {
   .aside { -webkit-box-flex: 1; -ms-flex: 1 0 0px; flex: 1 0 0; }
  .header{ background-image: url(../Images/banner_625_small.png);
@@ -345,7 +347,7 @@ font-weight:bold;
 	height: auto;
 	
 }
- 
+}
 
 @media all and (min-width: 800px) {
   .aside { -webkit-box-flex: 1; -ms-flex: 1 0 0px; flex: 1 0 0; }
