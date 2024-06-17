@@ -7,29 +7,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8 Switching Between Themes</title>
-    
-    <meta name="title" content="8 Switching Between Themes ">
+    <title>9 Using a Mixin for Media Queries</title>
+
+<meta name="title" content=" 9 Using a Mixin for Media Queries ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="Themes, SASS, Visual Studio, CSS, Web Design"/>
+<meta name="keywords" content="Mixins, SASS, Visual Studio, CSS, Web Design"/>
 
 
-<meta name="description" content="This article explains how switch between two themes in SCSS"/>
+<meta name="description" content="This article explains how to use @mixin with media queries."/>
 
-<meta name="category" content="Switching between themes, SASS, CSS, Visual Studio Code, Web Design">
+<meta name="category" content="Mixins, SASS, CSS, Visual Studio Code, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Monday, April 15, 2024" />
+<meta name="revised" content="Wednesday, April 17, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/8-Switching-Between-Themes.html">
-
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/9-Using-Mixins-For-Media-Queries.html">
 
 
 
@@ -73,18 +72,23 @@ line-height:115%;
 font-size:11.0pt;
 font-family:"Calibri",sans-serif;
 }
-span.MsoIntenseReference {
-font-variant:small-caps;
-color:#4472C4;
-letter-spacing:.25pt;
-font-weight:bold;
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
 }
 span.BigDarkBoldChar {
 font-weight:bold;
 }
-span.BoldRedChar {
+span.BlueBoldenChar {
 font-family:"Times New Roman",serif;
-color:red;
+color:blue;
+font-weight:bold;
+}
+span.MsoIntenseReference {
+font-variant:small-caps;
+color:#4472C4;
+letter-spacing:.25pt;
 font-weight:bold;
 }
 -->
@@ -112,130 +116,126 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~8 Switching Between Themes~</p>
+  <p class="h2Black" >~9 Using a Mixin for Media Queries~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >6/10/2024</p>
+   <p class="articleDate" style="text-align:right" >6/17/2024</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"><a href="#_Toc163906012">Creating a theme @mixin</a></p>
-<p class="tableOfContents"><a href="#_Toc163906013">Using a Boolean value for   the theme mixin</a></p>
-<p class="tableOfContents"><a href="#_Toc163906014">Why does this work?</a></p>
+<p class="tableOfContents"><a href="#_Toc164144402">Turn on SASS</a></p>
+<p class="tableOfContents"><a href="#_Toc164144403">Writing Your main.SCSS   file</a></p>
+<p class="tableOfContents"><a href="#_Toc164144404">Adding the New Variable   to _variable file</a></p>
+<p class="tableOfContents"><a href="#_Toc164144405">Having your @mixin mobile   to use your new variable</a></p>
+<p class="tableOfContents"><a href="#_Toc164144406">Adding the @include to   the .main rule</a></p>
+<p class="tableOfContents"><a href="#_Toc164144407">Testing the Code</a></p>
+<p class="tableOfContents">&nbsp;</p>
+<p><img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/1.png" width="271" height="241" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc164144402">Turn on SASS</a></h1>
+<p class="MsoNormal">Turn on your <a href="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/2-Creating-The-Projects.html" target="_blank">SASS  Watcher</a><span class="MsoHyperlink"> </span></p>
+<p class="MsoNormal"><span class="MsoHyperlink"><span style="text-decoration:none; ">&nbsp;</span></span></p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/Images/1.png" width="270" height="241" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Turn on <a href="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/2-Creating-The-Projects.html" target="_blank">Watch  Sass</a></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/Images/2.png" width="245" height="210" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Creating this theme will  actually be </span><span class="MsoIntenseReference"><span style="line-height:115%; font-size:16.0pt; color:black; ">3</span> parts</span></p>
-<ul>
-  <li>Creating a Mixin definition called theme</li>
-  <li>Creating a .light class to call the mixin  farther down in code</li>
-  <li>Adding your class to the body tag in the html</li>
-  </ul>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h1><a name="_Toc163906012">Creating a theme @mixin</a></h1>
+<h1><a name="_Toc164144403">Writing Your main.SCSS file</a></h1>
+<p class="MsoNormal">In your <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">main.SCSS</span></span> file</p>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">We are going to be using a @mixin to accomplish this.</p>
-<p class="MsoNormal">Add another @mixin right above your body rule, and below  your other @mixin.</p>
+
+
 <p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Create a new <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">@mixin</span></span> after the @mixin for  the theme.</p>
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc163906013">Using a Boolean value for the theme mixin</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">In your <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">main.scss</span></span> file</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Write Boolean @mixin</span></strong></p>
-<p class="MsoNormal">We will be writing the definition above body rule in main. SCSS file. We  are using the official SCSS function of <span class="boldBlue">lighten </span>here; but both lighten and  darken are provided by SASS. This means that you can say their name (call the mixin functions) and they  just work.</p>
-<p class="MsoNormal">This will take a key/value as an argument The property, you  want to lighten, and then a percentage of HSL color format. This parameter will  range from 0% to 100%. It is working with the third letter in HSL, which  represents lightness. The first two letters represent Hue, and Saturation  respectfully. But we will not using Hue and Saturation here.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">HSL </span></span>stands for Hue, Saturation and Lightness</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/Images/3.png" width="297" height="197" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">@mixin theme($light-theme: true) {</p>
-<p class="code">&nbsp; &nbsp; @if $light-theme {</p>
-<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; background: lighten($primary-color,  100%);</p>
-<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; color: darken($text-color, 100%);</p>
+<p class="code">&nbsp; @mixin mobile {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; @media (max-width: 800px) {</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; @content;</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp; &nbsp; }</p>
-<p class="code">&nbsp;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
+<p class="code">&nbsp; }</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/Images/4.png" width="442" height="158" class="responsiveImage">
+<img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/2.png" width="379" height="289" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Watch it</span></span>, do not get  confused here when we are trying to darken our variable of <span class="boldBlue">$text-color</span>. We are  not trying to reference the font-colors that we have mapped at the top of our  SCSS file. Instead, we are referencing the color of our text. If you remember,  this is one of the variables that we have stored externally in our <strong>_variable</strong> partial file.</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/Images/5.png" width="572" height="193" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Writing the light class to go  into Boolean</span></strong></p>
-<p class="MsoNormal">Under your main rule in your SCSS file, write your light  class. Look at how we went about writing the call to the light theme, in our .light class under the .main class rule. We used the @include,  and then we passed in the variable of <span class="boldBlue">light-theme: true</span>. How cool is that?!!</p>
-<p class="MsoNormal">Make sure you still have those 3 curly braces closing out  that rule above it, which was a nested rule for </p>
-<p class="MsoNormal"><span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">.main</span></span>.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">.light {</p>
-<p class="code">    @include  theme($light-theme: true);</p>
-<p class="code">&nbsp;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/Images/6.png" width="434" height="406" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Remove - </span></span>If you still  have that rule that we created from an earlier tutorial, you can remove it.  It is quite ugly.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/Images/7.png" width="615" height="93" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Go to your <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span> to add the  class to the body so we can use it.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">&lt;body class=&quot;light&quot;&gt;</p>
-<br>
-
-<img src="Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/Images/8.png" width="217" height="45" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">And now, when you run the <span class="boldBlue">index. main</span> file, your theme is light with dark text.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/Images/9.png" width="600" height="141" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now if you change that Boolean value to be false you will  revert back to your dark theme. You make that change in the @include for the  .light class</p>
-<p class="MsoNormal">The <span class="boldBlue">$light-theme</span> is the argument that was created in the <span class="boldBlue">@mixin </span>theme definition, and used in the <span class="boldBlue">@if</span> statement inside it to set the rules for manipulating the light and dark colors of the theme.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/Images/10.png" width="382" height="97" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Go to your <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.html</span></span> to test it</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/Images/11.png" width="622" height="152" class="wideImg">
-<h1><a name="_Toc163906014">Why does this work?</a></h1>
+<h1><a name="_Toc164144404">Adding the New Variable to _variable file</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">When we wrote the <span class="boldBlue">@mixin</span>, we used a Boolean value of<span class="boldBlue"> true</span>.  So, if we want the theme to be light, and it is true, it will include the light  theme style. But if we set it to false when we call it in the .light class, it  is not going to add these styles, and will just ignore that we even have them.  So, if it is false, we will get our original dark theme. This keeps us from  having to write 2 mixins, and we are able to do every thing that we need it to  in just one mixin code.</p>
-<p class="MsoNormal">Why are we using 3 steps here, when in our last tutorial, it  only required 2 steps? In our last tutorial, our mixin was mimicking a function  definition, and its function call.  This  time, we are still using that @include with the theme(argument), but we have  wrapped this code inside of a SCSS class rule. This rule is basically the same  as any other rule that we use in CSS, but instead, we are placing SCSS code  inside of it, and it will read that SCSS code, and rewrite it to make sense to  our CSS file, which the browser understands.</p>
+
+
 <p class="MsoNormal">&nbsp;</p>
-<p class="H2LBrown">3 Steps </p>
-<img src="Articles/2024/6-SASS-Or-SCSS/8-Switching-Between-Themes/Images/12.png" width="370" height="368" class="responsiveImage">
+<p class="MsoNormal">But instead of defining that 800px directly in the argument  list of the media query, we could also define a variable that would represent  that number. That way we can change it around if we needed to when we include  it and need to fill in the blanks (so to speak)</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Create a new variable called @mobile</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Remember that in SASS:</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/3.png" width="136" height="192" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You could place this variable at the top of the page, but  since we have a partial file named <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">_variables.scss</span></span>, we could  just place this new instantiation of the variable in there.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/4.png" width="617" height="245" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc164144405">Having your @mixin mobile to use your new variable</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Now back in the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.SCSS</span></span> file, you can  switch out the 800px, with our new variable. Because now saying $mobile is the  same thing as saying 800px, since we wrote this $mobile to represent it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span style="line-height:115%; font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; </span>@mixin  mobile {</p>
+<p class="MsoNormal">&nbsp; &nbsp; @media (max-width: $mobile) {</p>
+<p class="MsoNormal">&nbsp; &nbsp; &nbsp; &nbsp; @content;</p>
+<p class="MsoNormal">&nbsp; &nbsp; }</p>
+<p class="MsoNormal">&nbsp; }</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">When you use a class in CSS/SCSS, you also will have to  attach that class to a tag in the html file, so that it knows where it is to  go. This is no different than what we have been doing all along by attaching   the class rule to the tag that will listen to it, in the HTML file. Since this is coming with an addition Mixin definition, in addition to the class rule, and attachment to the tag in html file, you now have 3 steps as opposed to the  2-step method, we were able to use in our last tutorial.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/5.png" width="443" height="178" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">In order for this to work, we need to set the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">direction</span></span> for our main div back to <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">(row)</span></span>.</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">.main {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; @include flexCenter(<span style="background:yellow; ">row</span>);</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc164144406">Adding the @include to the .main rule</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
 <p>&nbsp;</p>
+<p class="MsoNormal">In <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">.main</span></span>,  right before the closing curly brace, we want to include this new <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">@mobile mixin</span></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp; &nbsp; &nbsp; &nbsp; @include mobile {</p>
+<p class="MsoNormal">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; flex-direction:  column;</p>
+<p class="MsoNormal">&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p class="MsoNormal">&nbsp; &nbsp; </p>
+<p class="MsoNormal">&nbsp; &nbsp; &nbsp; </p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">        @include mobile {</p>
+<p class="code">            flex-direction:  column;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">.main</span></span> code now looks like this:</p>
+<p class="code">&nbsp;</p>
+<p class="code">    </p>
+<img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/6.png" width="555" height="506" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc164144407">Testing the Code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
 <p>&nbsp;</p>
-<p>&nbsp;</p>
+<p class="MsoNormal">Go back to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">index.html</span></span> to test it and  widen and narrow the page to test it. It should show the paragraphs in two rows  if the page is wide, and a single column one on top of the other if the page is  narrow.</p>
+<p class="MsoNormal">And it works:</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/7.png" width="629" height="349" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
 <p>&nbsp;</p>
  
   <!--Main Article -->
