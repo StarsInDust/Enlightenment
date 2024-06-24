@@ -7,30 +7,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9 Using a Mixin for Media Queries</title>
+    <title>10 Extensions</title>
 
-<meta name="title" content=" 9 Using a Mixin for Media Queries ">
+<meta name="title" content="10 Extensions ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="Mixins, SASS, Visual Studio, CSS, Web Design"/>
+<meta name="keywords" content=" Extensions, SASS, Visual Studio, CSS, Web Design"/>
 
 
-<meta name="description" content="This article explains how to use @mixin with media queries."/>
+<meta name="description" content="This article explains how to extend or how to have your class inherit from another class"/>
 
-<meta name="category" content="Mixins, SASS, CSS, Visual Studio Code, Web Design">
+<meta name="category" content="Extensions, SASS, CSS, Visual Studio Code, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Wednesday, April 17, 2024" />
+<meta name="revised" content="Friday, April 19, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/9-Using-Mixins-For-Media-Queries.html">
-
-
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/10-Extensions/10-Extensions.html">
 
     
 
@@ -80,17 +78,6 @@ text-underline:single;
 span.BigDarkBoldChar {
 font-weight:bold;
 }
-span.BlueBoldenChar {
-font-family:"Times New Roman",serif;
-color:blue;
-font-weight:bold;
-}
-span.MsoIntenseReference {
-font-variant:small-caps;
-color:#4472C4;
-letter-spacing:.25pt;
-font-weight:bold;
-}
 -->
 </style>
 </head>
@@ -116,126 +103,171 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~9 Using a Mixin for Media Queries~</p>
+  <p class="h2Black" >~10 Extensions~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >6/17/2024</p>
+   <p class="articleDate" style="text-align:right" >6/24/2024</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"><a href="#_Toc164144402">Turn on SASS</a></p>
-<p class="tableOfContents"><a href="#_Toc164144403">Writing Your main.SCSS   file</a></p>
-<p class="tableOfContents"><a href="#_Toc164144404">Adding the New Variable   to _variable file</a></p>
-<p class="tableOfContents"><a href="#_Toc164144405">Having your @mixin mobile   to use your new variable</a></p>
-<p class="tableOfContents"><a href="#_Toc164144406">Adding the @include to   the .main rule</a></p>
-<p class="tableOfContents"><a href="#_Toc164144407">Testing the Code</a></p>
-<p class="tableOfContents">&nbsp;</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/1.png" width="271" height="241" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<h1><a name="_Toc164144402">Turn on SASS</a></h1>
-<p class="MsoNormal">Turn on your <a href="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/2-Creating-The-Projects.html" target="_blank">SASS  Watcher</a><span class="MsoHyperlink"> </span></p>
-<p class="MsoNormal"><span class="MsoHyperlink"><span style="text-decoration:none; ">&nbsp;</span></span></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc164144403">Writing Your main.SCSS file</a></h1>
-<p class="MsoNormal">In your <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">main.SCSS</span></span> file</p>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403310">What   is an Extension?</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403311">Change   your two Paragraph tags to be different</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403312">Change   the name of your nested paragraph in main.scss file</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403313">The   new code representing the .main class<span style="display:none; text-underline:none; color:windowtext; text-decoration:none; ">. </span></a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403314">Test   the extended copied styles</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403315">To   add additional styles to the second class</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403316">Test   the extended styles</a></span></p>
 
 
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Create a new <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">@mixin</span></span> after the @mixin for  the theme.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="code">&nbsp; @mixin mobile {</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp; &nbsp; @media (max-width: 800px) {</p>
-<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; @content;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp; &nbsp; }</p>
-<p class="code">&nbsp; }</p>
+<p class="MsoNormal">Turn on<a href="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/2-Creating-The-Projects.html" name="_Hlk164346210"> </a><a href="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/2-Creating-The-Projects.html" target="_blank">Watch SASS </a>  </p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/2.png" width="379" height="289" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc164144404">Adding the New Variable to _variable file</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">But instead of defining that 800px directly in the argument  list of the media query, we could also define a variable that would represent  that number. That way we can change it around if we needed to when we include  it and need to fill in the blanks (so to speak)</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Create a new variable called @mobile</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Remember that in SASS:</span></p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/3.png" width="136" height="192" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You could place this variable at the top of the page, but  since we have a partial file named <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">_variables.scss</span></span>, we could  just place this new instantiation of the variable in there.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/4.png" width="617" height="245" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc164144405">Having your @mixin mobile to use your new variable</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
+<p><img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/1.png" width="270" height="241" class="responsiveImage"></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Now back in the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.SCSS</span></span> file, you can  switch out the 800px, with our new variable. Because now saying $mobile is the  same thing as saying 800px, since we wrote this $mobile to represent it.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span style="line-height:115%; font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; </span>@mixin  mobile {</p>
-<p class="MsoNormal">&nbsp; &nbsp; @media (max-width: $mobile) {</p>
-<p class="MsoNormal">&nbsp; &nbsp; &nbsp; &nbsp; @content;</p>
-<p class="MsoNormal">&nbsp; &nbsp; }</p>
-<p class="MsoNormal">&nbsp; }</p>
+<p>&nbsp; </p>
+<h1><a name="_Toc164403310">What is an Extension?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">In SCSS, we can extend an element. This is basically what is  called inheritance in other languages. And so, in SASS, if we are to extend an  element, that element would then inherit all of the styles from the parent  element.</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/5.png" width="443" height="178" class="responsiveImage">
+<h1><a name="_Toc164403311">Change your two Paragraph tags to be different</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Go to your <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">index.html</span></span> file.</p>
+<p class="MsoNormal">Change the classes on our two paragraphs to be different  from one another.</p>
+<p class="MsoNormal"> <span class="BoldRed">Now Remember</span> as soon as you make this change to your  paragraphs, all of the other tutorials that we have done before, which rely on these two paragraphs being named the same thing, will no longer be working. </p>
+<p class="MsoNormal">So, if you need to go back to another tutorial, remember this part might need to be changed back.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">In order for this to work, we need to set the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">direction</span></span> for our main div back to <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">(row)</span></span>.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/2.png" width="455" height="319" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc164403312">Change the name of your nested paragraph in  main.scss file</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Next go into the .main class, in your <span class="boldBlue">main.scss</span> file, and change this (#{&amp;} __p,  to be p1</p>
+<p class="MsoNormal"><span class="BoldRed">Warning</span>, the same part with this section here, if you need to go back to a previous tutorial. This p1 will need to be changed back to p.</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/3.png" width="435" height="351" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">So, now we will be extending all of the styles of p1 onto  p2. This way we could change one or two things on p2 without having to re-type  all of the styles, especially if the 2 paragraphs will have some of the styles  being duplicated in code. This is a more efficient way of approaching things.</p>
+<p class="MsoNormal">We will be adding some new code here for p2 to represent the  second paragraph.</p>
+<p class="MsoNormal"><span class="BoldRed">Warning</span>, once again, this is added code and will need to be removed if trying to get a previous tutorial to work.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">#{&amp;}__p2 {</p>
+<p class="code">&nbsp;</p>
+<p class="code">@extend .main__p1;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc164403313">The new code representing the .main class</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Now start writing this nested paragraph code to represent p2</p>
 <p class="code">.main {</p>
 <p class="code">&nbsp;</p>
-<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; @include flexCenter(<span style="background:yellow; ">row</span>);</p>
+<p class="code">&nbsp; &nbsp; @include flexCenter(row);</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; padding-top: 5%;</p>
+<p class="code"><br>
+</p>
+<p class="code">&nbsp; &nbsp; width: 75%;</p>
+<p class="code">&nbsp; &nbsp; margin: 0 auto;</p>
+<p class="code">&nbsp;</p>
+<p class="code">#{&amp;}__p1 {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; font-weight:weight(medium);</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &amp;:hover {</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; color:chocolate;</p>
+<p class="code">&nbsp; &nbsp; }</p>
+<p class="code">}</p>
+<p class="code"><br>
+</p>
+<p class="code"><a name="_Hlk164346474">#{&amp;}__p2 {</a></p>
+<p class="code">&nbsp;</p>
+<p class="code">@extend .main__p1;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/4.png" width="549" height="491" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">If you test your code now you will find that both paragraphs  will behave exactly the same, because we have not made any new changes to p2,  we have merely copied all of the styles onto it from p1</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc164144406">Adding the @include to the .main rule</a></h1>
+<h1><a name="_Hlk164345918"></a><a name="_Toc164403314">Test the extended copied styles</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
 <p>&nbsp;</p>
-<p class="MsoNormal">In <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">.main</span></span>,  right before the closing curly brace, we want to include this new <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">@mobile mixin</span></span></p>
+<p class="MsoNormal">Go to <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span> to test the  styles</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp; &nbsp; &nbsp; &nbsp; @include mobile {</p>
-<p class="MsoNormal">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; flex-direction:  column;</p>
-<p class="MsoNormal">&nbsp; &nbsp; &nbsp; &nbsp; }</p>
-<p class="MsoNormal">&nbsp; &nbsp; </p>
-<p class="MsoNormal">&nbsp; &nbsp; &nbsp; </p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">        @include mobile {</p>
-<p class="code">            flex-direction:  column;</p>
-<p class="code">&nbsp;</p>
-<p class="code">        }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">.main</span></span> code now looks like this:</p>
-<p class="code">&nbsp;</p>
-<p class="code">    </p>
-<img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/6.png" width="555" height="506" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc164144407">Testing the Code</a></h1>
+<p><img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/5.png" width="625" height="108" class="wideImg"></p>
+<p>...and you should find that both paragraphs are behaving the same. See, copied code here that is all we have managed to do so far. </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1><a name="_Toc164403315">To add additional styles to the second class</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
 <p>&nbsp;</p>
-<p class="MsoNormal">Go back to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">index.html</span></span> to test it and  widen and narrow the page to test it. It should show the paragraphs in two rows  if the page is wide, and a single column one on top of the other if the page is  narrow.</p>
-<p class="MsoNormal">And it works:</p>
+<p class="MsoNormal">This is simple, once we have copied p1 into p2 using<span class="boldBlue"> @extend</span>, we can just write the additional rules that we want our p2 to be able  to file.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/9-Using-A-Mixin-For-Media-Queries/Images/7.png" width="629" height="349" class="wideImg">
+<p class="code">.main {</p>
+<p class="code">&nbsp;</p>
+<p class="code">    @include  flexCenter(row);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    padding-top: 5%;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    width: 75%;</p>
+<p class="code">    margin: 0 auto;</p>
+<p class="code">&nbsp;</p>
+<p class="code">#{&amp;}__p1 {</p>
+<p class="code">&nbsp;</p>
+<p class="code">     font-weight:weight(medium);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;:hover {</p>
+<p class="code">&nbsp;</p>
+<p class="code">        color:chocolate;</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">#{&amp;}__p2 {</p>
+<p class="code">&nbsp;</p>
+<p class="code">@extend .main__p1;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;:hover {</p>
+<p class="code">&nbsp;</p>
+<p class="code">         color:$accent-color;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/6.png" width="514" height="563" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc164403316">Test the extended styles</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Go to <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span> to test the styles</p>
+<p class="MsoNormal">And it is listening to our new extended style that we gave  the hover in the second paragraph</p>
 <p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/7.png" width="620" height="113" class="wideImg">
+<p class="code">&nbsp;</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
  
   <!--Main Article -->
@@ -256,7 +288,7 @@ font-weight:bold;
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-</aside>
+  </aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
