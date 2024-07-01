@@ -7,28 +7,32 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10 Extensions</title>
+    <title>11 Math Operators</title>
 
-<meta name="title" content="10 Extensions ">
+
+<meta name="title" content="11 Math Operators ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" Extensions, SASS, Visual Studio, CSS, Web Design"/>
+<meta name="keywords" content="Math Operators, SASS, Visual Studio, CSS, Web Design"/>
 
 
-<meta name="description" content="This article explains how to extend or how to have your class inherit from another class"/>
+<meta name="description" content="This article explains how to begin to use math operators in SASS"/>
 
-<meta name="category" content="Extensions, SASS, CSS, Visual Studio Code, Web Design">
+<meta name="category" content="Math Operators, SASS, CSS, Visual Studio Code, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Friday, April 19, 2024" />
+<meta name="revised" content="Monday, April 22, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/10-Extensions/10-Extensions.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/11-Math-Operators/11-Math-Operators.html">
+
+
+
 
     
 
@@ -75,7 +79,10 @@ color:#0563C1;
 text-decoration:underline;
 text-underline:single;
 }
-span.BigDarkBoldChar {
+span.MsoIntenseReference {
+font-variant:small-caps;
+color:#4472C4;
+letter-spacing:.25pt;
 font-weight:bold;
 }
 -->
@@ -103,172 +110,78 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~10 Extensions~</p>
+  <p class="h2Black" >~11 Math Operators~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >6/24/2024</p>
+   <p class="articleDate" style="text-align:right" >7/1/2024</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
 
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403310">What   is an Extension?</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403311">Change   your two Paragraph tags to be different</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403312">Change   the name of your nested paragraph in main.scss file</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403313">The   new code representing the .main class<span style="display:none; text-underline:none; color:windowtext; text-decoration:none; ">. </span></a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403314">Test   the extended copied styles</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403315">To   add additional styles to the second class</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc164403316">Test   the extended styles</a></span></p>
+
+<p class="tableOfContents"><a href="#_Toc164590156">How   to use Math operators in SCSS/ CSS</a></span></p>
+<p class="tableOfContents"><a href="#_Toc164590157">When   you can and cannot mix Operators</a></span></p>
+<p class="tableOfContents"><a href="#_Toc164590158">For   More Information</a></span></p>
+<p class="MsoNormal">&nbsp;</p>
 
 
+
+<img src="Articles/2024/6-SASS-Or-SCSS/11-Math-Operators/Images/1.png" width="270" height="241" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Turn on<a href="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/2-Creating-The-Projects.html" name="_Hlk164346210"> </a><a href="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/2-Creating-The-Projects.html" target="_blank">Watch SASS </a>  </p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/1.png" width="270" height="241" class="responsiveImage"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
-<h1><a name="_Toc164403310">What is an Extension?</a></h1>
+<p class="MsoNormal">Turn on <a href="Articles/2024/6-SASS-Or-SCSS/2-Creating-The-Project/2-Creating-The-Projects.html" target="_blank">Watch  SASS </a><span class="MsoHyperlink"> </span></p>
+<p class="MsoNormal"><span class="MsoHyperlink"><span style="text-decoration:none; ">&nbsp;</span></span></p>
+<p class="MsoNormal"><span class="MsoHyperlink"><span style="text-decoration:none; ">&nbsp;</span></span></p>
+<h1><a name="_Toc164590156">How to use Math operators in SCSS/ CSS</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">In SCSS, we can extend an element. This is basically what is  called inheritance in other languages. And so, in SASS, if we are to extend an  element, that element would then inherit all of the styles from the parent  element.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc164403311">Change your two Paragraph tags to be different</a></h1>
+<p class="MsoNormal">This is just going to be a rather fast, simple tutorial to  introduce you to how we would go about using math operators in calculations in  SASS. And the differences of just using regular CSS and how you would do those  same calculations.</p>
+<p class="MsoNormal">In regular CSS, you need to wrap your equation in a calc  method, but in SASS, we can just do the calculation.</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Regular CSS</span></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/11-Math-Operators/Images/2.png" width="249" height="42" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">SASS</span></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/11-Math-Operators/Images/3.png" width="204" height="40" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal">When we subtract 55% from the width of our paragraph, it  does now look like crap</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/11-Math-Operators/Images/4.png" width="328" height="202" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<h1><a name="_Toc164590157">When you can and cannot mix Operators</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Go to your <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">index.html</span></span> file.</p>
-<p class="MsoNormal">Change the classes on our two paragraphs to be different  from one another.</p>
-<p class="MsoNormal"> <span class="BoldRed">Now Remember</span> as soon as you make this change to your  paragraphs, all of the other tutorials that we have done before, which rely on these two paragraphs being named the same thing, will no longer be working. </p>
-<p class="MsoNormal">So, if you need to go back to another tutorial, remember this part might need to be changed back.</p>
+<p class="MsoNormal">In regular CSS we can mix types when we deal with  calculations, but in SASS you cannot mix type.</p>
+<p class="MsoNormal">YES, YOU CAN</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Regular CSS</span></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/11-Math-Operators/Images/5.png" width="264" height="37" class="responsiveImage">
+<p class="MsoNormal">Now if you were to remove the calc method and just run it as  a Sass calculation, with the mixing of the % sign and the px measure, you will  find that the program is no longer listening to you and will just sit at the  last measurement style that you wrote correctly.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/2.png" width="455" height="319" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc164403312">Change the name of your nested paragraph in  main.scss file</a></h1>
+<p class="MsoNormal">NO, YOU CAN&rsquo;T</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">SASS</span></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/11-Math-Operators/Images/6.png" width="371" height="71" class="responsiveImage">
+<p class="BlueBolden"><span class="MsoIntenseReference"><span style="font-weight:normal; ">&nbsp;</span></span></p>
+<h1><a name="_Toc164590158">For More Information</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Next go into the .main class, in your <span class="boldBlue">main.scss</span> file, and change this (#{&amp;} __p,  to be p1</p>
-<p class="MsoNormal"><span class="BoldRed">Warning</span>, the same part with this section here, if you need to go back to a previous tutorial. This p1 will need to be changed back to p.</p>
-<p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/3.png" width="435" height="351" class="responsiveImage">
+<p class="MsoNormal"><img src="Articles/2024/6-SASS-Or-SCSS/11-Math-Operators/Images/7.png" width="300" class="responsiveImage" ></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">So, now we will be extending all of the styles of p1 onto  p2. This way we could change one or two things on p2 without having to re-type  all of the styles, especially if the 2 paragraphs will have some of the styles  being duplicated in code. This is a more efficient way of approaching things.</p>
-<p class="MsoNormal">We will be adding some new code here for p2 to represent the  second paragraph.</p>
-<p class="MsoNormal"><span class="BoldRed">Warning</span>, once again, this is added code and will need to be removed if trying to get a previous tutorial to work.</p>
+<p class="MsoNormal">If you would really want to do a deeper dive into this area  of Math Operators, you can go to these sites</p>
+<p class="MsoNormal"><span class="MsoIntenseReference"><a href="https://sass-lang.com/documentation/operators/numeric/" target="_blank">SASS-Lang</a></span></p>
+<p class="MsoNormal"><a href="https://sass-lang.com/documentation/operators/numeric/"></a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="code">#{&amp;}__p2 {</p>
-<p class="code">&nbsp;</p>
-<p class="code">@extend .main__p1;</p>
-<p class="code">&nbsp;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc164403313">The new code representing the .main class</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Now start writing this nested paragraph code to represent p2</p>
-<p class="code">.main {</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp; &nbsp; @include flexCenter(row);</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp; &nbsp; padding-top: 5%;</p>
-<p class="code"><br>
-</p>
-<p class="code">&nbsp; &nbsp; width: 75%;</p>
-<p class="code">&nbsp; &nbsp; margin: 0 auto;</p>
-<p class="code">&nbsp;</p>
-<p class="code">#{&amp;}__p1 {</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp; &nbsp; font-weight:weight(medium);</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp; &nbsp; &amp;:hover {</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; color:chocolate;</p>
-<p class="code">&nbsp; &nbsp; }</p>
-<p class="code">}</p>
-<p class="code"><br>
-</p>
-<p class="code"><a name="_Hlk164346474">#{&amp;}__p2 {</a></p>
-<p class="code">&nbsp;</p>
-<p class="code">@extend .main__p1;</p>
-<p class="code">&nbsp;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/4.png" width="549" height="491" class="responsiveImage">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">If you test your code now you will find that both paragraphs  will behave exactly the same, because we have not made any new changes to p2,  we have merely copied all of the styles onto it from p1</p>
+<p class="MsoNormal"><span class="MsoIntenseReference"><a href="https://www.javatpoint.com/sass-operators" target="_blank">Javapoint</a></span></p>
+<p class="MsoNormal"><a href="https://www.javatpoint.com/sass-operators"></a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference"><a href="https://www.geeksforgeeks.org/sass-operators" target="_blank">Geeks for Geeks</a></span></p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Hlk164345918"></a><a name="_Toc164403314">Test the extended copied styles</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Go to <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span> to test the  styles</p>
 <p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/5.png" width="625" height="108" class="wideImg"></p>
-<p>...and you should find that both paragraphs are behaving the same. See, copied code here that is all we have managed to do so far. </p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h1><a name="_Toc164403315">To add additional styles to the second class</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">This is simple, once we have copied p1 into p2 using<span class="boldBlue"> @extend</span>, we can just write the additional rules that we want our p2 to be able  to file.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="code">.main {</p>
-<p class="code">&nbsp;</p>
-<p class="code">    @include  flexCenter(row);</p>
-<p class="code">&nbsp;</p>
-<p class="code">    padding-top: 5%;</p>
-<p class="code">&nbsp;</p>
-<p class="code">    width: 75%;</p>
-<p class="code">    margin: 0 auto;</p>
-<p class="code">&nbsp;</p>
-<p class="code">#{&amp;}__p1 {</p>
-<p class="code">&nbsp;</p>
-<p class="code">     font-weight:weight(medium);</p>
-<p class="code">&nbsp;</p>
-<p class="code">    &amp;:hover {</p>
-<p class="code">&nbsp;</p>
-<p class="code">        color:chocolate;</p>
-<p class="code">    }</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">#{&amp;}__p2 {</p>
-<p class="code">&nbsp;</p>
-<p class="code">@extend .main__p1;</p>
-<p class="code">&nbsp;</p>
-<p class="code">    &amp;:hover {</p>
-<p class="code">&nbsp;</p>
-<p class="code">         color:$accent-color;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/6.png" width="514" height="563" class="responsiveImage">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc164403316">Test the extended styles</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Go to <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span> to test the styles</p>
-<p class="MsoNormal">And it is listening to our new extended style that we gave  the hover in the second paragraph</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/10-Extensions/Images/7.png" width="620" height="113" class="wideImg">
-<p class="code">&nbsp;</p>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
  
   <!--Main Article -->
  
@@ -288,7 +201,7 @@ font-weight:bold;
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-  </aside>
+</aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
