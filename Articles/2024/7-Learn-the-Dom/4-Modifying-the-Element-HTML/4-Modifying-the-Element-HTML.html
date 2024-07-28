@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Modifying the Element HTML</title>
+    
+    <meta name="title" content="4 Modifying the Element -HTML ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" The Dom, JavaScript, HTML, Visual Basic Code, Web Development "/>
+
+
+<meta name="description" content="This article explains how we can modify the style of an HTML element, using JavaScript "/>
+
+<meta name="category" content="The Dom, JavaScript, HTML, Visual Basic Code, Web Development">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Sunday, July 28, 2024" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/7-Learn-the-Dom/4-Modifying-the-Element-HTML/4-Modifying-the-Element-HTML.html">
+
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~4 Modifying the Element HTML~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >11/4/2024</p>
+   
+   <br>
+<br>
+
+<img src="Images/1.png" width="271" height="243" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now let&rsquo;s say we wanted to actually use some CSS element,  where we need to use a few angle braces. For example, we wanted to us a  &lt;span&gt; tag, or a &lt;strong&gt; tag, well if we were to do things in our  JavaScript file the way that we had in the last tutorial, you would find all  those irritating angle braces would be printed to the screen also. Now how  infuriating would that mess be. You could use innerText or textContent, and  they would both show you the markup on the web page.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="309" height="155" class="responsiveImage">
+<p class="MsoNormal" style="text-indent:1.0in;">&nbsp;</p>
+<h1>innerHTML</h1>
+<p class="MsoNormal">Don&rsquo;t worry, we do have a fix for that. Instead of using  those other two options in JavaScript, we must specifically tell JavaScript  that we are writing in HTML, and we want thing to work in the exact same way  that it works when we work in the HTML, which means we will write tags, but we  do not want our tags showing on our webpages.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/3.png" width="626" height="163" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Warning,</span></span> if you were  attempting to write that same line again, but instead leave the &lt;strong&gt;  tag off, you would be writing over your original text. That is because you are  using assignment here. And the last thing that you assign it innerHTML will be  what is displayed on the screen.</p>
+<p class="MsoNormal">Additionally, innerHTML could cause some security concerns,  because it&rsquo;s use could allow users to manipulate your code. If they were tech  savvy enough to do so.</p>
+<h1>Steps to Creating a Strong Element in JavaScript</h1>
+<p class="MsoNormal">This is a more secure way of doing this, as opposed to using  the method above.</p>
+<ul>
+  <li>createElement  assign it to the constant strong</li>
+  <li>Set  strong to work on your inner text</li>
+  <li>Append  this new text to your web page so it can be seen.</li>
+</ul>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We did use a /n to represent a new line for our second line  of text, so it would not be squished together on the first line</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/4.png" width="630" height="201" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
