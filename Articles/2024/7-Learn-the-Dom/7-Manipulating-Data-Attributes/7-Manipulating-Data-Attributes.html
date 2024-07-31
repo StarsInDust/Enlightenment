@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Manipulating Data Attributes</title>
+    
+    <meta name="title" content="7 Manipulating Data Attributes">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" The Dom, JavaScript, HTML, Visual Basic Code, Web Development "/>
+
+
+<meta name="description" content="This article explains how we can manipulate data attributes of an HTML document, using JavaScript "/>
+
+<meta name="category" content="The Dom, JavaScript, HTML, Visual Basic Code, Web Development">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Wednesday, July 31, 2024" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/7-Learn-the-Dom/7-Manipulating-Data-Attributes/7-Manipulating-Data-Attributes.html">
+
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~7 Manipulating Data Attributes~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >11/25/2024</p>
+   
+   <br>
+<br>
+
+
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/1.png" width="277" height="250" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc168561711">What are Data Attributes?</a></h1>
+<p class="MsoNormal">Data attributes are just like normal attributes, except that  they start with <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">data-</span></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" style="text-indent:157.5pt;"><a name="_Hlk168480810"><span style="line-height:115%; font-size:20.0pt; color:#1F3864; ">data-</span></a><span style="font-size:20.0pt; color:#1F3864; "> </span></p>
+<p class="MsoNormal" style="text-indent:157.5pt;"><span style="font-size:20.0pt; color:#1F3864; ">&nbsp;</span></p>
+<p class="MsoNormal">And what is really awesome about this type of attribute is  that you can make them up, and are customizable for what you are trying to do</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="251" height="198" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Another thing is that the stored customize data then can be  used to create a better experience for your user. It also eliminates the need  to do any special Ajax calls or server-side database queries, and everything  can be done right from the JavaScript file.</p>
+<p class="MsoNormal">These custom attributes prefixed with the word &ldquo;data-&ldquo; will  be completely ignored by the user agent.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/3.png" width="197" height="194" class="responsiveImage">
+<h1><a name="_Toc168561712">A few Rules</a></h1>
+<p class="MsoNormal">These data- attributes consists of two parts:</p>
+<ul>
+  <li>The  attribute name should not contain any uppercase letters, and must be a least on  character long after the prefix of the word &ldquo;data&rdquo;</li>
+  <li>The  attribute value can be any string.</li>
+</ul>
+<p class="MsoNormal">The data- attribute is a Global attribute and can be used on  any HTML element.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc168561713">Creating the Data Attribute</a></h1>
+<p class="MsoNormal"><strong><span style="font-size:12.0pt; ">HTML</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&lt;body&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &lt;div&gt;</p>
+<p class="code">        &lt;span  id=&quot;state&quot; data-testing=&quot;I am testing  now!&quot;&gt;Michigan&lt;/span&gt;</p>
+<p class="code">        &lt;span  id=&quot;pet&quot;&gt;dog&lt;/span&gt;</p>
+<p class="code">    &lt;/div&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    </p>
+<p class="code">&lt;/body&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Warning,</span></span> remember the  prefix must be <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">data-</span></span>,  and the value must be in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">small letters</span></span>.</p>
+<p class="code">&nbsp;</p>
+<img src="Images/4.png" width="618" height="151" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-size:12.0pt; ">In JavaScript</span></strong></p>
+<p class="MsoNormal">Now we want to be able to grab hold of that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">data attribute</span></span>, and  we can do that from our JavaScript file. There is a property called <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">dataset</span></span> that contains  all of your customized properties. So, if you call dataset on your constant,  you will dive into a pool that contains everything that you made up using the  prefix of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">data-</span></span>.</p>
+<p class="MsoNormal">Now if we use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">console.log</span></span> method on it, we  should be able to see things in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">console tab</span></span> of the Inspect  element in your browser.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">And as you can see here, it did indeed pull out that string  that we wrote in the HTML. Also, notice how when we view it in the console, we  do not see the prefix of data-, it only shows the name that we gave it. The  User agent did indeed ignore that part of the code.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/5.png" width="417" height="201" class="responsiveImage">
+<p>&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
