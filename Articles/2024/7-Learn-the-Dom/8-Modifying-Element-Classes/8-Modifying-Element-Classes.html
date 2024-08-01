@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Modifying Element Classes</title>
+    
+    
+    <meta name="title" content="8 Modifying Element Classes ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" The Dom, JavaScript, HTML, Visual Basic Code, Web Development "/>
+
+
+<meta name="description" content="This article explains how we can manipulate classes by using the DOM, inside the HTML document, using JavaScript "/>
+
+<meta name="category" content="The Dom, JavaScript, HTML, Visual Basic Code, Web Development">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Thursday, August 1, 2024" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/7-Learn-the-Dom/8-Modifying-Element-Classes/8-Modifying-Element-Classes.html">
+
+
+
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~8 Modifying Element Classes~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >12/2/2024</p>
+   
+   <br>
+<br>
+
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/1.png" width="277" height="250" class="responsiveImage">
+<h1>Working with Classes</h1>
+<p class="MsoNormal">Now, how if we wanted to work with classes using the DOM. We  can do that by just adding a few classes to our HTML document.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">In our HTML Document</span></p>
+<p class="MsoNormal">Add this &lt;div&gt;</p>
+<img src="Images/2.png" width="428" height="152" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">In our JavaScript document</span></p>
+<p class="MsoNormal">We are going to use something called a classList to access  our span with the id of &ldquo;h1&rdquo;. You can modify a whole lot of things by accessing  the classList.</p>
+<p class="MsoNormal">You can actually go to the website named <a href="https://www.w3schools.com/jsref/prop_element_classlist.asp" target="_blank">W3Schools  classList</a> to learn more about what you can modify using the classList.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Adding a Class</h1>
+<p class="MsoNormal">However, for now we are just going to use &ldquo;new&rdquo; to add a new  class.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">spanhello.classList.add(&ldquo;Da-class&rdquo;)</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Watch it,</span></span> make sure  that you have defined spanhello to be equal to the div using the id of hello.  You must do this first by using the document.querySelector to find it.</p>
+<p class="MsoNormal">Then we can target that span and add the class of &ldquo;Da-class&rdquo;  to it.</p>
+<p class="code">&nbsp;</p>
+<img src="Images/3.png" width="617" height="181" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Now if you inspect the webpage in the browser, you will find  that it did indeed add our new-class to the span.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/4.png" width="548" height="241" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Removing a Class</h1>
+<p class="MsoNormal">Here we can also remove a class from the span. Let&rsquo;s try  removing the class of class1, by using the remove method on it.</p>
+<img src="Images/5.png" width="616" height="251" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now all that we have left is the class that we dynamically  added.</p>
+<img src="Images/6.png" width="535" height="231" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Using Toggle</h1>
+<p class="MsoNormal">Toggle is a really useful method, because we can turn a  class on or off. If the class is there is will remove it, and if it is not  there it will add it.</p>
+<img src="Images/7.png" width="608" height="265" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Since we did not have a class named class2 in the HTML, it  added it. But if we had it there, it would have removed it.</p>
+<img src="Images/8.png" width="548" height="268" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We can also pair this with a Boolean, which it will either  add or remove the class depending on if it exists or not. If you put in false  it will remove the class, and if you put in true, it will add the class.</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> you do not  want to surround the Boolean with quotation marks or it will not work. It is  not text; it is a Boolean, and Booleans do not use quotation marks.</p>
+<img src="Images/9.png" width="619" height="256" class="wideImg">
+<p>&nbsp;</p>
+    
+    <p class="LeftPMidBlack">&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
