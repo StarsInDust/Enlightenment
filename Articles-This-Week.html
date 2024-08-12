@@ -7,31 +7,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5 Creating a Function</title>
-    
-    <meta name="title" content="5 Creating a Function ">
+    <title>6 The Hamburger Menu</title>
+
+<meta name="title" content="6 The Hamburger Menu ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" Function, SASS, CSS, Visual Studio Code, Web Design "/>
+<meta name="keywords" content=" The Hamburger Menu, SASS, CSS, Visual Studio Code, Web Design "/>
 
 
-<meta name="description" content="This article explains how to start a new project"/>
+<meta name="description" content="This article explains how to add a hamburger menu to the project"/>
 
-<meta name="category" content="Function, SASS, CSS, Visual Studio Code, Web Design">
+<meta name="category" content="The Hamburger Menu, SASS, CSS, Visual Studio Code, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Wednesday, May 22, 2024" />
+<meta name="revised" content="Thursday, May 23, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/5-Creating-A-Function/5-Creating-A-Function.html">
-
-
-
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/6-The-Hamburger-Menu.html">
 
     
 
@@ -84,14 +81,6 @@ font-family:"Times New Roman",serif;
 color:blue;
 font-weight:bold;
 }
-span.BigDarkBoldChar {
-font-weight:bold;
-}
-span.BlueBoldenChar {
-font-family:"Times New Roman",serif;
-color:blue;
-font-weight:bold;
-}
 span.BoldRedChar {
 font-family:"Times New Roman",serif;
 color:red;
@@ -122,140 +111,255 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~5 Creating a Function ~</p>
+  <p class="h2Black" >~6 The Hamburger Menu~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >8/5/2024</p>
+   <p class="articleDate" style="text-align:right" >8/12/2024</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-
-<p class="tableOfContents"><a href="#_Toc165381908">Turn on Sass</a></p>
-<p class="tableOfContents"><a href="#_Toc165381909">Write a Function</a></p>
-<p class="tableOfContents"><a href="#_Toc165381910">How do we call this new   function?</a></p>
-<p class="tableOfContents"><a href="#_Toc165381911">Search document for all   other color property code</a></p>
-<p class="tableOfContents"><a href="#_Toc165381912">Now go to the _home.scss   file Searching for color codes<span style="display:none; text-underline:none; color:windowtext; text-decoration:none; ">. </span></a></p>
-<p class="MsoNormal">&nbsp;</p>
-
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/5-Creating-A-Function/Images/1.png" width="271" height="243" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<h1><a name="_Toc165381908">Turn on Sass</h1>
+<p class="tableOfContents"> <a href="#_Toc165481807">Turn on Sass </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481808">Creating the   Partial Menu File </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481809">The code for   the _menu.scss file </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481810">@include the   partial file </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481811">The Menu-btn   for the Hamburger Menu </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481812">To Add the   Before pseudo code </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481813">To Test the   menu code </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481814">To Add the   After pseudo code </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481815">Changing the   bottom bar to not be the same width </a></p>
+<p class="tableOfContents"> <a href="#_Toc165481816">Animate the   hamburger </a></p>
+<p class="MsoNormal">&nbsp; </p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/1.png" width="270" height="239" class="responsiveImage">
+<h1><a name="_Toc165481807">Turn on  Sass</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal"><a name="_Hlk165458690"><span class="MsoIntenseReference">In  Visual Studio</span></a></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">In Visual Studio</span><strong><span style="font-variant:small-caps; letter-spacing:.25pt; color:#4472C4; "> </span></strong></p>
 <p class="MsoNormal">Remember to turn on your Watch Sass</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/5-Creating-A-Function/Images/2.png" width="122" height="39" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">We want to be able to create a function to give an  appropriate color to text based on the lightness of a color.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc165381909">Write a Function</a></h1>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/2.png" width="116" height="44" class="responsiveImage">
+<h1><a name="_Toc165481808">Creating the Partial Menu File</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Inside of the <span class="MsoIntenseReference">_config.scss</span> file, right under the @ mixin for the transition that we just wrote, we are  going to write a function. This function will take an argument of <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">color</span></span> inside of its  parenthesis. It is going to be manipulating things based on the lightness of a  color. In order to do this, we will be using an <span class="boldBlueChar"><span style="font-size:12.0pt; ">if</span></span> statement.</p>
+<p class="MsoNormal">Here we are going to start working on our menu. To begin  this, we will create a new partial file to deal with just the menus in this  site, like we did with our home page.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="code">@function set-text-color($color){</p>
+<p class="MsoNormal">Create a new file</p>
+<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/3.png" width="271" height="128" class="responsiveImage"></p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<p class="MsoNormal">Name it<span class="boldBlue"> _menu.scss</span></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/4.png" width="267" height="160" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165481809">The code for the _menu.scss file</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="code">.menu-btn {</p>
+<p class="code">    position:absolute;</p>
+<p class="code">    z-index: 1;</p>
+<p class="code">    right: 1rem;</p>
+<p class="code">    top:1rem;</p>
+<p class="code">    height: 20px;</p>
+<p class="code">    width: 28px;</p>
+<p class="code">    cursor: pointer;</p>
+<p class="code">    @include  transition-ease;</p>
 <p class="code">&nbsp;</p>
-<p class="code">    @if (lightness($color)  &gt; 40%) {</p>
-<p class="code">&nbsp;</p>
-<p class="code">        @return #000;</p>
-<p class="code">&nbsp;</p>
-<p class="code">    } @else {</p>
-<p class="code">        </p>
-<p class="code">        @return #fff;</p>
+<p class="code">    &amp;__burger {</p>
+<p class="code">    position:absolute;</p>
+<p class="code">    right: 0;</p>
+<p class="code">    top: 0.5;</p>
+<p class="code">    height: 3px;</p>
+<p class="code">    width: 28px;</p>
+<p class="code">    background:  set-text-color($primary-color);</p>
+<p class="code">    @include  transition-ease;</p>
 <p class="code">&nbsp;</p>
 <p class="code">    }</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/5-Creating-A-Function/Images/3.png" width="422" height="230" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc165381910">How do we call this new function?</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Don&rsquo;t forget that a function is 2 parts. We need to write  the function itself, and then we need to call this function to be able to use  it somewhere else.</p>
-<p class="MsoNormal">Go to the <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">main.scss</span></span> file, this is  where we will be using that function. </p>
-<p class="MsoNormal">We will be using that function in the<span class="BlueBoldenChar"><span style="font-size:12.0pt; "> body</span></span> rule of the  main.scss file.</p>
-<p class="MsoNormal">This is what the original code looks like, we use the  property of color: and then we just use the color.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Original</span></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/5-Creating-A-Function/Images/4.png" width="507" height="145" class="wideImg">
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Using the new Function</span></p>
-<p class="MsoNormal">Notice how we use the dollar sign with the name of the  function, inside of the parenthesis below.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code"><a name="_Hlk165380827">color:set-text-color($primary-color);</a></p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/5-Creating-A-Function/Images/5.png" width="595" height="137" class="wideImg">
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc165381911">Search document for all other color property code</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Now what we want to do is to search through our code for  everywhere we have the color property. </p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Original</span></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/5-Creating-A-Function/Images/6.png" width="319" height="101" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Using the new Function</span></p>
-<p class="code">&nbsp;</p>
-<p class="code">a{</p>
-<p class="code">    <span style="background:yellow; ">color:set-text-color($primary-color);</span></p>
-<p class="code">    text-decoration: none;</p>
 <p class="code">&nbsp;</p>
 <p class="code">}</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="BlueBolden">7</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">footer {</p>
-<p class="code">    font-size: 1rem;</p>
-<p class="code">    position: fixed;</p>
-<p class="code">    bottom: 0.2rem;</p>
-<p class="code">    left: 1rem;</p>
-<p class="code">    text-align: left;</p>
-<p class="code">    padding: 1rem;</p>
-<p class="code">    <span style="background:yellow; ">color:set-text-color($primary-color);</span>    </p>
-<p class="MsoNormal"><span class="MsoIntenseReference">}</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/5-Creating-A-Function/Images/8.png" width="430" height="227" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<h1><a name="_Toc165381912">Now go to the _home.scss file Searching for color  codes</a></h1>
+<p class="MsoNormal">Notice how  the <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">burger</span></span> menu was nested inside of the  menu-btn class using the <span class="boldBlueChar"><span style="font-size:12.0pt; ">&amp;__</span></span></p>
+<p class="MsoNormal">In CSS we used to use just dot notation for a child element to reach the parent; but in SASS, we use the ampersand with a double underscore.</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/5.png" width="580" height="444" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165481810">@include the partial file</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Since we also had a color property set for our border, on  the home page we must change that too.</p>
+<p class="MsoNormal">Remember to <span class="boldBlue">Import</span> this partial at the top of the <span class="blueEmphasis">main.scss</span> file</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Original</span></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/5-Creating-A-Function/Images/9.png" width="417" height="84" class="wideImg">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/6.png" width="596" height="144" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Hlk165467994"></a><a name="_Toc165481811">The Menu-btn for the Hamburger Menu</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal"><a name="_Hlk165466298"><span class="MsoIntenseReference">Go  to the index.html file.</span></a></p>
+<p class="MsoNormal">If you look at the html code, you will see that the menu  button is basically a wrapper. We will be using this as a click event. Within  the menu-btn, we will have our bars for the hamburger. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/7.png" width="472" height="82" class="responsiveImage">
 <p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Using the new Function</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="code">&amp;__name{</p>
-<p class="code">        font-size: 3.5rem;</p>
-<p class="code">        padding-bottom:  1rem;</p>
-<p class="code">        border-bottom: 2px  solid color set-text-color($primary-color);</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Go to the _menu partial  file.</span><strong><span style="color:#4472C4; "> </span></strong></p>
+<p class="MsoNormal">When we wrote the code in the menu partial for the nested  hamburger, all that we had configured, so far was the middle bar. You will  notice in the menu partial, that we set this middle bar to a width of 28px. Now  we are going to use pseudo elements to create the other bars of the hamburger.</p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-size:16.0pt; color:red; ">*</span></strong> <strong><span style="color:red; ">Careful</span></strong>, on this  one, if you do not put in both a width and a height for our hamburger line, it  will not show up</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165481812">To Add the Before pseudo code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal"><strong><span style="color:red; ">*Watch it</span></strong>, do not  include any space when you write the <span class="boldBlue">&amp;::</span>before or it will not work.</p>
+<p class="MsoNormal">The reason that we need that empty content tag to begin with (below), is that it creates a type of invisible element, which we can style with SASS. It must be here, or your styles will not have anything to work with. You will figure this out real fast if you forget and leave that first line out.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">&amp;::before {</p>
+<p class="code">&nbsp;</p>
+<p class="code">        content: '';</p>
+<p class="code">        position: absolute;</p>
+<p class="code">        top: -8px;</p>
+<p class="code">        width: 28px;</p>
+<p class="code">        height: 3px;</p>
+<p class="code">        background:  set-text-color($primary-color);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/8.png" width="622" height="553" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165481813">To Test the menu code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Go to the index.html file.</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/9.png" width="244" height="165" class="responsiveImage">
+<h1><a name="_Toc165481814">To Add the After pseudo code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">We need this line to go under the middle line, so we need to increase that <span class="boldBlue">top</span> property. This will move this element down underneath that middle line. To do this, we just remove the <span class="boldBlue">– </span>sign in front of the 8px.</p>
+<p class="MsoNormal"><a name="_Hlk165468566"><strong><span style="color:red; ">*Watch it</span></strong>,  do not include any space when you write the <span class="boldBlue">&amp;::</span>after or it will not work.</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&amp;::after { </p>
+<p class="code">&nbsp;</p>
+<p class="code">        content: '';</p>
+<p class="code">        position: absolute;</p>
+<p class="code">        <span style="background:yellow; ">top: 8px;</span></p>
+<p class="code">        width: 28px;</p>
+<p class="code">        height: 3px;</p>
+<p class="code">        background:  set-text-color($primary-color);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">    }</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/10.png" width="561" height="500" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal" >Now your hamburger menu should look like this, with a line above and below that middle line.</p>
+<p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/11.png" width="202" height="151" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165481815">Changing the bottom bar to not be the same width</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">This is easy just change the width in the &amp;::after to  be:</p>
+<p class="BlueBolden">width: 20px;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">.menu-btn {</p>
+<p class="code">    position:absolute;</p>
+<p class="code">    z-index: 1;</p>
+<p class="code">    right: 1rem;</p>
+<p class="code">    top:1rem;</p>
+<p class="code">    height: 20px;</p>
+<p class="code">    width: 28px;</p>
+<p class="code">    cursor: pointer;</p>
+<p class="code">    @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;__burger {</p>
+<p class="code">    position:absolute;</p>
+<p class="code">    right: 0;</p>
+<p class="code">    top: 0.5;</p>
+<p class="code">    height: 3px;</p>
+<p class="code">    width: 28px;</p>
+<p class="code">    background:  set-text-color($primary-color);</p>
+<p class="code">    @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;::before {</p>
+<p class="code">&nbsp;</p>
+<p class="code">        content: '';</p>
+<p class="code">        position: absolute;</p>
+<p class="code">        top: -8px;</p>
+<p class="code">        width: 28px;</p>
+<p class="code">        height: 3px;</p>
+<p class="code">        background:  set-text-color($primary-color);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;::after { </p>
+<p class="code">&nbsp;</p>
+<p class="code">        content: '';</p>
+<p class="code">        position: absolute;</p>
+<p class="code">        top: 8px;</p>
+<p class="code">        <span style="background:yellow; ">width: 20px;</span></p>
+<p class="code">        height: 3px;</p>
+<p class="code">        background:  set-text-color($primary-color);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/12.png" width="622" height="618" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal" >Now that bottom line should look like this.</p>
+<p class="MsoNormal" ><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/13.png" width="237" height="167" class="responsiveImage"></p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal" >And this is what the hamburger menu should look like on the web page, sitting in the upper right-hand corner.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/14.png" width="622" height="410" class="wideImg">
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165481816">Animate the hamburger</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">We will be using Java script to make the hamburger menu interactive</p>
+<p class="code">&amp;::after { </p>
+<p class="code">&nbsp;</p>
+<p class="code">        content: '';</p>
+<p class="code">        position: absolute;</p>
+<p class="code">        top: 8px;</p>
+<p class="code">        width: 20px;</p>
+<p class="code">        height: 3px;</p>
+<p class="code">        background:  set-text-color($primary-color);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        </p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;.open{</p>
+<p class="code">        transform:  rotate(720deg);</p>
+<p class="code">        background:  transparent;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">}</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Notice</span></span> here that we  do not use the colon after <span class="boldBlueChar"><span style="font-size:12.0pt; ">solid color</span></span>, as we had done previously with <span class="boldBlueChar"><span style="font-size:12.0pt; ">color</span></span> when setting  the attribute.</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Watch it,</span></span> right now,  this code will not do anything. In our next tutorial, we will be looking at  doing the JavaScript for it.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/5-Creating-A-Function/Images/10.png" width="618" height="351" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">If we test the page now, we will not actually see any  difference.  Our page had already been  working perfectly with the lightness of the text. It will only trigger if we  have a page that doesn&rsquo;t play that nice with the color of the fonts.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/5-Creating-A-Function/Images/11.png" width="347" height="322" class="responsiveImage">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/15.png" width="507" height="451" class="responsiveImage">
 <p>&nbsp;</p>
-    
-    <p class="LeftPMidBlack">&nbsp;</p>
 <p class="pMidBlack">&nbsp;</p>
  
   <!--Main Article -->
@@ -276,7 +380,7 @@ font-weight:bold;
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-</aside>
+  </aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
