@@ -7,28 +7,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6 The Hamburger Menu</title>
+    <title>7 The JavaScript File</title>
 
-<meta name="title" content="6 The Hamburger Menu ">
+<meta name="title" content="7 The JavaScript File">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" The Hamburger Menu, SASS, CSS, Visual Studio Code, Web Design "/>
+<meta name="keywords" content=" JavaScript, SASS, CSS, Visual Studio Code, Web Design "/>
 
 
-<meta name="description" content="This article explains how to add a hamburger menu to the project"/>
+<meta name="description" content="This article explains how to add some JavaScript to change the functionality of the Hamburger menu."/>
 
-<meta name="category" content="The Hamburger Menu, SASS, CSS, Visual Studio Code, Web Design">
+<meta name="category" content="JavaScript, SASS, CSS, Visual Studio Code, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Thursday, May 23, 2024" />
+<meta name="revised" content="Friday, May 24, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/6-The-Hamburger-Menu.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/7-The-JavaScript-File.html">
+
 
     
 
@@ -81,10 +82,19 @@ font-family:"Times New Roman",serif;
 color:blue;
 font-weight:bold;
 }
-span.BoldRedChar {
+span.BlueBoldenChar {
 font-family:"Times New Roman",serif;
-color:red;
+color:blue;
 font-weight:bold;
+}
+span.BigDarkBoldChar {
+font-weight:bold;
+}
+p.MsoNoSpacing {
+margin:0in;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:black;
 }
 -->
 </style>
@@ -94,7 +104,7 @@ font-weight:bold;
 <body>
 
 <div class="wrapper">
-  <header class="header">Header</header>
+<header class="header">Header</header>
   
   <ul class="navigation">
    <li><a href="index.html" class="active"title="Home">Home</a></li>
@@ -111,255 +121,135 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~6 The Hamburger Menu~</p>
+  <p class="h2Black" >~7 The JavaScript File~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >8/12/2024</p>
+   <p class="articleDate" style="text-align:right" >8/19/2024</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"> <a href="#_Toc165481807">Turn on Sass </a></p>
-<p class="tableOfContents"> <a href="#_Toc165481808">Creating the   Partial Menu File </a></p>
-<p class="tableOfContents"> <a href="#_Toc165481809">The code for   the _menu.scss file </a></p>
-<p class="tableOfContents"> <a href="#_Toc165481810">@include the   partial file </a></p>
-<p class="tableOfContents"> <a href="#_Toc165481811">The Menu-btn   for the Hamburger Menu </a></p>
-<p class="tableOfContents"> <a href="#_Toc165481812">To Add the   Before pseudo code </a></p>
-<p class="tableOfContents"> <a href="#_Toc165481813">To Test the   menu code </a></p>
-<p class="tableOfContents"> <a href="#_Toc165481814">To Add the   After pseudo code </a></p>
-<p class="tableOfContents"> <a href="#_Toc165481815">Changing the   bottom bar to not be the same width </a></p>
-<p class="tableOfContents"> <a href="#_Toc165481816">Animate the   hamburger </a></p>
-<p class="MsoNormal">&nbsp; </p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/1.png" width="270" height="239" class="responsiveImage">
-<h1><a name="_Toc165481807">Turn on  Sass</a></h1>
+<p class="tableOfContents"><a href="#_Toc165544276">Turn on Sass</a></p>
+<p class="tableOfContents"><a href="#_Toc165544277">Set up for the Java   Script file</a></p>
+<p class="tableOfContents"><a href="#_Toc165544278">Writing the Java Script   file</a></p>
+<p class="tableOfContents"><a href="#_Toc165544279">Test index page</a></p>
+<p class="tableOfContents"><a href="#_Toc165544280">To turn the two bars into   an X</a></p>
+
+<p class="MsoNormal">&nbsp;</p>
+<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/The-Code-For-JavaScript-File.html" target="_blank">Go Here for the Code for this Tutorial</a></p>
+<p class="tableOfContents">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/Images/1.png" width="268" height="241" class="responsiveImage">
+<h1><a name="_Hlk165544429"></a><a name="_Toc165481807"></a><a name="_Toc165544276">Turn on Sass</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal"><span class="MsoIntenseReference">In Visual Studio</span><strong><span style="font-variant:small-caps; letter-spacing:.25pt; color:#4472C4; "> </span></strong></p>
-<p class="MsoNormal">Remember to turn on your Watch Sass</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/2.png" width="116" height="44" class="responsiveImage">
-<h1><a name="_Toc165481808">Creating the Partial Menu File</a></h1>
+<p class="MsoNormal">Remember to turn on  your Watch Sass</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/Images/2.png" width="118" height="42" class="responsiveImage">
+<h1><a name="_Toc165544277">Set up for the Java Script file</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Here we are going to start working on our menu. To begin  this, we will create a new partial file to deal with just the menus in this  site, like we did with our home page.</p>
+<p class="MsoNormal">You want to open up the <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">dist</span></span> folder, in the side bar,  on the left of the Visual Studio App.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/Images/3.png" width="323" height="216" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Create a new file</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/3.png" width="271" height="128" class="responsiveImage"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
-<p class="MsoNormal">Name it<span class="boldBlue"> _menu.scss</span></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/4.png" width="267" height="160" class="responsiveImage">
+<p class="MsoNormal">Create another <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">folder</span></span> inside of the dist  folder, and name it <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">js</span></span>.  Make sure it is actually in the dist folder</p>
+<p class="MsoNormal"><span style="color:#1F4E79; ">Inside of the </span><span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">js </span></span><span style="color:#1F4E79; ">folder create a file  and name that </span><span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.js</span></span><span style="color:#1F4E79; ">.</span></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/Images/4.png" width="262" height="320" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc165481809">The code for the _menu.scss file</a></h1>
+<h1><a name="_Toc165544278">Writing the Java Script file</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="code">.menu-btn {</p>
-<p class="code">    position:absolute;</p>
-<p class="code">    z-index: 1;</p>
-<p class="code">    right: 1rem;</p>
-<p class="code">    top:1rem;</p>
-<p class="code">    height: 20px;</p>
-<p class="code">    width: 28px;</p>
-<p class="code">    cursor: pointer;</p>
-<p class="code">    @include  transition-ease;</p>
+<p class="MsoNormal">We will start by targeting the document object model (DOM).  The DOM represents the web page, and it is a way in code (or rather Java Script)  in this situation, where we can make changes to the document structure, style  and content. The DOM represents the document as nodes and objects, and in this  way the Java Script language can use it to interact, or talk to the page.</p>
+<ol>
+  <li>Set some constants</li>
+  <li>Menu initially in code invisible</li>
+  <li>Add, and remove event listener to toggle menu visibility</li>
+</ol>
+<p class="MsoNoSpacing">&nbsp;</p>
+<p class="MsoNoSpacing">You can think of this classlist as a type of tree. We  want to either add or remove branches to it. If the menu is not showing we want  to add a class that will open the menu. If the menu is open, we want to remove  that class or branch from our tree. So, that the menu will close. These little  branches in programing are actually referred to as nodes.</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<p class="code"><a name="_Hlk167435721">const menuBtn =  document.querySelector('.menu-btn');</a></p>
+<p class="code">const hamburger =  document.querySelector('.menu-btn__burger');</p>
 <p class="code">&nbsp;</p>
-<p class="code">    &amp;__burger {</p>
-<p class="code">    position:absolute;</p>
-<p class="code">    right: 0;</p>
-<p class="code">    top: 0.5;</p>
-<p class="code">    height: 3px;</p>
-<p class="code">    width: 28px;</p>
-<p class="code">    background:  set-text-color($primary-color);</p>
-<p class="code">    @include  transition-ease;</p>
 <p class="code">&nbsp;</p>
-<p class="code">    }</p>
+<p class="code">let showMenu = false;</p>
+<p class="code">&nbsp;</p>
+<p class="code">menuBtn.addEventListener('click',  toggleMenu);</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">function toggleMenu() {</p>
+<p class="code">    if(!showMenu) {</p>
+<p class="code">        hamburger.classList.add('open');</p>
+<p class="code">&nbsp;</p>
+<p class="code">        showMenu = true;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    } else {</p>
+<p class="code">        hamburger.classList.remove('open');</p>
+<p class="code">&nbsp;</p>
+<p class="code">        showMenu = false;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
 <p class="code">}</p>
 <p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/Images/5.png" width="623" height="395" class="wideImg">
 <p class="code">&nbsp;</p>
-<p class="MsoNormal">Notice how  the <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">burger</span></span> menu was nested inside of the  menu-btn class using the <span class="boldBlueChar"><span style="font-size:12.0pt; ">&amp;__</span></span></p>
-<p class="MsoNormal">In CSS we used to use just dot notation for a child element to reach the parent; but in SASS, we use the ampersand with a double underscore.</p>
+<h1><a name="_Toc165544279">Test index page</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Go to the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index</span></span>.html file to test  it</p>
+<p class="MsoNormal">Make sure you are actually clicking on the Hamburger menu to  test it.</p>
+<p class="MsoNormal">With the Java Script code in place, when you click the  hamburger menu, it should spin around and the middle bar of the menu should  disappear, or become transparent</p>
 <p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/5.png" width="580" height="444" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc165481810">@include the partial file</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Remember to <span class="boldBlue">Import</span> this partial at the top of the <span class="blueEmphasis">main.scss</span> file</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/6.png" width="596" height="144" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Hlk165467994"></a><a name="_Toc165481811">The Menu-btn for the Hamburger Menu</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal"><a name="_Hlk165466298"><span class="MsoIntenseReference">Go  to the index.html file.</span></a></p>
-<p class="MsoNormal">If you look at the html code, you will see that the menu  button is basically a wrapper. We will be using this as a click event. Within  the menu-btn, we will have our bars for the hamburger. </p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/7.png" width="472" height="82" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Go to the _menu partial  file.</span><strong><span style="color:#4472C4; "> </span></strong></p>
-<p class="MsoNormal">When we wrote the code in the menu partial for the nested  hamburger, all that we had configured, so far was the middle bar. You will  notice in the menu partial, that we set this middle bar to a width of 28px. Now  we are going to use pseudo elements to create the other bars of the hamburger.</p>
-<p class="MsoNormal"><strong><span style="line-height:115%; font-size:16.0pt; color:red; ">*</span></strong> <strong><span style="color:red; ">Careful</span></strong>, on this  one, if you do not put in both a width and a height for our hamburger line, it  will not show up</p>
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc165481812">To Add the Before pseudo code</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal"><strong><span style="color:red; ">*Watch it</span></strong>, do not  include any space when you write the <span class="boldBlue">&amp;::</span>before or it will not work.</p>
-<p class="MsoNormal">The reason that we need that empty content tag to begin with (below), is that it creates a type of invisible element, which we can style with SASS. It must be here, or your styles will not have anything to work with. You will figure this out real fast if you forget and leave that first line out.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">&amp;::before {</p>
-<p class="code">&nbsp;</p>
-<p class="code">        content: '';</p>
-<p class="code">        position: absolute;</p>
-<p class="code">        top: -8px;</p>
-<p class="code">        width: 28px;</p>
-<p class="code">        height: 3px;</p>
-<p class="code">        background:  set-text-color($primary-color);</p>
-<p class="code">        @include  transition-ease;</p>
-<p class="code">&nbsp;</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/8.png" width="622" height="553" class="wideImg">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/Images/6.png" width="421" height="148" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc165481813">To Test the menu code</a></h1>
+<h1><a name="_Toc165544280">To turn the two bars into an X</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Go to the index.html file.</span></p>
+<p class="MsoNormal">Go into the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">_menu.scss </span></span>file, and go  in where it says &amp;.open</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/9.png" width="244" height="165" class="responsiveImage">
-<h1><a name="_Toc165481814">To Add the After pseudo code</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">We need this line to go under the middle line, so we need to increase that <span class="boldBlue">top</span> property. This will move this element down underneath that middle line. To do this, we just remove the <span class="boldBlue">– </span>sign in front of the 8px.</p>
-<p class="MsoNormal"><a name="_Hlk165468566"><strong><span style="color:red; ">*Watch it</span></strong>,  do not include any space when you write the <span class="boldBlue">&amp;::</span>after or it will not work.</a></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/Images/7.png" width="345" height="103" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><a name="_Hlk165543693"><span class="MsoIntenseReference">Target  the ::before</span></a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We want to make this change to it.  Here we will target those pseudo elements.  Remember where we created that top and bottom bar by using ::before, and  ::after.</p>
+<p class="MsoNormal"><span class="boldBlue">translate:</span> the first argument represents the horizontal  first bar, and the second argument will be the vertical bar.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/Images/8.png" width="568" height="212" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">When we click the hamburger menu on the webpage, you will  see it looks like this</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/Images/9.png" width="108" height="63" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">So, it is not quite an X quite yet, but we are working on  it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Target the ::After</span></p>
+<p class="MsoNormal">Now remember the bottom line is actually set to a shorter  width, but in order for it to look like an X, we will need to change it to the  same width. You might have to play around with the numbers here to get it to  work.</p>
 <p class="code">&nbsp;</p>
-<p class="code">&amp;::after { </p>
-<p class="code">&nbsp;</p>
-<p class="code">        content: '';</p>
-<p class="code">        position: absolute;</p>
-<p class="code">        <span style="background:yellow; ">top: 8px;</span></p>
-<p class="code">        width: 28px;</p>
-<p class="code">        height: 3px;</p>
-<p class="code">        background:  set-text-color($primary-color);</p>
-<p class="code">        @include  transition-ease;</p>
+<p class="MsoNormal">&amp;.open{</p>
+<p class="MsoNormal">        transform:  rotate(720deg);</p>
+<p class="MsoNormal">        background:  transparent;</p>
 <p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">        &amp;::before  {</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">            transform:  rotate(45deg) translate(5px, 8px);</p>
+<p class="MsoNormal">        }</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">        &amp;::after{</p>
+<p class="MsoNormal">            width:  28px;</p>
+<p class="MsoNormal">            transform:  rotate(-45deg) translate(3px, -7px);</p>
+<p class="MsoNormal">        }</p>
 <p class="MsoNormal">    }</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/10.png" width="561" height="500" class="wideImg">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/Images/10.png" width="580" height="286" class="wideImg">
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal" >Now your hamburger menu should look like this, with a line above and below that middle line.</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/11.png" width="202" height="151" class="responsiveImage">
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc165481815">Changing the bottom bar to not be the same width</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">This is easy just change the width in the &amp;::after to  be:</p>
-<p class="BlueBolden">width: 20px;</p>
+<p class="MsoNormal">With this set like this, it should now look like this, when  you click it.</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/Images/11.png" width="136" height="78" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="code">.menu-btn {</p>
-<p class="code">    position:absolute;</p>
-<p class="code">    z-index: 1;</p>
-<p class="code">    right: 1rem;</p>
-<p class="code">    top:1rem;</p>
-<p class="code">    height: 20px;</p>
-<p class="code">    width: 28px;</p>
-<p class="code">    cursor: pointer;</p>
-<p class="code">    @include  transition-ease;</p>
-<p class="code">&nbsp;</p>
-<p class="code">    &amp;__burger {</p>
-<p class="code">    position:absolute;</p>
-<p class="code">    right: 0;</p>
-<p class="code">    top: 0.5;</p>
-<p class="code">    height: 3px;</p>
-<p class="code">    width: 28px;</p>
-<p class="code">    background:  set-text-color($primary-color);</p>
-<p class="code">    @include  transition-ease;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">    &amp;::before {</p>
-<p class="code">&nbsp;</p>
-<p class="code">        content: '';</p>
-<p class="code">        position: absolute;</p>
-<p class="code">        top: -8px;</p>
-<p class="code">        width: 28px;</p>
-<p class="code">        height: 3px;</p>
-<p class="code">        background:  set-text-color($primary-color);</p>
-<p class="code">        @include  transition-ease;</p>
-<p class="code">&nbsp;</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">    &amp;::after { </p>
-<p class="code">&nbsp;</p>
-<p class="code">        content: '';</p>
-<p class="code">        position: absolute;</p>
-<p class="code">        top: 8px;</p>
-<p class="code">        <span style="background:yellow; ">width: 20px;</span></p>
-<p class="code">        height: 3px;</p>
-<p class="code">        background:  set-text-color($primary-color);</p>
-<p class="code">        @include  transition-ease;</p>
-<p class="code">&nbsp;</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/12.png" width="622" height="618" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal" >Now that bottom line should look like this.</p>
-<p class="MsoNormal" ><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/13.png" width="237" height="167" class="responsiveImage"></p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal" >And this is what the hamburger menu should look like on the web page, sitting in the upper right-hand corner.</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/14.png" width="622" height="410" class="wideImg">
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc165481816">Animate the hamburger</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">We will be using Java script to make the hamburger menu interactive</p>
-<p class="code">&amp;::after { </p>
-<p class="code">&nbsp;</p>
-<p class="code">        content: '';</p>
-<p class="code">        position: absolute;</p>
-<p class="code">        top: 8px;</p>
-<p class="code">        width: 20px;</p>
-<p class="code">        height: 3px;</p>
-<p class="code">        background:  set-text-color($primary-color);</p>
-<p class="code">        @include  transition-ease;</p>
-<p class="code">&nbsp;</p>
-<p class="code">        </p>
-<p class="code">&nbsp;</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">    &amp;.open{</p>
-<p class="code">        transform:  rotate(720deg);</p>
-<p class="code">        background:  transparent;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Watch it,</span></span> right now,  this code will not do anything. In our next tutorial, we will be looking at  doing the JavaScript for it.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/6-The-Hamburger-Menu/Images/15.png" width="507" height="451" class="responsiveImage">
-<p>&nbsp;</p>
+<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/7-The-JavaScript-File/The-Code-For-JavaScript-File.html" target="_blank">Go Here for the Code for this Tutorial</a></p>
 <p class="pMidBlack">&nbsp;</p>
  
   <!--Main Article -->
