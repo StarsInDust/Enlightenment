@@ -7,29 +7,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8 The Navigation Sass Code</title>
+    <title>9 Formatting Main Menu Links</title>
 
-<meta name="title" content="8 The Navigation SASS Code ">
+<meta name="title" content=" 9 Formatting Main Menu Links ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" The Navigation, SASS, CSS, Visual Studio Code, Web Design "/>
+<meta name="keywords" content=" Formatting Menu Links, SASS, CSS, Visual Studio Code, Web Design "/>
 
 
-<meta name="description" content="This article explains how to wright the navigation Sass code for the project."/>
+<meta name="description" content="This article explains how to format the links in a navigational menu"/>
 
-<meta name="category" content="The Navigation, SASS, CSS, Visual Studio Code, Web Design">
+<meta name="category" content="Formatting Menu Links, SASS, CSS, Visual Studio Code, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Saturday, May 25, 2024" />
+<meta name="revised" content="Sunday, May 26, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/8-The-Navagation-Sass-Code.html">
-
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/9-Formatting-Main-Menu-Links.html">
 
 
     
@@ -88,14 +87,6 @@ font-family:"Times New Roman",serif;
 color:blue;
 font-weight:bold;
 }
-span.BoldRedChar {
-font-family:"Times New Roman",serif;
-color:red;
-font-weight:bold;
-}
-span.BigDarkBoldChar {
-font-weight:bold;
-}
 -->
 </style>
 </head>
@@ -104,7 +95,7 @@ font-weight:bold;
 <body>
 
 <div class="wrapper">
-  <header class="header">Header</header>
+<header class="header">Header</header>
   
   <ul class="navigation">
    <li><a href="index.html" class="active"title="Home">Home</a></li>
@@ -121,212 +112,174 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~8 The Navigation Sass Code ~</p>
+  <p class="h2Black" >~9 Formatting Main Menu Links~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >8/26/2024</p>
+   <p class="articleDate" style="text-align:right" >9/2/2024</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"><a href="#_Toc166752370">Turn on Sass</a></p>
-<p class="tableOfContents"><a href="#_Toc166752371">The .nav Class</a></p>
-<p class="tableOfContents"><a href="#_Toc166752372">The Java Script for the   Nav Menu</a></p>
-<p class="tableOfContents"><a href="#_Toc166752373">Testing the Page</a></p>
+<p class="tableOfContents"><a href="#_Toc165720174">Turn on Sass</a></p>
+<p class="tableOfContents"><a href="#_Toc165720175">Writing the code for the   Navigation Links</a></p>
+<p class="tableOfContents"><a href="#_Toc165720176">&amp;__item Code</a></p>
+<p class="tableOfContents"><a href="#_Toc165720177">Writing the JavaScript   code for &amp;__item</a></p>
+<p class="tableOfContents"><a href="#_Toc165720178">Test The index.html page</a></p>
+<p class="tableOfContents"><a href="#_Toc165720179">More code inside of the   Menu nav</a></p>
+<p class="tableOfContents"><a href="#_Toc165720180">Save and Test index.html</a></p>
+<p class="tableOfContents"><a href="#_Toc165720181">Slowing down the speed   the menu links come onto the page</a></p>
+<p class="tableOfContents"><a href="#_Toc165720182">Allowing a variable to   work inside of a function</a></p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/1.png" width="268" height="241" class="responsiveImage"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
-<h1><a name="_Toc166752370">Turn on Sass</a></h1>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/1.png" width="265" height="239" class="responsiveImage">
+<h1><a name="_Hlk165720152"></a><a name="_Toc165481807"></a><a name="_Toc165544276"></a><a name="_Toc165720174">Turn on Sass</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal"><span class="MsoIntenseReference">In Visual Studio</span><strong><span style="font-variant:small-caps; letter-spacing:.25pt; color:#4472C4; "> </span></strong></p>
-<p class="MsoNormal">Remember to turn on your Watch Sass</p>
-
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/2.png" width="120" height="37" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseReference">Inside the main.scss</span></p>
-<p class="MsoNormal">We will be making changes to our navigation, so the original  code that we wrote in the <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">main.scss</span></span> will no longer be needed. You can just comment it out for now.</p>
-<p class="MsoNormal">Right now the menu, is looking very good with the styles intact.</p>
+<p class="MsoNormal">Remember to turn on  your Watch Sass</p>
 <p class="MsoNormal">&nbsp;</p>
-
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/3.png" width="560" height="99" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now when you comment this code out…</p>
-<p class="MsoNormal">&nbsp;</p>
-
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/4.png" width="489" height="280" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Your menu will now appear ugly and like this, on your  webpage, when the code is commented out. Don't worry, we will be redoing these styles, for the navigation, in the next sections of this tutorial.</p>
-
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/5.png" width="312" height="124" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Inside of the _menu.scss  file</span></p>
-<h1><a name="_Toc166752371">The .nav Class</a></h1>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/2.png" width="120" height="39" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc165720175">Writing the code for the Navigation Links</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">You want to create a new nav Class. Inside of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">_menu.scss</span></span> file, go  to the very last closing curly brace on the page, you will be creating this new  class underneath that closing brace.</p>
-<p class="MsoNormal">&nbsp;</p>
-
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/6.png" width="407" height="244" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">In this next code, you will see we will be making the <span class="boldBlueChar"><span style="font-size:12.0pt; ">vw</span></span> to be <span class="boldBlueChar"><span style="font-size:12.0pt; ">100vw</span></span>, which makes it  100% of the viewport width. The <span class="boldBlueChar"><span style="font-size:12.0pt; ">opacity</span></span> set to <span class="boldBlueChar"><span style="font-size:12.0pt; ">0.98</span></span> will only allow  us to see just a hint of our background image, on the screen. We set the translateY to be a -100  %. This means that our menu has been moved upward and off the screen.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">.nav {</p>
-<p class="code">    position: fixed;</p>
-<p class="code">    top: 0;</p>
-<p class="code">    left: 0;</p>
-<p class="code">    width: <span style="background:yellow; ">100vw</span>;</p>
-<p class="code">    opacity: <span style="background:yellow; ">0.98</span>;</p>
-<p class="code">    visibility: hidden;</p>
-<p class="code">  </p>
-<p class="code">    &amp;.open {</p>
-<p class="code">      visibility: visible;</p>
-<p class="code">    }</p>
-<p class="code">  </p>
-<p class="code">    .menu-nav {</p>
-<p class="code">      display: flex;</p>
-<p class="code">      flex-flow: column  wrap;</p>
-<p class="code">      align-items: center;</p>
-<p class="code">      justify-content:  center;</p>
-<p class="code">      height: 100vh;</p>
-<p class="code">      overflow: hidden;</p>
-<p class="code">      background:  $primary-color;</p>
-<p class="code">      list-style-type:  none;</p>
-<p class="code">      padding-right: 1rem;</p>
-<p class="code">      transform:  translateY(-100%);</p>
-<p class="code">      @include  transition-ease;</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/7.png" width="452" height="503" class="responsiveImage">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Remember</span></span> when you  test it, you must be on the <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">index.html</span></span> page, or you will only get  gobbety-gook on the screen.</p>
-<p class="MsoNormal">Yes, you will not see the menu, because it is starting out  at a position, which is moved upward and off the screen.</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/8.png" width="613" height="405" class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Now to write the code to  move the menu down ward.</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Inside of the _menu.scss</span></p>
 <p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="code">&amp;.open {</p>
-<p class="code">        transform:  translateY(0);</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/3.png" width="193" height="45" class="responsiveImage">
+<p class="MsoNormal">We are going to still be inside of the .menu-nav class rule.</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/4.png" width="447" height="298" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal">Even though the menu background will come in from the top of the page, we  want the menu items to come in from the right. The links will start off from  all of the way off the right side of page, when the hamburger button is pushed.</p>
+<p class="MsoNormal">When we add the <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">&amp;open</span></span> we will move them  from the initial position and in from the right. We will also add an active  class.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165720176">&amp;__item Code</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="code">&amp;__item{</p>
+<p class="code">&nbsp;</p>
+<p class="code">        transform:  translateX(100vw);</p>
+<p class="code">        @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        &amp;.open{</p>
+<p class="code">            transform:  translateX(0);</p>
+<p class="code">&nbsp;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code">        &amp;.active &gt; a  {</p>
+<p class="code">            color:  $secondary-color;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
 <p class="code">      }</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Warning</span></span>, now do not  expect this code to do anything yet. We need to write the Java Script first in  the Java Script file.</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/9.png" width="512" height="567" class="responsiveImage">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/5.png" width="553" height="602" class="wideImg">
 <p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc166752372">The Java Script for the Nav Menu</a></h1>
+<h1><a name="_Toc165720177">Writing the JavaScript code for &amp;__item</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Go to your <span class="boldBlueChar"><span style="font-size:12.0pt; ">main.js</span></span> file, which is inside of your <span class="boldBlueChar"><span style="font-size:12.0pt; ">dist</span></span> folder.</p>
+<p class="MsoNormal">in order to write the JavaScript code, we of course need to  be in the JavaScript file.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Write another Two constants  at top</span></p>
-<p class="code">const nav = document.querySelector('.nav');</p>
-<p class="code">const menuNav = document.querySelector('.menu-nav');</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/10.png" width="623" height="139" class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Changes to the function  toggleMenu</span></p>
-<p class="MsoNormal">When we start to write our code, we want to put that code  here:</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/11.png" width="547" height="241" class="wideImg">
-<p class="BlueBolden"><span class="MsoIntenseReference"><span style="font-weight:normal; ">&nbsp;</span></span></p>
-<p class="code">&nbsp;</p>
-<p class="code">       nav.classList.add('open');</p>
-<p class="code">       menuNav.classList.add('open');</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">      </p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/12.png" width="561" height="279" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now copy those two lines of code, because we need to do the  same thing after the else clause when we remove the <span class="boldBlue">open</span> class from the menu.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/13.png" width="489" height="143" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You will need to change the word <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">add</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">remove</span></span> in both lines.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code" style="text-indent:.5in;">      nav.classList.<span style="background:yellow; ">remove</span>('open');</p>
-<p class="code" style="text-indent:.5in;">       menuNav.classList.<span style="background:yellow; ">remove</span>('open');</p>
-<p class="code" style="text-indent:.5in;">&nbsp;</p>
-<p class="code" style="text-indent:.5in;">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/14.png" width="416" height="155" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">const menuBtn = document.querySelector('.menu-btn');</p>
-<p class="code">const hamburger = document.querySelector('.menu-btn__burger');</p>
-<p class="code">const nav = document.querySelector('.nav');</p>
-<p class="code">const menuNav = document.querySelector('.menu-nav');</p>
+<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/6.png" width="130" height="36" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<p class="MsoNormal">Add this line to the constants at the top of the JavaScript  file</p>
+<p class="code">const navItems = document.querySelectorAll('.menu-nav__item');</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/7.png" width="623" height="116" class="wideImg">
 <p class="code">&nbsp;</p>
-<p class="code">let showMenu = false;</p>
+<p class="MsoNormal">These nav items also need to have the class of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">open</span></span> added and  removed from the class list.</p>
 <p class="code">&nbsp;</p>
-<p class="code">menuBtn.addEventListener('click', toggleMenu);</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
 <p class="code">function toggleMenu() {</p>
-<p class="code">    if(!showMenu) {</p>
-<p class="code">       hamburger.classList.add('open');</p>
-<p class="code">       nav.classList.add('open');</p>
-<p class="code">       menuNav.classList.add('open');</p>
-<p class="code">      </p>
-<p class="code">  </p>
-<p class="code">      showMenu = true;</p>
-<p class="code">    } else {</p>
-<p class="code">       hamburger.classList.remove('open');</p>
-<p class="code">       nav.classList.remove('open');</p>
-<p class="code">       menuNav.classList.remove('open');</p>
-<p class="code">      </p>
-<p class="code">  </p>
-<p class="code">      showMenu = false;</p>
-<p class="code">    }</p>
+<p class="code">  if(!showMenu) {</p>
+<p class="code">     hamburger.classList.add('open');</p>
+<p class="code">     nav.classList.add('open');</p>
+<p class="code">     menuNav.classList.add('open');</p>
+<p class="code">    <span style="background:yellow; ">navItems.forEach(item =&gt;  item.classList.add('open'));</span></p>
+<p class="code">&nbsp;</p>
+<p class="code">    showMenu = true;</p>
+<p class="code">  } else {</p>
+<p class="code">     hamburger.classList.remove('open');</p>
+<p class="code">     nav.classList.remove('open');</p>
+<p class="code">     menuNav.classList.remove('open');</p>
+<p class="code">    <span style="background:yellow; ">navItems.forEach(item =&gt;  item.classList.remove('open'));</span></p>
+<p class="code">&nbsp;</p>
+<p class="code">    showMenu = false;</p>
 <p class="code">  }</p>
+<p class="code">}</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/15.png" width="622" height="520" class="wideImg"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/8.png" width="619" height="382" class="wideImg">
 <p class="code">&nbsp;</p>
-<h1><a name="_Toc166752373">Testing the Page</a></h1>
+<h1><a name="_Toc165720178">Test The index.html page</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Make sure you go back to the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span> page to test  the code out.</p>
-<p class="MsoNormal">This is what the page looks like when you first arrive.</p>
+<p class="code" style="text-indent:-63.0pt;">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/9.png" width="743" height="316" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165720179">More code inside of the Menu nav</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/16.png" width="627" height="363" class="wideImg">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/10.png" width="524" height="447" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="code">&amp;__link {</p>
+<p class="code">      display:  inline-block;</p>
+<p class="code">      font-size: 2rem;</p>
+<p class="code">      text-transform:  uppercase;</p>
+<p class="code">      padding: 2rem 0;</p>
+<p class="code">      font-weight: 300;</p>
+<p class="code">      @include  transition-ease;</p>
+<p class="code">&nbsp;</p>
+<p class="code">      &amp;:hover {</p>
+<p class="code">        color:  $secondary-color;</p>
+<p class="code">      }</p>
+<p class="code">    }</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/11.png" width="508" height="519" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<h1>&nbsp;</h1>
+<h1><a name="_Toc165720180">Save and Test index.html</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Click on the hamburger menu now and you should see this</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/12.png" width="432" height="334" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Click on the Hamburger button, in the far upper right-hand  corner of the webpage.</p>
+<h1><a name="_Toc165720181">Slowing down the speed the menu links come onto the  page</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Still inside of the _menu.scss</p>
+<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/13.png" width="144" height="44" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<p class="MsoNormal">You want to write this at the bottom of the page, after  those 4 closing curly braces</p>
+<p class="code">@for $i from 1 through 4 {</p>
+<p class="code">   .menu-nav__item:nth-child(#{$i}) {</p>
+<p class="code">    transition-delay: ($i *  0.1s) + 0.15s;</p>
+<p class="code">  }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165720182">Allowing a variable to work inside of a function</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">We can&rsquo; t just write a variable inside of the @for function.  It will only show you an error if you do. The way that we need to do this is to  wrap the variable inside of a pound sign with curly braces around the variable.</p>
+<p class="MsoNormal">This code will allow it to loop through each link and then  do the transition delay to slow it down and stagger coming in.  You will however, notice that on the  transition-delay, since we wrote the wrap of the<span class="boldBlue"> #</span> sign and curly braces in the argument list of the <span class="boldBlue">nth child</span>, that we are free to use the variable without the added commotion inside of the block of code itself.</p>
+<p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/14.png" width="613" height="298" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Test the index.html to see the links come in one at a time.</p>
 <p class="MsoNormal">&nbsp;</p>
-
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/17.png" width="87" height="109" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now your menu part comes down and covers the page and the  page looks like this, with just a hint of the main home page showing below</p>
-<p class="MsoNormal">&nbsp;</p>
-
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/18.png" width="621" height="361" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Click on that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> again, in the far upper  right-hand corner, and it shows the home page again</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/8-The-Navagation-Sass-Code/Images/19.png" width="625" height="366" class="wideImg">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/15.png" width="621" height="441" class="wideImg">
 <p>&nbsp;</p>
 <p class="pMidBlack">&nbsp;</p>
  
