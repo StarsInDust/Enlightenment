@@ -7,28 +7,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9 Formatting Main Menu Links</title>
+    <title>10 The About Page</title>
 
-<meta name="title" content=" 9 Formatting Main Menu Links ">
+<meta name="title" content="10 The About Page ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" Formatting Menu Links, SASS, CSS, Visual Studio Code, Web Design "/>
+<meta name="keywords" content=" The About Page, SASS, CSS, Visual Studio Code, Web Design "/>
 
 
-<meta name="description" content="This article explains how to format the links in a navigational menu"/>
+<meta name="description" content="This article explains how to create a portfolio About page for the project."/>
 
-<meta name="category" content="Formatting Menu Links, SASS, CSS, Visual Studio Code, Web Design">
+<meta name="category" content="The About Page, SASS, CSS, Visual Studio Code, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Sunday, May 26, 2024" />
+<meta name="revised" content="Monday, May 27, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/9-Formatting-Main-Menu-Links.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/10-The-About-Page.html">
 
 
     
@@ -77,14 +77,17 @@ color:#4472C4;
 letter-spacing:.25pt;
 font-weight:bold;
 }
-span.boldBlueChar {
+span.BlueBoldenChar {
 font-family:"Times New Roman",serif;
 color:blue;
 font-weight:bold;
 }
-span.BlueBoldenChar {
+span.BigDarkBoldChar {
+font-weight:bold;
+}
+span.BoldRedChar {
 font-family:"Times New Roman",serif;
-color:blue;
+color:red;
 font-weight:bold;
 }
 -->
@@ -95,7 +98,7 @@ font-weight:bold;
 <body>
 
 <div class="wrapper">
-<header class="header">Header</header>
+  <header class="header">Header</header>
   
   <ul class="navigation">
    <li><a href="index.html" class="active"title="Home">Home</a></li>
@@ -112,175 +115,224 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~9 Formatting Main Menu Links~</p>
+  <p class="h2Black" >~10 The About Page~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >9/2/2024</p>
+   <p class="articleDate" style="text-align:right" >9/9/2024</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"><a href="#_Toc165720174">Turn on Sass</a></p>
-<p class="tableOfContents"><a href="#_Toc165720175">Writing the code for the   Navigation Links</a></p>
-<p class="tableOfContents"><a href="#_Toc165720176">&amp;__item Code</a></p>
-<p class="tableOfContents"><a href="#_Toc165720177">Writing the JavaScript   code for &amp;__item</a></p>
-<p class="tableOfContents"><a href="#_Toc165720178">Test The index.html page</a></p>
-<p class="tableOfContents"><a href="#_Toc165720179">More code inside of the   Menu nav</a></p>
-<p class="tableOfContents"><a href="#_Toc165720180">Save and Test index.html</a></p>
-<p class="tableOfContents"><a href="#_Toc165720181">Slowing down the speed   the menu links come onto the page</a></p>
-<p class="tableOfContents"><a href="#_Toc165720182">Allowing a variable to   work inside of a function</a></p>
+<p class="tableOfContents"><a href="#_Toc165883192">Turn on Sass</a></p>
+<p class="tableOfContents"><a href="#_Toc165883193">Create your SCSS file for   the about page</a></p>
+<p class="tableOfContents"><a href="#_Toc165883194">Creating the About Page</a></p>
+<p class="tableOfContents"><a href="#_Toc165883195">Changes to the Main   Section</a></p>
+<p class="tableOfContents"><a href="#_Toc165883196">Adding Another Style   Class Rule for Text</a></p>
+<p class="tableOfContents"><a href="#_Toc165883197">Writing the About SASS   file</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/1.png" width="265" height="239" class="responsiveImage">
-<h1><a name="_Hlk165720152"></a><a name="_Toc165481807"></a><a name="_Toc165544276"></a><a name="_Toc165720174">Turn on Sass</a></h1>
+<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/The-About-Page-Code.html" target="_blank">    Go <span class="boldBlue">here</span> to see the Code for the About Pages</a></p>
+
+<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/1.png" width="270" height="241" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc165481807"></a><a name="_Toc165544276"></a><a name="_Toc165883192">Turn on Sass</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal"><span class="MsoIntenseReference">In Visual Studio</span><strong><span style="font-variant:small-caps; letter-spacing:.25pt; color:#4472C4; "> </span></strong></p>
-<p class="MsoNormal">Remember to turn on  your Watch Sass</p>
+<p class="MsoNormal">Remember to turn on your Watch Sass</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/2.png" width="120" height="39" class="responsiveImage">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/2.png" width="121" height="39" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165883193">Create your SCSS file for the about page</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/3.png" width="194" height="197" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165883194">Creating the About Page</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Make sure you are inside of the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">dist</span></span> folder, to create this  file.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/4.png" width="258" height="187" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We are going to create the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">About</span></span> file page</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/5.png" width="243" height="144" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc165720175">Writing the code for the Navigation Links</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Inside of the _menu.scss</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/3.png" width="193" height="45" class="responsiveImage">
-<p class="MsoNormal">We are going to still be inside of the .menu-nav class rule.</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/4.png" width="447" height="298" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="MsoNormal">Even though the menu background will come in from the top of the page, we  want the menu items to come in from the right. The links will start off from  all of the way off the right side of page, when the hamburger button is pushed.</p>
-<p class="MsoNormal">When we add the <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">&amp;open</span></span> we will move them  from the initial position and in from the right. We will also add an active  class.</p>
+<p class="MsoNormal">about.html</p>
 <p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/6.png" width="261" height="252" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc165720176">&amp;__item Code</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="code">&amp;__item{</p>
-<p class="code">&nbsp;</p>
-<p class="code">        transform:  translateX(100vw);</p>
-<p class="code">        @include  transition-ease;</p>
-<p class="code">&nbsp;</p>
-<p class="code">        &amp;.open{</p>
-<p class="code">            transform:  translateX(0);</p>
-<p class="code">&nbsp;</p>
-<p class="code">        }</p>
-<p class="code">&nbsp;</p>
-<p class="code">        &amp;.active &gt; a  {</p>
-<p class="code">            color:  $secondary-color;</p>
-<p class="code">        }</p>
-<p class="code">&nbsp;</p>
-<p class="code">      }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/5.png" width="553" height="602" class="wideImg">
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc165720177">Writing the JavaScript code for &amp;__item</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">in order to write the JavaScript code, we of course need to  be in the JavaScript file.</p>
+<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Copy</span></span> and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">paste</span></span> your <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">index.html</span></span> into your <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">about.html</span></span> page</p>
+<p class="MsoNormal">Change the title to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">About Me</span></span>.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/6.png" width="130" height="36" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<p class="MsoNormal">Add this line to the constants at the top of the JavaScript  file</p>
-<p class="code">const navItems = document.querySelectorAll('.menu-nav__item');</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/7.png" width="623" height="116" class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">These nav items also need to have the class of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">open</span></span> added and  removed from the class list.</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">function toggleMenu() {</p>
-<p class="code">  if(!showMenu) {</p>
-<p class="code">     hamburger.classList.add('open');</p>
-<p class="code">     nav.classList.add('open');</p>
-<p class="code">     menuNav.classList.add('open');</p>
-<p class="code">    <span style="background:yellow; ">navItems.forEach(item =&gt;  item.classList.add('open'));</span></p>
-<p class="code">&nbsp;</p>
-<p class="code">    showMenu = true;</p>
-<p class="code">  } else {</p>
-<p class="code">     hamburger.classList.remove('open');</p>
-<p class="code">     nav.classList.remove('open');</p>
-<p class="code">     menuNav.classList.remove('open');</p>
-<p class="code">    <span style="background:yellow; ">navItems.forEach(item =&gt;  item.classList.remove('open'));</span></p>
-<p class="code">&nbsp;</p>
-<p class="code">    showMenu = false;</p>
-<p class="code">  }</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/8.png" width="619" height="382" class="wideImg">
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc165720178">Test The index.html page</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="code" style="text-indent:-63.0pt;">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/9.png" width="743" height="316" class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc165720179">More code inside of the Menu nav</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/10.png" width="524" height="447" class="wideImg">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/7.png" width="619" height="172" class="wideImg">
 <p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Change the Active Link to Reflect  About Page</span></p>
+<p class="MsoNormal">Since this is the About page, and no longer the home page,  we need to remove active from home in the navigation menu, and instead put it  on the about link.</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Warning,</span></span> make sure  that you place the word <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">active</span></span> inside of the quotation marks, and not outside of them.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/8.png" width="625" height="302" class="wideImg">
+<p class="MsoNormal">When you click on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">hamburger menu</span></span>, you should  now see that <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">About Me </span></span>link is highlighted.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/9.png" width="785" height="513" class="wideImg">
 <p class="BlueBolden">&nbsp;</p>
-<p class="code">&amp;__link {</p>
-<p class="code">      display:  inline-block;</p>
-<p class="code">      font-size: 2rem;</p>
-<p class="code">      text-transform:  uppercase;</p>
-<p class="code">      padding: 2rem 0;</p>
-<p class="code">      font-weight: 300;</p>
-<p class="code">      @include  transition-ease;</p>
+<h1><a name="_Toc165883195">Changes to the Main Section</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Inside of the About.html, you will have a main section. You  want to change the class in the main section to be about</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/10.png" width="625" height="638" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now you want to delete all of the text that sits above the  social-icons class div</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/11.png" width="577" height="223" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Start writing this code in here:</p>
+<p class="code">&lt;div class=&quot;about__bio-image&quot;&gt;</p>
+<p class="code">        &lt;div  class=&quot;about__bio&quot;&gt;</p>
 <p class="code">&nbsp;</p>
-<p class="code">      &amp;:hover {</p>
-<p class="code">        color:  $secondary-color;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&lt;/div&gt;</p>
+<p class="code">      &lt;/div&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/12.png" width="431" height="182" class="responsiveImage">
+<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/The-About-Page-Code.html#_Toc167703699" target="_blank">    Go <span class="boldBlue">here</span> to see the HTML Code for the About Pages</a></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/13.png"  class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc165883196">Adding Another Style Class Rule for Text</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Notice in the code that we just wrote for the about page  that we have a new class for the h2 rule. This class is called text-secondary.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/14.png" width="465" height="148" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.scss</span></span> page</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/15.png" width="149" height="51" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We can write this code right under our rule for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">a</span></span> tag. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/16.png" width="523" height="255" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now our Heading text takes on that secondary color, we had  set up</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/17.png"  class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.scss</span></span> page</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/18.png" width="144" height="47" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/19.png" width="380" height="111" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc165883197">Writing the About SASS file</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/20.png" width="155" height="44" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/The-About-Page-Code.html#_Toc167703700" target="_blank">    Go <span class="boldBlue">here</span> to see the Code for the About Pages</a></p>
+
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="code">.about {</p>
+<p class="code">    padding-bottom: 2rem;</p>
+<p class="code">  </p>
+<p class="code">    &amp;__bio-image {</p>
+<p class="code">      height: 50vh;</p>
+<p class="code">      width: 100%;</p>
+<p class="code">   </p>
+<p class="code">      background: </p>
+<p class="code">     </p>
+<p class="code">&nbsp;</p>
+<p class="code">       </p>
+<p class="code">         url('../img/home-image.jpg ')  ;</p>
+<p class="code">      background-size:  cover;</p>
+<p class="code">      display: flex;</p>
+<p class="code">      flex-direction:  column;</p>
+<p class="code">      align-items: center;</p>
+<p class="code">      justify-content:  flex-end;</p>
+<p class="code">  </p>
+<p class="code">      p {</p>
+<p class="code">        margin-bottom:  2rem;</p>
 <p class="code">      }</p>
 <p class="code">    }</p>
+<p class="code">  </p>
+<p class="code">    &amp;__bio {</p>
+<p class="code">      width: 80%;</p>
+<p class="code">      text-align: center;</p>
+<p class="code">  </p>
+<p class="code">      .text-secondary {</p>
+<p class="code">        padding-bottom:  1rem;</p>
+<p class="code">      }</p>
+<p class="code">    }</p>
+<p class="code">  </p>
+<p class="code">    .jobs {</p>
+<p class="code">      width: 60vw;</p>
+<p class="code">      margin: 2rem auto 0  auto;</p>
+<p class="code">      display: grid;</p>
+<p class="code">       grid-template-columns: 1fr;</p>
+<p class="code">      grid-gap: 2rem;</p>
+<p class="code">  </p>
+<p class="code">      &amp;__job {</p>
+<p class="code">        background:  lighten($primary-color, 10%);</p>
+<p class="code">        padding: 0.5rem;</p>
+<p class="code">        border-bottom: 5px  solid $secondary-color;</p>
+<p class="code">  </p>
+<p class="code">        h2, h3 {</p>
+<p class="code">          margin: 0.5rem 0;</p>
+<p class="code">        }</p>
+<p class="code">        h6 {</p>
+<p class="code">          margin: 0.3rem 0;</p>
+<p class="code">        }</p>
+<p class="code">      }  </p>
+<p class="code">&nbsp;</p>
+<p class="code">    }</p>
+<p class="code">  </p>
+<p class="code">    .social-icons {</p>
+<p class="code">          display: flex;</p>
+<p class="code">          flex-direction:  column;  </p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">      footer {</p>
+<p class="code">        </p>
+<p class="code">&nbsp;</p>
+<p class="code">        </p>
+<p class="code">       </p>
+<p class="code">        transform:</p>
+<p class="code">          rotate(90deg)</p>
+<p class="code">          translate(-7rem,  1rem);</p>
+<p class="code">&nbsp;</p>
+<p class="code">          </p>
+<p class="code">&nbsp;</p>
+<p class="code">      }</p>
+<p class="code">&nbsp;</p>
+<p class="code">      </p>
+<p class="code">      </p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Probably the most interesting part of the code above is when  we come to the footer, where we turn every thing sideways. The translate of  -7rem, and 1rem, is a positioning that worked well for me. You may find that  you need to move these numbers around to get the copyright and the social-icons  to be positioned correctly on the page for you.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/21.png" width="508" height="427" class="wideImg">
 <p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/11.png" width="508" height="519" class="responsiveImage">
-<p class="code">&nbsp;</p>
-<h1>&nbsp;</h1>
-<h1><a name="_Toc165720180">Save and Test index.html</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Click on the hamburger menu now and you should see this</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/12.png" width="432" height="334" class="responsiveImage">
+<p class="MsoNormal">Testing the About page now, you should have this.</p>
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc165720181">Slowing down the speed the menu links come onto the  page</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Still inside of the _menu.scss</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/13.png" width="144" height="44" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<p class="MsoNormal">You want to write this at the bottom of the page, after  those 4 closing curly braces</p>
-<p class="code">@for $i from 1 through 4 {</p>
-<p class="code">   .menu-nav__item:nth-child(#{$i}) {</p>
-<p class="code">    transition-delay: ($i *  0.1s) + 0.15s;</p>
-<p class="code">  }</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc165720182">Allowing a variable to work inside of a function</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">We can&rsquo; t just write a variable inside of the @for function.  It will only show you an error if you do. The way that we need to do this is to  wrap the variable inside of a pound sign with curly braces around the variable.</p>
-<p class="MsoNormal">This code will allow it to loop through each link and then  do the transition delay to slow it down and stagger coming in.  You will however, notice that on the  transition-delay, since we wrote the wrap of the<span class="boldBlue"> #</span> sign and curly braces in the argument list of the <span class="boldBlue">nth child</span>, that we are free to use the variable without the added commotion inside of the block of code itself.</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/14.png" width="613" height="298" class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">Test the index.html to see the links come in one at a time.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/9-Formating-Main-Menu-Links/Images/15.png" width="621" height="441" class="wideImg">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/22.png" class="wideImg">
 <p>&nbsp;</p>
+
+
+<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/The-About-Page-Code.html" target="_blank">    Go <span class="boldBlue">here</span> to see the Code for the About Pages</a></p>
+
+
 <p class="pMidBlack">&nbsp;</p>
  
   <!--Main Article -->
