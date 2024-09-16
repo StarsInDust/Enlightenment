@@ -7,28 +7,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10 The About Page</title>
+    <title>11 The Project Page</title>
 
-<meta name="title" content="10 The About Page ">
+<meta name="title" content="11 The Project Page ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" The About Page, SASS, CSS, Visual Studio Code, Web Design "/>
+<meta name="keywords" content=" Project Page, SASS, CSS, Visual Studio Code, Web Design "/>
 
 
-<meta name="description" content="This article explains how to create a portfolio About page for the project."/>
+<meta name="description" content="This article explains how to create a project page for a portfolio website"/>
 
-<meta name="category" content="The About Page, SASS, CSS, Visual Studio Code, Web Design">
+<meta name="category" content="Creating a Project Page, SASS, CSS, Visual Studio Code, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Monday, May 27, 2024" />
+<meta name="revised" content="Tuesday, May 28, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/10-The-About-Page.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/11-The-Project-Page.html">
+
 
 
     
@@ -71,10 +72,25 @@ line-height:115%;
 font-size:11.0pt;
 font-family:"Calibri",sans-serif;
 }
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
+}
 span.MsoIntenseReference {
 font-variant:small-caps;
 color:#4472C4;
 letter-spacing:.25pt;
+font-weight:bold;
+}
+span.boldBlueChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
 font-weight:bold;
 }
 span.BlueBoldenChar {
@@ -82,12 +98,8 @@ font-family:"Times New Roman",serif;
 color:blue;
 font-weight:bold;
 }
-span.BigDarkBoldChar {
-font-weight:bold;
-}
-span.BoldRedChar {
-font-family:"Times New Roman",serif;
-color:red;
+span.BoldMaroonListChar {
+color:#600020;
 font-weight:bold;
 }
 -->
@@ -115,224 +127,244 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~10 The About Page~</p>
+  <p class="h2Black" >~11 The Project Page~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >9/9/2024</p>
+   <p class="articleDate" style="text-align:right" >9/16/2024</p>
    
    <br>
 <br>
 
-<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"><a href="#_Toc165883192">Turn on Sass</a></p>
-<p class="tableOfContents"><a href="#_Toc165883193">Create your SCSS file for   the about page</a></p>
-<p class="tableOfContents"><a href="#_Toc165883194">Creating the About Page</a></p>
-<p class="tableOfContents"><a href="#_Toc165883195">Changes to the Main   Section</a></p>
-<p class="tableOfContents"><a href="#_Toc165883196">Adding Another Style   Class Rule for Text</a></p>
-<p class="tableOfContents"><a href="#_Toc165883197">Writing the About SASS   file</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/The-About-Page-Code.html" target="_blank">    Go <span class="boldBlue">here</span> to see the Code for the About Pages</a></p>
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167789377">Turn   on Sass</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167789378">Creating   the Project Page</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167789379">Copy   the About Page and Paste into the Project Page</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167789380">Create   the SASS Partial File</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167789381">Testing</a></span></p>
+<p class="MsoNormal">&nbsp;</p>
 
+<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/The-Code-For-The-Project-Page.html" target="_blank">Go <span class="boldBlue">Here</span> to see the code for the Project Page</a></p>
+
+
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/1.png" width="269" height="241" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/1.png" width="270" height="241" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc165481807"></a><a name="_Toc165544276"></a><a name="_Toc165883192">Turn on Sass</a></h1>
+<h1><a name="_Toc167789377">Turn on Sass</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal"><span class="MsoIntenseReference">In Visual Studio</span><strong><span style="font-variant:small-caps; letter-spacing:.25pt; color:#4472C4; "> </span></strong></p>
-<p class="MsoNormal">Remember to turn on your Watch Sass</p>
+<p class="MsoNormal">Remember to turn on  your Watch Sass</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/2.png" width="121" height="39" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc165883193">Create your SCSS file for the about page</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/3.png" width="194" height="197" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc165883194">Creating the About Page</a></h1>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/2.png" width="121" height="37" class="responsiveImage">
+<h1><a name="_Toc167789378">Creating the Project Page</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Make sure you are inside of the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">dist</span></span> folder, to create this  file.</p>
+<p class="MsoNormal">We want to create a new file inside of the <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">dist</span></span> folder.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/4.png" width="258" height="187" class="responsiveImage">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/3.png" width="350" height="199" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">We are going to create the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">About</span></span> file page</p>
+<p class="MsoNormal">Create a new file</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/5.png" width="243" height="144" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">about.html</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/4.png" width="376" height="144" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/6.png" width="261" height="252" class="responsiveImage">
+<p class="MsoNormal">Name this file <span class="boldBlue">projects.html</span></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/5.png" width="332" height="245" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Copy</span></span> and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">paste</span></span> your <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">index.html</span></span> into your <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">about.html</span></span> page</p>
-<p class="MsoNormal">Change the title to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">About Me</span></span>.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/7.png" width="619" height="172" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Change the Active Link to Reflect  About Page</span></p>
-<p class="MsoNormal">Since this is the About page, and no longer the home page,  we need to remove active from home in the navigation menu, and instead put it  on the about link.</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Warning,</span></span> make sure  that you place the word <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">active</span></span> inside of the quotation marks, and not outside of them.</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/8.png" width="625" height="302" class="wideImg">
-<p class="MsoNormal">When you click on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">hamburger menu</span></span>, you should  now see that <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">About Me </span></span>link is highlighted.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/9.png" width="785" height="513" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc165883195">Changes to the Main Section</a></h1>
+<h1><a name="_Toc167789379">Copy the About Page and Paste into the Project Page</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Inside of the About.html, you will have a main section. You  want to change the class in the main section to be about</p>
+<p class="MsoNormal">We are just going to do a <span class="blueEmphasis">copy and paste</span> from the last html  page that we made. Remember in the last tutorial we created the <span class="boldBlue">about.html</span> page. We will be using the same code from that page, in order to have a starting point for the project page.</p>
+<p class="MsoNormal">Start out by changing the title on the new project page to  reflect this page</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/10.png" width="625" height="638" class="wideImg">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/6.png" width="621" height="146" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now you want to delete all of the text that sits above the  social-icons class div</p>
+<p class="MsoNormal">Take the <span class="boldBlue">active</span> and place it on the project link.</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Watch it</span></span>, make sure  <span class="boldBlue">active</span> is placed inside of the quotation marks and not outside of it.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/11.png" width="577" height="223" class="wideImg">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/7.png" width="536" height="96" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Start writing this code in here:</p>
-<p class="code">&lt;div class=&quot;about__bio-image&quot;&gt;</p>
-<p class="code">        &lt;div  class=&quot;about__bio&quot;&gt;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Test the Menu</span></p>
+<p class="MsoNormal">You can test the page now by clicking on the hamburger menu  and making sure that the project link is indeed showing up in our highlighted  color.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/8.png"  class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Make changes to the Class  Names</span></p>
+<p class="MsoNormal">Go inside of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">main</span></span> and then rename the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">section</span></span> to be the  class of <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">projects</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/9.png" width="321" height="63" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Rename that first <span class="boldBlueChar"><span style="font-size:12.0pt; ">div</span></span> to be a class of <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">projects__bio-image</span></span>.</p>
+<p class="MsoNormal">Delete that inside div with the text that was in it.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/10.png" width="470" height="128" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Insert text</span></p>
+<p class="MsoNormal">Where we deleted the text, we will add an h1 tag</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/11.png" width="473" height="165" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Remove all of the Jobs</span></p>
+<p class="MsoNormal">We want to remove all of the code that will place the jobs  on the page</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/12.png" width="545" height="189" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Test the Page</span></p>
+<p class="MsoNormal">If we look at the page now it will look like this. </p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Remember</span></span>, since we  changed the section to have a class of projects, we do not have very much in  the way of styles…Yet.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/13.png" width="404" height="260" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Create the div for project  items and projects item</span></p>
+<p class="MsoNormal">We want a div to hold all of the items, so notice the added <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">s </span></span>at the end of the word <span class="boldBlue">items</span>, in the  outer div, and then an inner div of just <span class="boldBlue">item</span>, to hold each item.</p>
+<p class="code">&lt;main&gt;</p>
+<p class="code">    &lt;section  class=&quot;projects&quot;&gt;</p>
+<p class="code">      &lt;div  class=&quot;projects__bio-image&quot;&gt;</p>
+<p class="code">        </p>
+<p class="code">&lt;h1 class=&quot;text-secondary&quot;&gt;My Projects&lt;/h1&gt;</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
-<p class="code">&lt;/div&gt;</p>
+<p class="code">&nbsp;</p>
 <p class="code">      &lt;/div&gt;</p>
 <p class="code">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/12.png" width="431" height="182" class="responsiveImage">
-<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/The-About-Page-Code.html#_Toc167703699" target="_blank">    Go <span class="boldBlue">here</span> to see the HTML Code for the About Pages</a></p>
+<p class="code">&lt;div class=&quot;projects__items&quot;&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &lt;div  class=&quot;projects__item&quot;&gt;</p>
+<p class="code">    </p>
+<p class="code">    &lt;/div&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&lt;/div&gt;</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/14.png" width="547" height="298" class="responsiveImage">
 <p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/13.png"  class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc165883196">Adding Another Style Class Rule for Text</a></h1>
+<p class="MsoNormal"><span class="MsoIntenseReference">To Create the items</span></p>
+<p class="code"><span class="MsoIntenseReference"><span style="font-variant:normal !important; font-weight:normal; ">&nbsp;</span></span></p>
+<p class="code"><span class="MsoIntenseReference">&lt;div  class=&quot;projects__items&quot;&gt;</span><span class="MsoIntenseReference"><span style="font-weight:normal; "> </span></span></p>
+<p class="code"><span class="MsoIntenseReference">        &lt;div  class=&quot;projects__item&quot;&gt;</span><span class="MsoIntenseReference"><span style="font-weight:normal; "> </span></span></p>
+<p class="code"><span class="MsoIntenseReference">          &lt;img  src=&quot;img/project-1.jpg&quot; alt=&quot;My Project&quot;&gt;</span><span class="MsoIntenseReference"><span style="font-weight:normal; "> </span></span></p>
+<p class="code"><span class="MsoIntenseReference">          &lt;div  class=&quot;projects__btns&quot;&gt;</span><span class="MsoIntenseReference"><span style="font-weight:normal; "> </span></span></p>
+<p class="code"><span class="MsoIntenseReference">            &lt;a href=&quot;#!&quot;  class=&quot;projects__btn&quot;&gt;</span><span class="MsoIntenseReference"><span style="font-weight:normal; "> </span></span></p>
+<p class="code"><span class="MsoIntenseReference">              &lt;i class=&quot;fas  fa-eye&quot;&gt;&lt;/i&gt; Preview</span><span class="MsoIntenseReference"><span style="font-weight:normal; "> </span></span></p>
+<p class="code"><span class="MsoIntenseReference">            &lt;/a&gt;</span><span class="MsoIntenseReference"><span style="font-weight:normal; "> </span></span></p>
+<p class="code"><span class="MsoIntenseReference">            &lt;a href=&quot;#!&quot;  class=&quot;projects__btn&quot;&gt;</span><span class="MsoIntenseReference"><span style="font-weight:normal; "> </span></span></p>
+<p class="code"><span class="MsoIntenseReference">              &lt;i class=&quot;fab  fa-github&quot;&gt;&lt;/i&gt; Github</span><span class="MsoIntenseReference"><span style="font-weight:normal; "> </span></span></p>
+<p class="code"><span class="MsoIntenseReference">            &lt;/a&gt;</span><span class="MsoIntenseReference"><span style="font-weight:normal; "> </span></span></p>
+<p class="code"><span class="MsoIntenseReference">          &lt;/div&gt;</span><span class="MsoIntenseReference"><span style="font-weight:normal; "> </span></span></p>
+<p class="code"><span class="MsoIntenseReference"><span style="font-weight:normal; ">&nbsp;</span></span></p>
+<p class="code"><span class="MsoIntenseReference"><span style="font-weight:normal; ">&nbsp;</span></span></p>
+<p class="code"><span class="MsoIntenseReference"><span style="font-weight:normal; ">&nbsp;</span></span></p>
+<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/15.png" width="527" height="216" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<p class="code"><span class="MsoIntenseReference"><span style="font-weight:normal; ">&nbsp;</span></span></p>
+<p class="MsoNormal">Now we want to copy that particular code 5 more times and  then change each number to the image.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/16.png" width="352" height="62" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Testing</span></p>
+<p class="MsoNormal">If you test it now, since we have no real styling,  everything will come in full size and huge.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/17.png" width="466" height="302" class="responsiveImage">
+<h1><a name="_Toc167789380">Create the SASS Partial File</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Notice in the code that we just wrote for the about page  that we have a new class for the h2 rule. This class is called text-secondary.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/14.png" width="465" height="148" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Go to the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.scss</span></span> page</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/15.png" width="149" height="51" class="responsiveImage">
+<p class="MsoNormal">Inside of the <span class="boldBlue">scss</span> folder, create a new sass file.</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">We can write this code right under our rule for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">a</span></span> tag. </p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/16.png" width="523" height="255" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now our Heading text takes on that secondary color, we had  set up</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/17.png"  class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Go to the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.scss</span></span> page</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/18.png" width="144" height="47" class="responsiveImage">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/18.png" width="359" height="422" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/19.png" width="380" height="111" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Go to the <span class="boldBlue">main.scss </span>file</p>
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc165883197">Writing the About SASS file</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/19.png" width="151" height="70" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/20.png" width="155" height="44" class="responsiveImage">
+<p class="MsoNormal">Import the partial <span class="boldBlue">projects.scss </span>file up at the top of it.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/The-About-Page-Code.html#_Toc167703700" target="_blank">    Go <span class="boldBlue">here</span> to see the Code for the About Pages</a></p>
-
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="code">.about {</p>
-<p class="code">    padding-bottom: 2rem;</p>
-<p class="code">  </p>
-<p class="code">    &amp;__bio-image {</p>
-<p class="code">      height: 50vh;</p>
-<p class="code">      width: 100%;</p>
-<p class="code">   </p>
-<p class="code">      background: </p>
-<p class="code">     </p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/20.png" width="284" height="133" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Take the About.scss, and  copy and paste it into the project.scss</span></p>
+<p class="MsoNormal">There will only be a few changes between these two files, so  we can start off with a copy of the <span class="boldBlue">about.scss</span> file.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Change the class name to be <span class="boldBlue">.projects</span> from about</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/21.png" width="522" height="211" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Change the height to be <span class="boldBlue">60vh</span></p>
+<p class="MsoNormal">This height thing will depend on your own image and what you want displayed, but I changed this to 60vh, because I found that my Logo did not show all of the way at a shorter height, when at full screen. I had left this logo fitting the space issue in on purpose, because realizing that things are not quite working right is something that will occasionally come up in your own projects, and will need to be remedied in your own SASS from time to time.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/22.png" width="627" height="442" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">This change will need to be made on the <span class="boldBlue">about.scss </span>too.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/23.png" width="546" height="255" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now the SD Logo fits inside of the header.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/24.png" width="502" height="220" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Scroll down until you find the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">p </span></span>rule.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/25.png" width="379" height="95" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Write this rule in where that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">p </span></span>tag was </p>
+<p class="code">.text-secondary {</p>
+<p class="code">        font-size: 2 rem;</p>
+<p class="code">        margin-bottom: 2  rem;</p>
+<p class="code">      }</p>
 <p class="code">&nbsp;</p>
-<p class="code">       </p>
-<p class="code">         url('../img/home-image.jpg ')  ;</p>
-<p class="code">      background-size:  cover;</p>
-<p class="code">      display: flex;</p>
-<p class="code">      flex-direction:  column;</p>
-<p class="code">      align-items: center;</p>
-<p class="code">      justify-content:  flex-end;</p>
-<p class="code">  </p>
-<p class="code">      p {</p>
-<p class="code">        margin-bottom:  2rem;</p>
-<p class="code">      }</p>
-<p class="code">    }</p>
-<p class="code">  </p>
-<p class="code">    &amp;__bio {</p>
-<p class="code">      width: 80%;</p>
-<p class="code">      text-align: center;</p>
-<p class="code">  </p>
-<p class="code">      .text-secondary {</p>
-<p class="code">        padding-bottom:  1rem;</p>
-<p class="code">      }</p>
-<p class="code">    }</p>
-<p class="code">  </p>
-<p class="code">    .jobs {</p>
+<p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/26.png" width="270" height="90" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">We want to remove this code here</p>
+<p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/27.png" width="369" height="154" class="responsiveImage">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Change .jobs rule to <span class="boldBlue">&amp;__items</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/28.png" width="465" height="106" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Remove the <span class="BoldRed">&amp;__jobs</span> Section</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/29.png" width="605" height="398" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&amp;__items {</p>
 <p class="code">      width: 60vw;</p>
 <p class="code">      margin: 2rem auto 0  auto;</p>
 <p class="code">      display: grid;</p>
 <p class="code">       grid-template-columns: 1fr;</p>
-<p class="code">      grid-gap: 2rem;</p>
-<p class="code">  </p>
-<p class="code">      &amp;__job {</p>
-<p class="code">        background:  lighten($primary-color, 10%);</p>
-<p class="code">        padding: 0.5rem;</p>
+<p class="code">      grid-gap: 2rem;  </p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    &amp;__item {</p>
+<p class="code">        position:relative;</p>
 <p class="code">        border-bottom: 5px  solid $secondary-color;</p>
-<p class="code">  </p>
-<p class="code">        h2, h3 {</p>
-<p class="code">          margin: 0.5rem 0;</p>
+<p class="code">        overflow:hidden;</p>
+<p class="code">        cursor:pointer;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        img {</p>
+<p class="code">            width: 100%</p>
 <p class="code">        }</p>
-<p class="code">        h6 {</p>
-<p class="code">          margin: 0.3rem 0;</p>
-<p class="code">        }</p>
-<p class="code">      }  </p>
-<p class="code">&nbsp;</p>
-<p class="code">    }</p>
-<p class="code">  </p>
-<p class="code">    .social-icons {</p>
-<p class="code">          display: flex;</p>
-<p class="code">          flex-direction:  column;  </p>
-<p class="code">        }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">      footer {</p>
-<p class="code">        </p>
-<p class="code">&nbsp;</p>
-<p class="code">        </p>
-<p class="code">       </p>
-<p class="code">        transform:</p>
-<p class="code">          rotate(90deg)</p>
-<p class="code">          translate(-7rem,  1rem);</p>
-<p class="code">&nbsp;</p>
-<p class="code">          </p>
-<p class="code">&nbsp;</p>
-<p class="code">      }</p>
-<p class="code">&nbsp;</p>
-<p class="code">      </p>
-<p class="code">      </p>
 <p class="code">    }</p>
 <p class="code">&nbsp;</p>
-<p class="MsoNormal">Probably the most interesting part of the code above is when  we come to the footer, where we turn every thing sideways. The translate of  -7rem, and 1rem, is a positioning that worked well for me. You may find that  you need to move these numbers around to get the copyright and the social-icons  to be positioned correctly on the page for you.</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/21.png" width="508" height="427" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Testing the About page now, you should have this.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/Images/22.png" class="wideImg">
-<p>&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/30.png" width="561" height="363" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc167789381">Testing</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
 
-
-<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/10-The-About-Page/The-About-Page-Code.html" target="_blank">    Go <span class="boldBlue">here</span> to see the Code for the About Pages</a></p>
-
-
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/Images/31.png" width="264" height="375" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/11-The-Project-Page/The-Code-For-The-Project-Page.html" target="_blank">Go <span class="boldBlue">Here</span> to see the code for the Project Page</a></p>
 <p class="pMidBlack">&nbsp;</p>
  
   <!--Main Article -->
