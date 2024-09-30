@@ -7,30 +7,37 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12 Creating a Project Page Overlay</title>
-
-<link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
-
-<meta name="title" content="12 Creating a Project Page Overlay">
+    <title>13 The Contact Page</title>
+    
+    
+    <meta name="title" content="13 The Contact Page ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="Transparent Page Overlay, SASS, Visual Studio, CSS, Web Design"/>
+<meta name="keywords" content="A Contact Page, SASS, Visual Studio, CSS, Web Design"/>
 
 
-<meta name="description" content="This article explains how to create a slightly transparent overlay for a section of your page’s content"/>
+<meta name="description" content="This article explains how to create a contact page for your project."/>
 
-<meta name="category" content="Creating a Project Page Overlay, SASS, CSS, Visual Studio Code, Web Design">
+<meta name="category" content="Creating a Contact Page, SASS, CSS, Visual Studio Code, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Wednesday, May 29, 2024" />
+<meta name="revised" content="Friday, May 31, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/12-Creating-A-Project-Page-Overlay.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/13-The-Contact-Page.html">
+
+    
+    
+    
+    
+    
+    
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
 
 
     
@@ -73,15 +80,20 @@ line-height:115%;
 font-size:11.0pt;
 font-family:"Calibri",sans-serif;
 }
-span.MsoHyperlink {
-color:#0563C1;
-text-decoration:underline;
-text-underline:single;
-}
 span.MsoIntenseReference {
 font-variant:small-caps;
 color:#4472C4;
 letter-spacing:.25pt;
+font-weight:bold;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
 font-weight:bold;
 }
 -->
@@ -92,7 +104,7 @@ font-weight:bold;
 <body>
 
 <div class="wrapper">
-<header class="header">Header</header>
+  <header class="header">Header</header>
   
   <ul class="navigation">
    <li><a href="index.html" class="active"title="Home">Home</a></li>
@@ -109,141 +121,214 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~12 Creating a Project Page Overlay~</p>
+  <p class="h2Black" >~13 The Contact Page~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >9/23/2024</p>
+   <p class="articleDate" style="text-align:right" >9/30/2024</p>
    
    <br>
 <br>
 
-<p class="MsoNormal">&nbsp;</p>
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863914">Turn   on Sass</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863915">Creating   the pseudo element in the &amp;__item rule</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863916">Create   the hover event to show the item</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863917">Styling   the buttons</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863918">Targeting   Individual buttons</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863919">Testing   the Project</a></span></p>
-<p class="MsoNormal">&nbsp;</p>
+<p class="tableOfContents"><a href="#_Toc166321755">Turn on Sass</a></p>
+<p class="tableOfContents"><a href="#_Toc166321756">Create the Contact HTML   File</a></p>
+<p class="tableOfContents"><a href="#_Toc166321757">Copy the Projects.html   for the Contact.html file</a></p>
+<p class="tableOfContents"><a href="#_Toc166321758">Make Changes to the   Copied New HTML Page</a></p>
+<p class="tableOfContents"><a href="#_Toc166321759">Test the Page</a></p>
+<p class="tableOfContents"><a href="#_Toc166321760">Create the SASS Partial</a></p>
+<p class="tableOfContents"><a href="#_Toc166321761">Copy And Paste the   home.scss to the contact.scss<span style="display:none; text-underline:none; color:windowtext; text-decoration:none; ">. </span></a></p>
+<p class="tableOfContents"><a href="#_Toc166321762">Add the include into the   top of the main.scss</a></p>
+<p class="tableOfContents"><a href="#_Toc166321763">Testing the page</a></p>
 <p class="MsoNormal">&nbsp;</p>
 
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/Images/1.png" width="269" height="239" class="responsiveImage">
-<h1><a name="_Toc167863884"></a><a name="_Toc167863914">Turn on Sass</a></h1>
+<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Code-For-Contact-Page.html" target="_blank">To get to the code for this tutorial</a></p>
+
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/1.png" width="269" height="240" class="responsiveImage">
+<h1><a name="_Toc165481807"></a><a name="_Toc165544276"></a><a name="_Toc166321755">Turn on Sass</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal"><span class="MsoIntenseReference">In Visual Studio</span><strong><span style="font-variant:small-caps; letter-spacing:.25pt; color:#4472C4; "> </span></strong></p>
 <p class="MsoNormal">Remember to turn on your Watch Sass</p>
 <p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/Images/2.png" width="120" height="39" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<h1><a name="_Toc167863885"></a><a name="_Toc167863915">Creating the pseudo element in the &amp;__item rule</a></h1>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/2.png" width="118" height="41">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc166321756">Create the Contact HTML File</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">This code below will be creating the overlay that will come  up over the image.</p>
+<p class="MsoNormal">As usual, we create the new file that will contain our new  contact page.</p>
+<p class="MsoNormal">Inside the dist folder, create a new file.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Inside of the projects.scss</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/3.png" width="562" height="549" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/Images/3.png" width="178" height="69" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">This code will be written inside of the &amp;__item, and  right below the closing brace for the img tag code.</p>
+<h1><a name="_Toc166321757">Copy the Projects.html for the Contact.html file</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="code">&amp;::after {</p>
-<p class="code">&nbsp;</p>
-<p class="code">          content:'';</p>
-<p class="code">           position:absolute;</p>
-<p class="code">          top: 100%;</p>
-<p class="code">          left:0;</p>
-<p class="code">          height: 100%;</p>
-<p class="code">          width: 100%;</p>
-<p class="code">           background:$secondary-color;</p>
-<p class="code">          opacity: 0;</p>
-<p class="code">          @include  transition-ease;</p>
-<p class="code">&nbsp;</p>
-<p class="code">        }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/Images/4.png" width="515" height="424" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">If you try and see the overlay right now on the page, it  will not be showing, because the item is hidden to begin with.</p>
-<h1><a name="_Toc167863886"></a><a name="_Toc167863916">Create the hover event to show the item</a></h1>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/4.png" width="323" height="295" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc166321758">Make Changes to the Copied New HTML Page</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Change the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Title</span></span></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">This will move the orange overlay upward.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/5.png" width="317" height="75" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="code">&amp;:hover {</p>
-<p class="code">          &amp;::after {</p>
-<p class="code">            top: 0;</p>
-<p class="code">            opacity: 0.9;</p>
-<p class="code">          }</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/Images/5.png" width="526" height="532" class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">Now if you hover over it now, it will look like this</p>
+<p class="MsoNormal">Change the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">active</span></span> to be on the new  contact menu link.</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Warning,</span></span> make sure  active is placed within the quotation marks of the class.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/Images/6.png" width="624" height="484" class="wideImg">
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/6.png" width="554" height="111" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Change the section class to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">contact</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/7.png" width="320" height="90" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Remove</span></span> this section of  <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">code</span></span> from inside of the section contact class</p>
+<p class="MsoNormal">Yes, just remove the <span class="boldBlue">code</span> inside of the section, up to the div for  the social icons, as the section div, itself, is not closed   out until after the footer on the page.</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/8.png"  class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Write this code inside of that section</p>
+<p class="code">&lt;h2&gt;Contact Me...&lt;/h2&gt;</p>
 <p class="code">&nbsp;</p>
-<h1><a name="_Toc167863887"></a><a name="_Toc167863917">Styling the buttons</a></h1>
+<p class="code">        &lt;div  class=&quot;contact__list&quot;&gt;</p>
+<p class="code">            &lt;div  class=&quot;contact__email&quot;&gt;</p>
+<p class="code">                &lt;i  class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt;Email</p>
+<p class="code">                &lt;div  class=&quot;text-secondary&quot;&gt;email@email.com&lt;/div&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">            &lt;/div&gt;</p>
+<p class="code">        &lt;/div&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/9.png" width="620" height="239" class="wideImg">
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Copy and paste those two divs under the h2 tag, and paste it  two more times to make three of them. Then make the following changes to the  last two sections of divs.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">&lt;section class=&quot;contact&quot;&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        &lt;h2&gt;Contact  Me...&lt;/h2&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        &lt;div  class=&quot;contact__list&quot;&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">            &lt;div  class=&quot;contact__email&quot;&gt;</p>
+<p class="code">                &lt;i  class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt;Email</p>
+<p class="code">                &lt;div  class=&quot;text-secondary&quot;&gt;email@email.com&lt;/div&gt;</p>
+<p class="code">            &lt;/div&gt;</p>
+<p class="code">        </p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        </p>
+<p class="code">            &lt;div  class=&quot;contact__phone&quot;&gt;</p>
+<p class="code">                &lt;i  class=&quot;fas fa-mobile-alt&quot;&gt;&lt;/i&gt;Phone</p>
+<p class="code">                &lt;div  class=&quot;text-secondary&quot;&gt;123-456-7890&lt;/div&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">            &lt;/div&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        </p>
+<p class="code">&nbsp;</p>
+<p class="code">     </p>
+<p class="code">            &lt;div  class=&quot;contact__address&quot;&gt;</p>
+<p class="code">                &lt;i  class=&quot;fas fa-marker-alt&quot;&gt;&lt;/i&gt;Address</p>
+<p class="code">                &lt;div  class=&quot;text-secondary&quot;&gt;1234 Somewhere&lt;/div&gt;</p>
+<p class="code">            &lt;/div&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">        &lt;/div&gt;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Notice that the contact__list class div encircles the  individual sections of divs.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/10.png"  class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc166321759">Test the Page</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Ok, now if you look at this page, it will really look like  crap. Yeah, no CSS…Yet.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/11.png" width="392" height="323" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">But if you click the hamburger menu, you should see that the  contact page is highlighted.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/12.png" width="398" height="324" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc166321760">Create the SASS Partial</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Inside of the scss folder, we will be creating our<span class="boldBlue"> contact.scss</span> file</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/13.png" width="228" height="136" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/14.png"  class="wideImg">
+<h1><a name="_Toc166321761">Copy And Paste the home.scss to the contact.scss</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">since it will be very similar</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/15.png" width="352" height="290" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc166321762">Add the include into the top of the main.scss</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal" >Here you want to remember to <span class="boldBlue">import</span> the contact file at the top of your <span class="boldBlue">main.scss </span>file</p>
 
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">We are now going to styling the buttons on the page which  are here</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/Images/7.png" width="209" height="108" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">We will be writing this code right above the code for the  .social-icons</p>
+
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/16.png" width="309" height="184" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="code">&amp;__btns {</p>
-<p class="code">    position: absolute;</p>
-<p class="code">    top:0;</p>
-<p class="code">    height: 100%;</p>
-<p class="code">    width:100%;</p>
-<p class="code">    z-index: 1;</p>
-<p class="code">    display: grid;</p>
-<p class="code">    grid-template-columns:  repeat(2,1fr);</p>
-<p class="code">    align-items: center;</p>
-<p class="code">    text-align: center;</p>
-<p class="code">  }</p>
+<p class="MsoNormal">Change the name of the rule in your <span class="boldBlue">_contact.scss </span>to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">.contact</span></span>.</p>
+<p class="MsoNormal">It was home, and we need it to be .contact.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/17.png" width="280" height="83" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Remove this aligning to center code</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/18.png" width="497" height="225" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Add this code in where those two rules were.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/19.png" width="495" height="162" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">I did some changes to the logo in my image for this page, so  I wanted it more customized to fit the layout. You will see that I named this image to be <span class="boldBlue">contact-image.jpg</span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/20.png" width="619" height="282" class="wideImg">
+<p class="MsoNormal">Centering the logo allowed it to fit the page better when I  reduced it to a cell phone size.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/21.png"  class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Then just remove the rest of the code, but remember to leave  the closing curly brace of the contact rule.</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/Images/8.png" width="490" height="264" class="wideImg">
+<p class="MsoNormal">Add some room before the closing brace, we will be adding  some more code to this rule.</p>
+<p class="MsoNormal">Here, we are adding an h2 rule. The &amp;__list will be  styling the contact information on the page in a grid, and lastly we are  styling the social icons.</p>
+<p class="MsoNormal">    h2 {</p>
+<p class="MsoNormal">      font-size: 3rem;</p>
+<p class="MsoNormal">      margin-bottom:  2rem;</p>
+<p class="MsoNormal">    }</p>
+<p class="MsoNormal">  </p>
+<p class="MsoNormal">    &amp;__list {</p>
+<p class="MsoNormal">      display: grid;</p>
+<p class="MsoNormal">       grid-template-columns: 1fr;</p>
+<p class="MsoNormal">      grid-gap: 2rem;</p>
+<p class="MsoNormal">      font-size:  1.5rem;</p>
+<p class="MsoNormal">    }</p>
+<p class="MsoNormal">  </p>
+<p class="MsoNormal">    .social-icons {</p>
+<p class="MsoNormal">      position:  initial;</p>
+<p class="MsoNormal">      margin-top:  2rem;</p>
+<p class="MsoNormal">    }</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now if you test your projects page, it should look like this.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/Images/9.png" width="623" height="588" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc167863888"></a><a name="_Toc167863918">Targeting Individual buttons</a></h1>
+<h1><a name="_Toc166321763">Testing the page</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="code">&amp;__btn {</p>
-<p class="code">  </p>
-<p class="code">    color: #fff;</p>
-<p class="code">    @include  transition-ease;</p>
-<p class="code">  </p>
-<p class="code">      &amp;:hover {</p>
-<p class="code">      color:#000;</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/Images/10.png" width="424" height="180" class="responsiveImage">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc167863889"></a><a name="_Toc167863919">Testing the Project</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">This is what this will look like if you hover over both the  image and one of the buttons. The button color is white, and it will change to  black, when it is hovered over.</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Images/22.png"  class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/12-Creating-A-Project-Page-Overlay/Images/11.png" width="460" height="472" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/13-The-Contact-Page/Code-For-Contact-Page.html" target="_blank">To get to the code for this tutorial</a></p>
+
 <p class="MsoNormal">&nbsp;</p>
 <p>&nbsp;</p>
 <p class="pMidBlack">&nbsp;</p>
@@ -266,7 +351,7 @@ font-weight:bold;
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-  </aside>
+</aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
