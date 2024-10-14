@@ -7,30 +7,33 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>14 Responsive Sites</title>
+    <title>15 Setting up the Web site on Git Hub</title>
     
     
-   <meta name="title" content="14 Responsive sites ">
+    <meta name="title" content="15 Setting Up on GitHub ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="Responsive Sites, SASS, Visual Studio, CSS, Web Design"/>
+<meta name="keywords" content=" Setting up on GitHub, SASS, CSS, Visual Studio Code, Web Design "/>
 
 
-<meta name="description" content="This article explains how to make your website responsive so they can be viewed accurately at different device screen sizes."/>
+<meta name="description" content="This article explains how to publish your website onto the free servers of GitHub"/>
 
-<meta name="category" content="Creating Responsive Sites, SASS, CSS, Visual Studio Code, Web Design">
+<meta name="category" content="Setting up on GitHub, SASS, CSS, Visual Studio Code, Web Design">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Friday, May 31, 2024" />
+<meta name="revised" content="Thursday, May 30, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/14-Responsive-Sites.html">
- 
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/15-Setting-Up-On-GitHub.html">
+
+
+    
+    
     
     
     
@@ -59,6 +62,41 @@ font-weight:bold;
 </style>
 <style type="text/css">
 <!--
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+span.redItalicChar {
+color:red;
+font-weight:bold;
+font-style:italic;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.BankingChar {
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
 p.MsoTocHeading {
 margin-top:12.0pt;
 margin-right:0in;
@@ -69,43 +107,6 @@ font-size:16.0pt;
 font-family:"Calibri Light",sans-serif;
 color:#2F5496;
 }
-p.MsoToc1 {
-margin-top:0in;
-margin-right:0in;
-margin-bottom:5.0pt;
-margin-left:0in;
-line-height:115%;
-font-size:11.0pt;
-font-family:"Calibri",sans-serif;
-}
-p.MsoToc2 {
-margin-top:0in;
-margin-right:0in;
-margin-bottom:5.0pt;
-margin-left:11.0pt;
-line-height:115%;
-font-size:11.0pt;
-font-family:"Calibri",sans-serif;
-}
-span.MsoIntenseReference {
-font-variant:small-caps;
-color:#4472C4;
-letter-spacing:.25pt;
-font-weight:bold;
-}
-span.BigDarkBoldChar {
-font-weight:bold;
-}
-span.BlueBoldenChar {
-font-family:"Times New Roman",serif;
-color:blue;
-font-weight:bold;
-}
-span.boldBlueChar {
-font-family:"Times New Roman",serif;
-color:blue;
-font-weight:bold;
-}
 -->
 </style>
 </head>
@@ -114,7 +115,7 @@ font-weight:bold;
 <body>
 
 <div class="wrapper">
-  <header class="header">Header</header>
+<header class="header">Header</header>
   
   <ul class="navigation">
    <li><a href="index.html" class="active"title="Home">Home</a></li>
@@ -131,382 +132,300 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~14 Responsive Sites~</p>
+  <p class="h2Black" >~15 Setting up the Web site on Git Hub~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >10/7/2024</p>
+   <p class="articleDate" style="text-align:right" >10/14/2024</p>
    
-   <br>
-<br>
-
-<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"><a href="#_Toc166746978">Turn on Sass</a></p>
-<p class="tableOfContents"><a href="#_Toc166746979">Adding a Mixin</a></p>
-<p class="tableOfContents"><a href="#_Toc166746980">Home Page responsive   design</a></p>
-<p class="tableOfContents"><a href="#_Toc166746982">About Page Responsive   Design</a></p>
-<p class="tableOfContents"><a href="#_Toc166746983">Project Page Responsive   Design</a></p>
-<p class="tableOfContents"><a href="#_Toc166746984">The Large Media Query</a></p>
-<p class="tableOfContents"><a href="#_Toc166746985">The Contact Page</a></p>
-<p class="tableOfContents"><a href="#_Toc166746986">Extra Large Project Page</a></p>
-<p class="tableOfContents"><a href="#_Toc166746987">Creating a Mixin for   Super small screens</a></p>
+   <p class="MsoTocHeading">&nbsp;</p>
+   <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+   
+    <p class="tableOfContents"><a href="#_Toc167964108">If you want to Create Your Site on GitHub</a></p>
+   <p class="tableOfContents"><a href="#_Toc167889647">To upload an entire site</a></p>
+   <p class="tableOfContents"><a href="#_Toc167889648">The Github Desktop app</a></p>
+   <p class="tableOfContents"><a href="#_Toc167889649">Add Your Remote</a></p>
+   <p class="tableOfContents"><a href="#_Toc167889650">Change site from Private   to Public</a></p>
+   <p class="tableOfContents"><a href="#_Toc167889651">Enable Github pages</a></p>
+   <p class="tableOfContents"><a href="#_Toc167889652">Set Repository Once and   Done</a></p>
+   <p class="tableOfContents"><a href="#_Toc167889653">Updating a Website with   Visual Studio Code</a></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/1.png" width="269" height="238" class="responsiveImage"></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Code-For-Responsive-Sites.html" target="_blank">To get to the code for this tutorial</a></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/1.png" width="272" height="241" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc165481807"></a><a name="_Toc165544276"></a><a name="_Toc166746978">Turn on Sass</a></h1>
+<h1><a name="_Toc167964108">If you want to create your site on GITHub</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">In Visual Studio</span><strong><span style="font-variant:small-caps; letter-spacing:.25pt; color:#4472C4; "> </span></strong></p>
-<p class="MsoNormal">Remember to turn on your Watch Sass</p>
+<p class="MsoNormal">You will want to select create new Repository</p>
+<p class="MsoNormal"><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/2a.png" width="622" height="460" class="wideImg"></p>
 <p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/2.png" width="121" height="38" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<h1><a name="_Toc166746979">Adding a Mixin</a></h1>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now we  need to fill out a few form values here</p>
+<ol style="margin-top:0in;" start="1" type="1">
+  <li class="MsoNormal" style="color:gray;margin-bottom:0in;margin-top:0in;line-height:150%;"><strong><span style="font-family:'Cambria',serif; ">You can give the name of the site anything you want</span></strong></li>
+  <li class="MsoNormal" style="color:gray;margin-bottom:0in;margin-top:0in;line-height:150%;"><strong><span style="font-family:'Cambria',serif; ">The local path is very important</span></strong></li>
+</ol>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-family:'Times New Roman',serif; font-size:12.0pt; color:red; ">Pay  attention to where the local path</span></strong> is because that is where it will automatically create a  folder and then we need to move our folder and files for our site into that  folder.</p>
+<p class="MsoNormal">Everything  else should be ok left at the defaults, so you can just click the big blue <strong><span style="line-height:115%; font-family:'Times New Roman',serif; font-size:12.0pt; color:blue; ">&ldquo;Create  Repository&rdquo;</span></strong> button to create it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/2b.png" width="412" height="401" class="responsiveImage"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="boldBlue">&nbsp;</p>
+<h1><a name="_Toc167889647">To upload an entire site</a></h1>
+
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Go to your <span class="boldBlue" style="line-height:115%; font-size:14.0pt; ">config.scss</span> partial  file</p>
-
-
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/3.png" width="147" height="44" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-
-<p class="MsoNormal">You will want to add the following code to the bottom of that file, after all of the other code that is in that config file.</p>
-
-<p>&nbsp;</p>
-
-
-<p class="code">@mixin media-md{</p>
-<p class="code">    @media screen and  (min-width: 768px) {</p>
-<p class="code">        @content;</p>
-<p class="code">    }</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Copy and Paste 2 more Sizes</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/4.png" width="303" height="223" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Make these changes to the new two media queries</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/5.png" width="542" height="322" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Start a New Partial </span><span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">responsive.scss</span></span><span class="MsoIntenseReference"> File</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/6.png" width="214" height="106" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"> Go to the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.scss</span></span> file</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/7.png" width="132" height="36" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">@import</span></span> new File in main.scss</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/8.png" width="510" height="215" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc166746980">Home Page responsive design</a></h1>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Important </span></span>if you want  to move your entire site, you cannot and must not do this from the GitHub  website. It must be moved from the GitHub desktop app to the GitHub website  from the top button, and it will create the site for you on the GitHub website.</p>
+<p class="MsoNormal" style="text-indent:-67.5pt;">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/2.png" width="792" height="165" class="wideImg">
+<h1><a name="_Toc167889648">The Github Desktop app</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="LeftPMidBlack">The Medium Media Query</p>
-<p class="MsoNormal">Go to Your Partial <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">responsive.scss</span></span> File</p>
-<p class="MsoNormal">We will begin to write our code for the home page.</p>
-<p class="MsoNormal">Start by <span class="boldBlueChar"><span style="font-size:12.0pt; ">@including</span></span> your <span class="boldBlueChar"><span style="font-size:12.0pt; ">mixin </span></span>media queries. Start  with the smaller sizes and work our way up</p>
-<p class="code">&nbsp;</p>
-<p class="code">@include media-md {</p>
-<p class="code">&nbsp;</p>
-<p class="code">    </p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/9.png" width="456" height="175" class="wideImg">
-<p class="code">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/3.png" width="622" height="337" class="wideImg">
+<h2>&nbsp;</h2>
+<p class="MsoNormal"><a name="_To_Upload_an"></a><span style="color:red; ">Remember</span>,  to Upload an entire site initially:</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">You must be in Github desktop  app.</span></p>
+<p class="MsoNormal"><span class="redItalicChar">Do not try</span> to start an  entire site upload from the github website, or from Visual Studio. It cannot be  done.</p>
+<p class="MsoNormal">You can only push an entire site with all of its folders  through the Github desktop app.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now start to write your code inside of this media query</p>
-<p class="code">@include media-md {</p>
-<p class="code">&nbsp;</p>
-<p class="code">    .menu-btn {</p>
-<p class="code">        </p>
-<p class="code">        visibility: hidden;</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">    .nav {</p>
-<p class="code">&nbsp;</p>
-<p class="code">        visibility:  visible;</p>
-<p class="code">&nbsp;</p>
-<p class="code">        .menu-nav {</p>
-<p class="code">&nbsp;</p>
-<p class="code">            display: block;</p>
-<p class="code">            transform:  translateY(0);</p>
-<p class="code">            height: 100%;</p>
-<p class="code">             background:transparent;</p>
-<p class="code">            text-align:  right;</p>
-<p class="code">&nbsp;</p>
-<p class="code">            &amp;__item {</p>
-<p class="code">&nbsp;</p>
-<p class="code">                display:  inline;</p>
-<p class="code">                 padding-right: 1.5rem;</p>
-<p class="code">            }</p>
-<p class="code">&nbsp;</p>
-<p class="code">            &amp;__link {</p>
-<p class="code">&nbsp;</p>
-<p class="code">                font-size:  1.5 rem;</p>
-<p class="code">            }</p>
-<p class="code">        }</p>
-<p class="code">    }</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Test the Page</span></p>
-<p class="MsoNormal">Go to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">index.html</span></span> to test the page. You will notice when we  hit a wider screen size, the layout will change from viewing the small  hamburger menu to a navigational menu across the top of the page.</p>
+<p class="LeftPMidBlack">You can get the app for your computer desktop from this site:</p>
+<p class="tableOfContents"><a href="https://desktop.github.com" target="_blank" >GitHub DownLoad</a></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/4.png" width="71" height="60" class="responsiveImage">
+<p class="boldBlue">&nbsp;</p>
+<p class="MsoNormal">You will want to add an existing <span class="boldBlue">repository</span>. All this means is  that you have already created your website, like we did in this tutorial  series, and now you want to push it onto the Github Servers.</p>
+<p class="MsoNormal"> So, a <span class="boldBlue">repository</span> is just a name for a website that GitHub uses, to refer to your website that you  want to add to the GitHub Servers.</p>
+<p class="MsoNormal">Click on this <span class="boldBlue">Add</span> button to add the website that we created</p>
+<h2>&nbsp;</h2>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/5.png" width="480" height="273" class="wideImg">
+<p class="boldBlue">&nbsp;</p>
+<p class="MsoNormal">Browse to where you site is located inside of Xampp</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/6.png" width="624" height="376" class="wideImg">
+<p class="boldBlue">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/7.png" width="597" height="85" class="wideImg">
+<p class="boldBlue">&nbsp;</p>
+<p class="MsoNormal">You may have to sign in to github again. Yes, this might take  forever to reach you.</p>
+<p class="MsoNormal">File- options – sign in continue with browser</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Smaller device design</p>
-
-
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/10.png" width="440" height="183" class="wideImg"></p>
-<p>&nbsp; </p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Wider device design</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/11.png" width="621" height="161" class="wideImg"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
-<h1><a name="_Toc166746982">About Page Responsive Design</a></h1>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/8.png" width="666" height="234" class="wideImg">
+<p class="boldBlue">&nbsp;</p>
+<p class="MsoNormal">Now you want to <span class="boldBlue">Publish</span> the Repository that you selected by  hitting this button here</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/9.png" width="614" height="231" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">Go to Your Visual Studio  Code app on your computer.</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Make sure that your website folder is open in Visual Studio  Code.</p>
+<p class="boldBlue">File-Open Folder</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/10.png" width="358" height="262" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><a name="_Hlk159747041">Now from the panel on the left, you  want to click on this icon</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/11.png" width="204" height="151">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now you want to initialize Repository</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/12.png" width="350" height="360" class="responsiveImage">
+<p class="boldBlue">&nbsp;</p>
+<p class="MsoNormal">You want to write something in this message box. I wrote  First Commit</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/13.png" width="262" height="208" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Click on this drop-down button here and choose to Push and  Commit</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/14.png" width="441" height="244" class="responsiveImage">
+<p class="boldBlue">&nbsp;</p>
+<p class="MsoNormal">Do notice that everything turned into a lime green mode</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/15.png" width="625" height="35" class="wideImg">
+<p class="boldBlue">&nbsp;</p>
+<p class="MsoNormal">Anyways, push the <strong><span style="font-size:12.0pt; ">Commit &amp; Push</span></strong><span style="font-size:12.0pt; "> </span>option</p>
+<p class="MsoNormal">You will get this message, and you want to click the <strong><span style="font-size:12.0pt; ">YES</span></strong> button for this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc167889649">Add Your Remote</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">On this page, we will be making the text just a bit bigger  as we go from a smaller device to a wider screen size.</p>
-<p class="MsoNormal">Still in your <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">responsive.scss</span></span> partial file.  We want to still be inside of the media queries, so start your code right  before that closing curly brace.</p>
-<p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/12.png" width="506" height="311" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">.about__bio {</p>
-<p class="code">&nbsp;</p>
-<p class="code">        font-size: 1.5rem;</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc166746983">Project Page Responsive Design</a> </h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Again, you will want to be inside of that same media code  and then start writing your code right before the closing curly brace again.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/13.png" width="454" height="282" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">.projects {</p>
-<p class="code">        &amp;__bio-image {</p>
-<p class="code">          height: 55vh;</p>
-<p class="code">        }</p>
-<p class="code">        &amp;__items {</p>
-<p class="code">           grid-template-columns: repeat(2, 1fr);</p>
-<p class="code">        }</p>
-<p class="code">        .text-secondary {</p>
-<p class="code">          font-size: 3rem;</p>
-<p class="code">        }</p>
-<p class="code">      }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Test the Medium Projects  page</span></p>
-<p class="MsoNormal">Save and see what we have for our projects page</p>
-<p class="MsoNormal">The next images are demostrating the small and medium device layout for your site.</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/14.png" width="564" height="347" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Projects page Sass Code  Continued</span></p>
-<p class="MsoNormal">You are still inside of the last curly brace for the medium  Media Query</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/15.png" width="551" height="281" class="wideImg"></p>
-<p>&nbsp; </p>
-<p class="code">&nbsp;</p>
-<p class="code">    .contact__list {</p>
-<p class="code">&nbsp;</p>
-<p class="code">       grid-template-columns: repeat(2, 1fr);</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/16.png" width="489" height="332" class="wideImg">
-<p class="code">&nbsp;</p>
-<h2><a name="_Toc166746984">The Large Media Query</a></h2>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">We are still working on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Responsive</span></span> file, but since we  are starting a brand-new media query, we want to make sure we are below any of  our previous closing curly braces.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/17.png" width="502" height="203" class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Projects page</span></p>
-<p class="MsoNormal">Let&rsquo;s start working in our responsive file for the Projects  page. We want our project page to go to three columns on the large screen size  for the portfolio images on that page.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">@include media-lg {</p>
-<p class="code">&nbsp;</p>
-<p class="code">  .projects {</p>
-<p class="code">    </p>
-<p class="code">    &amp;__items {</p>
-<p class="code">       grid-template-columns: repeat(3, 1fr);</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">  }</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">Notice that when we want our images to show three across, we  have changed our repeat to 3. So, that is where the code is that will control  that section of our layout.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/18.png" width="468" height="177" class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Testing the Large screen  Page</span></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Large, Medium and Small device Layout of our site.</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/19.png" width="619" height="690" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<h2><a name="_Toc166746985">The Contact Page</a></h2>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">You are starting this code, before the closing curly brace  of the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">media-lg</span></span> media query.</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/20.png" width="517" height="306" class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">.contact__list {</p>
-<p class="code">&nbsp;</p>
-<p class="code">       grid-template-columns: repeat(3, 1fr);</p>
-<p class="code">    }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/21.png" width="523" height="316" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/22.png" width="620" height="434" class="wideImg"></p>
-<p>&nbsp; </p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<h1><a name="_Toc166746986">Extra Large Project Page</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">You will see that the letters of the logo are cut off just a  bit in the extra-large size of screen</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/23.png" width="622" height="266" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">So, to fix this we want to make the image&rsquo;s height a bit  larger.</p>
-<p class="code">@include media-xl{</p>
-<p class="code">  .projects__bio-image {</p>
-<p class="code">  </p>
-<p class="code">    height: 70vh;</p>
-<p class="code">  }</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">At the very bottom of the Responsive page file, we will put  this code</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/24.png" width="333" height="138" class="responsiveImage">
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">Now the gold letter logo fits on the page.</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/25.png" width="627" height="298" class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">The About Page</span></p>
-<p class="MsoNormal">We found that we had the same problem with the logo cutting  off on the about page. See how the text for the BIO in this section, goes over  the gold letter logo</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/26.png"  class="wideImg"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
-<p class="MsoNormal">So, we will need to write some code to make changes to the about page layout, as well.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">.about__bio-image {</p>
-<p class="code">  </p>
-<p class="code">    height: 70vh;</p>
-<p class="code">  }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/27.png" width="388" height="236" class="responsiveImage">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">Now that looks a bit better.</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/28.png"  class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc166746987">Creating a Mixin for Super small screens</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">Most phones will probably not be this small and you will not  have this issue with your layout. However, you might find you have this problem  while testing, even if it, more than likely will not be an issue for your users,  or once you are using an actual cell phone.</p>
-<p class="MsoNormal"> However, if I was to test on the desktop for  the smallest cell phone size, it will reduce smaller than a phone, and I would  have this issue with the layout. I could just redesign my image and pull the  logo to the right in Photoshop, but I also could just create a mixin for this  smaller size issue.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/29.png" width="580" height="394" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">In your <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">config</span></span> partial file</p>
-<p class="MsoNormal">You will want to add this new smaller rule to your mixins. Some  of you might be asking why we just did not make this change in our medium sized  query. The reason that we could not just make the changes to the bio image in  the medium sized mixin rule, and need to create a new rule is because creating  the rule there, would mess with our hamburger menu, and you would no longer see  it at your smaller cell phone levels.  And that is something that would not work for  us at all.</p>
-<p class="MsoNormal">So, let&rsquo;s start writing that smaller mixin.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/30.png" width="158" height="44" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">@mixin media-sm{</p>
-<p class="code">    @media screen and  (min-width: 400px) {</p>
-<p class="code">        @content;</p>
-<p class="code">    }</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">In Your <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">responsive </span></span>partial file</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/31.png" width="194" height="44" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Put this code at the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">very top</span></span> of the file. It is very important that we keep this code in order by size, or things will break. So, the smallest media size is at the top of the file, and we work our way to the bottom and the largest sized for our media queries.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/32.png" width="423" height="166" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">.projects {</p>
-<p class="code">    &amp;__bio-image {</p>
-<p class="code">      width: 130vw;</p>
-<p class="code">      </p>
-<p class="code">    }</p>
-<p class="code">  }</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/33.png" width="513" height="273" class="wideImg">
-<p class="code">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Testing</span></p>
-<p class="MsoNormal">Now if we test that at a small size it is fixed, and our  hamburger menu is still the navigational method that is visible.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Images/34.png" width="584" height="430" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
 
-<p class="tableOfContents"><a href="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/14-Reponsive-Sites/Code-For-Responsive-Sites.html" target="_blank">To get to the code for this tutorial</a></p>
+<p class="MsoNormal">And you will get this message saying that you do not have a  Remote. Click on that Blue button <strong><span class="boldBlue" style="font-size:12.0pt; ">Add Remote</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-size:12.0pt; ">&nbsp;</span></strong></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/16.png" width="542" height="116" class="wideImg">
+<p class="boldBlue">&nbsp;</p>
+<p class="MsoNormal">This is where you want to paste that URL that you copied  from the Website. If you did not copy the url from GitHub yet, you can find it by following the steps below:</p>
+
+<h2 class="section-title" style="font-size: 30px; margin: 28px 0px 30px; font-family: Arial, sans-serif; font-weight: 700; font-style: normal; line-height: 1.21em; position: relative; padding-left: 39px; color: rgb(50, 50, 50); font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">How to use the GitHub URL</h2>
 
 
+<ol class="default-list" style="margin: 0px 0px 20px 25px; padding: 0px; color: rgb(50, 50, 50); font-family: Arial, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+  <li style="font-size: 18px; color: rgb(102, 102, 102); margin: 10px 0px; line-height: 1.67em;">On the GitHub website, click on the website that you just published</li>
+  <li style="font-size: 18px; color: rgb(102, 102, 102); margin: 10px 0px; line-height: 1.67em;">Locate the green button named <span class="boldBlue">Code</span> and click on it. The GitHub URL will appear.</li>
+  <li style="font-size: 18px; color: rgb(102, 102, 102); margin: 10px 0px; line-height: 1.67em;">Copy the GitHub URL.</li>
+  <li style="font-size: 18px; color: rgb(102, 102, 102); margin: 10px 0px; line-height: 1.67em;">Open  Visual Studio Desktop app on your local machine.</li>
+  
+</ol>
 
-<p>&nbsp;</p>
-<p class="pMidBlack">&nbsp;</p>
- 
-  <!--Main Article -->
- 
- 
-</article>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
-  <p class="LeftPMidBlack">&nbsp;</p>
+<p><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/16b.png" ></p>
+
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You paste the url that you just copied from the GitHub website, and put it in here inside of the Visual Studio App.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/17.png" width="621" height="157" class="wideImg">
+<p class="boldBlue">&nbsp;</p>
+<p class="MsoNormal">Next it will ask for the <span class="boldBlue">Remote Name</span>, just give it the name  of your site</p>
+<p class="MsoNormal">Remember to hit <strong class="boldBlue"><span style="font-size:12.0pt; ">ENTER</span></strong> so that it will Commit</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/18.png" width="622" height="94" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now in the Source Control icon, you want to click on<span class="boldBlue"> Publish  Branch</span>. This will push your site to Git Hub</p>
+<p class="boldBlue">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/19.png" width="292" height="210" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Click on the Green Authorize button</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/20.png" width="401" height="408" class="responsiveImage">
+<p class="boldBlue">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">Now fill in the password or  even the user- name if need be</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;"><strong><span style="line-height:115%; font-family:'Times New Roman',serif; font-size:12.0pt; color:blue; ">UserName:</span></strong> <strong><span style="line-height:115%; font-size:12.0pt; color:#600020; ">Your User  Name</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-family:'Times New Roman',serif; font-size:12.0pt; color:blue; ">Password: </span></strong><strong><span style="font-size:12.0pt; color:#600020; ">Your Password</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-size:12.0pt; color:#600020; ">&nbsp;</span></strong></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/21.png" width="478" height="374" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now just go to your Site URL to see your files inside of  github</p>
+<p class="MsoNormal">https://github.com/Your Name/Your Site Name</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/22.png"  class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Now you want to Click on the <span class="boldBlue">settings </span>icon at the top of the  page</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/23.png" width="620" height="96" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now go to the left side of the page and click on <span class="boldBlue">Pages</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc167889650"></a><a name="_Change_site_from"></a>Change site from Private to Public</h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+
+<p class="MsoNormal"><a name="_Hlk156883853">Top left corner hamburger menu,  chose your site</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/24.png" width="347" height="370" class="responsiveImage">
+<p class="MsoNormal"><a name="_START_HERE"></a>&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to <span class="boldBlue">Settings</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/25.png" width="596" height="205" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Scroll to bottom of page to <span class="BoldRed">danger zone</span></p>
+<p class="MsoNormal">You want danger zone- Change visibility – <span class="boldBlue">public</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/26.png"  class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc167889651"></a><a name="_Enable_Github_pages"></a>Enable Github pages</h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+
+<p class="MsoNormal">Top left corner hamburger menu, choose your site</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/27.png" width="171" height="120" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/28.png" width="255" height="177" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to <span class="boldBlue">Settings</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/29.png" width="597" height="210" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Left side panel inside of <span class="boldBlue">Settings</span>, you will find <span class="boldBlue">Pages</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/30.png" width="579" height="346" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">You want to select <span class="boldBlue">main</span> from the drop down here</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/31.png" width="556" height="338" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now the setting should look like this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">SAVE</span></span> the settings</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/32.png" width="560" height="154" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now at the top of the page you should have a link to view  your live site</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/33.png"  class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/34.png" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Notice that in 2024, you are able to easily create a new  Repository or website, just by going to the left panel in the home page.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc167889652">Set Repository Once and Done</a></h1>
+
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">You will find that once the repository is set to one  specific folder, it will still stay on that repository and you will be able to  upload your site to it, forever. Or until you change the location of the folder  on your machine. If you ever change the location of that folder on your machine  then you will have to reset up the repository again and have it point to that  site.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You can check to see if your folder is still pointing to the  correct web site, by going to Visual Studio code, and opening the dropdown for  repositories.</p>
+<p class="MsoNormal">In Visual Studio, open the folder to the website that you  want to check. <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">File&gt;  Open Folder</span></span></p>
+<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">&nbsp;</span></span></p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/35.png" width="303" height="162" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Now from the panel on the left, you want to click on this  icon</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/36.png" width="195" height="157" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">From there open up the drop down that says <span class="boldBlue">Repositories</span>. I  have not been working in this site for about a year, but when I reopen the  folder in Visual Studio, I can still see that it is pointing to the correct  repository and I will be able to upload new files to this site, without needing  to do any extra finagling.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/37.png" width="215" height="172" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now if you have a folder that is not pointing to any  repository, it will let you know as soon as you open this icon on the left. This  is a site that I am not quite ready to be public, I do not want it uploaded to  a GitHub site at this time, and so, it is not connected to a website. Nor does  it need to be.</p>
+<p class="MsoNormal">As you can see from the blue button below, it wants me to <span class="boldBlue">Intialize Repository.</span> This is how I know that this site is not on the Servers at GitHub</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/38.png" width="468" height="355" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc167889653">Updating a Website with Visual Studio Code</a></h1>
+
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="tableOfContents" >&nbsp;</p>
+<p class="MsoNormal">Make sure that you are inside of your website folder inside  of Visual Studio.</p>
+<p class="MsoNormal">Browse to where you are keeping your website on your  computer</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/39.png" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">First of all, you need to actually make a change to your  website. It can be extremely small, like just making an exclamation mark. But  without a change being made, your commit button will be greyed out, and you will  not be able to use it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/40.png" width="469" height="283" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to the<span class="boldBlue"> Source control</span> icon on the left-hand side of the  site.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/41.png" width="331" height="232" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Fill in the message box, so you know that a change is made  and you might want to name it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/42.png" width="347" height="215" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Choose <strong class="boldBlue"><span style="font-size:12.0pt; ">Commit  and Push</span></strong><span style="font-size:12.0pt; "> </span>from  the Drop-Down. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/43.png" width="431" height="290" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This next box does not always show up, but if it does just  select <span class="BankingChar"><span style="line-height:115%; font-size:14.0pt; ">YES</span></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/44.png" width="439" height="151" border="0" class="responsiveImage"></p>
+<p class="MsoNormal">Test Your website, you may have to refresh, and you may have  to wait a few minutes for changes to take effect. Just keep on refreshing until the changes take effect.</p>
+<p class="MsoNormal">I put an exclamation point after books and it showed up. So,  my changes are working</p>
+<p class="MsoNormal"><u><span style="color:#0563C1; "><img src="Articles/2024/6-SASS-Or-SCSS/12-Portfolio-Website/15-Setting-Up-On-GitHub/Images/45.png" width="623" height="135" border="0" class="wideImg"></span><span style="color:#0563C1; "> </span></u></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="blueEmphasis">And making changes is as simple as that!</p>
+<p class="MsoNormal">&nbsp;</p>
+<p>&nbsp;</p></article><aside class="aside aside-1">
   
   
   </aside>
