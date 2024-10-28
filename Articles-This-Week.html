@@ -7,10 +7,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Append Text to the Body</title>
+    <title>2 Creating and Appending Elements</title>
     
-    
-    <meta name="title" content="1 Append Text to the Body ">
+    <meta name="title" content="2 Creating and Appending Elements">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
@@ -18,7 +17,7 @@
 <meta name="keywords" content=" The Dom, JavaScript, HTML, Visual Basic Code, Web Development "/>
 
 
-<meta name="description" content="This article explains how we can add text to the body of an HTML document, using JavaScript "/>
+<meta name="description" content="This article explains how we can create and append elements to the body of an HTML document, using JavaScript "/>
 
 <meta name="category" content="The Dom, JavaScript, HTML, Visual Basic Code, Web Development">
 
@@ -27,10 +26,9 @@
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Thursday, July 25, 2024" />
+<meta name="revised" content="Friday, July 26, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/Learn-the-Dom/1-Append-Text-to-the-Body/1-Append-Text-to-the-Body.html">
-
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/Learn-the-Dom/2-Creating-And-Appending-Elements/2-Creating-And-Appending-Elements.html">
 
     
     
@@ -58,32 +56,14 @@ font-weight:bold;
 </style>
 <style type="text/css">
 <!--
-span.MsoIntenseEmphasis {
-color:#4472C4;
-font-style:italic;
-}
-span.BigDarkBoldChar {
-font-weight:bold;
-}
-p.BoldTeal {
-margin-top:24.0pt;
-margin-right:0in;
-margin-bottom:12.0pt;
-margin-left:0in;
-text-indent:-4.5pt;
-line-height:115%;
-font-size:14.0pt;
-font-family:"Calibri Light",sans-serif;
-color:#2F5496;
-font-weight:bold;
-}
 span.BlueBoldenChar {
 font-family:"Times New Roman",serif;
 color:blue;
 font-weight:bold;
 }
-span.BoldMaroonListChar {
-color:#600020;
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
 font-weight:bold;
 }
 -->
@@ -111,80 +91,51 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~Append Text to the Body~</p>
+  <p class="h2Black" >~2 Creating and Appending Elements~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >10/21/2024</p>
+   <p class="articleDate" style="text-align:right" >10/28/2024</p>
    
    <br>
 <br>
 
-<img src="Articles/2024/7-Learn-the-Dom/1-Append-Text-to-the-Body/Images/1.png" width="300" height="270" class="responsiveImage">
-<h1>Adding the files</h1>
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">In Visual Studio Code</span></p>
-<p class="MsoNormal">Create a file, and call it index.html</p>
-<img src="Articles/2024/7-Learn-the-Dom/1-Append-Text-to-the-Body/Images/2.png" width="298" height="178" class="responsiveImage">
+<img src="Articles/2024/7-Learn-the-Dom/2-Creating-And-Appending-Elements/Images/1.png" width="276" height="252" class="responsiveImage">
+<h1>Our Starting Point</h1>
+<p class="MsoNormal">We can start here with the  index page that we created in last week&rsquo;s tutorial entitled:</p>
+<h4>index.html</h4>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal" style="margin-top:24.0pt;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;page-break-after:avoid;"><a name="_Toc161569910"><strong><span style="line-height:115%; font-family:'Calibri Light',sans-serif; font-size:14.0pt; color:#2F5496; ">Emmet Short cut for creating HTML Boiler Plate code</span></strong></a><strong><span style="font-family:'Calibri Light',sans-serif; font-size:14.0pt; color:#2F5496; "> </span></strong></p>
-<p class="MsoNormal">Shift-exclamation-Enter will give you the boiler plate code</p>
-<img src="Articles/2024/7-Learn-the-Dom/1-Append-Text-to-the-Body/Images/3.png" width="506" height="281" class="wideImg">
+<p class="MsoNormal">And if you do start with that, you should already have the  script file created and attached to the index file.</p>
+<img src="Articles/2024/7-Learn-the-Dom/2-Creating-And-Appending-Elements/Images/2.png" width="627" height="237" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
+<h1>Create Element</h1>
+<p class="MsoNormal">Go to your <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">script.js</span></span> file. We will be  creating an element. Here we will be using one of those things that is referred  to as a node. We will start with a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">div</span></span> tag, and create that.</p>
+<p class="MsoNormal">When we need to create an element, we use no spacing and use  camel casing to refer to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">createElement</span></span>. Do notice, that we are attaching <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">createElement </span></span>to the  document using dot notation. Also note that we are additionally using a const  to assign this to the name of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">div</span></span>. Now anytime we say <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">div</span></span> we are talking  about this element, which is created and attached to the document object. </p>
 <p class="MsoNormal">&nbsp;</p>
-<h1>Link to a script file</h1>
-<p class="MsoNormal">To start out with one of the most important things is to  make sure that your html file is linked to a script file. You want to do this  in the head tag underneath your title</p>
-<p class="MsoNormal">to link to a script file, we use the word script in angle  braces. Then we shorten the word source to just 3 letters. </p>
-<p class="MsoNormal"><strong><span style="line-height:115%; font-size:20.0pt; color:#2F5496; ">src</span></strong></p>
-<p class="MsoNormal">we use an equal sign and inside quotation marks we use the  name of the script file with the extension of <strong><span style="font-size:20.0pt; color:#2F5496; ">.js</span></strong></p>
-<p class="MsoNormal"><span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">defer:</span></span> after the script file, you will see the  word defer-</p>
-<p class="MsoNormal">If the&nbsp;<strong>defer</strong>&nbsp;attribute  is set, it specifies that the&nbsp;<strong>script</strong>&nbsp;is downloaded in parallel  to analyzing or (parsing) the page, and executed after the page has finished analyzing  (parsing).</p>
+<img src="Articles/2024/7-Learn-the-Dom/2-Creating-And-Appending-Elements/Images/3.png" width="623" height="164" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/7-Learn-the-Dom/1-Append-Text-to-the-Body/Images/4.png" width="623" height="222" class="wideImg">
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> if you look  at your page now, you will not see anything. That is because you created your  element but you did not add it to the page.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="BoldTeal">The script file </p>
-<p class="MsoNormal">You will now need to create a script file. </p>
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">Inside of Visual Studio Code:</span></p>
-<p class="MsoNormal"><span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">New</span></span> <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">file</span></span></p>
-<p class="MsoNormal">Name your new file</p>
-<p class="BoldTeal">script.js</p>
-<img src="Articles/2024/7-Learn-the-Dom/1-Append-Text-to-the-Body/Images/5.png" width="621" height="208" class="wideImg">
-<h1>Messing with the body of the document</h1>
-<p class="MsoNormal">if we create a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">constant,</span></span> it is a type of  variable that cannot be messed with. Which means it does not change like a  regular variable does. This means that! And it always means that!  So, we are going to create a <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">constant </span></span>called <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">body</span></span> and set it to something, and that something is what body will always mean in  this document. Well, I suppose we could change what this constant would be. And  then it would always mean that. Because <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">constant </span></span>said so.</p>
-<p class="MsoNormal"><span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">Append:</span></span> <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">append</span></span> is the method that we  use to add elements to the body. So, every time we say the word <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">append</span></span>, we are adding  something to the body. </p>
-<img src="Articles/2024/7-Learn-the-Dom/1-Append-Text-to-the-Body/Images/6.png" width="415" height="133" class="responsiveImage">
+<h1>Append the div to the Document</h1>
+<p class="MsoNormal">Remember that first constant that we created last week to  represent the body? Well, now you will see why we needed to leave that first  assignment statement in there. First,</p>
+<p class="MsoNormal"> we need to create the  element, but in order to actually see that element, we then need to add that  element to the page. Oh, and since this is just a div, it might have a space,  but until you put something in that div, you still will not actually see  anything.</p>
+<ul>
+  <li>Create  Element</li>
+  <li>Append  Element</li>
+</ul>
+<img src="Articles/2024/7-Learn-the-Dom/2-Creating-And-Appending-Elements/Images/4.png" width="633" height="181" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">With using just <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">append</span></span>, we can append a  string; however, there is also <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">append child</span></span>, but append  child will not allow you to append text.  With append child, you will need a node. Such  as, a div or a span or an anchor tag. Those things will work with append child.</p>
-<p class="MsoNormal">But the simple <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">append</span></span> method will also allow  you to append multiple things, separated by commas and all text in the  individual sections must be surrounded by quotation marks.</p>
-<img src="Articles/2024/7-Learn-the-Dom/1-Append-Text-to-the-Body/Images/7.png" width="630" height="150" class="wideImg">
-<p class="MsoNormal">If you have the extension for &ldquo;Go Live,&rdquo; you can now hit the  button on the bottom of the Visual Studio App to see what you did on the  browser</p>
-<p class="MsoNormal" style="text-indent:-49.5pt;">&nbsp;</p>
-<img src="Articles/2024/7-Learn-the-Dom/1-Append-Text-to-the-Body/Images/8.png" width="153" height="79" class="responsiveImage">
-<p class="MsoNormal">This is using our simple <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">append</span></span> method, because if you  were to try <span class="boldBlue">append child</span>, which is that other method, you would show nothing, and only get an error.</p>
-<img src="Articles/2024/7-Learn-the-Dom/1-Append-Text-to-the-Body/Images/9.png" width="632" height="156" class="wideImg">
-<p>&nbsp;</p>
-<p class="pMidBlack">&nbsp;</p>
- 
-  <!--Main Article -->
- 
- 
-</article>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Where can I find my div?</h1>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> you will  not see the div tag if you open up your index.html file and look in the body. It  will not be there. That is because the code is evaluated inside of the browser.  If, however you open up your &ldquo;Inspect Element&rdquo; in the browser, you will see the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">div</span></span> tag was created there. </p>
+<img src="Articles/2024/7-Learn-the-Dom/2-Creating-And-Appending-Elements/Images/5.png" width="624" height="267" class="responsiveImage">
+<p>&nbsp;</p></article><aside class="aside aside-1">
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-</aside>
+  </aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
