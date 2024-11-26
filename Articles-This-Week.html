@@ -7,9 +7,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5 Removing Elements</title>
+    <title>6 Attributes</title>
     
-    <meta name="title" content="5 Removing Elements ">
+    <meta name="title" content="6 Attributes ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
@@ -17,7 +17,7 @@
 <meta name="keywords" content=" The Dom, JavaScript, HTML, Visual Basic Code, Web Development "/>
 
 
-<meta name="description" content="This article explains how we can remove elements from the body of an HTML document, using JavaScript "/>
+<meta name="description" content="This article explains what an attribute is, and how we can manipulate them in an HTML document, using JavaScript "/>
 
 <meta name="category" content="The Dom, JavaScript, HTML, Visual Basic Code, Web Development">
 
@@ -26,9 +26,10 @@
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Monday, July 29, 2024" />
+<meta name="revised" content="Tuesday, July 30, 2024" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2024/7-Learn-the-Dom/5-Removing-Elements/5-Removing-Elements.html">
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2024/7-Learn-the-Dom/6-Attributes/6-Attributes.html">
+
 
     
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
@@ -60,22 +61,6 @@ font-family:"Times New Roman",serif;
 color:blue;
 font-weight:bold;
 }
-span.MsoIntenseReference {
-font-variant:small-caps;
-color:#4472C4;
-letter-spacing:.25pt;
-font-weight:bold;
-}
-span.BoldRedChar {
-font-family:"Times New Roman",serif;
-color:red;
-font-weight:bold;
-}
-span.boldBlueChar {
-font-family:"Times New Roman",serif;
-color:blue;
-font-weight:bold;
-}
 -->
 </style>
 </head>
@@ -101,60 +86,86 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~5 Removing Elements~</p>
+  <p class="h2Black" >~6 Attributes~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >11/18/2024</p>
+   <p class="articleDate" style="text-align:right" >11/26/2024</p>
    
    <br>
 <br>
 
-<img src="Articles/2024/7-Learn-the-Dom/5-Removing-Elements/Images/1.png" width="269" height="241" class="responsiveImage">
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/1.png" width="277" height="248" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<h1>Removing Elements with the querySelector</h1>
-<p class="MsoNormal">Here we have a <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">&lt;div&gt;</span></span> tag, inside of  that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">&lt;div&gt;</span></span> tag, we have a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">span</span></span>,  and each one of our spans have a different <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">id</span></span> name.</p>
+<p class="MsoNormal">If you are following along from the last tutorial, you can  remove that line in JavaScript that removes the state span.</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/2.png" width="578" height="323" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">index.html</span></p>
-<p class="MsoNormal">Go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">index.html</span></span></p>
-<p class="MsoNormal">Write this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">&lt;div&gt; </span></span>tag inside of the  body</p>
-<img src="Articles/2024/7-Learn-the-Dom/5-Removing-Elements/Images/2.png" width="471" height="173" class="responsiveImage">
+<h1>What is an attribute?</h1>
+<p class="MsoNormal">Attributes are used to help describe something. Take a  person for instance. An attribute of a person would be height, hair color, skin  color, gender. But if you are looking at the attributes of a car, it would be  different. The attributes of a car would be Make, Model, Color, Price and so  on…</p>
+<p class="MsoNormal">Now in computer language, or JavaScript which we are now  taking a look at, an attribute is changeable, and can be set to different  values. This way, we can have something like a function and have it encompass  many different things. For instance, maybe we are talking about a car, but we  want to be able to have properties of price, make, model and color to be  interchangeable to encompass any car that we wish to talk about.</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/3.png" width="372" height="283" class="responsiveImage">
+<h1>How to modify the attributes of an element</h1>
+<p class="MsoNormal">Let&rsquo;s add a title to our span tag to demonstrate this. When  we add a title, all that does when we hover over the text is that eventually  the word that you stated in the title will pop-up next to the text that is  displaying on the screen.</p>
+<p class="MsoNormal">You want to add that title tag inside of your html file,  notice that the id is also an attribute. Yes, it is a name value pair and it is  what JavaScript can use to connect to this specific element.</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/4.png" width="625" height="142" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">script.js</span></p>
-<p class="MsoNormal">For this example, we will remove all of the code inside of  the script file, except for the first line which sets the constant body to be  attached to the body.</p>
-<img src="Articles/2024/7-Learn-the-Dom/5-Removing-Elements/Images/3.png" width="423" height="221" class="responsiveImage">
+<p class="MsoNormal">If you hover over the word Michigan, you will get this title  pop-up after a few seconds</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/5.png" width="204" height="106" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">We use <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">querySelector</span></span> is used to find and select a certain  element. Here we are using the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">pound sign</span></span> to grab the two  spans that we created with the named ids.</p>
-<p class="MsoNormal">Now write this Code. </p>
-<img src="Articles/2024/7-Learn-the-Dom/5-Removing-Elements/Images/4.png" width="600" height="244" class="wideImg">
+<h1>getAttrbute</h1>
+<p class="MsoNormal">You will want to console.log the title, so write the last  line in the JavaScript file to get this done.</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/6.png" width="605" height="287" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/7-Learn-the-Dom/5-Removing-Elements/Images/5.png" width="461" height="180" class="responsiveImage">
-<h1>The remove method</h1>
-<p class="MsoNormal">We know that this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">petSpan.remove()</span></span> is a method,  because it has the parenthesis following it. And a method uses the parenthesis  to call itself or to say I want you to work now. In this case that work is to  remove. And so, it removed the pet from the webpage.</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Warning,</span></span> if you were  to remove the parenthesis from the end of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">remove</span></span> statement, it would  not work, and it would not work, because it has nothing telling it to work, on  top of the fact that you were producing an error in your code.</p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-size:14.0pt; ">Go to  your browser, </span></strong></p>
+<p class="MsoNormal">Select <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Inspect Element</span></span>, and then click on the tab that says <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">console</span></span>.  And you will see the title that we wrote out here.</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/7.png" width="407" height="198" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">But below, we do indeed have the parenthesis in place, and  so the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">remove</span></span> method worked as we expected.</p>
-<img src="Articles/2024/7-Learn-the-Dom/5-Removing-Elements/Images/6.png" width="624" height="190" class="wideImg">
+<p class="MsoNormal">The thing is that we could have asked the same thing of any  attribute. ID of the span is also an attribute, so we could have put <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">id</span></span> in where we put  title and had received the id instead.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now let&rsquo;s check that out in the Inspect mode of the Opera  browser. You will notice that the entire span for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">#pet</span></span> element is gone.  All we have left standing here, is our span for the #state.</p>
-<img src="Articles/2024/7-Learn-the-Dom/5-Removing-Elements/Images/7.png" width="395" height="223" class="responsiveImage">
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/8.png" width="618" height="325" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<h1>To add the span back into the Web page</h1>
-<p class="MsoNormal">We could also add that span back in if we wanted to, now you  could maybe see why in code to be able to do this might be desirable. Let&rsquo;s say  if we wanted a header on a page to show <span class="boldBlueChar"><span style="font-size:12.0pt; ">Welcome Guest!</span></span> if a user was  not logged in, but then if the user was logged in, we wanted to welcome our <span class="boldBlueChar"><span style="font-size:12.0pt; ">Subscriber</span></span>.</p>
+<p class="MsoNormal">See now we get state, which was our id for that span</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">And using our <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">append</span></span> method again, our dog  has reappeared.</p>
-<img src="Articles/2024/7-Learn-the-Dom/5-Removing-Elements/Images/8.png" width="621" height="234" class="wideImg">
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/9.png" width="595" height="139">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">And you will notice, that if you pulled out that Inspect  element again from the browser, you would see that our entire span has  returned.</p>
-<img src="Articles/2024/7-Learn-the-Dom/5-Removing-Elements/Images/9.png" width="401" height="224" class="responsiveImage">
+<h1>An Easier way to get the attribute</h1>
+<p class="MsoNormal">As you can see the above method does work, and if we want to  impress someone, we could certainly use it. But how if we don&rsquo;t feel like  impressing anyone, and would just like to accomplish the same thing as  efficiently as possible. Well, don&rsquo;t worry because there is a method for that  and it is indeed easier. Just attach the const that we used for our span  created will the query selector, use the dot element and attach it to the name  of the attribute in the name value pair.</p>
 <p class="MsoNormal">&nbsp;</p>
-<h1>To remove an element from the Parent</h1>
-<p class="MsoNormal">Now let&rsquo;s say we want to do the same thing but be able to do  if from the parent element and not from the specific element itself. You will  see that using <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">remove </span></span>is a bit simpler, and basically does the exact same thing. So,  you might decide to just stick with the previous method of doing things. But  this option is also available, if you so desire to use it.</p>
-<p class="MsoNormal">This time, we decided to pick on the state, I suppose to be  fair to our individual span tags.</p>
+<p class="MsoNormal">As you see below, this simplified method still produces the  same result. We still see the attribute displayed in our console. There is no  error, or disruption.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2024/7-Learn-the-Dom/5-Removing-Elements/Images/10.png" width="623" height="222" class="wideImg">
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/10.png" width="783" height="214" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
+<h1>SetAttribute</h1>
+<p class="MsoNormal">We do not even need to set the attribute at all in the html  file. We could just do that in the JavaScript code. For example, how if you are  a little miffed at your html file today, and just don&rsquo;t want anything more to  do with it. Well, then in that case I guess, you could just do all of your work  in JavaScript, which you are cozying up to more and more these days.</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/11.png" width="621" height="308" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">To see the changes, you will need to go to your browser&rsquo;s<span class="BlueBoldenChar"><span style="font-size:12.0pt; "> inspect element</span></span>, hit  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">elements  tab</span></span> this time, and drill down into the body tag to see your  changes.</p>
+<p class="MsoNormal">Look, you will see that the id&rsquo;s value has changed to myState,  when it was just state before.</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/12.png" width="423" height="233" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">And again, there is the much <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">simpler way</span></span> of pulling this  off too. Let&rsquo;s change the id just a bit so we can be sure that it actually is  recognizing what we are doing.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/13.png" width="590" height="317" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/14.png" width="417" height="212" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now let&rsquo;s try that with updating the title, and having it  show to our web page. Just remove the method that is surrounding it for the  console, and change id to title.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/15.png" width="606" height="313" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/16.png" width="290" height="163" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1>removeAttribute</h1>
+<p class="MsoNormal">Here we use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">dot</span></span> operator to attach the  method <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">removeAttribute</span></span>,  and put in the parenthesis, the attribute that we want to remove.</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/17.png" width="620" height="325" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">And when you take a look at things in the Elements tab of  Inspect Elements, you will find that our state span no longer has the attribute  of title.</p>
+<img src="Articles/2024/7-Learn-the-Dom/6-Attributes/Images/18.png" width="417" height="217" class="responsiveImage">
 <p>&nbsp;</p></article><aside class="aside aside-1">
   
   
