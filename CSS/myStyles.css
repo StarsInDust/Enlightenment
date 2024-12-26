@@ -451,3 +451,15 @@ body {
 	
 	padding-top: 50px;
 }
+.smallBlueList {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-style: italic;
+	color: #27789E;
+	font-weight: 600;
+	line-height: 1.4em;
+	display: inline;
+	list-style-type: none;
+	padding-bottom: 3px;
+	margin-left: 40px;
+}
