@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirroring In Object Mode</title>
+    
+    
+  <meta name="title" content="Mirroring In Object Mode ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content="Mirroring an Object, Blender, 3D Modeling, Animation, Graphic Art "/>
+
+
+<meta name="description" content="This article explains how to mirror an object in Object mode without resorting to a Mirror Modifier. />
+
+<meta name="category" content="Mirroring and Object, Blender, 3D Modeling, Animation, Graphic Art">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Sunday, December 29, 2024" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/2-Mirroring-In-Object-Mode.html">
+  
+    
+    
+    
+    
+    
+    
+    <link rel="shortcut icon" href="../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~Mirroring In Object Mode~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >2/17/2025</p>
+   
+   <br>
+<br>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366008">Method   Number One</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366009">Object   Mode</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366010">Select   the Object</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366011">Mirroring   the Object</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366012">Move   the Ears Back in Place</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366013">Method   Number 2, the Best Way to Mirror without Using a Modifier</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366014">Go   to Object Mode</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366015">Move   the Ear into place on the Head</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366016">Change   the Transform Pivot Point to 3D Cursor</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366017">Move   Pivot Point Back</a></span></p>
+<p class="MsoNormal"><strong>&nbsp;</strong></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/1.png" width="266" height="243" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Yes, we could mirror the object by going into the modifying  panel and adding the mirror modifier to it, but here I just want to do a simple  mirror without going into that realm just quite yet. And mirroring is something  that should be done in Object mode, anyways. And since Object mode is what I am  starting out with, then I will demonstrate what can be done with mirroring in  this mode alone.</p>
+<h1><a name="_Toc186366008">Method Number One</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Here we have a simple little creature. He has an ear that  needs to be mirrored on the head.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="621" height="517" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc186366009">Object Mode</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Make sure you are in <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">object</span></span> mode</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/3.png" width="226" height="96" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc186366010">Select the Object</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Select the object that you want to work with. In our case it  is the ear.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<img src="Images/4.png" width="359" height="302" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="BoldRed">Let me first demonstrate the wrong way to do things</p>
+<p class="BoldRed">&nbsp;</p>
+<p class="MsoNormal">If you were to just duplicate this ear, by hitting shift-D,  and then hit the X button, you will find that you duplicated it, but it is in  the same direction as the other ear.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Hmmmm… so, that&rsquo;s not right.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/5.png" width="506" height="345" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Even if we rotate it -90° on the Z axis, it still will  not be right</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Warning, </span></span>if you try  to do this move, and the ear disappears, you more than likely made your changes  in the location section, and not in the rotation section, and you just sent the  ear flying off the screen. Undo and redo your changes in the rotation section  of the Object property panel on the right side of the viewport.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/6.png" width="324" height="286" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">And once again, we have that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Hmmmm… that&rsquo;s not right</span></span> moment, with this rotation of -90°.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/7.png" width="619" height="447" class="responsiveImage">
+<h1>&nbsp;</h1>
+<h1>&nbsp;</h1>
+<h1>&nbsp;</h1>
+<h1><a name="_Toc186366011">Mirroring the Object</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Make sure you still have the ear that you duplicated still  selected, and if you turned it around backwards make sure you undo that move,  and go back to where you had duplicated the ear. Also make sure that you have  not gone so far back that you don&rsquo;t still have 2 ears, in order to do the  mirror, we need to do it on the duplicated ear.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/8.png" width="508" height="344" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The hot key to mirror, is the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl key</span></span> with the letter <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">M</span></span> on the Keyboard and  then Hit the letter <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> to mirror the ear in the X direction.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/9.png" width="621" height="292" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now you will see that your ear has been mirrored correctly  in the viewport.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/10.png" width="622" height="465" class="responsiveImage">
+<h1><a name="_Toc186366012">Move the Ears Back in Place</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Now just use the viewport and move your ears back into  place.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/11.png" width="622" height="517" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Hlk186362663"></a><a name="_Toc186366013">Method Number 2, the Best Way to Mirror without Using a Modifier</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">The above method is  one way in which you can mirror, but it might not be the best one. There is  actually a better way to mirror the ear, if you do not want to resort to using  a mirror modifier to do it.</p>
+<p class="MsoNormal">Again, you want to  make sure you are in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Object</span></span> mode.</p>
+<h1><a name="_Toc186366014">Go to  Object Mode</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Images/12.png" width="227" height="106" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">By Default, you will  have the Transform Pivot point on Median Point, you will notice that the move  tool cursor when in this mode is situated on the ear itself or the object, and  that looks like this:</p>
+
+<p class="BlueBolden">&nbsp;</p>
+<img src="Images/13.png" width="619" height="572" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">But before we make  a change to that Pivot Point, lets move the ear in place, where we want it to  be on this silly character&rsquo;s head.</p>
+<h1><a name="_Toc186366015">Move the  Ear into place on the Head</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/14.png" width="625" height="529" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">In order to mirror  the object correctly the Pivot point must be centered. So…</p>
+<h1><a name="_Toc186366016">Change the  Transform Pivot Point to 3D Cursor</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="Images/14b.png" width="269" height="213" class="responsiveImage"></p>
+<p class="MsoNormal">Notice, when you  make this change that the cursor will jump to the center of the object that we  will use to mirror the ear.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/15.png" width="306" height="337" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now, go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Data</span></span> Tab of the Property  Panel</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/16.png" width="81" height="54" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Duplicate the Ear <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift - D</span></span>. Then <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Right click</span></span> immediately after  duplicating to keep the ear in place.</p>
+<img src="Images/17.png" width="603" height="331" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">With that duplicated  ear still selected.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You can also hit  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">N</span></span> key to open the side panel  in the right side of the inner viewport.</p>
+<p class="MsoNormal">Filp the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X </span></span>Location in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Location</span></span>. You can flip the  scale in either the X setting or the Y setting depending on which gives you the  better result. For the Ear I found that flipping in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y</span></span> setting for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Scale </span></span>worked out the best.</p>
+<p class="MsoNormal">Just put a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">negative sign</span></span> in front of  these numbers to flip them</p>
+<p class="BlueBolden">           </p>
+<img src="Images/18.png" width="470" height="338" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">And here is the Ear  Positioned Correctly after the Flip. Setting those numbers to negative numbers will just fling that ear into the correct position on the left side of the head. </p>
+<p class="boldBlue">COOL!</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/19.png" width="627" height="444" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc186366017">Move Pivot  Point Back</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Remember to Move  your Transform Pivot Point back to the way it was originally once you have done  the flip.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/20.png" width="348" height="233" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Well, that is all there is to mirroring the ear in Object  mode. Next week, we will start reviewing Edit mode. The menus that may differ  than what we have seen in object mode, and the different things that we can  accomplish while we are there.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p>&nbsp;</p></article><aside class="aside aside-1">
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
