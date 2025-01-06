@@ -463,3 +463,9 @@ body {
 	padding-bottom: 3px;
 	margin-left: 40px;
 }
+.navigationButtons {
+}
+.main .navigationButtons .silverEmphasis {
+	color: #C4B97B;
+	padding-left: 30px;
+}
