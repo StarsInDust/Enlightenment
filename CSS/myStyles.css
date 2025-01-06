@@ -463,9 +463,22 @@ body {
 	padding-bottom: 3px;
 	margin-left: 40px;
 }
-.navigationButtons {
+.navigationButtons a {
+	background-color: #c4b97b;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding-top: 1em;
+	padding-right: 1.5em;
+	padding-bottom: 1em;
+	padding-left: 1.5em;
+	margin-left: 50px;
+	box-shadow: 1px 4px 5px rgb(140 87 38);
+	border-radius: 20px;
 }
-.main .navigationButtons .silverEmphasis {
+	
+
+.goldEmphasis {
 	color: #C4B97B;
 	padding-left: 30px;
 }
