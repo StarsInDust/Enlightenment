@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Loop Cut Tool</title>
+    
+    <meta name="title" content="The Loop Cut Tool ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" The Loop Cut Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
+
+
+<meta name="description" content="This article explains how to use the Loop Cut tool in Edit mode inside of the Blender application. />
+
+<meta name="category" content="The Loop Cut Tool, Blender, 3D Modeling, Animation, Graphic Art">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Friday, January 10, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/4-The-Loop-Cut-Tool.html">
+
+
+    
+    
+    <link rel="shortcut icon" href="../../../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.MsoIntenseReference {
+font-variant:small-caps;
+color:#4472C4;
+letter-spacing:.25pt;
+font-weight:bold;
+}
+span.BoldMaroonListChar {
+color:#600020;
+font-weight:bold;
+}
+span.redItalicChar {
+color:red;
+font-weight:bold;
+font-style:italic;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~The Loop Cut Tool~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >3/17/2025</p>
+   
+   <br>
+<br>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402651">The   Loop Cut Button</a></span><span style="line-height:115%; font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402652">The   Difference between Sub Divide and Loop Cut</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402653">Loop   cut Button Verses the Hot Key</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402654">How   to Use the Loop Cut Tool Button</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402655">Using   the Loop Cut Tool from the Tool box</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402656">Number   of Cuts Option</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402657">Factor   Option</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402658">Smoothness   Option</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402659">Falloff</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402660">Using   the Hot Key of Ctrl-R to Create Edge Loop</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402661">The   Even Check Box</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402662">Flipped   Check Box Option</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402663">Off   Set Edge Loop cut Tool</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/1.png" width="267" height="240" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc187402651">The Loop Cut Button</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Ok, well again you do not actually see or have access to  this tool unless you are in Edit mode. So, remember, <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit Mode</span></span> first then <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop Cut</span></span> tool.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="406" height="118" class="responsiveImage">
+<h1><a name="_Toc187402652">The Difference between Sub Divide and Loop Cut</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Yes, some people might be asking, &ldquo;Why would I need a loop  cut? Why wouldn&rsquo;t I just use the sub divide, with the right click option, in  Edit mode, and call it a day?&rdquo;</p>
+<p class="MsoNormal">The reason for using the loop cut tool, is because it allows  you to customize your cuts more precisely to where you actually want them to  fall, whereas the Subdivide option will simply slice everything up into uniform  pieces. So, it just depends on what you need done, and what will work best for  your own 3D modeling needs.</p>
+<h1><a name="_Toc187402653">Loop cut Button Verses the Hot Key</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">You have two options to creating these loop cuts. One is to  use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop  Cut Button</span></span> on the left side of the screen inside of the Tool  panel. The other one is to use <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-r</span></span> as a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">hot key</span></span> to execute  the cut. They both will act a bit differently when trying to fine tune things  after wards though. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/3.png" width="524" height="316" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">With the tool box button, you will rely on the Last  operation dialog box that will show up at the bottom of the screen before you  click off of the object. Clicking off of the object will make this dialog box  at the bottom of the screen disappear, signally to Blender that you have  completed the operation, and you are done with the tool.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/4.png" width="365" height="167" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">When you use the hot key of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-r</span></span>, you click one time after  creating the edge loop. This will put you into editing mode for this cut and  you can use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">middle  mouse wheel</span></span> to increase or decrease the loop cuts, and the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">left mouse button</span></span> to slide  the loop cuts up or down across the face of the object. So, don&rsquo;t get confused  with these differences when uses the two different methods (tool box button and  the hotkey) to perform this task.</p>
+<h1><a name="_Toc187402654">How to Use the Loop Cut Tool Button</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">As you already know, you can start this tool by either the  tool box button, or the hot key. But what do I do after that?</p>
+<h1><a name="_Toc187402655">Using the Loop Cut Tool from the Tool box</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">When you first start using this tool, you will notice this  yellow loop, flipping around the object. When you click on different edges, you  will notice that the loop will arrange itself in different directions.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/5.png" width="404" height="178" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"> Just find the  direction that you want the loop to go in. Then you will notice the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop Cut and Slide</span></span> dialog box, which is your last operation dialog box. </p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/6.png" width="273" height="159" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Click on that little arrow to open up the dialog box and get  to the different options for this tool. Just remember, if you click again off  of the object, this dialog will disappear, never to show itself again.</p>
+<p class="MsoNormal">You can change the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">number of cuts</span></span> from here. You  can also adjust the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">smoothness</span></span>,  change how the loop cuts will behave (<span class="BlueBoldenChar"><span style="font-size:12.0pt; ">falloff</span></span>), or use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Factor</span></span> slider to move  the loop cut along the face of the object.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/7.png" width="428" height="337" class="responsiveImage">
+<h1><a name="_Toc187402656">Number of Cuts Option</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Here I changed the number of cuts to be 5.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/8.png" width="589" height="375" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187402657">Factor Option</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">If you slide the blue slider on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Factor </span></span>option, you  will see the loop cuts move down or up along the faces of the object.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/9.png" width="578" height="326" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Setting the Factor setting back to 0 will center the Loop  cuts inside of the face of the cube again.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/10.png" width="618" height="320" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187402658">Smoothness Option</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">This is what happens if I move the slider up on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Smoothness</span></span> Option.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/11.png" width="619" height="391" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This is what happens if you set the Smoothness to a negative  number.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/12.png" width="509" height="359" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187402659">Falloff</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">By default, the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Falloff</span></span> is set to be an  Inverse Square, but if you use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Smoothness</span></span> option with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Falloff </span></span>Option you  can get the look of the cube to do different things.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Inverse Square</span> </p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Images/13.png" width="623" height="265" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Smooth</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Images/14.png" width="619" height="332" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Sphere</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Images/15.png" width="617" height="304" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Root</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Images/16.png" width="619" height="312" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Sharp</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+
+<img src="Images/17.png" width="625" height="243" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Linear</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Images/18.png" width="538" height="272" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<h1><a name="_Toc187402660">Using the Hot Key of Ctrl-R to Create Edge Loop</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">You can also use <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">ctrl-r</span></span> to create a loop  cut. <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Click once</span></span> to enter slide mode.  The <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">left  mouse button</span></span> will control the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">slide of the loop cuts</span></span>, and now  you can use the <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">middle mouse wheel</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">increase the number of cuts</span></span>. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/19.png" width="388" height="133" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="redItalicChar">Note</span>- The middle mouse  wheel will not work if you use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">tool box button</span></span> to create  your loops. This only works with the hot key. If you try to use it while using  the tool box button, it will only zoom the object in and out. As this is the  hot key for zooming, if you are not in the Loop cut hot key. </p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<h1><a name="_Toc187402661">The Even Check Box</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Another interesting aspect of this Loop Cut and Slide dialog  box is the check box where it says <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span>. The thing is on the  default cube, given to you by Blender, you would never see the effects of this check  box, because the shape of this object causes all the loop cuts to be even  anyways. </p>
+<p class="MsoNormal">So, we would need to do something like move one side of this  cube downward to fake the look of a bevel, to see how this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span> check box  actually works. Here I took a cube, and started by making it taller. I just  pulled the top face upward with the move tool to do this. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/20.png" width="271" height="360" class="responsiveImage">
+<p class="MsoNormal">Now take the move tool, and in edge mode we want to select that  front top edge and move it down. <span class="BoldRedChar"><span style="font-size:12.0pt; ">Do not  bevel this edge</span></span>, as beveling will create extra geometry and this  trick will not work.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/21.png" width="419" height="308" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Slide your mouse upward to move the loop cut toward the top  of the box. You will see that the closer our edge loop is to the slanted edge,  the more it wants to follow that edge slant. You will also notice that the  farther we slide the loop down the more it will try to imitate the straighter slant  of the bottom edge.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/22.png" width="547" height="373" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">But you may not want this to slant at all. This is where the  check box of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span>,  comes in. If we check the Even check box while making this loop cut, we can  then remove the slant of the edge loop all together.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/23.png" width="487" height="397" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187402662">Flipped Check Box Option</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">If you use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Flipped</span></span> check box, it will  flip the edge loop. Here I just used the edge loop that was illustrated above,  checked the Flipped box, and it now looks like this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/24.png" width="522" height="356" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc187402663">Off Set Edge Loop cut Tool</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">This tool, might not be used as much because the same sort  of thing could be done just by using the bevel tool. All this tool does, is to  create 2 new edge loops, one on each side of the existing edge loop. You can  select this tool by hitting the little arrow on the Loop Cut tool, to gain  access to it, like this. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/25.png" width="277" height="139" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">First Make your loop cut, and with the loop cut still  highlighted in yellow, select the Off Set Edge Loop Cut tool. Pull upward with  your mouse to create the two edge loops around the middle loop.</p>
+<p class="MsoNormal">You will see, you do have access to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Offset Edge Slide dialog box.  </span></span>And you will see it jump up at  the bottom. Then you can use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Factor</span></span> slider to put the loop  cuts where you want them.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/26.png" width="552" height="412" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Checking the Even Box here, will just space all of these  edge loops evenly apart from one another.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/27.png" width="438" height="352" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Well, that is just about everything that you need to know  for now. The Loop cut Tool is amazing, and you will find your self using it all  of the time.</p>
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
