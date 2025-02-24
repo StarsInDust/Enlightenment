@@ -7,30 +7,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirroring In Object Mode</title>
+    <title>The Extrude Tool</title>
     
-    
-  <meta name="title" content="Mirroring In Object Mode ">
+   <meta name="title" content="The Extrude Tool ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="Mirroring an Object, Blender, 3D Modeling, Animation, Graphic Art "/>
+<meta name="keywords" content=" The Extrude Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
 
 
-<meta name="description" content="This article explains how to mirror an object in Object mode without resorting to a Mirror Modifier. />
+<meta name="description" content="This article explains how to use the Extrude Tool, while in Edit mode../>
 
-<meta name="category" content="Mirroring and Object, Blender, 3D Modeling, Animation, Graphic Art">
+<meta name="category" content="The Extrude Tool, Blender, 3D Modeling, Animation, Graphic Art">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Sunday, December 29, 2024" />
+<meta name="revised" content="Friday, January 3, 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/2-Mirroring-In-Object-Mode.html">
-  
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/The-Extrude-Tool.html">
+ 
     
     
     
@@ -90,11 +89,6 @@ font-family:"Times New Roman",serif;
 color:blue;
 font-weight:bold;
 }
-span.BoldRedChar {
-font-family:"Times New Roman",serif;
-color:red;
-font-weight:bold;
-}
 -->
 </style>
 </head>
@@ -103,7 +97,7 @@ font-weight:bold;
 <body>
 
 <div class="wrapper">
-  <header class="header">Header</header>
+<header class="header">Header</header>
   
   <ul class="navigation">
    <li><a href="index.html" class="active"title="Home">Home</a></li>
@@ -120,163 +114,265 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~Mirroring In Object Mode~</p>
+  <p class="h2Black" >~The Extrude Tool~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >2/17/2025</p>
+   <p class="articleDate" style="text-align:right" >2/24/2025</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
 
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366008">Method   Number One</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366009">Object   Mode</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366010">Select   the Object</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366011">Mirroring   the Object</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366012">Move   the Ears Back in Place</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366013">Method   Number 2, the Best Way to Mirror without Using a Modifier</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366014">Go   to Object Mode</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366015">Move   the Ear into place on the Head</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366016">Change   the Transform Pivot Point to 3D Cursor</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186366017">Move   Pivot Point Back</a></span></p>
-<p class="MsoNormal"><strong>&nbsp;</strong></p>
+
+
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186793485">Extrude   Region</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186793486">Extruding   different sections at the same Time</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186793487">Extruding   Edge Mode</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186793488">Extruding   a Vertex</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186793489">The   Little Arrow to more Mischief</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186793490">Manifold   Extruding</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186793491">Extrude   Along Normals</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186793492">Extrude   Individual</a></span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc186793493">Extrude   to Cursor</a></span></p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/1.png" width="266" height="243" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Yes, we could mirror the object by going into the modifying  panel and adding the mirror modifier to it, but here I just want to do a simple  mirror without going into that realm just quite yet. And mirroring is something  that should be done in Object mode, anyways. And since Object mode is what I am  starting out with, then I will demonstrate what can be done with mirroring in  this mode alone.</p>
-<h1><a name="_Toc186366008">Method Number One</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Here we have a simple little creature. He has an ear that  needs to be mirrored on the head.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/2.png" width="621" height="517" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/1.png" width="267" height="243" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Just like the Tools Menu in Object mode, the tools menu in <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Edit</span></span> mode is quite extensive.  Except that Edit mode has even more tools. Here you will find a large variety  of tools, which you can use to make changes to your 3D model. </p>
+<p class="MsoNormal">Here are Object Mode Tools, and the Edit mode Tools side by  side, just so you can see the difference. When you are in Edit mode, you  actually need to scroll to see all of the tools at the very bottom. You will  also see that all of the tools that you had available to you in Object mode,  are also available in Edit mode. You just have a lot of additional tools  underneath of them. So, this makes the list of tool buttons in Edit mode quite  a bit longer. </p>
 <p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/2.png" width="329" height="705" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Since we already discussed the top tools, which are shared  by both lists, in our section when discussing the <a href="Articles/2025/1-Blender-Continued/1-Object-Mode/1-Exploring-the-Interface/1-The-Tools-Panel/1-The-Tools-Panel.html">Object  work space tools</a>, I will only be discussing the tools at the bottom section  of this list. </p>
+<p class="MsoNormal">In this first tools tutorial, I will be looking exclusively  at the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Extrude</span></span> Tool.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc186793485">Extrude Region</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">This tool here is <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Extrude Region</span></span>. We use it  when we want to pull out a certain section of our 3D model. The hot key for  Extruding is <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span>.  So, if we press <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> on the keyboard with a face selected, we can extrude out that face.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/3.png" width="56" height="55" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You can start out in face mode and extrude a single face  like this. Select face mode from the sub menu like this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/4.png" width="286" height="92" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Select the top of the cube, hit either the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> key on the  keyboard, or the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Extrude  button</span></span> in the tool bar. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/5.png" width="454" height="231" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We can now use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Scale</span></span> tool and reshape the  top of the section that we just extruded. We learned about the  scale tool in our first tutorials concerning  the <a href="Articles/2025/1-Blender-Continued/1-Object-Mode/1-Exploring-the-Interface/1-The-Tools-Panel/1-The-Tools-Panel.html">Object  tools</a>. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/6.png" width="69" height="74" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/7.png" width="287" height="369" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc186366009">Object Mode</a></h1>
+<p class="MsoNormal">Ok, let&rsquo;s go back to our original cube before we used the  extrude tool on it., and sub divide it by right clicking and choosing subdivide  from the menu.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/8.png" width="221" height="207" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc186793486">Extruding different sections at the same Time</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Make sure you are in <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">object</span></span> mode</p>
+<p class="MsoNormal">Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A</span></span> to select the entire cube first.</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/9.png" width="351" height="150" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/3.png" width="226" height="96" class="responsiveImage">
+<p class="MsoNormal">This little menu shows up at the bottom. you can open and  select how much you want to subdivide the cube.</p>
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc186366010">Select the Object</a></h1>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/10.png" width="321" height="186" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Open this little Subdivide menu by hitting the little arrow  to the left of it, and then choose <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">5</span></span> for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Number of Cuts</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/11.png" width="445" height="458" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Shift select different areas on the cube, we can extrude  them all now. Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E </span></span>and extrude</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/12.png" width="277" height="215" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Pull downward with the mouse and it will extrude all these  regions out ward, but if you push upward with the mouse, it will push these  regions inward.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/13.png" width="609" height="266" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc186793487">Extruding Edge Mode</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Select the object that you want to work with. In our case it  is the ear.</p>
+<p class="MsoNormal">The thing with this extrude tool, is that we are not just  restricted to working with faces. We can change the mode to either Edge, or  Vertex and work with those sections of our 3D model too.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Change to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edge</span></span> mode</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/14.png" width="286" height="72">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Select an Edge, hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> key on the keyboard and  start extruding. You can hit either the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span>, or the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Z</span></span> key while pulling  out the extrude, and then you will pull it out either in the X, or Z axis, in  other words straight, instead of at an angle. I hit the X key while I was  pulling it out and it pulled it out straight in the horizontal plane.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/15.png" width="644" height="251" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now if you try to pull it out in the Y axis, nothing seems  to work and you only get a line instead of an actually Extrude. You would use a  Y axis if you are using a side edge, but since this is a top edge, it will not  work correctly. But here I pulled it out in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Z axis</span></span> and as you can see the  Z axis enabled it to be pulled perfectly straight, upward.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/16.png" width="262" height="302" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now here, I went back to face mode and selected the front  face of the section I just extruded and pulled it out. It now, kind of looks  like a chair. So, you can get an idea of how we can use this extrude method to  create different objects, and mold them into something that we want.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/17.png" width="443" height="364" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc186793488">Extruding a Vertex</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We can also extrude a vertex. This can get quite  interesting.</p>
+<p class="MsoNormal">Start by selecting one vertex on our cube.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/18.png" width="246" height="251" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> to extrude it. If you hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> on your gizmo in  the Viewport, you can create a flat line because you are now restricting this  line to the X axis.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/19.png" width="145" height="140" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Here I have the vertex selected while having the X selected  on the Gizmo. Also make sure you are in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Front Orthographic</span></span> view when  doing this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/20.png" width="225" height="203" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now just keep hitting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> key for each vertex that  you create, and draw out your outline. This method can be used if you are  trying to trace along the outline of an image; you can see where you can use  this technique to do that.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/21.png" width="567" height="327" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now if you wanted to, from here you can go into edge mode.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/22.png" width="271" height="95" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now shift – Select all of these edges</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/23.png" width="563" height="310" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">7</span></span> to go to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">top  view</span></span>. Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> key on the keyboard while in edge mode and extrude  these edges. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/24.png" width="302" height="299" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">And this is what it looks like from the side, it picked up  all of the curves that we created with extruding all of those vertices, so you  can see that this could also be very helpful</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/25.png" width="492" height="258" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to Face mode and select the top faces and then extrude  them.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/26.png" width="622" height="353" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Here we created some sort of duct work type of thing. Just  by extruding the mess out of everything.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/27.png" width="488" height="260" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc186793489">The Little Arrow to more Mischief</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">If you look at the extrude tool, you will see it has a  little arrow in the bottom right-hand corner and the little arrow means we can  do even more extruding, just a little bit differently from the main method.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/28.png" width="134" height="107" class="responsiveImage">
+<h1><a name="_Toc186793490">Manifold Extruding</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Ok, now this is what would happen if we were to push in one  of the segments of our cube using the default extrude method. Notice that it  pushed the face inward but we have an extra face on the side of the cube that  is left.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/29.png" width="253" height="248" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
 
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/4.png" width="359" height="302" class="responsiveImage">
+<p class="MsoNormal">Now go back by hitting ctrl-Z. Choose <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Extrude Manifold</span></span>, and  push that face inward.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="BoldRed">Let me first demonstrate the wrong way to do things</p>
-<p class="BoldRed">&nbsp;</p>
-<p class="MsoNormal">If you were to just duplicate this ear, by hitting shift-D,  and then hit the X button, you will find that you duplicated it, but it is in  the same direction as the other ear.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/30.png" width="279" height="249" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Hmmmm… so, that&rsquo;s not right.</p>
+<p class="MsoNormal">And look, we no longer have that extra piece on the side of  the cube. It just pushes the entire section backwards.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/5.png" width="506" height="345" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Even if we rotate it -90° on the Z axis, it still will  not be right</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Warning, </span></span>if you try  to do this move, and the ear disappears, you more than likely made your changes  in the location section, and not in the rotation section, and you just sent the  ear flying off the screen. Undo and redo your changes in the rotation section  of the Object property panel on the right side of the viewport.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/6.png" width="324" height="286" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">And once again, we have that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Hmmmm… that&rsquo;s not right</span></span> moment, with this rotation of -90°.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/7.png" width="619" height="447" class="responsiveImage">
-<h1>&nbsp;</h1>
-<h1>&nbsp;</h1>
-<h1>&nbsp;</h1>
-<h1><a name="_Toc186366011">Mirroring the Object</a></h1>
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/31.png" width="408" height="331" class="responsiveImage"></p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<h1><a name="_Toc186793491">Extrude Along Normals</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Make sure you still have the ear that you duplicated still  selected, and if you turned it around backwards make sure you undo that move,  and go back to where you had duplicated the ear. Also make sure that you have  not gone so far back that you don&rsquo;t still have 2 ears, in order to do the  mirror, we need to do it on the duplicated ear.</p>
+<p class="MsoNormal">Ok, now if we were to select this entire ring of faces, like  this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift- alt</span></span> click on a face in the ring of faces you want to select.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/8.png" width="508" height="344" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">The hot key to mirror, is the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl key</span></span> with the letter <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">M</span></span> on the Keyboard and  then Hit the letter <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> to mirror the ear in the X direction.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/9.png" width="621" height="292" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now you will see that your ear has been mirrored correctly  in the viewport.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/10.png" width="622" height="465" class="responsiveImage">
-<h1><a name="_Toc186366012">Move the Ears Back in Place</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Now just use the viewport and move your ears back into  place.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/11.png" width="622" height="517" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Hlk186362663"></a><a name="_Toc186366013">Method Number 2, the Best Way to Mirror without Using a Modifier</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">The above method is  one way in which you can mirror, but it might not be the best one. There is  actually a better way to mirror the ear, if you do not want to resort to using  a mirror modifier to do it.</p>
-<p class="MsoNormal">Again, you want to  make sure you are in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Object</span></span> mode.</p>
-<h1><a name="_Toc186366014">Go to  Object Mode</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/12.png" width="227" height="106" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">By Default, you will  have the Transform Pivot point on Median Point, you will notice that the move  tool cursor when in this mode is situated on the ear itself or the object, and  that looks like this:</p>
 
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/32.png" width="380" height="276" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now if you try to extrude these faces using the default  Extrude tool, it would look like this. This is probably not what you wanted it  to do.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/33.png" width="399" height="356" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/34.png" width="273" height="270" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/13.png" width="619" height="572" class="responsiveImage">
+<p class="MsoNormal">You can turn on the Normals by going here. The Normals shows  in which direction the faces are facing. Wheater they are facing inward on the  object or outward. Checking the box for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Face Orientation</span></span> will turn  them on. We can see all of our faces are facing outward because they are all  colored blue now.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/35.png" width="621" height="324" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift-alt</span></span> select a face in the ring to select the entire ring.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/36.png" width="511" height="454" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now either pull this tool handle down or up to move the  faces out or in.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/37.png" width="621" height="260" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Don&rsquo;t forget to turn off your <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">normals </span></span>by unchecking that  little box under the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Overlay</span></span> menu again.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/38.png" width="349" height="103" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">But before we make  a change to that Pivot Point, lets move the ear in place, where we want it to  be on this silly character&rsquo;s head.</p>
-<h1><a name="_Toc186366015">Move the  Ear into place on the Head</a></h1>
+<h1><a name="_Toc186793492">Extrude Individual</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
+<p class="MsoNormal">Here we are going to demonstrate what happens when we use  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Extrude  Individual</span></span> Option of the Extrude Tool.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/14.png" width="625" height="529" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">In order to mirror  the object correctly the Pivot point must be centered. So…</p>
-<h1><a name="_Toc186366016">Change the  Transform Pivot Point to 3D Cursor</a></h1>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/39.png" width="283" height="266" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Here I just added a sphere, and selected all of the top half  of it. This is what it would look like if I just used the default Extrude tool.  It just extrudes the entire top section.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/40.png" width="269" height="261" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now this is what happens when I use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Extrude Individual</span></span> Tool. Again, you can use this tool to pull individual faces outward, or push  them inward.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/41.png" width="554" height="250" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc186793493">Extrude to Cursor</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/14b.png" width="269" height="213" class="responsiveImage"></p>
-<p class="MsoNormal">Notice, when you  make this change that the cursor will jump to the center of the object that we  will use to mirror the ear. You only need the ear selected to make the cursor change, you do not need to shift select the head.</p>
+<p class="MsoNormal">Create a plane and go into edit mode. This can be a bit  intimidating at first as it seems that your object is chasing you mouse around,  which is exactly what it is doing. So, make sure you are ready for this insane  behavior to occur once you have this button selected and you start clicking on  the viewport.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/15.png" width="306" height="337" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now, go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Data</span></span> Tab of the Property  Panel</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/16.png" width="81" height="54" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Duplicate the Ear <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift - D</span></span>. Then <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Right click</span></span> immediately after  duplicating to keep the ear in place.</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/17.png" width="603" height="331" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/42.png" width="615" height="263" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">With that duplicated  ear still selected.</p>
+<p class="MsoNormal">Now position your mouse above the plane, and click once. The  plane will extrude to where you have your cursor positioned. Just keep clicking  and this thing will follow wherever you click you mouse on the screen. Just  remember to click on another tool if you want to leave this insanity.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You can also hit  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">N</span></span> key to open the side panel  in the right side of the inner viewport.</p>
-<p class="MsoNormal">Filp the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X </span></span>Location in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Location</span></span>. You can flip the  scale in either the X setting or the Y setting depending on which gives you the  better result. For the Ear I found that flipping in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y</span></span> setting for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Scale </span></span>worked out the best.</p>
-<p class="MsoNormal">Just put a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">negative sign</span></span> in front of  these numbers to flip them</p>
-<p class="BlueBolden">           </p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/18.png" width="470" height="338" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">And here is the Ear  Positioned Correctly after the Flip. Setting those numbers to negative numbers will just fling that ear into the correct position on the left side of the head. </p>
-<p class="boldBlue">COOL!</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/19.png" width="627" height="444" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/1-The-Extrude-Tool/Images/43.png" width="611" height="359" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc186366017">Move Pivot  Point Back</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">So, as you can see the extrude tool, and all of its options can  be a very powerful tool in your Blender 3D arsenal.</p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Remember to Move  your Transform Pivot Point back to the way it was originally once you have done  the flip.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/1-Object-Mode/2-Mirroring-in-Object-Mode/Images/20.png" width="348" height="233" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Well, that is all there is to mirroring the ear in Object  mode. Next week, we will start reviewing Edit mode. The menus that may differ  than what we have seen in object mode, and the different things that we can  accomplish while we are there.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p>&nbsp;</p></article><aside class="aside aside-1">
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
