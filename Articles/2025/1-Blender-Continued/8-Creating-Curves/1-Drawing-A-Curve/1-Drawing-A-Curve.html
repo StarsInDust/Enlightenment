@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Drawing a Curve</title>
+    
+   <meta name="title" content="1 Drawing a Curve ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Drawing a Curve, creating a Curve, Blender, 3D Modeling, Animation, Graphic Art "/>
+
+
+<meta name="description" content="This article explains how to Draw a Curve, in Blender/>
+
+<meta name="category" content="Drawing a Curve, creating a Curve, Blender, 3D Modeling, Animation, Graphic Art">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Wednesday, February 26, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/1-Drawing-A-Curve.html">
+
+
+ 
+    
+    
+    
+    
+    <link rel="shortcut icon" href="../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.BoldMaroonListChar {
+color:#600020;
+font-weight:bold;
+}
+span.Heading1Char {
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+font-weight:bold;
+}
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~1 Drawing a Curve~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >8/25/2025</p>
+   
+   <br>
+<br>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+
+
+
+<p class="tableOfContents"><a href="#_Toc191371896">What is a Curve?</a></p>
+<p class="tableOfContents"><a href="#_Toc191371897">A Control Point</a></p>
+<p class="tableOfContents"><a href="#_Toc191371898">Creating a Curve</a></p>
+<p class="tableOfContents"><a href="#_Toc191371899">Drawing A Curve</a></p>
+<p class="tableOfContents"><a href="#_Toc191371900">Setting Your Options in   the Property Panel</a></p>
+<p class="tableOfContents"><a href="#_Toc191371901">Depth</a></p>
+<p class="tableOfContents"><a href="#_Toc191371902">Resolution</a></p>
+<p class="tableOfContents"><a href="#_Toc191371903">Fill Caps</a></p>
+<p class="tableOfContents"><a href="#_Toc191371904">Smoothing out the Curve</a></p>
+<p class="tableOfContents"><a href="#_Toc191371905">Convert a Curve to Mesh</a></p>
+<p class="tableOfContents"><a href="#_Toc191371906">Last Operation Box for   &ldquo;Convert To&rdquo;</a></p>
+<p class="tableOfContents"><a href="#_Toc191371907">Adding a Material</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/1.png" width="269" height="240" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc191371896">What is a Curve?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">That&rsquo;s easy. A <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">curve</span></span> is a line that has a  curve or bend in it. We normally make these curves by using <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">control points</span></span>;  usually this is done, by using something like a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Bezier Curve</span></span>. However, in  this tutorial, I will be cheating just a bit and showing you how we can bring  in the Bezier curve, throw it away, and then just <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">draw</span></span> the curve we want. This  method might be the simplest one to start with.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc191371897">A Control Point</a>       </h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">So, what is a control point? We actually have three control  points in our illustration below. Each vertex that is on the Bezier line, is  considered a control point, and it can be used to bend and shape the curve into  something that we actually want. There is a center control point, and then two  on each side of the center point. These two end points control the handles of  the Bezier, and it is these handles that we can swing around, to tweak the way  the curve looks.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="227" height="178" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc191371898">Creating a Curve</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">To start off with, we do not need the cube. So, <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Delete the Cube</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/3.png" width="228" height="176" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1</span></span> key on the numpad to go into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">front</span></span> view.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/4.png" width="614" height="383" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift  – A</span></span> and add a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Bezier</span></span> <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Curve</span></span> to the Viewport.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/5.png" width="527" height="330" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">7</span></span> key on the Numpad to view the curve from the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">top</span></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/6.png" width="269" height="152" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode; you will notice that your menu dropdown (when  you have a curve as an object) only has <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">2 Workspace</span></span> options. These  two options will be <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Object</span></span> and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> Mode. We don&rsquo;t really do anything with a curve in the other workspaces, so to  represent them are unnecessary.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/7.png" width="229" height="121" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This is what this curve looks like in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> Mode. You can  see the handles of the Bezier curve - contraption very easily in this  illustration, but the curve is in there (in black) underneath of these red  handles thing.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/8.png" width="531" height="296" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">Hit X, </span></span>and choose <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Delete-Vertices</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/9.png" width="617" height="338" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc191371899">Drawing A Curve</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Switch to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Draw</span></span> tool. The Draw tool is  different from the Annotation tool, because as you can see from the tool icon,  it will have those Bezier points on them. If you had not brought a Bezier curve  into this Edit workspace, and just used a cube, you would not even have access  to this draw tool. So, make sure you start out with the Bezier Curve, and as  described above (use <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> to delete the Vertices).</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/10.png" width="80" height="89" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Then at the top of the Viewport Set the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Projection </span></span>Method to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Surface</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/11.png" width="307" height="113" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Start to Draw out your curve. Your curve will look like this  when you finish drawing it, and let go of the mouse. While you are drawing the  curve, it will look like a white drawing line.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/12.png" width="538" height="439" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc191371900">Setting Your Options in the Property Panel</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Open the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Data Tab</span></span>, in the Property panel on the right, for  the Curve. You will only see this tab if you have a curve selected, so make  sure your curve is selected.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/13.png" width="83" height="76" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now scroll down in the panel until you see the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Geometry</span></span> section.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/14.png" width="359" height="588" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc191371901">Depth</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Scroll down further in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Geometry </span></span>section to find <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Depth</span></span>. Increase the  Depth setting. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/15.png" width="579" height="358" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You can increase the depth as much as you want</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/16.png" width="621" height="310" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc191371902">Resolution</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Resolution</span></span> S<a name="_Hlk191355253">et </a>to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">4 </span></span>. The 4 given here is what  Blender started the resolution setting to begin with.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/17.png" width="625" height="357" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Now we can turn the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Resolution</span></span> up to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">15</span></span>. Look at those  sharp edges on the circular opening now. This is the resolution setting on the  Bevel, as you can see by the heading of this section. And this will only affect  the circular opening of the tube.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/18.png" width="624" height="277" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc191371903">Fill Caps</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We can Check the box for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fill Caps</span></span>, this will close  the end of the curve.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/19.png" width="619" height="320" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc191371904">Smoothing out the Curve</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">As I stated earlier, the resolution setting under Bevel,  only effects the circular opening to the curve. To make the full length of the curve  look smoother, we actually need another section of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Data</span></span> tab. The long  tube section of the curve is referred to in Blender as the &ldquo;<span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Spline&rdquo;</span></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/20.png" width="501" height="314" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">To Smooth out the Curve (Spline), we need to go to the  Section called <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Active  Spline</span></span>. The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Resolution</span></span> option starts out with a setting of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">12</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/21.png" width="360" height="296" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We want to turn the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Resolution</span></span> setting up to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">64</span></span>, which is the  highest it will go.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/22.png" width="618" height="535" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc191371905">Convert a Curve to Mesh</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We can turn our curve back into a mesh, once we have  finished with it. But we will need to take the curve back into <span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; ">Object mode</span></span> to do this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/23.png" width="251" height="100" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">Right click</span></span> on the Object and select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Convert To – Mesh</span></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/24.png" width="623" height="192" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc191371906">Last Operation Box for &ldquo;Convert To&rdquo;</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We can choose to keep the original in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Last operation</span></span> dialog  box. You might want to do this if you want to make changes to the curve. This  will give the curve that we drew with all the handles, and make a mesh copy of  it. </p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/25.png" width="626" height="460" class="wideImg">
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">&nbsp;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You know that you have changed it into a mesh if you take it  into Edit Mode and it looks like this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/26.png" width="632" height="767" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Note-</span></span> It isn&rsquo;t  actually necessary to change a curve into a mesh object, before you can add a  material to it, but you can change the curve, if you want it to be a solid  object. The difference between a curve and a solid object is that a solid  object is like a cube or a sphere. It has multiple vertices and faces, while a  curve is a flexible path, and is used to create more complex shapes.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc191371907">Adding a Material</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal"> Go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Material </span></span>tab. Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">New Button</span></span> to create a new material.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/27.png" width="242" height="391" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Change the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Name</span></span> of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Material</span></span>. I named  this one <span class="BoldRedChar"><span style="font-size:12.0pt; ">RED</span></span>, because my curve will be Red.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/28.png" width="301" height="181" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Important!</span></span> Make sure  you are either in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Material</span></span>,  or <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Render Mode</span></span> to see the color on the Object.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/29.png" width="160" height="97" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Change your color swatch</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/30.png" width="299" height="386" class="responsiveImage">
+<p class="MsoNormal">View your Curve</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/31.png" width="620" height="380" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Ok, this is as good of a stopping point as any on Drawing a  curve. And it is a good start to get you where you want to go with these curved  shapes.</p>
+<p>&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
+</body>
+</html>
