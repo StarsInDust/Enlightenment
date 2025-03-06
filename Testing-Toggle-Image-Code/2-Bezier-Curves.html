@@ -464,19 +464,19 @@ font-weight:bold;
   <script type="text/javascript" src ="../JavaScript/FooterYearlyDate.js">
 </script></footer>
 
-<script>
-const img = document.querySelector('main.img'); // Select the image element
 
-function addClassBasedOnWidth() {
-  if (img.naturalWidth > 500) {
-    img.classList.add('large-image');
-  } else {
-    img.classList.add('small-image');
-  }
-}
-
-img.onload = addClassBasedOnWidth; // Call the function after the image has loaded
-</script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("article.main img");
+            images.forEach(img => {
+                if (img.width < 500) {
+                    img.classList.add("responsiveImage");
+                } else {
+                    img.classList.add("wideImg");
+                }
+            });
+        });
+    </script>
 
     
       
