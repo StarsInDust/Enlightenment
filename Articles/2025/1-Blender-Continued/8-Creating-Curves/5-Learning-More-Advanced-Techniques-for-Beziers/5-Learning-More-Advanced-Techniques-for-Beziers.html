@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Learning More Advanced Techniques for Beziers</title>
+    
+  <meta name="title" content="5 Learning More Advanced Techniques for Beziers ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Learning More Advanced Techniques for Beziers, Blender, 3D Modeling, Animation, Graphic Art "/>
+
+
+<meta name="description" content="In this article, we will be looking at how we can work with learning more advanced techniques while working with Bezier Curves/>
+
+<meta name="category" content="Learning More Advanced Techniques for Beziers, Blender, 3D Modeling, Animation, Graphic Art">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Saturday, March 8, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/8-Creating-Curves/5-Learning-More-Advanced-Techniques-for-Beziers/5-Learning-More-Advanced-Techniques-for-Beziers.html">
+
+
+    
+    
+    <link rel="shortcut icon" href="../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-underline:single;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.boldBlueChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+
+.small-image  {
+	-webkit-box-shadow: 2px 3px 8px black;
+	        box-shadow: 2px 3px 8px black;
+  border-radius: 10px;
+  margin-bottom: 20Px;
+	 margin-top: 20Px;
+	
+}
+
+.large-image{
+    width: 90%;
+	height:auto;
+  margin-bottom: 20Px;
+	 margin-top: 20Px;
+  }
+
+
+
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~5 Learning More Advanced Techniques for Beziers~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >9/22/2025</p>
+   
+   <br>
+<p class="MsoNormal">&nbsp;</p>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+
+
+
+<p class="tableOfContents"><a href="#_Toc192239370">Starting Point</a><span style="line-height:115%; font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc192239371">Merging Section</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc192239372">Making another handle   point: Vector</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc192239373">Changing a Hard Sharp   Corner into a Curve</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc192239374">Moving Both Handles at   Same Time to Adjust Curvature<span style="display:none; text-underline:none; color:windowtext; text-decoration:none; ">. </span></a><span style="font-size:12.0pt; "> </span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="BlueBolden"><img src="Images/1.png" width="257" height="237"></p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc192239370">Starting Point</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We are starting this tutorial, straight off of what we have  done in the <a href="../4-Adding-The-Bezier-Circle/4-Adding-The-Bezier-Circle.html">last tutorial</a>. So, make sure you have been following along. If not  then go back and finish the curve up to that point. Your curve should be  looking like this now.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="BlueBolden"><img src="Images/2.png" width="335" height="292"></p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc192239371">Merging Section</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">If you look at your curve now, and try to move that new  circular section away from the straight line, you will find that they will come  apart. </p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/3.png" width="309" height="227"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">So, as you can see by the image above, those two vertices,  between our two curve segments, are not exactly merged together, they are just  very precisely placed one on top of the other. What we actually want is for  these two sections to be merged. But we will be going at merging them a bit  differently this time. Instead of just merging the vertices together, we will  be working with the two sections. I will describe how this is done, in the paragraphs  below. </p>
+<p class="MsoNormal">By the way, if you separated those two vertices, just go  back in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span>-<span class="BlueBoldenChar"><span style="font-size:12.0pt; ">History</span></span>, and put them  back together again. </p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/4.png" width="257" height="222"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">If you have overlapping points in Blender, as we do with  these two points, we can actually cycle through each one of these points,  selecting either the top or bottom point. To cycle through them we click <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">one</span></span> time on the top  control point, if you click again, it will select the bottom control point. You  can see this, as it will change from a pink control to a yellow control.</p>
+<p class="MsoNormal">Your control on the top of the other point, is pink, and it  goes with that circle like curve at the bottom. The yellow controller belongs  to that straight line that is coming off of the original curve shape.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/5.png" width="594" height="269"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">yellow controller</span></span> showing, we  want to hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> key and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Delete  Vertices</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/6.png" width="407" height="300"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now with that one section gone, we can use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Select tool</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">marque around</span></span> these  two points, that we are showing in the next image.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+<p class="MsoNormal"><img src="Images/7.png" width="412" height="241"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Sub menu</span></span> at the top of the  View port, and Click on <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Control  Points</span></span>. We want to select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Make Segment</span></span>. This will create  a segment across those two points, and sufficiently merge these two segments.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/8.png" width="577" height="152"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">So, after preforming that procedure, we know that these two  segments are attached to one another. And it&rsquo;s a single path.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/9.png" width="413" height="471"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc192239372">Making another handle point: Vector</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Now we want to select this point here (in the image below),  and make it <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Vector</span></span>.  We will be working just with the handle end points, while making this change.  Making it Vector will cause one handle point to point directly to the previous  handle point. Doing this allows us to tessellate things more efficiently.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/10.png" width="608" height="235"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Tessellate</span></span>-  This is a term in geometry that means to create a pattern repeatedly with  polygon shapes, that will fit together without gaps, or overlaps.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc192239373">Changing a Hard Sharp Corner into a Curve</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We next want to change a sharp corner into a curve. We will  be working with this corner right here.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="BlueBolden"><img src="Images/11.png" width="376" height="324"></p>
+<p class="BlueBolden"><br clear="all">
+</p>
+<p class="MsoNormal">To make this change, we want to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">right-click</span></span> on this point,  which will bring up a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">context  menu</span></span>. From this Context menu, we want to select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fillet</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="BlueBolden"><img src="Images/12.png" width="593" height="221"></p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">You will notice, what <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fillet</span></span> did was to create  another point, and add a curved section between the two control points. So,  Fillet will Fill it.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/13.png" width="307" height="193"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The size of this Fillet section, really isn&rsquo;t that big. So,  in my case, it really came in at a nice size. But Blender will choose this size  for you, and it isn&rsquo;t always too great at doing this measurement. So, if we  needed to make changes to the size of this Fillet, we could do it in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Last operation</span></span> dialog-box  that shows up at the bottom of the screen. Then we just change the size of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Radius</span></span>.</p>
+<p class="BlueBolden">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/14.png" width="355" height="172"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc192239374">Moving Both Handles at Same Time to Adjust  Curvature</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We can <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">box-select</span></span> both of these control handles with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Select Tool</span></span>, we only  want to select the handle end-points, if it selects the entire control, just  come in again and once again, just try to select the handles end points.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+<p class="MsoNormal"><img src="Images/15.png" width="311" height="218"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now select the <span class="boldBlueChar"><span style="font-size:12.0pt; ">Move Tool</span></span>, and you will find  that we can move both of the handles at the same time to change that curvature.  Pull the move tool gizmo, toward the right of the Viewport to create a nice  Curve.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/16.png" width="587" height="369"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Ok, that is about all for this week, next week we will begin  working on the top of the Curve.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+</article>
+  <aside class="aside aside-2"> </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("article.main img");
+            images.forEach(img => {
+                if (img.width < 500) {
+                    img.classList.add("responsiveImage");
+                } else {
+                    img.classList.add("wideImg");
+                }
+            });
+        });
+    </script>
+
+    
+      
+
+    
+</body>
+</html>
