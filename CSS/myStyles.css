@@ -315,6 +315,18 @@ body {
 }
 
 
+a.customLink {
+    color: gold;
+    text-decoration: none;
+}
+
+a.customLink:hover {
+    color: silver;
+    text-decoration: underline;
+}
+
+
+
 
 .tableOfContents a {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
