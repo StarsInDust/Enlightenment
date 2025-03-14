@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<article class="main">
+    <button id="changeTextButton">Click me to change text</button>
+    <p id="textToChange">This is the original text.</p>
+</article>
+
+<script>
+    // This function will be called when the button is clicked
+    function changeText() {
+        // Get the paragraph element by its ID
+        var paragraph = document.getElementById('textToChange');
+        // Change the text content of the paragraph
+        paragraph.textContent = 'The text has been changed!';
+    }
+
+    // Get the button element by its ID
+    var button = document.getElementById('changeTextButton');
+    // Add an event listener to the button to call the changeText function when clicked
+    button.addEventListener('click', changeText);
+</script>
+
+</body>
+</html>
