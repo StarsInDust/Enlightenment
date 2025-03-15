@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Fill and Put Hole in Form</title>
+    
+    <meta name="title" content="8 Fill and Put Hole in Form ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Filling and adding a hole to a Shape, Blender, 3D Modeling, Animation, Graphic Art "/>
+
+
+<meta name="description" content="This article explains how to add a hole, to the existing Bezier form or shape/>
+
+<meta name="category" content="Fill and put a hole in Form, or Shape, Blender, 3D Modeling, Animation, Graphic Art">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Saturday, March 15, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/8-Creating-Curves/8-Fill-And-Cut-Hole-in-Form/8-Fill-And-Cut-Hole-In-Form.html">
+
+    
+    
+    
+    
+    
+    
+   
+ <meta name="title" content="7 Mirroring and Joining the Curve ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Mirroring and Joining a Curve, Blender, 3D Modeling, Animation, Graphic Art "/>
+
+
+<meta name="description" content="This article explains how mirror and join a curve in Blender/>
+
+<meta name="category" content="Mirroring and Joining a Curve, Blender, 3D Modeling, Animation, Graphic Art">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Wednesday, March 12, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/7-Mirroring-And-Joining-The-Curve.html">
+  
+   
+   
+   
+   
+   
+   
+
+
+    
+    
+    <link rel="shortcut icon" href="../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.MsoHyperlink {
+color:#0563C1;
+text-decoration:underline;
+text-decoration:single;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.boldBlueChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+
+
+
+
+
+
+.main .MsoNormal a{
+	color: #8B660D !important;
+	text-decoration: underline !important;
+	font-weight: bolder;
+}
+
+.main .MsoNormal a:visited {
+    color: #41677A !important;
+    text-decoration: underline !important;
+    font-weight: normal;
+}
+
+.main .MsoNormal a:hover {
+    color: silver !important;
+    text-decoration: underline !important;
+}
+
+
+
+-->
+</style>
+<style type="text/css">
+<!--
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+span.BoldMaroonListChar {
+color:#600020;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~8 Fill and Put Hole in Form~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >10/13/2025</p>
+   <p class="MsoNormal">&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+
+
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc192946636">Starting   Point</a></span><span style="line-height:115%; font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc192946637">Change   Shape to 2D Mode</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc192946638">Go   into Outline Mode</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc192946639">The   Property Panel</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc192946640">Creating   the Circle for the Hole</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc192946641">Making   the Hole Appear in the Shape</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/1.png" width="265" height="240"></p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc192946636">Starting Point</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We should be here now with our shape, if you have been  following along from our<a href="../7-Mirroring-And-Joining-The-Curve/7-Mirroring-And-Joining-The-Curve.html"> last tutorial</a>.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/2.png" width="323" height="357"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">One of the advantages to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">adding a segment</span></span> to close the  curve (as we did at the end of the <a href="../7-Mirroring-And-Joining-The-Curve/7-Mirroring-And-Joining-The-Curve.html">last tutorial</a>), instead of just merging the  vertices at the bottom, is that it allows us to fill this shape, and make it  appear solid.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Filling this shape is exactly what we are trying to do in this  tutorial, so blending the two curves together in the way that we did, works  perfectly for us.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc192946637">Change Shape to 2D Mode</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">But before we can fill the shape, we are going to need to  change our shape to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">2D  mode</span></span>, this will further enable us to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">fill</span></span> the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shape</span></span>. If you were to  leave the shape in a 3D mode, you will notice that we will be unable to fill it  in the manner that we will be using.</p>
+<p class="MsoNormal">We have a few options for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fill Mode</span></span>. But <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Front</span></span> will work fine  for us. So, go ahead and choose this option from the drop-down.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/3.png" width="426" height="568"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now our shape is filled.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/4.png" width="431" height="454"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc192946638">Go into Outline Mode</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">To get into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">outline mode</span></span>, we need to go  to the top of the viewport and click on this button here. As indicated in the  image below.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/5.png" width="333" height="158"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">In <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">outline  mode</span></span>, your shape should now look like this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="BlueBolden"><img src="Images/6.png" width="347" height="318"></p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc192946639">The Property Panel</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We can then come over the Property panel for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Curve</span></span>, and  temporarily <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">turn off</span></span> <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fill</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+<p class="MsoNormal"><img src="Images/7.png" width="387" height="408"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now our shape should look like this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+<p class="MsoNormal"><img src="Images/8.png" width="305" height="301"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc192946640">Creating the Circle for the Hole</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now select these two points here.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+<p class="MsoNormal"><img src="Images/9.png" width="385" height="399"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift -S</span></span> and select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cursor to Selected</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/10.png" width="486" height="265"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Your Cursor should now be between those two points that we  had selected.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="BlueBolden"><img src="Images/11.png" width="366" height="303"></p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift</span></span> and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A</span></span> and then <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">add a circle</span></span> right in  the middle where the cursor is now located.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/12.png" width="329" height="146"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Your shape should now have a circle in it. I used the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">mouse wheel</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">zoom</span></span> in on this  portion of the shape.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="BlueBolden"><img src="Images/13.png" width="409" height="394"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">S </span></span>key, and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Scale</span></span> this circle down a bit.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/14.png" width="517" height="346"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Ok, since we have a circle or a shape inside of our shape.  Blender will automatically detect a counter space relationship. In other words.  Blender will assume you are wanting to cut a hole in your shape.</p>
+<p class="MsoNormal">Come out of Wire mode, and go back to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Solid</span></span> Mode.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/15.png" width="319" height="97"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc192946641">Making the Hole Appear in the Shape</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">All we have to do, to see our hole appear in the shape, is  to come back to our <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Property  Panel</span></span> on the right-hand side of the Viewport, and <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">turn  back on</span></span> that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Front</span></span> option for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fill Mode</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/16.png" width="426" height="451"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">And notice now that you do indeed have that hole in your  shape.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><img src="Images/17.png" width="370" height="368"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This will be the end of our series of tutorials on Curves. I  hope you have enjoyed it. And just have fun.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+</article>
+<aside class="aside aside-2"> </aside>
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("article.main img");
+            images.forEach(img => {
+                if (img.width < 500) {
+                    img.classList.add("responsiveImage");
+                } else {
+                    img.classList.add("wideImg");
+                }
+            });
+        });
+    </script>
+      
+
+    
+</body>
+</html>
