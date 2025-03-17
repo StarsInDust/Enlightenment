@@ -7,40 +7,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Bevel Tool</title>
+    <title>The Loop Cut Tool</title>
     
-    <meta name="title" content="The Bevel Tool ">
+    <meta name="title" content="The Loop Cut Tool ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" The Bevel Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
+<meta name="keywords" content=" The Loop Cut Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
 
 
-<meta name="description" content="This article explains how to use the bevel tool inside of the Edit mode in the Blender program. />
+<meta name="description" content="This article explains how to use the Loop Cut tool in Edit mode inside of the Blender application. />
 
-<meta name="category" content="The Bevel Tool, Blender, 3D Modeling, Animation, Graphic Art">
+<meta name="category" content="The Loop Cut Tool, Blender, 3D Modeling, Animation, Graphic Art">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Monday, January 6, 2025" />
+<meta name="revised" content="Friday, January 10, 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/The-Bevel-Menu.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/4-The-Loop-Cut-Tool.html">
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
@@ -96,6 +86,26 @@ font-family:"Times New Roman",serif;
 color:blue;
 font-weight:bold;
 }
+span.MsoIntenseReference {
+font-variant:small-caps;
+color:#4472C4;
+letter-spacing:.25pt;
+font-weight:bold;
+}
+span.BoldMaroonListChar {
+color:#600020;
+font-weight:bold;
+}
+span.redItalicChar {
+color:red;
+font-weight:bold;
+font-style:italic;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
 -->
 </style>
 </head>
@@ -104,7 +114,7 @@ font-weight:bold;
 <body>
 
 <div class="wrapper">
-<header class="header">Header</header>
+  <header class="header">Header</header>
   
   <ul class="navigation">
    <li><a href="index.html" class="active"title="Home">Home</a></li>
@@ -121,136 +131,224 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~The Bevel Tool~</p>
+  <p class="h2Black" >~The Loop Cut Tool~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >3/10/2025</p>
+   <p class="articleDate" style="text-align:right" >3/17/2025</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187059148">How   to Create a Bevel</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187059149">The   Last Operation Dialog Box</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187059150">The   Bevel (Last Operation) dialog box OPTIONS</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187059151">Bevel   One Edge</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187059152">Working   with Vertices</a></span></p>
+
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402651">The   Loop Cut Button</a></span><span style="line-height:115%; font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402652">The   Difference between Sub Divide and Loop Cut</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402653">Loop   cut Button Verses the Hot Key</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402654">How   to Use the Loop Cut Tool Button</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402655">Using   the Loop Cut Tool from the Tool box</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402656">Number   of Cuts Option</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402657">Factor   Option</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402658">Smoothness   Option</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402659">Falloff</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402660">Using   the Hot Key of Ctrl-R to Create Edge Loop</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402661">The   Even Check Box</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402662">Flipped   Check Box Option</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402663">Off   Set Edge Loop cut Tool</a></span><span style="font-size:12.0pt; "> </span></p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/1.png" width="271" height="242" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/1.png" width="267" height="240" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">We can also find the Bevel tool inside of the Edit work  space&rsquo;s Tool Panel. The tool button will look like this.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/2.png" width="183" height="47" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187059148">How to Create a Bevel</a></h1>
+<h1><a name="_Toc187402651">The Loop Cut Button</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
 <p>&nbsp;</p>
-<p class="MsoNormal">To start, bring your start up cube into the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Edit</span></span> Workspace.</p>
+<p class="MsoNormal">Ok, well again you do not actually see or have access to  this tool unless you are in Edit mode. So, remember, <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit Mode</span></span> first then <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop Cut</span></span> tool.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/3.png" width="442" height="291" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Go to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Face Mode</span></span> and select the top face, on the cube in  the viewport.</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/4.png" width="496" height="351" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/2.png" width="406" height="118" class="responsiveImage">
+<h1><a name="_Toc187402652">The Difference between Sub Divide and Loop Cut</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Yes, some people might be asking, &ldquo;Why would I need a loop  cut? Why wouldn&rsquo;t I just use the sub divide, with the right click option, in  Edit mode, and call it a day?&rdquo;</p>
+<p class="MsoNormal">The reason for using the loop cut tool, is because it allows  you to customize your cuts more precisely to where you actually want them to  fall, whereas the Subdivide option will simply slice everything up into uniform  pieces. So, it just depends on what you need done, and what will work best for  your own 3D modeling needs.</p>
+<h1><a name="_Toc187402653">Loop cut Button Verses the Hot Key</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">You have two options to creating these loop cuts. One is to  use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop  Cut Button</span></span> on the left side of the screen inside of the Tool  panel. The other one is to use <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-r</span></span> as a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">hot key</span></span> to execute  the cut. They both will act a bit differently when trying to fine tune things  after wards though. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/3.png" width="524" height="316" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now select your <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">bevel tool</span></span>, from the  left-hand tool panel. You can also just hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">letter E</span></span> on the keyboard, as  it is the hot key for this bevel tool, and will bring it to it in just the same  way.</p>
-<p class="MsoNormal">Notice that this tool does not come with any bottom right  arrow, so what you see here, is what you get, with no other options.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/5.png" width="136" height="90" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You will see this yellow type of arrow pointing out of the  top of the box. This is the Bevel tool, and you can use it to create the bevel  for the cube.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/6.png" width="214" height="205" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You want to pull upward on the yellow circle at the top of  this weird type of arrow to begin the bevel. The more you pull upward on it,  the larger the bevel will be on the top edges of the box.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/7.png" width="287" height="237" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Just click off of the cube, to accept your bevel.</p>
-<h1><a name="_Toc187059149">The Last Operation Dialog Box</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Before you click off of it though, you will have access to <a name="_Hlk186975350">the last operation dialog box</a>, in which you can make  changes to your bevel.</p>
-<p class="MsoNormal">If you click on Vertices instead of edges the cube bevel  will look like this.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/8.png" width="459" height="374" class="responsiveImage"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
-<h1><a name="_Toc187059150">The Bevel (Last Operation) dialog box OPTIONS</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">You can control the size of the bevel with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Width</span></span> setting.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/9.png" width="619" height="392" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You can also set the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Segments</span></span>. Here I set it to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">3</span></span>, and you can see  that I now have 3 bevels on the same edges.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/10.png" width="519" height="330" class="responsiveImage"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
-<h1><a name="_Toc187059151">Bevel One Edge</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">You can just <a name="_Hlk186976621">bevel One Edge</a>. Go  into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edge</span></span> mode and select one edge</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/11.png" width="311" height="445" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now pull downward on that stick to bevel that edge</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/12.png" width="622" height="349" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now you can roll the mouse wheel while you create this  single bevel and create more segments. It will look like this when you do it  though.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/13.png" width="505" height="388" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You might want this inward look for the bevel, but maybe you  don&rsquo;t, and if you actually want this to curve outward instead of inward, you  would raise the level of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shape</span></span> option to get it to look the way that you want  it.</p>
-<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/14.png" width="618" height="451" class="responsiveImage"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
 <p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc187059152">Working with Vertices</a></h1>
+<p class="MsoNormal">With the tool box button, you will rely on the Last  operation dialog box that will show up at the bottom of the screen before you  click off of the object. Clicking off of the object will make this dialog box  at the bottom of the screen disappear, signally to Blender that you have  completed the operation, and you are done with the tool.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/4.png" width="365" height="167" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">When you use the hot key of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-r</span></span>, you click one time after  creating the edge loop. This will put you into editing mode for this cut and  you can use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">middle  mouse wheel</span></span> to increase or decrease the loop cuts, and the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">left mouse button</span></span> to slide  the loop cuts up or down across the face of the object. So, don&rsquo;t get confused  with these differences when uses the two different methods (tool box button and  the hotkey) to perform this task.</p>
+<h1><a name="_Toc187402654">How to Use the Loop Cut Tool Button</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
 <p>&nbsp;</p>
-<p class="MsoNormal">You can also add <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">segments</span></span> to vertices too.</p>
-<p class="MsoNormal">You can start out by selecting the back edge. Like this.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/15.png" width="352" height="301" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now Bevel the Edge, again by just pulling downward on this yellow  stick.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/16.png" width="380" height="321" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now turn the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Affect</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Vertices</span></span> instead of  Edges</p>
+<p class="MsoNormal">As you already know, you can start this tool by either the  tool box button, or the hot key. But what do I do after that?</p>
+<h1><a name="_Toc187402655">Using the Loop Cut Tool from the Tool box</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">When you first start using this tool, you will notice this  yellow loop, flipping around the object. When you click on different edges, you  will notice that the loop will arrange itself in different directions.</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/17.png" width="354" height="282" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/5.png" width="404" height="178" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">When you start to increase the segments on these vertices,  the curve will start out by creating inward. That is because the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shape</span></span> option will  reset to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span> (for some reason). As you see I increased the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Segments</span></span> here to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">7</span></span> and this created  the dent in the edge.</p>
+<p class="MsoNormal"> Just find the  direction that you want the loop to go in. Then you will notice the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop Cut and Slide</span></span> dialog box, which is your last operation dialog box. </p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/18.png" width="520" height="323" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/6.png" width="273" height="159" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Click on that little arrow to open up the dialog box and get  to the different options for this tool. Just remember, if you click again off  of the object, this dialog will disappear, never to show itself again.</p>
+<p class="MsoNormal">You can change the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">number of cuts</span></span> from here. You  can also adjust the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">smoothness</span></span>,  change how the loop cuts will behave (<span class="BlueBoldenChar"><span style="font-size:12.0pt; ">falloff</span></span>), or use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Factor</span></span> slider to move  the loop cut along the face of the object.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/7.png" width="428" height="337" class="responsiveImage">
+<h1><a name="_Toc187402656">Number of Cuts Option</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Here I changed the number of cuts to be 5.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/8.png" width="589" height="375" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187402657">Factor Option</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">If you slide the blue slider on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Factor </span></span>option, you  will see the loop cuts move down or up along the faces of the object.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/9.png" width="578" height="326" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Setting the Factor setting back to 0 will center the Loop  cuts inside of the face of the cube again.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/10.png" width="618" height="320" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187402658">Smoothness Option</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">This is what happens if I move the slider up on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Smoothness</span></span> Option.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/11.png" width="619" height="391" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This is what happens if you set the Smoothness to a negative  number.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/12.png" width="509" height="359" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187402659">Falloff</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">By default, the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Falloff</span></span> is set to be an  Inverse Square, but if you use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Smoothness</span></span> option with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Falloff </span></span>Option you  can get the look of the cube to do different things.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Inverse Square</span> </p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/13.png" width="623" height="265" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now increase the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shape</span></span> setting to pull this  dent outward. Here it is set to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">.500</span></span></p>
-<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">&nbsp;</span></span></p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/19.png" width="531" height="347" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">Smooth</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/14.png" width="619" height="332" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Sphere</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/15.png" width="617" height="304" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Root</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/16.png" width="619" height="312" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Sharp</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/17.png" width="625" height="243" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Linear</span></p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/18.png" width="538" height="272" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<h1><a name="_Toc187402660">Using the Hot Key of Ctrl-R to Create Edge Loop</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">You can also use <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">ctrl-r</span></span> to create a loop  cut. <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Click once</span></span> to enter slide mode.  The <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">left  mouse button</span></span> will control the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">slide of the loop cuts</span></span>, and now  you can use the <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">middle mouse wheel</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">increase the number of cuts</span></span>. </p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">If you set it all the way to 1.000, the vertices will look  more like points, instead of bevels.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/20.png" width="620" height="518" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Ok, I did not really want those points so, I reset the bevel  back to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">.500</span></span></p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/21.png" width="387" height="323" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Here is the cube in object mode. </p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/Images/22.png" width="473" height="386" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/19.png" width="388" height="133" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Well, that is about it for the Bevel tool. Practice your  beveling and see what you can come up with.</p>
+<p class="MsoNormal"><span class="redItalicChar">Note</span>- The middle mouse  wheel will not work if you use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">tool box button</span></span> to create  your loops. This only works with the hot key. If you try to use it while using  the tool box button, it will only zoom the object in and out. As this is the  hot key for zooming, if you are not in the Loop cut hot key. </p>
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<h1><a name="_Toc187402661">The Even Check Box</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Another interesting aspect of this Loop Cut and Slide dialog  box is the check box where it says <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span>. The thing is on the  default cube, given to you by Blender, you would never see the effects of this check  box, because the shape of this object causes all the loop cuts to be even  anyways. </p>
+<p class="MsoNormal">So, we would need to do something like move one side of this  cube downward to fake the look of a bevel, to see how this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span> check box  actually works. Here I took a cube, and started by making it taller. I just  pulled the top face upward with the move tool to do this. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/20.png" width="271" height="360" class="responsiveImage">
+<p class="MsoNormal">Now take the move tool, and in edge mode we want to select that  front top edge and move it down. <span class="BoldRedChar"><span style="font-size:12.0pt; ">Do not  bevel this edge</span></span>, as beveling will create extra geometry and this  trick will not work.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/21.png" width="419" height="308" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Slide your mouse upward to move the loop cut toward the top  of the box. You will see that the closer our edge loop is to the slanted edge,  the more it wants to follow that edge slant. You will also notice that the  farther we slide the loop down the more it will try to imitate the straighter slant  of the bottom edge.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/22.png" width="547" height="373" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">But you may not want this to slant at all. This is where the  check box of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span>,  comes in. If we check the Even check box while making this loop cut, we can  then remove the slant of the edge loop all together.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/23.png" width="487" height="397" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187402662">Flipped Check Box Option</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">If you use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Flipped</span></span> check box, it will  flip the edge loop. Here I just used the edge loop that was illustrated above,  checked the Flipped box, and it now looks like this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/24.png" width="522" height="356" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc187402663">Off Set Edge Loop cut Tool</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">This tool, might not be used as much because the same sort  of thing could be done just by using the bevel tool. All this tool does, is to  create 2 new edge loops, one on each side of the existing edge loop. You can  select this tool by hitting the little arrow on the Loop Cut tool, to gain  access to it, like this. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/25.png" width="277" height="139" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">First Make your loop cut, and with the loop cut still  highlighted in yellow, select the Off Set Edge Loop Cut tool. Pull upward with  your mouse to create the two edge loops around the middle loop.</p>
+<p class="MsoNormal">You will see, you do have access to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Offset Edge Slide dialog box.  </span></span>And you will see it jump up at  the bottom. Then you can use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Factor</span></span> slider to put the loop  cuts where you want them.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/26.png" width="552" height="412" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Checking the Even Box here, will just space all of these  edge loops evenly apart from one another.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/27.png" width="438" height="352" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Well, that is just about everything that you need to know  for now. The Loop cut Tool is amazing, and you will find your self using it all  of the time.</p>
 <p>&nbsp;</p>
 <p class="pMidBlack">&nbsp;</p>
  
