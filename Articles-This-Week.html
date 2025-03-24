@@ -7,31 +7,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Loop Cut Tool</title>
+    <title>The Knife Tool</title>
     
-    <meta name="title" content="The Loop Cut Tool ">
+    <meta name="title" content="The Knife Tool ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" The Loop Cut Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
+<meta name="keywords" content=" The Knife Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
 
 
-<meta name="description" content="This article explains how to use the Loop Cut tool in Edit mode inside of the Blender application. />
+<meta name="description" content="This article explains how to use the Knife tool, while in Edit mode inside of the Blender application/>
 
-<meta name="category" content="The Loop Cut Tool, Blender, 3D Modeling, Animation, Graphic Art">
+<meta name="category" content="The Knife Tool, Blender, 3D Modeling, Animation, Graphic Art">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Friday, January 10, 2025" />
+<meta name="revised" content="Sunday, January 12, 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/4-The-Loop-Cut-Tool.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/The-Knife-Tool.html">
 
-
-    
     
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
 
@@ -76,34 +74,20 @@ line-height:115%;
 font-size:11.0pt;
 font-family:"Calibri",sans-serif;
 }
-span.MsoHyperlink {
-color:#0563C1;
-text-decoration:underline;
-text-underline:single;
-}
 span.BlueBoldenChar {
 font-family:"Times New Roman",serif;
 color:blue;
+font-weight:bold;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
 font-weight:bold;
 }
 span.MsoIntenseReference {
 font-variant:small-caps;
 color:#4472C4;
 letter-spacing:.25pt;
-font-weight:bold;
-}
-span.BoldMaroonListChar {
-color:#600020;
-font-weight:bold;
-}
-span.redItalicChar {
-color:red;
-font-weight:bold;
-font-style:italic;
-}
-span.BoldRedChar {
-font-family:"Times New Roman",serif;
-color:red;
 font-weight:bold;
 }
 -->
@@ -131,224 +115,256 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~The Loop Cut Tool~</p>
+  <p class="h2Black" >~The Knife Tool~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >3/17/2025</p>
+   <p class="articleDate" style="text-align:right" >3/24/2025</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
 
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402651">The   Loop Cut Button</a></span><span style="line-height:115%; font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402652">The   Difference between Sub Divide and Loop Cut</a></span><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402653">Loop   cut Button Verses the Hot Key</a></span><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402654">How   to Use the Loop Cut Tool Button</a></span><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402655">Using   the Loop Cut Tool from the Tool box</a></span><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402656">Number   of Cuts Option</a></span><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402657">Factor   Option</a></span><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402658">Smoothness   Option</a></span><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402659">Falloff</a></span><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402660">Using   the Hot Key of Ctrl-R to Create Edge Loop</a></span><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402661">The   Even Check Box</a></span><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402662">Flipped   Check Box Option</a></span><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc187402663">Off   Set Edge Loop cut Tool</a></span><span style="font-size:12.0pt; "> </span></p>
+
+
+<p class="tableOfContents"><a href="#_Toc187502788">Introduction to the Knife Tool</a></p>
+<p class="tableOfContents"><a href="#_Toc187502789">Yikes, now how do I get   out of this tool!</a></p>
+<p class="tableOfContents"><a href="#_Toc187502790">NGons</a></p>
+<p class="tableOfContents"><a href="#_Toc187502791">Extruding the New   Geometry</a></p>
+<p class="tableOfContents"><a href="#_Toc187502792">Free clicking on the face</a></p>
+<p class="tableOfContents"><a href="#_Toc187502793">To Cancel a Cut</a></p>
+<p class="tableOfContents"><a href="#_Toc187502794">To Lock the tool into a   Mid -Point Mode</a></p>
+<p class="tableOfContents"><a href="#_Toc187502795">Splitting the Object   based on your View</a></p>
+<p class="tableOfContents"><a href="#_Toc187502796">Setting an Angle Constraint</a></p>
+<p class="tableOfContents"><a href="#_Toc187502797">Cut Through</a></p>
+<p class="tableOfContents"><a href="#_Toc187502798">Displaying Distance and   Angle measurements</a></p>
+<p class="tableOfContents"><a href="#_Toc187502799">The Bisect Tool</a></p>
+<p class="tableOfContents"><a href="#_Toc187502800">Removing Sections of the   object</a></p>
+<p class="tableOfContents"><a href="#_Toc187502801">The Fill Option</a></p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/1.png" width="267" height="240" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/1.png" width="271" height="240" class="responsiveImage">
+<h1><a name="_Toc187502788">Introduction to the Knife Tool</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">So, in order to see this tool in the tool box panel, again  we must be in <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Edit</span></span> mode.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/2.png" width="188" height="102" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Your Knife tool will look like this in the tool box. The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">K </span></span>key on the keyboard  is the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">hot  key</span></span> for this tool.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/3.png" width="165" height="98" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">So, just bring your cube into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">edit</span></span> mode, and turn on the knife  tool, by clicking on it. Then click on a corner of your cube, like this. You  will see this green square appear.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/4.png" width="392" height="307" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc187402651">The Loop Cut Button</a></h1>
+<p class="MsoNormal">Then just click on another corner of the cube like this. You  will see this second square appear.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/5.png" width="339" height="301" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187502789">Yikes, now how do I get out of this tool!</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
-<p class="MsoNormal">Ok, well again you do not actually see or have access to  this tool unless you are in Edit mode. So, remember, <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit Mode</span></span> first then <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop Cut</span></span> tool.</p>
+<p class="MsoNormal">This tool is different from other tools, where all you have  to do is to click that left mouse button and your action is accepted, and the  tool will release your mouse. This tool is different, and this behavior can be  quite maddening for first time users who find that this tool simply will not  let go when you want it to. </p>
+<p class="MsoNormal">In order to accept this cut, and let your mouse go, you must  hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ENTER </span></span>key. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/6.png" width="397" height="130" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/2.png" width="406" height="118" class="responsiveImage">
-<h1><a name="_Toc187402652">The Difference between Sub Divide and Loop Cut</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">Yes, some people might be asking, &ldquo;Why would I need a loop  cut? Why wouldn&rsquo;t I just use the sub divide, with the right click option, in  Edit mode, and call it a day?&rdquo;</p>
-<p class="MsoNormal">The reason for using the loop cut tool, is because it allows  you to customize your cuts more precisely to where you actually want them to  fall, whereas the Subdivide option will simply slice everything up into uniform  pieces. So, it just depends on what you need done, and what will work best for  your own 3D modeling needs.</p>
-<h1><a name="_Toc187402653">Loop cut Button Verses the Hot Key</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">You have two options to creating these loop cuts. One is to  use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop  Cut Button</span></span> on the left side of the screen inside of the Tool  panel. The other one is to use <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-r</span></span> as a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">hot key</span></span> to execute  the cut. They both will act a bit differently when trying to fine tune things  after wards though. </p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/3.png" width="524" height="316" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This will give you a cut and give you this additional  geometry for your cube.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/7.png" width="240" height="237" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">If you turn on Face mode you can see that we have 2 distinct  different faces.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/8.png" width="294" height="368" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">With the tool box button, you will rely on the Last  operation dialog box that will show up at the bottom of the screen before you  click off of the object. Clicking off of the object will make this dialog box  at the bottom of the screen disappear, signally to Blender that you have  completed the operation, and you are done with the tool.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/4.png" width="365" height="167" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">When you use the hot key of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-r</span></span>, you click one time after  creating the edge loop. This will put you into editing mode for this cut and  you can use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">middle  mouse wheel</span></span> to increase or decrease the loop cuts, and the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">left mouse button</span></span> to slide  the loop cuts up or down across the face of the object. So, don&rsquo;t get confused  with these differences when uses the two different methods (tool box button and  the hotkey) to perform this task.</p>
-<h1><a name="_Toc187402654">How to Use the Loop Cut Tool Button</a></h1>
+<h1><a name="_Toc187502790">NGons</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
-<p class="MsoNormal">As you already know, you can start this tool by either the  tool box button, or the hot key. But what do I do after that?</p>
-<h1><a name="_Toc187402655">Using the Loop Cut Tool from the Tool box</a></h1>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The thing about this tool is that when you use the knife  tool and start to split things up like this, you can create <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Ngons</span></span>. Ngons are  surfaces in Blender that do not have 4 sides, and do not behave in the same way  that a quad (4 -sided faces) would react in Blender. </p>
+<p class="MsoNormal">For instance, if we attempted to now try and do a loop cut  on this face the loop cut would skip over the face that we just sliced up; since  it does not any longer have 4 sides, and Blender does not know what to do with  it.  Notice how the loop cut does not  completely go around the cube, and just skips over the face that has a knife  cut in it. So, just be aware this once you start slicing and dicing. You don&rsquo;t  want to be caught off - guard from some unintended consequences.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/9.png" width="421" height="352" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187502791">Extruding the New Geometry</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
-<p class="MsoNormal">When you first start using this tool, you will notice this  yellow loop, flipping around the object. When you click on different edges, you  will notice that the loop will arrange itself in different directions.</p>
+<p class="MsoNormal">But you will find that if you now, either hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E </span></span>key or slam the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Extrude button</span></span> tool,  we can extrude this separate face that we created.</p>
 <p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/10.png" width="473" height="307" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/5.png" width="404" height="178" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"> Just find the  direction that you want the loop to go in. Then you will notice the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop Cut and Slide</span></span> dialog box, which is your last operation dialog box. </p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/6.png" width="273" height="159" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Click on that little arrow to open up the dialog box and get  to the different options for this tool. Just remember, if you click again off  of the object, this dialog will disappear, never to show itself again.</p>
-<p class="MsoNormal">You can change the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">number of cuts</span></span> from here. You  can also adjust the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">smoothness</span></span>,  change how the loop cuts will behave (<span class="BlueBoldenChar"><span style="font-size:12.0pt; ">falloff</span></span>), or use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Factor</span></span> slider to move  the loop cut along the face of the object.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/7.png" width="428" height="337" class="responsiveImage">
-<h1><a name="_Toc187402656">Number of Cuts Option</a></h1>
+<h1><a name="_Toc187502792">Free clicking on the face</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
-<p class="MsoNormal">Here I changed the number of cuts to be 5.</p>
+<p class="MsoNormal">You can also just start clicking inside of the face to  create any type of cut that you want. Just remember that when you want to come  out of this tool, you must use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Enter key</span></span> to release it from  your mouse.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/8.png" width="589" height="375" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/11.png" width="499" height="434" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187402657">Factor Option</a></h1>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Notice when you hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Enter</span></span> key, that it will  create additional geometry to attach it to the sides and stabilize your cut.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/12.png" width="330" height="306" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now you can take the Extrude tool and extrude it downward  into the object like this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/13.png" width="423" height="358" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">And we can even scale in that inside face if we want.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/14.png" width="484" height="347" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187502793">To Cancel a Cut</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
-<p class="MsoNormal">If you slide the blue slider on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Factor </span></span>option, you  will see the loop cuts move down or up along the faces of the object.</p>
+<p class="MsoNormal">If you start making a bunch of cuts and you decide you do  not like what you just did then you can hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Escape Key</span></span>, before you hit  the Enter key, because hitting the Enter key instead, would accept the mess you  just did.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/15.png" width="621" height="267" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/9.png" width="578" height="326" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Setting the Factor setting back to 0 will center the Loop  cuts inside of the face of the cube again.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/10.png" width="618" height="320" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187402658">Smoothness Option</a></h1>
+<h1><a name="_Toc187502794">To Lock the tool into a Mid -Point Mode</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
-<p class="MsoNormal">This is what happens if I move the slider up on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Smoothness</span></span> Option.</p>
+<p class="MsoNormal">You can hold down the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift key</span></span> with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">knife cut tool</span></span> and  this will center the cut at the mid-point of an edge. So, if you quickly want  to find the center of the edge you will use the shift key with the knife tool.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/11.png" width="619" height="391" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/16.png" width="519" height="552" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">This is what happens if you set the Smoothness to a negative  number.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/12.png" width="509" height="359" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187402659">Falloff</a></h1>
+<h1><a name="_Toc187502795">Splitting the Object based on your View</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
-<p class="MsoNormal">By default, the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Falloff</span></span> is set to be an  Inverse Square, but if you use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Smoothness</span></span> option with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Falloff </span></span>Option you  can get the look of the cube to do different things.</p>
+<p class="MsoNormal">You can spin your object around in the viewport and the  knife tool will cut the object based on your view. So, if you are in front view,  it will only cut the front face, but if you go into User Perspective view and  turn it slightly to the side where you see two faces then your cut will hit  both of those faces.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Inverse Square</span> </p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/13.png" width="623" height="265" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Smooth</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/14.png" width="619" height="332" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Sphere</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/15.png" width="617" height="304" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Root</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/16.png" width="619" height="312" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Sharp</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/17.png" width="625" height="243" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Linear</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/18.png" width="538" height="272" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<h1><a name="_Toc187402660">Using the Hot Key of Ctrl-R to Create Edge Loop</a></h1>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/17.png" width="451" height="344" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187502796">Setting an Angle Constraint</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
-<p class="MsoNormal">You can also use <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">ctrl-r</span></span> to create a loop  cut. <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Click once</span></span> to enter slide mode.  The <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">left  mouse button</span></span> will control the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">slide of the loop cuts</span></span>, and now  you can use the <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">middle mouse wheel</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">increase the number of cuts</span></span>. </p>
+<p class="MsoNormal">When you hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">K </span></span>key to go into the Knife  tool you can also tap the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A</span></span> key to go into an angle constraint. </p>
+<p class="MsoNormal">You could also tap in a specific angle setting at the same  time. So, hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">K</span></span> key, hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A</span></span> key and then hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">45</span></span>,  and your angle would be exactly 45°.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/19.png" width="388" height="133" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/18.png" width="383" height="397" class="responsiveImage">
+<h1><a name="_Toc187502797">Cut Through</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">You also have an option for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cut through</span></span>.  So, instead of just cutting the section of  the cube that you can see, you can actually slice through the entire box. Keep  in mind though that just because this option is available to you, there is another  option available to you to slice through your box, which I will be  demonstrating shortly. But let&rsquo;s start with this one. Both ways are pretty  good. </p>
+<p class="MsoNormal">You can hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">K</span></span> key and then tap the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">C</span></span> key; this will  bring you into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cut  Through</span></span> mode.</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="redItalicChar">Note</span>- The middle mouse  wheel will not work if you use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">tool box button</span></span> to create  your loops. This only works with the hot key. If you try to use it while using  the tool box button, it will only zoom the object in and out. As this is the  hot key for zooming, if you are not in the Loop cut hot key. </p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/19.png" width="319" height="359" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now if you turn your box around you will find that this  method cut through the entire box. So, with cut through mode, whether you can  see it or not, the knife is cutting through the entire object.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/20.png" width="369" height="355" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187502798">Displaying Distance and Angle measurements</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">After hitting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">K</span></span> key, you can hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">S</span></span> key and this will  allow you to see what the measurements of the Distance of the cut as well as  the angle.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/21.png" width="325" height="409" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187502799">The Bisect Tool</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Remember I said there was another way to create a cut  through  a box besides using the K and  the C key in unison? Well, this tool is it. It is called the Bisect tool and it  is located under the Knife tool. Just tap on that little arrow in the bottom  right-hand corner of the knife tool to get to it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/22.png" width="203" height="83" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Warning -</span></span>In order to  start up this tool, you must have something selected on the object. If you  don&rsquo;t you will receive an error message.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/23.png" width="486" height="309" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">After clicking on the box, you can then click on this front  face with this tool and you will notice this funny looking yellow arrow show  up.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/24.png" width="341" height="298" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">After clicking on the box if you drag out your line from outside  of the box, the arrow will show up in outer space, as demonstrated in this next  illustration.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/25.png" width="371" height="334" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Anyways, once you have created your cut, you then have  access to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Last  Operation Dialog</span></span> box at the bottom of the screen.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/26.png" width="320" height="226" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The First 3 textbox, will move this funny looking arrow  around the box. You will notice it is set up to move it in the X, Y or Z axis  for more specific placement.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/27.png" width="440" height="640" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The Next 3 Textboxes will actually rotate this Arrow around  in 3D space.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/28.png" width="620" height="168" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187502800">Removing Sections of the object</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">You can also use this tool to remove sections of the object.  This is done with the checkboxes underneath of it.</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Clear Inner</span></p>
 <p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<h1><a name="_Toc187402661">The Even Check Box</a></h1>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/29.png" width="511" height="322" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">Clear Outer</span></p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/30.png" width="495" height="325" class="responsiveImage">
+<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
+<h1><a name="_Toc187502801">The Fill Option</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
-<p class="MsoNormal">Another interesting aspect of this Loop Cut and Slide dialog  box is the check box where it says <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span>. The thing is on the  default cube, given to you by Blender, you would never see the effects of this check  box, because the shape of this object causes all the loop cuts to be even  anyways. </p>
-<p class="MsoNormal">So, we would need to do something like move one side of this  cube downward to fake the look of a bevel, to see how this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span> check box  actually works. Here I took a cube, and started by making it taller. I just  pulled the top face upward with the move tool to do this. </p>
+<p class="MsoNormal">To show the fill option, let&rsquo;s start with a fresh cube,  without all the weird cuts in it, to show what this can do.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/20.png" width="271" height="360" class="responsiveImage">
-<p class="MsoNormal">Now take the move tool, and in edge mode we want to select that  front top edge and move it down. <span class="BoldRedChar"><span style="font-size:12.0pt; ">Do not  bevel this edge</span></span>, as beveling will create extra geometry and this  trick will not work.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/31.png" width="373" height="293" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/21.png" width="419" height="308" class="responsiveImage">
+<p class="MsoNormal">Now we used the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Clear Outer</span></span>, to get rid of  the side, on the right of the arrow.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Slide your mouse upward to move the loop cut toward the top  of the box. You will see that the closer our edge loop is to the slanted edge,  the more it wants to follow that edge slant. You will also notice that the  farther we slide the loop down the more it will try to imitate the straighter slant  of the bottom edge.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/32.png" width="624" height="423" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/22.png" width="547" height="373" class="responsiveImage">
+<p class="MsoNormal">Now click on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fill </span></span>checkbox, and we have a  new face based on the slant of the cut.</p>
+<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/33.png" width="526" height="404" class="responsiveImage"></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">But you may not want this to slant at all. This is where the  check box of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span>,  comes in. If we check the Even check box while making this loop cut, we can  then remove the slant of the edge loop all together.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/23.png" width="487" height="397" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187402662">Flipped Check Box Option</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">If you use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Flipped</span></span> check box, it will  flip the edge loop. Here I just used the edge loop that was illustrated above,  checked the Flipped box, and it now looks like this.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/24.png" width="522" height="356" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc187402663">Off Set Edge Loop cut Tool</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">This tool, might not be used as much because the same sort  of thing could be done just by using the bevel tool. All this tool does, is to  create 2 new edge loops, one on each side of the existing edge loop. You can  select this tool by hitting the little arrow on the Loop Cut tool, to gain  access to it, like this. </p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/25.png" width="277" height="139" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">First Make your loop cut, and with the loop cut still  highlighted in yellow, select the Off Set Edge Loop Cut tool. Pull upward with  your mouse to create the two edge loops around the middle loop.</p>
-<p class="MsoNormal">You will see, you do have access to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Offset Edge Slide dialog box.  </span></span>And you will see it jump up at  the bottom. Then you can use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Factor</span></span> slider to put the loop  cuts where you want them.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/26.png" width="552" height="412" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Checking the Even Box here, will just space all of these  edge loops evenly apart from one another.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/Images/27.png" width="438" height="352" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Well, that is just about everything that you need to know  for now. The Loop cut Tool is amazing, and you will find your self using it all  of the time.</p>
+<p class="MsoNormal">Well, that is about it for the Knife tool, you can just keep  on working with it to see what sort of objects you can cut out with it.</p>
 <p>&nbsp;</p>
 <p class="pMidBlack">&nbsp;</p>
  
@@ -370,7 +386,7 @@ font-weight:bold;
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-  </aside>
+</aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
