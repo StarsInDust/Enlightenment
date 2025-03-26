@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Animation</title>
+    <style>
+        pre {
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <pre id="scriptAnimation"></pre>
+
+    <script>
+const scriptContent = `
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const images = document.querySelectorAll("article.main img");
+        images.forEach(img => {
+            if (img.width < 500) {
+                img.classList.add("responsiveImage");
+            } else {
+                img.classList.add("wideImg");
+            }
+        });
+    });
+<\/script>`;
+
+        const target = document.getElementById("scriptAnimation");
+        let index = 0;
+
+        function typeScript() {
+            if (index < scriptContent.length) {
+                target.textContent += scriptContent[index];
+                index++;
+                setTimeout(typeScript, 100); // Adjust typing speed here
+            }
+        }
+
+        typeScript();
+    </script>
+</body>
+</html>
