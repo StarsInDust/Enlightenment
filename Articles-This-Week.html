@@ -7,29 +7,32 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Knife Tool</title>
+    <title>Ngons</title>
     
-    <meta name="title" content="The Knife Tool ">
+    <meta name="title" content="Ngons ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" The Knife Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
+<meta name="keywords" content=" Ngons, Blender, 3D Modeling, Animation, Graphic Art "/>
 
 
-<meta name="description" content="This article explains how to use the Knife tool, while in Edit mode inside of the Blender application/>
+<meta name="description" content="This article explains what an Ngon is, and how not to have them drive you crazy while working in Blender/>
 
-<meta name="category" content="The Knife Tool, Blender, 3D Modeling, Animation, Graphic Art">
+<meta name="category" content="Ngons, Blender, 3D Modeling, Animation, Graphic Art">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Sunday, January 12, 2025" />
+<meta name="revised" content="Tuesday, January 14, 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/The-Knife-Tool.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Ngons.html">
 
+    
+    
+    
     
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
 
@@ -84,12 +87,6 @@ font-family:"Times New Roman",serif;
 color:red;
 font-weight:bold;
 }
-span.MsoIntenseReference {
-font-variant:small-caps;
-color:#4472C4;
-letter-spacing:.25pt;
-font-weight:bold;
-}
 -->
 </style>
 </head>
@@ -109,18 +106,18 @@ font-weight:bold;
 
 <div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
 
-  <article class="main">
+<article class="main">
   
   
   
   <!--Main Article -->
   
-  <p class="h2Black" >~The Knife Tool~</p>
+  <p class="h2Black" >~Ngons~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >3/24/2025</p>
+   <p class="articleDate" style="text-align:right" >3/31/2025</p>
    
    <br>
 <br>
@@ -128,244 +125,245 @@ font-weight:bold;
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
 
 
-
-<p class="tableOfContents"><a href="#_Toc187502788">Introduction to the Knife Tool</a></p>
-<p class="tableOfContents"><a href="#_Toc187502789">Yikes, now how do I get   out of this tool!</a></p>
-<p class="tableOfContents"><a href="#_Toc187502790">NGons</a></p>
-<p class="tableOfContents"><a href="#_Toc187502791">Extruding the New   Geometry</a></p>
-<p class="tableOfContents"><a href="#_Toc187502792">Free clicking on the face</a></p>
-<p class="tableOfContents"><a href="#_Toc187502793">To Cancel a Cut</a></p>
-<p class="tableOfContents"><a href="#_Toc187502794">To Lock the tool into a   Mid -Point Mode</a></p>
-<p class="tableOfContents"><a href="#_Toc187502795">Splitting the Object   based on your View</a></p>
-<p class="tableOfContents"><a href="#_Toc187502796">Setting an Angle Constraint</a></p>
-<p class="tableOfContents"><a href="#_Toc187502797">Cut Through</a></p>
-<p class="tableOfContents"><a href="#_Toc187502798">Displaying Distance and   Angle measurements</a></p>
-<p class="tableOfContents"><a href="#_Toc187502799">The Bisect Tool</a></p>
-<p class="tableOfContents"><a href="#_Toc187502800">Removing Sections of the   object</a></p>
-<p class="tableOfContents"><a href="#_Toc187502801">The Fill Option</a></p>
+<p class="tableOfContents"><a href="#_Toc187745246">What are Ngons?</a><span style="line-height:115%; font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc187745247">Blender Shapes can also   come with Ngons</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc187745248">Creating Your Own Ngons</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc187745249">The Knife Cut Tool</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc187745250">How to Find Ngons</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc187745251">Turn Ngons to Quads</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc187745252">Inverse Selection</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc187745253">Cleanup</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc187745254">How To Create a Shape   from a Single Vertex</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc187745255">To Fill a Shape that You   Created</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc187745256">Checking to See if your   Object is Right- side Up</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc187745257">Changing a Triangle to a   Quad</a><span style="font-size:12.0pt; "> </span></p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/1.png" width="271" height="240" class="responsiveImage">
-<h1><a name="_Toc187502788">Introduction to the Knife Tool</a></h1>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/1.png" width="267" height="242" class="responsiveImage">
+</p>
+<p>&nbsp;</p>
+<h1><a name="_Toc187745246">What are Ngons?</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
-<p class="MsoNormal">So, in order to see this tool in the tool box panel, again  we must be in <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Edit</span></span> mode.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/2.png" width="188" height="102" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Your Knife tool will look like this in the tool box. The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">K </span></span>key on the keyboard  is the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">hot  key</span></span> for this tool.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/3.png" width="165" height="98" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">So, just bring your cube into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">edit</span></span> mode, and turn on the knife  tool, by clicking on it. Then click on a corner of your cube, like this. You  will see this green square appear.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/4.png" width="392" height="307" class="responsiveImage">
+<p class="MsoNormal">Ngons are any surfaces that do not have 4 edges. If you take  a cube, you will find that every one of its faces, have exactly 4 sides to it.  A cube, in this form, is NOT an Ngon.</p>
+<p class="MsoNormal"> </p>
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/2.png" width="221" height="223" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<p class="MsoNormal">If you split up a face like this, using something like the  knife tool, you no longer have 4 edges. Now you have 2 triangles, and triangles  have 3 sides. Once you have turned a face into a 3- sided surface, you can run  into some unintended consequences.</p>
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Then just click on another corner of the cube like this. You  will see this second square appear.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/3.png" width="275" height="248" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/5.png" width="339" height="301" class="responsiveImage">
+<p class="MsoNormal">Now if you <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">right click</span></span>, to get to a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">context menu</span></span>, and then  select to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">subdivide</span></span> this box, this is what happens. Blender attempts to do what it can with this  side, but it isn&rsquo;t quite right. It turns everything on this one face into  triangles.</p>
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187502789">Yikes, now how do I get out of this tool!</a></h1>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/4.png" width="372" height="328" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">And if you reach for your tool box and pull out the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop cut tool</span></span>, you  will find that Blender will skip this Ngon side all together.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/5.png" width="395" height="344" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187745247">Blender Shapes can also come with Ngons</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
-<p class="MsoNormal">This tool is different from other tools, where all you have  to do is to click that left mouse button and your action is accepted, and the  tool will release your mouse. This tool is different, and this behavior can be  quite maddening for first time users who find that this tool simply will not  let go when you want it to. </p>
-<p class="MsoNormal">In order to accept this cut, and let your mouse go, you must  hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ENTER </span></span>key. </p>
+<p class="MsoNormal">Blender will also throw Ngons at you on some of its default  object. Take for example either a cylinder, or a cone. You will find that the end  of the cylinder is a Ngon, and the entire Cone object is nothing but an Ngon. Even  the sides of the cone is made up of 3 sided triangles.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/6.png" width="397" height="130" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">This will give you a cut and give you this additional  geometry for your cube.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/7.png" width="240" height="237" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">If you turn on Face mode you can see that we have 2 distinct  different faces.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/8.png" width="294" height="368" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/6.png" width="599" height="380" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc187502790">NGons</a></h1>
+<p class="MsoNormal">And if you try to Loop cut an object and expect to have these  Ngons, act right with a loop cut, you will be sorely disappointed. </p>
+<p class="MsoNormal">You will see again, that Blender will attempt to make a cut,  but the loop cut will not encircle the entire object, like it should. And just  look at the zig-zag loop cut that will appear when you attempt to use this tool  on the side of a cone.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/7.png" width="622" height="253" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc187745248">Creating Your Own Ngons</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">If you draw your own shapes from a single vertex, you can  also create your own Ngons. At the end of this tutorial, I go more in depth  about <a name="_Hlk187741979"></a><a href="#_Changing_a_Triangle">how to create a shape from a single vertex </a>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/8.png" width="552" height="161" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187745249">The Knife Cut Tool</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">With the knife tool, we can make customized cuts, and these  cuts will go through a Ngon, as well as any 4- sided surface. The only thing is  that when we start to slice and dice, we can easily just create more Ngons and chaos,  unless you plan these cuts out very carefully.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/9.png" width="500" height="274" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187745250"></a><a name="_How_to_Find"></a>How to Find Ngons</h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Sometimes we may be going along slicing and dicing and  create Ngons without realizing it. So, we may want to find these Ngons and try  to rectify them. Blender does provide an easy way for us to do this.</p>
+<p class="MsoNormal">Ok, for this one, let&rsquo;s start off with a cube, with a few  knife cuts in it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/10.png" width="377" height="317" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Select</span></span> Menu option, in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Sub Menu</span></span> above the  viewport. Go to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Face</span></span> Mode for this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/11.png" width="514" height="176" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Sub Menu</span></span> and find the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Select</span></span> option, then go down  to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Select All  by Trait</span></span>, and choose <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Faces by Sides</span></span>.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/12.png" width="523" height="342" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">At the bottom of the screen, you will see the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Last Operation</span></span> dialog  box. <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Type</span></span> should default to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Equal  To</span></span>.</p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-family:'Times New Roman',serif; font-size:12.0pt; color:blue; ">&nbsp;</span></strong></p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/13.png" width="614" height="145" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You have a few options to choose from. But if it is set up  to select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Equal  To 4</span></span> (the default option). This way it will select all of the  quads. The surfaces that are left unselected will be your Ngons.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Notice that the top and bottom surfaces are also not  selected as quads. This is because they are not.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/14.png" width="622" height="415" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You can go into your vertex mode to see why these faces  could not be accepted as quads. Because of your knife cut, you have created an  additional edge, which you can see by having an extra vertex in the center of  the top and bottom edge of this sliced face.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/15.png" width="612" height="328" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187745251">Turn Ngons to Quads</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Ngons can additionally be a problem  with shading on your object, when you go into Render mode. So, you might want  to try and turn your Ngons first to Triangles, and then to Quads.</p>
+<p class="MsoNormal">Go into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">face</span></span> mode</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/16.png" width="392" height="117" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now we want to try and <a href="#_How_to_Find">find all the Ngons</a>. Once you have your quads selected,  you need to inverse it to see only your Ngons. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/17.png" width="399" height="337" class="responsiveImage">
+<h1><a name="_Toc187745252">Inverse Selection</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Ctrl- I</span></span> to inverse the  selection</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/18.png" width="407" height="368" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Sub Menu</span></span> and Select  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Face Menu</span></span>.  You want to first <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Triangulate  Faces</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/19.png" width="412" height="247" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You will notice this will slice up  everything into triangles.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/20.png" width="334" height="292" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Now from that same <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Face Menu</span></span>, you want  to select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Tris  to Quads</span></span>.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/21.png" width="422" height="254" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Now you notice things a sliced up a  bit differently.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/22.png" width="292" height="210" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">You can fine tune things from this  point. Since it still might not be perfect.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/23.png" width="315" height="277" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">You can dissolve that inner  triangle edge to make the face a whole square.</p>
+<p class="MsoNormal">Go to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">edge</span></span> mode.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/24.png" width="284" height="108" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Select that inner edge that is  forming the triangle in the 4-sided face.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/25.png" width="285" height="253" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Right click on that edge and choose  to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Dissolve Edges</span></span> from the context menu at the bottom of the list.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/26.png" width="427" height="496" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">But when <a name="_Hlk187668032">you  run your </a><a href="#_How_to_Find">Select  by Trait test </a> now, you will still see a problem</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/27.png" width="354" height="399" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc187745253">Cleanup</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Not done yet, because you need to  clean up extra vertices. </p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Important!</span></span> Make sure you are in Vertex mode before you start this process.</p>
+<p class="MsoNormal"> </p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/28.png" width="446" height="106" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Select All. Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A </span></span>key to select the  entire cube.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/29.png" width="366" height="339" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/30.png" width="476" height="524" class="responsiveImage">
+<p class="MsoNormal">Now running your <a href="#_How_to_Find">Select by Trait test</a>, you will no longer see a  problem. Now all of the object has turned orange. So, it is all Quads.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/31.png" width="468" height="486" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187745254">How To Create a Shape from a Single Vertex</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal"><a name="_Changing_a_Triangle"></a>Start with your default cube  in Object mode. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/32.png" width="363" height="820" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Press the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A</span></span> key, then hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">M</span></span> key and select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">merge at center</span></span>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/33.png" width="365" height="307" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Here we are beginning to create a right triangle from our  single vertex using the Extrude tool.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/34.png" width="386" height="228" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187745255">To Fill a Shape that You Created</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">After creating the shape with the extrude tool, and the  single vertex, select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A</span></span>,  and then <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">F</span></span> to fill it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/35.png" width="458" height="219" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187745256">Checking to See if your Object is Right- side Up</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Sometimes they come in backwards. So, you want the blue side  facing up. Blue is the front or outside, and the red color on the face, is the  bottom or inside of an object.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/36.png" width="621" height="298" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Face Orientation</span></span> to turn it on or off with the check  box</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/37.png" width="619" height="406" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Just uncheck that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Face Orientation</span></span> box, to come  out of it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc187745257">Changing a Triangle to a Quad</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">The thing about this tool is that when you use the knife  tool and start to split things up like this, you can create <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Ngons</span></span>. Ngons are  surfaces in Blender that do not have 4 sides, and do not behave in the same way  that a quad (4 -sided faces) would react in Blender. </p>
-<p class="MsoNormal">For instance, if we attempted to now try and do a loop cut  on this face the loop cut would skip over the face that we just sliced up; since  it does not any longer have 4 sides, and Blender does not know what to do with  it.  Notice how the loop cut does not  completely go around the cube, and just skips over the face that has a knife  cut in it. So, just be aware this once you start slicing and dicing. You don&rsquo;t  want to be caught off - guard from some unintended consequences.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/9.png" width="421" height="352" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187502791">Extruding the New Geometry</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">But you will find that if you now, either hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E </span></span>key or slam the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Extrude button</span></span> tool,  we can extrude this separate face that we created.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/10.png" width="473" height="307" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187502792">Free clicking on the face</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">You can also just start clicking inside of the face to  create any type of cut that you want. Just remember that when you want to come  out of this tool, you must use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Enter key</span></span> to release it from  your mouse.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/11.png" width="499" height="434" class="responsiveImage">
+<p class="MsoNormal">Use the Knife tool to make cuts in  these types of objects, that you create free hand, with a single vertex and the  extrude tool. In this way we are able to change a triangle into a Quad (4 -sided  face)</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Notice when you hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Enter</span></span> key, that it will  create additional geometry to attach it to the sides and stabilize your cut.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/12.png" width="330" height="306" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now you can take the Extrude tool and extrude it downward  into the object like this.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/13.png" width="423" height="358" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">And we can even scale in that inside face if we want.</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/14.png" width="484" height="347" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187502793">To Cancel a Cut</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">If you start making a bunch of cuts and you decide you do  not like what you just did then you can hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Escape Key</span></span>, before you hit  the Enter key, because hitting the Enter key instead, would accept the mess you  just did.</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/15.png" width="621" height="267" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/6-NGons/Images/38.png" width="329" height="267" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187502794">To Lock the tool into a Mid -Point Mode</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">You can hold down the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift key</span></span> with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">knife cut tool</span></span> and  this will center the cut at the mid-point of an edge. So, if you quickly want  to find the center of the edge you will use the shift key with the knife tool.</p>
+<p class="MsoNormal">You could additionally use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">extrude</span></span> tool on this,  to give your shape a bit of thickness.</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/16.png" width="519" height="552" class="responsiveImage">
+<p class="MsoNormal">Well, that is about it, on Ngons.  So, if you are having an issue with these things, just apply a few of these  tricks to keep yourself out of Ngon trouble. </p>
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187502795">Splitting the Object based on your View</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">You can spin your object around in the viewport and the  knife tool will cut the object based on your view. So, if you are in front view,  it will only cut the front face, but if you go into User Perspective view and  turn it slightly to the side where you see two faces then your cut will hit  both of those faces.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/17.png" width="451" height="344" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187502796">Setting an Angle Constraint</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">When you hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">K </span></span>key to go into the Knife  tool you can also tap the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A</span></span> key to go into an angle constraint. </p>
-<p class="MsoNormal">You could also tap in a specific angle setting at the same  time. So, hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">K</span></span> key, hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A</span></span> key and then hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">45</span></span>,  and your angle would be exactly 45°.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/18.png" width="383" height="397" class="responsiveImage">
-<h1><a name="_Toc187502797">Cut Through</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">You also have an option for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cut through</span></span>.  So, instead of just cutting the section of  the cube that you can see, you can actually slice through the entire box. Keep  in mind though that just because this option is available to you, there is another  option available to you to slice through your box, which I will be  demonstrating shortly. But let&rsquo;s start with this one. Both ways are pretty  good. </p>
-<p class="MsoNormal">You can hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">K</span></span> key and then tap the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">C</span></span> key; this will  bring you into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cut  Through</span></span> mode.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/19.png" width="319" height="359" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now if you turn your box around you will find that this  method cut through the entire box. So, with cut through mode, whether you can  see it or not, the knife is cutting through the entire object.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/20.png" width="369" height="355" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187502798">Displaying Distance and Angle measurements</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">After hitting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">K</span></span> key, you can hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">S</span></span> key and this will  allow you to see what the measurements of the Distance of the cut as well as  the angle.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/21.png" width="325" height="409" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187502799">The Bisect Tool</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">Remember I said there was another way to create a cut  through  a box besides using the K and  the C key in unison? Well, this tool is it. It is called the Bisect tool and it  is located under the Knife tool. Just tap on that little arrow in the bottom  right-hand corner of the knife tool to get to it.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/22.png" width="203" height="83" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Warning -</span></span>In order to  start up this tool, you must have something selected on the object. If you  don&rsquo;t you will receive an error message.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/23.png" width="486" height="309" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">After clicking on the box, you can then click on this front  face with this tool and you will notice this funny looking yellow arrow show  up.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/24.png" width="341" height="298" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">After clicking on the box if you drag out your line from outside  of the box, the arrow will show up in outer space, as demonstrated in this next  illustration.</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/25.png" width="371" height="334" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Anyways, once you have created your cut, you then have  access to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Last  Operation Dialog</span></span> box at the bottom of the screen.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/26.png" width="320" height="226" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">The First 3 textbox, will move this funny looking arrow  around the box. You will notice it is set up to move it in the X, Y or Z axis  for more specific placement.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/27.png" width="440" height="640" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">The Next 3 Textboxes will actually rotate this Arrow around  in 3D space.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/28.png" width="620" height="168" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc187502800">Removing Sections of the object</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">You can also use this tool to remove sections of the object.  This is done with the checkboxes underneath of it.</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Clear Inner</span></p>
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/29.png" width="511" height="322" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseReference">Clear Outer</span></p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/30.png" width="495" height="325" class="responsiveImage">
-<p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
-<h1><a name="_Toc187502801">The Fill Option</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">To show the fill option, let&rsquo;s start with a fresh cube,  without all the weird cuts in it, to show what this can do.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/31.png" width="373" height="293" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now we used the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Clear Outer</span></span>, to get rid of  the side, on the right of the arrow.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/32.png" width="624" height="423" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now click on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fill </span></span>checkbox, and we have a  new face based on the slant of the cut.</p>
-<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/5-Knife-Tool/Images/33.png" width="526" height="404" class="responsiveImage"></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Well, that is about it for the Knife tool, you can just keep  on working with it to see what sort of objects you can cut out with it.</p>
-<p>&nbsp;</p>
+<p class="LeftPMidBlack">&nbsp;</p>
 <p class="pMidBlack">&nbsp;</p>
  
   <!--Main Article -->
@@ -386,7 +384,7 @@ font-weight:bold;
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-</aside>
+  </aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
