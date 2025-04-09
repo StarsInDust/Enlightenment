@@ -5,11 +5,7 @@
 .wrapper {
   display: flex;
   flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
   min-height: 450px;
-  box-shadow: 2px 3px 8px black;
-  border-radius: 20px;
 }
 
 .wrapper > * {
@@ -22,7 +18,7 @@
   text-align: left;
   background: white;
   padding: 30px 30px 40px;
-  flex: 1 100%;
+  flex: 1 100%; /* Default for smaller screens */
   padding-top: 50px;
 }
 
@@ -95,9 +91,6 @@
 }
 
 .responsiveImage {
-  box-shadow: 2px 3px 8px black;
-  border-radius: 10px;
-  margin: 20px 0;
   max-width: 100%;
   height: auto;
 }
@@ -273,6 +266,35 @@ span.BoldMaroonListChar {
 }
 
 /* Media Queries */
+@media all and (max-width: 250px) {
+  .main {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .aside {
+    display: none; /* Hide aside sections for very small screens */
+  }
+
+  .header {
+    height: 80px;
+    background-image: url(../Images/banner_200_small.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  .wideImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .cartoonImg {
+    width: 100%;
+    height: auto;
+  }
+}
+
 @media all and (min-width: 300px) {
   .aside {
     flex: 1 0 0;
@@ -327,7 +349,9 @@ span.BoldMaroonListChar {
 
 @media all and (min-width: 1200px) {
   .main {
-    flex: 3 0px;
+    flex: 3 0px; /* Allow the .main div to grow */
+    margin: 0 auto; /* Center the .main div */
+    
   }
 
   .aside-1 {
