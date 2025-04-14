@@ -7,34 +7,35 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Poly Build Tool</title>
+    <title>The Spin Tool</title>
     
-    
-    <meta name="title" content="The Poly Build Tool ">
+  <meta name="title" content="The Spin Tool ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" Poly Build Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
+<meta name="keywords" content=" The Spin Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
 
 
-<meta name="description" content="This article explains how to use the Poly Build Tool from the Edit Mode Tool Box, while using the Blender apllication./>
+<meta name="description" content="This article explains how to use the Spin tool, in Edit mode, while in the Blender application/>
 
-<meta name="category" content="Poly Build Tool, Blender, 3D Modeling, Animation, Graphic Art">
+<meta name="category" content="The Spin Tool, Blender, 3D Modeling, Animation, Graphic Art">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Friday, January 17, 2025" />
+<meta name="revised" content="Sunday, January 19, 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/The-Poly-Build-Tool.html”>
-
-
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/The-Spin-Tool.html">
+  
     
     
-    <link rel="shortcut icon" href="../../../../../../../Images/favicon.ico" type="image/x-icon">
+    
+    
+    
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
 
 
     
@@ -87,14 +88,12 @@ font-family:"Times New Roman",serif;
 color:blue;
 font-weight:bold;
 }
-span.BoldRedChar {
-font-family:"Times New Roman",serif;
-color:red;
+span.BoldMaroonListChar {
+color:#600020;
 font-weight:bold;
 }
-span.strongEmphasisChar {
-color:#002060;
-font-weight:bold;
+body {
+	background-color: #00050f;
 }
 -->
 </style>
@@ -121,204 +120,191 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~The Poly Build Tool~</p>
+  <p class="h2Black" >~The Spin Tool~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >4/7/2025</p>
+   <p class="articleDate" style="text-align:right" >4/14/2025</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004365">What   is the Poly Build Tool?</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004366">How   to Create Topology with the Poly Build Tool</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004367">To   Create a Vertex</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004368">The   Create Quads Checkbox</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004369">Techniques   for Building Mesh</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004370">Creating   Quads from Edges</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004371">Creating   Triangles Faces from Vertices</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004372">Using   the X, Y, and Z Axis</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004373">Snapping</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004374">To   Delete a Vertex or Edge</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004375">Automatic   Merging for Vertices</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004376">Clean   Up</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188004377">Retopology</a></span></p>
+
+
+
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188176964">Spinning   a Cube</a></span><span style="line-height:115%; font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188176965">The   Last Operation Dialog Box</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188176966">Spinning   Specific types of your mesh</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188176967">Spinning   a Face</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188176968">Spinning   an Edge</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188176969">Spinning   a Vertex</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188176970">Working   from the different Axis</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188176971">The   Angle Slider from the Spin Last Operation Dialog</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc188176972">Auto   Merge</a></span><span style="font-size:12.0pt; "> </span></p>
 <p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/1.png" width="269" height="240" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc188176964">Spinning a Cube</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Go into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode with the cube and select the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Spin tool</span></span> from the  Tool panel on the left.</p>
 <p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/1.png" width="265" height="240" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/2.png" width="418" height="115" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Move the cursor off to the side of the box, because it will  be used for the boxes to spin around. You can use the cursor tool from the tool  box, to move it.</p>
+<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/3.png" width="74" height="53" class="responsiveImage"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Here is a cube, and we took it, and spun it around the cursor.  To do this, you want to select the entire cube with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A</span></span> key, hover over one  of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">plus  signs </span></span>(given to you from this tool) until you see a blue circle appear.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/4.png" width="622" height="222" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The circle will tell you how the spin will go. Now when you  press down the left mouse button you will see this next spin type of icon, show  up on the screen.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/5.png" width="387" height="320" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">When that spin icon appears  you can simply drag the mouse around the circle of this new spin gizmo, and it  will start to duplicate the object in a circle around the center cursor icon.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/6.png" width="556" height="368" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This is what the boxes look like when you complete the spin.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/7.png" width="595" height="390" class="responsiveImage">
+<h1><a name="_Toc188176965">The Last Operation Dialog Box</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">At the bottom of the screen, you will see the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Spin dialog box</span></span>,  because Spin was the last operation.</p>
+<p class="MsoNormal">Look at what happens if you reduce the steps from 12 to 5.  Do you need a few boxes in a circle? Then this could be an option for you to  create them quickly.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/8.png" width="621" height="521" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc188004365">What is the Poly Build Tool?</a></h1>
+<p class="MsoNormal">Remove that first box. It was only used to create the  copies. Now you will notice that the 5 boxes you were left with (what you asked  for in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Steps</span></span> textbox) will have equal spacing between them.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/9.png" width="370" height="265" class="responsiveImage">
+<h1><a name="_Toc188176966">Spinning Specific types of your mesh</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">The poly build tool, takes a bit of practice to get the hang  of. But you can create new topology by using this tool; although actually, what  it is mostly used for is <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">retopology</span></span>. This tool does combine a few of the  other Edit tool box tools, to enable you to preform different tasks more efficiently.</p>
-<p class="MsoNormal"><strong>You can create a quad:</strong> If you simply tug on one of  the blue edges with your mouse, you will find that the tools turn into this  weird type of extrude tool, and you are actually creating new topology and  creating, easily a quad.</p>
-<p class="MsoNormal"><strong>To Create New Triangular Topology:</strong> If you want to  create a triangle, this would take an extra step. Because instead of using an  edge you are using a vertex, and this vertex needs to be created first.  Normally it is created in the center of an existing edge. So, in order to  create this vertex, you need to hold down the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl key</span></span> and then pull out  with the mouse, as with the quad all you were doing was to just drag out the  edge (without the ctrl key) and it created new extruded territory.</p>
-<p class="MsoNormal"><strong>To Delete Geometry:</strong> You can hold down the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift </span></span>key, in place  of the ctrl key with the left mouse button if you are trying to delete  topology. This will either dissolves the vertex or/and delete the face under  the mouse cursor. When you hold the shift key, the intended target will be  highlighted in red, indicating to you that you are about to delete something.</p>
-<p class="MsoNormal"><strong>To Move a Vertex:</strong> You can use the left mouse button,  click on a vertex, and just drag it, to move it.</p>
-<p class="MsoNormal"><strong>Extruding an Edge:</strong> You can extrude an edge into a  quad, just by dragging it.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc188004366">How to Create Topology with the Poly Build Tool</a></h1>
+<p class="MsoNormal">Well, the above demonstrated what would happen if you  selected the entire cube and rotated it. You can also just take a face, an edge  or even a vertex and just spin those.</p>
+<h1><a name="_Toc188176967">Spinning a Face</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">With your <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cube </span></span>selected, in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Object</span></span> mode, move into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit </span></span>mode.</p>
+<p class="MsoNormal">Go into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Face</span></span> Mode</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/2.png" width="513" height="327" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/10.png" width="456" height="442" class="wideImg">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now <span class="BoldRedChar"><span style="font-size:12.0pt; ">Delete</span></span> the Cube. We  want the viewport to start up empty.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/3.png" width="486" height="318" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Grab the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Poly Build</span></span> tool from the Tool box</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/4.png" width="81" height="70" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1</span></span> on the Numpad to go into front view. This will ensure that what we draw will be  flat.</p>
-<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/5.png" width="281" height="176" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<h1><a name="_Toc188004367">To Create a Vertex</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Hold down the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Left mouse button</span></span> with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl key</span></span>. Then click  on the view port to create a vertex.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/6.png" width="362" height="678" class="wideImg">
+<p class="MsoNormal">Make sure your cursor is off to the side of the box and not  directly on it, so we can spin around it. </p>
+<p class="MsoNormal">Now grab the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Spin</span></span> tool, and spin this  face. Notice that for this one, I upped the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">steps </span></span>to be <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">43</span></span>. Setting the steps  to this amount makes it a nice-looking ring.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/11.png" width="616" height="449" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Change to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Select tool</span></span>, and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift-select</span></span> the two  bottom vertices, we need to connect them.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/7.png" width="347" height="375" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">With the two points connected, right click to open the  context menu. Select New Edge/Face from Vertices to connect these two points.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/8.png" width="615" height="385" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now your points should be connected.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/9.png" width="304" height="291" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A </span></span>key to select all, and then the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">F</span></span> key to fill the  outline. Congratulations you have just created new topology, starting from an  empty view port, with the Poly Build tool.</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/10.png" width="360" height="328" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc188004368">The Create Quads Checkbox</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">When you create two triangles with the Poly Build tool, and  the middle edges are in close proximity, Blender will automatically merge the  two triangles into a Quad, by dissolving the middle two edges. You will see  that when we have the Poly Build tool selected, we can turn this behavior off  by going to the top, and unchecking the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Create Quads</span></span> checkbox, but  for the most part, you will want this behavior to remain. So, keep this box  checked.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/11.png" width="343" height="189" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc188004369">Techniques for Building Mesh</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">There are two main methods for building mesh. One is to  create quads, which is the most desirable, and the other is to create triangle  faces. As I have already stated, when two middle edges of the triangles come  close enough together, Blender will dissolve those middle edges that separate  the two triangles, and this will create a quad from them. Of course, if you  have turned off your <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Create  Quads</span></span> checkbox, this default behavior of turning triangles into  quads, will no longer be available.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc188004370">Creating Quads from Edges</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">When you turn on your Poly Build tool, and hover over an  edge you will see these blue edges on your object. If you hover over a vertex,  the vertex will turn blue.</p>
-<p class="MsoNormal"> </p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/12.png" width="625" height="293" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now if you are to pull on the  blue edge with your mouse, you will see that this edge will behave as if you  clicked on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> key. This is because the Poly Build tool, will  automatically go into Extrude mode, and create a new edge.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/13.png" width="118" height="140" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc188004371">Creating Triangles Faces from Vertices</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">The second way to create a new face, works a bit  differently. That is because a vertex, does not automatically go into an  extrude mode. If you pull on one of your vertices, you will find that instead  it goes into an automatic move mode. And it acts as if you hit either the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">G</span></span> key or the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Move tool</span></span> button.</p>
-<p class="MsoNormal">But that doesn&rsquo;t mean that you cannot create a new triangle.  It just means that you have to press an extra key on the key board to do it. Go  to the Center of the Edge, and hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-key</span></span>. This will create a  new vertex in the center of the edge.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/14.png" width="241" height="323" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Pull up on this Vertex, remember with the vertex created the  poly build tool will automatically go into move mode and you can move this  vertex just by moving the mouse.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/15.png" width="160" height="366" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now if you want to try and make a quad from this, we will  need to first move the vertex over to the left edge of the box to form half of  the quad.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/16.png" width="177" height="355" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now go to the center of the right edge of this triangle, and  use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl  key</span></span> to create another vertex.</p>
-<p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/17.png" width="175" height="358" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now pull out this vertex to the right edge of the box. You  will see that it will automatically turns these two triangles into a quad while  you are pulling this vertex out. It just dissolves these center edges to form this  quad. Remember you can turn this automatic quad creation off by deselecting the  Check box named <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Create  Quads</span></span> at the top of the View port. And then you will have two  triangles.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/18.png" width="213" height="500" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc188004372">Using the X, Y, and Z Axis</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">As already stated above, you want to start off creating your  object in an Orthographic view. This will ensure that your first plane is flat.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/19.png" width="224" height="185" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">But when you start dragging out edges, you will find that  your faces may not always remain flat. We can fix this by immediately after we  start dragging to extrude, we hit either the Z, X, or Y key to constrain the  plane of existence. </p>
-<p class="MsoNormal"><span class="strongEmphasisChar"><span style="line-height:115%; font-size:14.0pt; ">Z </span></span>will constrain it to go straight up or down</p>
-<p class="MsoNormal"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">X</span></span> will constrain it to go straight right or  left</p>
-<p class="MsoNormal"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">Y </span></span>will constrain it to go straight forward or  inward toward your computer screen.</p>
-<p class="MsoNormal">Here I used the Poly Build tool in conjunction with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Z</span></span> Key to go straight  up, and I used the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y</span></span> key on that bottom face to make it appear as if it was going off into the  computer screen. So, you can see how you can use this tool in order to actually  build objects.</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/20.png" width="232" height="362" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">During the drag operation in the top left of the viewport,  you will notice it will be giving you the measurements in each of the 3  dimensions, for your mesh. You may find this helpful if you need to be more  precise with your models.</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/21 a.png" width="369" height="48" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Toc188004373">Snapping</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Snapping in Blender is something that you will find to be  quite helpful. With Snapping on, Blender will let you easily align objects and  mesh elements to others.  By default, it  is set to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Increment</span></span>,  which creates movement in discrete steps.</p>
-<p class="MsoNormal">When you create a vertex with the poly build tool in  Blender, you will be using the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-key</span></span> to create this  vertex. The ctrl key not only creates the vertex, but it will also temporarily  send your program into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">snapping  mode</span></span>. As soon as you come out of creating this vertex, it will  turn snapping mode off.</p>
-<p class="MsoNormal">There are a few ways to turn snapping on and off. You can  toggle it, by holding down the ctrl key, as explained above, or you can turn it  on or off by clicking on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Magnet icon</span></span> in the menu at the top of Blender&rsquo;s View  port.  You can also use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">hot keys</span></span> of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift and tab</span></span>, to  toggle the Snapping Magnet icon on or off. While working with the Poly Build  tool, you might find it helpful to set this behavior to snap to Vertex. Then  you would see that snapping would cause the vertex to snap to any nearby  vertex. You can see by the illustration below that we can have Blender snap to  many different things, depending on which option is the most helpful to you at  the time.</p>
-<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/21.png" width="433" height="361" class="responsiveImage"></p>
-<p>&nbsp; </p>
-<h1><a name="_Toc188004374">To Delete a Vertex or Edge</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">If we hold down the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift</span></span> key and move over a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">vertex</span></span>, clicking will  delete the vertex. Notice the vertex will turn red, warning you that it is in  delete mode.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/21 b.png" width="585" height="275"></p>
-<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Again, you want to delete the original cube, as it kind of  gets in the way of things looking right. You might have to use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Select More</span></span> function to  grab it out of the mesh, if you accidentally deselected this first box. Select  a face of the original face and then hit the plus key or go to the select menu.</p>
 <p class="MsoNormal">&nbsp;</p>
 
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now if you hover over an <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">edge, or face </span></span>and hold down  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift</span></span> key, the entire quad edges will turn red. Notice if you click on it now, the  entire face is removed.</p>
-<p class="MsoNormal"> <img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/22.png" width="468" height="272" class="responsiveImage"></p>
-<h1>&nbsp;</h1>
-<h1><a name="_Toc188004375">Automatic Merging for Vertices</a></h1>
+<p class="MsoNormal">Then just delete it to remove it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/13.png" width="502" height="286" class="responsiveImage">
+<h1><a name="_Toc188176968">Spinning an Edge</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Another cool tip is to turn on <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Automatic Merging</span></span> for  Vertices. When you have the Poly Build tool selected, you will find a new icon  in the top left corner of the viewport. In order to turn on the Automatic  Merging for Vertices, you can click on this icon here.</p>
+<p class="MsoNormal">Now let&rsquo;s try and Spin just an edge.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/23.png" width="342" height="178" class="responsiveImage"></p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/14.png" width="454" height="409">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You can also find some of this options for this tool by  going to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Property  Panel</span></span> and turning on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Tools </span></span>Tab. You must be in the  Poly Build tool to see these options. Also notice that once you get into this  panel that you can also change the Threshold for this tool, making it more or  less sensitive to nearby vertices.</p>
-<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/24.png" width="325" height="420" class="responsiveImage"></p>
+<p class="MsoNormal">Grab the spin tool and spin it.</p>
+<p class="MsoNormal">I put the steps to 27. So, it looks sort of like a side  walk. </p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/15.png" width="624" height="338" class="responsiveImage">
 <p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Remember that clicking on the viewport, will make the dialog  box, for your last operation, disappear from the bottom of the screen, but you  will still be able to do certain things from a sub menu that will come with  this tool at the top of the viewport.</p>
 <p class="MsoNormal">&nbsp;</p>
-<h1><a name="_Hlk187925848"></a><a name="_Toc188004376">Clean Up</a></h1>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/16.png" width="634" height="125" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc188176969">Spinning a Vertex</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">When you move one  vertex over another with this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Merge</span></span> option, your  vertices will merge and the vertex count on your model will be lower. To see  this in action, you can switch on your <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Statistics</span></span> view and  see the Vertex count</p>
+<p class="MsoNormal">Go into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Vertex </span></span>mode</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/17.png" width="597" height="435" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You still want to make sure that the cursor is located at  the center of where you want the spin to occur.</p>
+<p class="MsoNormal">Grab your spin tool and start spinning. Cool way to create  the outline of the circle.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/18.png" width="618" height="211" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc188176970">Working from the different Axis</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">You will notice that at the top of the app, while in the  Spin tool in edit mode you will see this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X, Y</span></span>, and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Z</span></span>. These are the  different axis in space in which you can work in.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/19.png" width="602" height="130" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go back to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Object</span></span> mode, and get rid of  that last object that we made on screen. We want to start in an Orthographic  Mode. I chose Front Orthographic mode to add the object. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/20.png" width="306" height="195" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">Snap</span></span> the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">cursor back to center</span></span> in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Object</span></span> mode.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/21.png" width="245" height="178" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Add  a circle</span></span> from the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Add</span></span> menu</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/22.png" width="557" height="439" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/23.png" width="460" height="367" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Top view</span></span> (<span class="BlueBoldenChar"><span style="font-size:12.0pt; ">7</span></span> on Numpad)</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/24.png" width="488" height="439" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Make sure you have the circle selected. Grab the spin tool  and start spinning the circle. You will notice something strange. The spin tool  is spinning the vertices, but it is not doing too much because everything is in  the same Z plane Axes.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/25.png" width="622" height="202" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This is where the different Axis come in. Let&rsquo;s try spinning  this instead in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y</span></span> Axis. Use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-Z</span></span> to undo the spin you just did in the Z axis. Notice the color of the tool  changes to Green, when we change it to the Y axis, and it is in a different  orientation on the screen.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/26.png" width="623" height="304" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Hover over the plus sign with your mouse until you see the  circle and then the spin gizmo, then just start spinning with the spin tool.  Ok, now we are starting to get somewhere with our spin.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/27.png" width="417" height="312" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Ctrl-Z</span></span> to undo that Y spin, and try the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X axis</span></span> to see what that does.  We will see again that the orientation of the tool, and the color changes  again. This time to red, for X.</p>
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/28.png" width="615" height="314" class="wideImg"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now hover over the plus sign until it turns into first that circle,  and then the spin gizmo, and start your spin again. This time, you see we are  spinning our circle mesh into a sphere.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/29.png" width="428" height="340" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc188176971">The Angle Slider from the Spin Last Operation  Dialog</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">If you start moving the angle slider in the Spin dialog box  at the bottom, you can actually get this sphere to close.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/30.png" width="291" height="247" class="responsiveImage">
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc188176972">Auto Merge</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">It should auto merge when it gets close enough, to bring the  two halves of the sphere together..</p>
+<p class="MsoNormal">&nbsp;</p>
 
-<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/25.png" width="487" height="583" class="responsiveImage"></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/31.png" width="617" height="415" class="responsiveImage">
+<p class="MsoNormal">If it doesn&rsquo;t <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Auto merge</span></span>, you can change  some of the setting for that here. You want to up the Threshold to make the  Auto Merge more sensitive to vertices that are close to it. It should snap  everything together. Just don&rsquo;t go too far as you will end up warping your  object.</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Notice below,  how I can reduce my vertex count by doing a  cleanup of the mesh.</p>
-<p class="BlueBolden">Mesh-Cleanup-Merge  by Distance</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/7-Poly-Build-Tool/Images/26.png" width="616" height="564" class="responsiveImage">
-<h1>&nbsp;</h1>
-<h1><a name="_Toc188004377">Retopology</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">The main thing that this tool is used for is Retopology.  Retopology in Blender is a very in depth subject and better held off to its  very own tutorial later in this series. But I will explain it briefly here.</p>
-<p class="MsoNormal">What Retopology is, is the method of simplifying a 3D  model&rsquo;s mesh structure, to make it easier to work with. You will find, a lot of  times, especially when coming out of sculpt mode that the structure of your  object&rsquo;s mesh is a nightmare. It may be fantastic to look at from the surface  view, but the underlying edges, vertices and faces are in total disarray.  Blender needs clean topology in order to do things like animation, rendering,  or 3D printing, and you will find your self diving deep into this subject of Retopology,  to prepare your object before trying to accomplish these very important final  steps in Blender.</p>
-<p class="MsoNormal">I know it might seem that I have gone over a few of the concepts  several times over, but since this tool is one of the more advanced tools, and  tends to have a larger learning curve to it, I wanted to make sure that you  came out of this tutorial, feeling much more confident in your own ability to  use Poly Build, then before you came in.</p>
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Images/32.png" width="374" height="778" class="wideImg">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Well, that is about it, for the Spin tool. You can play  around with it and see what kind of things you can make out of it.</p>
+<p class="MsoNormal">&nbsp;</p>
 <p>&nbsp;</p>
 <p class="pMidBlack">&nbsp;</p>
  
@@ -340,7 +326,7 @@ font-weight:bold;
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-  </aside>
+</aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
