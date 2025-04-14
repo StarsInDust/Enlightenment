@@ -2,49 +2,31 @@
 /* CSS Document */
 
 .image-gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  max-width: 1000px; /* Adjust as needed */
+  width: 100%;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 10px;
-}
-
-
-.image-gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the images */
+  gap: 10px; /* Add spacing between images */
+  padding: 0 20px 30px 20px; /* Add 30px bottom padding */
+  margin: 0 auto; /* Center the gallery container */
 }
 
 .image-gallery > li {
-  /* ... */
   position: relative;
   cursor: pointer;
+  list-style-type: none;
+  flex: 1 1 calc(33.33% - 10px); /* Default: 3 images per row */
+  max-width: calc(33.33% - 10px); /* Ensure consistent sizing */
 }
 
-
-
-
-
 .image-gallery li img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   max-width: 100%;
   height: auto;
   vertical-align: middle;
   border-radius: 5px;
 }
-
 
 .overlay {
   position: absolute;
@@ -53,39 +35,55 @@
   background: rgba(57, 57, 57, 0.502);
   top: 0;
   left: 0;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: all 0.2s 0.1s ease-in-out;
-  -o-transition: all 0.2s 0.1s ease-in-out;
+  transform: scale(0);
   transition: all 0.2s 0.1s ease-in-out;
   color: #fff;
   border-radius: 5px;
   /* center overlay text */
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /* hover */
 .image-gallery li:hover .overlay {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
-
-
-
-
 
 .image-gallery::after {
   content: "";
-  -ms-flex-preferred-size: 350px;
-      flex-basis: 350px;
+  flex-basis: 350px;
+}
+
+/* Medium screens: 2 images across */
+@media (max-width: 1024px) {
+  .image-gallery > li {
+    flex: 1 1 calc(50% - 10px); /* 2 images per row */
+    max-width: calc(50% - 10px);
+  }
+}
+
+/* Small screens: 1 image across */
+@media (max-width: 768px) {
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Ensures the gallery is centered */
+    margin: 0 auto; /* Centers the gallery container */
+  }
+
+  .image-gallery > li {
+    flex: 1 1 100%; /* 1 image per row */
+    max-width: 100%; /* Ensure the image spans the full width */
+    text-align: center; /* Optional: Center-align the content */
+  }
+}
+
+/* Ensure the parent container is centered */
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
 }

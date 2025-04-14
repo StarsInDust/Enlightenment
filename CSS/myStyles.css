@@ -2,6 +2,12 @@
 @import url("DarkOnLight.css");
 /* CSS Document */
 
+/* General Layout */
+body {
+  padding: 2em;
+  background-color: #00050f;
+}
+
 /* Main Page CSS Setup */
 .wrapper {
   display: flex;
@@ -18,6 +24,7 @@
   flex: 1 100%;
 }
 
+/* Header */
 .header {
   background-color: black;
   background-image: url(../Images/banner_1200.png);
@@ -25,7 +32,7 @@
   background-repeat: no-repeat;
 }
 
-/* Footer Styles */
+/* Footer */
 .footer {
   background-color: #020d25;
   color: #9e8c69;
@@ -35,7 +42,7 @@
   padding: 40px 10px 10px;
 }
 
-/* Main Content Styles */
+/* Main Content */
 .main {
   text-align: left;
   background: #111111;
@@ -49,7 +56,7 @@
   padding: 10px;
 }
 
-/* Aside Styles */
+/* Aside */
 .aside-1,
 .aside-2 {
   background: black;
@@ -68,7 +75,17 @@
   border-radius: 20px;
 }
 
-/* Dark Theme */
+.coverImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cartoonImg {
+  width: 100%;
+  height: auto;
+}
+
+/* Typography */
 .pGold {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -167,22 +184,19 @@ p.BlueBolden {
   font-weight: bold;
 }
 
-.coverImage {
-  background-repeat: no-repeat;
-  background-size: cover;
+.smallBlueList {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #27789e;
+  font-weight: 600;
+  line-height: 1.4em;
+  list-style-type: none;
+  padding-bottom: 3px;
+  margin-left: 40px;
 }
 
-.cartoonImg {
-  width: 100%;
-  height: auto;
-}
-
-body {
-  padding: 2em;
-  background-color: #00050f;
-}
-
-/* Navigation CSS Setup */
+/* Navigation */
 .navigation {
   display: flex;
   flex-flow: row wrap;
@@ -345,16 +359,9 @@ a.customLink:hover {
   }
 }
 
-.smallBlueList {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
-  font-style: italic;
-  color: #27789e;
-  font-weight: 600;
-  line-height: 1.4em;
-  list-style-type: none;
-  padding-bottom: 3px;
-  margin-left: 40px;
+/* Potential Fix for Image Gallery */
+.image-gallery {
+  justify-content: center !important; /* Ensure centering */
 }
 
 .navigationButtons a {
@@ -371,4 +378,7 @@ a.customLink:hover {
 .goldEmphasis {
   color: #c4b97b;
   padding-left: 30px;
+}
+.wrapper .main .container {
+	padding-top: 40px;
 }
