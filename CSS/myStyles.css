@@ -47,6 +47,8 @@ body {
   text-align: left;
   background: #111111;
   padding: 50px 30px 40px;
+  overflow-x: hidden;
+  word-wrap: break-word;
 }
 
 .oneColumnDiv {
@@ -394,4 +396,11 @@ a.customLink:hover {
 }
 .wrapper .main .container {
 	padding-top: 40px;
+}
+
+.responsiveImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
