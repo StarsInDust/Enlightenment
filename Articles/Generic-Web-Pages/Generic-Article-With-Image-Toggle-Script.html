@@ -24,91 +24,27 @@
 <link href="../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 
-
-/* General paragraph styles */
-p.BlueBolden {
-    margin: 0 0 12pt 0;
-    font-size: 12pt;
-    font-family: "Times New Roman", serif;
-    color: blue;
-    font-weight: bold;
+.main {
+  padding: 20px; /* Default padding for smaller screens */
+  margin: 0 5%; /* Default margin for smaller screens */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Lighter, more diffused shadow */
 }
 
-p.MsoTocHeading {
-    margin: 12pt 0;
-    line-height: 115%;
-    font-size: 16pt;
-    font-family: "Calibri Light", sans-serif;
-    color: #2F5496;
+@media all and (min-width: 800px) {
+  .main {
+    padding: 50px 30px 40px; /* Larger padding for larger screens */
+    margin: 0 10%; /* More space on the left and right for larger screens */
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4); /* Slightly stronger shadow for larger screens */
+  }
 }
 
-p.MsoToc1 {
-    margin: 0 0 5pt 0;
-    line-height: 115%;
-    font-size: 11pt;
-    font-family: "Calibri", sans-serif;
-}
-
-/* Hyperlink styles */
-span.MsoHyperlink {
-    color: #0563C1;
-    text-decoration: underline;
-}
-
-span.BlueBoldenChar,
-span.boldBlueChar {
-    font-family: "Times New Roman", serif;
-    color: blue;
-    font-weight: bold;
-}
-
-/* Main article link styles */
-.main .MsoNormal a {
-    color: #8B660D !important;
-    text-decoration: underline !important;
-    font-weight: bolder;
-}
-
-.main .MsoNormal a:visited {
-    color: #41677A !important;
-    text-decoration: underline !important;
-    font-weight: normal;
-}
-
-.main .MsoNormal a:hover {
-    color: silver !important;
-    text-decoration: underline !important;
-}
-
-/* Additional span styles */
-span.BoldRedChar {
-    font-family: "Times New Roman", serif;
-    color: red;
-    font-weight: bold;
-}
-
-span.BoldMaroonListChar {
-    color: #600020;
-    font-weight: bold;
-}
-
-/* Responsive image styles */
-img.responsiveImage, img.wideImg {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Media queries for smaller screens */
-@media (max-width: 768px) {
-    img.wideImg {
-        max-width: 100%;
-        height: auto;
-    }
-
-    article.main {
-        padding: 1rem;
-    }
+@media all and (min-width: 1200px) {
+  .main {
+    padding: 60px 40px 50px; /* Even larger padding for extra-large screens */
+    margin: 0 15%; /* Even more space on the left and right */
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5); /* Stronger shadow for extra-large screens */
+  }
 }
 
 </style>

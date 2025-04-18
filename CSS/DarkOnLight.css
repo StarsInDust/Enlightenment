@@ -17,9 +17,10 @@
 .main {
   text-align: left;
   background: white;
-  padding: 30px 30px 40px;
   flex: 1 100%; /* Default for smaller screens */
-  padding-top: 50px;
+  margin: 0 5%; /* Default margin for smaller screens */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Lighter, more diffused shadow */
 }
 
 /* Dark on White Theme */
@@ -38,8 +39,7 @@
   text-align: center;
 }
 
-.pMidBlack,
-.LeftPMidBlack {
+.pMidBlack {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
   color: #3e3e3e;
@@ -49,8 +49,13 @@
 }
 
 .LeftPMidBlack {
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 18px;
+  color: #3e3e3e;
+  padding: 0 5%;
+  line-height: 22px;
   font-weight: bold;
+  text-align: left;
 }
 
 .LeftPSilver {
@@ -196,8 +201,7 @@ span.MsoHyperlink {
   text-decoration: underline;
 }
 
-span.BlueBoldenChar,
-span.boldBlueChar {
+span.BlueBoldenChar {
   font-family: "Times New Roman", serif;
   color: blue;
   font-weight: bold;
@@ -221,24 +225,7 @@ span.boldBlueChar {
   text-decoration: underline !important;
 }
 
-/* Additional span styles */
-span.BoldRedChar {
-  font-family: "Times New Roman", serif;
-  color: red;
-  font-weight: bold;
-}
-
-span.BoldMaroonListChar {
-  color: #600020;
-  font-weight: bold;
-}
-
 /* Utility Classes */
-.responsiveImage {
-  max-width: 100%;
-  height: auto;
-}
-
 .wideImg {
   width: 100%;
   height: auto;
@@ -283,16 +270,6 @@ span.BoldMaroonListChar {
     background-repeat: no-repeat;
     background-position: center bottom;
   }
-
-  .wideImg {
-    width: 100%;
-    height: auto;
-  }
-
-  .cartoonImg {
-    width: 100%;
-    height: auto;
-  }
 }
 
 @media all and (min-width: 300px) {
@@ -312,17 +289,6 @@ span.BoldMaroonListChar {
     height: auto;
     margin: 20px 0;
   }
-
-  .cartoonImg {
-    width: 80%;
-    height: auto;
-    margin: 0;
-  }
-
-  .image {
-    width: 100%;
-    height: auto;
-  }
 }
 
 @media all and (min-width: 600px) {
@@ -334,10 +300,6 @@ span.BoldMaroonListChar {
   .wideImg {
     width: 90%;
   }
-
-  .cartoonImg {
-    width: 90%;
-  }
 }
 
 @media all and (min-width: 800px) {
@@ -345,29 +307,21 @@ span.BoldMaroonListChar {
     background-image: url(../Images/banner_825.png);
     height: 300px;
   }
+
+  .main {
+    padding: 50px 30px 40px; /* Larger padding for larger screens */
+    margin: 0 10%; /* More space on the left and right for larger screens */
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4); /* Slightly stronger shadow for larger screens */
+  }
 }
 
 @media all and (min-width: 1200px) {
   .main {
     flex: 3 0px; /* Allow the .main div to grow */
     margin: 0 auto; /* Center the .main div */
-    
-  }
-
-  .aside-1 {
-    order: 1;
-  }
-
-  .main {
-    order: 2;
-  }
-
-  .aside-2 {
-    order: 3;
-  }
-
-  .footer {
-    order: 4;
+    padding: 60px 40px 50px; /* Even larger padding for extra-large screens */
+    margin: 0 15%; /* Even more space on the left and right */
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5); /* Stronger shadow for extra-large screens */
   }
 
   .header {
