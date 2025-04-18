@@ -45,57 +45,102 @@
 <link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
 <link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-<!--
-
+/* General paragraph styles */
 p.BlueBolden {
-margin-top:0in;
-margin-right:0in;
-margin-bottom:12.0pt;
-margin-left:0in;
-font-size:12.0pt;
-font-family:"Times New Roman",serif;
-color:blue;
-font-weight:bold;
+    margin: 0 0 12pt 0;
+    font-size: 12pt;
+    font-family: "Times New Roman", serif;
+    color: blue;
+    font-weight: bold;
 }
--->
-</style>
-<style type="text/css">
-<!--
+
 p.MsoTocHeading {
-margin-top:12.0pt;
-margin-right:0in;
-margin-bottom:12.0pt;
-margin-left:0in;
-line-height:115%;
-font-size:16.0pt;
-font-family:"Calibri Light",sans-serif;
-color:#2F5496;
+    margin: 12pt 0;
+    line-height: 115%;
+    font-size: 16pt;
+    font-family: "Calibri Light", sans-serif;
+    color: #2F5496;
 }
+
 p.MsoToc1 {
-margin-top:0in;
-margin-right:0in;
-margin-bottom:5.0pt;
-margin-left:0in;
-line-height:115%;
-font-size:11.0pt;
-font-family:"Calibri",sans-serif;
+    margin: 0 0 5pt 0;
+    line-height: 115%;
+    font-size: 11pt;
+    font-family: "Calibri", sans-serif;
 }
+
+/* Hyperlink styles */
 span.MsoHyperlink {
-color:#0563C1;
-text-decoration:underline;
-text-underline:single;
+    color: #0563C1;
+    text-decoration: underline;
 }
-span.BlueBoldenChar {
-font-family:"Times New Roman",serif;
-color:blue;
-font-weight:bold;
+
+span.BlueBoldenChar,
+span.boldBlueChar {
+    font-family: "Times New Roman", serif;
+    color: blue;
+    font-weight: bold;
 }
+
+/* Main article link styles */
+.main .MsoNormal a {
+    color: #8B660D !important;
+    text-decoration: underline !important;
+    font-weight: bolder;
+}
+
+.main .MsoNormal a:visited {
+    color: #41677A !important;
+    text-decoration: underline !important;
+    font-weight: normal;
+}
+
+.main .MsoNormal a:hover {
+    color: silver !important;
+    text-decoration: underline !important;
+}
+
+/* Additional span styles */
 span.BoldRedChar {
-font-family:"Times New Roman",serif;
-color:red;
-font-weight:bold;
+    font-family: "Times New Roman", serif;
+    color: red;
+    font-weight: bold;
 }
--->
+
+span.BoldMaroonListChar {
+    color: #600020;
+    font-weight: bold;
+}
+
+/* Responsive image styles */
+img.responsiveImage, img.wideImg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    img.wideImg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    article.main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    img.responsiveImage, img.wideImg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    article.main {
+        padding: 0.5rem;
+    }
+}
 </style>
 </head>
 
