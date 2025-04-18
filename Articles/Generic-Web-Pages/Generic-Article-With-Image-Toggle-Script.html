@@ -91,6 +91,36 @@ span.BoldMaroonListChar {
     color: #600020;
     font-weight: bold;
 }
+
+/* Responsive image styles */
+img.responsiveImage, img.wideImg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    img.wideImg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    article.main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    img.responsiveImage, img.wideImg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    article.main {
+        padding: 0.5rem;
+    }
+}
 </style>
 </head>
 
