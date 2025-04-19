@@ -6,6 +6,7 @@
   display: flex;
   flex-flow: row wrap;
   min-height: 450px;
+  padding: 10px; /* Default padding */
 }
 
 .wrapper > * {
@@ -21,15 +22,52 @@
   margin: 0 5%; /* Default margin for smaller screens */
   border-radius: 15px; /* Rounded corners */
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Lighter, more diffused shadow */
+  width: 100%; /* Default full width */
+  box-sizing: border-box; /* Include padding and border in width */
+  margin: 0; /* Remove margin */
+  padding: 20px; /* Add padding for text */
+  overflow: hidden; /* Clear floating elements */
+}
+
+/* General styles for <p> tags */
+p {
+  margin: 0 0 15px 0; /* Add spacing between paragraphs */
+  padding: 0 20px; /* Add padding for text */
+  line-height: 1.6; /* Improve readability */
 }
 
 /* Dark on White Theme */
-.pBlack {
+.pBlack,
+.pMidBlack,
+.LeftPMidBlack,
+.LeftPSilver {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
+  line-height: 22px;
+  text-align: left;
+}
+
+.pBlack {
   color: black;
   padding: 0 20%;
-  line-height: 22px;
+}
+
+.pMidBlack {
+  color: #3e3e3e;
+  padding: 0 5%;
+}
+
+.LeftPMidBlack {
+  font-size: 18px;
+  color: #3e3e3e;
+  font-weight: bold;
+  padding: 0 5%;
+}
+
+.LeftPSilver {
+  color: silver;
+  font-weight: 500;
+  padding: 0 5%;
 }
 
 .h2MidBlack {
@@ -37,35 +75,6 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 16px;
   text-align: center;
-}
-
-.pMidBlack {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  color: #3e3e3e;
-  padding: 0 5%;
-  line-height: 22px;
-  text-align: left;
-}
-
-.LeftPMidBlack {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  color: #3e3e3e;
-  padding: 0 5%;
-  line-height: 22px;
-  font-weight: bold;
-  text-align: left;
-}
-
-.LeftPSilver {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  color: silver;
-  padding: 0 5%;
-  line-height: 22px;
-  font-weight: 500;
-  text-align: left;
 }
 
 .h2Black {
@@ -229,18 +238,21 @@ span.BlueBoldenChar {
 .wideImg {
   width: 100%;
   height: auto;
+  margin: 0; /* Remove margin to allow full width */
+  max-width: 100%; /* Ensure images don't exceed container width */
+  display: block; /* Remove inline spacing */
+  margin: 0 auto; /* Center images */
+  padding: 0; /* Remove padding for images */
 }
 
 /* Author and Date Styles */
 .author {
   font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   color: #486a84;
-  letter-spacing: 3px;
-  margin: 30px 0 20px;
-  text-align: left;
-  line-height: 150%;
+  margin: 10px 0; /* Add spacing above and below */
+  padding: 0 20px; /* Add padding for alignment */
 }
 
 .articleDate {
@@ -250,6 +262,35 @@ span.BlueBoldenChar {
   margin-right: 20px;
   padding-right: 20px;
   line-height: 150%;
+}
+
+/* Styles for <h1> tags */
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0; /* Add spacing above and below */
+  padding: 0 20px; /* Add padding for alignment */
+  text-align: left; /* Align text to the left */
+}
+
+/* Styles for .tableOfContents links */
+.tableOfContents {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #0563C1;
+  margin: 10px 0; /* Add spacing above and below */
+  padding: 0 20px; /* Add padding for alignment */
+}
+
+.tableOfContents a {
+  text-decoration: underline;
+  color: #0563C1;
+}
+
+.tableOfContents a:hover {
+  color: #333; /* Change color on hover */
 }
 
 /* Media Queries */
@@ -270,6 +311,18 @@ span.BlueBoldenChar {
     background-repeat: no-repeat;
     background-position: center bottom;
   }
+
+  .wideImg {
+    width: 100%; /* Ensure it fills the screen */
+    margin: 0; /* Remove margin for smallest screens */
+    width: 100%; /* Ensure images fill the screen width */
+    margin: 0; /* Remove margin for full-width images */
+  }
+
+  .wrapper {
+    padding: 0 !important; /* Remove padding for smallest devices */
+    margin: 0 !important; /* Ensure no margin */
+  }
 }
 
 @media all and (min-width: 300px) {
@@ -285,9 +338,8 @@ span.BlueBoldenChar {
   }
 
   .wideImg {
-    width: 70%;
-    height: auto;
-    margin: 20px 0;
+    width: 100%; /* Keep full width for readability */
+    margin: 0; /* Remove margin */
   }
 }
 
@@ -298,7 +350,8 @@ span.BlueBoldenChar {
   }
 
   .wideImg {
-    width: 90%;
+    width: 90%; /* Slightly smaller width for larger screens */
+    margin: 20px 0; /* Add margin for spacing */
   }
 }
 
@@ -312,6 +365,11 @@ span.BlueBoldenChar {
     padding: 50px 30px 40px; /* Larger padding for larger screens */
     margin: 0 10%; /* More space on the left and right for larger screens */
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4); /* Slightly stronger shadow for larger screens */
+  }
+
+  .wideImg {
+    width: 90%; /* Maintain consistent width */
+    margin: 20px 0; /* Add margin for spacing */
   }
 }
 
@@ -327,5 +385,10 @@ span.BlueBoldenChar {
   .header {
     background-image: url(../Images/banner_1200.png);
     height: 430px;
+  }
+
+  .wideImg {
+    width: 90%; /* Keep consistent width for extra-large screens */
+    margin: 20px 0; /* Add margin for spacing */
   }
 }
