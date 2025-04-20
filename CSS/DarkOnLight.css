@@ -104,8 +104,8 @@ p {
 }
 
 .responsiveImage {
-  max-width: 100%;
-  height: auto;
+  max-width: 100% !important;
+  height: auto !important;
   display: block;
   margin: 0 auto; /* Center the image */
   padding: 1px ; /* Remove padding to avoid uneven spacing */
@@ -405,4 +405,8 @@ h1 {
     margin: 20px 0; /* Add margin for spacing */
     padding:5px;
   }
+}
+
+body {
+    background-color: #00050f;
 }
