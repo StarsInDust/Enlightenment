@@ -6,11 +6,11 @@
   display: flex;
   flex-flow: row wrap;
   min-height: 450px;
-  padding: 10px; /* Default padding */
+  padding: 0; /* Default padding */
 }
 
 .wrapper > * {
-  padding: 10px;
+  padding: 0;
   flex: 1 100%;
 }
 
@@ -19,12 +19,11 @@
   text-align: left;
   background: white;
   flex: 1 100%; /* Default for smaller screens */
-  margin: 0 5%; /* Default margin for smaller screens */
+  margin: 0; /* Remove all margins */
   border-radius: 15px; /* Rounded corners */
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Lighter, more diffused shadow */
   width: 100%; /* Default full width */
   box-sizing: border-box; /* Include padding and border in width */
-  margin: 0; /* Remove margin */
   padding: 20px; /* Add padding for text */
   overflow: hidden; /* Clear floating elements */
 }
