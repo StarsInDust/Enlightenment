@@ -103,19 +103,19 @@ font-weight:bold;
 <br>
 
 <img src="Images/1.png" width="279" height="249" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal" style="margin-top:24.0pt;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;page-break-after:avoid;"><strong><span style="line-height:115%; font-family:'Calibri Light',sans-serif; font-size:14.0pt; color:#2F5496; ">Our Starting Point</span></strong></p>
 <p class="MsoNormal">We can start (again) here with the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">index</span></span> page that we  created in last week&rsquo;s tutorial entitled:</p>
 <p class="MsoNormal" style="margin-top:2.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;page-break-after:avoid;"><em><span style="font-family:'Calibri Light',sans-serif; color:#2F5496; ">index.html</span></em></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">And if  you do start with that, you should already have the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">script file</span></span> created, and attached to the  index file.</p>
 <img src="Images/2.png" width="621" height="231" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1>InnerText </h1>
 <p class="MsoNormal">We have a couple of ways in which we can insert text into  our web page. One way is to use <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">innerText</span></span>. Remember that we  do have an empty div that was appended to the body. Now we want to attach our  inner text to that empty div. Attach it using the dot operator.</p>
 <p class="MsoNormal">This is not a method here, it is an assignment. The equal  sign is used to attach the text to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">div.InnerText</span></span>.</p>
 <img src="Images/3.png" width="628" height="140" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1>appendChild</h1>
 <p class="MsoNormal">Remember when I said that <strong>appendChild</strong> would work with  a <strong>node</strong>? Well, a <strong>div</strong> is considered a node in JavaScript. Yes,  maybe a node might be a strange sounding word, but that is what a <strong>div</strong> is; and guess what? Now that we do have our text inside of a div, we can switch  out <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">append</span></span> with <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">appendChild</span></span> and it will work just fine. That is because now our text is a child of the div.</p>
 <img src="Images/4.png" width="629" height="152" class="wideImg">
@@ -124,11 +124,11 @@ font-weight:bold;
 <img src="Images/5.png" width="629" height="183" class="wideImg">
 <h1>The Difference Between innerText and textContent</h1>
 <p class="MsoNormal">If you just take a look at these two ways of adding text and  what it looks like on a web page, you would think that both of them are exactly  the same thing. But you would be wrong because under-the-hood, they are  actually different.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><span class="MsoIntenseReference">Using console.log in your  browser</span></p>
 <p class="MsoNormal">The use of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">textContent</span></span> will print out  all of the text content, with all of the spacing and indentation intact inside  of the div. And this text would print out in the console even if you set the  display of that text to have a display of <strong>none</strong>, which means you set it  to be invisible.</p>
 <p class="MsoNormal">On the other hand, if you were to use <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">innerText</span></span>, and then looked  at it in the console of the browser, you would find that setting the text to  display <strong>none</strong>, would actually have meaning and that text would be  invisible.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/6.png" width="500" height="360" class="responsiveImage">
 <p>&nbsp;</p></article><aside class="aside aside-1">
   <p class="LeftPMidBlack">&nbsp;</p>

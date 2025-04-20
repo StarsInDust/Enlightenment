@@ -118,16 +118,16 @@ font-weight:bold;
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="tableOfContents"><a href="#_Toc162174347">What   is a partial SASS file</a></span></p>
 <p class="tableOfContents"><a href="#_Toc162174348">Creating   a partial SCSS file</a></span></p>
 <p class="tableOfContents"><a href="#_Toc162174349">The   Reset Partial File</a></span></p>
 <p class="tableOfContents"><a href="#_Toc162174350">The   Variable Partial File</a></span></p>
 <p class="tableOfContents"><a href="#_Toc162174351">To   Duplicate Code</a></span></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Watch it,</span></span> make sure  your Watch <a href="../2-Creating-The-Project/2-Creating-The-Projects.html" target="_blank">SASS</a> is turned on, remember if it is not showing at the bottom of  the screen, when you go to the Scss file, you will need to go to setting and  then SASS in search bar to make it show up. Turn it on from there, by hitting  it.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/1.png" width="350" class="responsiveImage" >
 <h1><a name="_Toc162174347">What is a partial SASS file</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
@@ -143,7 +143,7 @@ font-weight:bold;
 <img src="Images/2.png" width="263" height="230" class="responsiveImage">
 <p class="MsoNormal">Create a new file, by right clicking on that SCSS folder and  choosing new file.</p>
 <img src="Images/3.png" width="376" height="144" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc162174349">The Reset Partial File</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
@@ -151,7 +151,7 @@ font-weight:bold;
 <p class="MsoNormal">Just write down the regular reset stuff, and save the file.</p>
 <p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> remember to  put the extension of .scss on it, or it will not work</p>
 <img src="Images/4.png" width="277" height="139" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code"><span style="font-family:Consolas; font-size:10.5pt; color:#569CD6; ">*</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span>{</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp; &nbsp; box-sizing: border-box;</p>
@@ -160,8 +160,8 @@ font-weight:bold;
 <p class="code">&nbsp;</p>
 <p class="code">}</p>
 <p class="code">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <p class="MsoNormal">Go back to the <strong><span style="font-size:14.0pt; ">Main.SCSS</span></strong><span style="font-size:14.0pt; "> </span>file</p>
 <p class="MsoNormal">We want to import this resets at the top of the main.scss  file</p>
 <img src="Images/5.png" width="213" height="253" class="responsiveImage">
@@ -169,49 +169,49 @@ font-weight:bold;
 <p class="code">&nbsp;</p>
 <p class="code">@import'./resets';</p>
 <p class="code">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><a name="_Hlk161058864"><strong><span style="line-height:115%; font-size:14.0pt; color:#2F5496; ">SAVE </span></strong></a><span style="font-size:14.0pt; color:#2F5496; ">Everything</span></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Now look at your regular CSS file, and you will see that it  has compiled the code into our CSS file. You will see that it compiled at the  top of the regular CSS file</p>
 <img src="Images/6.png" width="625" height="161" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Now let&rsquo;s try another one</p>
 <h1><a name="_Toc162174350">The Variable Partial File</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
 <p class="MsoNormal">Remember to right click on the SCSS folder itself and choose  new file from the pop-up menu.</p>
 <img src="Images/7.png" width="307" height="169" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Cut all of the variable that you have created in the  main.scss file and put them into the partial that we just created.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code">$primary-color: #09191F;</p>
 <p class="code">&nbsp; &nbsp; $secondary-color: #153B47;</p>
 <p class="code">&nbsp; &nbsp; $accent-color: #3D606E;</p>
 <p class="code">&nbsp; &nbsp; $text-color: #fff;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <img src="Images/8.png" width="625" height="212" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Watch it, remember with that code now in an external file,  you will need to write your import statement to bring it in at the top of the  SCSS file.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc162174351">To Duplicate Code</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
 <p class="MsoNormal">If you want to duplicate a line of code. Hover over the line  you want to duplicate, and then hit alt-shift-down- arrow.</p>
 <img src="Images/9.png" width="627" height="173" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><strong><span style="font-size:14.0pt; color:#2F5496; ">SAVE </span></strong><span style="font-size:14.0pt; color:#2F5496; ">Everything</span></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Go back to the index.html file to check and see if  everything is working. Since our reset removed all the padding you will see the  paragraph now buts up against the ceiling of the page.</p>
 <img src="Images/10.png" width="989" height="149" class="wideImg">
 <p class="MsoNormal">And the hover still works too.</p>
 <img src="Images/11.png" width="1003" height="89" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">You will find that being able to separate out everything  into smaller modules, enable different team members the ability to take just  one part of the project, and work on it individually.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
+
+
 <p>&nbsp;</p></article><aside class="aside aside-1">
   
   

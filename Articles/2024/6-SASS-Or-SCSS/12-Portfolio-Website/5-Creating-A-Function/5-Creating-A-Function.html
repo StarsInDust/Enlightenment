@@ -139,7 +139,7 @@ font-weight:bold;
 <p class="tableOfContents"><a href="#_Toc165381910">How do we call this new   function?</a></p>
 <p class="tableOfContents"><a href="#_Toc165381911">Search document for all   other color property code</a></p>
 <p class="tableOfContents"><a href="#_Toc165381912">Now go to the _home.scss   file Searching for color codes<span style="display:none; text-underline:none; color:windowtext; text-decoration:none; ">. </span></a></p>
-<p class="MsoNormal">&nbsp;</p>
+
 
 <p><img src="Images/1.png" width="271" height="243" class="responsiveImage"></p>
 <p>&nbsp; </p>
@@ -149,15 +149,15 @@ font-weight:bold;
 <p class="MsoNormal"><a name="_Hlk165458690"><span class="MsoIntenseReference">In  Visual Studio</span></a></p>
 <p class="MsoNormal">Remember to turn on your Watch Sass</p>
 <img src="Images/2.png" width="122" height="39" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">We want to be able to create a function to give an  appropriate color to text based on the lightness of a color.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <h1><a name="_Toc165381909">Write a Function</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal">Inside of the <span class="MsoIntenseReference">_config.scss</span> file, right under the @ mixin for the transition that we just wrote, we are  going to write a function. This function will take an argument of <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">color</span></span> inside of its  parenthesis. It is going to be manipulating things based on the lightness of a  color. In order to do this, we will be using an <span class="boldBlueChar"><span style="font-size:12.0pt; ">if</span></span> statement.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code">@function set-text-color($color){</p>
 <p class="code">&nbsp;</p>
 <p class="code">    @if (lightness($color)  &gt; 40%) {</p>
@@ -173,7 +173,7 @@ font-weight:bold;
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
 <img src="Images/3.png" width="422" height="230" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc165381910">How do we call this new function?</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
@@ -181,13 +181,13 @@ font-weight:bold;
 <p class="MsoNormal">Go to the <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">main.scss</span></span> file, this is  where we will be using that function. </p>
 <p class="MsoNormal">We will be using that function in the<span class="BlueBoldenChar"><span style="font-size:12.0pt; "> body</span></span> rule of the  main.scss file.</p>
 <p class="MsoNormal">This is what the original code looks like, we use the  property of color: and then we just use the color.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><span class="MsoIntenseReference">Original</span></p>
 <img src="Images/4.png" width="507" height="145" class="wideImg">
 <p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
 <p class="MsoNormal"><span class="MsoIntenseReference">Using the new Function</span></p>
 <p class="MsoNormal">Notice how we use the dollar sign with the name of the  function, inside of the parenthesis below.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code"><a name="_Hlk165380827">color:set-text-color($primary-color);</a></p>
 <p class="code">&nbsp;</p>
 <img src="Images/5.png" width="595" height="137" class="wideImg">
@@ -196,7 +196,7 @@ font-weight:bold;
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal">Now what we want to do is to search through our code for  everywhere we have the color property. </p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><span class="MsoIntenseReference">Original</span></p>
 <img src="Images/6.png" width="319" height="101" class="responsiveImage">
 <p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
@@ -230,7 +230,7 @@ font-weight:bold;
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal">Since we also had a color property set for our border, on  the home page we must change that too.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><span class="MsoIntenseReference">Original</span></p>
 <img src="Images/9.png" width="417" height="84" class="wideImg">
 <p class="MsoNormal"><span class="MsoIntenseReference">&nbsp;</span></p>
@@ -245,13 +245,13 @@ font-weight:bold;
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
 <p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">*Notice</span></span> here that we  do not use the colon after <span class="boldBlueChar"><span style="font-size:12.0pt; ">solid color</span></span>, as we had done previously with <span class="boldBlueChar"><span style="font-size:12.0pt; ">color</span></span> when setting  the attribute.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <img src="Images/10.png" width="618" height="351" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">If we test the page now, we will not actually see any  difference.  Our page had already been  working perfectly with the lightness of the text. It will only trigger if we  have a page that doesn&rsquo;t play that nice with the color of the fonts.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <img src="Images/11.png" width="347" height="322" class="responsiveImage">
 <p>&nbsp;</p>
     

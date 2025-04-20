@@ -136,9 +136,9 @@ font-weight:bold;
 <p class="tableOfContents"><a href="#_Toc166752371">The .nav Class</a></p>
 <p class="tableOfContents"><a href="#_Toc166752372">The Java Script for the   Nav Menu</a></p>
 <p class="tableOfContents"><a href="#_Toc166752373">Testing the Page</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
+
 <p><img src="Images/1.png" width="268" height="241" class="responsiveImage"></p>
 <p>&nbsp;</p>
 <p>&nbsp; </p>
@@ -152,31 +152,31 @@ font-weight:bold;
 <p class="MsoNormal"><span class="MsoIntenseReference">Inside the main.scss</span></p>
 <p class="MsoNormal">We will be making changes to our navigation, so the original  code that we wrote in the <span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">main.scss</span></span> will no longer be needed. You can just comment it out for now.</p>
 <p class="MsoNormal">Right now the menu, is looking very good with the styles intact.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 
 <img src="Images/3.png" width="560" height="99" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <p class="MsoNormal">Now when you comment this code out…</p>
-<p class="MsoNormal">&nbsp;</p>
+
 
 <img src="Images/4.png" width="489" height="280" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Your menu will now appear ugly and like this, on your  webpage, when the code is commented out. Don't worry, we will be redoing these styles, for the navigation, in the next sections of this tutorial.</p>
 
 <img src="Images/5.png" width="312" height="124" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><span class="MsoIntenseReference">Inside of the _menu.scss  file</span></p>
 <h1><a name="_Toc166752371">The .nav Class</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal">You want to create a new nav Class. Inside of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">_menu.scss</span></span> file, go  to the very last closing curly brace on the page, you will be creating this new  class underneath that closing brace.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 
 <img src="Images/6.png" width="407" height="244" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">In this next code, you will see we will be making the <span class="boldBlueChar"><span style="font-size:12.0pt; ">vw</span></span> to be <span class="boldBlueChar"><span style="font-size:12.0pt; ">100vw</span></span>, which makes it  100% of the viewport width. The <span class="boldBlueChar"><span style="font-size:12.0pt; ">opacity</span></span> set to <span class="boldBlueChar"><span style="font-size:12.0pt; ">0.98</span></span> will only allow  us to see just a hint of our background image, on the screen. We set the translateY to be a -100  %. This means that our menu has been moved upward and off the screen.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code">.nav {</p>
 <p class="code">    position: fixed;</p>
 <p class="code">    top: 0;</p>
@@ -233,7 +233,7 @@ font-weight:bold;
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal">Go to your <span class="boldBlueChar"><span style="font-size:12.0pt; ">main.js</span></span> file, which is inside of your <span class="boldBlueChar"><span style="font-size:12.0pt; ">dist</span></span> folder.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><span class="MsoIntenseReference">Write another Two constants  at top</span></p>
 <p class="code">const nav = document.querySelector('.nav');</p>
 <p class="code">const menuNav = document.querySelector('.menu-nav');</p>
@@ -254,13 +254,13 @@ font-weight:bold;
 <p class="code">&nbsp;</p>
 <p class="code">      </p>
 <img src="Images/12.png" width="561" height="279" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Now copy those two lines of code, because we need to do the  same thing after the else clause when we remove the <span class="boldBlue">open</span> class from the menu.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/13.png" width="489" height="143" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">You will need to change the word <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">add</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">remove</span></span> in both lines.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code" style="text-indent:.5in;">      nav.classList.<span style="background:yellow; ">remove</span>('open');</p>
 <p class="code" style="text-indent:.5in;">       menuNav.classList.<span style="background:yellow; ">remove</span>('open');</p>
 <p class="code" style="text-indent:.5in;">&nbsp;</p>
@@ -310,22 +310,22 @@ font-weight:bold;
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal">Make sure you go back to the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">index.html</span></span> page to test  the code out.</p>
 <p class="MsoNormal">This is what the page looks like when you first arrive.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 
 <img src="Images/16.png" width="627" height="363" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Click on the Hamburger button, in the far upper right-hand  corner of the webpage.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 
 <img src="Images/17.png" width="87" height="109" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Now your menu part comes down and covers the page and the  page looks like this, with just a hint of the main home page showing below</p>
-<p class="MsoNormal">&nbsp;</p>
+
 
 <img src="Images/18.png" width="621" height="361" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Click on that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> again, in the far upper  right-hand corner, and it shows the home page again</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/19.png" width="625" height="366" class="wideImg">
 <p>&nbsp;</p>
 <p class="pMidBlack">&nbsp;</p>

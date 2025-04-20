@@ -40,58 +40,7 @@
 
 <link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
 <link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-<!--
 
-p.BlueBolden {
-margin-top:0in;
-margin-right:0in;
-margin-bottom:12.0pt;
-margin-left:0in;
-font-size:12.0pt;
-font-family:"Times New Roman",serif;
-color:blue;
-font-weight:bold;
-}
--->
-</style>
-<style type="text/css">
-<!--
-p.MsoTocHeading {
-margin-top:12.0pt;
-margin-right:0in;
-margin-bottom:12.0pt;
-margin-left:0in;
-line-height:115%;
-font-size:16.0pt;
-font-family:"Calibri Light",sans-serif;
-color:#2F5496;
-}
-p.MsoToc1 {
-margin-top:0in;
-margin-right:0in;
-margin-bottom:5.0pt;
-margin-left:0in;
-line-height:115%;
-font-size:11.0pt;
-font-family:"Calibri",sans-serif;
-}
-span.BoldRedChar {
-font-family:"Times New Roman",serif;
-color:red;
-font-weight:bold;
-}
-span.MsoIntenseEmphasis {
-color:#4472C4;
-font-style:italic;
-}
-span.Heading1Char {
-font-family:"Calibri Light",sans-serif;
-color:#2F5496;
-font-weight:bold;
-}
--->
-</style>
 </head>
 
 
@@ -125,19 +74,19 @@ font-weight:bold;
    <br>
 <br>
 
-<p class="MsoNormal">&nbsp;</p>
- <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p><p class="MsoToc1"><a href="#_Toc158977368">The Select Options Dropdown</a></p>
-<p class="MsoToc1"><a href="#_Toc158977369">The Products Layout</a></p>
-<p class="MsoToc1"><a href="#_Toc158977370">Using Flex grow</a></p>
-<p class="MsoToc1"><a href="#_Toc158977371">Restrict Maximum Size of   Images</a></p>
-<p class="MsoToc1"><a href="#_Toc158977372">Adding a Button to the   Product Card</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+ <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p><p class="tableOfContents"><a href="#_Toc158977368">The Select Options Dropdown</a></p>
+<p class="tableOfContents"><a href="#_Toc158977369">The Products Layout</a></p>
+<p class="tableOfContents"><a href="#_Toc158977370">Using Flex grow</a></p>
+<p class="tableOfContents"><a href="#_Toc158977371">Restrict Maximum Size of   Images</a></p>
+<p class="tableOfContents"><a href="#_Toc158977372">Adding a Button to the   Product Card</a></p>
+
+
+
 <img src="Images/1.png" width="269" height="240" class="responsiveImage">
 <p class="MsoNormal">The code that I will be presenting in this Product page  tutorial will be like an insert to a pre-existing web page that you already  have.</p>
 <img src="Images/2.png" width="500" height="322" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc158977368">The Select Options Dropdown</a></h1>
  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">Creating this dropdown might seem a bit in-depth, but really  there is not too much to it, and it should not give you any nightmares just  thinking about attempting it.</p>
@@ -148,19 +97,19 @@ font-weight:bold;
 <img src="Images/4.png" width="219" height="114" class="responsiveImage">
 <p class="MsoNormal">The next thing that we will specify inside of the navigation,  is our select widget, we will give this the class name of &ldquo;sort.&rdquo;</p>
 <img src="Images/5.png" width="229" height="185" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Inside of the div &ldquo;sort&rdquo; which is our select widget, we are  going to have two dropdown options. We will put each of these dropdown options  in their own divs, and give these two the class with the name of  &ldquo;collection-sort&rdquo;</p>
 <p class="MsoNormal">Each drop down will consist of a label, so we know what we  are selecting and then the select-option, To create this, we will be putting  the option tag with the value inside of a tag named select. </p>
 <img src="Images/6.png" width="402" height="449" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The CSS</span></strong></p>
 <p class="MsoNormal">Since, in the HTML, we placed this entire thing into the  navigation, which we named &ldquo;product-filter&rdquo;, we will use that to be our flex  element. So, we will set the display of product-filter to flex.</p>
 <img src="Images/7.png" width="189" height="103" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Setting the .sort div to flex</span></strong></p>
 <p class="MsoNormal">If you look at your html, you will see that we placed our  two div options into another div with a class name of .sort. We can nest our  flex containers, which is just what we are doing with sort, this is because we  will set sort to be displayed as flex, inside of the product-filter div that we  have already designated as a flex container.</p>
 <img src="Images/8.png" width="217" height="107" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The CSS for the .sort</span></strong></p>
 <img src="Images/9.png" width="167" height="81" class="responsiveImage">
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
@@ -170,7 +119,7 @@ font-weight:bold;
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
 <p class="MsoNormal">When we save, and run it in a browser, you should have this:</p>
 <img src="Images/11.png" width="553" height="187" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc158977369">The Products Layout</a></h1>
  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Note-</span></span> <span class="MsoIntenseEmphasis">You want to make sure that all of your product images  are the same size. Create a background image, the size that you want. Slide all  of your products onto this background image, one by one, and then save your  images.</span></p>
@@ -179,9 +128,9 @@ font-weight:bold;
 <img src="Images/12.png" width="243" height="127" class="responsiveImage">
 <p class="MsoNormal">Inside of this section tag, we want to start adding the  images and descriptions of our products. We will start with just one, and then  work from there.</p>
 <img src="Images/13.png" width="337" height="205" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Note-</span></span> <span class="MsoIntenseEmphasis">You will probably want to link this card somewhere to  an individual product page. you could add a button in the info, link the  titles, or even wrap the entire card in an anchor tag.</span></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Right below the section that we highlighted in yellow and  before the closing section tag is where you will want to add additional  products.</p>
 <p class="MsoNormal">Now you want to add that yellow section, to create 9 more  cards to work with. Remember that this is the tag that you are putting all of  those product cards into. This section was placed under the navigation</p>
 <img src="Images/14.png" width="244" height="123" class="responsiveImage">
@@ -189,49 +138,49 @@ font-weight:bold;
 <p class="MsoNormal">Before you set the following rules for the .products  section, you will find that the products are just dropping down in a single  column. That is because it was following the rule that you had set for the  dropdown box in the navigation, which was with a flex direction of column. We  want this to do something different so we will be giving it, its own flex  container and setting that container to have its contents wrap.</p>
 <img src="Images/15.png" width="160" height="89" class="responsiveImage">
 <p class="MsoNormal">As you can see, here the products are no longer in a single  column, and now the products will wrap, when the page is widened or narrowed.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/16.png" width="620" height="287" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Using flex-wrap: wrap will force the items onto the next  row, once the page is narrowed enough that it does not fit.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc158977370">Using Flex grow</a></h1>
  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">We want to take further control on how things move on the  page by taking advantage of flex-grow. We will start out by placing everything  on one row by simply setting flex-grow:1; This will be done on each one of the  product cards</p>
 <p class="MsoNormal">To do this, we want to add some more properties to the  .products rule. Like this:</p>
 <img src="Images/17.png" width="178" height="126" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Now we want to add a bit of the padding. The padding will  actually go on the .product-card rule. I am only adding a 1% padding to my  cards, so they have just a bit of space between them.</p>
 <img src="Images/18.png" width="144" height="75" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 
 <img src="Images/19.png" width="640" height="550" class="wideImg">
 <h1><a name="_Toc158977371">Restrict Maximum Size of Images</a></h1>
  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">You do not want your images growing too large and  distorting. To prevent this, we can add this code to our CSS</p>
 <img src="Images/20.png" width="160" height="52" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc158977372">Adding a Button to the Product Card</a></h1>
  <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <img src="Images/21.png" width="462" height="296" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
+
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The HTML</span></strong></p>
 <img src="Images/22.png" width="504" height="237" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The CSS</span></strong></p>
 <p class="MsoNormal">We will be styling both the container and the product  button. We are surrounding the button with a div tag and naming the class, the  buttonContainer, because that is what it will be. We are setting the display  for the buttonContainer to flex. Also, we want the center align it both  horizontally and vertically so it will set exactly center in the div. And then  we set the flex-grow to be 1.</p>
 <img src="Images/23.png" width="220" height="123" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Now this is for the styling for button itself</p>
 <img src="Images/24.png" width="265" height="212" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">I also did a bit of restyling of some of the text, so that  it looked a little better on the page</p>
 <img src="Images/25.png" width="361" height="245" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">So, now my page looks like this:</p>
 <img src="Images/26.png" width="532" height="453" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">You can go <span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; "><a href="The-Code-for-Product-Page.html">here</a></span></span> to get the full HTML and CSS for  this product page</p>
 <p>&nbsp;</p>
 <p class="pMidBlack">&nbsp;</p>
@@ -241,25 +190,8 @@ font-weight:bold;
  
 </article>
   
+
   
-  
-  
-  
-  
-  
-  
-  
-  
-<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
-  <p class="LeftPMidBlack">&nbsp;</p>
-  
-  
-</aside>
-  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
-  <p class="LeftPMidBlack">&nbsp;</p>
-  
-  
-  </aside>
   
   
   <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –

@@ -120,22 +120,22 @@ font-weight:bold;
 <br>
 
 
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <img src="Images/1.png" width="277" height="250" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc168561711">What are Data Attributes?</a></h1>
 <p class="MsoNormal">Data attributes are just like normal attributes, except that  they start with <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">data-</span></span></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal" style="text-indent:157.5pt;"><a name="_Hlk168480810"><span style="line-height:115%; font-size:20.0pt; color:#1F3864; ">data-</span></a><span style="font-size:20.0pt; color:#1F3864; "> </span></p>
 <p class="MsoNormal" style="text-indent:157.5pt;"><span style="font-size:20.0pt; color:#1F3864; ">&nbsp;</span></p>
 <p class="MsoNormal">And what is really awesome about this type of attribute is  that you can make them up, and are customizable for what you are trying to do</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/2.png" width="251" height="198" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Another thing is that the stored customize data then can be  used to create a better experience for your user. It also eliminates the need  to do any special Ajax calls or server-side database queries, and everything  can be done right from the JavaScript file.</p>
 <p class="MsoNormal">These custom attributes prefixed with the word &ldquo;data-&ldquo; will  be completely ignored by the user agent.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/3.png" width="197" height="194" class="responsiveImage">
 <h1><a name="_Toc168561712">A few Rules</a></h1>
 <p class="MsoNormal">These data- attributes consists of two parts:</p>
@@ -144,7 +144,7 @@ font-weight:bold;
   <li>The  attribute value can be any string.</li>
 </ul>
 <p class="MsoNormal">The data- attribute is a Global attribute and can be used on  any HTML element.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc168561713">Creating the Data Attribute</a></h1>
 <p class="MsoNormal"><strong><span style="font-size:12.0pt; ">HTML</span></strong></p>
 <p class="code">&nbsp;</p>
@@ -168,11 +168,11 @@ font-weight:bold;
 <p class="MsoNormal"><strong><span style="font-size:12.0pt; ">In JavaScript</span></strong></p>
 <p class="MsoNormal">Now we want to be able to grab hold of that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">data attribute</span></span>, and  we can do that from our JavaScript file. There is a property called <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">dataset</span></span> that contains  all of your customized properties. So, if you call dataset on your constant,  you will dive into a pool that contains everything that you made up using the  prefix of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">data-</span></span>.</p>
 <p class="MsoNormal">Now if we use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">console.log</span></span> method on it, we  should be able to see things in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">console tab</span></span> of the Inspect  element in your browser.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">And as you can see here, it did indeed pull out that string  that we wrote in the HTML. Also, notice how when we view it in the console, we  do not see the prefix of data-, it only shows the name that we gave it. The  User agent did indeed ignore that part of the code.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
+
 <img src="Images/5.png" width="417" height="201" class="responsiveImage">
 <p>&nbsp;</p>
  

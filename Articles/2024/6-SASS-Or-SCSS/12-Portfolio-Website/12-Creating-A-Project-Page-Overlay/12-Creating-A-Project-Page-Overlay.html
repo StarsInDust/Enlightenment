@@ -119,7 +119,7 @@ font-weight:bold;
    <br>
 <br>
 
-<p class="MsoNormal">&nbsp;</p>
+
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
 <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863914">Turn   on Sass</a></span></p>
 <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863915">Creating   the pseudo element in the &amp;__item rule</a></span></p>
@@ -127,8 +127,8 @@ font-weight:bold;
 <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863917">Styling   the buttons</a></span></p>
 <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863918">Targeting   Individual buttons</a></span></p>
 <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167863919">Testing   the Project</a></span></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 
 <img src="Images/1.png" width="269" height="239" class="responsiveImage">
 <h1><a name="_Toc167863884"></a><a name="_Toc167863914">Turn on Sass</a></h1>
@@ -136,20 +136,20 @@ font-weight:bold;
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal"><span class="MsoIntenseReference">In Visual Studio</span><strong><span style="font-variant:small-caps; letter-spacing:.25pt; color:#4472C4; "> </span></strong></p>
 <p class="MsoNormal">Remember to turn on your Watch Sass</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p><img src="Images/2.png" width="120" height="39" class="responsiveImage"></p>
 <p>&nbsp; </p>
 <h1><a name="_Toc167863885"></a><a name="_Toc167863915">Creating the pseudo element in the &amp;__item rule</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal">This code below will be creating the overlay that will come  up over the image.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Inside of the projects.scss</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/3.png" width="178" height="69" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
 <p class="MsoNormal">This code will be written inside of the &amp;__item, and  right below the closing brace for the img tag code.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code">&amp;::after {</p>
 <p class="code">&nbsp;</p>
 <p class="code">          content:'';</p>
@@ -173,9 +173,9 @@ font-weight:bold;
 <h1><a name="_Toc167863886"></a><a name="_Toc167863916">Create the hover event to show the item</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">This will move the orange overlay upward.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code">&amp;:hover {</p>
 <p class="code">          &amp;::after {</p>
 <p class="code">            top: 0;</p>
@@ -185,7 +185,7 @@ font-weight:bold;
 <img src="Images/5.png" width="526" height="532" class="wideImg">
 <p class="code">&nbsp;</p>
 <p class="MsoNormal">Now if you hover over it now, it will look like this</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/6.png" width="624" height="484" class="wideImg">
 <p class="code">&nbsp;</p>
 <h1><a name="_Toc167863887"></a><a name="_Toc167863917">Styling the buttons</a></h1>
@@ -193,12 +193,12 @@ font-weight:bold;
 
 <p class="code">&nbsp;</p>
 <p class="MsoNormal">We are now going to styling the buttons on the page which  are here</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/7.png" width="209" height="108" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">We will be writing this code right above the code for the  .social-icons</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <p class="code">&amp;__btns {</p>
 <p class="code">    position: absolute;</p>
 <p class="code">    top:0;</p>
@@ -210,14 +210,14 @@ font-weight:bold;
 <p class="code">    align-items: center;</p>
 <p class="code">    text-align: center;</p>
 <p class="code">  }</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <img src="Images/8.png" width="490" height="264" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Now if you test your projects page, it should look like this.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/9.png" width="623" height="588" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc167863888"></a><a name="_Toc167863918">Targeting Individual buttons</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
@@ -239,12 +239,12 @@ font-weight:bold;
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="code">&nbsp;</p>
 <p class="MsoNormal">This is what this will look like if you hover over both the  image and one of the buttons. The button color is white, and it will change to  black, when it is hovered over.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <img src="Images/11.png" width="460" height="472" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
+
 <p>&nbsp;</p>
 <p class="pMidBlack">&nbsp;</p>
  

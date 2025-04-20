@@ -101,22 +101,22 @@ font-weight:bold;
    <br>
 <br>
 
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/1.png" width="277" height="250" class="responsiveImage">
 <h1>Working with Classes</h1>
 <p class="MsoNormal">Now, how if we wanted to work with classes using the DOM. We  can do that by just adding a few classes to our HTML document.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><span class="MsoIntenseEmphasis">In our HTML Document</span></p>
 <p class="MsoNormal">Add this &lt;div&gt;</p>
 <img src="Images/2.png" width="428" height="152" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><span class="MsoIntenseEmphasis">In our JavaScript document</span></p>
 <p class="MsoNormal">We are going to use something called a classList to access  our span with the id of &ldquo;h1&rdquo;. You can modify a whole lot of things by accessing  the classList.</p>
 <p class="MsoNormal">You can actually go to the website named <a href="https://www.w3schools.com/jsref/prop_element_classlist.asp" target="_blank">W3Schools  classList</a> to learn more about what you can modify using the classList.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <h1>Adding a Class</h1>
 <p class="MsoNormal">However, for now we are just going to use &ldquo;new&rdquo; to add a new  class.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code">spanhello.classList.add(&ldquo;Da-class&rdquo;)</p>
 <p class="code">&nbsp;</p>
 <p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Watch it,</span></span> make sure  that you have defined spanhello to be equal to the div using the id of hello.  You must do this first by using the document.querySelector to find it.</p>
@@ -127,23 +127,23 @@ font-weight:bold;
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
 <p class="MsoNormal">Now if you inspect the webpage in the browser, you will find  that it did indeed add our new-class to the span.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/4.png" width="548" height="241" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1>Removing a Class</h1>
 <p class="MsoNormal">Here we can also remove a class from the span. Let&rsquo;s try  removing the class of class1, by using the remove method on it.</p>
 <img src="Images/5.png" width="616" height="251" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Now all that we have left is the class that we dynamically  added.</p>
 <img src="Images/6.png" width="535" height="231" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1>Using Toggle</h1>
 <p class="MsoNormal">Toggle is a really useful method, because we can turn a  class on or off. If the class is there is will remove it, and if it is not  there it will add it.</p>
 <img src="Images/7.png" width="608" height="265" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Since we did not have a class named class2 in the HTML, it  added it. But if we had it there, it would have removed it.</p>
 <img src="Images/8.png" width="548" height="268" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">We can also pair this with a Boolean, which it will either  add or remove the class depending on if it exists or not. If you put in false  it will remove the class, and if you put in true, it will add the class.</p>
 <p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Watch it,</span></span> you do not  want to surround the Boolean with quotation marks or it will not work. It is  not text; it is a Boolean, and Booleans do not use quotation marks.</p>
 <img src="Images/9.png" width="619" height="256" class="wideImg">

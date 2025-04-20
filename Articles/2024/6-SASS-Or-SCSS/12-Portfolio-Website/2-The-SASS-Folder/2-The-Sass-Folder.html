@@ -147,20 +147,20 @@ font-weight:bold;
 <p class="tableOfContents"><a href="#_Toc165097978">The Main Code</a></p>
 <p class="tableOfContents"><a href="#_Toc165097979">Setting the Social Icons   to Sit Above the Footer</a></p>
 <p class="tableOfContents"><a href="#_Toc165097980">Testing</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <img src="images/1.png" width="270" height="241" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Make sure you are in the root, that means outside of that  dist folder. This folder is for your SCSS and it needs to be created outside of  that dist folder.</p>
 <img src="images/2.png" width="333" height="164" class="responsiveImage">
 <p class="MsoNormal">Inside of that <span class="boldBlue">scss</span> file, create a file called <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">main.scss</span></span></p>
 <img src="images/3.png" width="543" height="206" class="responsiveImage">
 <p class="MsoNormal">Inside of that same scss folder, we will create a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">partial _config</span></span></p>
 <img src="images/4.png" width="257" height="226" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">In a large workflow, we would actually create a partial for  all of our elements. This is not a large project, but we will still be looking  at that work method in this tutorial, so we can be more familiar with it, when  we do need to step into larger projects.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <p class="MsoNormal"><a name="_Toc165097972"><span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; ">Writing the _config partial file</span></span></a>.</p>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
@@ -180,11 +180,11 @@ font-weight:bold;
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal">Open up the <span class="boldBlue">main.scss</span> file that we had just set up. We need  to import that config file that we just created, so our main file will have  access to it.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code">@import&quot;config&quot;;</p>
 <p class="code">&nbsp;</p>
 <img src="images/6.png" width="545" height="215" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc165097974">The body code</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
@@ -196,7 +196,7 @@ font-weight:bold;
 <p class="code">    line-height: 1;</p>
 <p class="code">}</p>
 <p class="code">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="images/7.png" width="625" height="188" class="wideImg">
 <p class="code">&nbsp;</p>
 <h1><a name="_Toc165097975">What is vh and rem?</a></h1>
@@ -205,8 +205,8 @@ font-weight:bold;
 <p class="MsoNormal">Using <span class="boldBlueChar"><span style="font-size:12.0pt; ">vh</span></span> here for the height will give us 100% of the available viewport, which is what  we want.</p>
 <p class="MsoNormal">Using <span class="boldBlueChar"><span style="font-size:12.0pt; ">rem</span></span>,  just means that the font-size is based on whatever the body font-size was set  to. If you set your body font size to 12, setting rem to 1 will be 12, setting  rem size to 2 would be 24, or twice the size and so on… The default font size  is actually 16, so if you do not set the font then rem would be based on 16,  and twice that would be 32…</p>
 <p class="MsoNormal">On the other hand, pixels are an absolute unit, when you set  your pixels to something like 24px, that is what it will be, it will not be  flexible based on the font size that you happen to want to use. So, you can say  that because of this rem is more responsive, or customizable.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <h1><a name="_Toc165097976">h1-H3 and Header Code</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
@@ -244,7 +244,7 @@ font-weight:bold;
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal">This code is also inside of the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.scss</span></span> file </p>
 
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code">main {</p>
 <p class="code">&nbsp;</p>
 <p class="code">    height: 100%;</p>
@@ -308,16 +308,16 @@ font-weight:bold;
 <img src="images/13.png" width="289" height="80" class="responsiveImage">
 <p class="MsoNormal">Now if everything worked correctly you can open up your dist  folder and you will see your new CSS folder with two new files that were automatically created.This folder now contains both a   <span class="boldBlue">main.css</span> and a <span class="boldBlue">main.css.map</span> file. And all of that SASS code,that we just wrote, was  converted into regular CSS, which browsers understand.</p>
 <img src="images/14.png" width="313" height="244" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">You can test your page by using Live server, but without any real css styles incorporated, it still does not look great.</p>
 <p class="MsoNormal">GO TO <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">INDEX.HTML</span></span> to view page</p>
 <p class="MsoNormal">This is what the hover looks like</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="images/15.png" width="622" height="179" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">This is what the entire page  looks like right now</p>
 <img src="images/16.png" width="620" height="444" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p>&nbsp;</p>
     
   <p class="LeftPMidBlack">&nbsp;</p>

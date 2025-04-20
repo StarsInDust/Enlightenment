@@ -130,13 +130,13 @@ font-weight:bold;
 <p class="tableOfContents"><a href="#_Toc160021413">Transform</a></p>
 <p class="tableOfContents"><a href="#_Toc160021414">Translate</a></p>
 <p class="tableOfContents"><a href="#_Toc160021415">Using Autoprefixer</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
+
 <p><img src="Images/1.png" width="267" height="236" class="responsiveImage"></p>
 <h1><a name="_Toc160021409">What are CSS Transitions?</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Transitions are an easy type of animation that you can do  with elements on your web pages. They are fairly simple to understand, so don&rsquo;t  get scared off right from the start of this thing.</p>
 <p class="MsoNormal">To create a transition effect, you will need to specify two  things</p>
 <ol>
@@ -146,37 +146,37 @@ font-weight:bold;
 <p class="MsoNormal">Well, I suppose before we can even begin trying to  transition anything, we are going to need something to transition. That is  easy, we got a div and we know how to use it; ahem…make it a box.</p>
 
 <img src="Images/2.png" width="499" height="373" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Oh, yeah just tell me what I am, and how much time I got.</p>
 <img src="Images/3.png" width="500" height="371" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc160021410">The Hover Event</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Now what will we use to transition us? The hover event is  something most of us have already used. After all, this is done any time we  want to transition the color of a button, or a hyperlink to look different when  a user interacts with it. And the change will take effect, whenever that user  hovers a mouse over it. So, a hover event is also the perfect mechanism to use,  when we want to enable simple animation.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc160021411">To set up the code</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="MsoNormal">If you just set your code to target div, you will find that  all of your divs will be affected, and that is probably not what you want. So,  best to create a div in your html, and then give it a class name, where we are  only targeting that div alone.</p>
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The Html</span></strong></p>
 <img src="Images/4.png" width="199" height="65" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <p class="MsoNormal"><span class="MsoIntenseEmphasis">Notice that in order to  create a simple animation like this, the only code which might be unfamiliar is  just one line. So, if you learn to use the property <strong>transition</strong>, on top  of what you already know, then you are animating. </span></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">The CSS</span></strong></p>
 <img src="Images/5.png" width="277" height="212" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Now if you run it, and hover over your rectangle, you will  find that your height of the shape is taking 4 seconds to reach its full size,  while the width is only taking 3 seconds. Because that is what was specified in  our <strong><em>transition</em></strong> code. </p>
 <p class="MsoNormal">Go <a href="Transitions/Transitions-Testing.html" target="_blank">Here</a> to view this in action</p>
 <img src="Images/6.png" width="622" height="210" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc160021412">Speed Curve of Transitions</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">The speed curve, is something that will allow you to  determine how fast the element you are working on, starts to do what you want  it to do, and then also how fast, at the end that you want the element to stop  doing what you want it to do. </p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">You can set your speed curve at different settings,  something like the speeds on a fan, except that you are working with speeds at  the beginning and end of the movement of your object. And even if it might be a  cool effect, unlike a fan, these speeds do nothing to cool you off.</p>
 <img src="Images/7.png" width="618" height="275" class="wideImg">
 <p class="MsoNormal">This is how you would write this timing function in your  code</p>
@@ -236,18 +236,18 @@ font-weight:bold;
 <p class="code">&nbsp;</p>
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Transition Delay</span></strong></p>
 <p class="MsoNormal">You can set a transition delay. Now all this will do is to  set a time for the animation to wait, before it starts doing what it wants to  do. Of course, if you are setting this delay in the hover event, your user will  expect it to be doing something as soon as they start to hover over it, if it  is giving the user a delay, they will think it is broken. However, you may want  to add it to the load property for your page. Anyways, here is this delay  thing. Use it in your animation if you want.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/9.png" width="191" height="33" class="responsiveImage">
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; "> Transition duration</span></strong></p>
 <p class="MsoNormal">You could also add a duration, but we have already been  setting how many seconds we want our animation to take in our code. So, this just  does the same thing that we have already been doing. </p>
 <img src="Images/10.png" width="217" height="33" class="responsiveImage">
 <h1><a name="_Toc160021413">Transform</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">This is just a very simple look into animating some of your  properties. If you want to get into some of your more intense properties you  will need to use Transform. Using transform will allow you to maneuver things  like rotate, move, skew, and scale. </p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><span class="MsoIntenseEmphasis">Scale</span></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
 <img src="Images/11.png" width="218" height="71" class="responsiveImage">
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
@@ -267,28 +267,28 @@ font-weight:bold;
 <img src="Images/17.png" width="269" height="244" class="responsiveImage">
 <h1><a name="_Toc160021414">Translate</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Translate is another property that allows simple animations  of our object. If you would like to have your element move from one position  into another on the page, you would use <strong><span style="font-family:'Calibri',sans-serif; ">Translate</span></strong>.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">HTML</span></strong></p>
 <img src="Images/18.png" width="210" height="28" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">CSS</span></strong></p>
 <p class="MsoNormal">You will notice that we are adding a new way of adding a  hover, and that is by placing it directly into the .moveIt rule. We will use  the <strong>&amp;</strong> sign, a <strong>colon</strong>, and the word <strong>hove</strong>r to get this  done.</p>
 <img src="Images/19.png" width="306" height="210" class="responsiveImage">
 <p class="MsoNormal"><strong><span style="font-family:'Calibri', sans-serif;">Go<a href="Transitions/3 Transitions-Testing.html" target="_blank"> Here</a> to view this</span></strong></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc160021415">Using Autoprefixer</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">You can use the Autoprefixer in Visual Studio, to make sure  everything works correctly on all browsers. Remember we had gone over using  this add-on in our chapter on working on all browsers, which you can find <a href="https://starsindust.github.io/Enlightenment/Articles/2024/1-Flexbox/4-Working-With-All-Browsers/4-Working-With-All-Browsers.html" target="_blank">here</a>.</p>
 <p class="MsoNormal">You have to remember that if you do use this Autoprefixer,  that it will only recognize code from the CSS file, and if you placed your code  in the heading of the document, you will have to copy it all into a CSS file,  highlight it and then use <strong>Autoprefixer</strong> by hitting <strong>F1</strong>, and  choosing it from the dropdown.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><span class="MsoBookTitle">Autoprefixer:Run</span></p>
 <p class="MsoNormal"><span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; ">&nbsp;</span></span></p>
 <img src="Images/20.png" width="626" height="110" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Notice how -webkit, and -ms   was added in some places in your code</p>
 <img src="Images/21.png" width="420" height="304" class="responsiveImage">
 <p>&nbsp;</p>

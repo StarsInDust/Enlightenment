@@ -136,15 +136,15 @@ font-weight:bold;
 <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167271629">Assigning   the @mixin to be used Somewhere</a></span></p>
 <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167271630">The   main.scss file</a></span></p>
 <p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc167271631">Testing   the Hover Color Change</a></span></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="tableOfContents"><a href="Code-For-Transitions-And-Mixins.html" target="_blank">You can go here to view the code</a>.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <img src="Images/1.png" width="270" height="241" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Here we will be creating a transition to smoothly transition  into the hover color change of the social icons.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <h1><a name="_Toc167271627">The _config.scss file</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p class="tableOfContents" >&nbsp;</p>
@@ -152,7 +152,7 @@ font-weight:bold;
 <p class="MsoNormal">When we write out this rule, we will be setting it to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">all</span></span>. This will allow us to reuse  this transition. We could just set it to color, or position or something  specific. But since we want to be able to reuse this transition, we will set it  to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">all</span></span>.</p>
 <p class="MsoNormal">Transition is the property, notice that we only use spaces  to separate the three attributes of the Transition rule; what we want to  target: how long we want it to take: and the specific transaction we want to  use.</p>
 <p class="MsoNormal">You can go <a href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">here</a> to W3schools  learn more about transition </p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/2.png" width="393" height="220" class="responsiveImage">
 <h1><a name="_Toc167271628">Creating the @mixin Transition</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
@@ -160,7 +160,7 @@ font-weight:bold;
 <p class="MsoNormal">This transition will make our social icons slow down and  smoothly transition to the desired set color, when we hover over each icon.</p>
 <p class="MsoNormal">Look at what is inside of the @mixin code block. The  property of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">transition</span></span>,  is put behind a colon wall. And, what you want to set the property&rsquo;s attributes  to represent, is set behind a semi-colon wall. Then you are just wrapping the  entire thing all up in curly braces. </p>
 <p class="MsoNormal">Ok, so the above was just a type of memory technique, to reinforce  what is going on in the code below.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code">@mixin transition-ease {</p>
 <p class="code">&nbsp;</p>
 <p class="code">    transition: all 0.5s  ease-in-out;</p>
@@ -178,7 +178,7 @@ font-weight:bold;
 <p class="tableOfContents" >&nbsp;</p>
 <p class="MsoNormal">In order to use our new <span class="boldBlueChar"><span style="font-size:12.0pt; ">@mixin</span></span>, we need to <span class="boldBlueChar"><span style="font-size:12.0pt; ">@include</span></span> it  somewhere. Here we want to target the hover, on our <span class="boldBlueChar"><span style="font-size:12.0pt; ">social icons</span></span>, which are  inside of the <span class="ItalicBlueChar">.main</span> rule. </p>
 
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code">  @include transition-ease;</p>
 
 <p>&nbsp;</p>
@@ -188,9 +188,9 @@ font-weight:bold;
 <p class="code">&nbsp;</p>
 <h1><a name="_Toc167271631">Testing the Hover Color Change</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Now when you hover over your icons, you will notice that the  hover-color changes slowly, it eases the transition of the color change.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/5.png" width="249" height="141" class="responsiveImage">
 <p class="boldBlue">&nbsp;</p>
 <p class="tableOfContents"><a href="Code-For-Transitions-And-Mixins.html" target="_blank">You can go here to view the code.</a></p>

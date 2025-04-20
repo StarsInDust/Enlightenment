@@ -139,16 +139,16 @@ font-weight:bold;
 <h1><a name="_Toc164144402">Turn on SASS</a></h1>
 <p class="MsoNormal">Turn on your <a href="../2-Creating-The-Project/2-Creating-The-Projects.html" target="_blank">SASS  Watcher</a><span class="MsoHyperlink"> </span></p>
 <p class="MsoNormal"><span class="MsoHyperlink"><span style="text-decoration:none; ">&nbsp;</span></span></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <h1><a name="_Toc164144403">Writing Your main.SCSS file</a></h1>
 <p class="MsoNormal">In your <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">main.SCSS</span></span> file</p>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Create a new <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">@mixin</span></span> after the @mixin for  the theme.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code">&nbsp; @mixin mobile {</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp; &nbsp; @media (max-width: 800px) {</p>
@@ -156,41 +156,41 @@ font-weight:bold;
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp; &nbsp; }</p>
 <p class="code">&nbsp; }</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/2.png" width="379" height="289" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc164144404">Adding the New Variable to _variable file</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">But instead of defining that 800px directly in the argument  list of the media query, we could also define a variable that would represent  that number. That way we can change it around if we needed to when we include  it and need to fill in the blanks (so to speak)</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">Create a new variable called @mobile</p>
 <p class="MsoNormal"><span class="MsoIntenseReference">Remember that in SASS:</span></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/3.png" width="136" height="192" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">You could place this variable at the top of the page, but  since we have a partial file named <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">_variables.scss</span></span>, we could  just place this new instantiation of the variable in there.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/4.png" width="617" height="245" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc164144405">Having your @mixin mobile to use your new variable</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
 <p class="MsoNormal">Now back in the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">main.SCSS</span></span> file, you can  switch out the 800px, with our new variable. Because now saying $mobile is the  same thing as saying 800px, since we wrote this $mobile to represent it.</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal"><span style="line-height:115%; font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; </span>@mixin  mobile {</p>
 <p class="MsoNormal">&nbsp; &nbsp; @media (max-width: $mobile) {</p>
 <p class="MsoNormal">&nbsp; &nbsp; &nbsp; &nbsp; @content;</p>
 <p class="MsoNormal">&nbsp; &nbsp; }</p>
 <p class="MsoNormal">&nbsp; }</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
 <img src="Images/5.png" width="443" height="178" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">In order for this to work, we need to set the <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">direction</span></span> for our main div back to <span class="BigDarkBoldChar"><span style="font-size:14.0pt; ">(row)</span></span>.</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
@@ -199,22 +199,22 @@ font-weight:bold;
 <p class="code">&nbsp; &nbsp; &nbsp; &nbsp; @include flexCenter(<span style="background:yellow; ">row</span>);</p>
 <p class="code">&nbsp;</p>
 <p class="code">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+
+
+
 <h1><a name="_Toc164144406">Adding the @include to the .main rule</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
 <p>&nbsp;</p>
 <p class="MsoNormal">In <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">.main</span></span>,  right before the closing curly brace, we want to include this new <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">@mobile mixin</span></span></p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="MsoNormal">&nbsp; &nbsp; &nbsp; &nbsp; @include mobile {</p>
 <p class="MsoNormal">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; flex-direction:  column;</p>
 <p class="MsoNormal">&nbsp; &nbsp; &nbsp; &nbsp; }</p>
 <p class="MsoNormal">&nbsp; &nbsp; </p>
 <p class="MsoNormal">&nbsp; &nbsp; &nbsp; </p>
-<p class="MsoNormal">&nbsp;</p>
+
 <p class="code">        @include mobile {</p>
 <p class="code">            flex-direction:  column;</p>
 <p class="code">&nbsp;</p>
@@ -225,7 +225,7 @@ font-weight:bold;
 <p class="code">&nbsp;</p>
 <p class="code">    </p>
 <img src="Images/6.png" width="555" height="506" class="responsiveImage">
-<p class="MsoNormal">&nbsp;</p>
+
 <h1><a name="_Toc164144407">Testing the Code</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
@@ -233,9 +233,9 @@ font-weight:bold;
 <p>&nbsp;</p>
 <p class="MsoNormal">Go back to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">index.html</span></span> to test it and  widen and narrow the page to test it. It should show the paragraphs in two rows  if the page is wide, and a single column one on top of the other if the page is  narrow.</p>
 <p class="MsoNormal">And it works:</p>
-<p class="MsoNormal">&nbsp;</p>
+
 <img src="Images/7.png" width="629" height="349" class="wideImg">
-<p class="MsoNormal">&nbsp;</p>
+
 <p>&nbsp;</p>
  
   <!--Main Article -->
