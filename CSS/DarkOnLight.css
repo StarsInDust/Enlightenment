@@ -107,6 +107,10 @@ p {
 .responsiveImage {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto; /* Center the image */
+  padding: 1px ; /* Remove padding to avoid uneven spacing */
+  box-sizing: border-box; /* Ensure padding and borders are included in width */
 }
 
 .main .backgroundBlack {
@@ -236,21 +240,19 @@ span.BlueBoldenChar {
 
 /* Utility Classes */
 .wideImg {
-  width: 100%;
+  width: 90%; /* Maintain specific width for wide images */
   height: auto;
-  margin: 0; /* Remove margin to allow full width */
-  max-width: 100%; /* Ensure images don't exceed container width */
-  display: block; /* Remove inline spacing */
-  margin: 0 auto; /* Center images */
-  padding: 1px; /* Remove padding for images */
+  display: block;
+  margin: 0 auto; /* Center the image */
+  padding: 0; /* Remove padding to avoid uneven spacing */
+  box-sizing: border-box; /* Ensure padding and borders are included in width */
 }
 
 .imgLeft {
-  
   max-width: 100%; /* Ensure the image doesn’t exceed its container width */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Ensure the image takes up the full width of its container */
-  padding-left: 42px; /* Add space between the image and the parent tag */
+  padding-left: 42px; /* Theme-specific adjustment */
   padding-bottom: 15px; /* Add spacing below the image */
 }
 
@@ -325,7 +327,7 @@ h1 {
     width: 100%; /* Ensure it fills the screen */
     margin: 0; /* Remove margin for smallest screens */
     margin: 0; /* Remove margin for full-width images */
-    padding:1px;
+    padding:1px 1px 1px 1px; /* Add padding for images */
   }
 
   .wrapper {
@@ -349,7 +351,7 @@ h1 {
   .wideImg {
     width: 100%; /* Keep full width for readability */
     margin: 0; /* Remove margin */
-    padding:1px;
+    padding:1px 1px 1px 1px;
   }
 }
 
@@ -361,8 +363,8 @@ h1 {
 
   .wideImg {
     width: 90%; /* Slightly smaller width for larger screens */
-    margin: 20px 0; /* Add margin for spacing */
-    padding:1px;
+    margin: 2px; /* Add margin for spacing */
+    padding:1px 1px 1px 1px; /* Add padding for images */
   }
 }
 
@@ -380,8 +382,8 @@ h1 {
 
   .wideImg {
     width: 90%; /* Maintain consistent width */
-    margin: 20px 0; /* Add margin for spacing */
-    padding:5px;
+    margin: 0; /* Add margin for spacing */
+    padding:5px 5px 5px 5px; /* Add padding for images */
   }
 }
 

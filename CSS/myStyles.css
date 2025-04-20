@@ -8,21 +8,20 @@ body {
   background-color: #00050f;
 }
 
-/* Main Page CSS Setup */
+/* General Layout Styles */
 .wrapper {
   display: flex;
   flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
   min-height: 450px;
-  box-shadow: 2px 3px 8px black;
-  border-radius: 20px;
+  padding: 10px;
 }
 
 .wrapper > * {
   padding: 10px;
   flex: 1 100%;
 }
+
+/* Main Page CSS Setup */
 
 /* Header */
 .header {
@@ -45,10 +44,11 @@ body {
 /* Main Content */
 .main {
   text-align: left;
-  background: #111111;
-  padding: 50px 30px 40px;
-  overflow-x: hidden;
-  word-wrap: break-word;
+  flex: 1 100%;
+  margin: 0 auto; /* Center the main container */
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .oneColumnDiv {
@@ -308,11 +308,7 @@ a.customLink:hover {
     height: 110px;
   }
 
-  .wideImg {
-    width: 70%;
-    height: auto;
-    margin: 20px 0;
-  }
+  
 
   .cartoonImg {
     width: 80%;
@@ -402,5 +398,21 @@ a.customLink:hover {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
+   margin: 3px auto;
+}
+
+.wideImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center images */
+  padding: 1px; /* Default padding */
+}
+
+.imgLeft {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding-left: 40px; /* Adjusted for alignment */
+  padding-bottom: 15px;
 }
