@@ -33,12 +33,15 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #020d25;
-  color: #9e8c69;
-  text-align: center;
-  box-shadow: 2px 3px 8px #424344;
-  border-radius: 2px;
-  padding: 40px 10px 10px;
+	background-color: #020d25;
+	color: #9e8c69;
+	text-align: center;
+	box-shadow: 2px 3px 8px #424344;
+	border-radius: 2px;
+	padding: 10px;
+	height: 50px;
+	
+	margin-bottom: 0px;
 }
 
 /* Main Content */
