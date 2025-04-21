@@ -9,6 +9,19 @@
     <title>Welcome to Enlightenment</title>
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
     <link href="CSS/myStyles.css" rel="stylesheet" type="text/css">
+    <style>
+        
+
+        
+        /* Target the specific image in the aside element */
+        .aside-1 .image {
+            max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+            height: auto;    /* Maintain the aspect ratio of the image */
+            display: block;  /* Remove any inline spacing caused by the image */
+            padding: 10px;   /* Add padding around the image */
+            box-sizing: border-box; /* Include padding in the image's dimensions */
+        }
+    </style>
 </head>
 
 <body>
@@ -23,20 +36,20 @@
     <li><a href="About.html" title="About">About</a></li>
   </ul>
 
-  <article class="main">
+ <article class="main">
     <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Welcome!~</span></span></p>
     <p class="pFadedSilver"><span class="pSuedeBlue">This site will be dedicated to education. To be more specific, web site design and development. Oh, we might step off of this one topic every once in a while and take a step on the wild side to learn a few other interesting things, but for the most part, all things pertaining to the web is where we will traverse.</span></p>
     <br>
   </article>
 
   <aside class="aside aside-1">
-    <img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/8-The-Spin-Tool/Home.png" class="image" padding="0">
+    <img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Home.png" class="image" padding="30px">
   </aside>
   <aside class="aside aside-2">
-    <p class="h2Silver">The Spin Tool</p>
-    <p class="pSilver">This week, we will be taking a look at the Spin tool, in Edit mode, while working in the Blender application. The spin tool will take any object, vertex, edge, or face, look at where cursor location is, and spin the chosen piece of mesh around that cursor location.</p>
-    <p class="pSilver">So, if this sounds at all interesting to you at all, then please join us for our brand-new article entitled:</p>
-    <p class="archiveListLink"><a href="Articles-This-Week.html">The Spin Tool</a></p>
+    <p class="h2Silver">The Smooth Tool</p>
+    <p class="pSilver">This week, we will be looking at the Smooth, and Randomize tool (which sits in the Smooth tool’s dropdown), in Edit mode. This may not exactly be the best way to smooth your mesh while you are working, but it is available to you, since Blender will offer it in their tool box arsenal.</p>
+    <p class="pSilver">So, if you would like to take a quick glance into this tool, then why don’t you join us for our brand-new article entitled:</p>
+    <p class="archiveListLink"><a href="Articles-This-Week.html">The Smooth Tool</a></p>
     <p class="pSilver">&nbsp;</p>
     <br>
   </aside>
@@ -52,6 +65,7 @@
   </footer>
 
 </div>
+
 
 </body>
 </html>

@@ -48,6 +48,7 @@
             <p class="h2Black">~The Smooth Tool~</p>
             <p class="author">By StarsInDust</p>
             <p class="articleDate" style="text-align:right">4/21/2025</p>
+            <p>&nbsp;</p>
 
             <p><a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
             <p class="tableOfContents"><a href="#_Toc188437185">The Default Cube</a></p>
@@ -58,29 +59,34 @@
             <p class="tableOfContents"><a href="#_Toc188437190">Options in the Randomized Dialog Box</a></p>
 
             
+          <p>&nbsp;</p>  
             
-            
-            <img src="Images/1.png" width="211" height="189" class="responsiveImage">
+          <img src="Images/1.png" width="211" height="189" class="imgLeft">
             <p class="BlueBolden">&nbsp;</p>
             <p class="MsoNormal">Even though Blender offers this Smooth tool in its Edit mode  tool box, it is probably not the best way of going about this smoothing  process. As Blender offers more efficient ways of smoothing, through both its  Object&rsquo;s mode right click menu, and through modifiers such as the Subdivision  Surface modifier and the Laplacian Smooth modifier. But that being said, since  this is a topic in this Blender series on the Edit mode&rsquo;s tools panel, and this  tool is offered here, it doesn&rsquo;t mean I will not be talking about it. So, in  this tutorial I will be presenting the Smooth tool, and its techniques for  using it.</p>
+            <p class="MsoNormal">&nbsp;</p>
             
             
             <h1><a name="_Toc188437185">The Default Cube</a></h1>
             <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
             <p>&nbsp;</p>
             <p class="MsoNormal">Go into Edit Mode with the default cube. Now if you attempt  to use this Smooth tool on it, you will quickly notice that it really doesn&rsquo;t  work so well. Especially if you select the entire box, as this will only make  the cube larger or smaller. And grabbing just a vertex won&rsquo;t really do too much  either.</p>
+            <p class="MsoNormal">&nbsp;</p>
             <img src="Images/2.png" width="623" height="290" class="responsiveImage">
-            <p class="BlueBolden">&nbsp;</p>
+          <p class="BlueBolden">&nbsp;</p>
             <p class="MsoNormal">This is because of the vertex count, right now on the cube;  in order to smooth, we really need to subdivide this cube, and make the mesh  more malleable. </p>
             <p class="MsoNormal">We can do this by selecting the cube, and right clicking to  bring up this menu. </p>
+            <p class="MsoNormal">&nbsp;</p>
             <img src="Images/3.png" width="354" height="193" class="responsiveImage">
-            <p class="BlueBolden">&nbsp;</p>
+          <p class="BlueBolden">&nbsp;</p>
             <p class="MsoNormal">I upped the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Number of Cuts</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">10</span></span>, so we really have  something to work with. Take note that there is also an option for Smoothness  from this dialog box too. </p>
             
             <img src="Images/4.png" width="390" height="362" class="responsiveImage">
             
-            <p class="MsoNormal">This is what Smoothness would look like if we by passed the Smooth  tool, and upped the smoothness in the last Operation Subdivide box.</p>
+            <p class="MsoNormal">&nbsp;</p>
+          <p class="MsoNormal">This is what Smoothness would look like if we by passed the Smooth  tool, and upped the smoothness in the last Operation Subdivide box.</p>
             <p class="MsoNormal">Move the Smoothness level to 1 from this dialog box, and we  get a perfect ball.</p>
+          <p class="MsoNormal">&nbsp;</p>
             
             <p><img src="Images/5.png" width="408" height="329" class="responsiveImage"></p>
             <p>&nbsp; </p>
@@ -92,35 +98,34 @@
             <p class="BlueBolden">&nbsp;</p>
             <p class="MsoNormal">Now if we try to up the Smoothness level, we actually get a  mess with parts of the mesh sticking through other sections of the mesh.</p>
             
-            <img src="Images/7.png" width="372" height="356" class="responsiveImage">
-            
+            <p><img src="Images/7.png" width="372" height="356" class="responsiveImage"></p>
+          <p>&nbsp; </p>
             <p class="MsoNormal">If we up the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Repeat</span></span> to something like <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">10</span></span>, we find that the  cube will actually shrink to try and get somewhere.</p>
             
-            <img src="Images/8.png" width="409" height="345" class="responsiveImage">
+            <p><img src="Images/8.png" width="409" height="345" class="responsiveImage"></p>
+          <p>&nbsp; </p>
             <p class="MsoNormal">Here we up the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Repeat</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">50</span></span>. Still not quite a  round ball. But if all you want is to round the corners on this cube, it works  fairly well.</p>
             
-            <img src="Images/9.png" width="601" height="396" class="responsiveImage">
-            
-            
-            
-            
+            <p><img src="Images/9.png" width="601" height="396" class="responsiveImage"></p>
+          <p>&nbsp; </p>
             <h1><a name="_Toc188437187">Smoothing Specific Axis</a></h1>
             <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
             <p>&nbsp;</p>
             <p class="MsoNormal">You can also decide to just smooth certain axis on your  object, by checking and unchecking the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Axis boxes</span></span> at the bottom of  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Smooth  Vertices dialog box</span></span>. Here I turned off the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> axis, and so it did  not smooth on that axis.</p>
             
-            <img src="Images/10.png" width="427" height="460" class="responsiveImage">
-            
+            <p><img src="Images/10.png" width="427" height="460" class="responsiveImage"></p>
+          <p>&nbsp; </p>
             <h1><a name="_Toc188437188">The Randomize Tool</a></h1>
             <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
             <p>&nbsp;</p>
             <p class="MsoNormal">You will find the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Randomize Tool</span></span> tucked up away  underneath the Smooth tool. You can get to it just by hitting the tools little  arrow in the bottom right-hand corner.</p>
+          <p class="MsoNormal">&nbsp;</p>
             
-            <img src="Images/11.png" width="272" height="128" class="responsiveImage">
-            
-            
-            <p class="MsoNormal">The randomize tool is another tool which allows you to move  vertices around on the mesh. It does this along the normal. Remember in Blender  that the normal refers to the direction of a face or vertex on the 3D object,  and pretty much distinguishes between the outside an inside of the mesh.  Therefore, if it is moving around the vertices along the normals it would be  creating the effect from either one side of the mesh or the other.</p>
+            <p><img src="Images/11.png" width="272" height="128" class="imgLeft"></p>
+          <p>&nbsp; </p>
+          <p class="MsoNormal">The randomize tool is another tool which allows you to move  vertices around on the mesh. It does this along the normal. Remember in Blender  that the normal refers to the direction of a face or vertex on the 3D object,  and pretty much distinguishes between the outside an inside of the mesh.  Therefore, if it is moving around the vertices along the normals it would be  creating the effect from either one side of the mesh or the other.</p>
             <p class="MsoNormal">This tool is pretty much the smooth tool, but will change  the movement of the vertices along the mesh in a randomized fashion. So, this  may or may not be what you want, but it is there for you to play with all the  same.</p>
+          <p class="MsoNormal">&nbsp;</p>
             
             
             <h1><a name="_Toc188437189">How to use the Randomize Tool</a></h1>
@@ -128,36 +133,45 @@
             <p>&nbsp;</p>
             <p class="MsoNormal">Here I took the cube, brought it into edit mode and  subdivided to a level of 10.</p>
             
-            <img src="Images/12.png" width="503" height="431" class="responsiveImage">
-            
+            <p><img src="Images/12.png" width="503" height="431" class="responsiveImage"></p>
+          <p>&nbsp; </p>
             <p class="MsoNormal">Pull out your tool and just start tugging on that yellow  icon.</p>
+          <p class="MsoNormal">&nbsp;</p>
             
-            <img src="Images/13.png" width="127" height="112" class="responsiveImage">
-            
-            <p class="MsoNormal">You can see the box start to break apart</p>
+            <p><img src="Images/13.png" width="127" height="112" class="imgLeft"></p>
+          <p>&nbsp; </p>
+          <p class="MsoNormal">You can see the box start to break apart</p>
             <img src="Images/14.png" width="413" height="448" class="responsiveImage">
             <p class="BlueBolden">&nbsp;</p>
             <p class="MsoNormal">The more you tug, the more your cube falls into disarray.</p>
-            <img src="Images/15.png" width="371" height="345" class="responsiveImage">
+            <p><img src="Images/15.png" width="371" height="345" class="responsiveImage"></p>
+          <p>&nbsp; </p>
             <h1><a name="_Toc188437190">Options in the Randomized Dialog Box</a></h1>
             <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
             <p>&nbsp;</p>
             <p class="MsoNormal">You have a few options in which you can change in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Randomize dialog box</span></span> at  the bottom. The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Amount</span></span> setting is going to do the exact same thing that we just did by pulling on that  yellow stick, and change the rate of dishevelment you wish you cube to fall  into.</p>
+            <p class="MsoNormal">&nbsp;</p>
             
             <img src="Images/16.png" width="431" height="277" class="responsiveImage">
             <p class="BlueBolden">&nbsp;</p>
             <p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Uniform</span></span> goes from <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span> to<span class="BlueBoldenChar"><span style="font-size:12.0pt; "> 1</span></span>,  and just determines (by a slight amount) how much randomness you want the tool  to display.</p>
+          <p class="MsoNormal">&nbsp;</p>
             <img src="Images/17.png" width="429" height="382" class="responsiveImage">
-            <p class="BlueBolden">&nbsp;</p>
+          <p class="BlueBolden">&nbsp;</p>
             <p class="MsoNormal">Setting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Normal</span></span> setting to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1</span></span> will just flip the  side of the cube in which the effect will come from. Either it will be working  from the outside of the box, or the inside of the box.</p>
+          <p class="MsoNormal">&nbsp;</p>
             
             <img src="Images/18.png" width="606" height="582" class="responsiveImage">
             
-            <p class="MsoNormal">And then you can also send a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Random Seed</span></span> to set  specifically when you want this randomness to occur.</p>
+          <p class="MsoNormal">&nbsp;</p>
+          <p class="MsoNormal">And then you can also send a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Random Seed</span></span> to set  specifically when you want this randomness to occur.</p>
+          <p class="MsoNormal">&nbsp;</p>
             
-            <img src="Images/19.png" width="457" height="407" class="responsiveImage">
-            
-            <p class="MsoNormal">Well, there you have all of the different things that you  can do. A little bit of smoothness, and a little bit of chaos, all from one  tool.</p>
+            <p><img src="Images/19.png" width="457" height="407" class="responsiveImage"></p>
+          <p>&nbsp; </p>
+          <p class="MsoNormal">Well, there you have all of the different things that you  can do. A little bit of smoothness, and a little bit of chaos, all from one  tool.</p>
+          <p class="MsoNormal">&nbsp;</p>
+          <p class="MsoNormal">&nbsp;</p>
 
         </article>
 
