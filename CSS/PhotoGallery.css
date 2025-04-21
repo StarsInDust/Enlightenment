@@ -2,23 +2,24 @@
 /* CSS Document */
 
 .image-gallery {
-  max-width: 1000px; /* Adjust as needed */
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the images */
-  gap: 10px; /* Add spacing between images */
-  padding: 0 20px 30px 20px; /* Add 30px bottom padding */
-  margin: 0 auto; /* Center the gallery container */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; /* Center the images */
+	gap: 10px; /* Add spacing between images */
+	padding: 0 20px 30px 20px; /* Add 30px bottom padding */
+	margin: 0 auto; /* Center the gallery container */
 }
+
 
 .image-gallery > li {
   position: relative;
   cursor: pointer;
   list-style-type: none;
-  flex: 1 1 calc(33.33% - 10px); /* Default: 3 images per row */
+  flex: 1 1 calc(33.33% - 10px); /* 3 images per row with a 10px gap */
   max-width: calc(33.33% - 10px); /* Ensure consistent sizing */
 }
+
+
 
 .image-gallery li img {
   object-fit: cover;
@@ -28,6 +29,7 @@
   border-radius: 5px;
 }
 
+
 .overlay {
   position: absolute;
   width: 100%;
@@ -35,25 +37,28 @@
   background: rgba(57, 57, 57, 0.502);
   top: 0;
   left: 0;
-  transform: scale(0);
-  transition: all 0.2s 0.1s ease-in-out;
+  transform: scale(0); /* Start with no scale */
+  transition: transform 0.2s 0.1s ease-in-out; /* Smooth scaling */
   color: #fff;
   border-radius: 5px;
-  /* center overlay text */
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* Prevent content from spilling out */
 }
 
 /* hover */
 .image-gallery li:hover .overlay {
-  transform: scale(1);
+  transform: scale(1); /* Scale to full size */
 }
+
 
 .image-gallery::after {
   content: "";
   flex-basis: 350px;
 }
+
+
 
 /* Medium screens: 2 images across */
 @media (max-width: 1024px) {
