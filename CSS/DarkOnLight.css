@@ -10,6 +10,11 @@
 }
 
 
+body {
+  background-color: #00050f;
+}
+
+
 
 /* Main Content Styles */
 .main {
@@ -114,7 +119,7 @@ p {
   height: auto !important;
   display: block;
   margin: 0 auto; /* Center the image */
-  padding: 1px ; /* Remove padding to avoid uneven spacing */
+  padding: 25px 0 25px 15px; /* Remove padding to avoid uneven spacing */
   box-sizing: border-box; /* Ensure padding and borders are included in width */
 }
 
@@ -256,9 +261,8 @@ span.BlueBoldenChar {
 .imgLeft {
   max-width: 100%; /* Ensure the image doesn’t exceed its container width */
   height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensure the image takes up the full width of its container */
-  padding-left: 42px; /* Theme-specific adjustment */
-  padding-bottom: 15px; /* Add spacing below the image */
+  display: block; /* Ensure the image takes up the full width of its container */ padding-left: 42px; /* Theme-specific adjustment */
+  padding: 25px 0 25px 42px; /* Add spacing below the image */
 }
 
 /* Author and Date Styles */
@@ -332,7 +336,7 @@ h1 {
     width: 100%; /* Ensure it fills the screen */
     margin: 0; /* Remove margin for smallest screens */
     margin: 0; /* Remove margin for full-width images */
-    padding:1px 1px 1px 1px; /* Add padding for images */
+    padding:25px 1px 25px 1px; /* Add padding for images */
   }
 
   .wrapper {
@@ -356,7 +360,7 @@ h1 {
   .wideImg {
     width: 100%; /* Keep full width for readability */
     margin: 0; /* Remove margin */
-    padding:1px 1px 1px 1px;
+    padding:25px 1px 25px 1px;
   }
 }
 
@@ -369,7 +373,7 @@ h1 {
   .wideImg {
     width: 90%; /* Slightly smaller width for larger screens */
     margin: 2px; /* Add margin for spacing */
-    padding:1px 1px 1px 1px; /* Add padding for images */
+    padding:25px 1px 25px 1px; /* Add padding for images */
   }
 }
 
@@ -388,7 +392,7 @@ h1 {
   .wideImg {
     width: 90%; /* Maintain consistent width */
     margin: 0; /* Add margin for spacing */
-    padding:5px 5px 5px 5px; /* Add padding for images */
+    padding:25px 5px 25px 5px; /* Add padding for images */
   }
 }
 
@@ -413,6 +417,3 @@ h1 {
   }
 }
 
-body {
-    background-color: #00050f;
-}

@@ -402,6 +402,7 @@ p.tableOfContents a:hover {
     height: auto;
     display: block;
    margin: 3px auto;
+   padding: 15px 0 15px 15px; 
 }
 
 .wideImg {
@@ -409,7 +410,7 @@ p.tableOfContents a:hover {
   height: auto;
   display: block;
   margin: 0 auto; /* Center images */
-  padding: 1px; /* Default padding */
+  padding: 15px 1px 15px 1px; /* Default padding */
 }
 
 .imgLeft {
@@ -417,5 +418,5 @@ p.tableOfContents a:hover {
   max-width: 100%;
   height: auto;
   padding-left: 40px; /* Adjusted for alignment */
-  padding-bottom: 15px;
+  padding: 15px 0 15px 15px; 
 }

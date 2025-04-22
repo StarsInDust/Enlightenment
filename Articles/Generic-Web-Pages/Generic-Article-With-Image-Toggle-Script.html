@@ -22,32 +22,13 @@
 
 <link href="../../CSS/myStyles.css" rel="stylesheet" type="text/css">
 <link href="../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
 <style type="text/css">
-
-.main {
-  padding: 20px; /* Default padding for smaller screens */
-  margin: 0 5%; /* Default margin for smaller screens */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Lighter, more diffused shadow */
-}
-
-@media all and (min-width: 800px) {
-  .main {
-    padding: 50px 30px 40px; /* Larger padding for larger screens */
-    margin: 0 10%; /* More space on the left and right for larger screens */
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4); /* Slightly stronger shadow for larger screens */
-  }
-}
-
-@media all and (min-width: 1200px) {
-  .main {
-    padding: 60px 40px 50px; /* Even larger padding for extra-large screens */
-    margin: 0 15%; /* Even more space on the left and right */
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5); /* Stronger shadow for extra-large screens */
-  }
-}
-
+  /* Add custom styles here if needed */
 </style>
+
+
 </head>
 
 
@@ -99,6 +80,10 @@
 
 
 <p class="MsoNormal">We could simply come in here and select. Join Splines and  then hit the button under it that says Join Neighboring Splines, but that will  change all of our handles to the handle type of Align, and that is not what we  want. So, try and follow along here.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><img src="images/Photoshop icon size.png" width="80" height="80"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
 
 
 
@@ -108,7 +93,7 @@
 
   
 <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
-  <script type="text/javascript" src ="../../JavaScript/FooterYearlyDate.js">
+<script type="text/javascript" src ="../../JavaScript/FooterYearlyDate.js">
 </script></footer>
 
 
@@ -117,15 +102,18 @@
             const images = document.querySelectorAll("article.main img");
             images.forEach(img => {
                 if (img.width < 500) {
-                    img.classList.add("responsiveImage");
+                    if (img.width < 300 && img.height < 300) {
+                        img.classList.add("imgLeft");
+                        img.classList.remove("responsiveImage"); // Remove .responsiveImage if .imgLeft is applied
+                    } else {
+                        img.classList.add("responsiveImage");
+                    }
                 } else {
                     img.classList.add("wideImg");
                 }
             });
         });
     </script>
-      
-
-    
+       
 </body>
 </html>
