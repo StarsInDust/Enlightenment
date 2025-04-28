@@ -1,185 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Smooth Tool</title>
+    <title>The Edge Slide Tool</title>
+    
+    <meta name="title" content="The Edge Slide Tool ">
 
-    <meta name="title" content="The Smooth Tool">
-    <meta name="author" content="StarsInDust">
-    <meta name="designer" content="StarsInDust">
-    <meta name="keywords" content="The Smooth Tool, Blender, 3D Modeling, Animation, Graphic Art">
-    <meta name="description" content="This article explains how to use the Smooth tool, while in Edit mode in the Blender application." />
-    <meta name="category" content="The Smooth Tool, Blender, 3D Modeling, Animation, Graphic Art">
-    <meta name="rating" content="General">
-    <meta name="robots" content="index,follow">
-    <meta name="revised" content="Wednesday, January 22, 2025">
-    <meta name="url" content="https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/The-Smooth-Tool.html">
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
 
+<meta name="keywords" content=" The Edge Slide Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
+
+
+<meta name="description" content="This article explains how to use the Edge Slide tool, inside of Edit mode, while using the Blender application/>
+
+<meta name="category" content="The Edge Slide Tool, Blender, 3D Modeling, Animation, Graphic Art">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Friday, January 24, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/The-Edge-Slide-Tool.html">
+
+
+    
+    
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
-    <link href="CSS/myStyles.css" rel="stylesheet" type="text/css">
-    <link href="CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
 
-    <style type="text/css">
-      /* Add custom styles here if needed */
-    </style>
+
+    
+
+<link href="CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+ 
+
+}
+</style>
 
 
 </head>
 
+
 <body>
-    <div class="wrapper">
-        <header class="header">Header</header>
 
-        <ul class="navigation">
-            <li><a href="index.html" class="active" title="Home">Home</a></li>
-            <li><a href="Articles-This-Week.html" class="active" title="Articles This Week">&#9729;</a></li>
-            <li><a href="Articles-By-Year.html" title="Articles By Year">Articles By Year</a></li>
-            <li><a href="About.html" title="About">About</a></li>
-        </ul>
+<div class="wrapper">
+  <header class="header">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="index.html" class="active"title="Home">Home</a></li>
+  <li><a href="Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="About.html" title="About">About</a></li>
+</ul>
 
-        <div class="backgroundBlack">
-            <p class="h2Silver"><span class="h2Gold">~Articles This Week~</span></p>
-        </div>
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
 
-        <article class="main">
-            <p class="h2Black">~The Smooth Tool~</p>
-            <p class="author">By StarsInDust</p>
-            <p class="articleDate" style="text-align:right">4/21/2025</p>
-            <p>&nbsp;</p>
+  <article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~The Edge Slide Tool~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >4/28/2025</p>
+   
+   <br>
+<br>
 
-            <p><a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-            <p class="tableOfContents"><a href="#_Toc188437185">The Default Cube</a></p>
-            <p class="tableOfContents"><a href="#_Toc188437186">Using the Smoothness Tool from the Tool Box</a></p>
-            <p class="tableOfContents"><a href="#_Toc188437187">Smoothing Specific Axis</a></p>
-            <p class="tableOfContents"><a href="#_Toc188437188">The Randomize Tool</a></p>
-            <p class="tableOfContents"><a href="#_Toc188437189">How to use the Randomize Tool</a></p>
-            <p class="tableOfContents"><a href="#_Toc188437190">Options in the Randomized Dialog Box</a></p>
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
 
-            
-          <p>&nbsp;</p>  
-            
-          <img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/1.png" width="211" height="189" class="imgLeft">
-            <p class="BlueBolden">&nbsp;</p>
-            <p class="MsoNormal">Even though Blender offers this Smooth tool in its Edit mode  tool box, it is probably not the best way of going about this smoothing  process. As Blender offers more efficient ways of smoothing, through both its  Object&rsquo;s mode right click menu, and through modifiers such as the Subdivision  Surface modifier and the Laplacian Smooth modifier. But that being said, since  this is a topic in this Blender series on the Edit mode&rsquo;s tools panel, and this  tool is offered here, it doesn&rsquo;t mean I will not be talking about it. So, in  this tutorial I will be presenting the Smooth tool, and its techniques for  using it.</p>
-            <p class="MsoNormal">&nbsp;</p>
-            
-            
-            <h1><a name="_Toc188437185">The Default Cube</a></h1>
-            <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-            <p>&nbsp;</p>
-            <p class="MsoNormal">Go into Edit Mode with the default cube. Now if you attempt  to use this Smooth tool on it, you will quickly notice that it really doesn&rsquo;t  work so well. Especially if you select the entire box, as this will only make  the cube larger or smaller. And grabbing just a vertex won&rsquo;t really do too much  either.</p>
-            <p class="MsoNormal">&nbsp;</p>
-            <img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/2.png" width="623" height="290" class="responsiveImage">
-          <p class="BlueBolden">&nbsp;</p>
-            <p class="MsoNormal">This is because of the vertex count, right now on the cube;  in order to smooth, we really need to subdivide this cube, and make the mesh  more malleable. </p>
-            <p class="MsoNormal">We can do this by selecting the cube, and right clicking to  bring up this menu. </p>
-            <p class="MsoNormal">&nbsp;</p>
-            <img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/3.png" width="354" height="193" class="responsiveImage">
-          <p class="BlueBolden">&nbsp;</p>
-            <p class="MsoNormal">I upped the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Number of Cuts</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">10</span></span>, so we really have  something to work with. Take note that there is also an option for Smoothness  from this dialog box too. </p>
-            
-            <img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/4.png" width="390" height="362" class="responsiveImage">
-            
-            <p class="MsoNormal">&nbsp;</p>
-          <p class="MsoNormal">This is what Smoothness would look like if we by passed the Smooth  tool, and upped the smoothness in the last Operation Subdivide box.</p>
-            <p class="MsoNormal">Move the Smoothness level to 1 from this dialog box, and we  get a perfect ball.</p>
-          <p class="MsoNormal">&nbsp;</p>
-            
-            <p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/5.png" width="408" height="329" class="responsiveImage"></p>
-            <p>&nbsp; </p>
-            <h1><a name="_Toc188437186">Using the Smoothness Tool from the Tool Box</a></h1>
-            <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-            <p>&nbsp;</p>
-            <p class="MsoNormal">Now <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Ctrl-Z</span></span> to undo that and try the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Smoothness tool</span></span> from the Tool box instead. You will  find that if we use the Tool, and set the smoothness to 1, we get this.</p>
-            <img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/6.png" width="434" height="372" class="responsiveImage">
-            <p class="BlueBolden">&nbsp;</p>
-            <p class="MsoNormal">Now if we try to up the Smoothness level, we actually get a  mess with parts of the mesh sticking through other sections of the mesh.</p>
-            
-            <p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/7.png" width="372" height="356" class="responsiveImage"></p>
-          <p>&nbsp; </p>
-            <p class="MsoNormal">If we up the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Repeat</span></span> to something like <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">10</span></span>, we find that the  cube will actually shrink to try and get somewhere.</p>
-            
-            <p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/8.png" width="409" height="345" class="responsiveImage"></p>
-          <p>&nbsp; </p>
-            <p class="MsoNormal">Here we up the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Repeat</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">50</span></span>. Still not quite a  round ball. But if all you want is to round the corners on this cube, it works  fairly well.</p>
-            
-            <p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/9.png" width="601" height="396" class="responsiveImage"></p>
-          <p>&nbsp; </p>
-            <h1><a name="_Toc188437187">Smoothing Specific Axis</a></h1>
-            <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-            <p>&nbsp;</p>
-            <p class="MsoNormal">You can also decide to just smooth certain axis on your  object, by checking and unchecking the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Axis boxes</span></span> at the bottom of  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Smooth  Vertices dialog box</span></span>. Here I turned off the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> axis, and so it did  not smooth on that axis.</p>
-            
-            <p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/10.png" width="427" height="460" class="responsiveImage"></p>
-          <p>&nbsp; </p>
-            <h1><a name="_Toc188437188">The Randomize Tool</a></h1>
-            <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-            <p>&nbsp;</p>
-            <p class="MsoNormal">You will find the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Randomize Tool</span></span> tucked up away  underneath the Smooth tool. You can get to it just by hitting the tools little  arrow in the bottom right-hand corner.</p>
-          <p class="MsoNormal">&nbsp;</p>
-            
-            <p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/11.png" width="272" height="128" class="imgLeft"></p>
-          <p>&nbsp; </p>
-          <p class="MsoNormal">The randomize tool is another tool which allows you to move  vertices around on the mesh. It does this along the normal. Remember in Blender  that the normal refers to the direction of a face or vertex on the 3D object,  and pretty much distinguishes between the outside an inside of the mesh.  Therefore, if it is moving around the vertices along the normals it would be  creating the effect from either one side of the mesh or the other.</p>
-            <p class="MsoNormal">This tool is pretty much the smooth tool, but will change  the movement of the vertices along the mesh in a randomized fashion. So, this  may or may not be what you want, but it is there for you to play with all the  same.</p>
-          <p class="MsoNormal">&nbsp;</p>
-            
-            
-            <h1><a name="_Toc188437189">How to use the Randomize Tool</a></h1>
-            <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-            <p>&nbsp;</p>
-            <p class="MsoNormal">Here I took the cube, brought it into edit mode and  subdivided to a level of 10.</p>
-            
-            <p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/12.png" width="503" height="431" class="responsiveImage"></p>
-          <p>&nbsp; </p>
-            <p class="MsoNormal">Pull out your tool and just start tugging on that yellow  icon.</p>
-          <p class="MsoNormal">&nbsp;</p>
-            
-            <p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/13.png" width="127" height="112" class="imgLeft"></p>
-          <p>&nbsp; </p>
-          <p class="MsoNormal">You can see the box start to break apart</p>
-            <img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/14.png" width="413" height="448" class="responsiveImage">
-            <p class="BlueBolden">&nbsp;</p>
-            <p class="MsoNormal">The more you tug, the more your cube falls into disarray.</p>
-            <p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/15.png" width="371" height="345" class="responsiveImage"></p>
-          <p>&nbsp; </p>
-            <h1><a name="_Toc188437190">Options in the Randomized Dialog Box</a></h1>
-            <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-            <p>&nbsp;</p>
-            <p class="MsoNormal">You have a few options in which you can change in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Randomize dialog box</span></span> at  the bottom. The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Amount</span></span> setting is going to do the exact same thing that we just did by pulling on that  yellow stick, and change the rate of dishevelment you wish you cube to fall  into.</p>
-            <p class="MsoNormal">&nbsp;</p>
-            
-            <img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/16.png" width="431" height="277" class="responsiveImage">
-            <p class="BlueBolden">&nbsp;</p>
-            <p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Uniform</span></span> goes from <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span> to<span class="BlueBoldenChar"><span style="font-size:12.0pt; "> 1</span></span>,  and just determines (by a slight amount) how much randomness you want the tool  to display.</p>
-          <p class="MsoNormal">&nbsp;</p>
-            <img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/17.png" width="429" height="382" class="responsiveImage">
-          <p class="BlueBolden">&nbsp;</p>
-            <p class="MsoNormal">Setting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Normal</span></span> setting to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1</span></span> will just flip the  side of the cube in which the effect will come from. Either it will be working  from the outside of the box, or the inside of the box.</p>
-          <p class="MsoNormal">&nbsp;</p>
-            
-            <img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/18.png" width="606" height="582" class="responsiveImage">
-            
-          <p class="MsoNormal">&nbsp;</p>
-          <p class="MsoNormal">And then you can also send a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Random Seed</span></span> to set  specifically when you want this randomness to occur.</p>
-          <p class="MsoNormal">&nbsp;</p>
-            
-            <p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/9-The-Smooth-Tool/Images/19.png" width="457" height="407" class="responsiveImage"></p>
-          <p>&nbsp; </p>
-          <p class="MsoNormal">Well, there you have all of the different things that you  can do. A little bit of smoothness, and a little bit of chaos, all from one  tool.</p>
-          <p class="MsoNormal">&nbsp;</p>
-          <p class="MsoNormal">&nbsp;</p>
 
-        </article>
 
-        <footer class="footer">
-            ~ by StarsInDust ~ &#169; 2023 –
-            <script type="text/javascript" src="JavaScript/FooterYearlyDate.js"></script>
-        </footer>
-    </div>
+<p class="tableOfContents"><a href="#_Toc188528544">What is the Edge Slide Tool?</a></p>
+<p class="tableOfContents"><a href="#_Toc188528545">How To use the Edge Slide   Tool</a></p>
+<p class="tableOfContents"><a href="#_Toc188528546">Selecting Two Edges</a></p>
+<p class="tableOfContents"><a href="#_Toc188528547">Edge Slide Dialog Box</a></p>
+<p class="tableOfContents"><a href="#_Toc188528548">The Vertex Slide Tool</a></p>
+
+
+
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/1.png" width="269" height="241" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc188528544">What is the Edge Slide Tool?</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">This is an interesting tool, in which you can slice one or  more edges across faces that are sitting next to each other (adjacent faces). Although,  this tool will come with a few restrictions. These restrictions deal with the  selection of edges. For example, the selection of an edge must qualify as a  valid loop, so the edge needs to be closed and not open ended.</p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/2.png" width="130" height="115" class="imgLeft">
+
+<h1><a name="_Toc188528545">How To use the Edge Slide Tool</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Once again, we can just start off with our default cube and  bring it into the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Edit</span></span> Mode workspace.</p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/3.png" width="382" height="304" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">We will be working with edges with this tool, so change to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edge mode</span></span> and select  one of the edges.</p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/4.png" width="528" height="407" class="responsiveImage">
+
+<p class="MsoNormal">Now grab your <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edge Slide</span></span> tool, from the  tool box.</p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/5.png" width="124" height="116" class="imgLeft">
+
+<p class="MsoNormal">With this front, top edge selected, If you push back on the  stick, you are narrowing the top face, but if you push the stick forward- downward,  you are working with and narrowing the front face.</p>
+
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/6.png" width="482" height="244" class="responsiveImage"></p>
+<p>&nbsp;</p>
+
+
+<h1><a name="_Toc188528546">Selecting Two Edges</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">You can start with your cube and then you can select two  edges. This way we can work with both of them</p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/7.png" width="236" height="275" class="imgLeft">
+
+<p class="MsoNormal">If you pull forward on the stick, you won&rsquo;t do too much more  than just shrinking the height of the box. Because all you are doing is reducing  the height of both the front and back faces. But if you push backwards on the  yellow stick, and work with that top face, you will cause the face in between  the two edges (the top face) and this will shrink that face to a point, and  then you have something that looks like a pointed roof top.</p>
+
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/8.png" width="475" height="231" class="responsiveImage"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc188528547">Edge Slide Dialog Box</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">The Edge Slide tool comes with one of those <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Last operation dialog</span></span> boxes, and this time it pertains to the Edge slide tool.</p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/9.png" width="359" height="219" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">If you slide the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Factor </span></span>Slider back and forth,  you are changing the amount of narrowness that you are giving to the affected face,  using this tool. This slider does basically the same thing as if you moved the  yellow stick on the Edge Slide tool back and forth.</p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/10.png" width="619" height="531" class="responsiveImage">
+
+
+<p class="MsoNormal">If you ticked the check box for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span> option, you  would be making sure that your edge loop runs straight across an object.</p>
+
+<p class="MsoNormal">Here we are taking a simple plane and extruding one of its  sides to demonstrate this. Extruding a plane in this way will make it so that  we have two faces, one right next to the other (adjacent faces). We are going  to move things around a bit on those two faces, so we have something that looks  more like our next illustration. Then we just added a loop cut to it. You will  notice that the loop cut will come in like this. A tad bit bent.</p>
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/11.png" width="355" height="311" class="responsiveImage"></p>
+
+<p class="MsoNormal">We can slide this loop cut down a bit using the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Factor</span></span> slider.</p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/12.png" width="422" height="386" class="responsiveImage">
+
+<p class="MsoNormal">Tic on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span> check box and the loop  cut will jump to the top of the object, and try and even itself out.</p>
+
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/13.png" width="434" height="440" class="responsiveImage"></p>
+
+<p class="MsoNormal">With the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span> Check box checked, we can now take advantage of  the checkbox below it to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">flip</span></span> the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Even</span></span> Setting. You will see  that will jump to a new location on the two faces, but still try to even itself  out.</p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/14.png" width="622" height="567" class="responsiveImage">
+
+<p class="MsoNormal">The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Clamp</span></span> checkbox is actually better illustrated with the cube. Here we have the Clamp  setting on, and we have narrowed our top face into this position with the edge  slide tool. If you uncheck the clamp tool now, you really won&rsquo;t see much  difference. That is because it is clamping down this first position so that you  can make another move. So, now with the first move made just select the back  edge, on this cube, and bring that edge downward into a new position. </p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/15.png" width="624" height="377" class="responsiveImage">
+
+<p class="MsoNormal">Now un Clamp that second movement by unchecking the box and  you will see that the edge jumps back to its original position. So, it is  unclamping itself and negating that second move.</p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/16.png" width="333" height="398" class="responsiveImage">
+
+<p class="MsoNormal">The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Mirror  Editing</span></span> checkbox, is something that would be used if you had cut  the object in half, and was working from one side of the object and having  Blender automatically and simultaneously building the other side of the object  based on your movements on the first side. We are not quite there yet, so for  now we will just skip over this setting.</p>
+<p class="MsoNormal">You won&rsquo;t be using the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Correct UV</span></span> setting either,  until you start to get into adding 2D textures to the 3D model, and this corrective  check box would help with issues resulting from image distortions during these addition  of textures type of procedures.</p>
+
+
+<h1><a name="_Toc188528548">The Vertex Slide Tool</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Vertex  Slide</span></span> tool isn&rsquo;t too much different from the Edge slide tool,  except that you will move into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Vertex</span></span> selection mode, and  deal with vertices, instead of edges.</p>
+<p class="MsoNormal">You will find this tool tucked underneath of the Edge Slide  tool, and you can get to it by going to the little arrow in the bottom  right-hand corner of the tool.</p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/17.png" width="257" height="111" class="imgLeft">
+
+<p class="MsoNormal">You can play with this tool, but it is just about the same  thing as sliding around an edge. And even the dialog box is the same.</p>
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/10-The-Edge-Slide-Tool/Images/18.png" width="383" height="442" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Well, that is about it, and just about everything you need  to know about this tool, and sliding around edges in Blender.</p>
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!--Main Article -->
+ 
+ 
+</article>
+  
+  
+  
+  
+  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+  <script type="text/javascript" src ="JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+    
+      
+
+    
 </body>
-
 </html>
