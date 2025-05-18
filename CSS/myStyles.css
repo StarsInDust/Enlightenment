@@ -1,3 +1,6 @@
+/* =========================
+   Base Styles
+   ========================= */
 @charset "utf-8";
 
 /* CSS Document */
@@ -8,7 +11,6 @@ body {
   background-color: #00050f;
 }
 
-/* General Layout Styles */
 .wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -21,8 +23,6 @@ body {
   flex: 1 100%;
 }
 
-/* Main Page CSS Setup */
-
 /* Header */
 .header {
   background-color: black;
@@ -33,22 +33,21 @@ body {
 
 /* Footer */
 .footer {
-	background-color: #020d25;
-	color: #9e8c69;
-	text-align: center;
-	box-shadow: 2px 3px 8px #424344;
-	border-radius: 2px;
-	padding: 10px;
-	height: 50px;
-	
-	margin-bottom: 0px;
+  background-color: #020d25;
+  color: #9e8c69;
+  text-align: center;
+  box-shadow: 2px 3px 8px #424344;
+  border-radius: 2px;
+  padding: 10px;
+  height: 50px;
+  margin-bottom: 0px;
 }
 
 /* Main Content */
 .main {
   text-align: left;
   flex: 1 100%;
-  margin: 0 auto; /* Center the main container */
+  margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
@@ -90,6 +89,11 @@ body {
   height: auto;
 }
 
+.image {
+  width: 100%;
+  height: auto;
+}
+
 /* Typography */
 .pGold {
   font-family: Helvetica, Arial, sans-serif;
@@ -116,9 +120,6 @@ body {
   font-weight: 500;
   text-align: left;
 }
-
-
-
 
 .h2Silver {
   font-size: 16px;
@@ -261,7 +262,7 @@ a.customLink:hover {
 
 p.tableOfContents a {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  text-decoration: none !important; /* Force removal of underline */
+  text-decoration: none !important;
   display: block;
   font-weight: bold;
   text-align: left;
@@ -271,16 +272,70 @@ p.tableOfContents a {
 
 p.tableOfContents a:hover {
   color: #646464;
-  text-decoration: underline !important; /* Add underline on hover */
+  text-decoration: underline !important;
 }
 
-/* Media Queries */
+/* Miscellaneous Utility Classes */
+.image-gallery {
+  justify-content: center !important;
+}
+
+.navigationButtons a {
+  background-color: #c4b97b;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em 1.5em;
+  margin-left: 50px;
+  box-shadow: 1px 4px 5px rgb(140 87 38);
+  border-radius: 20px;
+}
+
+.goldEmphasis {
+  color: #c4b97b;
+  padding-left: 30px;
+}
+
+.wrapper .main .container {
+  padding-top: 40px;
+}
+
+.responsiveImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 3px auto;
+  padding: 15px 0 15px 15px;
+}
+
+.wideImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 1px 15px 1px;
+}
+
+.imgLeft {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding-left: 40px;
+  padding: 25px 0 25px 42px;
+}
+
+/* =========================
+   Media Queries
+   ========================= */
+
+/* --- max-width: 800px --- */
 @media all and (max-width: 800px) {
   .navigation {
     justify-content: space-around;
   }
 }
 
+/* --- max-width: 600px --- */
 @media all and (max-width: 600px) {
   .navigation {
     flex-flow: column wrap;
@@ -299,6 +354,7 @@ p.tableOfContents a:hover {
   }
 }
 
+/* --- min-width: 300px --- */
 @media all and (min-width: 300px) {
   .aside {
     flex: 1 0 0;
@@ -311,8 +367,6 @@ p.tableOfContents a:hover {
     height: 110px;
   }
 
-  
-
   .cartoonImg {
     width: 80%;
     height: auto;
@@ -324,21 +378,20 @@ p.tableOfContents a:hover {
   }
 }
 
+/* --- min-width: 600px --- */
 @media all and (min-width: 600px) {
   .header {
     background-image: url(../Images/banner_625_small.png);
     height: 160px;
   }
 
-  .wideImg {
-    width: 90%;
-  }
-
+  .wideImg,
   .cartoonImg {
     width: 90%;
   }
 }
 
+/* --- min-width: 800px --- */
 @media all and (min-width: 800px) {
   .header {
     background-image: url(../Images/banner_825.png);
@@ -346,17 +399,15 @@ p.tableOfContents a:hover {
   }
 }
 
+/* --- min-width: 1200px --- */
 @media all and (min-width: 1200px) {
   .main {
     flex: 3 0px;
+    order: 2;
   }
 
   .aside-1 {
     order: 1;
-  }
-
-  .main {
-    order: 2;
   }
 
   .aside-2 {
@@ -371,53 +422,5 @@ p.tableOfContents a:hover {
     background-image: url(../Images/banner_1200.png);
     height: 430px;
   }
-}
-
-/* Potential Fix for Image Gallery */
-.image-gallery {
-  justify-content: center !important; /* Ensure centering */
-}
-
-.navigationButtons a {
-  background-color: #c4b97b;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 1em 1.5em;
-  margin-left: 50px;
-  box-shadow: 1px 4px 5px rgb(140 87 38);
-  border-radius: 20px;
-}
-
-.goldEmphasis {
-  color: #c4b97b;
-  padding-left: 30px;
-}
-.wrapper .main .container {
-	padding-top: 40px;
-}
-
-.responsiveImage {
-    max-width: 100%;
-    height: auto;
-    display: block;
-   margin: 3px auto;
-   padding: 15px 0 15px 15px; 
-}
-
-.wideImg {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto; /* Center images */
-  padding: 15px 1px 15px 1px; /* Default padding */
-}
-
-.imgLeft {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  padding-left: 40px; /* Adjusted for alignment */
-  padding: 25px 0 25px 42px; 
 }
 
