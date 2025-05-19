@@ -7,29 +7,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Shear Tool</title>
+    <title>The Rip Region Tool</title>
     
-   <meta name="title" content="The Shear Tool ">
+   <meta name="title" content="The Rip Region Tool ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" The Shear Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
+<meta name="keywords" content=" The Rip Region Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
 
 
-<meta name="description" content="This article explains how to use the Shear tool, in Edit Mode, while working in the Blender application/>
+<meta name="description" content="This article explains how to use the Rip Region Tool in Edit mode, while working in the Blender application/>
 
-<meta name="category" content="The Shear Tool, Blender, 3D Modeling, Animation, Graphic Art">
+<meta name="category" content="The Rip Region Tool, Blender, 3D Modeling, Animation, Graphic Art">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Monday, January 27, 2025" />
+<meta name="revised" content="Wednesday, January 29, 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/The-Shear-Tool.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/The-Rip-Region-Tool.html">
  
+    
     
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
 
@@ -43,7 +44,6 @@
 <style type="text/css">
   /* Add custom styles here if needed */
 </style>
-
 
 </head>
 
@@ -68,142 +68,113 @@
   
   <!--Main Article -->
   
-  <p class="h2Black" >~The Shear Tool~</p>
+  <p class="h2Black" >~The Rip Region Tool~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >5/12/2025</p>
+   <p class="articleDate" style="text-align:right" >5/19/2025</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc189042621">What   is the Rip Tool?</a></span><span style="line-height:115%; font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc189042622">How   to use the Rip Tool</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc189042623">Options   for the Rip Region Tool</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc189042624">The   Opposite Method to the Rip Region Tool</a></span><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc189042625">The   Rip Edge Tool</a></span><span style="font-size:12.0pt; "> </span></p>
 
 
 
-<p class="tableOfContents"><a href="#_Toc188790226">What is the Shear Tool?</a></p>
-<p class="tableOfContents"><a href="#_Toc188790227">How to use this Shear   Tool</a></p>
-<p class="tableOfContents"><a href="#_Toc188790228">Extra Mesh Objects</a></p>
-<p class="tableOfContents"><a href="#_Toc188790229">To Sphere Tool</a></p>
-
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/1.png" width="271" height="242" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc188790226">What is the Shear Tool?</a></h1>
+<p class="BlueBolden"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/1.png" width="270" height="242" class="responsiveImage"></p>
+<h1><a name="_Toc189042621">What is the Rip Tool?</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">The <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Shear  Tool</span></span> is actually a very simple tool, that can be extremely  helpful while modeling. That is because is will take a flat face and simply  tilt it. Now when you extrude, you are no longer going straight out, but  instead starting from and moving in the direction, which you are able to set  for it. This can be work quite well, especially when it comes to some of the  intricate twists and turns that you will be trying to work with, while  constructing something like pipes.</p>
+<p class="MsoNormal">This tool is very simple. Put simply we are grabbing some  vertices and ripping them open. For example, you have a box, &ldquo;rippppp…!&rdquo; now  you got an open box. You got a sphere &ldquo;rippppp…!&rdquo; now you got an open sphere. So,  anything you need to open up, this is the tool for you.</p>
+<p class="MsoNormal">What this tool is doing under the hood is to take a vertex,  duplicate it, where now you are able to separate, and move those two vertices apart,  creating a hole in the mesh. The icon image below sort of spells things out for  you in a single image.</p>
 
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/2.png" width="112" height="103" class="responsiveImage">
 
-<h1><a name="_Toc188790227">How to use this Shear Tool</a></h1>
+<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/2.png" width="122" height="107" class="responsiveImage"></p>
+<h1><a name="_Toc189042622">How to use the Rip Tool</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Let&rsquo;s start out by getting rid of the default cube, and  instead adding cylinder. This way we can demonstrate this usefulness while  building a piping system in 3D. Take this new cylinder, that you just added,  and bring it into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode, and then <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">select</span></span> the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">top face</span></span> of this cylinder.</p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/3.png" width="441" height="222" class="responsiveImage">
-
-<p class="MsoNormal">Next, go into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Right Orthographic</span></span> view. By  typing the number <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">3</span></span> on the numpad.</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/4.png" width="290" height="308" class="responsiveImage">
-<p class="MsoNormal">Now grab the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shear tool</span></span> from the tool box.</p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/5.png" width="113" height="105" class="responsiveImage">
-
-<p class="MsoNormal">You will notice these strange, colored rectangular knobs on  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shear</span></span> gizmo, when you look into the viewport</p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/6.png" width="390" height="340" class="responsiveImage">
-
-<p class="MsoNormal">Each of those colored knobs, will represent a different  axis, in which you can move the face around to achieve the look you want. If  you move the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">red</span></span> knob at the top, it really won&rsquo;t do anything.</p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/7.png" width="204" height="193" class="responsiveImage">
-
-<p class="MsoNormal">If you move the front <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">green</span></span> knob, it will twist the  cylinder around, like this.</p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/8.png" width="306" height="326" class="responsiveImage">
-
-<p class="MsoNormal">It is actually the maroon knob, at the right that we want to  work with to make the object shear correctly. We can undo that twist by using  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-Z</span></span> and then try moving that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">maroon</span></span> stick instead.</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/9.png" width="328" height="374" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">We can control the amount of tilt by using the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Last operation dialog box</span></span> at the bottom of the page. Move the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Offset</span></span> amount to change the  amount of this tilt.</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/10.png" width="372" height="429" class="responsiveImage">
+<p class="MsoNormal">Even though this should be a very simple, straight forward  tool, right out of the gate. Like every other tool. I will time my time to  demonstrate just what this tool is doing.</p>
+<p class="MsoNormal">Take your cube, and bring it into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode.</p>
 
 
-<p class="MsoNormal">Notice that using the tool, that it has elongated that top  face just a bit.</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/11.png" width="359" height="280" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now when you select that top face, and hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> key we can extrude  the shape off into the direction that is now set.</p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/12.png" width="288" height="296" class="responsiveImage">
-
-<p class="MsoNormal">Grab the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shear</span></span> tool again to change the tilt on this new top  face. </p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/13.png" width="318" height="359" class="responsiveImage">
-
-<p class="MsoNormal">And then use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">extrude </span></span>tool again to advance  the length of this piping.</p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/14.png" width="337" height="393" class="responsiveImage">
-
-<p class="MsoNormal">You can try and get a bit of a more uniform shape, by using  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">scale</span></span> tool at its bend points. Alt-select that edge to select entire loop, and scale  it down a bit.</p>
-
-<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/15.png" width="569" height="258" class="responsiveImage"></p>
-<p>&nbsp;</p>
+<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/3.png" width="289" height="235" class="responsiveImage"></p>
 <p>&nbsp; </p>
-<h1><a name="_Toc188790228">Extra Mesh Objects</a></h1>
+<p class="MsoNormal">Now select the top two front vertices.</p>
+
+
+<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/4.png" width="280" height="286" class="responsiveImage"></p>
+
+<p class="MsoNormal">Take your <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Rip Region</span></span> tool, no need to even bring in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Move</span></span> tool on this one,  it comes with the ability to move the ripped face open. So, Blender is  essentially packing these two tools into one.</p>
+
+
+<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/5.png" width="149" height="130" class="responsiveImage"></p>
+
+<p class="MsoNormal">Just simply tug downward on this circle with your mouse, and  watch your box open up. How cool is that.</p>
+
+
+<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/6.png" width="588" height="232" class="responsiveImage"></p>
+
+
+<h1><a name="_Toc189042623">Options for the Rip Region Tool</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">If you had added the<a href="Articles/2025/1-Blender-Continued/Z-Extra-Linked-Tutorial-Files/1-Adding-Extra-Mesh-Objects/Adding-Extra-Mesh-Objects.html" target="_blank"> extra mesh objects</a> to the Blender  program, you may have an easier time of creating these pipes then just using  this tool, and trying to build things from scratch.</p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/16.png" width="471" height="409" class="responsiveImage">
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/17.png" width="619" height="334" class="responsiveImage">
+<p class="MsoNormal">You will find one option for this rip region tool at the top  of the screen, and that is to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fill</span></span> it. The options in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Last Operation dialog box</span></span> deal mostly with how, and what distance that you want to move the ripped opened  face, after the rip portion of the procedure is completed.</p>
 
 
-<h1><a name="_Toc188790229">To Sphere Tool</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Ok, so let&rsquo;s now take a look at this second tool, the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">To Sphere</span></span> tool, which  is lurking just below the Shear tool. </p>
-<p class="MsoNormal">All this tool does is to try and take something and turn it  into a sphere.</p>
 
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/18.png" width="285" height="105" class="responsiveImage">
-
-<p class="MsoNormal">We can start by bringing our cube into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode; except  that if we try to use it on this simple cube, it will do nothing, and that is  because to create a sphere takes more than what the default cube is willing to  give.</p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/19.png" width="349" height="293" class="responsiveImage">
-
-
-<p class="MsoNormal">We need to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Sub divide</span></span> this cube to give  it more geometry. <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Right  click</span></span> to reach the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">sub divide</span></span> menu.</p>
-<p><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/20.png" width="472" height="305" class="responsiveImage"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
-<p class="MsoNormal">Bring the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">sub divisions</span></span> up to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">10</span></span></p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/21.png" width="519" height="407" class="responsiveImage">
+<p class="BlueBolden"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/7.png" width="628" height="190" class="responsiveImage"></p>
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now we can grab the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">To Sphere</span></span> tool, and it will  actually do something.</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">When you select the check box for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fill</span></span>, you will find  that it will fill (close the face) instead of leaving a gaping hole. This will  create new geometry here.</p>
 
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/22.png" width="111" height="110" class="responsiveImage">
+<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/8.png" width="611" height="243" class="responsiveImage"></p>
 
-<p class="MsoNormal">Drag the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Factor</span></span> Slider all of the way to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1.000</span></span>, and you turn a  cube into a perfect sphere.</p>
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/23.png" width="618" height="479" class="responsiveImage">
 
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Warning,</span></span> you will  find this tool will not work on everything. For example, take this cylinder. When  we bring this cylinder in from Object mode, we want to make sure that we set  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cap Fill  Type</span></span> to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Triangle  fan</span></span>.</p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/24.png" width="618" height="410" class="responsiveImage">
-
-<p class="MsoNormal">With it set to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Triangle fan</span></span>, we will at  least be able to see some changes, although those changes will not exactly come  anywhere near emulating a sphere.</p>
-
-<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/12-The-Shear-Tool/Images/25.png" width="603" height="293" class="responsiveImage">
-
-<p class="MsoNormal">Well, that is all there is to it, to understanding these  tools. You may find them helpful or not, for your own 3D modeling needs.</p>
+<h1>&nbsp;</h1>
+<h1><a name="_Toc189042624">The Opposite Method to the Rip Region Tool</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
- 
-  <!--Main Article -->
+<p class="MsoNormal">The Reverse of the Rip Region option is <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Merge by Distance</span></span> which you can get to with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">M</span></span> hot key by going here in  the top menu.  If you move your vertices  close together again after ripping, you can join them again using this method.</p>
+
+
+<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/9.png" width="288" height="452" class="responsiveImage"></p>
+
+<h1><a name="_Toc189042625">The Rip Edge Tool</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">You can get to this tool by opening up the little arrow in  the bottom right-hand corner of the Rip Region tool.</p>
+
+
+<p class="BlueBolden"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/10.png" width="276" height="118" class="responsiveImage"></p>
+<p class="MsoNormal">Oh, boy! Did they ever mis - name this tool. That is because  it should have been named the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Create Vertices Tool</span></span>.  What this tool will do is to duplicate a  vertex, and then run it along the mesh.</p>
+
+
+
+
+
+<img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/11.png" width="138" height="112" class="responsiveImage">
+<p class="MsoNormal">You start to use this tool by selecting the vertex you want  to duplicate, and then pull the tool along the edge to duplicate it.</p>
+
+
+<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/12.png" width="255" height="202" class="responsiveImage"></p>
+<p class="MsoNormal">You do not need to pull this circle to move the vertex  straight either. You can pull it where ever you want it to be. So, you can kind  of mold this object into anything that you want, by using it.</p>
+
+
+<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/13-Rip-Region-Tool/Images/13.png" width="250" height="245" class="responsiveImage"></p>
+<p class="MsoNormal">Well, that is about it for this Rip region Tool, and for  that matter the entire Tool box in Edit mode. In our next tutorial, we will  begin to look at the Sub menu, under the Edit workspace&rsquo;s main menu, and break  that one down for you.</p>
+
+
+
+<!--Main Article -->
  
  
 </article>
-  
   
   
   
