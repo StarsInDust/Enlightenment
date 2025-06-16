@@ -7,28 +7,37 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Outliner</title>
-    <meta name="title" content="The Outliner ">
+    <title>Bringing in a Reference Image</title>
+    
+    <meta name="title" content=" Bringing in a Reference Image ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" The Outliner, Blender, 3D Modeling, Animation, Graphic Art "/>
+<meta name="keywords" content=" Bringing in a Reference Image, Blender, 3D Modeling, Animation, Graphic Art "/>
 
 
-<meta name="description" content="This article explains what the Outliner Panel is in Blender and how you can use it/>
+<meta name="description" content="This article explains how to bring in a Reference Image in Blender/>
 
-<meta name="category" content="The Outliner, Blender, 3D Modeling, Animation, Graphic Art">
+<meta name="category" content="Bringing in a Reference Image, Blender, 3D Modeling, Animation, Graphic Art">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Thursday, February 6, 2025" />
+<meta name="revised" content="Saturday, February 8, 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/4-The-Outliner/The-Outliner.html">
+<meta name="url" content="https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Bringing-In-A-Reference-Image.html">
 
+
+
+
+    
+    
+    
+    
+    
     
     
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
@@ -69,220 +78,280 @@
   
   <!--Main Article -->
   
-  <p class="h2Black" >~The Outliner~</p>
+  <p class="h2Black" >~Bringing in a Reference Image~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >6/9/2025</p>
+   <p class="articleDate" style="text-align:right" >6/16/2025</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
 
+<p class="tableOfContents"><a href="#_Toc189903378">Getting Started</a><span style="line-height:115%; font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903379">Setting up</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903380">Add a New Collection</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903381">Adding the Front   Reference Image</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903382">Naming the Reference   Image</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903383">Adding the Side View</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903384">Move the Front Image   Reference into Position</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903385">Adding the Back View</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903386">Setting up the Properties   in Property Panel</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903387">The Offset section of the   Property Panel</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903388">Setting the Opacity</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903389">Only Viewing Certain   sides of the Image</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903390">Change The Back Image to   Be Viewed Only When in Back View</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903391">Constraining Images to be   Orthographic View Only</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903392">Finish the Opacity   changes for all the images</a><span style="font-size:12.0pt; "> </span></p>
+<p class="tableOfContents"><a href="#_Toc189903393">Making the Reference   Images to be non-selectable</a><span style="font-size:12.0pt; "> </span></p>
 
-<p class="tableOfContents"><a href="#_Toc189655832">What is the Outliner?</a></p>
-<p class="tableOfContents"><a href="#_Toc189655833">What are the Icons at the   End of Each Line?</a></p>
-<p class="tableOfContents"><a href="#_Toc189655834">The Camera button and   Rendering a View</a></p>
-<p class="tableOfContents"><a href="#_Toc189655835">The Funnel Button</a></p>
-<p class="tableOfContents"><a href="#_Toc189655836">A Sort Section</a></p>
-<p class="tableOfContents"><a href="#_Toc189655837">Search Box</a></p>
-<p class="tableOfContents"><a href="#_Toc189655838">Filter</a></p>
-<p class="tableOfContents"><a href="#_Toc189655839">The New Collection Button</a></p>
+
+
+<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/1.png" width="270" height="245" class="imgLeft"></p>
+<p>&nbsp; </p>
+<h1><a name="_Toc189903378">Getting Started</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">One of the first steps that you will want to be able to do,  when starting a 3D project in Blender, is to bring in a reference image. So, you  can either create your own reference images, or bring in some stock images that  are ready to take into the 3D world of Blender. You will want a front, back and  side view image.</p>
+<p class="MsoNormal">When you are a beginner, it might be easier to start off  with some images that have already been made for this purpose. You may have to  fine tune the lining up of these images either way; however, Blender is  equipped to handle the shifting around of your image, and having them already  created for you can be a lot easier, and save you both time; as well as,  headaches.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/2.png" width="622" height="197" class="wideImg">
+
+<p class="MsoNormal">As we move along in this tutorial, you may find us using a  few things that we have all ready covered in previous tutorials.</p>
+
+
+<h1><a name="_Toc189903379">Setting up</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal"><span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">Open</span></span> <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Blender</span></span>, we can begin with  our cube on the page.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/3.png" width="339" height="241" class="responsiveImage">
+
+<p class="MsoNormal">Hitting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">5</span></span> key on the numpad in  Blender, will toggle us from Orthographic mode to Perspective mode. We want to  be in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Orthographic</span></span> mode. Now hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1 </span></span>key on the numpad and that will put the cube front and center in  the screen. You will want to be in this visual position to bring in the  Reference image.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/4.png" width="622" height="346" class="wideImg">
 
 
 
-<p><img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/1.png" width="267" height="244" class="imgLeft"></p>
+<h1><a name="_Toc189903380">Add a New Collection</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="MsoNormal">You can close the collection with the cube in it and hide it.  Remember that you can do this by hitting the eye at the end of the Collection  line in the outliner. Now your cube will no longer be visible on the screen. It  will still be there; we just hid it so it will be out of the way.</p>
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/5.png" width="224" height="179" class="imgLeft">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Now add a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">New Collection</span></span> to the Outliner.  You might have to make your panel wider to  see and have access to the New Collection button at the top of the outliner.</p>
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/6.png" width="231" height="103" class="imgLeft">
+
+<p class="MsoNormal">Rename this new collection to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Reference Images</span></span>.</p>
+<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/7.png" width="357" height="174" class="responsiveImage"></p>
 <p>&nbsp;</p>
 <p>&nbsp; </p>
-<h1><a name="_Toc189655832">What is the Outliner?</a></h1>
-
+<h1><a name="_Toc189903381">Adding the Front Reference Image</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
+<p class="MsoNormal">Back in the Viewport of the program. Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift A- Image -Reference</span></span>.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/8.png" width="455" height="373" class="responsiveImage">
+
+<p class="MsoNormal">Browse to your images for your 3D model, and choose the one  that represents the front orientation. Since we have the view in our viewport  set to Orthographic mode first, this image should now come in perfectly, at the  front view angle. Because that is what we set it at.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/9.png" width="619" height="185" class="wideImg">
 <p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/2.png" width="286" height="141" class="imgLeft">
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/10.png" width="624" height="386" class="wideImg">
 
 
-<p class="MsoNormal">Well, when you first take a look at this panel, you will think.  &ldquo;Ok, this is a list of items that is in my scene in the viewport&rdquo; and you would  be right; but the outliner is so much more than just this. It can be a very  powerful asset in helping you organize what is there on the screen, and in the  outliner too.</p>
-<p class="MsoNormal">Blender will call each of the listed items in the Outliner a <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">data-block</span></span>.  Just remember, that all a data-block actually means is a listed item in the  outliner. If you click on the tiny arrow in front of the data-block, in the  outliner, you will see even more listed items (um-err… I mean data-blocks).</p>
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/3.png" width="544" height="374" class="responsiveImage">
-
-
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">Here is a list of what you  can do in the Outliner:</span></p>
-<p class="SimpleGreyListCxSpFirst">View the elements that are in your scene.</p>
-<p class="SimpleGreyListCxSpMiddle">Select and deselect the elements in your  scene.</p>
-<p class="SimpleGreyListCxSpMiddle">Hide or show an element in your scene.</p>
-<p class="SimpleGreyListCxSpMiddle">Enable or disable a selection (you can lock  down an object &ldquo;make it un-selectable&rdquo; in the 3D Viewport).</p>
-<p class="SimpleGreyListCxSpMiddle">Enable or disable the rendering of an object.</p>
-<p class="SimpleGreyListCxSpMiddle">Delete objects from the scene.</p>
-<p class="SimpleGreyListCxSpMiddle">Unlink data (equivalent to pressing the&nbsp;<em>X</em>&nbsp;button  next to the name of an item in the outliner).</p>
-<p class="SimpleGreyListCxSpMiddle">Manage collections in the scene.</p>
-<p class="SimpleGreyListCxSpLast">&nbsp;</p>
-<p class="SimpleGreyListCxSpLast">&nbsp;</p>
-<p class="SimpleGreyListCxSpLast">&nbsp;</p>
-<h1><a name="_Toc189655833">What are the Icons at the End of Each Line?</a></h1>
+<h1><a name="_Toc189903382">Naming the Reference Image</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
 <p>&nbsp;</p>
-<p class="MsoNormal">By default, these two button icons are available at the  right of your listed item.</p>
+<p class="MsoNormal">With that Image Reference Selected, we can hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">F2 </span></span>key at the top of  our key board, and that will bring up a textbox where we can name the image  that we just brought in.</p>
 
-<p><img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/4.png" width="326" height="368" class="responsiveImage"></p>
+<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/11.png" width="452" height="226" class="responsiveImage"></p>
 <p>&nbsp; </p>
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Eye</span></span> icon, will control weather you can see the item in the viewport or not. If you  click on the eye next to the data-block in the outliner, you will notice that  it will disappear in the viewport.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/5.png" width="626" height="220" class="responsiveImage">
-
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/6.png" width="629" height="209" class="responsiveImage">
-
-
-<h1><a name="_Toc189655834">The Camera button and Rendering a View</a></h1>
+<h1><a name="_Toc189903383">Adding the Side View</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Camera</span></span> icon will show us what is available when we render an item. In order to see  this icon in action though we need to render the View.</p>
-<p class="MsoNormal">To render the item, first we need to make sure that our  scene is actually fitting in the Camera. To go to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">camera view</span></span>, hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span> on the numpad.</p>
+<p class="MsoNormal">Now we are going to do the same thing, and bring in the side  view. This time in order to bring it in correctly we need to have the view port  set to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Right  Orthographic</span></span> view Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">3 </span></span>key on the numpad to turn  it to the side view. Our first image that we brought in to represent the front  view will now only look like a very thin line, from this side view optical  angle.</p>
 
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/7.png" width="573" height="386" class="responsiveImage">
-
-<p class="MsoNormal">Now click on the word, <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Camera</span></span> in the Outliner. This  will open the property panel for the Camera. The Property panel is located  below this panel, in the Blender application. Before you click on the word <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">camera</span></span>, in the  outliner, you do not even see the Camera tab in the property panel.</p>
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/8.png" width="396" height="182" class="responsiveImage">
-
-
-<p class="MsoNormal">Now the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Camera Panel</span></span> is available under it.</p>
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/9.png" width="401" height="399" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/12.png" width="544" height="350" class="wideImg">
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Focal  Length</span></span> is the option that control how much the camera is able to  view. We can shrink down the Focal Length from 50mm to (in our case 26mm). Just  move this setting down until the red ball is inside the range of the camera.</p>
+<p class="MsoNormal">Now <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift  – A – Image- Reference</span></span> and bring in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Side</span></span> image</p>
 
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/10.png" width="624" height="213" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/13.png" width="500" height="201" class="responsiveImage">
 
+<p class="MsoNormal">Press <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">F2</span></span> and name this one <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Image Side</span></span>.</p>
 
-<p class="MsoNormal">You can center the objects inside of the camera by going to  the two options under the Focal Length. <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift X</span></span> will shift the camera  left and right. <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift  Y</span></span> will shift the camera up and down.</p>
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/11.png" width="600" height="193" class="responsiveImage">
-
-<p class="MsoNormal">Now to see that camera icon button in action. First, we want  to turn of the blue cube&rsquo;s camera that is located at the end of its line.  Notice that with the camera turned off, we will still see the blue cube on the  screen. This is because this camera represents the blue cube, but only after it  has been rendered. </p>
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/12.png" width="344" height="169" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">So, we first need to render the image.</p>
-<p class="MsoNormal">Go to the top of the screen and select the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Render </span></span>menu. Then  from the drop down select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Render Image</span></span>.</p>
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/13.png" width="409" height="203" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">As you can see, only the red ball was rendered. This is  because we turned that little camera icon button off, in the outliner, before the  image was rendered.</p>
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/14.png" width="341" height="195" class="responsiveImage">
-
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Click the X</span></span> in the  upper right-hand corner of this screen to come out of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Render view</span></span>.</p>
-
-
-<h1><a name="_Toc189655835">The Funnel Button</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/14.png" width="419" height="334" class="responsiveImage"></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Remember, that I had said that we could make objects in our  scene selectable, or not. Well…, not exactly by default. That is because we  have to turn that option on. We can find it, and turn it on by hitting the icon  that looks like a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">funnel</span></span> at the top of the panel.</p>
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/15.png" width="407" height="142" class="responsiveImage">
-
-<p class="MsoNormal">Click on that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">funnel</span></span> to view its <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">options</span></span>. At the top  of this panel, you will find a row of icon buttons. These are options for  buttons that we can set up to be viewed in the outliner. Instead of just  showing the two buttons, and that check box for the collection, which is  selected in blue, with this funnel button opened, we can now turn on more  items. </p>
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/16.png" width="617" height="522" class="responsiveImage">
-
-<p class="MsoNormal">That arrow that faces toward the upper left-hand corner is  the button that controls select-ability of the items in the view port. If you  click on that button from the funnel panel, and turn it blue, you will see a  new button at the end of your items in the outliner.</p>
-<br>
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/17.png" width="623" height="152" class="responsiveImage">
-
-<p class="MsoNormal">You will notice that you have  other buttons in this list that you can enable too.</p>
-
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in;line-height:normal;"><span class="MsoIntenseEmphasis">Global Viewport Visibility  (screen icon)</span></p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:9.0pt;margin-left:.5in;line-height:18.0pt;"><span style="color:black; ">This will show all of your items once they are rendered, but  make them invisible in the viewport. This is normally used for special  circumstances which require other files to have access to your objects.</p>
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/18.png" width="176" height="70" class="imgLeft">
-<br>
-
-<br>
-
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in;line-height:normal;"><span class="MsoIntenseEmphasis">Holdout  (collection only)</span></p>
-
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:9.0pt;margin-left:.5in;line-height:18.0pt;"><span style="color:black; ">This will make objects invisible in both the  Render and Viewport, but you will still have access to them in the outliner.</span><span style="font-family:'Lato',sans-serif; font-size:12.0pt; color:#404040; "> –&nbsp;<em>Cycles only</em>.</span></p>
-
-<p><br>
-  
-  <img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/19.png" width="178" height="64" class="imgLeft"> </p>
-<p><br>
-  
-  
-  
-</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.0in;line-height:normal;"><span class="MsoIntenseEmphasis">Indirect  Only (collection only)</span></p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:9.0pt;margin-left:.5in;line-height:18.0pt;"><span style="color:black; ">This is an optimizing, memory saving option. You can  designate objects to &ldquo;Not&rdquo; cast their own lighting; but instead, just react to  lighting, which is cast by other elements in the scene–&nbsp;<em>Cycles only</em>.</span></p>
-
-<p><br>
-  
-  
-  <img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/20.png" width="174" height="67" class="imgLeft"> </p>
-<p><br>
-  
-  
-  
-</p>
-<h1><a name="_Toc189655836">A  Sort Section</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">The next section in the outliner, provides a checkbox, that  you can toggle, to decide whether you want the items in the outliner to be in  Alphabetical order, or not.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/21.png" width="264" height="174" class="imgLeft">
-
-<h1><a name="_Toc189655837">Search Box</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">You also have a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Search box</span></span> at the top of this  funnel panel. This way if your project becomes massively complex, you can  search for block-data items in your list.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/22.png" width="404" height="107" class="responsiveImage">
-
-<p class="MsoNormal">And the next section of the funnel panel, enables you to  make decisions on how the criteria for that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Search</span></span> box will work.</p>
-
-
-<p><img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/23.png" width="267" height="105" class="imgLeft"></p>
 <p>&nbsp; </p>
-<h1><a name="_Toc189655838">Filter</a></h1>
+
+<h1><a name="_Toc189903384">Move the Front Image Reference into Position</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">The last section of the Funnel Icon button is your filter,  and it deals with what particular items that you want to deal with. You can  toggle these selections on or off, and then the setting that you make in this  panel, will only affect those elements.</p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We don&rsquo;t exactly want our Images on top of each other. So,  while we are in side view, we want to move the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Image Front</span></span> to the left. This  way it lies directly at the left side of our side image, instead of in the  center of it.</p>
+<p class="MsoNormal">Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">G</span></span> key for Move, and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y</span></span> to constrain the move to the Y axis. Our image is sitting here now, to the left  of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Image  Side</span></span>.</p>
 
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/24.png" width="269" height="291" class="responsiveImage">
-<h1><a name="_Toc189655839">The New  Collection Button</a></h1>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/15.png" width="370" height="298" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc189903385">Adding the Back View</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">The last thing that I want to discuss in this tutorial,  about the Outliner, is the ability to create a new collection. You would use  collections if you want to keep certain objects in the scene organized. Let&rsquo;s  say you want to keep the objects that represent people, and the objects that  represent buildings separated. You can put these two types of objects into  different collections in the outliner. Then you can turn whole collections off  with the eye icon, and just work on specific sections of your scene.</p>
-<p class="MsoNormal">Click on this button at the top right of the panel, to add a  new collection.</p>
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/25.png" width="409" height="413" class="responsiveImage">
+<p class="MsoNormal">To view the scene from the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">back</span></span>, we need to hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-1</span></span> on the numpad.  The number 1 is for the front view, and since the back view is the opposite to  the front view, it will be set by hitting the ctrl-1 button on the numpad of  your keyboard.</p>
+<p class="MsoNormal">Notice that when we go to the back view, we are still seeing  the front view of the elephant. That is because we will need to change a few  settings in the property panel to fix this.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/16.png" width="498" height="348" class="responsiveImage">
+
+<p class="MsoNormal"> But for now, just hit  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift-A-Image-reference</span></span> and bring in the reference image for the back.</p>
+
+<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/17.png" width="553" height="370" class="responsiveImage"></p>
 
 
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/26.png" width="438" height="297" class="responsiveImage">
+<p class="MsoNormal">Now Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">3</span></span> key on the key board  numpad. This time we want to move this back image to the right side of Image  Side. Like This. Use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">G</span></span> key and the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y</span></span> key to move and constrain  the move respectively.</p>
 
-<p class="MsoNormal">Now turn off the eye on that first collection that we  created. Clicking on the eye at the end of the Collection line, turns off all  of its children.</p>
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/27.png" width="405" height="265" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now we only see that second collection. The first collection  with the ball and the cube is no longer there.</p>
-
-<img src="Articles/2025/1-Blender-Continued/4-The-Outliner/Images/28.png" width="375" height="294" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Well, that is just all there is to it. The Outliner, all  wrapped up in a nutshell. It really is a very useful tool, and you will find yourself  using different features in this panel all the time.</p>
+<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/18.png" width="620" height="370" class="wideImg"></p>
 <p>&nbsp;</p>
- 
-  <!--Main Article -->
- 
- 
-</article>
-  
+<p>&nbsp;</p>
+
+<h1><a name="_Toc189903386">Setting up the Properties in Property Panel</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">You want to click on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Object Data Properties</span></span> for the  Image section in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Property  Panel</span></span>. Since we have an image selected this icon would have  changed from a green triangle (which is what it is for an object) to an icon  that looks like an image. </p>
+
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/19.png" width="259" height="78" class="imgLeft">
+
+<h1><a name="_Toc189903387">The Offset section of the Property Panel</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">You would use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">offset</span></span> section of the  Property panel to move the image around in the viewport. Notice right now that  the offset is set to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">-0.50</span></span>.  The<span class="BlueBoldenChar"><span style="font-size:12.0pt; "> Y</span></span> setting would move the image up and down, and the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> setting will move the image  from side to side. So, if we set this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y</span></span> option to be <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span>, it will raise up  the image and set it flat on the grid line, and will no longer straddle it. We  can also use this setting to line up the reference images, if your images seem  to be a bit off.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/20.png" width="627" height="328" class="wideImg">
+
+<h1><a name="_Toc189903388">Setting the Opacity</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">This section of the Property panel will deal with the  opacity. To work with these reference images, we actually need to see a bit  through them to the 3D model, so we can work with them with more accuracy. The  setting here for your images will vary. So, you want to be looking at them, while  you can decide just how much opacity that you will need.</p>
+<p class="MsoNormal">We turn this option on by checking on the check box for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Opacity</span></span>. And then  setting it.</p>
+
+<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/21.png" width="306" height="268"></p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<h1><a name="_Toc189903389">Only Viewing Certain sides of the Image</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">To keep these images from confusing the mess out of you  while you have your objects facing at opposing angles, you will want to change  the setting where you can only see the image while you are working in the view  that is specified for it. </p>
+<p class="MsoNormal">For Instance, when we are in front view. We only want to  view the image, in Front view. Otherwise we want the image to be invisible and  stay out of our way.</p>
+<p class="MsoNormal">Click on <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Image Front</span></span> to select it.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/22.png" width="625" height="310" class="wideImg">
+
+
+<p class="MsoNormal">Now in the Property panel, we want to change the Side option  away from the default setting of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Both</span></span> to just <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Front</span></span>. Now you will only  see the image from the front.</p>
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/23.png" width="608" height="314" class="wideImg">
+
+<p class="MsoNormal">But turn the viewport around and you will not see the image  from the back.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/24.png" width="385" height="300" class="responsiveImage">
+
+
+<h1><a name="_Toc189903390">Change The Back Image to Be Viewed Only When in  Back View</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Now when we go to the back, we still need to set the setting  of the View to front, because when we are looking at it from the back, then it  still considered the front for this view also.   A bit confusing, but just set both the back image and the front image to  be <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Front</span></span>.</p>
+<p class="MsoNormal">So, select the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Image Back</span></span>, and change the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Side</span></span> setting to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Front</span></span>.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/25.png" width="370" height="223" class="responsiveImage">
+
+<p class="MsoNormal">We are now only seeing this image from the back</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/26.png" width="397" height="325" class="responsiveImage">
+
+
+
+<h1><a name="_Toc189903391">Constraining Images to be Orthographic View Only</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We also have another setting where we can set the view to  only a straight on angle. That means you must be in Orthographic view in order  to view the image, and to model from it. This can be helpful, because it keeps  you modeling your 3D object from only one angle. This way it will get lopsided  because you are trying to model from all over the place.</p>
+<p class="MsoNormal">Also with perspective set, you do not even see the orange  lines from the border of the image. The entire thing is invisible unless you  select the Orthographic. Remember this is a setting of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1</span></span> from the numpad to  have front view, or <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-1</span></span>,  to view the back. Oh, and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">3</span></span> for or <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl 3</span></span> for the right and left  sides. </p>
+<p class="MsoNormal">Uncheck the perspective view from the Image Back. Now with  this box unchecked, you will see that unless you press <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-1</span></span>, you will not  see the image at all. See the back view has disappeared.</p>
+
+
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/27.png" width="624" height="217" class="wideImg">
+
+<p class="MsoNormal">Now Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-1</span></span>, and you will see the back view. This is your  orthographic angle, and the only one that this image is visible.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/28.png" width="291" height="265" class="responsiveImage">
+
+<p class="MsoNormal">Now turn off the Perspective for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">front view</span></span>, and it  will start behaving in the same manner. The only way you can see the image is  if you hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">number  1</span></span> on the numpad of your key board.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/29.png" width="444" height="280" class="responsiveImage">
+
+
+<p class="MsoNormal">Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1</span></span> on the numpad to see the front image.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/30.png" width="358" height="302" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc189903392">Finish the Opacity changes for all the images</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We want to use the cube, while we are doing this. So, turn  back on the cube in the outliner again.</p>
+<p class="MsoNormal">For the side view, we do not really need it turned down too  much. If it is bright you might want to adjust it to be more comfortable on  your eyes.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/31.png" width="518" height="709" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">You might also want to set the perspective for this one too,  so we do not get any warp from our model building. Since we have the sides set  to both. It will work and we will be able to see it from either the right or  the left side, we are just constricted from doing any rogue modeling.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/32.png" width="416" height="286" class="responsiveImage">
+
+<p class="MsoNormal">Now for the Front, we are going to want to bring this opacity  setting down, since the front image certainly is in front of the object and it  will completely cover it, if we don&rsquo;t.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/33.png" width="622" height="533" class="wideImg">
+
+<p class="MsoNormal">Now we will go to the back, and bring down the opacity for  this one as well.  Since the reference  image for the back is also blocking the view of the object.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/34.png" width="371" height="308" class="responsiveImage">
+
+<p class="MsoNormal">The opacity setting of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0.318</span></span> seems to work out well  for these reference images. Yours may be different.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/35.png" width="624" height="342" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+
+<h1><a name="_Toc189903393">Making the Reference Images to be non-selectable</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Remember, from last week&rsquo;s tutorial that we are able to make  elements in the outliner, become un-selectable, but we need to open the funnel  menu in the outliner, and turn on this option first.</p>
+<p class="MsoNormal">Open this funnel button and then turn on this arrow, which  is facing left and upward.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/36.png" width="464" height="153" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Now we can see that we have added the select-ability option  button to the outliner, and so now we can use it.</p>
+<p class="MsoNormal">Turn off the selectable button that now lies to the right of  the Reference images Collection. All of the images, which are children of the  collection will be affected, and will turn off too.</p>
+
+<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/37.png" width="457" height="293" class="responsiveImage">
+
+<p class="MsoNormal">So, now if you attempt to select any one of the images, it  will have no effect. This is what we want as we do not want these images moving  around while we are modeling.</p>
+<p class="MsoNormal">The more reference images that you have, the better. You can  have top views and bottom views, and some even have views from different  perspective angle while in side view. Reference Images are a great way to start  any project, and this is a great way to end this tutorial.</p>
+
+
+<p>&nbsp;</p></article>
+
+
+
+
 
   
   
