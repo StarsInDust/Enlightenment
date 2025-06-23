@@ -7,34 +7,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bringing in a Reference Image</title>
+    <title>Making a 3D Object From a 2D Image</title>
     
-    <meta name="title" content=" Bringing in a Reference Image ">
+   <meta name="title" content="Making a 3D Object From a 2D Image">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" Bringing in a Reference Image, Blender, 3D Modeling, Animation, Graphic Art "/>
+<meta name="keywords" content=" Making a 3D Object From a 2D Image, Blender, 3D Modeling, Animation, Graphic Art "/>
 
 
-<meta name="description" content="This article explains how to bring in a Reference Image in Blender/>
+<meta name="description" content="This article explains how to turn a 2D Image into a 3D Object in Blender/>
 
-<meta name="category" content="Bringing in a Reference Image, Blender, 3D Modeling, Animation, Graphic Art">
+<meta name="category" content="Making a 3D Object From a 2D Image, Blender, 3D Modeling, Animation, Graphic Art">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Saturday, February 8, 2025" />
+<meta name="revised" content="Monday, February 10, 2025" />
 
-<meta name="url" content="https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Bringing-In-A-Reference-Image.html">
-
-
-
-
-    
-    
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Making-a-3D-Object-From-a-2D-Image.html">
+ 
     
     
     
@@ -47,7 +42,6 @@
 
 <link href="CSS/myStyles.css" rel="stylesheet" type="text/css">
 <link href="CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
-
 
 
 <style type="text/css">
@@ -78,281 +72,248 @@
   
   <!--Main Article -->
   
-  <p class="h2Black" >~Bringing in a Reference Image~</p>
+  <p class="h2Black" >~Making a 3D Object From a 2D Image~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >6/16/2025</p>
-   
-   <br>
+   <p class="articleDate" style="text-align:right" >6/23/2025<br>
 <br>
-
-<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-
-<p class="tableOfContents"><a href="#_Toc189903378">Getting Started</a><span style="line-height:115%; font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903379">Setting up</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903380">Add a New Collection</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903381">Adding the Front   Reference Image</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903382">Naming the Reference   Image</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903383">Adding the Side View</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903384">Move the Front Image   Reference into Position</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903385">Adding the Back View</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903386">Setting up the Properties   in Property Panel</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903387">The Offset section of the   Property Panel</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903388">Setting the Opacity</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903389">Only Viewing Certain   sides of the Image</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903390">Change The Back Image to   Be Viewed Only When in Back View</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903391">Constraining Images to be   Orthographic View Only</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903392">Finish the Opacity   changes for all the images</a><span style="font-size:12.0pt; "> </span></p>
-<p class="tableOfContents"><a href="#_Toc189903393">Making the Reference   Images to be non-selectable</a><span style="font-size:12.0pt; "> </span></p>
+</p>
+   <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
 
 
+<p class="tableOfContents"><a href="#_Toc190000781">Start with the Cube</a></p>
+<p class="tableOfContents"><a href="#_Toc190000782">Obtain a Reference Image</a></p>
+<p class="tableOfContents"><a href="#_Toc190000783">Set the View Port at the   Correct Angle</a></p>
+<p class="tableOfContents"><a href="#_Toc190000784">Bring in the Image</a></p>
+<p class="tableOfContents"><a href="#_Toc190000785">Edit Mode</a></p>
+<p class="tableOfContents"><a href="#_Toc190000786">Merge the cube into a   single Vertex</a></p>
+<p class="tableOfContents"><a href="#_Toc190000787">Start Tracing the Object</a></p>
+<p class="tableOfContents"><a href="#_Toc190000788">To select your entire   outline</a></p>
+<p class="tableOfContents"><a href="#_Toc190000789">Flatten the outline on   the Floor</a></p>
+<p class="tableOfContents"><a href="#_Toc190000790">Fill the outline</a></p>
+<p class="tableOfContents"><a href="#_Toc190000791">To Create a Separate   Object</a></p>
+<p class="tableOfContents"><a href="#_Toc190000792">Extrude out the new   faces.</a></p>
+<p class="tableOfContents"><a href="#_Toc190000793">Material Property panel</a></p>
 
-<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/1.png" width="270" height="245" class="imgLeft"></p>
+
+<p><img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/1.png" width="274" height="239" class="imgLeft"></p>
 <p>&nbsp; </p>
-<h1><a name="_Toc189903378">Getting Started</a></h1>
+<h1><a name="_Toc190000781">Start with the Cube</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
 <p>&nbsp;</p>
-<p class="MsoNormal">One of the first steps that you will want to be able to do,  when starting a 3D project in Blender, is to bring in a reference image. So, you  can either create your own reference images, or bring in some stock images that  are ready to take into the 3D world of Blender. You will want a front, back and  side view image.</p>
-<p class="MsoNormal">When you are a beginner, it might be easier to start off  with some images that have already been made for this purpose. You may have to  fine tune the lining up of these images either way; however, Blender is  equipped to handle the shifting around of your image, and having them already  created for you can be a lot easier, and save you both time; as well as,  headaches.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/2.png" width="622" height="197" class="wideImg">
-
-<p class="MsoNormal">As we move along in this tutorial, you may find us using a  few things that we have all ready covered in previous tutorials.</p>
-
-
-<h1><a name="_Toc189903379">Setting up</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal"><span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">Open</span></span> <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Blender</span></span>, we can begin with  our cube on the page.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/3.png" width="339" height="241" class="responsiveImage">
-
-<p class="MsoNormal">Hitting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">5</span></span> key on the numpad in  Blender, will toggle us from Orthographic mode to Perspective mode. We want to  be in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Orthographic</span></span> mode. Now hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1 </span></span>key on the numpad and that will put the cube front and center in  the screen. You will want to be in this visual position to bring in the  Reference image.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/4.png" width="622" height="346" class="wideImg">
-
-
-
-<h1><a name="_Toc189903380">Add a New Collection</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p class="MsoNormal">You can close the collection with the cube in it and hide it.  Remember that you can do this by hitting the eye at the end of the Collection  line in the outliner. Now your cube will no longer be visible on the screen. It  will still be there; we just hid it so it will be out of the way.</p>
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/5.png" width="224" height="179" class="imgLeft">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now add a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">New Collection</span></span> to the Outliner.  You might have to make your panel wider to  see and have access to the New Collection button at the top of the outliner.</p>
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/6.png" width="231" height="103" class="imgLeft">
-
-<p class="MsoNormal">Rename this new collection to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Reference Images</span></span>.</p>
-<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/7.png" width="357" height="174" class="responsiveImage"></p>
+<p class="MsoNormal">We are going to start this project by opening Blender. Then  just use the cube, but honestly for doing something like this, we could use  just about any object. This is because all we really want to do with it, is to  steal one of it dots. Or as Blender likes to refer to them, we want to  confiscate one of them - thar vertices.</p>
+<p><img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/2.png" width="512" height="339" class="responsiveImage"></p>
 <p>&nbsp;</p>
 <p>&nbsp; </p>
-<h1><a name="_Toc189903381">Adding the Front Reference Image</a></h1>
+<h1><a name="_Toc190000782">Obtain a Reference Image</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
 <p>&nbsp;</p>
-<p class="MsoNormal">Back in the Viewport of the program. Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift A- Image -Reference</span></span>.</p>
+<p class="MsoNormal">Next, what we want to do, is to get some image from Google.  I am going to make this one super simple and just start out with the Apple  Logo.</p>
 
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/8.png" width="455" height="373" class="responsiveImage">
-
-<p class="MsoNormal">Browse to your images for your 3D model, and choose the one  that represents the front orientation. Since we have the view in our viewport  set to Orthographic mode first, this image should now come in perfectly, at the  front view angle. Because that is what we set it at.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/9.png" width="619" height="185" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/10.png" width="624" height="386" class="wideImg">
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/3.png" width="192" height="193" class="imgLeft">
 
 
-<h1><a name="_Toc189903382">Naming the Reference Image</a></h1>
+<h1><a name="_Toc190000783">Set the View Port at the Correct Angle</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">With that Image Reference Selected, we can hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">F2 </span></span>key at the top of  our key board, and that will bring up a textbox where we can name the image  that we just brought in.</p>
 
-<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/11.png" width="452" height="226" class="responsiveImage"></p>
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Before we add the reference image, we want to make sure that  we bring this image in at the right angle. Since we want to do a trace of the  object, and we want the object to appear as if it is lying flat on the floor,  we want to bring this image in from the top view. That way when we complete  this trace, it will appear as if we are looking down on it.</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/4.png" width="628" height="311" class="wideImg">
+
+<p class="MsoNormal">Now <span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">IF</span></span> instead, you want  your object to be standing up, then you will want to bring in the image from  the front view.</p>
+<p class="MsoNormal"> </p>
+
+<h1><a name="_Toc190000784">Bring in the Image</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="BlueBolden">Shift -A-Image Reference</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/5.png" width="624" height="294" class="wideImg">
+
+<p class="MsoNormal">Here is the reference Image, after it is brought in.</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/6.png" width="325" height="284" class="responsiveImage">
+
+<h1><a name="_Toc190000785">Edit Mode</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Make sure you have the <span class="boldBlueChar"><span style="font-size:12.0pt; ">cube selected,</span></span> and then go  from Object mode to <span class="boldBlueChar"><span style="font-size:12.0pt; ">Edit </span></span>mode. So, we can begin working on our project.</p>
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/7.png" width="265" height="110" class="imgLeft">
+<p class="MsoNormal">Once in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode you want to hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A </span></span>key to select  everything. Your cube should have an orange outline around the entire thing  now.</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/8.png" width="309" height="258" class="responsiveImage">
+
+<h1><a name="_Toc190000786">Merge the cube into a single Vertex</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Now with the cube completely selected we want to hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">M</span></span> key on our  keyboard. This is the hot key for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">merge</span></span>. Then just select the  option that says: <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Merge  at Center</span></span>.</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/9.png" width="369" height="266" class="responsiveImage">
+
+
+<p class="MsoNormal">Where we see this orange dot here, is where our vertex is.  You can click on it to make sure the vertex is selected; it will turn white. I  find that either leaving it orange or selecting it and turning it white that I  still am able to move it, and then you can move it.</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/10.png" width="376" height="309" class="responsiveImage">
+
+
+<h1><a name="_Toc190000787">Start Tracing the Object</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">Since we want that vertex to be on the edge of the apple, so  that we can trace it. We want to hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">G</span></span> key on the keyboard to <span class="BoldRedChar"><span style="font-size:12.0pt; ">G</span></span><span class="boldBlueChar"><span style="font-size:12.0pt; ">rab</span></span> it, and then move it to  the outline edge of the apple.</p>
+
+<p><img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/11.png" width="455" height="308" class="responsiveImage"></p>
+<p>&nbsp;</p>
 <p>&nbsp; </p>
 <p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc189903383">Adding the Side View</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Now we are going to do the same thing, and bring in the side  view. This time in order to bring it in correctly we need to have the view port  set to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Right  Orthographic</span></span> view Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">3 </span></span>key on the numpad to turn  it to the side view. Our first image that we brought in to represent the front  view will now only look like a very thin line, from this side view optical  angle.</p>
+<p class="MsoNormal">Now hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> key to start <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">extruding </span></span>this dot  along the edge of the apple, every time you hit the E key, you create a new  vertex; and so it is like we are tracing, or stitching around the border of the  apple.</p>
+<p class="MsoNormal">Take the first and last vertex, and merge them together to  close the outline. Hitting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">M </span></span>key will merge these two  vertices together.</p>
 
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/12.png" width="544" height="350" class="wideImg">
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/12.png" width="410" height="239" class="responsiveImage">
+
+
+<p class="MsoNormal"><a name="_Toc190000788"><span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; ">To select your entire outline</span></span></a>.</p>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+
+<p class="MsoNormal">Hold down the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">alt key</span></span> and then <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">left click</span></span> on one of  the vertices that you just created to select the entire outline.</p>
+
+
+<h1><a name="_Toc190000789">Flatten the outline on the Floor</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
+<p>&nbsp;</p>
+<p class="MsoNormal">If after creating the outline you find that it is not flat</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/13.png" width="548" height="307" class="responsiveImage">
+
+<p class="MsoNormal">We want to scale it on the Z axis to 0</p>
+<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">S</span></span> key to scale, the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Z</span></span> key, then hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span> key on the numpad.</p>
+<p class="BlueBolden">S, Z, 0</p>
+<p class="MsoNormal">Now hit the 1 key on the numpad to go to orthographic front  view.</p>
+<p class="MsoNormal">Your Vertices should now be Flat</p>
+<p class="BlueBolden">14</p>
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift  – A – Image- Reference</span></span> and bring in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Side</span></span> image</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/13.png" width="500" height="201" class="responsiveImage">
-
-<p class="MsoNormal">Press <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">F2</span></span> and name this one <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Image Side</span></span>.</p>
-
-<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/14.png" width="419" height="334" class="responsiveImage"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
-
-<h1><a name="_Toc189903384">Move the Front Image Reference into Position</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p class="MsoNormal">We don&rsquo;t exactly want our Images on top of each other. So,  while we are in side view, we want to move the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Image Front</span></span> to the left. This  way it lies directly at the left side of our side image, instead of in the  center of it.</p>
-<p class="MsoNormal">Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">G</span></span> key for Move, and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y</span></span> to constrain the move to the Y axis. Our image is sitting here now, to the left  of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Image  Side</span></span>.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/15.png" width="370" height="298" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc189903385">Adding the Back View</a></h1>
+<h1><a name="_Toc190000790">Fill the outline</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">To view the scene from the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">back</span></span>, we need to hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-1</span></span> on the numpad.  The number 1 is for the front view, and since the back view is the opposite to  the front view, it will be set by hitting the ctrl-1 button on the numpad of  your keyboard.</p>
-<p class="MsoNormal">Notice that when we go to the back view, we are still seeing  the front view of the elephant. That is because we will need to change a few  settings in the property panel to fix this.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/16.png" width="498" height="348" class="responsiveImage">
-
-<p class="MsoNormal"> But for now, just hit  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift-A-Image-reference</span></span> and bring in the reference image for the back.</p>
-
-<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/17.png" width="553" height="370" class="responsiveImage"></p>
 
 
-<p class="MsoNormal">Now Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">3</span></span> key on the key board  numpad. This time we want to move this back image to the right side of Image  Side. Like This. Use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">G</span></span> key and the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y</span></span> key to move and constrain  the move respectively.</p>
-
-<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/18.png" width="620" height="370" class="wideImg"></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<p class="MsoNormal">Now with the entire line selected, you want to hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">F</span></span> key to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">fill the outline</span></span>.</p>
 
-<h1><a name="_Toc189903386">Setting up the Properties in Property Panel</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">You want to click on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Object Data Properties</span></span> for the  Image section in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Property  Panel</span></span>. Since we have an image selected this icon would have  changed from a green triangle (which is what it is for an object) to an icon  that looks like an image. </p>
-
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/19.png" width="259" height="78" class="imgLeft">
-
-<h1><a name="_Toc189903387">The Offset section of the Property Panel</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">You would use the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">offset</span></span> section of the  Property panel to move the image around in the viewport. Notice right now that  the offset is set to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">-0.50</span></span>.  The<span class="BlueBoldenChar"><span style="font-size:12.0pt; "> Y</span></span> setting would move the image up and down, and the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> setting will move the image  from side to side. So, if we set this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y</span></span> option to be <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span>, it will raise up  the image and set it flat on the grid line, and will no longer straddle it. We  can also use this setting to line up the reference images, if your images seem  to be a bit off.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/20.png" width="627" height="328" class="wideImg">
-
-<h1><a name="_Toc189903388">Setting the Opacity</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">This section of the Property panel will deal with the  opacity. To work with these reference images, we actually need to see a bit  through them to the 3D model, so we can work with them with more accuracy. The  setting here for your images will vary. So, you want to be looking at them, while  you can decide just how much opacity that you will need.</p>
-<p class="MsoNormal">We turn this option on by checking on the check box for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Opacity</span></span>. And then  setting it.</p>
-
-<p><img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/21.png" width="306" height="268"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
-<h1><a name="_Toc189903389">Only Viewing Certain sides of the Image</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">To keep these images from confusing the mess out of you  while you have your objects facing at opposing angles, you will want to change  the setting where you can only see the image while you are working in the view  that is specified for it. </p>
-<p class="MsoNormal">For Instance, when we are in front view. We only want to  view the image, in Front view. Otherwise we want the image to be invisible and  stay out of our way.</p>
-<p class="MsoNormal">Click on <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Image Front</span></span> to select it.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/22.png" width="625" height="310" class="wideImg">
-
-
-<p class="MsoNormal">Now in the Property panel, we want to change the Side option  away from the default setting of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Both</span></span> to just <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Front</span></span>. Now you will only  see the image from the front.</p>
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/23.png" width="608" height="314" class="wideImg">
-
-<p class="MsoNormal">But turn the viewport around and you will not see the image  from the back.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/24.png" width="385" height="300" class="responsiveImage">
-
-
-<h1><a name="_Toc189903390">Change The Back Image to Be Viewed Only When in  Back View</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Now when we go to the back, we still need to set the setting  of the View to front, because when we are looking at it from the back, then it  still considered the front for this view also.   A bit confusing, but just set both the back image and the front image to  be <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Front</span></span>.</p>
-<p class="MsoNormal">So, select the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Image Back</span></span>, and change the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Side</span></span> setting to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Front</span></span>.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/25.png" width="370" height="223" class="responsiveImage">
-
-<p class="MsoNormal">We are now only seeing this image from the back</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/26.png" width="397" height="325" class="responsiveImage">
-
-
-
-<h1><a name="_Toc189903391">Constraining Images to be Orthographic View Only</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p class="MsoNormal">We also have another setting where we can set the view to  only a straight on angle. That means you must be in Orthographic view in order  to view the image, and to model from it. This can be helpful, because it keeps  you modeling your 3D object from only one angle. This way it will get lopsided  because you are trying to model from all over the place.</p>
-<p class="MsoNormal">Also with perspective set, you do not even see the orange  lines from the border of the image. The entire thing is invisible unless you  select the Orthographic. Remember this is a setting of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1</span></span> from the numpad to  have front view, or <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-1</span></span>,  to view the back. Oh, and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">3</span></span> for or <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl 3</span></span> for the right and left  sides. </p>
-<p class="MsoNormal">Uncheck the perspective view from the Image Back. Now with  this box unchecked, you will see that unless you press <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-1</span></span>, you will not  see the image at all. See the back view has disappeared.</p>
-
-
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/27.png" width="624" height="217" class="wideImg">
-
-<p class="MsoNormal">Now Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl-1</span></span>, and you will see the back view. This is your  orthographic angle, and the only one that this image is visible.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/28.png" width="291" height="265" class="responsiveImage">
-
-<p class="MsoNormal">Now turn off the Perspective for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">front view</span></span>, and it  will start behaving in the same manner. The only way you can see the image is  if you hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">number  1</span></span> on the numpad of your key board.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/29.png" width="444" height="280" class="responsiveImage">
-
-
-<p class="MsoNormal">Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1</span></span> on the numpad to see the front image.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/30.png" width="358" height="302" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/15.png" width="624" height="544" class="wideImg">
 <p class="BlueBolden">&nbsp;</p>
 <p class="BlueBolden">&nbsp;</p>
 <p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc189903392">Finish the Opacity changes for all the images</a></h1>
+<h1><a name="_Toc190000791">To Create a Separate Object</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
 <p>&nbsp;</p>
-<p class="MsoNormal">We want to use the cube, while we are doing this. So, turn  back on the cube in the outliner again.</p>
-<p class="MsoNormal">For the side view, we do not really need it turned down too  much. If it is bright you might want to adjust it to be more comfortable on  your eyes.</p>
+<p class="MsoNormal">Object mode top view.</p>
 
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/31.png" width="518" height="709" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/16.png" width="296" height="169" class="imgLeft">
 <p class="BlueBolden">&nbsp;</p>
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">You might also want to set the perspective for this one too,  so we do not get any warp from our model building. Since we have the sides set  to both. It will work and we will be able to see it from either the right or  the left side, we are just constricted from doing any rogue modeling.</p>
+<p class="MsoNormal">If you added the <span class="BlueBoldenChar"><span style="font-size:12.0pt; "><a href="Articles/2025/1-Blender-Continued/Z-Extra-Linked-Tutorial-Files/1-Adding-Extra-Mesh-Objects/Adding-Extra-Mesh-Objects.html" target="_blank">extra meshes</a></span></span> from the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Preference menu</span></span> you  can actually add a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">single  vert</span></span> from the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">add</span></span> menu.</p>
 
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/32.png" width="416" height="286" class="responsiveImage">
-
-<p class="MsoNormal">Now for the Front, we are going to want to bring this opacity  setting down, since the front image certainly is in front of the object and it  will completely cover it, if we don&rsquo;t.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/33.png" width="622" height="533" class="wideImg">
-
-<p class="MsoNormal">Now we will go to the back, and bring down the opacity for  this one as well.  Since the reference  image for the back is also blocking the view of the object.</p>
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/34.png" width="371" height="308" class="responsiveImage">
-
-<p class="MsoNormal">The opacity setting of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0.318</span></span> seems to work out well  for these reference images. Yours may be different.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/35.png" width="624" height="342" class="wideImg">
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/17.png" width="428" height="65" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Now bring that vertex into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode</p>
 
-<h1><a name="_Toc189903393">Making the Reference Images to be non-selectable</a></h1>
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/18.png" width="211" height="79" class="imgLeft">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">G</span></span> key and move this single vertex to the outline of  the stem.</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/19.png" width="315" height="242" class="responsiveImage">
+
+<p class="MsoNormal">Now extrude this vertex and then merge or fill the first and  last vertex that you created along this edge. To use the merge method, you  would press the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">M</span></span> key on the keyboard and select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Merge at Center</span></span>. Or, you can  select the first and last vertices and hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">F</span></span> key to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fill</span></span> it with an edge.</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/20.png" width="327" height="210" class="responsiveImage">
+
+<p class="MsoNormal">After hitting <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">F</span></span> to fill edge between the  first and last vertex.</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/21.png" width="278" height="217" class="responsiveImage">
+
+<p class="MsoNormal">Now hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">alt key</span></span> with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">left mouse button</span></span>,  select a vertex along this edge. Once again this is an easy way to select the  entire outline</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/22.png" width="292" height="498" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc190000792">Extrude out the new faces.</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+
+
 <p>&nbsp;</p>
-<p class="MsoNormal">Remember, from last week&rsquo;s tutorial that we are able to make  elements in the outliner, become un-selectable, but we need to open the funnel  menu in the outliner, and turn on this option first.</p>
-<p class="MsoNormal">Open this funnel button and then turn on this arrow, which  is facing left and upward.</p>
+<p class="MsoNormal">Go back to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">object</span></span> mode and click on both  the apple and the leaf to select multiple objects, and bring them both into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit </span></span>mode.</p>
 
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/36.png" width="464" height="153" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/23.png" width="562" height="429" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now we can see that we have added the select-ability option  button to the outliner, and so now we can use it.</p>
-<p class="MsoNormal">Turn off the selectable button that now lies to the right of  the Reference images Collection. All of the images, which are children of the  collection will be affected, and will turn off too.</p>
+<p class="MsoNormal">Back in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode, select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Face</span></span> mode</p>
 
-<img src="Articles/2025/1-Blender-Continued/5-Bringing-In-A-Reference-Image/Images/37.png" width="457" height="293" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/24.png" width="376" height="468" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Go to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Front</span></span> orthographic mode. The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1</span></span> on the numpad. Hit  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> key to extrude each of the two items on the screen.</p>
 
-<p class="MsoNormal">So, now if you attempt to select any one of the images, it  will have no effect. This is what we want as we do not want these images moving  around while we are modeling.</p>
-<p class="MsoNormal">The more reference images that you have, the better. You can  have top views and bottom views, and some even have views from different  perspective angle while in side view. Reference Images are a great way to start  any project, and this is a great way to end this tutorial.</p>
-
-
-<p>&nbsp;</p></article>
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/25.png" width="513" height="264" class="responsiveImage">
 
 
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/26.png" width="323" height="316" class="responsiveImage">
+
+<h1><a name="_Toc190000793">Material Property panel</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 
 
+<p>&nbsp;</p>
+<p class="MsoNormal">Go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">material</span></span> section of the property panel, and change  the color of each object.</p>
 
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/27.png" width="49" height="60" class="imgLeft">
+
+<p class="MsoNormal">You must be in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Material</span></span> mode, which you can  set at the top of the view port, to see our color change.</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/28.png" width="223" height="99" class="imgLeft">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Select the apple and turn it red from the property panel,  and then change the stem to be green. You will have to click on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">New</span></span> button to change  colors from Red to Green after selecting the leaf to change its color.</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/29.png" width="353" height="632" class="responsiveImage">
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/30.png" width="509" height="370" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Turn off the eye for the Reference image</p>
+
+<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/31.png" width="507" height="580" class="responsiveImage">
+
+
+<p class="MsoNormal">Well, that is about it for this tutorial. I hope you enjoyed  learning how to create a 3D object from a very simple image.</p>
+<p>&nbsp;</p>
+<p class="pMidBlack">&nbsp;</p>
+ 
+  <!-- End Main Article -->
+ 
+ 
+</article>
+  
+  
+  
   
   
   <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
