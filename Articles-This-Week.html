@@ -7,33 +7,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Making a 3D Object From a 2D Image</title>
+    <title>1 Introduction to Loop Tools</title>
     
-   <meta name="title" content="Making a 3D Object From a 2D Image">
+    
+   <meta name="title" content="1 Introduction to Loop Tools ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" Making a 3D Object From a 2D Image, Blender, 3D Modeling, Animation, Graphic Art "/>
+<meta name="keywords" content=" Loop Tools, Blender, 3D Modeling, Animation, Graphic Art "/>
 
 
-<meta name="description" content="This article explains how to turn a 2D Image into a 3D Object in Blender/>
+<meta name="description" content="This article explains a brief introduction to Loop Tools in Blender/>
 
-<meta name="category" content="Making a 3D Object From a 2D Image, Blender, 3D Modeling, Animation, Graphic Art">
+<meta name="category" content="Loop Tools, Blender, 3D Modeling, Animation, Graphic Art">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Monday, February 10, 2025" />
+<meta name="revised" content="Wednesday, February 12, 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Making-a-3D-Object-From-a-2D-Image.html">
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2025/1-Blender-Continued/7-Loop-Tools/1-Introduction-To-Loop-Tools/1-Introduction-To-Loop-Tools.html">
  
-    
-    
-    
-    
     
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
 
@@ -47,7 +44,6 @@
 <style type="text/css">
   /* Add custom styles here if needed */
 </style>
-
 
 </head>
 
@@ -72,248 +68,94 @@
   
   <!--Main Article -->
   
-  <p class="h2Black" >~Making a 3D Object From a 2D Image~</p>
+  <p class="h2Black" >~1 Introduction to Loop Tools~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >6/23/2025<br>
+   <p class="articleDate" style="text-align:right" >6/30/2025</p>
+   
+   <br>
 <br>
-</p>
-   <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+
+<p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
+
+<p class="tableOfContents"><a href="#_Toc190169279">Introduction to Loop Tools</a></p>
+<p class="tableOfContents"><a href="#_Toc190169280">How to Turn on Loop Tools</a></p>
+<p class="tableOfContents"><a href="#_Toc190169281">What Tools are available   in the Loop Tools?</a></p>
+<p class="tableOfContents"><a href="#_Toc190169282">How to Bring in an Object   correctly</a></p>
+<p class="tableOfContents"><a href="#_Toc190169283">Joining an Object</a></p>
 
 
-<p class="tableOfContents"><a href="#_Toc190000781">Start with the Cube</a></p>
-<p class="tableOfContents"><a href="#_Toc190000782">Obtain a Reference Image</a></p>
-<p class="tableOfContents"><a href="#_Toc190000783">Set the View Port at the   Correct Angle</a></p>
-<p class="tableOfContents"><a href="#_Toc190000784">Bring in the Image</a></p>
-<p class="tableOfContents"><a href="#_Toc190000785">Edit Mode</a></p>
-<p class="tableOfContents"><a href="#_Toc190000786">Merge the cube into a   single Vertex</a></p>
-<p class="tableOfContents"><a href="#_Toc190000787">Start Tracing the Object</a></p>
-<p class="tableOfContents"><a href="#_Toc190000788">To select your entire   outline</a></p>
-<p class="tableOfContents"><a href="#_Toc190000789">Flatten the outline on   the Floor</a></p>
-<p class="tableOfContents"><a href="#_Toc190000790">Fill the outline</a></p>
-<p class="tableOfContents"><a href="#_Toc190000791">To Create a Separate   Object</a></p>
-<p class="tableOfContents"><a href="#_Toc190000792">Extrude out the new   faces.</a></p>
-<p class="tableOfContents"><a href="#_Toc190000793">Material Property panel</a></p>
+<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/1-Introduction-To-Loop-Tools/Images/1.png" width="268" height="243" class="responsiveImage"></p>
 
-
-<p><img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/1.png" width="274" height="239" class="imgLeft"></p>
-<p>&nbsp; </p>
-<h1><a name="_Toc190000781">Start with the Cube</a></h1>
+<h1><a name="_Toc190169279">Introduction to Loop Tools</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">For the next couple of weeks, I will be presenting a set of  tools, which can be found in Blender. These things are called <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Loop Tools</span></span>, and they  are an amazing addition to your arsenal of gadgets. This is something that you  are most definitely going to want to add. Because they make a whole lot of  procedures that you are going to want to do in Blender, a whole lot easier.</p>
+<p class="MsoNormal">The Loop tools are only available in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode, so you won&rsquo;t  even find them if you try to access them in any other workspace.</p>
+<br>
+
+<p class="MsoNormal"><img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/1-Introduction-To-Loop-Tools/Images/2.png" width="297" height="86" class="responsiveImage"></p>
 
 
-<p>&nbsp;</p>
-<p class="MsoNormal">We are going to start this project by opening Blender. Then  just use the cube, but honestly for doing something like this, we could use  just about any object. This is because all we really want to do with it, is to  steal one of it dots. Or as Blender likes to refer to them, we want to  confiscate one of them - thar vertices.</p>
-<p><img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/2.png" width="512" height="339" class="responsiveImage"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
-<h1><a name="_Toc190000782">Obtain a Reference Image</a></h1>
+<p class="MsoNormal">The thing about these Loop Tools, are that they are not  automatically given to you. Oh, Blender has them, but you will need to turn  them on first. This is similar to the way that your additional mesh items were  added to Blender, which were explained in an earlier tutorial. So, we will need  to be going into our Settings again.</p>
+
+
+<h1><a name="_Toc190169280">How to Turn on Loop Tools</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
 <p>&nbsp;</p>
-<p class="MsoNormal">Next, what we want to do, is to get some image from Google.  I am going to make this one super simple and just start out with the Apple  Logo.</p>
+<p class="MsoNormal">You will want to go to:</p>
+<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit-Preferences-  Add-ons</span></span> then just enable <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop Tools</span></span>.</p>
 
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/3.png" width="192" height="193" class="imgLeft">
+<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/1-Introduction-To-Loop-Tools/Images/3.png" width="625" height="494" class="wideImg">
 
-
-<h1><a name="_Toc190000783">Set the View Port at the Correct Angle</a></h1>
+<h1><a name="_Toc190169281">What Tools are available in the Loop Tools?</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
 <p>&nbsp;</p>
-<p class="MsoNormal">Before we add the reference image, we want to make sure that  we bring this image in at the right angle. Since we want to do a trace of the  object, and we want the object to appear as if it is lying flat on the floor,  we want to bring this image in from the top view. That way when we complete  this trace, it will appear as if we are looking down on it.</p>
+<p class="MsoNormal">Once you are in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode, you can <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">right  click</span></span> on the object, and then you will see you have access to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop Tools</span></span>.</p>
 
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/4.png" width="628" height="311" class="wideImg">
+<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/1-Introduction-To-Loop-Tools/Images/4.png" width="296" height="85" class="responsiveImage">
 
-<p class="MsoNormal">Now <span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">IF</span></span> instead, you want  your object to be standing up, then you will want to bring in the image from  the front view.</p>
-<p class="MsoNormal"> </p>
+<p class="MsoNormal">These are the Tools that are available:</p>
 
-<h1><a name="_Toc190000784">Bring in the Image</a></h1>
+<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/1-Introduction-To-Loop-Tools/Images/5.png" width="556" height="275" class="responsiveImage">
+
+
+<h1><a name="_Toc190169282">How to Bring in an Object correctly</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
 <p>&nbsp;</p>
-<p class="BlueBolden">Shift -A-Image Reference</p>
+<p class="MsoNormal">Before you can bring your object into the Edit work space,  you want to make sure that you are doing things correctly. The problem is  Blender needs to think that this object is just one entity, and the tools will  not work if it does not look at your model in this way.</p>
+<p class="MsoNormal">Sometimes you will only be working on one mesh object, then  you can bring that object into the Edit mode work space just fine. Once it is  in there you can separate that one object making it appear to be two, but doing  this separation in edit mode, will still have Blender thinking that it is  working with just one object.</p>
+<p class="MsoNormal">The below image is displaying just one object; it is a plane  that we brought into edit mode. Then we did a few things to it, and just cut it  in half, while still in edit mode. So, Blender will still think of it as just  one object. This way there is no need to do anything prior to bringing it in to  the Edit mode work space.</p>
 
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/5.png" width="624" height="294" class="wideImg">
+<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/1-Introduction-To-Loop-Tools/Images/6.png" width="344" height="273" class="responsiveImage">
 
-<p class="MsoNormal">Here is the reference Image, after it is brought in.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/6.png" width="325" height="284" class="responsiveImage">
-
-<h1><a name="_Toc190000785">Edit Mode</a></h1>
+<h1><a name="_Toc190169283">Joining an Object</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
 <p>&nbsp;</p>
-<p class="MsoNormal">Make sure you have the <span class="boldBlueChar"><span style="font-size:12.0pt; ">cube selected,</span></span> and then go  from Object mode to <span class="boldBlueChar"><span style="font-size:12.0pt; ">Edit </span></span>mode. So, we can begin working on our project.</p>
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/7.png" width="265" height="110" class="imgLeft">
-<p class="MsoNormal">Once in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode you want to hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A </span></span>key to select  everything. Your cube should have an orange outline around the entire thing  now.</p>
+<p class="MsoNormal">On the other hand, if you start off with two different  objects in Object Mode, you will first need to join these two objects together,  so the Blender see them as one object.</p>
+<p class="MsoNormal">To <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">join</span></span> an object together, we <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">select both objects</span></span> and then hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">ctrl  key</span></span> with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">J key</span></span> on the key board. The image below is not yet  joined because you will see that the top cylinder has a red selection outline  around it, and the bottom cylinder has an orange one.</p>
 
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/8.png" width="309" height="258" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/1-Introduction-To-Loop-Tools/Images/7.png" width="260" height="259" class="responsiveImage">
 
-<h1><a name="_Toc190000786">Merge the cube into a single Vertex</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p class="MsoNormal">Now hit:</p>
+<p class="BlueBolden">Ctrl-J</p>
+<p class="MsoNormal">You will know they have been joined because both of the  outlines will be orange.</p>
 
+<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/1-Introduction-To-Loop-Tools/Images/8.png" width="370" height="344" class="responsiveImage">
 
-<p>&nbsp;</p>
-<p class="MsoNormal">Now with the cube completely selected we want to hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">M</span></span> key on our  keyboard. This is the hot key for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">merge</span></span>. Then just select the  option that says: <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Merge  at Center</span></span>.</p>
+<p class="MsoNormal">Now you can bring this joined object into the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">work space,</span></span> and start  working on it, using the Loop tools. This way working with Loop tools will be  just fine.</p>
 
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/9.png" width="369" height="266" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/1-Introduction-To-Loop-Tools/Images/9.png" width="355" height="324" class="responsiveImage">
 
-
-<p class="MsoNormal">Where we see this orange dot here, is where our vertex is.  You can click on it to make sure the vertex is selected; it will turn white. I  find that either leaving it orange or selecting it and turning it white that I  still am able to move it, and then you can move it.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/10.png" width="376" height="309" class="responsiveImage">
-
-
-<h1><a name="_Toc190000787">Start Tracing the Object</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">Since we want that vertex to be on the edge of the apple, so  that we can trace it. We want to hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">G</span></span> key on the keyboard to <span class="BoldRedChar"><span style="font-size:12.0pt; ">G</span></span><span class="boldBlueChar"><span style="font-size:12.0pt; ">rab</span></span> it, and then move it to  the outline edge of the apple.</p>
-
-<p><img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/11.png" width="455" height="308" class="responsiveImage"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> key to start <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">extruding </span></span>this dot  along the edge of the apple, every time you hit the E key, you create a new  vertex; and so it is like we are tracing, or stitching around the border of the  apple.</p>
-<p class="MsoNormal">Take the first and last vertex, and merge them together to  close the outline. Hitting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">M </span></span>key will merge these two  vertices together.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/12.png" width="410" height="239" class="responsiveImage">
-
-
-<p class="MsoNormal"><a name="_Toc190000788"><span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; ">To select your entire outline</span></span></a>.</p>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-
-<p class="MsoNormal">Hold down the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">alt key</span></span> and then <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">left click</span></span> on one of  the vertices that you just created to select the entire outline.</p>
-
-
-<h1><a name="_Toc190000789">Flatten the outline on the Floor</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">If after creating the outline you find that it is not flat</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/13.png" width="548" height="307" class="responsiveImage">
-
-<p class="MsoNormal">We want to scale it on the Z axis to 0</p>
-<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">S</span></span> key to scale, the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Z</span></span> key, then hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span> key on the numpad.</p>
-<p class="BlueBolden">S, Z, 0</p>
-<p class="MsoNormal">Now hit the 1 key on the numpad to go to orthographic front  view.</p>
-<p class="MsoNormal">Your Vertices should now be Flat</p>
-<p class="BlueBolden">14</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc190000790">Fill the outline</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
+<p class="MsoNormal">Well, that is a short introduction to using these Loop  tools. Next week we will start taking each of these different tool options into  their own tutorial, and start breaking them down. This way you can become more  familiar with using them for yourself.  </p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Now with the entire line selected, you want to hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">F</span></span> key to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">fill the outline</span></span>.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/15.png" width="624" height="544" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc190000791">To Create a Separate Object</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
 <p>&nbsp;</p>
-<p class="MsoNormal">Object mode top view.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/16.png" width="296" height="169" class="imgLeft">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">If you added the <span class="BlueBoldenChar"><span style="font-size:12.0pt; "><a href="Articles/2025/1-Blender-Continued/Z-Extra-Linked-Tutorial-Files/1-Adding-Extra-Mesh-Objects/Adding-Extra-Mesh-Objects.html" target="_blank">extra meshes</a></span></span> from the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Preference menu</span></span> you  can actually add a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">single  vert</span></span> from the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">add</span></span> menu.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/17.png" width="428" height="65" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now bring that vertex into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/18.png" width="211" height="79" class="imgLeft">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">G</span></span> key and move this single vertex to the outline of  the stem.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/19.png" width="315" height="242" class="responsiveImage">
-
-<p class="MsoNormal">Now extrude this vertex and then merge or fill the first and  last vertex that you created along this edge. To use the merge method, you  would press the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">M</span></span> key on the keyboard and select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Merge at Center</span></span>. Or, you can  select the first and last vertices and hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">F</span></span> key to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fill</span></span> it with an edge.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/20.png" width="327" height="210" class="responsiveImage">
-
-<p class="MsoNormal">After hitting <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">F</span></span> to fill edge between the  first and last vertex.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/21.png" width="278" height="217" class="responsiveImage">
-
-<p class="MsoNormal">Now hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">alt key</span></span> with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">left mouse button</span></span>,  select a vertex along this edge. Once again this is an easy way to select the  entire outline</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/22.png" width="292" height="498" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc190000792">Extrude out the new faces.</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">Go back to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">object</span></span> mode and click on both  the apple and the leaf to select multiple objects, and bring them both into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit </span></span>mode.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/23.png" width="562" height="429" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Back in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode, select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Face</span></span> mode</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/24.png" width="376" height="468" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Go to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Front</span></span> orthographic mode. The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1</span></span> on the numpad. Hit  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> key to extrude each of the two items on the screen.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/25.png" width="513" height="264" class="responsiveImage">
-
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/26.png" width="323" height="316" class="responsiveImage">
-
-<h1><a name="_Toc190000793">Material Property panel</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-
-<p>&nbsp;</p>
-<p class="MsoNormal">Go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">material</span></span> section of the property panel, and change  the color of each object.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/27.png" width="49" height="60" class="imgLeft">
-
-<p class="MsoNormal">You must be in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Material</span></span> mode, which you can  set at the top of the view port, to see our color change.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/28.png" width="223" height="99" class="imgLeft">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Select the apple and turn it red from the property panel,  and then change the stem to be green. You will have to click on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">New</span></span> button to change  colors from Red to Green after selecting the leaf to change its color.</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/29.png" width="353" height="632" class="responsiveImage">
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/30.png" width="509" height="370" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Turn off the eye for the Reference image</p>
-
-<img src="Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Images/31.png" width="507" height="580" class="responsiveImage">
-
-
-<p class="MsoNormal">Well, that is about it for this tutorial. I hope you enjoyed  learning how to create a 3D object from a very simple image.</p>
-<p>&nbsp;</p>
-<p class="pMidBlack">&nbsp;</p>
- 
-  <!-- End Main Article -->
- 
- 
 </article>
-  
-  
-  
+
+
   
   
   <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
