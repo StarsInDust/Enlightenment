@@ -21,6 +21,19 @@
             padding: 10px;   /* Add padding around the image */
             box-sizing: border-box; /* Include padding in the image's dimensions */
         }
+        
+        /* Mobile and tablet responsive layout - stacks aside elements vertically */
+        @media all and (max-width: 768px) {
+            .aside-1,
+            .aside-2 {
+                flex: 1 100%; /* Take full width, stacking vertically */
+                margin-bottom: 15px; /* Add space between stacked elements */
+            }
+            
+            .aside-2 {
+                margin-bottom: 20px; /* Extra space after the text aside */
+            }
+        }
     </style>
 </head>
 
@@ -55,7 +68,7 @@
 
   <br>
   <span class="aside-2"><br>
-  <img src="Humor/2025/8 August/My-Perscription-for-Mondays.png" class="cartoonImg"  >
+  <img src="Humor\2025\8 August\My-Method-Because-it-Works.png" class="cartoonImg"  >
   <br>
   <br>
 <br>
