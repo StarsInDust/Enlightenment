@@ -33,3 +33,24 @@
                 margin: 0 auto; /* Center the smaller image */
             }
         }
+
+        /* --- min-width: 600px --- */
+@media all and (min-width: 600px) {
+  .header {
+    background-image: url(../Images/banner_625_small.png);
+    height: 160px;
+  }
+
+  .wideImg,
+  .cartoonImg {
+    width: 90%;
+  }
+}
+
+/* --- min-width: 800px --- */
+@media all and (min-width: 800px) {
+  .header {
+    background-image: url(../Images/banner_825.png);
+    height: 300px;
+  }
+}
