@@ -7,32 +7,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8 Space</title>
+    <title>1 Drawing a Curve</title>
     
-    
-    <meta name="title" content="8 Space ">
+   <meta name="title" content="1 Drawing a Curve ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content="The Space Loop Tool, Blender, 3D Modeling, Animation, Graphic Art "/>
+<meta name="keywords" content=" Drawing a Curve, creating a Curve, Blender, 3D Modeling, Animation, Graphic Art "/>
 
 
-<meta name="description" content="This article explains how to use the Space Tool inside of the Loop Tool’s collection/>
+<meta name="description" content="This article explains how to Draw a Curve, in Blender/>
 
-<meta name="category" content="The Space Loop Tool, Blender, 3D Modeling, Animation, Graphic Art">
+<meta name="category" content="Drawing a Curve, creating a Curve, Blender, 3D Modeling, Animation, Graphic Art">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Monday, February 24, 2025" />
+<meta name="revised" content="Wednesday, February 26, 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/8-Space.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/1-Drawing-A-Curve.html">
 
 
-    
+ 
     
     
     
@@ -44,12 +43,67 @@
 
 <link href="CSS/myStyles.css" rel="stylesheet" type="text/css">
 <link href="CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
-
-
 <style type="text/css">
-  /* Add custom styles here if needed */
-</style>
+<!--
 
+p.BlueBolden {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+font-size:12.0pt;
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+p.MsoTocHeading {
+margin-top:12.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:16.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+}
+p.MsoToc1 {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:5.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+}
+span.BlueBoldenChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+span.BoldMaroonListChar {
+color:#600020;
+font-weight:bold;
+}
+span.Heading1Char {
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+font-weight:bold;
+}
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
 </head>
 
 
@@ -73,125 +127,239 @@
   
   <!--Main Article -->
   
-  <p class="h2Black" >~8 Space~</p>
+  <p class="h2Black" >~1 Drawing a Curve~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >8/18/2025</p>
+   <p class="articleDate" style="text-align:right" >8/25/2025</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191268511">What   is the Space Tool?</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191268512">Preparing   to use the Space Tool</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191268513">Randomize   Movement of Vertices</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191268514">How   to Use the Space Tool</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191268515">Option   from the Last Operation Dialog Box</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191268516">The   Blender Smooth Vertices Tool</a></span></p>
+
+
+
+<p class="tableOfContents"><a href="#_Toc191371896">What is a Curve?</a></p>
+<p class="tableOfContents"><a href="#_Toc191371897">A Control Point</a></p>
+<p class="tableOfContents"><a href="#_Toc191371898">Creating a Curve</a></p>
+<p class="tableOfContents"><a href="#_Toc191371899">Drawing A Curve</a></p>
+<p class="tableOfContents"><a href="#_Toc191371900">Setting Your Options in   the Property Panel</a></p>
+<p class="tableOfContents"><a href="#_Toc191371901">Depth</a></p>
+<p class="tableOfContents"><a href="#_Toc191371902">Resolution</a></p>
+<p class="tableOfContents"><a href="#_Toc191371903">Fill Caps</a></p>
+<p class="tableOfContents"><a href="#_Toc191371904">Smoothing out the Curve</a></p>
+<p class="tableOfContents"><a href="#_Toc191371905">Convert a Curve to Mesh</a></p>
+<p class="tableOfContents"><a href="#_Toc191371906">Last Operation Box for   &ldquo;Convert To&rdquo;</a></p>
+<p class="tableOfContents"><a href="#_Toc191371907">Adding a Material</a></p>
 
 
 
 
-<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/1.png" width="267" height="239" class="responsiveImage">
-
-<h1><a name="_Toc191268511">What is the Space Tool?</a></h1>
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/1.png" width="269" height="240" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc191371896">What is a Curve?</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">The space tool in the Loop tool section of Blender is a  tool, in which you can use to try and smoothly space out the vertices. You will  find that this tool is the last tool in the Loop tool&rsquo;s little collection.</p>
+<p class="MsoNormal">That&rsquo;s easy. A <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">curve</span></span> is a line that has a  curve or bend in it. We normally make these curves by using <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">control points</span></span>;  usually this is done, by using something like a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Bezier Curve</span></span>. However, in  this tutorial, I will be cheating just a bit and showing you how we can bring  in the Bezier curve, throw it away, and then just <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">draw</span></span> the curve we want. This  method might be the simplest one to start with.</p>
 
 
-<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/2.png" width="535" height="240" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc191268512">Preparing to use the Space Tool</a></h1>
+
+<h1><a name="_Toc191371897">A Control Point</a>       </h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">I am going to use a plane for this, which I added using the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Add</span></span> menu in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Object</span></span> mode.</p>
-<p class="MsoNormal"> I turned it <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">90°</span></span> in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> axis, by changing  the objects <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Rotation</span></span> properties.</p>
+<p class="MsoNormal">So, what is a control point? We actually have three control  points in our illustration below. Each vertex that is on the Bezier line, is  considered a control point, and it can be used to bend and shape the curve into  something that we actually want. There is a center control point, and then two  on each side of the center point. These two end points control the handles of  the Bezier, and it is these handles that we can swing around, to tweak the way  the curve looks.</p>
 
 
-<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/3.png" width="307" height="255" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Then I <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">subdivided </span></span>it <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">10</span></span> times after  bringing it into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/4.png" width="417" height="354" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/2.png" width="227" height="178" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
 <p class="BlueBolden">&nbsp;</p>
 <p class="BlueBolden">&nbsp;</p>
-
-<h1><a name="_Toc191268513">Randomize Movement of Vertices</a></h1>
+<h1><a name="_Toc191371898">Creating a Curve</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">I want to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">randomize</span></span> the movement of the vertices on this mesh  surface. <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">Select</span></span> the entire object by hitting <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A</span></span> on the keyboard.</p>
+<p class="MsoNormal">To start off with, we do not need the cube. So, <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Delete the Cube</span></span>.</p>
 
-<p class="BlueBolden">Mesh-Transform-Randomize</p>
-<p class="BlueBolden"><img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/5.png" width="460" height="273" class="responsiveImage"></p>
-
-
-<p class="MsoNormal">This looks pretty good, for a random mess. We could mess it  up a bit more manually, by tugging on a few individual vertices, but for me to  start, this is fine.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/6.png" width="382" height="313" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/3.png" width="228" height="176" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">1</span></span> key on the numpad to go into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">front</span></span> view.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/4.png" width="614" height="383" class="wideImg">
 <p class="BlueBolden">&nbsp;</p>
-
-<h1><a name="_Toc191268514">How to Use the Space Tool</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-
-<p>&nbsp;</p>
-<p class="MsoNormal">Now with all of the vertices selected we can <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">right  click</span></span> and select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Space</span></span> from the drop-down,  context menu of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Loop  tools</span></span>.</p>
+<p class="MsoNormal">Hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift  – A</span></span> and add a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Bezier</span></span> <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Curve</span></span> to the Viewport.</p>
 
 
-<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/7.png" width="537" height="242" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/5.png" width="527" height="330" class="responsiveImage">
+
+<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">7</span></span> key on the Numpad to view the curve from the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">top</span></span></p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/6.png" width="269" height="152" class="responsiveImage">
+
+<p class="MsoNormal">Go into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode; you will notice that your menu dropdown (when  you have a curve as an object) only has <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">2 Workspace</span></span> options. These  two options will be <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Object</span></span> and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> Mode. We don&rsquo;t really do anything with a curve in the other workspaces, so to  represent them are unnecessary.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/7.png" width="229" height="121" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
 
-<h1><a name="_Toc191268515">Option from the Last Operation Dialog Box</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">We can see if we move the I<span class="BlueBoldenChar"><span style="font-size:12.0pt; ">nfluence</span></span> on the Last  operation dialog box that things will try and space themselves out a little  bit. But this tool, could use a lot of help to actually be of any use.</p>
+<p class="MsoNormal">This is what this curve looks like in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> Mode. You can  see the handles of the Bezier curve - contraption very easily in this  illustration, but the curve is in there (in black) underneath of these red  handles thing.</p>
 
-<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/8.png" width="625" height="585" class="wideImg">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/8.png" width="531" height="296" class="wideImg">
+
+<p class="MsoNormal"><span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">Hit X, </span></span>and choose <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Delete-Vertices</span></span>.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/9.png" width="617" height="338" class="wideImg">
 
 
-<p class="MsoNormal">Even at full strength influence, we only get this.</p>
 
-<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/9.png" width="447" height="469" class="responsiveImage">
 
-<h1><a name="_Toc191268516">The Blender Smooth Vertices Tool</a></h1>
+<h1><a name="_Toc191371899">Drawing A Curve</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Let&rsquo;s try that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Smooth Vertices</span></span> tool that is  offered from Blender itself. We learned about this tool in our last tutorial that  was supposed to be on Loop Tool&rsquo;s relax tool, but we found that Blender offered  this Smooth tool, which is a better tool, with better results.</p>
+<p class="MsoNormal">Switch to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Draw</span></span> tool. The Draw tool is  different from the Annotation tool, because as you can see from the tool icon,  it will have those Bezier points on them. If you had not brought a Bezier curve  into this Edit workspace, and just used a cube, you would not even have access  to this draw tool. So, make sure you start out with the Bezier Curve, and as  described above (use <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> to delete the Vertices).</p>
 
 
-<p class="MsoNormal">Go to the Top Menu and hit:</p>
-<p class="BlueBolden">Vertex – Smooth Vertices</p>
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/10.png" width="80" height="89" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
 
-<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/10.png" width="461" height="292" class="responsiveImage">
+<p class="MsoNormal">Then at the top of the Viewport Set the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Projection </span></span>Method to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Surface</span></span>.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/11.png" width="307" height="113" class="responsiveImage">
+
+<p class="MsoNormal">Start to Draw out your curve. Your curve will look like this  when you finish drawing it, and let go of the mouse. While you are drawing the  curve, it will look like a white drawing line.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/12.png" width="538" height="439" class="wideImg">
 <p class="BlueBolden">&nbsp;</p>
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Right off the bat, we get a much better result, and as you  can see, the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Smoothing</span></span> Option below, is only set at half way.</p>
 
-<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/11.png" width="485" height="477" class="responsiveImage">
+<h1><a name="_Toc191371900">Setting Your Options in the Property Panel</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Open the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Data Tab</span></span>, in the Property panel on the right, for  the Curve. You will only see this tab if you have a curve selected, so make  sure your curve is selected.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/13.png" width="83" height="76" class="responsiveImage">
+
+<p class="MsoNormal">Now scroll down in the panel until you see the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Geometry</span></span> section.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/14.png" width="359" height="588" class="responsiveImage">
+
+<h1><a name="_Toc191371901">Depth</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Scroll down further in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Geometry </span></span>section to find <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Depth</span></span>. Increase the  Depth setting. </p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/15.png" width="579" height="358" class="responsiveImage">
+
+<p class="MsoNormal">You can increase the depth as much as you want</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/16.png" width="621" height="310" class="wideImg">
 
 
 
-<p class="MsoNormal">Now if we crank it up all of the way, it does seem to take  it past the desired smoothness.</p>
+<h1><a name="_Toc191371902">Resolution</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Resolution</span></span> S<a name="_Hlk191355253">et </a>to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">4 </span></span>. The 4 given here is what  Blender started the resolution setting to begin with.</p>
 
-<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/12.png" width="621" height="437" class="wideImg">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/17.png" width="625" height="357" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Now we can turn the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Resolution</span></span> up to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">15</span></span>. Look at those  sharp edges on the circular opening now. This is the resolution setting on the  Bevel, as you can see by the heading of this section. And this will only affect  the circular opening of the tube.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/18.png" width="624" height="277" class="wideImg">
+
+<h1><a name="_Toc191371903">Fill Caps</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We can Check the box for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Fill Caps</span></span>, this will close  the end of the curve.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/19.png" width="619" height="320" class="wideImg">
+
+<h1><a name="_Toc191371904">Smoothing out the Curve</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">As I stated earlier, the resolution setting under Bevel,  only effects the circular opening to the curve. To make the full length of the curve  look smoother, we actually need another section of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Data</span></span> tab. The long  tube section of the curve is referred to in Blender as the &ldquo;<span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Spline&rdquo;</span></span></p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/20.png" width="501" height="314" class="responsiveImage">
+
+<p class="MsoNormal">To Smooth out the Curve (Spline), we need to go to the  Section called <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Active  Spline</span></span>. The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Resolution</span></span> option starts out with a setting of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">12</span></span>.</p>
 
 
-<p class="MsoNormal">Let&rsquo;s try upping the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Repeat</span></span> option, and see what  we get. As we can see, from the example below, It spaces the vertices a bit better,  with exception to the edges; but then we also find that we are losing quite a  bit of mass with our object. Our object&rsquo;s size is smaller.</p>
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/21.png" width="360" height="296" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+
+<p class="MsoNormal">We want to turn the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Resolution</span></span> setting up to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">64</span></span>, which is the  highest it will go.</p>
 
 
-<img src="Articles/2025/1-Blender-Continued/7-Loop-Tools/8-Space/Images/13.png" width="546" height="587" class="wideImg">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/22.png" width="618" height="535" class="wideImg">
 
-<p class="MsoNormal">You can attempt these two different methods for yourself,  and see which one that you like better. As far as I am concerned, I still think  the Blender&rsquo;s own method for doing this does an immensely better job of  handling things.</p>
+
+
+
+<h1><a name="_Toc191371905">Convert a Curve to Mesh</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We can turn our curve back into a mesh, once we have  finished with it. But we will need to take the curve back into <span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; ">Object mode</span></span> to do this.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/23.png" width="251" height="100" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+
+<p class="MsoNormal"><span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">Right click</span></span> on the Object and select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Convert To – Mesh</span></span></p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/24.png" width="623" height="192" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+
+
+<h1><a name="_Toc191371906">Last Operation Box for &ldquo;Convert To&rdquo;</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We can choose to keep the original in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Last operation</span></span> dialog  box. You might want to do this if you want to make changes to the curve. This  will give the curve that we drew with all the handles, and make a mesh copy of  it. </p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/25.png" width="626" height="460" class="wideImg">
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">&nbsp;</span></p>
+
+<p class="MsoNormal">You know that you have changed it into a mesh if you take it  into Edit Mode and it looks like this.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/26.png" width="632" height="767" class="wideImg">
+
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Note-</span></span> It isn&rsquo;t  actually necessary to change a curve into a mesh object, before you can add a  material to it, but you can change the curve, if you want it to be a solid  object. The difference between a curve and a solid object is that a solid  object is like a cube or a sphere. It has multiple vertices and faces, while a  curve is a flexible path, and is used to create more complex shapes.</p>
+
+
+
+<h1><a name="_Toc191371907">Adding a Material</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal"> Go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Material </span></span>tab. Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">New Button</span></span> to create a new material.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/27.png" width="242" height="391" class="responsiveImage">
+
+
+<p class="MsoNormal">Change the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Name</span></span> of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Material</span></span>. I named  this one <span class="BoldRedChar"><span style="font-size:12.0pt; ">RED</span></span>, because my curve will be Red.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/28.png" width="301" height="181" class="responsiveImage">
+
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Important!</span></span> Make sure  you are either in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Material</span></span>,  or <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Render Mode</span></span> to see the color on the Object.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/29.png" width="160" height="97" class="responsiveImage">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+
+<p class="MsoNormal">Change your color swatch</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/30.png" width="299" height="386" class="responsiveImage">
+<p class="MsoNormal">View your Curve</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/1-Drawing-A-Curve/Images/31.png" width="620" height="380" class="wideImg">
+
+<p class="MsoNormal">Ok, this is as good of a stopping point as any on Drawing a  curve. And it is a good start to get you where you want to go with these curved  shapes.</p>
 <p>&nbsp;</p>
  
   <!--Main Article -->
@@ -201,11 +369,33 @@
   
   
   
+  
+  
+  
+  
+  
+  
+  
+<aside class="aside aside-1"><p class="h2Silver" >&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
+  <p class="LeftPMidBlack">&nbsp;</p>
+  
+  
+  </aside>
+  
+  
   <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
   <script type="text/javascript" src ="JavaScript/FooterYearlyDate.js">
 </script></footer>
 
+
+    
       
 
+    
 </body>
 </html>
