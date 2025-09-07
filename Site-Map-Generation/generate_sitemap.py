@@ -4,7 +4,7 @@ from datetime import datetime
 # === CONFIGURATION ===
 site_folder = "C:/xampp/htdocs/Enlightenment"  # Adjust if needed
 base_url = "https://starsindust.github.io/Enlightenment"
-output_folder = "./sitemaps"  # Optional subfolder to store generated sitemaps
+output_folder = "./sitemapBackup"  # Optional subfolder to store generated sitemaps
 
 # === TIMESTAMP ===
 today = datetime.today().strftime("%Y-%m-%d")
