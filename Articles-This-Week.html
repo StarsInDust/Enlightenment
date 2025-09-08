@@ -7,30 +7,34 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2 Bezier Curves</title>
+    <title>3 Bezier-More Complex</title>
     
-    <meta name="title" content="2 Bezier Curves ">
+   <meta name="title" content="3 Bezier - More Complex ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" Bezier Curves, Blender, 3D Modeling, Animation, Graphic Art "/>
+<meta name="keywords" content=" More Complex Curves, Blender, 3D Modeling, Animation, Graphic Art "/>
 
 
-<meta name="description" content="This article explains what Bezier Curves, are and how to create them in Blender/>
+<meta name="description" content="This article explains how to create more complex curves/>
 
-<meta name="category" content="Bezier Curves, Blender, 3D Modeling, Animation, Graphic Art">
+<meta name="category" content="More Complex Curves, Blender, 3D Modeling, Animation, Graphic Art">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Friday, February 28, 2025" />
+<meta name="revised" content="Monday, March 3, 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/2-Bezier-Curves.html">
-
-
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/3-Bezier-More-Complex.html">
+ 
+    
+    
+    
+    
+    
     
     
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
@@ -76,19 +80,16 @@ line-height:115%;
 font-size:11.0pt;
 font-family:"Calibri",sans-serif;
 }
-span.MsoHyperlink {
-color:#0563C1;
-text-decoration:underline;
-text-underline:single;
-}
 span.BlueBoldenChar {
 font-family:"Times New Roman",serif;
 color:blue;
 font-weight:bold;
 }
-span.boldBlueChar {
-font-family:"Times New Roman",serif;
-color:blue;
+span.BigDarkBoldChar {
+font-weight:bold;
+}
+span.BoldMaroonListChar {
+color:#600020;
 font-weight:bold;
 }
 -->
@@ -116,304 +117,221 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~2 Bezier Curves~</p>
+  <p class="h2Black" >~3 Bezier-More Complex~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >9/1/2025</p>
+   <p class="articleDate" style="text-align:right" >9/8/2025</p>
    
    <br>
 <br>
 
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191613116">What   is a Bezier Curve?</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191613117">How   do I create Bezier Curve?</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191613118">The   Different Handle Types</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191613119">Extrude   Another Segment</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191613120">The   Tool Panel</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191613121">The   Difference Between the Automatic, and the Aligned Handles</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191613122">The   Vector Type Handle</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191613123">Aligned</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc191613124">Free   Handle Type Option</a></span></p>
 
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/1.png" width="270" height="238" class="responsiveImage">
+<p class="tableOfContents"><a href="#_Toc191804232">Adding The Two Curve Extensions</a></p>
+<p class="tableOfContents"><a href="#_Toc191804233">Extruding a Curve</a></p>
+<p class="tableOfContents"><a href="#_Toc191804234">Changing the Object&rsquo;s   Origin</a></p>
+<p class="tableOfContents"><a href="#_Toc191804235">Going Back to Edit Mode</a></p>
+<p class="tableOfContents"><a href="#_Toc191804236">To Control the Exact   Location of a Mid-Point</a></p>
+<p class="tableOfContents"><a href="#_Toc191804237">Changing two Control   Handle - Points to create a Straight Line</a></p>
+<p class="tableOfContents"><a href="#_Toc191804238">Starting to Form a Shape</a></p>
 
 
-<h1><a name="_Toc191613116">What is a Bezier Curve?</a></h1>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/1.png" width="266" height="229" class="responsiveImage">
+
+
+<h1><a name="_Hlk191701731"></a><a name="_Hlk191701561"></a><a name="_Toc191804232">Adding The Two Curve Extensions</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">A <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Bezier</span></span> curve, is another one of those things, when messing with computers, that uses  math to do its stuff. It might sound a little bit complex to get into, but this  technique will use numbers to define a smooth curve in graphic programs like  Blender. </p>
-<p class="MsoNormal">These curves can then be further manipulated by using <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">control points</span></span>, and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">handles </span></span>to reshape  the curve into something that the graphic designer actually wants. These things  will look like this.</p>
+<p class="MsoNormal">Before we can start working on more complex  curves, we will need to first install two new extensions. You can go<a href="Articles/2025/1-Blender-Continued/Z-Extra-Linked-Tutorial-Files/2-Extensions/2-Extensions.html"> here</a> to  learn how to install these extensions.</p>
 
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/2.png" width="240" height="129">
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/2.png" width="623" height="231" class="wideImg">
-
-
-
-<h1><a name="_Toc191613117">How do I create Bezier Curve?</a></h1>
+<h1><a name="_Toc191804233">Extruding a Curve</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Like just about everything else in Blender, except for the  cube, which is sitting there when you first open the program up. You are going  to have to add the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Bezier  Curve</span></span>, through the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Add</span></span> menu in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Object</span></span> mode.</p>
-<p class="MsoNormal">You will see the menu to access <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Curve </span></span>sitting just under Mesh  in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Add</span></span> dropdown.</p>
+<p class="MsoNormal">Ok, so let&rsquo;s go back to the curve that we  had been working on in the last tutorial, and start adding a few more segments  to it. This will be our starting point for creating more complex curves.</p>
+<p class="MsoNormal">Remember to start working with a section, we  need to click on the point, or section that we want to work with. So, we want  to start adding more segments to the top of our existing curve. And for this,  we will need to click on the mid-point of that Segment. Do not click on either  end point on the handle, or extrude will not work. We have to click on a  mid-point.</p>
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/3.png" width="523" height="167" class="responsiveImage">
-
-<p class="MsoNormal">You do have access to other types of curves through the  Curve Menu, but for a few tutorials, we will be focusing on the Bezier curve.  This is the type of curve, which is most commonly used by Graphic Designers and  3D modelers to create their wavy masterpieces.</p>
-<p class="MsoNormal">  </p>
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/4.png" width="400" height="233" class="responsiveImage">
-
-<p class="MsoNormal">When you first bring this curve into Object mode, you will  see that it looks like this. This is looking down on the curve from top view.  From front view you really won&rsquo;t see much then just a straight line lying on  the floor of the grid.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/5.png" width="369" height="193" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/3.png" width="449" height="260" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Now click on the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">E</span></span> key on the keyboard  and pull out a few more segments. I am using<span class="BlueBoldenChar"><span style="font-size:12.0pt; "> Free</span></span> for my handle  types on the added segments. Remember <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Free </span></span>is a handle  type, and the handle types were gone over in the <a href="Articles/Generic-Web-Pages/2-Bezier-Curves.html">last  tutorial</a>.</p>
 
-<p class="MsoNormal">It isn&rsquo;t until you bring it into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> mode that you see the  inner workings of the curve, with its control points and handles. The  illustration below shows one end of the curve, with the mechanism which is used  to control it.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/6.png" width="225" height="178" class="responsiveImage">
-
-
-<p class="MsoNormal">You can tug on one of the control points at the end of the  handle and move it with the move tool in edit mode. Using these handles, is how  we can transform the given curve into something that we actually are trying to create.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/7.png" width="613" height="413" class="wideImg">
-
-
-<h1><a name="_Toc191613118">The Different Handle Types</a></h1>
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/4.png" width="568" height="409" class="wideImg">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc191804234">Changing the Object&rsquo;s Origin</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Notice that the <span class="boldBlueChar"><span style="font-size:12.0pt; ">handles</span></span> which we see on this <span class="boldBlueChar"><span style="font-size:12.0pt; ">Bezier tool</span></span> is in  red. Well, there are actually different types of Bezier handles, which we can  use.</p>
-<p class="MsoNormal"> We can get to these  different types, by selecting the Bezier Curve in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> Mode, and hitting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">V </span></span>key on the  Keyboard.</p>
-<p class="MsoNormal">By default, we are given the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Aligned</span></span> Handle type.</p>
+<p class="MsoNormal">We are going to be changing the origin of  the object. Right now, it is sitting in the center at the bottom of our curves.  The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">origin</span></span> is the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">orange dot</span></span> and not  the red and white ring around it.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/5.png" width="432" height="94" class="responsiveImage">
+
+<p class="MsoNormal">And this is why we needed to add those <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">extensions</span></span> that we  pointed you to, at the beginning of this tutorial.</p>
+<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">N</span></span> key on your  keyboard to open that menu at the right side of the viewport. If you added the  Curve tool extension correctly, you should see an <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit tab</span></span>. We want to  open that section, below that says <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Sanitize</span></span>.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/6.png" width="344" height="427" class="responsiveImage">
+
+<p class="MsoNormal">If you find a lot of the options greyed out,  like I did above. You might have to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">toggle</span></span> the Object  Workspace Mode button and Edit Mode button to bring them to life.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/7.png" width="394" height="64" class="responsiveImage">
+
+<p class="MsoNormal">Select those top handles</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/8.png" width="293" height="321" class="responsiveImage">
+<p class="MsoNormal">Keep an eye on that orange dot at the  bottom. </p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/9.png" width="96" height="79" class="responsiveImage">
 
 
-<p><img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/8.png" width="470" height="307" class="responsiveImage"></p>
-<p>&nbsp; </p>
+<p class="MsoNormal">Then hit the button under Sanitize, on that  menu on the right, that Says: <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Set Origin to Spline Start</span></span>.</p>
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/9.png" width="659" height="368" class="wideImg">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/10.png" width="312" height="170" class="responsiveImage">
+
+<p class="MsoNormal">You will notice that the orange from that  dot has disappeared. What it did was to send that origin to the mid- point on  the handles that we have selected at the top. If you move that control you  should see an orange dot under it.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/11.png" width="536" height="508" class="wideImg">
+
+<p class="MsoNormal">Also, notice the  orange dot is no longer at the bottom inside of the cursor.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/12.png" width="111" height="91" class="responsiveImage">
+
+<p class="MsoNormal">But instead, we  want this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">mid- point</span></span> to be our  start. So, select this mid- point on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">first section</span></span> on the  floor. If you pressed the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">N</span></span> key, you should be  seeing the panel on the right of the view port. Scroll down until you find the  section that is named <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Utilities</span></span>.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/13.png" width="599" height="302" class="wideImg">
+
+<p class="MsoNormal">When you open up  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Utilities</span></span> section, you might  have to scroll down a bit, but inside of the Utilities section, we want to hit  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Set First Points</span></span> button.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/14.png" width="608" height="357" class="wideImg">
+
+<p class="MsoNormal">Now we can come  back up and again press that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Set Origin to Spline Start</span></span> button for it to actually work correctly.</p>
 <p class="BlueBolden">&nbsp;</p>
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/15.png" width="301" height="241" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc191613119">Extrude Another Segment</a></h1>
+<p class="MsoNormal">Now our origin should actually be here. On that mid-point of  that first section.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/16.png" width="353" height="120" class="responsiveImage">
+
+<p class="MsoNormal">Now come out of Edit Mode, and move back into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Object</span></span> mode.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/17.png" width="208" height="101" class="responsiveImage">
+
+
+<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Item</span></span> tab on the menu on the right. We need to be in  the Item tab to set the Location of the points.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/18.png" width="607" height="257" class="wideImg">
+
+
+<p class="MsoNormal">For the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X location</span></span>, we want to hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span>, and it should immediately  pop that first mid-point, we assigned, and set it to the center point on the  viewport.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/19.png" width="525" height="230" class="wideImg">
+
+
+<h1><a name="_Toc191804235">Going Back to Edit Mode</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">This may have been the tiny curve that we are given, but we  are designers, and as such, we want so much more.</p>
+<p class="MsoNormal">Now go back into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit </span></span>mode.</p>
+<p class="MsoNormal"> </p>
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/20.png" width="250" height="88" class="responsiveImage">
 
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/10.png" width="445" height="206" class="responsiveImage">
+<p class="MsoNormal">Make sure your orange dot did indeed move to this point. If  you find it did not, you will need to select this point, and hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Set First Points</span></span>,  under <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Utility</span></span>,  and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Set Origin  to Spline Start</span></span> under <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Sanitize</span></span> again. So, make sure  this point here is orange.</p>
 
-<p class="MsoNormal">We can add to this Curve segment by selecting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">mid -point</span></span> on it. We  do not want the end points on the handle, or this extruding thing just won&rsquo;t  work right.</p>
-
-<p class="MsoNormal">First of all, in order to do this, we need to change over to  the Move tool. All of this extruding is done. from this one tool here.</p>
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/21.png" width="425" height="299" class="responsiveImage">
 
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/11.png" width="175" height="76" class="responsiveImage">
-
-<p class="MsoNormal">Now you can select one of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">mid-points</span></span> on the Bezier  Curve</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/12.png" width="619" height="243" class="wideImg">
-
-<p class="MsoNormal">Now go to the top of the Menu to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Control Points-Extrude Curve and Move</span></span>.  Notice how Move was included in this menu option, so we will be able to move  while creating this new segment. You can also hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> key for method, and  it will also put you inside of this Extrude Curve and Move option.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/13.png" width="621" height="440">
-
-
-
-<h1><a name="_Toc191613120">The Tool Panel</a></h1>
+<h1><a name="_Toc191804236">To Control the Exact Location of a Mid-Point</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">When you come into the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit </span></span>Workspace with a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">curve</span></span>, instead of a  mesh object. There is something else you may notice. And this is that the tool  box on the left side of the page looks quite a bit different. This is because  the tools that we use for the curve is different than what we use for a mesh  object, and it is also another reason that, in our last article that in order  to draw a curve, we needed to first bring a Bezier curve into the Edit work  space, before throwing it away, and using the draw tool. </p>
+<p class="MsoNormal">Move the point on the end of the curve, back into place by  setting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Location </span></span>of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X,  Y,</span></span> and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Z</span></span> to be <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span>.  This sets this exactly to that orange origin spot. In fact, it should be  covering it.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/22.png" width="556" height="199" class="wideImg">
 
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/14.png" width="391" height="610" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Select the top 3 sections that we created.</p>
 
-<h1><a name="_Toc191613121">The Difference Between the Automatic, and the  Aligned Handles</a></h1>
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/23.png" width="350" height="315" class="responsiveImage">
+
+
+<p class="MsoNormal">Now hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">V</span></span> key for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Handle Type</span></span> menu.  Then hit <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Automatic</span></span> for the type. All of your control handles should now be yellow.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/24.png" width="357" height="340" class="responsiveImage">
+
+
+<p class="MsoNormal">We can move that top control mid- point to be exactly on the  grid line also. First make sure that the point is close to it. Then set the  location settings in that panel on the right side. Remember <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">N</span></span>, controls the  opening and closing of this panel. Look at the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">location</span></span> of <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y</span></span>. The Y point is not  set to 0, because <span class="BigDarkBoldChar"><span style="line-height:115%; font-size:14.0pt; ">if</span></span> it was, it would place this control point  flat on the ground like the other one, and that is not what we want. But you  should have both the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span>,  and the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Z axis</span></span> set to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span> here.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/25.png" width="611" height="489" class="wideImg">
+
+
+
+<h1><a name="_Toc191804237">Changing two Control Handle - Points to create a  Straight Line</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">As I mentioned above, we have a choice between what type of  handle that we use on our Bezier Curve. We automatically get the red handles  which gives us an <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">aligned</span></span> version of these handles. But if we click on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">V</span></span> hot key to change these  handles, we can get the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">automatic</span></span> handles. What the automatic type of handles will do is to take a messy curve  that we created and try to smooth it out the best that it can.</p>
+<p class="MsoNormal">Let&rsquo;s say that instead of a curved line, in our object, we  really want to straighten a segment out. </p>
+<p class="MsoNormal">First make sure you are in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Move</span></span> tool for this to work.</p>
 
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/26.png" width="50" height="48" class="responsiveImage">
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/15.png" width="175" height="136" class="responsiveImage">
+<p class="MsoNormal">While in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Move</span></span> tool, we can <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">marque - select</span></span> those  two controls at the top of the curve.</p>
 
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/27.png" width="559" height="461" class="wideImg">
 
-<p class="MsoNormal">Before doing that, we need to first select these two  handles, if you extruded with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">E</span></span> key, you should have this  top red line with the 3 control points on it.</p>
+<p class="MsoNormal">We really don&rsquo;t want to select the entire gadgets. We only  want the inner two handle, <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">end- points</span></span> of both of them. Since we are in the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Move</span></span> tool, we are  able to select just these two points.</p>
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/16.png" width="618" height="314" class="wideImg">
-
-<p class="MsoNormal">Now you hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">V</span></span> Key with those 2 handles  selected.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/17.png" width="527" height="325" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/28.png" width="372" height="345" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">When we Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Automatic</span></span> option from the Set  Handle Type menu, we will immediately see a much smoother looking curve with <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">yellow </span></span>handles. So,  Blender greatly smoothed out our curve, just by hitting the automatic button.</p>
+<p class="MsoNormal">Now with those <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">two end points</span></span> <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">selected</span></span>,  hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">V </span></span>hot  key to bring up the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">handle  type</span></span> menu. We want to change those two points from automatic to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Vector</span></span>. Notice how  that line is straightened out now.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/29.png" width="338" height="273" class="responsiveImage">
+
+<p class="MsoNormal">But changing this these two end handles to Vector, you will  notice that the handle on the other side is no longer that yellow color. It has  automatically changed the other section of the control to be the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Free Form </span></span>handle  type.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/30.png" width="363" height="241" class="responsiveImage">
+
+<p class="MsoNormal">This has created a small kink in that first Free-Form handle  on the left. In this case it is not very noticeable, but sometimes based on how  we created our curve, it can be quite pronounced. So, we need to be able to  know how to fix that. We need to select the End-point on that control.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/31.png" width="402" height="202" class="responsiveImage">
+
+<p class="MsoNormal">Now, with that end-point selected, hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">V</span></span> key to bring up the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Handle type</span></span> menu and change that handle into an <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Aligned</span></span> handle. This will  straighten that kink out and make the curve more free flowing.</p>
 
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/18.png" width="517" height="313" class="responsiveImage">
-
-
-<p class="MsoNormal">The one key feature of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Automatic</span></span> option is that if  you try to move one control point, the other down stream curves will move  trying to keep that smooth looking curve intact. This may, or may not be what  you want, but this is what automatic handles will do for you.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/19.png" width="484" height="357" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/32.png" width="314" height="246" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
-
-<p class="MsoNormal">Also, when you are in <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Automatic</span></span> Mode you can move  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">mid-point</span></span>,  and you will stay with these automatic yellow handles, but as soon as you start  to move one or the other end points on the end of the handle, it will  automatically throw you back into the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Aligned</span></span> handle mode and your  handles will again turn red. So, be aware of this.</p>
-<p class="MsoNormal">Here we were in Automatic handle mode, and changed the top  handle by moving one of the points on the end of the stick. Notice that this  handle was changed back to red. But the bottom one remained the yellow color  because it was left untouched.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/20.png" width="417" height="259" class="responsiveImage">
-
-
-<p class="MsoNormal">A handle can be either an <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">active handle</span></span> or a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">passive handle</span></span>. You  need to click on a point to start working it. But notice that when we click on  an end point on one of the handles, we then get one side of it being yellow,  and the other side turns a deeper color of the selected type of handle. This  means that we selected and can now work with the yellow side. So, the yellow  side is the active handle and the darker- color, side is the passive side.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/21.png" width="287" height="221" class="responsiveImage">
-
-<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">V</span></span> key on the keyboard, and select your two points  and turn them both into <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Automatic</span></span> for a second. Your handles should both now be yellow now.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/22.png" width="171" height="132" class="responsiveImage">
-
-<p><img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/23.png" width="362" height="219" class="responsiveImage"></p>
-<p>&nbsp;</p>
-<p>&nbsp; </p>
 <p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc191613122">The Vector Type Handle</a></h1>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc191804238">Starting to Form a Shape</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">To select our points for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Vector</span></span> type of handle. First,  we want to select this point here, in the center of the handle.</p>
+<p class="MsoNormal">Now if you start moving around the control that is right  below this one, the one that is still yellow, and Automatic. You can take that  one and start moving it around, and being automatic it will attempt to make as  smooth as a curve as it can.</p>
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/24.png" width="429" height="273" class="responsiveImage">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/33.png" width="489" height="318" class="responsiveImage">
 
-<p class="MsoNormal">Now after clicking on that point, click on the point at the  bottom of the handle. Both of these points need to be selected. Every element  needs to be clicked on, or selected in order to be operated on.  Do not hold down the shift key to select this  second point. It will not work. Just select it. Notice that we now have an  active section and a passive section. So, we will work with the yellow portion,  because that is what is active.</p>
+<p class="MsoNormal">Now select that entire controller. You know the entire thing  is selected when all of the control points turn white.</p>
 
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/34.png" width="241" height="238" class="responsiveImage">
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/25.png" width="492" height="313" class="responsiveImage">
+<p class="MsoNormal"> Now with the entire  control selected Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">V</span></span> key and change it to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Aligned</span></span>. Your handles should  turn pink.</p>
 
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/35.png" width="389" height="295" class="responsiveImage">
 
-<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">V</span></span> key to turn this section into a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Vector</span></span> Handle.</p>
+<p class="MsoNormal">Now with it being aligned, and you start to move this  controller around, you will find that it no longer gives a ding-dang about the  Curve, or how it looks, it just wants to keep its handles on the controller  perfectly straight up and down.</p>
 
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/36.png" width="405" height="333" class="responsiveImage">
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/26.png" width="160" height="126" class="responsiveImage">
-
-
-<p class="MsoNormal">Now when you click that Vector button, you may immediately notice  that this handle that is lying on the floor changes to have a rather sharp bend  in it.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/27.png" width="430" height="269" class="responsiveImage">
-
-<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Vector</span></span> is another way of now thinking of this as a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">straight line</span></span>. Because, that  is what we see from the handle on the floor that is on the right- a straight  line. What this is doing is taking that last control point on the segment, and  it is pointing it straight at the previous control point.</p>
+<p class="MsoNormal">Move it to be about here.</p>
 
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/28.png" width="619" height="185" class="wideImg">
-
-
-<p class="MsoNormal">You will notice now if you go in, and select the handle on  the floor and the handles above it, and move them both upward, that the curve  in between them is preserved.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/29.png" width="616" height="372" class="wideImg">
-
-
-<p class="MsoNormal">The reason that this curve is preserved is that we also need  to come over to that first dot on the line and make the handle on the left of  it, vector too.</p>
-<p class="MsoNormal">Go back in history, to before you moved the point off of the  floor.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/30.png" width="620" height="281" class="wideImg">
-
-<p class="MsoNormal">Now select that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">last dot</span></span> on our curve. Then  select the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">mid-  point</span></span> on that control.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/31.png" width="615" height="289" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-
-<p class="MsoNormal">We actually want to select the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">end point</span></span> on the handle, to  the left of the mid-control point.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/32.png" width="614" height="298" class="wideImg">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/3-Bezier-More-Complex-Forms/Images/37.png" width="434" height="354" class="responsiveImage">
 <p class="BlueBolden">&nbsp;</p>
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now change that point to be <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Vector</span></span>.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/33.png" width="222" height="174" class="responsiveImage">
-
-
-<p class="MsoNormal">So, now when you select the two controls that we were  working with, and move them upward, we can see that we now actually get our  straight line.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/34.png" width="622" height="419" class="wideImg">
-
-
-<h1><a name="_Toc191613123">Aligned</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">Move your <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">vector curve</span></span> back to rest on the floor again.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/35.png" width="485" height="270" class="responsiveImage">
-
-<p class="MsoNormal">Now click on the end handle point, on the left for the control  that is lying on the floor.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/36.png" width="519" height="267" class="responsiveImage">
-
-<p class="MsoNormal">This time we want to choose the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Aligned</span></span> option for this left end  point.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/37.png" width="226" height="179" class="responsiveImage">
-
-<p class="MsoNormal">As you can see, it took that handle and flattened it too, to  the floor.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/38.png" width="490" height="222" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">So, what it did was to create a smooth flowing curve above  this straight segment that we have lying on the ground. This Aligned handle, is  a hot pink color.</p>
-<p class="MsoNormal">Now take the mid-point on the vector handle lying on the  floor.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/39.png" width="625" height="270" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">If you move it upward, you will see it will keep the curve  above it although it will get smaller because we did not select that top controller.  But it will also keep the straight line on the right of it. That is because of  the assignments, that we have made to these individual handles.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/40.png" width="490" height="297" class="responsiveImage">
-
-
-<p class="MsoNormal">If you take this far left handle and try to move it anywhere  it will keep that straight aligned relationship to the right of it. You will be  unable to move this point up or down it will only move in a straight line. So,  as its name implies, this point is aligned, or in line.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/41.png" width="623" height="343" class="wideImg">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">In order to lie this curve back down on the floor, you need  to grab the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">mid-point</span></span> again.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/42.png" width="558" height="309" class="wideImg">
-
-<h1><a name="_Toc191613124">Free Handle Type Option</a></h1>
-<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
-<p>&nbsp;</p>
-<p class="MsoNormal">The next option in the type of handles that we are given is  called <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Free</span></span>.  So, let&rsquo;s select that control, at the top, to work with this Free type of  handle.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/43.png" width="625" height="344" class="wideImg">
+<p class="MsoNormal">Well, I am going to end this tutorial here for this week,  next week we will start to build the shape of the object that we want to make.</p>
 
 
 
-<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Free</span></span> option</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/44.png" width="212" height="181" class="responsiveImage">
-<p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Our handle colors will change again.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/45.png" width="470" height="306" class="responsiveImage">
-
-<p class="MsoNormal">This <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Free </span></span>option can be thought of like a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">corner point</span></span>, if you want to  think about it in the Pen tool, kind of way, that we get from Adobe  applications.</p>
-<p class="MsoNormal">Select the handle to the right of the mid-point of this free  tool, and move it, and you will see that this controller forms a corner point.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/46.png" width="587" height="326" class="wideImg">
-
-<p class="MsoNormal">The <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Free</span></span> form method can also mimic the other types of handles. When we click off those  top handles and click on something else, you will notice that the curve itself  underneath, hasn&rsquo;t also become a sharp corner. Our curve is still quite smooth. </p>
-<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Free</span></span>,  will change how the curve looks, but it will still be a curve, and if you don&rsquo;t  move any parts of the controller at all, and simply click on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">free </span></span>option. You will  notice there is no change to the curve at all, whereas when you clicked on  other options for the handles, you immediately saw a change to what you were  looking at on the screen. </p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/2-Bezier-Curves/Images/47.png" width="555" height="289" class="wideImg">
-
-<p class="MsoNormal">Well, that is quite enough to take in for this week. Next  week, we will be taking everything that we learned here and start modifying it  into a more complex form.</p>
-
-<p>&nbsp;</p>
  
   <!--Main Article -->
  
@@ -433,7 +351,7 @@ font-weight:bold;
   <p class="LeftPMidBlack">&nbsp;</p>
   
   
-</aside>
+  </aside>
   <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
   <p class="LeftPMidBlack">&nbsp;</p>
   
