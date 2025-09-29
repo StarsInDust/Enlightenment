@@ -373,8 +373,8 @@ p.tableOfContents a:hover {
   }
 
   .image {
-    width: 100%;
-    height: auto;
+	width: 90%;
+	height: auto;
   }
 }
 
