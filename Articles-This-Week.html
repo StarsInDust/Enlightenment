@@ -4,39 +4,16 @@
 
 
 <head>
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6 Continuing to Learn More Techniques</title>
+    <title>Welcome to Enlightenment</title>
     
    
-  <meta name="title" content="6 Continuing to Learn More Techniques">
-
-<meta name="author" content="StarsInDust ">
-<meta name="Designer" content="StarsInDust ">
-
-<meta name="keywords" content=" Learning More Techniques for Bezier Curves, Blender, 3D Modeling, Animation, Graphic Art "/>
-
-
-<meta name="description" content="This article will go into a few more techniques on how to create a Bezier Curve/>
-
-<meta name="category" content="Learning More Techniques for Bezier Curves, Blender, 3D Modeling, Animation, Graphic Art">
-
-<meta name="rating" content="General">
-
-
-<meta name="robots" content="index,follow" />
-
-<meta name="revised" content="Tuesday, March 11, 2025" />
-
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/6-Continuing-To-Learn-More-Techniques.html">
+ <meta name="title" content="7 Mirroring and Joining the Curve ">
 
  
-   
-   
-   
-
-
     
     
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
@@ -46,75 +23,21 @@
 
 <link href="CSS/myStyles.css" rel="stylesheet" type="text/css">
 <link href="CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-<!--
 
-p.BlueBolden {
-margin-top:0in;
-margin-right:0in;
-margin-bottom:12.0pt;
-margin-left:0in;
-font-size:12.0pt;
-font-family:"Times New Roman",serif;
-color:blue;
-font-weight:bold;
-}
--->
-</style>
+
 <style type="text/css">
-<!--
-p.MsoTocHeading {
-margin-top:12.0pt;
-margin-right:0in;
-margin-bottom:12.0pt;
-margin-left:0in;
-line-height:115%;
-font-size:16.0pt;
-font-family:"Calibri Light",sans-serif;
-color:#2F5496;
-}
-p.MsoToc1 {
-margin-top:0in;
-margin-right:0in;
-margin-bottom:5.0pt;
-margin-left:0in;
-line-height:115%;
-font-size:11.0pt;
-font-family:"Calibri",sans-serif;
-}
-span.MsoHyperlink {
-color:#0563C1;
-text-decoration:underline;
-text-underline:single;
-}
-span.BlueBoldenChar {
-font-family:"Times New Roman",serif;
-color:blue;
-font-weight:bold;
-}
-span.boldBlueChar {
-font-family:"Times New Roman",serif;
-color:blue;
-font-weight:bold;
-}
--->
+  /* Add custom styles here if needed */
 </style>
-<style type="text/css">
-<!--
-span.BoldRedChar {
-font-family:"Times New Roman",serif;
-color:red;
-font-weight:bold;
-}
--->
-</style>
+
+
 </head>
 
 
 <body>
 
 <div class="wrapper">
-  <header class="header">Header</header>
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
   
   <ul class="navigation">
    <li><a href="index.html" class="active"title="Home">Home</a></li>
@@ -131,137 +54,248 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~6 Continuing to Learn More Techniques~</p>
+  <p class="h2Black" >~7 Mirroring and Joining the Curve~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >9/29/2025</p>
+   <p class="articleDate" style="text-align:right" >10/6/2025</p>
    
    <br>
 <br>
 
-
 <p> <a name="_back_to_top" class="tableOfContentHeading">Table of Contents</a></p>
 
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc192573061">The   Starting Point</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc192573062">Move   the Cursor to the Selected point</a></span></p>
-<p class="tableOfContents"><span class="MsoHyperlink"><a href="#_Toc192573063">Moving   the Cursor to the Vertical Center of View Port</a></span></p>
+
+<p class="tableOfContents"><a href="#_Toc192662479">The Starting Point</a></p>
+<p class="tableOfContents"><a href="#_Toc192662480">Moving 3D Cursor to   Viewport&rsquo;s Mid-Point</a></p>
+<p class="tableOfContents"><a href="#_Toc192662481">Move Pivot Point</a></p>
+<p class="tableOfContents"><a href="#_Toc192662482">Add a Duplicate Curve</a></p>
+<p class="tableOfContents"><a href="#_Toc192662483">To Mirror the Duplicate.</a></p>
+<p class="tableOfContents"><a href="#_Toc192662484">Join the Two Curves   Together</a></p>
+<p class="tableOfContents"><a href="#_Toc192662485">Add a Segment to the   Curve</a></p>
+<p class="tableOfContents"><a href="#_Toc192662486">Joining the Bottom   Section of the Curve</a></p>
 
 
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/1.png" width="264" height="243">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/1.png" width="264" height="240">
 <p class="BlueBolden">&nbsp;</p>
 <p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Hlk192571244"></a><a name="_Toc192573061">The Starting Point</a></h1>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc192662479">The Starting Point</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Once again, we are starting off from our<a href="Articles/2025/1-Blender-Continued/8-Creating-Curves/5-Learning-More-Advanced-Techniques-for-Beziers/5-Learning-More-Advanced-Techniques-for-Beziers.html" target="_blank"> last tutorial</a>. So,  your shape right now should be looking like this.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/2.png" width="450" height="471">
-
-<p class="MsoNormal">We want to now concentrate on the upper section of this  curve. We are going to increase it in size. So, select this point here.</p>
+<p class="MsoNormal">We are Starting this tutorial from here. Your shape should  look like this now, if you are following along from the<a href="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/6-Continuing-To-Learn-More-Techniques.html" target="_blank"> last tutorial.</a></p>
 
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/3.png" width="287" height="255">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/2.png" width="499" height="669">
 <p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<h1><a name="_Toc192573062">Move the Cursor to the Selected point</a></h1>
+<h1><a name="_Toc192662480">Moving 3D Cursor to Viewport&rsquo;s Mid-Point</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">Press <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Shift</span></span> and <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">S</span></span> to bring up the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cursor menu</span></span> over lay.  We want to select <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cursor  to Selected</span></span>.</p>
+<p class="MsoNormal">Find where your cursor is at this moment and move it to the <span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">center</span></span> of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">View Port</span></span>. This would  be at this point here. We want to move the Cursor to where the red, and green  axis lines on the grid converge.</p>
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/4.png" width="386" height="283">
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/3.png" width="327" height="414">
 <p class="BlueBolden">&nbsp;</p>
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Your cursor with the colored move tool arrows should move to  that point that we selected.</p>
+
+<p class="MsoNormal">To move the cursor to this point, Press <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift-S</span></span> and then  choose to return the cursor to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">World Origin</span></span>.</p>
 
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/5.png" width="443" height="391">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/4.png" width="449" height="301">
 
 
-
-<h1><a name="_Toc192573063">Moving the Cursor to the Vertical Center of View Port</a></h1>
+<h1><a name="_Toc192662481">Move Pivot Point</a></h1>
 <p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">The Vertical Center of the View Port is indicated by that  straight green line that is sitting to the right of our Move Tool. We can move  our cursor to this point by setting the cursor location for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> axis to be <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span>. So, the cursor  will move right to the green line, and be siting directly across from the point  on the controller.</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Be careful</span></span>, the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">setting</span></span> for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cursor</span></span> is located in  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">View tab,</span></span> of that panel to the right of the view port. So, will need to pop that panel  open with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">N</span></span> key.</p>
+<p class="MsoNormal">Now we want to move the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Pivot Point</span></span> to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">3D Cursor</span></span>. Go to the  top menu, and find the Pivot Point Menu. We want to select 3D Cursor to have  the Pivot point at the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">same  location</span></span> as the 3D Cursor.</p>
 
-<p class="MsoNormal">Now under 3D Cursor in this panel, inside of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">View tab</span></span>, set the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">3D</span></span> <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cursor Location</span></span> for  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> to be <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">0</span></span>. </p>
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/6.png" width="511" height="413">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/5.png" width="306" height="235">
 
-<p class="MsoNormal">Now select these elements on the Curve, as it is illustrated  in the image below.</p>
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/7.png" width="612" height="526">
-<p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">Now press the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">S</span></span> key and start to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">scale</span></span> this up</p>
+<p class="MsoNormal">Your <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Orange  Pivot Point</span></span> Dot should be inside of the 3D cursor, which is at  the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Mid-point</span></span> of your page.</p>
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/8.png" width="529" height="426">
-<p class="BlueBolden">&nbsp;</p>
 
-<p class="MsoNormal">We want to try and realign this curve as best as we can. We  can just align points with the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">G</span></span> key. Try to line up these  two points (as illustrated below) straight up and down from each other.</p>
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/9.png" width="393" height="316">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/6.png" width="357" height="352">
 <p class="BlueBolden">&nbsp;</p>
 <p class="BlueBolden">&nbsp;</p>
 <p class="BlueBolden">&nbsp;</p>
-<p class="MsoNormal">We just want a fairly nice curve for this side.</p>
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/10.png" width="403" height="431">
-
-
-<p class="MsoNormal">We want to select these <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">two points here</span></span> and make this  handle to be a bit longer. Just take the move tool and scoot this whole section  downward. This next image will show what this bottom section looks like before  the move.</p>
-
-
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/11.png" width="425" height="402">
+<h1><a name="_Toc192662482">Add a Duplicate Curve</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A</span></span> key to select the entire Curve.</p>
 
 
-<p class="MsoNormal">You can hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y</span></span> key to make sure that it  moves straight downward on the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Y axis</span></span>. This is what the  bottom part looks like after the move.</p>
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/7.png" width="290" height="310">
+<p class="BlueBolden">&nbsp;</p>
 
-<p><img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/12.png" width="374" height="368"></p>
+
+<p class="MsoNormal">Now we need to add a duplicate to that curve that we already  have.  To do this, we come up to the  Sub-Menu, Choose <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Curve</span></span>,  and then pick <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Add  Duplicate</span></span>. <span class="BoldRedChar"><span style="font-size:12.0pt; ">Immediately</span></span>, <span class="BoldMaroonListChar"><span style="font-size:12.0pt; ">HIT </span></span>the <span class="boldBlueChar"><span style="font-size:12.0pt; ">Escape Key</span></span>,  to kick the new curve off of your mouse, and have it deposited in the exact  same place as the first curve.</p>
+
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/8.png" width="364" height="210">
+
+
+<p class="MsoNormal">Now this is Curve upon Curve, so we will only visually see  one curve.</p>
+
+<p class="BlueBolden">&nbsp;</p>
+<p><img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/9.png" width="399" height="391"></p>
+<p>&nbsp;</p>
 <p>&nbsp; </p>
 
-<p class="MsoNormal"><a name="_Hlk192570983">The Shape should look like this now.</a></p>
+<h1><a name="_Toc192662483">To Mirror the Duplicate</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">Hit the <span class="boldBlueChar"><span style="font-size:12.0pt; ">S key</span></span>, then hit the <span class="boldBlueChar"><span style="font-size:12.0pt; ">X key</span></span> and <span class="boldBlueChar"><span style="font-size:12.0pt; ">-1</span></span>.  </p>
+<p class="MsoNormal">If you did it correctly, your shape should look like this.  If not, just go back to where you duplicated the curve, and try the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">S, X, -1</span></span> again.</p>
 
 
-<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/6-Continuing-To-Learn-More-Techniques/Images/13.png" width="524" height="666">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/10.png" width="589" height="286">
 
 
 
-<p class="MsoNormal">Ok, now this is just a short little tutorial here. But I  want to stop here so that we can keep the Mirroring, and joining of the object inside  of a separate tutorial.</p>
+
+<h1><a name="_Toc192662484">Join the Two Curves Together</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We need to do this in a certain way, or we could lose all of  the assignments that we made to the handles. We do not want to lose what we set  up, so we will preform this next part like this.</p>
+<p class="MsoNormal">Select your Curve again, by hitting the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">A</span></span> Key. Now with the  curve selected we can hit that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">N</span></span> key and open up that  editing side panel. Go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Edit</span></span> Tab.</p>
 
 
-</article><aside class="aside aside-1">
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/11.png" width="357" height="213">
+
+
+<p class="MsoNormal">We could simply come in here and select. Join Splines and  then hit the button under it that says Join Neighboring Splines, but that will  change all of our handles to the handle type of Align, and that is not what we  want. So, try and follow along here.</p>
+<p class="MsoNormal">We want to select this end point right here, and first make  sure that it is not already a <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Free </span></span>handle type, if it is  not, we want to change it to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Free</span></span>.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/12.png" width="390" height="411">
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/13.png" width="493" height="470">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="MsoNormal">Now reselect that top mid- point</p>
+
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/14.png" width="278" height="254">
+
+
+<p class="MsoNormal">Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X</span></span> key and delete this point. Choose <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Vertices</span></span> for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Delete</span></span> action. Your  curves should have maintained their curves, by having the handle changed to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Free</span></span>, as we did above.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/15.png" width="340" height="398">
+
+
+<h1><a name="_Toc192662485">Add a Segment to the Curve</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We are going to connect these two points by adding that  segment between them. So, first we want to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">shift-select</span></span> the two points  that we want to connect.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/16.png" width="314" height="295">
+
+
+<p class="MsoNormal">Now go up to the top Sub-Menu, and Select the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Control Points</span></span> menu.  From there we want to select the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Make Segment</span></span> option.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/17.png" width="474" height="152">
+
+
+<p class="MsoNormal">You will notice that this curve will come in a bit wavy.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/18.png" width="390" height="443">
+<p class="BlueBolden">&nbsp;</p>
+
+<p class="MsoNormal">To fix the waviness of this curve, we can shift -select  these two points. </p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/19.png" width="330" height="268">
+
+
+<p class="MsoNormal">Now <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift  -select</span></span> this whole control to make it <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">active</span></span>.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/20.png" width="434" height="351">
+
+
+<p class="MsoNormal">Now <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Shift  – Select </span></span>just these <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">two end points</span></span>.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/21.png" width="413" height="405">
+
+
+<p class="MsoNormal">We need to Hit the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">V</span></span> key so that we can assign <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Vector </span></span>to both of  these End Points. This way they can point at each other.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/22.png" width="320" height="191">
+
+<p class="MsoNormal">Notice, that with that change to Vector, that <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">both handles</span></span> are now <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">pointing straight</span></span> at  one another. So, now you have that smooth curve that you wanted.</p>
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/23.png" width="417" height="486">
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<h1><a name="_Toc192662486">Joining the Bottom Section of the Curve</a></h1>
+<p class="tableOfContents" ><a href="#_back_to_top">~back to top~</a></p>
+<p>&nbsp;</p>
+<p class="MsoNormal">We only have the top section of the curve attached. So, we  still need to attach the bottom two pieces together.</p>
+
+<p class="MsoNormal">Select this <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">bottom point</span></span>, as shown in the  illustration below.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/24.png" width="393" height="361">
+<p class="BlueBolden">&nbsp;</p>
+
+
+<p class="MsoNormal">Now press the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">X </span></span>key with that one curve  bottom point selected, and choose to <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Delete Vertices</span></span>.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/25.png" width="290" height="186">
+
+
+<p class="MsoNormal">Now your curve should look like this. You should have an <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">opening</span></span> at the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">bottom-left</span></span> of the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">curve</span></span>.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/26.png" width="370" height="373">
+<p class="BlueBolden">&nbsp;</p>
+
+<p class="MsoNormal">To close this curve, however, this time we will be going to  go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Property  Panel</span></span> for the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Curve</span></span>. </p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/27.png" width="117" height="94">
+
+
+<p class="MsoNormal">We want to go to the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Active Spline</span></span> section, and  directly under this you will see a check box for <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cyclic</span></span>. As soon as we check  the box for Cyclic, you will notice that the opening that we have in the curve  will instantly close.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/28.png" width="539" height="250">
+
+
+<p class="MsoNormal">The Curve <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">closed</span></span> by checking the <span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Cyclic</span></span> check box.</p>
+
+
+<img src="Articles/2025/1-Blender-Continued/8-Creating-Curves/7-Mirroring-And-Joining-The-Curve/Images/29.png" width="293" height="313">
+
+
+<p class="MsoNormal">We are going to stop this tutorial here. In the next  tutorial, we will look at how we can fill the shape and then put a hole into  it.</p>
+
+<p>&nbsp;</p>
+</article>
+
   
-  
-</aside>
-  <aside class="aside aside-2"><p class="h2Silver">&nbsp;</p>
-  <p class="LeftPMidBlack">&nbsp;</p>
-  
-  
-  </aside>
-  
-  
-  <footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
-  <script type="text/javascript" src ="JavaScript/FooterYearlyDate.js">
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="JavaScript/FooterYearlyDate.js">
 </script></footer>
 
 
-     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const images = document.querySelectorAll("article.main img");
-            images.forEach(img => {
-                if (img.width < 500) {
-                    img.classList.add("responsiveImage");
-                } else {
-                    img.classList.add("wideImg");
-                }
-            });
-        });
-    </script>
-      
-
-    
+  <script type="text/javascript" src ="JavaScript/responsiveImage.js">
+</script>   
+       
 </body>
 </html>
