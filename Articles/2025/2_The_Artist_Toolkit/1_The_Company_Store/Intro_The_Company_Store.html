@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Python and Tkinter fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+   <meta name="description" content="This article explains how a programmer would go about getting the information needed for a project, and then using that information to build an application. "/>
+
+<meta name="category" content="Python, Tk, Tkinter, Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Tuesday, October 7, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/2_The_Artist_Toolkit/1_The_Company_Store/Intro_The_Company_Store.html">
+
+
+
+ 
+   
+ <meta name="title" content="1 Inside the Company Store ">
+
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.strongEmphasisChar {
+color:#002060;
+font-weight:bold;
+}
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+span.Heading3Char {
+font-family:"Calibri Light",sans-serif;
+color:#262626;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~Inside the Company Store: ~</p>
+  <h3 class="h2MidBlack">Demystifying Tkinter Docs </h3>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >10/13/2025</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="358" height="322">
+<h1>Where can I go to find the code, I need?</h1>
+<p class="MsoNormal">Microsoft will give you different websites that are  dedicated to the documentation of their products. Tkinter is no different and  will offer their own docs. The problem with this documentation is that if you  are a new user, it can be like walking into a maze of jumbled jargon.<a name="_Hlk207261580"></a></p>
+<h1>The Tkinter Class API Reference</h1>
+<p class="MsoNormal">Yes, <strong>The Tkinter Class API Reference</strong> is exactly what  they are naming this thing. So, they are trying to mystify you straight out of  the box. You can go to this website to see a list of what they have to offer.</p>
+<p class="MsoNormal"><a href="https://tkdocs.com/pyref/index.html"><strong>https://tkdocs.com/pyref/index.html</strong></a><strong></strong></p>
+<p class="MsoNormal">But if you click on one of those links, you will be greeted  with even more baffling jargon. So, what in the heck is this all supposed to  mean?</p>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">When you visit the official Tkinter documentation, you&rsquo;ll often see  syntax like this:</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="622" height="240">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="strongEmphasisChar"><span style="line-height:115%; font-size:14.0pt; ">master</span></span> is the parent container (like a frame or  root window)</p>
+<p class="MsoNormal"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">cnf </span></span>is shorthand for configuration options  (like color, font, etc.)</p>
+<p class="MsoNormal"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">**kw</span></span> allows for additional keyword arguments</p>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">&ldquo;You could sort of think of </span><strong><span style="font-family:'Calibri',sans-serif; ">master</span></strong><span style="font-family:'Times New Roman',serif; font-size:12.0pt; "> as the shelf, </span><strong><span style="font-family:'Calibri',sans-serif; ">cnf</span></strong><span style="font-family:'Times New Roman',serif; font-size:12.0pt; "> as the label settings, and </span><strong><span style="font-family:'Calibri',sans-serif; ">**kw</span></strong><span style="font-family:'Times New Roman',serif; font-size:12.0pt; "> as the secret drawer where extra  options live.&rdquo;</span></p>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">But just because you are looking at this technical jargon on the page,  that doesn&rsquo;t mean that this is what you will use to create your own projects.  To tell you the truth, some of these are old terms that are not used anymore,  and some of these are what is seen behind the scenes of your own code, that you  never really see or work with. None the less, this is what you will be  presented with, so you best be ready to be prepared to understand what this  gobblety- gook is actually trying to tell you.</span></p>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">&nbsp;</span></p>
+<h1>Understanding the Syntax</h1>
+<p class="MsoNormal">Now to decrypt what that information above is actually  telling us</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">tkinter.Listbox(</span><span class="Heading3Char">master=None, cnf={}, **kw</span>)</p>
+<h1>The Entry widget</h1>
+<p class="MsoNormal">So, let&rsquo;s start with the <strong><span style="font-family:'Calibri',sans-serif; ">Entry </span></strong>widget, it is about the easiest. Some applications call this a <strong><span style="font-family:'Calibri',sans-serif; ">textbox</span></strong>, but Tkinter is a bit  different, it will make a very stark distintion in these text gathering  apparatuses, for one-liners, it uses what is called the Entry widget, and for  multilines of text…now that is where Tkinter will use the text widget to handle  things.</p>
+<p class="MsoNormal">So, let&rsquo;s go shopping at the Tkinter company store for one  of these things. Go to this URL below and start looking for it.</p>
+<p class="MsoNormal"><a href="https://tkdocs.com/pyref/index.html">https://tkdocs.com/pyref/index.html</a></p>
+<p class="MsoNormal">I found one</p>
+<img src="Images/3.png" width="394" height="360">
+<p class="MsoNormal">Now we want to click on that <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">tkinter.ttk.Entry</span></span> link  to see what we can find. Oh, another one of those pages with the syntax at the  top, and a list of things that we can use underneath of it.</p>
+<img src="Images/4.png" width="481" height="395">
+<p class="MsoNormal">Two common methods on the textbox are <strong><span style="font-family:'Calibri',sans-serif; ">get</span></strong> and <strong><span style="font-family:'Calibri',sans-serif; ">insert </span></strong>methods.</p>
+<img src="Images/5.png" width="386" height="201">
+<h1>What can be a master?</h1>
+<img src="Images/6.png" width="196" height="84">
+<p class="MsoNormal">The <strong><span style="font-family:'Calibri',sans-serif; ">master</span></strong> is  anything that you want to put this thing into. It can be the <strong><span style="font-family:'Calibri',sans-serif; ">root</span></strong>, the <strong><span style="font-family:'Calibri',sans-serif; ">frame</span></strong>, the <strong><span style="font-family:'Calibri',sans-serif; ">canvas</span></strong>…root stands for anything  that we want visible on the 1<sup>st</sup> layer of our application. You would  layer other things like frame on top of that, and if you want the widget in the  frame, you put it on top of the 2<sup>nd</sup> layer where your frame resides,  and this frame would become your master.</p>
+<h2>What is cnf</h2>
+<p class="MsoNormal">cnf is a legacy way to pass configuration options as a  dictionary. This term is rarely used directly anymore.</p>
+<h1>What is kw?</h1>
+<img src="Images/7.png" width="196" height="73">
+<p class="MsoNormal">The kw, stands for keyword. In Tkinter, a keyword argument  is a common idea, and used when initializing widgets or configuring their  properties. Keyword arguments are surrounded by parenthesis, which enables them  to be passed to a function or constructor (name given when creating a widget)  and is done using name=value pairs. It is a way of passing in information that  an object needs. In Python, things like functions and constructors are  considered first class objects. </p>
+<p class="MsoNormal">The two stars are really a cool concept in Tkinter, and  allows a function to accept any number of keywords; and they do not even need to  be defined inside of the function first. So, you can go in not knowing how many  of these arguments you are actually going to need, and the program will handle figuring  this out for you.</p>
+<img src="Images/8.png" width="662" height="342">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h2>How to use it</h2>
+<p class="MsoNormal">This is the old way of doing things, when <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">cnf </span></span>was  actually a thing in tkinter.</p>
+<img src="Images/9.png" width="439" height="121">
+<p class="MsoNormal">This is how things are done now.</p>
+<img src="Images/10.png" width="490" height="98">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">And this is how you would go about starting to write your  python file, to enable you to use an entry widget in your own project.  </p>
+<img src="Images/11.png" width="454" height="162">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">So, let&rsquo;s put one of those methods into the search box at  the top to see where it leads</p>
+<img src="Images/12.png" width="631" height="70">
+<img src="Images/13.png" width="642" height="302">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">So, lets click on that first one. And we hit pay dirt. Here  we can read all about this Entry widget.</p>
+<img src="Images/14.png" width="641" height="398">
+<h1>Creating the file for the Entry Button</h1>
+<p class="MsoNormal">Create a new file and call it <strong><span style="font-family:'Calibri',sans-serif; ">test_entry_widget.py</span></strong></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<h2>The Basic Skeletal Code</h2>
+<p class="MsoNormal"><span class="BlueBoldenChar"><span style="line-height:115%; font-size:12.0pt; ">Start  out</span></span> with your start up code to create the window. </p>
+<img src="Images/15.png" width="365" height="158">
+<p class="code">import tkinter as tk</p>
+<p class="code">from tkinter import ttk</p>
+<p class="code">&nbsp;</p>
+<p class="code"># Create main window</p>
+<p class="code">root = tk.Tk()</p>
+<p class="code">root.title(&quot;The Entry Widget&quot;)</p>
+<p class="code">root.geometry(&quot;400x150&quot;)</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BlueBoldenChar"><span style="font-size:12.0pt; ">Close  it</span></span> at the bottom like this</p>
+<p class="code"># Run the app</p>
+<p class="code">root.mainloop()</p>
+<p class="code">&nbsp;</p>
+<img src="Images/16.png" width="176" height="72">
+<p class="code">&nbsp;</p>
+
+<img src="Images/17.png" width="440" height="762">
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">&ldquo;In Tkinter, every widget grows from a root. Frames act like  branches, organizing your interface. Widgets—like Entry boxes or Buttons—are  the leaves your users interact with.&rdquo; </p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h2>The Frame</h2>
+<p class="MsoNormal">Create a Frame for every thing to go inside of. Place this  at the top right after the code defining what root is. Notice our frame is on  the next layer over the root, which is the base layer. We pack it so it will  showup inside of the frame, with its position. Each widget needs a home. When  we create a label or entry, we tell Python where to place it —inside  entry_frame, which itself lives inside root.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/18.png" width="496" height="99">
+<p class="MsoNormal">&nbsp;</p>
+<h2>The Label and Entry</h2>
+<p class="MsoNormal">Notice first of all here, we are placing everything into the  entry_frame, and not in the root which is the first layer. Also, look at the  myEntry.insert line. That first number of &lsquo;0&rsquo; represents the very first space  in the Entry. So, we start typing at the beginning of the box, and not in the  middle somewhere. The text after the &lsquo;0&rsquo; is what we have in the box as our default  text. This is usually for instructional purposes.</p>
+<img src="Images/19.png" width="578" height="138">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Pack, Grid and Place</h1>
+<p class="MsoNormal">There are a couple of methods that we could go about  arranging widgets inside of a frame.</p>
+<img src="Images/20.png" width="319" height="471">
+<p class="MsoNormal">This is done inside of a python file. Extention .<span class="strongEmphasisChar"><span style="font-size:14.0pt; ">py</span></span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">PACK:</span></strong> Widgets  are stacked vertically, aligned to the left. Think of it like stacking boxes in  a column—simple and clean.</p>
+<p class="code">import tkinter as tk</p>
+<p class="code">&nbsp;</p>
+<p class="code">root = tk.Tk()</p>
+<p class="code">root.title(&quot;Pack Example&quot;)</p>
+<p class="code">&nbsp;</p>
+<p class="code"># Create buttons and pack them vertically</p>
+<p class="code">btn1 = tk.Button(root, text=&quot;Button 1&quot;)</p>
+<p class="code">btn1.pack(side=&quot;top&quot;, fill=&quot;x&quot;, padx=5,  pady=5)</p>
+<p class="code">&nbsp;</p>
+<p class="code">btn2 = tk.Button(root, text=&quot;Button 2&quot;)</p>
+<p class="code">btn2.pack(side=&quot;top&quot;, fill=&quot;x&quot;, padx=5,  pady=5)</p>
+<p class="code">&nbsp;</p>
+<p class="code">btn3 = tk.Button(root, text=&quot;Button 3&quot;)</p>
+<p class="code">btn3.pack(side=&quot;top&quot;, fill=&quot;x&quot;, padx=5,  pady=5)</p>
+<p class="code">&nbsp;</p>
+<p class="code">root.mainloop()</p>
+<p class="MsoNormal"><span style="color:#2F5496; ">&nbsp;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">GRID:</span></strong> Widgets  are arranged in a 2×2 matrix. This method gives you control over rows and  columns, like placing tiles on a board.</p>
+<p class="code">import tkinter as tk</p>
+<p class="code">&nbsp;</p>
+<p class="code">root = tk.Tk()</p>
+<p class="code">root.title(&quot;Grid Example&quot;)</p>
+<p class="code">&nbsp;</p>
+<p class="code"># Create buttons and place them in a grid</p>
+<p class="code">btn1 = tk.Button(root, text=&quot;Button 1&quot;)</p>
+<p class="code">btn1.grid(row=0, column=0, padx=5, pady=5)</p>
+<p class="code">&nbsp;</p>
+<p class="code">btn2 = tk.Button(root, text=&quot;Button 2&quot;)</p>
+<p class="code">btn2.grid(row=0, column=1, padx=5, pady=5)</p>
+<p class="code">&nbsp;</p>
+<p class="code">btn3 = tk.Button(root, text=&quot;Button 3&quot;)</p>
+<p class="code">btn3.grid(row=1, column=0, padx=5, pady=5)</p>
+<p class="code">&nbsp;</p>
+<p class="code">root.mainloop()</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">PLACE:</span></strong> Widgets are positioned at exact coordinates. Button 1 is top-left, Button 2 is  centered, and Button 3 is bottom-right—like pinning notes on a corkboard.</p>
+<p class="code">import tkinter as tk</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">root = tk.Tk()</p>
+<p class="code">root.title(&quot;Place Example&quot;)</p>
+<p class="code">root.geometry(&quot;300x200&quot;)  # Set window size for absolute positioning</p>
+<p class="code">&nbsp;</p>
+<p class="code"># Create buttons and place them at specific coordinates</p>
+<p class="code">btn1 = tk.Button(root, text=&quot;Button 1&quot;)</p>
+<p class="code">btn1.place(x=10, y=10)</p>
+<p class="code">&nbsp;</p>
+<p class="code">btn2 = tk.Button(root, text=&quot;Button 2&quot;)</p>
+<p class="code">btn2.place(x=120, y=80)</p>
+<p class="code">&nbsp;</p>
+<p class="code">btn3 = tk.Button(root, text=&quot;Button 3&quot;)</p>
+<p class="code">btn3.place(x=200, y=150)</p>
+<p class="code">&nbsp;</p>
+<p class="code">root.mainloop()</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h2>Focus</h2>
+<p class="MsoNormal">In Tkinker, we can write functions that will make the  default text disappear from the box, when we start typing, or in this case (gains  focus). We are using two functions here. One will handle what is done when the  box gains focus, and one tells the box what to do when it loses focus.</p>
+<img src="Images/21.png" width="500" height="250">
+<p class="MsoNormal">&nbsp;</p>
+<h2>Function to Show Amount</h2>
+<p class="MsoNormal">Here we are writing a function to show the amount in the  terminal when we click the button. The button will have a command keyword  linked to this function, so it knows to run it when the button is clicked.</p>
+<img src="Images/22.png" width="526" height="127">
+<p class="MsoNormal">The button that holds the command to show the amount, typed  by the user, in the terminal.</p>
+<img src="Images/23.png" width="627" height="92">
+<p class="MsoNormal">&nbsp;</p>
+<h2>Binding the Focus Event</h2>
+<p class="MsoNormal">The event needs to be bound to an object in the frame. In  this case we want to use the focus event with our Entry box, so it needs to be  bound to it, and when the even occurs, (in our case it is the Entry box gaining  or losing focus),It is then that the functions that are written for the event  are automatically run.</p>
+<img src="Images/24.png" width="403" height="88">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The only thing left is the code that runs the entire app at  the bottom of the code.</p>
+<img src="Images/25.png" width="429" height="328">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/26.png" width="423" height="330">
+<h1>The Code for the Entry Widget</h1>
+<p class="code">import tkinter as tk</p>
+<p class="code">from tkinter import ttk</p>
+<p class="code">&nbsp;</p>
+<p class="code"># Create main window</p>
+<p class="code">root = tk.Tk()</p>
+<p class="code">root.title(&quot;The Entry Widget&quot;)</p>
+<p class="code">root.geometry(&quot;400x150&quot;)</p>
+<p class="code">&nbsp;</p>
+<p class="code"># Create a frame to hold the widgets</p>
+<p class="code">entry_frame = tk.Frame(root, padx=10, pady=10)</p>
+<p class="code">entry_frame.pack(fill=&quot;both&quot;, expand=True)</p>
+<p class="code">&nbsp;</p>
+<p class="code"># Create the Label and Entry</p>
+<p class="code">myLabel = tk.Label(entry_frame, text=&quot;Testing 1,2,3&quot;)</p>
+<p class="code">myLabel.grid(row=0, column=0, padx=10, pady=5, sticky='w')</p>
+<p class="code">myEntry = tk.Entry(entry_frame,)</p>
+<p class="code">myEntry.insert('0', 'Enter Amount Here')</p>
+<p class="code">myEntry.grid(row=0, column=1, padx=10, pady=5, sticky='ew')</p>
+<p class="code"><br>
+</p>
+<p class="code"># Make text disappear when you start typing</p>
+<p class="code">&nbsp;</p>
+<p class="code">def on_focus_in(event):</p>
+<p class="code">&nbsp; &nbsp; if myEntry.get() == &quot;Enter Amount Here&quot;:</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp;myEntry.delete(0, tk.END)</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp;myEntry.config(fg=&quot;black&quot;)</p>
+<p class="code">&nbsp;</p>
+<p class="code">def on_focus_out(event):</p>
+<p class="code">&nbsp; &nbsp; if myEntry.get() == &quot;&quot;:</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp;myEntry.insert(0, &quot;Enter Amount  Here&quot;)</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp;myEntry.config(fg=&quot;gray&quot;)</p>
+<p class="code"><br>
+</p>
+<p class="code"># function to make the text show up in the terminal</p>
+<p class="code">def show_amount():</p>
+<p class="code">&nbsp; &nbsp; value = myEntry.get()</p>
+<p class="code">&nbsp; &nbsp; print(f&quot;Entered amount: {value}&quot;)</p>
+<p class="code">&nbsp;</p>
+<p class="code"># Button with command to the show_amount function</p>
+<p class="code">myButton = tk.Button(entry_frame, text=&quot;Submit&quot;,  command=show_amount)</p>
+<p class="code">myButton.grid(row=1, column=0, padx=10, pady=5)</p>
+<p class="code">&nbsp;</p>
+<p class="code"># Binding the focus events</p>
+<p class="code">myEntry.bind(&quot;&lt;FocusIn&gt;&quot;, on_focus_in)</p>
+<p class="code">myEntry.bind(&quot;&lt;FocusOut&gt;&quot;,on_focus_out)</p>
+<p class="code">&nbsp;</p>
+<p class="code"># Run the app</p>
+<p class="code">root.mainloop()</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Moving this code into the Main File</h1>
+<p class="MsoNormal">You could use this entire code as is, or remove the  scaffling code around it, and just take this code and move it into your own  project. </p>
+<h2>Remove Scaffling</h2>
+<p class="MsoNormal">So, remove or comment out this code at the top</p>
+<img src="Images/27.png" width="361" height="159">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Then we also need to remove the last lines of the file,  because that will run the program, and we also have that line in the main file.  So, leaving it in would be duplication, could at the worst crash your program  and at the least be extremely poor code writing.</p>
+<img src="Images/28.png" width="177" height="78">
+<h2>Decide where to place it</h2>
+<p class="MsoNormal">The next part is to decide where we actually want this code  to live. Where do we need a label, entry, and button?</p>
+<p class="MsoNormal">What Python file does it reside in? Are you needing this  actually as part of the root, or maybe you need it at a higher layer level.  Maybe in a Frame, or inside of a canvas. </p>
+<p class="MsoNormal">&nbsp;</p>
+<h2>Replace root with the correct container </h2>
+<img src="Images/29.png" width="470" height="101">
+<p class="MsoNormal">&nbsp;</p>
+<h2>Place holder behavior</h2>
+<p class="MsoNormal">If you used any place holder behavior in your test, you will  need to scan through the code and make sure you replace that.</p>
+<h2>Make sure your Project behavior is updated from Testing Behavior</h2>
+<p class="MsoNormal">In testing many times you want everything printed out to the  terminal, so that you can make simple tests, but in real world projects that  would never do; your user does not have access to your terminal, and would  never see it. So,, now would be a good time to make that change so that instead  of the feed back text, only being presented in the terminal where a developer  will see it, now would be a good time to move that behavior of printing out the  text to a label, or even triggering a database event. </p>
+<img src="Images/30.png" width="280" height="459">
+<p class="MsoNormal">&nbsp;</p>
+<h2>Test, Test, Test</h2>
+<p class="MsoNormal">Before your product goes out, you want to test for every scenario. </p>
+<ul>
+  <li>Layout,  does it look right. </li>
+  <li>Behavior,  does the widget still work as expected after moving it into your actual  project. </li>
+  <li>Spellings</li>
+</ul>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
