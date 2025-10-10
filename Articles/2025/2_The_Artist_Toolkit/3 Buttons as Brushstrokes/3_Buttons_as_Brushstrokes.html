@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn about Python and Tkinter with this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+   
+ <meta name="title" content="Buttons as Brushstrokes ">
+
+ <meta name="title" content="Buttons as Brushstrokes ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Python, Tk, Tkinter, Programming "/>
+
+
+<meta name="description" content="This article explains how a programmer would go about creating a button in tkinter, using the Python file extension. "/>
+
+<meta name="category" content="Python, Tk, Tkinter, Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Tuesday, October 9, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2025/2_The_Artist_Toolkit/3%20Buttons%20as%20Brushstrokes/3_Buttons_as_Brushstrokes.html">
+
+
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~3 Buttons as Brushstrokes~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >10/27/2025</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="297" height="262">
+<h1>What is a Button in Tkinter </h1>
+<p class="MsoNormal">Buttons in Tkinter are like brushstrokes on a canvas. It  begins a process; it starts a behavior. If you are an artist, this beginning brushstroke  is your start to a stunning piece of artIn the programming world, a button  brings your program to life—it initiates action.
+<p>A button on a page all by itself will just sit there. But  once you move the brush—write the code—you&rsquo;ll see it paint its picture and  fulfill its purpose.</p>
+<p class="MsoNormal">
+<h1>Where do I get these buttons?</h1>
+<p>Well, you really don&rsquo;t have to go far, as long as you know  how to import the tkinter library, you have access to a button, and a whole lot  of other things, but let&rsquo;s keep it simple today and focus on the button.
+We can start with the tkinter Library Imports:
+  <p><img src="Images/2.png" width="438" height="128">
+  <h1>Start with the same Python file from last week</h1>
+<p>Instead of starting from scratch here, we could just take  the same file that we were working on last week, and then just add the code for  the button to our existing code.<br>
+  <strong>#=======Tkinter Library Imports =======#</strong><br>
+  import tkinter as tk<br>
+  from tkinter import ttk</p>
+<p><strong># Creating the visiable application window</strong><br>
+  root = tk.Tk()</p>
+<p><strong># Optional: Set window properties</strong><br>
+  root.title(&quot;My Tkinter Application&quot;) &nbsp;<strong># Title of the  window</strong><br>
+  root.geometry(&quot;400x300&quot;) &nbsp;<strong># Set the window  size (width x height)</strong></p>
+<p><strong># Add widgets and define their layout here</strong><br>
+  <strong># Example:</strong><br>
+  label = tk.Label(root, text=&quot;FRUITS&quot;)<br>
+  label.pack(pady=20) <strong># Add some padding</strong></p>
+<p>fruit_label = tk.Label(root, text=&quot;Select your favorite  fruit:&quot;)<br>
+  fruit_label.pack(pady=2) &nbsp;<strong># Add some padding</strong><br>
+  fruit_dropdown = ttk.Combobox(root, values=[&quot;Apple&quot;, &quot;Banana&quot;,  &quot;Cherry&quot;, &quot;Date&quot;])<br>
+  fruit_dropdown.pack(pady=2) &nbsp;<strong># Add some padding</strong></p>
+<p>def update_label(event):<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;selected_value = fruit_dropdown.get()<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=f&quot;You  selected: {selected_value}&quot;)</p>
+<p>fruit_dropdown.bind(&quot;&lt;&lt;ComboboxSelected&gt;&gt;&quot;,  update_label)</p>
+<p>submit_label = tk.Label(root, text=&quot;&quot;)<br>
+  submit_label.pack(pady=2) &nbsp;<strong># Add some padding</strong></p>
+<p><strong># This will show you the window</strong><br>
+  root.mainloop()</p>
+<p>&nbsp;</p>
+<h1>Creating the Button</h1>
+<p>Let&rsquo;s start with the function that we will use to power up  the button. The function will be simple, and we can name this function anything  we want. But what we would like our function to do here, is to target the submit_label,  which is the same label that we used to show the fruit selection, which you may  remember from last week&rsquo;s lesson, was used by the Combobox. <br>
+  So, as I have already stated we will want to target that  label, and then use the config method on it. We can use the  config method because it is available through the library that we brought in  with our import statements. So, it is already written, and we do not need to  really know what it does, but it will help us in making changes to the text  that is in the submit_label.  <br>
+  So, we use that method, and it needs to know that it is  working with text, and what that text is supposed to say. So,  put two things in the parenthesis, because in order for the config  function to do its thing, it needs to know this stuff.<br>
+  So, here is our function:
+<p><br>
+  <strong>def</strong> on_button_click():<br>
+&nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=&quot;You clicked the  button!&quot;)
+<p><br>
+  Now that we have our function, we can create the button.<br>
+  Build the widget, which is a button. You can name  the button anything you like. But for a button we have to set it to a <strong>tk.Button</strong>.  Now what we want to pass to &lsquo;our own version&rsquo; of this button is: Where we want  it to be placed: <strong>root</strong> (the window),   what text we want on the button(<strong>text=&rdquo;Submit&rdquo;</strong>), and then we need  to call that button that we created in our function(<strong>command=lambda:  on_button_click()</strong>).<br>
+  Lastly, make sure to pack the Submit button  to the screen—if you don&rsquo;t, it won&rsquo;t appear. We can pass a small <strong>padding </strong>to the button through the  argument list.
+<p>submit_button = tk.Button(root, text=&quot;Submit&quot;, command=lambda:  on_button_click())<br>
+  submit_button.pack(pady=5) &nbsp;# Add some padding</p>
+<p>Now if you click on Submit button, you will see the label  saying <strong>&lsquo;You clicked the button!&rsquo;</strong><br>
+  </p>
+  
+  <img src="Images/3.png" width="332" height="276">
+<h1>Now for the Entire Code</h1>
+<p><strong>#=======Tkinter Library Imports =======</strong></p>
+<p>import tkinter as tk<br>
+  from tkinter import ttk<br>
+  <br>
+  <br>
+  # Creating the visiable application window<br>
+  root = tk.Tk()</p>
+<p># Optional: Set window properties<br>
+  root.title(&quot;My Tkinter Application&quot;) &nbsp;# Title of the  window<br>
+  root.geometry(&quot;400x300&quot;) &nbsp;# Set the window size  (width x height)</p>
+<p># Add widgets and define their layout here<br>
+  # Example:<br>
+  label = tk.Label(root, text=&quot;FRUITS&quot;)<br>
+  label.pack(pady=20) # Add some padding</p>
+<p>fruit_label = tk.Label(root, text=&quot;Select your favorite  fruit:&quot;)<br>
+  fruit_label.pack(pady=2) &nbsp;# Add some padding<br>
+  fruit_dropdown = ttk.Combobox(root, values=[&quot;Apple&quot;, &quot;Banana&quot;,  &quot;Cherry&quot;, &quot;Date&quot;])<br>
+  fruit_dropdown.pack(pady=2) &nbsp;# Add some padding</p>
+<p>def update_label(event):<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;selected_value = fruit_dropdown.get()<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=f&quot;You  selected: {selected_value}&quot;)</p>
+<p>fruit_dropdown.bind(&quot;&lt;&lt;ComboboxSelected&gt;&gt;&quot;,  update_label)</p>
+<p>submit_label = tk.Label(root, text=&quot;&quot;)<br>
+  submit_label.pack(pady=2) &nbsp;# Add some padding</p>
+<p># Button widget</p>
+<p>def on_button_click():<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=&quot;You  clicked the button!&quot;)</p>
+<p>submit_button = tk.Button(root, text=&quot;Submit&quot;, height=3,  width=18, bg='red', fg='white', command=lambda: on_button_click())<br>
+  submit_button.pack(pady=5) &nbsp;# Add some padding</p>
+<p># This will show you the window<br>
+  root.mainloop()</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="MsoNormal">
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
