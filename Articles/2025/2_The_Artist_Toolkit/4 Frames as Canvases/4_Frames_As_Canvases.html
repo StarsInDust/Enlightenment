@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn tkinter and python fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+   
+ <meta name="title" content="4 Frames as Canvases ">
+ 
+ 
+ <meta name="title" content="Frames for Canvases ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Python, Tk, Tkinter, Programming "/>
+
+
+<meta name="description" content="This article explains how a programmer would go about creating a frame in Tkinter, which would help section off different parts of the User Interface. "/>
+
+<meta name="category" content="Python, Tk, Tkinter, Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Tuesday, October 9, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/2_The_Artist_Toolkit/4%20Frames%20as%20Canvases/4_Frames_As_Canvases.html">
+
+
+ 
+
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.strongEmphasisChar {
+color:#002060;
+font-weight:bold;
+}
+span.RecipeeBodyChar {
+color:#2F5496;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~4 Frames as Canvases~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >11/3/2025</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="281" height="258">
+<p class="MsoNormal">&nbsp;</p>
+<h1>What Is a Frame in Tkinter?</h1>
+<p class="MsoNormal">Imagine a <span class="strongEmphasisChar"><span style="line-height:115%; font-size:14.0pt; ">frame</span></span> as a blank canvas  within your window. It doesn&rsquo;t show off by itself—it waits patiently to hold  your brushstrokes. In Tkinter, a Frame is a widget that helps you organize  other widgets. It&rsquo;s like a painter&rsquo;s panel, ready to hold a cluster of buttons,  labels, or dropdowns in one tidy space.</p>
+<h4>In a python file</h4>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">frame = tk.Frame(root)</p>
+<p class="code">frame.pack(pady=10)</p>
+<p class="code">&nbsp;</p>
+<h1>Why Use Frames?</h1>
+<ul>
+  <li>To group related widgets together (like a  palette of fruit options).</li>
+  <li>To control layout more precisely.</li>
+  <li>To keep your code organized and modular.</li>
+  <li>&nbsp;</li>
+</ul>
+<p class="MsoNormal">Think of each frame as a stitched panel in a quilt—each one  tells part of the story.</p>
+<h1>Creating Your First Frame</h1>
+<p>Let&rsquo;s build a frame to hold our fruit selection widgets. Instead of placing  everything directly on <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">root</span></span>, we&rsquo;ll place them inside a frame.</p>
+<h4>In a python file</h4>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">fruit_frame = tk.Frame(root)</p>
+<p class="code">fruit_frame.pack(pady=10)</p>
+<p class="code">&nbsp;</p>
+<p>Now, place your widgets inside <span class="RecipeeBodyChar"><span style="font-size:14.0pt; ">fruit_frame</span></span>:</p>
+<h4>In a python file</h4>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">fruit_label = tk.Label(fruit_frame, text=&quot;Select your  favorite fruit:&quot;)</p>
+<p class="code">fruit_label.pack()</p>
+<p class="code">&nbsp;</p>
+<p class="code">fruit_dropdown = ttk.Combobox(fruit_frame,  values=[&quot;Apple&quot;, &quot;Banana&quot;, &quot;Cherry&quot;,  &quot;Date&quot;])</p>
+<p class="code">fruit_dropdown.pack()</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/2.png" width="335" height="304">
+<p class="code">&nbsp;</p>
+<h1>Adding a Button Frame</h1>
+<p class="MsoNormal">Let&rsquo;s create a second frame just for the button. This keeps  your layout clean and lets you style it separately if you wish.</p>
+<p class="code">&nbsp;</p>
+<h4>In a python file</h4>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">button_frame = tk.Frame(root)</p>
+<p class="code">button_frame.pack(pady=10)</p>
+<p class="code">&nbsp;</p>
+<p class="code">submit_button = tk.Button(button_frame, text=&quot;Submit&quot;,  command=lambda: on_button_click())</p>
+<p class="code">submit_button.pack()</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/3.png" width="354" height="300">
+<p class="code">&nbsp;</p>
+<h1>The Full Code Example</h1>
+<p class="code">import tkinter as tk</p>
+<p class="code">from tkinter import ttk</p>
+<p class="code">&nbsp;</p>
+<p class="code">root = tk.Tk()</p>
+<p class="code">root.title(&quot;Frames as Canvases&quot;)</p>
+<p class="code">root.geometry(&quot;400x300&quot;)</p>
+<p class="code">&nbsp;</p>
+<p class="code"><span style="color:#538135; "># Fruit selection frame</span></p>
+<p class="code">fruit_frame = tk.Frame(root)</p>
+<p class="code">fruit_frame.pack(pady=10)</p>
+<p class="code">&nbsp;</p>
+<p class="code">fruit_label = tk.Label(fruit_frame, text=&quot;Select your  favorite fruit:&quot;)</p>
+<p class="code">fruit_label.pack()</p>
+<p class="code">&nbsp;</p>
+<p class="code">fruit_dropdown = ttk.Combobox(fruit_frame,  values=[&quot;Apple&quot;, &quot;Banana&quot;, &quot;Cherry&quot;,  &quot;Date&quot;])</p>
+<p class="code">fruit_dropdown.pack()</p>
+<p class="code">&nbsp;</p>
+<p class="code"><span style="color:#538135; "># Label to show selection</span></p>
+<p class="code">submit_label = tk.Label(root, text=&quot;&quot;)</p>
+<p class="code">submit_label.pack(pady=5)</p>
+<p class="code">&nbsp;</p>
+<p class="code">def on_button_click():</p>
+<p class="code">    selected_value =  fruit_dropdown.get()</p>
+<p class="code">     submit_label.config(text=f&quot;You selected: {selected_value}&quot;)</p>
+<p class="code">&nbsp;</p>
+<p class="code"><span style="color:#538135; "># Button frame</span></p>
+<p class="code">button_frame = tk.Frame(root)</p>
+<p class="code">button_frame.pack(pady=10)</p>
+<p class="code">&nbsp;</p>
+<p class="code">submit_button = tk.Button(button_frame, text=&quot;Submit&quot;,  command=lambda: on_button_click())</p>
+<p class="code">submit_button.pack()</p>
+<p class="code">&nbsp;</p>
+<p class="code">root.mainloop()</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Just like a painter chooses where to place each stroke, you  now have the power to place your widgets with intention. Frames give your  application structure, rhythm, and clarity. They&rsquo;re not just containers—they&rsquo;re  canvases for your creativity.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
