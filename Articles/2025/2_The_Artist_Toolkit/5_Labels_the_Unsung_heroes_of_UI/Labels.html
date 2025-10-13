@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn how to place a label onto a form in Tkinter and Python">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+   
+ <meta name="title" content="Labels, the Unsung Heroes of UI Forms ">
+
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~5 Labels, the Unsung Heroes of UI Forms~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >11/10/2025</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="285" height="263">
+<h1>What is a Label in the Tk World?</h1>
+<p>The label is like one of the most overlooked things when  creating a form, using TK and Python. If it were not for the label, you wouldn&rsquo;t  understand what to do with any of the other elements on the form. The label  will tell you stuff, like write your name here, or check this box there. Not  only can you use it for guidance, but you can also use it for communication.  You can give a message, show the user what the computer just calculated, and  screen readers rely on the label to give directions for accessibility reasons  too. Yes, the label is certainly a very important part, and you really could  not get by in creating a form without it.</p>
+<h1>How should you go about using a label?</h1>
+<p>First of all, a label needs to be as descriptive as possible,  do not use vague names or terms, or you will just confuse your readers all the  more.</p>
+<h1>How do you create a label on the form?</h1>
+<p>Start off with your basic code.</p>
+<p>#=======Tkinter Library Imports ======= </p>
+<p>import tkinter as tk <br>
+  from tkinter import ttk <br>
+  <br>
+  <br>
+  # Creating the visiable application window <br>
+  root = tk.Tk()</p>
+<p># Optional: Set window properties <br>
+  root.title(&quot;My Tkinter Application&quot;) &nbsp;# Title of the window <br>
+  root.geometry(&quot;400x300&quot;)  &nbsp;# Set the window size (width x height)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p># This will show you the  window <br>
+  root.mainloop()</p>
+<p>&nbsp;</p>
+<p>Next just add a label. With intellisense this is a whole lot  easier than it has been in the past. Basically all you have to do is to type  out something like &lsquo;myLabel&rsquo; and intellisense will take off and write the rest  of the code for you.</p>
+<img src="Images/2.png" width="326" height="270">
+<p>&nbsp;</p>
+<p>myLabel = tk.Label(root, text=&quot;Hello World!&quot;)<br>
+  myLabel.pack(pady=10) # Add some padding </p>
+<p>&nbsp;</p>
+<h1>Add some styling through config</h1>
+<p><img src="Images/3.png" width="270" height="227"></p>
+<p>&nbsp;</p>
+<p> Attach your label to the config method, which is a built in  method of TK, use the dot operator to attach it.
+  </p>
+</p>
+<p>myLabel = tk.Label(root, text=&quot;Hello World!&quot;)<br>
+  myLabel.config(font=(&quot;Arial&quot;, 20), fg=&quot;blue&quot;, bg=&quot;lightgray&quot;, border=2, relief=&quot;ridge&quot;, padx=10, pady=10)<br>
+  myLabel.pack(pady=20) # Add some padding</p>
+<p>&nbsp;</p>
+<h1>How to bind the Label to a click event</h1>
+<p>Here we are going to write a very simple function. Look how event is  used as the parameter. So, it knows everything it needs to know to be an event,  just by placing that word in there. You do not need to know how an event works,  all you need to do is snag it, throw it into the little parenthesis in the  function definition, and now it knows how to be an event. </p>
+<img src="Images/4.png" width="416" height="347">
+<p>&nbsp;</p>
+<p>def on_label_click(event):</p>
+<p>&nbsp;</p>
+<p>In your definition, you want to do sort of what you did  above, using the config method, but this time it is being done inside of a  function so it can be dynamic. All we are doing with the config method is  changing the text on the label. So,, when you click on the label, it will  change what it is saying, to instead say what is passed to it through its  little parenthesis.<br>
+  def on_label_click(event):<br>
+  &nbsp; &nbsp; myLabel.config(text=&quot;You clicked the  label!&quot;)</p>
+<p>&nbsp;</p>
+<p>Now you told it what you wanted it to do in the function,  but it still isn&rsquo;t actually doing anything. That is because we need to bind the  label to the function that we just wrote. If you do not bind it – it will not  work. So, we had better bind it. </p>
+<p>&nbsp;</p>
+<p>def on_label_click(event):<br>
+  &nbsp; &nbsp; myLabel.config(text=&quot;You clicked the  label!&quot;)</p>
+<p>myLabel.bind(&quot;&lt;Button-1&gt;&quot;, on_label_click)</p>
+<p>&nbsp;</p>
+<p>And now when you click on the label, this is what it is  telling you. <br>
+  </p>
+  
+  <p><img src="Images/5.png" width="322" height="267"></p>
+  <p>&nbsp; </p>
+  <p>Well, that&rsquo;s just about all there is to a label. Its not all  that hard to make these things, but once you start using them (at the very beginning,  I hope), you won&rsquo;t want to ever make a website form, without one.</p>
+<p>&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
