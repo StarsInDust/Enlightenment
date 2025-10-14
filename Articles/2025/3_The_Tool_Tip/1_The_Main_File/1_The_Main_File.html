@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn tkinter and Python fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+    <meta name="title" content="The Main File ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Python, Tk, Tkinter, Programming "/>
+
+
+<meta name="description" content="This article explains how to build the main file for the tooltip project. "/>
+
+<meta name="category" content="Python, Tk, Tkinter, Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Tuesday, October 7, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/3_The_Tool_Tip/1_The_Main_File/1_The_Main_File.html">
+
+    
+    
+    
+    
+    
+    
+    
+    
+   
+ <meta name="title" content="The Main File ">
+
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.strongEmphasisChar {
+color:#002060;
+font-weight:bold;
+}
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~The Main File~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >11/24/2025</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="283" height="256">
+<p class="MsoNormal" align="center" style="text-align:center;">&nbsp;</p>
+<h1>What is Main?</h1>
+<p class="MsoNormal">The <span class="strongEmphasisChar"><span style="line-height:115%; font-size:14.0pt; ">main </span></span>file is traditionally used as the  starting point of any Python project. You can sort of think of it like a  doorway, that you can use to access your project. The project has a bunch of  rooms in it, which are files but the technical name for these file are modules,  and these modules contain code, <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">python</span></span> code. </p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">Create a file named main.py </span></p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>What are Imports?</h1>
+<p class="MsoNormal">At the top of these modules, you will have <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">import </span></span>statements. Import statements allow you to reuse code from other  files or libraries. You can use this code over, and over. So, you do not need  to rewrite code that has already been written. </p>
+<p class="MsoNormal">There are two ways of writing an import statement. You can  use <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">&lsquo;from&rsquo;</span></span> or <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">&lsquo;Import.&rsquo;</span></span> Using <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">from</span></span> will take import one function, and using <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">Import</span></span> will import  everything from the file. If you use Import and bring in an entire module,  writing it might be a bit longer, but it keeps things like namespaces clean and  clear. </p>
+<h1>What is a Namespace?</h1>
+<p class="MsoNormal">A namespace is the way that Python tracks everything in a  project. It is sort of like a map that stores variables, functions, classes,  etc. It is how Python knows what you mean when you start working with things  like Buttons, tooltips, or even root. </p>
+<p class="MsoNormal">There are things like built-in namespaces, this is the  broadest namespace, because these are variables and functions that come with  python, they are just there and anyone can use them. Then there is global, you  can place global at the top of the file, and all of the functions on the page  has access to them. Lastly, there is the local, if you place a variable inside  a function, then only that function has access to the variable. And if you use  a local variable, then you could place a function with the same name (which  would be confusing to the developer) but it wouldn't be confusing to the  program because it doesn't know there is another variable with the same name.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">spell = &quot;Expelliarmus&quot;  <span style="color:#385623; ">#  Global</span></p>
+<p class="code">&nbsp;</p>
+<p class="code"><span style="color:#806000; ">def</span> cast_spell():</p>
+<p class="code">    spell =  &quot;Lumos&quot;  <span style="color:#385623; "># Local</span></p>
+<p class="code">    print(spell)     <span style="color:#385623; "># Outputs: Lumos</span></p>
+<p class="code">&nbsp;</p>
+<p class="code">cast_spell()</p>
+<p class="code">print(spell)         <span style="color:#385623; "># Outputs: Expelliarmus</span></p>
+<p class="code">&nbsp;</p>
+
+<h1>Creating the Window</h1>
+<p class="MsoNormal">In the main file, after you write the Import statements the  next thing that you want to do is to create the window. Without creating the  window, the user would never see it. </p>
+<p class="MsoNormal">tk is the module (short for tkinter), this comes from  Python&rsquo;s built -in GUI toolkit. GUI, stands for Graphical User Interface, and  that is the window and everything you put in it. </p>
+<p class="MsoNormal">Now Tk, is the class that is inside of the tk module. So,  when you say tk.TK, you are talking directly to the class. We can make up any  name for our window, but the typical name for it is root. root is an instance  of tk.Tk. So, now we can use root, and it is just our window that you see.</p>
+<h1>Creating the Buttons</h1>
+<p class="MsoNormal">Now we want to make an instance of the button, again you can  name your own instance anything you want. Here we are just using the name btn.  We pass it the root, and then just add some text to it. The root and the text,  that you want it to say is placed inside of the parenthesis. </p>
+<p class="MsoNormal">Next, we pack the button. If you do not use pack, you will  never see the button on the window. When we pack it, we pass the padding of 20  pixels for both the x and the y. </p>
+<p class="MsoNormal">We also have a save_button and we create the save_button in  the same way as we did our first button. We just have a different message in  it. So, our text in the parenthesis id not the same.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="234" height="340">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Creating the Tool Tip</h1>
+<p class="MsoNormal">We actually have two of them. We have a Tool Tip on the both  buttons. We call to our class Tool Tip (which we haven&rsquo;t created yet). and then  we want to pass to it which widget, we want to attach to it, and what we want  the tool tip to say. You want to do the exact same thing for the save_button.  The value for the first argument will again be the widget, you want the tool  tip to attach to, and then the message that you want it to say.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Showing the Window </h1>
+<p class="MsoNormal">You have to place this last line on the window, because this  is what makes the window show up on the computer screen so that the user can  see it. It is very important, and if you do not see you window, double check  and make sure you actually did add this to you file.</p>
+<p class="code">root.mainloop()</p>
+<p class="code">&nbsp;</p>
+
+<p class="code">&nbsp;</p>
+<h1>Here is the full file code</h1>
+<p class="code">#Launches the app, creates widgets, and attaches tooltips to them</p>
+<p class="code">from tooltip import ToolTip</p>
+<p class="code">from tooltip_data import tooltips</p>
+<p class="code">import tkinter as tk</p>
+<p class="code">&nbsp;</p>
+<p class="code">root = tk.Tk()</p>
+<p class="code">btn = tk.Button(root, text=&quot;Hover me&quot;)</p>
+<p class="code">btn.pack(padx=20, pady=20)</p>
+<p class="code">&nbsp;</p>
+<p class="code">ToolTip(btn, &quot;This is a magical tooltip!&quot;)</p>
+<p class="code">&nbsp;</p>
+<p class="code">save_btn = tk.Button(root, text=&quot;Save&quot;)</p>
+<p class="code">save_btn.pack(padx=20, pady=20)</p>
+<p class="code">&nbsp;</p>
+<p class="code">ToolTip(save_btn, tooltips[&quot;save_btn&quot;])</p>
+<p class="code">&nbsp;</p>
+<p class="code">root.mainloop()</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Well, that&rsquo;s just about all there is to this simple main.py  file. But remember, the tooltips won&rsquo;t actually work until we write the class  that powers them. We&rsquo;ll be conjuring up some of that code next week—so don&rsquo;t  miss it! Without it, your buttons will just sit there like sleepy goblins,  waiting for a spark of magic.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
