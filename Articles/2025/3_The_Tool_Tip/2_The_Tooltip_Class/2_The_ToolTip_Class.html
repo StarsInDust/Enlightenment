@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn how to implement a class in Python and Tkinter, in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+   
+ <meta name="title" content="2 The ToolTip Class ">
+ 
+ <meta name="title" content="The Tool Tip Class">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Python, Tk, Tkinter, Programming "/>
+
+
+<meta name="description" content="This article explains how a programmer would go about getting a Tool Tip class into a Tkinter project. "/>
+
+<meta name="category" content="Python, Tk, Tkinter, Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Wednesday, October 15, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/3_The_Tool_Tip/2_The_Tooltip_Class/2_The_ToolTip_Class.html">
+
+
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.strongEmphasisChar {
+color:#002060;
+font-weight:bold;
+}
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~2 The ToolTip Class~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >12/1/2025</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="287" height="261">
+<h1>The Tool Tip Class</h1>
+<p class="MsoNormal">The Tool Tip class is a class inside of your project. And  you can sort of think of a class, like a factory. You describe the object that  you want to make inside of the class, and then you can stamp out as many of  these things as you want to make, you have the blueprint for your new thing  right there in that little class factory. Every time you stamp out a new object,  it is called instantiation, and you are creating a new instance of that class.  Or a new object for the class. In our case we want a tool tip. And our class is  going to create the basic recipe for any type of tooltip. </p>
+<h1>How do we start writing a class?</h1>
+<p class="MsoNormal">The first line is a little different, because you want to  say <span class="strongEmphasisChar"><span style="line-height:115%; font-size:14.0pt; ">class</span></span> with a small letter <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">&lsquo;c&rsquo;,</span></span> and then you can  make up the name for the class. In our case the class name will be <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">ToolTip</span></span>.  Oh, and then you end that line with a colon.</p>
+<img src="Images/2.png" width="197" height="61">
+<p class="MsoNormal">&nbsp;</p>
+<h1>What is a Constructor Method?</h1>
+<p class="MsoNormal">You might notice something else strange about a class.  Inside a class you will find right up at the top of it, is the constructor  method. </p>
+<img src="Images/3.png" width="627" height="374">
+<h1>The __init__ Dunder</h1>
+<p class="MsoNormal">The first thing that you will notice in the first method, or  constructor, is that it is using __init__, The term __init__, stands for  initialize. So, it is a special method that runs automatically whenever, you  create a new instance of a class. It starts this thing going. You can actually  write a function without the constructor, but you would not be able to save  anything, it doesn&rsquo;t remember anything, and you would probably only do this if  you used something simple like a print statement, that doesn&rsquo;t really need a  class and pretty much runs itself.   __init__ belongs to a very limited naming convention, very few things  actually belong to this group and using the double underscores at the front and  the back of the name is called a &lsquo;dunder&rdquo; method.</p>
+<h1>How does __init__ use self?</h1>
+<p class="MsoNormal"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">self</span></span> is a reference to the instance that the  class creates. It then takes self, and latches on to everything that it needs  using the <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">dot</span></span> operator as a type of connector. Once we  use that dot, we have access to any of the attributes and methods that belong  to an object.</p>
+<h1>What does a Constructor Typically Do?</h1>
+<p class="MsoNormal">Even though a constructor can handle other duties, it typically  handles a small list of responsibilities.</p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;text-indent:.75in;"> 1. Define attributes</p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;text-indent:.75in;">2. Wires up  basic behavior (like bind)</p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;text-indent:.75in;">3. Call setup  methods (e.g., self.create_widgets())</p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;text-indent:.75in;">&nbsp;</p>
+<p class="MsoNormal">This keeps the constructor readable and makes your class  easier to test and extend.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>What is an Attribute?</h1>
+<p class="MsoNormal">We&rsquo;ve already met methods—those special functions tucked  inside a class. But what about <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">attributes</span></span>? Attributes  are like the personal belongings of an object, stored safely inside its  backpack. They&rsquo;re variables, yes, but with a twist: each one is prefixed with <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">self</span></span>.</p>
+<p class="MsoNormal">Why <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">self</span></span>? Because when a class is used to  create an object, self becomes a reference to <em>that specific object</em>. So  when you write self.text, you&rsquo;re saying, &ldquo;This object should carry its own  version of text.&rdquo; It&rsquo;s not a copy of the class—it&rsquo;s a personalized instance,  and <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">self</span></span> makes sure each object knows which attributes belong  to it.</p>
+<p class="MsoNormal">In short:</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:.25in;text-indent:31.5pt;"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">self</span></span> is the object  speaking for itself.</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:.25in;text-indent:31.5pt;"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">self.attribute</span></span> means  &ldquo;this object&rsquo;s version of that variable.&rdquo;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:.25in;text-indent:31.5pt;"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">Attributes</span></span> are how  objects remember things—like names, settings, or tooltip text.</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:.25in;text-indent:31.5pt;">&nbsp;</p>
+<img src="Images/4.png" width="434" height="131">
+<p class="MsoNormal">&nbsp;</p>
+<h1>The Parameter List</h1>
+<p class="MsoNormal">Now look at your parameter list. Or rather what is inside of  the parenthesis in the constructor method.</p>
+<img src="Images/5.png" width="364" height="57">
+<p class="MsoNormal"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">self</span></span>, needs to always be the first value in the  parameter list inside of a class. But you will notice something strange here too.  You, are only giving two extra parameters after the value of <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">self</span></span>;  but if you look under the definition line, you will notice that there are three  attributes: <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">text,  tip_window, and  widget</span></span>. Why isn&rsquo;t <strong><span style="font-family:'Calibri',sans-serif; ">tip_window</span></strong> also included in the parameter list? The reason you do not need to place it  inside of the list is because the <strong><span style="font-family:'Calibri',sans-serif; ">tip_window</span></strong> attribute, is only being used within the class it self. You can sort of think  of the other two parameters as questions, that the class is asking from the  object that is calling it. With a tooltip, the object that would call it would  be anything on the form that you want to attach a tool tip to. This could be a  button, a label,  or anything else that  could use a tool tip. So, the class, in order to make a custom tool tip needs  to know two things: Who are you? and what do you want to say? And the widget  will answer those questions in its argument list.</p>
+<img src="Images/6.png" width="435" height="134">
+<p class="MsoNormal">&nbsp;</p>
+<h1>What does a class have access to?</h1>
+<p class="MsoNormal">A lot of the time in programming, you need to define all of  your variables above, where it is mentioned. But if you look at the last two  lines in the constructor method, you will see that it is mentioning show_tip,  and hide_tip. Those two methods have not been defined yet, but the constructor  is not throwing an error when it mentions them. </p>
+<p class="MsoNormal">A class is different in the way that it runs.  When Python encounters a class block, it doesn&rsquo;t  execute until it had read the entire recipe. So,  the constructor knows about itself and  everything that is inside of it. You do not need to define any parts of it,  above it.</p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;text-indent:45.0pt;">1. Parses  (reads the data)</p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;text-indent:45.0pt;">2. Creates  the <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">class</span></span> object with all its <strong><span style="font-family:'Calibri',sans-serif; ">methods</span></strong> and <strong><span style="font-family:'Calibri',sans-serif; ">attributes</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:.75in;text-indent:-9.0pt;">3. The class is instantiated when  something calls it, it is at that time that it runs the <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">__init__</span></span> constructor method.</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:3.0pt;margin-left:.75in;text-indent:-9.0pt;">&nbsp;</p>
+<h1>What is Bind?</h1>
+<p class="MsoNormal">If you have a custom event, you are going to have to bind  it. If you want your event to do something, you are going to have to use the  word <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">&lsquo;bind.</span></span>&rsquo;<span style="line-height:115%; font-size:12.0pt; "> </span></p>
+<img src="Images/7.png" width="437" height="137">
+<p class="MsoNormal"><span style="font-size:12.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal">You don&rsquo;t need bind when the widget already has a built-in  option like command= (e.g., Button, Checkbutton, Menu).</p>
+<p class="code">my_button = tk.Button(root, text=&quot;Click Me&quot;,  command=do_something)</p>
+<p class="code">&nbsp;</p>
+<h1>What is a Method?</h1>
+<p class="MsoNormal">Now one of the first things that you will notice about the  ToolTip class is that it is filled with a bunch of functions. Except they are  not functions. Because inside of a class, they are called <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">methods</span></span>.  A function is a self-contained block of code that performs a task. But a method  is a special type of function, it is inside of a class, and it is able to  interact and make changes to the instances of that class.</p>
+<img src="Images/8.png" width="284" height="98">
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">What&rsquo;s Better Left to Methods</span></p>
+<p class="MsoNormal">Constructors are great but, Methods are where the real magic  happens—especially when:</p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;text-indent:45.35pt;">1. You need reusable  logic (e.g., show_tip, hide_tip)</p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;text-indent:45.35pt;">2. You want  to respond to events</p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;text-indent:45.35pt;">3. You&rsquo;re  performing actions that aren&rsquo;t part of initial setup</p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;text-indent:45.35pt;">4. You&rsquo;re  separating concerns (e.g., layout vs. behavior vs. data)</p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;text-indent:45.35pt;">&nbsp;</p>
+<p class="MsoNormal">This separation of duty, can really organize the jobs, each  part of your code is doing.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>The Class Code</h1>
+<p class="MsoNormal">You can put this code into a file named tooltip.py</p>
+<p class="MsoNormal">Then go to your main.py file and import it.</p>
+<img src="Images/9.png" width="357" height="111">
+<p class="code"><span style="color:#548235; ">#Contains the TooTip class (your core tooltip logic)</span></p>
+<p class="code">import tkinter as tk</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:black; ">class</span></strong> ToolTip:</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; <strong><span style="color:#843C0C; ">def</span></strong> __init__(self, widget, text):</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; </p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; self.widget = widget</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; self.text = text</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; self.tip_window = None</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; self.widget.bind(&quot;&lt;Enter&gt;&quot;,  self.show_tip)</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; self.widget.bind(&quot;&lt;Leave&gt;&quot;,  self.hide_tip)</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; <strong><span style="color:#843C0C; ">def</span></strong> show_tip(self, event=None):</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; if self.tip_window or not self.text:</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; x, y, _, cy = self.widget.bbox(&quot;insert&quot;)</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; x += self.widget.winfo_rootx() + 25</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; y += self.widget.winfo_rooty() + cy +  20</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; self.tip_window = tw = tk.Toplevel(self.widget)</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; tw.wm_overrideredirect(True)</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; tw.wm_geometry(f&quot;+{x}+{y}&quot;)</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; label = tk.Label(tw, text=self.text, background=&quot;#ffffe0&quot;,  relief=&quot;solid&quot;, borderwidth=1)</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; label.pack(ipadx=5, ipady=2)</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp; &nbsp; <strong><span style="color:#843C0C; ">def</span></strong> hide_tip(self, event=None):</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; if self.tip_window:</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.tip_window.destroy()</p>
+<p class="code">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.tip_window = None</p>
+<p class="code"><span style="color:#843C0C; ">&nbsp;</span></p>
+<p class="MsoNormal">Ok, well this was quite an in depth tutorial on the class,  and I hope you were actually able to get something out of it. Next week, we  will be looking at those two methods that are inside of the class. So, you will  not want to miss that lesson, or your poor Tool tip might start, but it would  certainly have no where to go.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
