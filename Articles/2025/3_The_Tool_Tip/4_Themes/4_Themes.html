@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Python and TKinter in this tutorial">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    <meta name="title" content="4 Themes ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Python, Tk, Tkinter, Programming "/>
+
+
+<meta name="description" content="This article explains how to create themes for the tooltip project"/>
+
+<meta name="category" content="Python, Tk, Tkinter, Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Thursday, October 23, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/3_The_Tool_Tip/4_Themes/4_Themes.html">
+
+    
+   
+ <meta name="title" content="4 Themes ">
+
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.strongEmphasisChar {
+color:#002060;
+font-weight:bold;
+}
+span.Heading1Char {
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~4 Themes~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >12/15/2025</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="316" height="284">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Styling with Themes</h1>
+<p class="MsoNormal">In the previous chapters of our Tooltip series, we created a  basic <span class="strongEmphasisChar"><span style="line-height:115%; font-size:14.0pt; ">ToolTip</span></span> class, and also created our first Graphical User  Interface (GUI).  Using <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">starter.py</span></span>.  The graphical user interface, also known as the GUI, is a visual way of  interacting with a computer, using things like windows, icons, and menus. This  is used by most of all modern operating systems, and apps today. </p>
+<p class="MsoNormal">So, for now we are taking, the GUI, and talking with it to  bring about this concept of theming—giving our  tooltips personality, mood, and visual resonance.</p>
+<h1>Why Themes Matter</h1>
+<p class="MsoNormal">Tooltips are more than floating labels—they&rsquo;re whispers of  guidance. A well-themed tooltip can:</p>
+<ol>
+  <li>Enhance readability, and accessibility</li>
+  <li>Match the aesthetic of your application</li>
+  <li>Create emotional tone (e.g., whimsical, professional,  mysterious)</li>
+</ol>
+<p><span class="Heading1Char"><span style="font-size:14.0pt; ">Did You Know?</span></span><br>
+  Tkinter doesn&rsquo;t include a built-in <strong>ToolTip</strong> widget. What you&rsquo;re  seeing is a custom class that uses a floating <strong>Toplevel</strong> window  and a <strong>Label</strong> to simulate tooltip behavior. This means that when  you created the ToolTip class, you&rsquo;re not just using a widget—you&rsquo;ve inventing  one.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="482" height="486">
+<ol>
+  
+</ol>
+<h1>Create the Theme</h1>
+<p class="MsoNormal">Here&rsquo;s the theme function from our <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">themes.py</span></span>:</p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#569CD6; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#569CD6; ">def</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">moonlight</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">):</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;&quot;&quot;Apply  moonlight theme to tooltip.&quot;&quot;&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">if</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">hasattr</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">'label'</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">) </span><span style="font-family:Consolas; font-size:10.5pt; color:#569CD6; ">and</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.label:</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.label.config(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">background</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;#2c2c54&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">foreground</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;#e0e0e0&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The <strong><span style="font-family:'Calibri',sans-serif; ">label</span></strong> is the <strong><span style="font-family:'Calibri',sans-serif; ">attribute</span></strong> that the <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">hasattr</span></span> (this method name, means <strong><span style="font-family:'Calibri',sans-serif; ">has attribute</span></strong>).  The term <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">tooltip</span></span> here is just a container, it could have  been named anything —tip, glow, box_of_wisdom. It just needs to be instantiated  correctly by the function call.</p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">my_tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">ToolTip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">sample_label</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">text</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">sparkle</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;Welcome, traveler!&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">))</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"> The actual name for  the tooltip widget will be passed in when the function is called, to <strong><span style="font-family:'Calibri',sans-serif; ">apply_theme</span></strong>.</p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">apply_theme</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">my_tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">theme</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;moonlight&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Apply the Theme<span style="color:#00AC56; "> </span></h1>
+<p class="MsoNormal">You can name your tool tip any thing you want. Here it is  named <strong><span style="font-family:'Calibri',sans-serif; ">my_tooltip</span></strong>. The <strong><span style="color:#088E51; ">ToolTip</span></strong>, is the class. So, here a little <strong><span style="font-family:'Calibri',sans-serif; ">&lsquo;self&rsquo;</span></strong> of class is talking to the <strong><span style="color:#09A35D; ">ToolTip</span></strong> class telling it where it  wants to go (sample_label) and what it wants to say, all entangled in its  little parenthesis. Then it throws itself into an instance named <strong><span style="font-family:'Calibri',sans-serif; ">my_tooltip.</span></strong> So, now when we use  tooltip. It knows where to go, and what to say.</p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">my_tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">ToolTip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">sample_label</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">text</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">sparkle</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;Welcome, traveler!&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">))</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">apply_theme</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">my_tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">theme</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;moonlight&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>The code</h1>
+<p class="MsoNormal">We are adding on to our files that we already have. So, if  you have not created the <strong><span style="font-family:'Calibri',sans-serif; ">starter.py </span></strong>file,  or the <strong><span style="font-family:'Calibri',sans-serif; ">core.py</span></strong> file, which contains  our class please go back to our last few tutorials, and create them.</p>
+<h2>themes.py</h2>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">from</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> .</span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">core</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">import</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">ToolTip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#569CD6; ">def</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">moonlight</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">):</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;&quot;&quot;Apply  moonlight theme to tooltip.&quot;&quot;&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">if</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">hasattr</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">'label'</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">) </span><span style="font-family:Consolas; font-size:10.5pt; color:#569CD6; ">and</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.label:</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.label.config(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">background</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;#2c2c54&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">foreground</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;#e0e0e0&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#569CD6; ">def</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">apply_theme</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">theme</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;default&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">):</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;&quot;&quot;Apply  a theme to the tooltip.&quot;&quot;&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">if</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">theme</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">==</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;moonlight&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">:</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">moonlight</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<h2>starter.py</h2>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># starter.py</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># Your magical toolkit for tooltip adventures</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">from</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tooltip_magic</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">import</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">sparkle</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">from</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tooltip_magic</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">themes</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">import</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">apply_theme</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># Optional: preload a sample tooltip object</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">from</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tooltip_magic</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">core</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">import</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">ToolTip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># Create a sample widget and tooltip (if you're using  Tkinter)</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">import</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tkinter</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">as</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tk</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tk</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">Tk</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">()</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">title</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;Tooltip Magic Starter&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">geometry</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;300x200&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">sample_label</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tk</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">Label</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">text</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;Hover me&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">sample_label</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">pack</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">()</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">my_tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">ToolTip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">sample_label</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">text</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">sparkle</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;Welcome, traveler!&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">))</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">apply_theme</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">my_tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">theme</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;moonlight&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># Ready to run your enchanted GUI</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">mainloop</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">()</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
