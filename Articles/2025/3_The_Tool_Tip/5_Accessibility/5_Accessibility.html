@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn to apply high contrast to a button for easy tooltip accessibility in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+   
+ <meta name="title" content="5 Accessibility">
+ 
+ <meta name="title" content="5 Accessibility ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Python, Tk, Tkinter, Programming "/>
+
+
+<meta name="description" content="This article explains how a programmer would create a button with high contrast to help vision impaired readers. />
+
+<meta name="category" content="Python, Tk, Tkinter, Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Saturday, October 25, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/3_The_Tool_Tip/5_Accessibility/5_Accessibility.html">
+
+
+ 
+ 
+ 
+
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+p.MsoQuote {
+margin-top:10.0pt;
+margin-right:.6in;
+margin-bottom:8.0pt;
+margin-left:.6in;
+text-align:center;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:#404040;
+font-style:italic;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~5 Accessibility~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >12/22/2025</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="318" height="280">
+<p class="MsoQuote">&ldquo;In the land of interfaces, clarity is the highest peak—and  contrast is the light that guides us there.&rdquo;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>What is Accessibility?</h1>
+<p class="MsoNormal">Accessibility in programming is the practice of building  applications or even websites, in a way that allows people with disabilities to  use them. This involves (but is not limited to) providing text alternatives for  images and widgets. You could also think about using colors with high contrast  to help people even farther with other types of vision impediments.</p>
+<h1>How to implement High Contrast Accessibility</h1>
+<p class="MsoNormal">For a tooltip, you really do not need the type of access  that you would need for an image. An image needs text to explain itself, but a  tool tip is basically a text container; however a really nice helper would be  to supply a tooltip with high contrast. Here we have code that changes the  background color to a bright yellow. This would help people with vision  disabilities.</p>
+<p class="MsoNormal">Here you can see the code, in which you can you to create code  to turn the background of a dull grey button into a button with a bright  background. Then we used a toggle button, so it can be switched on or off.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="369" height="311">
+<p> This is only the high contrast section of the code.</p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># Optional: Toggle high contrast mode</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#569CD6; ">def</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">toggle_contrast</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">():</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">current_bg</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">save_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">cget</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;bg&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">if</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">current_bg</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">==</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;lightgray&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">:</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">save_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">configure</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">bg</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;yellow&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">fg</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;black&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">else</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">:</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">save_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">configure</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">bg</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;lightgray&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">fg</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;black&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># Contrast toggle button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">contrast_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tk</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">Button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">text</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;Toggle Contrast&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">command</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">toggle_contrast</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">contrast_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">pack</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">pady</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#B5CEA8; ">10</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>The Full Code</h1>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">import</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tkinter</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">as</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tk</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">from</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tooltip_magic</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">core</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">import</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">ToolTip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># Create the main window</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tk</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">Tk</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">()</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">title</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;Accessible Tooltip Demo&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">geometry</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;400x300&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># Create a Save button using tk.Button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">save_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tk</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">Button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">text</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;Save&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">width</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#B5CEA8; ">10</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">bg</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;lightgray&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">fg</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;black&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">save_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">pack</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">pady</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#B5CEA8; ">40</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># Create the tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip_text</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;Saves your progress&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">ToolTip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">save_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">text</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip_text</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># Accessibility: Show tooltip on keyboard focus</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#569CD6; ">def</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">show_tooltip_on_focus</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">event</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">):</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">showtip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">()</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#569CD6; ">def</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">hide_tooltip_on_blur</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">event</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">):</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">tooltip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">hidetip</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">()</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">save_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">bind</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;&lt;FocusIn&gt;&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">show_tooltip_on_focus</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">save_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">bind</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;&lt;FocusOut&gt;&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">hide_tooltip_on_blur</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># Optional: Toggle high contrast mode</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#569CD6; ">def</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">toggle_contrast</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">():</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">current_bg</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">save_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">cget</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;bg&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">if</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">current_bg</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">==</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;lightgray&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">:</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">save_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">configure</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">bg</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;yellow&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">fg</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;black&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#C586C0; ">else</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">:</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">save_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">configure</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">bg</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;lightgray&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">fg</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;black&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#6A9955; "># Contrast toggle button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">contrast_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tk</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">Button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">text</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;Toggle Contrast&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">command</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">toggle_contrast</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">contrast_button</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">pack</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">pady</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#B5CEA8; ">10</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#DCDCAA; ">mainloop</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">()</span></p>
+<p class="MsoNormal" style="margin-bottom:0in;background:#1F1F1F;">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
