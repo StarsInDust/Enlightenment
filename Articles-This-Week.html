@@ -4,16 +4,37 @@
 
 
 <head>
-    <meta name="description" content="Learn web design fundamentals in this tutorial.">
+    <meta name="description" content="Learn about Python and Tkinter with this tutorial.">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Enlightenment</title>
     
    
- <meta name="title" content="7 Mirroring and Joining the Curve ">
+ <meta name="title" content="Buttons as Brushstrokes ">
 
- 
+ <meta name="title" content="Buttons as Brushstrokes ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Python, Tk, Tkinter, Programming "/>
+
+
+<meta name="description" content="This article explains how a programmer would go about creating a button in tkinter, using the Python file extension. "/>
+
+<meta name="category" content="Python, Tk, Tkinter, Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Tuesday, October 9, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2025/2_The_Artist_Toolkit/3%20Buttons%20as%20Brushstrokes/3_Buttons_as_Brushstrokes.html">
+
+
     
     
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
@@ -30,31 +51,6 @@
 </style>
 
 
-<style type="text/css">
-<!--
-span.Heading1Char {
-font-family:"Calibri Light",sans-serif;
-color:#2F5496;
-font-weight:bold;
-}
-p.strongEmphasis {
-margin-top:0in;
-margin-right:0in;
-margin-bottom:10.0pt;
-margin-left:0in;
-text-align:center;
-line-height:115%;
-font-size:14.0pt;
-font-family:"Calibri",sans-serif;
-color:#002060;
-font-weight:bold;
-}
-span.strongEmphasisChar {
-color:#002060;
-font-weight:bold;
-}
--->
-</style>
 </head>
 
 
@@ -79,139 +75,103 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~Dropdowns as Drawers of Discovery~</p>
+  <p class="h2Black" >~3 Buttons as Brushstrokes~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >10/27/2025</p>
+   <p class="articleDate" style="text-align:right" >11/3/2025</p>
    
-   <img src="Articles/2025/2_The_Artist_Toolkit/2 Dropdowns as Drawers of Discovery/Images/1.png" width="312" height="280">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal"><span class="Heading1Char"><span style="line-height:115%; font-size:14.0pt; ">What is the dropdown combo box, in Python and Tkinter?</span></span></p>
-   <p class="MsoNormal">The combo box is a widget in Tkinter&rsquo;s library, where you  can easily give the user a list of choices.</p>
-   <p class="MsoNormal">Starting with the simplest of code. You have to start a  python file with, at the very least, the creation of the window. Here is some  simple startup code.</p>
-   <p class="MsoNormal">In Visual Studio name your project, <strong><span style="font-family:'Calibri',sans-serif; ">Combo-dropdown.py</span></strong>. </p>
-   <img src="Articles/2025/2_The_Artist_Toolkit/2 Dropdowns as Drawers of Discovery/Images/2.png" width="626" height="524">
-<p class="code"><span style="color:#2F5597; ">import tkinter as tk</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; "># Creating the visiable application window</span></p>
-   <p class="code"><span style="color:#2F5597; ">root = tk.Tk()</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; "># Optional: Set window properties</span></p>
-   <p class="code"><span style="color:#2F5597; ">root.title(&quot;My Tkinter Application&quot;) &nbsp;# Title of the  window</span></p>
-   <p class="code"><span style="color:#2F5597; ">root.geometry(&quot;400x300&quot;) &nbsp;# Set the window size  (width x height)</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; "># Add widgets and define their layout here</span></p>
-   <p class="code"><span style="color:#2F5597; "># Example:</span></p>
-   <p class="code"><span style="color:#2F5597; ">label = tk.Label(root, text=&quot;Hello, from Tkinter!&quot;)</span></p>
-   <p class="code"><span style="color:#2F5597; ">label.pack(pady=20) # Add some padding</span></p>
-   <p class="code"><span style="color:#2F5597; "><br>
-   </span></p>
-   <p class="code"><span style="color:#2F5597; "># This will show you the window</span></p>
-   <p class="code"><span style="color:#2F5597; ">root.mainloop()</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <h1>The Imports</h1>
-   <p class="MsoNormal">For a lot of projects, when using tkinter, you may find that  we can start with just the one import of: </p>
-   <p class="strongEmphasis">import tkinter as tk</p>
-   <p class="MsoNormal">But here we are going to use a combo box, and we can do a  lot more things, if we also import <strong><span style="color:#2F5597; ">ttk</span></strong>. So, add this line to your top imports. </p>
-   <p class="MsoNormal"><strong><span style="color:#2F5597; ">from tkinter import ttk</span></strong></p>
-   <p class="MsoNormal"><strong><span style="color:#2F5597; ">&nbsp;</span></strong></p>
-   <img src="Articles/2025/2_The_Artist_Toolkit/2 Dropdowns as Drawers of Discovery/Images/3.png" width="323" height="87">
-<h1>Creating the Dropdown</h1>
-   <p class="MsoNormal">We are going to create a variable to hold our dropdown.  Since we want it to be a name that represents what we are trying to do, we  could just give it the name &lsquo;dropdown,&rsquo; but we actually want to have this  dropdown carry a list of something that the user can choose from. So, what list  should we create? How about, to start, just a simple list of fruit. So, a good  name for our dropdown would be &lsquo;<strong><span style="font-family:'Calibri',sans-serif; ">fruit_dropdown.&rsquo;</span></strong></p>
-   <p class="MsoNormal">Since you added the import of the library <strong><span style="font-family:'Calibri',sans-serif; ">ttk</span></strong>, you will find that  intellisense will now figure out what you want, and pretty much suggest the  rest of what you need.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2025/2_The_Artist_Toolkit/2 Dropdowns as Drawers of Discovery/Images/4.png" width="620" height="194">
-<p class="BlueBolden">&nbsp;</p>
-   <p class="MsoNormal">So, you can go ahead and just accept what intellisense is  giving you because this is exactly what you need is the Combobox. </p>
-   <p class="MsoNormal">You may be surprised, that intellisense, has probably also  figured out that not only do you want your computer to know that you have a  combobox, but that you probably would also like that Combobox placed on your  application window. And because it figured that out, it is also trying to give  you another line of code with the word &lsquo;pack&rsquo; in it. &lsquo;pack&rsquo; is used to place  the Combobox onto the application window, and without this additional line you  would never be able to see it. So, you had better listen to intellisense, and  grab that line of code too.</p>
-   <p class="MsoNormal">Now your two lines of code should look like this.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2025/2_The_Artist_Toolkit/2 Dropdowns as Drawers of Discovery/Images/5.png" width="626" height="77">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="code">&nbsp;</p>
-   <p class="code"><span style="color:#2F5597; ">fruit_dropdown = ttk.Combobox(root, values=</span><span style="color:#C55A11; ">[&quot;Apple&quot;, &quot;Banana&quot;,  &quot;Cherry&quot;,]</span><span style="color:#2F5597; ">)</span></p>
-   <p class="code"><span style="color:#2F5597; ">fruit_dropdown.pack(pady=20) &nbsp;</span><span style="color:#548235; "># Add some padding</span></p>
-   <p class="code"><span style="color:#548235; ">&nbsp;</span></p>
-   <h1>What is root, and why is it there?</h1>
-   <p class="MsoNormal">You may have noticed that inside of your argument list, your  first value is root. root is your parent object, and it is the container of all  of your widgets. It is where you are placing your widgets. So, Combobox is a  widget, and it is being placed in the root. Your root is also your window. You  always need to have your container as the first value when defining a widget.  But &lsquo;<span class="strongEmphasisChar"><span style="font-size:14.0pt; ">root&rsquo; </span></span>doesn&rsquo;t always have to be your container. You can  have different <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">frames</span></span> that can be used to organize sections of  your window, and you can also have a <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">canvas</span></span>, which is used  for displaying different graphical objects: text, drawings, widgets.</p>
-   <p class="code">&nbsp;</p>
-   <h1>The full Code so far for the Project</h1>
-   <p class="code"><span style="color:#2F5597; ">import tkinter as tk</span></p>
-   <p class="code"><span style="color:#2F5597; ">from tkinter import ttk</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; "># Creating the visiable application window</span></p>
-   <p class="code"><span style="color:#2F5597; ">root = tk.Tk()</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; "># Optional: Set window properties</span></p>
-   <p class="code"><span style="color:#2F5597; ">root.title(&quot;My Tkinter Application&quot;) &nbsp;# Title of the  window</span></p>
-   <p class="code"><span style="color:#2F5597; ">root.geometry(&quot;400x300&quot;) &nbsp;# Set the window size  (width x height)</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; "># Add widgets and define their layout here</span></p>
-   <p class="code"><span style="color:#2F5597; "># Example:</span></p>
-   <p class="code"><span style="color:#2F5597; ">label = tk.Label(root, text=&quot;Hello, from Tkinter!&quot;)</span></p>
-   <p class="code"><span style="color:#2F5597; ">label.pack(pady=20) # Add some padding</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; ">fruit_dropdown = ttk.Combobox(root, values=[&quot;Apple&quot;, &quot;Banana&quot;,  &quot;Cherry&quot;, &quot;Date&quot;])</span></p>
-   <p class="code"><span style="color:#2F5597; ">fruit_dropdown.pack(pady=20) &nbsp;# Add some padding</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; "># This will show you the window</span></p>
-   <p class="code"><span style="color:#2F5597; ">root.mainloop()</span></p>
-   <h1>Test your Project</h1>
-   <p class="MsoNormal">Run the project with the play button to see your new combo  box in the window.</p>
-   <img src="Articles/2025/2_The_Artist_Toolkit/2 Dropdowns as Drawers of Discovery/Images/6.png" width="325" height="297">
-<p class="MsoNormal">Ok, let&rsquo;s change the text on the label to say fruits because  that is what our dropdown is displaying.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2025/2_The_Artist_Toolkit/2 Dropdowns as Drawers of Discovery/Images/7.png" width="507" height="114">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">And another label for the dropdown widget itself. Let&rsquo;s  reduce the padding for the label, and the Combobox; so now, we can clearly see  that these two items go together.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2025/2_The_Artist_Toolkit/2 Dropdowns as Drawers of Discovery/Images/8.png" width="646" height="508">
-<p class="MsoNormal">&nbsp;</p>
-   <h1>Getting the information from the dropdown</h1>
-   <p class="MsoNormal">Ok, well we have our dropdown, but what good is it actually  doing, if you are not getting the information from it, and sending it  somewhere. Here we will use &lsquo;get&rsquo; to get the text from the dropdown container.  We will start by writing a very simple function that will be used to send the  information to the label on the window. This will use a very easy event  <span class="boldBlue">&lt;&lt;ComboboxSelected&gt;&gt;</span>. This event will work as soon as the user  clicks on an option in the Combobox. No need for a submit button, although you  could also use one. But for this example we will make it as simple as possible  and just have it activated on a User&rsquo;s click event. Now the data from the  dropdown list will be sent to the submit_label, which we also added to the  window.</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <img src="Articles/2025/2_The_Artist_Toolkit/2 Dropdowns as Drawers of Discovery/Images/9.png" width="641" height="596">
-<p class="MsoNormal">&nbsp;</p>
-   <p class="MsoNormal">&nbsp;</p>
-   <h1>The Full Code for the Project</h1>
-   <p class="code"><span style="color:#2F5597; ">import tkinter as tk</span></p>
-   <p class="code"><span style="color:#2F5597; ">from tkinter import ttk</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; "># Creating the visiable application window</span></p>
-   <p class="code"><span style="color:#2F5597; ">root = tk.Tk()</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; "># Optional: Set window properties</span></p>
-   <p class="code"><span style="color:#2F5597; ">root.title(&quot;My Tkinter Application&quot;) &nbsp;# Title of the  window</span></p>
-   <p class="code"><span style="color:#2F5597; ">root.geometry(&quot;400x300&quot;) &nbsp;# Set the window size  (width x height)</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; "># Add widgets and define their layout here</span></p>
-   <p class="code"><span style="color:#2F5597; "># Example:</span></p>
-   <p class="code"><span style="color:#2F5597; ">label = tk.Label(root, text=&quot;FRUITS&quot;)</span></p>
-   <p class="code"><span style="color:#2F5597; ">label.pack(pady=20) # Add some padding</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; ">fruit_label = tk.Label(root, text=&quot;Select your favorite  fruit:&quot;)</span></p>
-   <p class="code"><span style="color:#2F5597; ">fruit_label.pack(pady=2) &nbsp;# Add some padding</span></p>
-   <p class="code"><span style="color:#2F5597; ">fruit_dropdown = ttk.Combobox(root, values=[&quot;Apple&quot;, &quot;Banana&quot;,  &quot;Cherry&quot;, &quot;Date&quot;])</span></p>
-   <p class="code"><span style="color:#2F5597; ">fruit_dropdown.pack(pady=2) &nbsp;# Add some padding</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; ">def update_label(event):</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp; &nbsp; &nbsp; &nbsp;selected_value = fruit_dropdown.get()</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=f&quot;You  selected: {selected_value}&quot;)</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; ">fruit_dropdown.bind(&quot;&lt;&lt;ComboboxSelected&gt;&gt;&quot;, update_label)</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; ">submit_label = tk.Label(root, text=&quot;&quot;)</span></p>
-   <p class="code"><span style="color:#2F5597; ">submit_label.pack(pady=2) &nbsp;# Add some padding</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
-   <p class="code"><span style="color:#2F5597; "># This will show you the window</span></p>
-   <p class="code"><span style="color:#2F5597; ">root.mainloop()</span></p>
-   <p class="code"><span style="color:#2F5597; ">&nbsp;</span></p>
 <p>&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/2_The_Artist_Toolkit/3 Buttons as Brushstrokes/Images/1.png" width="297" height="262">
+<h1>What is a Button in Tkinter </h1>
+<p class="MsoNormal">Buttons in Tkinter are like brushstrokes on a canvas. It  begins a process; it starts a behavior. If you are an artist, this beginning brushstroke  is your start to a stunning piece of artIn the programming world, a button  brings your program to life—it initiates action.
+<p>A button on a page all by itself will just sit there. But  once you move the brush—write the code—you&rsquo;ll see it paint its picture and  fulfill its purpose.</p>
+<p class="MsoNormal">
+<h1>Where do I get these buttons?</h1>
+<p>Well, you really don&rsquo;t have to go far, as long as you know  how to import the tkinter library, you have access to a button, and a whole lot  of other things, but let&rsquo;s keep it simple today and focus on the button.
+We can start with the tkinter Library Imports:
+  <p><img src="Articles/2025/2_The_Artist_Toolkit/3 Buttons as Brushstrokes/Images/2.png" width="438" height="128">
+  <h1>Start with the same Python file from last week</h1>
+<p>Instead of starting from scratch here, we could just take  the same file that we were working on last week, and then just add the code for  the button to our existing code.<br>
+  <strong>#=======Tkinter Library Imports =======#</strong><br>
+  import tkinter as tk<br>
+  from tkinter import ttk</p>
+<p><strong># Creating the visiable application window</strong><br>
+  root = tk.Tk()</p>
+<p><strong># Optional: Set window properties</strong><br>
+  root.title(&quot;My Tkinter Application&quot;) &nbsp;<strong># Title of the  window</strong><br>
+  root.geometry(&quot;400x300&quot;) &nbsp;<strong># Set the window  size (width x height)</strong></p>
+<p><strong># Add widgets and define their layout here</strong><br>
+  <strong># Example:</strong><br>
+  label = tk.Label(root, text=&quot;FRUITS&quot;)<br>
+  label.pack(pady=20) <strong># Add some padding</strong></p>
+<p>fruit_label = tk.Label(root, text=&quot;Select your favorite  fruit:&quot;)<br>
+  fruit_label.pack(pady=2) &nbsp;<strong># Add some padding</strong><br>
+  fruit_dropdown = ttk.Combobox(root, values=[&quot;Apple&quot;, &quot;Banana&quot;,  &quot;Cherry&quot;, &quot;Date&quot;])<br>
+  fruit_dropdown.pack(pady=2) &nbsp;<strong># Add some padding</strong></p>
+<p>def update_label(event):<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;selected_value = fruit_dropdown.get()<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=f&quot;You  selected: {selected_value}&quot;)</p>
+<p>fruit_dropdown.bind(&quot;&lt;&lt;ComboboxSelected&gt;&gt;&quot;,  update_label)</p>
+<p>submit_label = tk.Label(root, text=&quot;&quot;)<br>
+  submit_label.pack(pady=2) &nbsp;<strong># Add some padding</strong></p>
+<p><strong># This will show you the window</strong><br>
+  root.mainloop()</p>
+<p>&nbsp;</p>
+<h1>Creating the Button</h1>
+<p>Let&rsquo;s start with the function that we will use to power up  the button. The function will be simple, and we can name this function anything  we want. But what we would like our function to do here, is to target the submit_label,  which is the same label that we used to show the fruit selection, which you may  remember from last week&rsquo;s lesson, was used by the Combobox. <br>
+  So, as I have already stated we will want to target that  label, and then use the config method on it. We can use the  config method because it is available through the library that we brought in  with our import statements. So, it is already written, and we do not need to  really know what it does, but it will help us in making changes to the text  that is in the submit_label.  <br>
+  So, we use that method, and it needs to know that it is  working with text, and what that text is supposed to say. So,  put two things in the parenthesis, because in order for the config  function to do its thing, it needs to know this stuff.<br>
+  So, here is our function:
+<p><br>
+  <strong>def</strong> on_button_click():<br>
+&nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=&quot;You clicked the  button!&quot;)
+<p><br>
+  Now that we have our function, we can create the button.<br>
+  Build the widget, which is a button. You can name  the button anything you like. But for a button we have to set it to a <strong>tk.Button</strong>.  Now what we want to pass to &lsquo;our own version&rsquo; of this button is: Where we want  it to be placed: <strong>root</strong> (the window),   what text we want on the button(<strong>text=&rdquo;Submit&rdquo;</strong>), and then we need  to call that button that we created in our function(<strong>command=lambda:  on_button_click()</strong>).<br>
+  Lastly, make sure to pack the Submit button  to the screen—if you don&rsquo;t, it won&rsquo;t appear. We can pass a small <strong>padding </strong>to the button through the  argument list.
+<p>submit_button = tk.Button(root, text=&quot;Submit&quot;, command=lambda:  on_button_click())<br>
+  submit_button.pack(pady=5) &nbsp;# Add some padding</p>
+<p>Now if you click on Submit button, you will see the label  saying <strong>&lsquo;You clicked the button!&rsquo;</strong><br>
+  </p>
+  
+  <img src="Articles/2025/2_The_Artist_Toolkit/3 Buttons as Brushstrokes/Images/3.png" width="332" height="276">
+<h1>Now for the Entire Code</h1>
+<p><strong>#=======Tkinter Library Imports =======</strong></p>
+<p>import tkinter as tk<br>
+  from tkinter import ttk<br>
+  <br>
+  <br>
+  # Creating the visiable application window<br>
+  root = tk.Tk()</p>
+<p># Optional: Set window properties<br>
+  root.title(&quot;My Tkinter Application&quot;) &nbsp;# Title of the  window<br>
+  root.geometry(&quot;400x300&quot;) &nbsp;# Set the window size  (width x height)</p>
+<p># Add widgets and define their layout here<br>
+  # Example:<br>
+  label = tk.Label(root, text=&quot;FRUITS&quot;)<br>
+  label.pack(pady=20) # Add some padding</p>
+<p>fruit_label = tk.Label(root, text=&quot;Select your favorite  fruit:&quot;)<br>
+  fruit_label.pack(pady=2) &nbsp;# Add some padding<br>
+  fruit_dropdown = ttk.Combobox(root, values=[&quot;Apple&quot;, &quot;Banana&quot;,  &quot;Cherry&quot;, &quot;Date&quot;])<br>
+  fruit_dropdown.pack(pady=2) &nbsp;# Add some padding</p>
+<p>def update_label(event):<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;selected_value = fruit_dropdown.get()<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=f&quot;You  selected: {selected_value}&quot;)</p>
+<p>fruit_dropdown.bind(&quot;&lt;&lt;ComboboxSelected&gt;&gt;&quot;,  update_label)</p>
+<p>submit_label = tk.Label(root, text=&quot;&quot;)<br>
+  submit_label.pack(pady=2) &nbsp;# Add some padding</p>
+<p># Button widget</p>
+<p>def on_button_click():<br>
+  &nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=&quot;You  clicked the button!&quot;)</p>
+<p>submit_button = tk.Button(root, text=&quot;Submit&quot;, height=3,  width=18, bg='red', fg='white', command=lambda: on_button_click())<br>
+  submit_button.pack(pady=5) &nbsp;# Add some padding</p>
+<p># This will show you the window<br>
+  root.mainloop()</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="MsoNormal">
 <p class="MsoNormal">&nbsp;</p>
 
 
