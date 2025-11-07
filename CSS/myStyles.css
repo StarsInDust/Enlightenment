@@ -23,12 +23,14 @@ body {
   flex: 1 100%;
 }
 
-/* Header */
+/* Header - Mobile First Approach */
 .header {
   background-color: black;
-  background-image: url(../Images/banner_1200.png);
-  height: 430px;
+  background-image: url(../Images/banner_425_small.png);
   background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  height: 110px;
 }
 
 /* Footer */
@@ -354,17 +356,18 @@ p.tableOfContents a:hover {
   }
 }
 
+/* --- Very small screens (up to 350px) --- */
+@media all and (max-width: 350px) {
+  .header {
+    background-image: url(../Images/banner_425_smaller.png);
+    height: 100px;
+  }
+}
+
 /* --- min-width: 300px --- */
 @media all and (min-width: 300px) {
   .aside {
     flex: 1 0 0;
-  }
-
-  .header {
-    background-image: url(../Images/banner_425_small.png);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    height: 110px;
   }
 
   .cartoonImg {
@@ -373,16 +376,24 @@ p.tableOfContents a:hover {
   }
 
   .image {
-	width: 90%;
-	height: auto;
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* --- min-width: 425px --- */
+@media all and (min-width: 425px) {
+  .header {
+    background-image: url(../Images/banner_425.png);
+    height: 120px;
   }
 }
 
 /* --- min-width: 600px --- */
 @media all and (min-width: 600px) {
   .header {
-    background-image: url(../Images/banner_625_small.png);
-    height: 160px;
+    background-image: url(../Images/banner_625.png);
+    height: 180px;
   }
 
   .wideImg,
@@ -423,4 +434,3 @@ p.tableOfContents a:hover {
     height: 430px;
   }
 }
-

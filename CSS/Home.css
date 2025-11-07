@@ -1,56 +1,41 @@
- /* Targt the specific image in the aside element */
-        .aside-1 .image {
-	max-width: 100%; /* Ensure the image doesn't exceed the container's width */
-	height: auto;    /* Maintain the aspect ratio of the image */
-	display: block;  /* Remove any inline spacing caused by the image */
-	padding: 10px;   /* Add padding around the image */
-	/* [disabled]box-sizing: border-box; */ /* Include padding in the image's dimensions */
-        }
-        
-        /* Center the cartoon image inside aside-2 */
-        .cartoonImg {
-            display: block;
-            margin: 0 auto; /* Center horizontally */
-            max-width: 100%; /* Ensure responsive behavior */
-            height: auto; /* Maintain aspect ratio */
-        }
-        
-        /* Mobile and tablet responsive layout - stacks aside elements vertically */
-        @media all and (max-width: 768px) {
-            .aside-1,
-            .aside-2 {
-                flex: 1 100%; /* Take full width, stacking vertically */
-                margin-bottom: 15px; /* Add space between stacked elements */
-            }
-            
-            .aside-2 {
-                margin-bottom: 20px; /* Extra space after the text aside */
-            }
-            
-            /* Reduce the size of the image in aside-1 on small screens */
-            .aside-1 .image {
-	/* [disabled]max-width: 70%; */ /* Reduce from 100% to 60% on small screens */
-	margin: 0 auto; /* Center the smaller image */
-            }
-        }
+/* Targt the specific image in the aside element */
+.aside-1 .image {
+  max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+  height: auto; /* Maintain the aspect ratio of the image */
+  display: block; /* Remove any inline spacing caused by the image */
+  padding: 10px; /* Add padding around the image */
+  /* [disabled]box-sizing: border-box; */ /* Include padding in the image's dimensions */
+}
 
-        /* --- min-width: 600px --- */
-@media all and (min-width: 600px) {
-  .header {
-    background-image: url(../Images/banner_625_small.png);
-    height: 160px;
+/* Center the cartoon image inside aside-2 */
+.cartoonImg {
+  display: block;
+  margin: 0 auto; /* Center horizontally */
+  max-width: 100%; /* Ensure responsive behavior */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Mobile and tablet responsive layout - stacks aside elements vertically */
+@media all and (max-width: 768px) {
+  .aside-1,
+  .aside-2 {
+    flex: 1 100%; /* Take full width, stacking vertically */
+    margin-bottom: 15px; /* Add space between stacked elements */
   }
 
-  .wideImg,
-  .cartoonImg {
-    width: 90%;
+  .aside-2 {
+    margin-bottom: 20px; /* Extra space after the text aside */
+  }
+
+  /* Reduce the size of the image in aside-1 on small screens */
+  .aside-1 .image {
+    /* [disabled]max-width: 70%; */ /* Reduce from 100% to 60% on small screens */
+    margin: 0 auto; /* Center the smaller image */
   }
 }
 
-/* --- min-width: 800px --- */
+/* Home-specific responsive adjustments */
+/* These styles complement the main myStyles.css banner setup */
 @media all and (min-width: 800px) {
-  .header {
-    background-image: url(../Images/banner_825.png);
-    height: 300px;
-  }
+  /* Additional home-specific styling for larger screens can go here */
 }
