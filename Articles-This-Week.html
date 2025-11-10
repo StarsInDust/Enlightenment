@@ -4,16 +4,17 @@
 
 
 <head>
-    <meta name="description" content="Learn about Python and Tkinter with this tutorial.">
+    <meta name="description" content="Learn tkinter and python fundamentals in this tutorial.">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Enlightenment</title>
     
    
- <meta name="title" content="Buttons as Brushstrokes ">
-
- <meta name="title" content="Buttons as Brushstrokes ">
+ <meta name="title" content="4 Frames as Canvases ">
+ 
+ 
+ <meta name="title" content="Frames for Canvases ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
@@ -21,7 +22,7 @@
 <meta name="keywords" content=" Python, Tk, Tkinter, Programming "/>
 
 
-<meta name="description" content="This article explains how a programmer would go about creating a button in tkinter, using the Python file extension. "/>
+<meta name="description" content="This article explains how a programmer would go about creating a frame in Tkinter, which would help section off different parts of the User Interface. "/>
 
 <meta name="category" content="Python, Tk, Tkinter, Programming">
 
@@ -32,9 +33,12 @@
 
 <meta name="revised" content="Tuesday, October 9, 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2025/2_The_Artist_Toolkit/3%20Buttons%20as%20Brushstrokes/3_Buttons_as_Brushstrokes.html">
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/2_The_Artist_Toolkit/4%20Frames%20as%20Canvases/4_Frames_As_Canvases.html">
 
 
+ 
+
+ 
     
     
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
@@ -51,6 +55,18 @@
 </style>
 
 
+<style type="text/css">
+<!--
+span.strongEmphasisChar {
+color:#002060;
+font-weight:bold;
+}
+span.RecipeeBodyChar {
+color:#2F5496;
+font-weight:bold;
+}
+-->
+</style>
 </head>
 
 
@@ -75,103 +91,102 @@
   
   <!--Main Article -->
   
-  <p class="h2Black" >~3 Buttons as Brushstrokes~</p>
+  <p class="h2Black" >~4 Frames as Canvases~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >11/3/2025</p>
+   <p class="articleDate" style="text-align:right" >11/10/2025</p>
    
 <p>&nbsp;</p>
-<img src="Articles/2025/2_The_Artist_Toolkit/3 Buttons as Brushstrokes/Images/1.png" width="297" height="262">
-<h1>What is a Button in Tkinter </h1>
-<p class="MsoNormal">Buttons in Tkinter are like brushstrokes on a canvas. It  begins a process; it starts a behavior. If you are an artist, this beginning brushstroke  is your start to a stunning piece of artIn the programming world, a button  brings your program to life—it initiates action.
-<p>A button on a page all by itself will just sit there. But  once you move the brush—write the code—you&rsquo;ll see it paint its picture and  fulfill its purpose.</p>
-<p class="MsoNormal">
-<h1>Where do I get these buttons?</h1>
-<p>Well, you really don&rsquo;t have to go far, as long as you know  how to import the tkinter library, you have access to a button, and a whole lot  of other things, but let&rsquo;s keep it simple today and focus on the button.
-We can start with the tkinter Library Imports:
-  <p><img src="Articles/2025/2_The_Artist_Toolkit/3 Buttons as Brushstrokes/Images/2.png" width="438" height="128">
-  <h1>Start with the same Python file from last week</h1>
-<p>Instead of starting from scratch here, we could just take  the same file that we were working on last week, and then just add the code for  the button to our existing code.<br>
-  <strong>#=======Tkinter Library Imports =======#</strong><br>
-  import tkinter as tk<br>
-  from tkinter import ttk</p>
-<p><strong># Creating the visiable application window</strong><br>
-  root = tk.Tk()</p>
-<p><strong># Optional: Set window properties</strong><br>
-  root.title(&quot;My Tkinter Application&quot;) &nbsp;<strong># Title of the  window</strong><br>
-  root.geometry(&quot;400x300&quot;) &nbsp;<strong># Set the window  size (width x height)</strong></p>
-<p><strong># Add widgets and define their layout here</strong><br>
-  <strong># Example:</strong><br>
-  label = tk.Label(root, text=&quot;FRUITS&quot;)<br>
-  label.pack(pady=20) <strong># Add some padding</strong></p>
-<p>fruit_label = tk.Label(root, text=&quot;Select your favorite  fruit:&quot;)<br>
-  fruit_label.pack(pady=2) &nbsp;<strong># Add some padding</strong><br>
-  fruit_dropdown = ttk.Combobox(root, values=[&quot;Apple&quot;, &quot;Banana&quot;,  &quot;Cherry&quot;, &quot;Date&quot;])<br>
-  fruit_dropdown.pack(pady=2) &nbsp;<strong># Add some padding</strong></p>
-<p>def update_label(event):<br>
-  &nbsp; &nbsp; &nbsp; &nbsp;selected_value = fruit_dropdown.get()<br>
-  &nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=f&quot;You  selected: {selected_value}&quot;)</p>
-<p>fruit_dropdown.bind(&quot;&lt;&lt;ComboboxSelected&gt;&gt;&quot;,  update_label)</p>
-<p>submit_label = tk.Label(root, text=&quot;&quot;)<br>
-  submit_label.pack(pady=2) &nbsp;<strong># Add some padding</strong></p>
-<p><strong># This will show you the window</strong><br>
-  root.mainloop()</p>
-<p>&nbsp;</p>
-<h1>Creating the Button</h1>
-<p>Let&rsquo;s start with the function that we will use to power up  the button. The function will be simple, and we can name this function anything  we want. But what we would like our function to do here, is to target the submit_label,  which is the same label that we used to show the fruit selection, which you may  remember from last week&rsquo;s lesson, was used by the Combobox. <br>
-  So, as I have already stated we will want to target that  label, and then use the config method on it. We can use the  config method because it is available through the library that we brought in  with our import statements. So, it is already written, and we do not need to  really know what it does, but it will help us in making changes to the text  that is in the submit_label.  <br>
-  So, we use that method, and it needs to know that it is  working with text, and what that text is supposed to say. So,  put two things in the parenthesis, because in order for the config  function to do its thing, it needs to know this stuff.<br>
-  So, here is our function:
-<p><br>
-  <strong>def</strong> on_button_click():<br>
-&nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=&quot;You clicked the  button!&quot;)
-<p><br>
-  Now that we have our function, we can create the button.<br>
-  Build the widget, which is a button. You can name  the button anything you like. But for a button we have to set it to a <strong>tk.Button</strong>.  Now what we want to pass to &lsquo;our own version&rsquo; of this button is: Where we want  it to be placed: <strong>root</strong> (the window),   what text we want on the button(<strong>text=&rdquo;Submit&rdquo;</strong>), and then we need  to call that button that we created in our function(<strong>command=lambda:  on_button_click()</strong>).<br>
-  Lastly, make sure to pack the Submit button  to the screen—if you don&rsquo;t, it won&rsquo;t appear. We can pass a small <strong>padding </strong>to the button through the  argument list.
-<p>submit_button = tk.Button(root, text=&quot;Submit&quot;, command=lambda:  on_button_click())<br>
-  submit_button.pack(pady=5) &nbsp;# Add some padding</p>
-<p>Now if you click on Submit button, you will see the label  saying <strong>&lsquo;You clicked the button!&rsquo;</strong><br>
-  </p>
-  
-  <img src="Articles/2025/2_The_Artist_Toolkit/3 Buttons as Brushstrokes/Images/3.png" width="332" height="276">
-<h1>Now for the Entire Code</h1>
-<p><strong>#=======Tkinter Library Imports =======</strong></p>
-<p>import tkinter as tk<br>
-  from tkinter import ttk<br>
-  <br>
-  <br>
-  # Creating the visiable application window<br>
-  root = tk.Tk()</p>
-<p># Optional: Set window properties<br>
-  root.title(&quot;My Tkinter Application&quot;) &nbsp;# Title of the  window<br>
-  root.geometry(&quot;400x300&quot;) &nbsp;# Set the window size  (width x height)</p>
-<p># Add widgets and define their layout here<br>
-  # Example:<br>
-  label = tk.Label(root, text=&quot;FRUITS&quot;)<br>
-  label.pack(pady=20) # Add some padding</p>
-<p>fruit_label = tk.Label(root, text=&quot;Select your favorite  fruit:&quot;)<br>
-  fruit_label.pack(pady=2) &nbsp;# Add some padding<br>
-  fruit_dropdown = ttk.Combobox(root, values=[&quot;Apple&quot;, &quot;Banana&quot;,  &quot;Cherry&quot;, &quot;Date&quot;])<br>
-  fruit_dropdown.pack(pady=2) &nbsp;# Add some padding</p>
-<p>def update_label(event):<br>
-  &nbsp; &nbsp; &nbsp; &nbsp;selected_value = fruit_dropdown.get()<br>
-  &nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=f&quot;You  selected: {selected_value}&quot;)</p>
-<p>fruit_dropdown.bind(&quot;&lt;&lt;ComboboxSelected&gt;&gt;&quot;,  update_label)</p>
-<p>submit_label = tk.Label(root, text=&quot;&quot;)<br>
-  submit_label.pack(pady=2) &nbsp;# Add some padding</p>
-<p># Button widget</p>
-<p>def on_button_click():<br>
-  &nbsp; &nbsp; &nbsp; &nbsp;submit_label.config(text=&quot;You  clicked the button!&quot;)</p>
-<p>submit_button = tk.Button(root, text=&quot;Submit&quot;, height=3,  width=18, bg='red', fg='white', command=lambda: on_button_click())<br>
-  submit_button.pack(pady=5) &nbsp;# Add some padding</p>
-<p># This will show you the window<br>
-  root.mainloop()</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p class="MsoNormal">
+<img src="Articles/2025/2_The_Artist_Toolkit/4 Frames as Canvases/Images/1.png" width="281" height="258">
+<p class="MsoNormal">&nbsp;</p>
+<h1>What Is a Frame in Tkinter?</h1>
+<p class="MsoNormal">Imagine a <span class="strongEmphasisChar"><span style="line-height:115%; font-size:14.0pt; ">frame</span></span> as a blank canvas  within your window. It doesn&rsquo;t show off by itself—it waits patiently to hold  your brushstrokes. In Tkinter, a Frame is a widget that helps you organize  other widgets. It&rsquo;s like a painter&rsquo;s panel, ready to hold a cluster of buttons,  labels, or dropdowns in one tidy space.</p>
+<h4>In a python file</h4>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">frame = tk.Frame(root)</p>
+<p class="code">frame.pack(pady=10)</p>
+<p class="code">&nbsp;</p>
+<h1>Why Use Frames?</h1>
+<ul>
+  <li>To group related widgets together (like a  palette of fruit options).</li>
+  <li>To control layout more precisely.</li>
+  <li>To keep your code organized and modular.</li>
+  <li>&nbsp;</li>
+</ul>
+<p class="MsoNormal">Think of each frame as a stitched panel in a quilt—each one  tells part of the story.</p>
+<h1>Creating Your First Frame</h1>
+<p>Let&rsquo;s build a frame to hold our fruit selection widgets. Instead of placing  everything directly on <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">root</span></span>, we&rsquo;ll place them inside a frame.</p>
+<h4>In a python file</h4>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">fruit_frame = tk.Frame(root)</p>
+<p class="code">fruit_frame.pack(pady=10)</p>
+<p class="code">&nbsp;</p>
+<p>Now, place your widgets inside <span class="RecipeeBodyChar"><span style="font-size:14.0pt; ">fruit_frame</span></span>:</p>
+<h4>In a python file</h4>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">fruit_label = tk.Label(fruit_frame, text=&quot;Select your  favorite fruit:&quot;)</p>
+<p class="code">fruit_label.pack()</p>
+<p class="code">&nbsp;</p>
+<p class="code">fruit_dropdown = ttk.Combobox(fruit_frame,  values=[&quot;Apple&quot;, &quot;Banana&quot;, &quot;Cherry&quot;,  &quot;Date&quot;])</p>
+<p class="code">fruit_dropdown.pack()</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Articles/2025/2_The_Artist_Toolkit/4 Frames as Canvases/Images/2.png" width="335" height="304">
+<p class="code">&nbsp;</p>
+<h1>Adding a Button Frame</h1>
+<p class="MsoNormal">Let&rsquo;s create a second frame just for the button. This keeps  your layout clean and lets you style it separately if you wish.</p>
+<p class="code">&nbsp;</p>
+<h4>In a python file</h4>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">button_frame = tk.Frame(root)</p>
+<p class="code">button_frame.pack(pady=10)</p>
+<p class="code">&nbsp;</p>
+<p class="code">submit_button = tk.Button(button_frame, text=&quot;Submit&quot;,  command=lambda: on_button_click())</p>
+<p class="code">submit_button.pack()</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Articles/2025/2_The_Artist_Toolkit/4 Frames as Canvases/Images/3.png" width="354" height="300">
+<p class="code">&nbsp;</p>
+<h1>The Full Code Example</h1>
+<p class="code">import tkinter as tk</p>
+<p class="code">from tkinter import ttk</p>
+<p class="code">&nbsp;</p>
+<p class="code">root = tk.Tk()</p>
+<p class="code">root.title(&quot;Frames as Canvases&quot;)</p>
+<p class="code">root.geometry(&quot;400x300&quot;)</p>
+<p class="code">&nbsp;</p>
+<p class="code"><span style="color:#538135; "># Fruit selection frame</span></p>
+<p class="code">fruit_frame = tk.Frame(root)</p>
+<p class="code">fruit_frame.pack(pady=10)</p>
+<p class="code">&nbsp;</p>
+<p class="code">fruit_label = tk.Label(fruit_frame, text=&quot;Select your  favorite fruit:&quot;)</p>
+<p class="code">fruit_label.pack()</p>
+<p class="code">&nbsp;</p>
+<p class="code">fruit_dropdown = ttk.Combobox(fruit_frame,  values=[&quot;Apple&quot;, &quot;Banana&quot;, &quot;Cherry&quot;,  &quot;Date&quot;])</p>
+<p class="code">fruit_dropdown.pack()</p>
+<p class="code">&nbsp;</p>
+<p class="code"><span style="color:#538135; "># Label to show selection</span></p>
+<p class="code">submit_label = tk.Label(root, text=&quot;&quot;)</p>
+<p class="code">submit_label.pack(pady=5)</p>
+<p class="code">&nbsp;</p>
+<p class="code">def on_button_click():</p>
+<p class="code">    selected_value =  fruit_dropdown.get()</p>
+<p class="code">     submit_label.config(text=f&quot;You selected: {selected_value}&quot;)</p>
+<p class="code">&nbsp;</p>
+<p class="code"><span style="color:#538135; "># Button frame</span></p>
+<p class="code">button_frame = tk.Frame(root)</p>
+<p class="code">button_frame.pack(pady=10)</p>
+<p class="code">&nbsp;</p>
+<p class="code">submit_button = tk.Button(button_frame, text=&quot;Submit&quot;,  command=lambda: on_button_click())</p>
+<p class="code">submit_button.pack()</p>
+<p class="code">&nbsp;</p>
+<p class="code">root.mainloop()</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Just like a painter chooses where to place each stroke, you  now have the power to place your widgets with intention. Frames give your  application structure, rhythm, and clarity. They&rsquo;re not just containers—they&rsquo;re  canvases for your creativity.</p>
+<p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
 
 
