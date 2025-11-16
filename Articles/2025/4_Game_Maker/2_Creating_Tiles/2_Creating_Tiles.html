@@ -91,128 +91,148 @@ font-weight:bold;
   
    <p class="articleDate" style="text-align:right" >1/19/2026</p>
    
-<p>&nbsp;</p>
-<img src="Images/1.jpg" width="307" height="229">
-<p class="MsoNormal">If your project opens with this Welcome Screen, you can look  at it, and then just close the Welcome tab to get back to the project.</p>
-<img src="Images/2.jpg" width="628" height="535">
+  <img src="Creating_Tiles_files/image001.png" width="270" height="241">
+   <p class="MsoNormal">If your project opens with this Welcome Screen, you can look  at it, and then just close the Welcome tab to get back to the project.</p>
+   <img src="Creating_Tiles_files/image002.png" width="644" height="543">
 <h1>Tiles</h1>
-<p class="MsoNormal">Pick out a nice floor image from the internet. There are  plenty to choose from out there.</p>
-<img src="Images/3.jpg" width="442" height="437">
+   <p class="MsoNormal">Pick out a nice floor image from the internet. There are  plenty to choose from out there.</p>
+   <img src="Creating_Tiles_files/image003.png" width="834" height="974">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You want your floor to be easily digestible by the game. If  we just threw this png in there as a background. It would be too large, and  take up too much memory. It is a much smarter approach to break this floor up  into tiles, and then bring these byte sized pieces into the game. The game sees  one tile, and the memory of the game is only recognizing one tile, but the  magic displayed here is that while the app, is only seeing the one, the player  will see an entire floor.</p>
-<p class="MsoNormal">So, we want our floor to be exactly 32 x 32 pixel squares. </p>
-<h1>The Grid</h1>
-<p class="MsoNormal">In Photoshop we want to start by setting up the grid. </p>
-<p class="MsoNormal"><span class="strongEmphasisChar"><span style="line-height:115%; font-size:14.0pt; ">Top Menu- Edit-Preferences</span></span>. <span class="MsoIntenseReference">Guides, Grid, &amp; Slices</span>…</p>
-<img src="Images/4.jpg" width="477" height="295">
+   <p class="MsoNormal">You want your floor to be easily digestible by the game. If  we just threw this png in there as a background. It would be too large, and  take up too much memory. It is a much smarter approach to break this floor up  into tiles, and then bring these byte sized pieces into the game. The game sees  one tile, and the memory of the game is only recognizing one tile, but the  magic displayed here is that while the app, is only seeing the one, the player  will see an entire floor.</p>
+   <p class="MsoNormal">So, we want our floor to be exactly 32 x 32 pixel squares. </p>
+   <h1>The Grid</h1>
+   <p class="MsoNormal">In Photoshop we want to start by setting up the grid. </p>
+   <p class="MsoNormal"><span class="strongEmphasisChar"><span style="line-height:115%; font-size:14.0pt; ">Top Menu- Edit-Preferences</span></span>. <span class="MsoIntenseReference">Guides, Grid, &amp; Slices</span>…</p>
+   <img src="Creating_Tiles_files/image005.png" width="479" height="293">
 <p class="MsoNormal">&nbsp;</p>
-<h1>Recommended size for the Canvas in Photoshop.</h1>
-<p class="MsoNormal">We can start with a simple canvas of 512 x 512. Try  multiplying the 32 from the Tile grid size and the 16 from the Total Tiles, and  you will come up with the 512 of the canvas size. So, you will want to look at  what size you want your tile. By the way, this 32 x 32 is a good size for the  floor, and then look at the total number of assets that you believe you will be  using as tiles (anything that would use a multitude of images) floors, walls,  even doors or treasure chests. 512 X 512 holds a good amount of assets. Just multiply  16 x 16 you will get 256, so you can place 256 different small assets on it.</p>
-<h3>Choosing your Tile Size</h3>
-<p class="MsoNormal">Yes, this <strong>32 × 32 pixels</strong> is a solid choice for  floors.<br>
-  It&rsquo;s large enough to show texture and detail (like cracks or moss), but small  enough to keep memory usage low and gameplay smooth.</p>
-<p class="MsoNormal">This size also works well for:</p>
-<ul style="margin-top:0in;" type="disc">
-  <li class="MsoNormal"><strong>Walls       and barriers</strong></li>
-  <li class="MsoNormal"><strong>Doors       and gates</strong></li>
-  <li class="MsoNormal"><strong>Treasure       chests and interactive objects</strong></li>
-  <li class="MsoNormal"><strong>Decorative       glyphs or ceremonial accents</strong></li>
-</ul>
-<p class="MsoNormal"><strong>&nbsp;</strong></p>
-<p class="MsoNormal"><strong>&nbsp;</strong></p>
-<h3>Planning Your Asset Count</h3>
-<p class="MsoNormal">Before you begin painting, ask yourself:</p>
-<ul style="margin-top:0in;" type="disc">
-  <li class="MsoNormal">How       many <strong>unique tile types</strong> will I need?</li>
-  <li class="MsoNormal">Will I       include <strong>variants</strong> (e.g. cracked, mossy, glowing)?</li>
-  <li class="MsoNormal">Do I       want <strong>transition tiles</strong> (e.g. corners, edges, blends)?</li>
-  <li class="MsoNormal">Will I       add <strong>interactive elements</strong> like switches or traps?</li>
-</ul>
-<p class="MsoNormal">If your answer is &ldquo;a lot,&rdquo; you might want to scale up to a <strong>1024  × 1024 canvas</strong> later. But starting with 512 × 512 keeps things digestible  and focused.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Images/5.jpg" width="632" height="275"><br>
-<br>
-
+   <h1>Recommended size for the Canvas in Photoshop.</h1>
+   <p class="MsoNormal">We can start with a simple canvas of 512 x 512. Try  multiplying the 32 from the Tile grid size and the 16 from the Total Tiles, and  you will come up with the 512 of the canvas size. So, you will want to look at  what size you want your tile. By the way, this 32 x 32 is a good size for the  floor, and then look at the total number of assets that you believe you will be  using as tiles (anything that would use a multitude of images) floors, walls,  even doors or treasure chests. 512 X 512 holds a good amount of assets. Just multiply  16 x 16 you will get 256, so you can place 256 different small assets on it.</p>
+   <h3>Choosing your Tile Size</h3>
+   <p class="MsoNormal">Yes, this <strong>32 × 32 pixels</strong> is a solid choice for  floors.<br>
+     It&rsquo;s large enough to show texture and detail (like cracks or moss), but small  enough to keep memory usage low and gameplay smooth.</p>
+   <p class="MsoNormal">This size also works well for:</p>
+   <ul style="margin-top:0in;" type="disc">
+     <li class="MsoNormal"><strong>Walls       and barriers</strong></li>
+     <li class="MsoNormal"><strong>Doors       and gates</strong></li>
+     <li class="MsoNormal"><strong>Treasure       chests and interactive objects</strong></li>
+     <li class="MsoNormal"><strong>Decorative       glyphs or ceremonial accents</strong></li>
+   </ul>
+   <p class="MsoNormal"><strong>&nbsp;</strong></p>
+   <p class="MsoNormal"><strong>&nbsp;</strong></p>
+   <h3>Planning Your Asset Count</h3>
+   <p class="MsoNormal">Before you begin painting, ask yourself:</p>
+   <ul style="margin-top:0in;" type="disc">
+     <li class="MsoNormal">How       many <strong>unique tile types</strong> will I need?</li>
+     <li class="MsoNormal">Will I       include <strong>variants</strong> (e.g. cracked, mossy, glowing)?</li>
+     <li class="MsoNormal">Do I       want <strong>transition tiles</strong> (e.g. corners, edges, blends)?</li>
+     <li class="MsoNormal">Will I       add <strong>interactive elements</strong> like switches or traps?</li>
+   </ul>
+   <p class="MsoNormal">If your answer is &ldquo;a lot,&rdquo; you might want to scale up to a <strong>1024  × 1024 canvas</strong> later. But starting with 512 × 512 keeps things digestible  and focused.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Creating_Tiles_files/image006.png" width="704" height="302">
 <p class="MsoNormal">So, inside of Photoshop, create your tileset. We use the  conventional Game Maker method of naming an asset based on what it is. Even  though this will eventually be a tile set, it will start out as a sprite, and  then used to create the tile set later in this tutorial.</p>
-<p class="MsoNormal">These will be your set up, settings inside of Photoshop.</p>
-<p class="MsoNormal"> <strong><span style="font-family:'Calibri',sans-serif; ">512px x 512px, RGB, 72 resolution,  Transparent background</span></strong>. Hit <strong><span style="font-family:'Calibri',sans-serif; ">Ok</span></strong></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You actually will want to name this with a spr_ prefix  first. We save to the sprite folder, and then pull from that to create the  tile.</p>
-<img src="Images/6.jpg" width="542" height="309">
+   <p class="MsoNormal">These will be your set up, settings inside of Photoshop.</p>
+   <p class="MsoNormal"> <strong><span style="font-family:'Calibri',sans-serif; ">512px x 512px, RGB, 72 resolution,  Transparent background</span></strong>. Hit <strong><span style="font-family:'Calibri',sans-serif; ">Ok</span></strong></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">You actually will want to name this with a spr_ prefix  first. We save to the sprite folder, and then pull from that to create the  tile.</p>
+   <img src="Creating_Tiles_files/image008.png" width="555" height="316">
 <p class="MsoNormal"> Still inside of  Photoshop, Turn on your grid</p>
-<p class="MsoNormal"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">Top Menu – View -Show</span></span> - Grid</p>
-<img src="Images/7.jpg" width="434" height="462">
-<p class="MsoNormal">Drag your little floor image in and situate it inside of one  the the grid squares. It will be very small. Later we will be taking this same  sheet out of Game Maker and adding more tiles into the other squares. </p>
+   <p class="MsoNormal"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">Top Menu – View -Show</span></span> - Grid</p>
+   <img src="Creating_Tiles_files/image009.png" width="674" height="718">
+<p class="MsoNormal">Put the image in the second square, the first square will  have some strange stuff happening to it transparency wise. Actually, you won&rsquo;t  even see your image at all if you place it in the first square.</p>
+   <p class="MsoNormal">You can zoom in to fit the tile into the tiny 32px x 32px  grid squares into the tile sheet.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Creating_Tiles_files/image011.png" width="478" height="381">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Images/8.jpg" width="320" height="312">
-<p class="MsoNormal">You can zoom in to fit the tile into the tiny 32px x 32px  grid square.</p>
-<img src="Images/9.jpg" width="398" height="255">
+   <p class="MsoNormal">&nbsp;</p>
+   <h1>Finding your Game files on your computer</h1>
+   <p class="MsoNormal">You will want to save this into your game files on your  computer. </p>
+   <p class="strongEmphasis">C- Users – User Name - GameMakerProjects</p>
+   <img src="Creating_Tiles_files/image013.png" width="645" height="343">
 <p class="MsoNormal">&nbsp;</p>
-<h1>Finding your Game files on your computer</h1>
-<p class="MsoNormal">You will want to save this into your game files on your  computer. </p>
-<p class="strongEmphasis">C- Users – User Name - GameMakerProjects</p>
-<img src="Images/10.jpg" width="624" height="333">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You will want to <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">save</span></span> this tile sprite  as a <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">png</span></span>. This is done for a number of reasons.</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">JPG is lossy, meaning it compresses, and alters pixel data.</p>
-<p class="MsoNormal" style="margin-bottom:0in;">                It  doesn&rsquo;t support transparency.</p>
-<p class="MsoNormal">                It can  cause visual glitches in tile alignment or edge blending.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Images/11.jpg" width="520" height="148">
+   <p class="MsoNormal">You will want to <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">save</span></span> this tile sprite  as a <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">png</span></span>. This is done for a number of reasons.</p>
+   <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">JPG is lossy, meaning it compresses, and alters pixel data.</p>
+   <p class="MsoNormal" style="margin-bottom:0in;">                It  doesn&rsquo;t support transparency.</p>
+   <p class="MsoNormal">                It can  cause visual glitches in tile alignment or edge blending.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Creating_Tiles_files/image014.png" width="517" height="153">
 <h1>Bringing the tile sprite into the Asset Browser</h1>
-<p class="MsoNormal">Just because you saved your image file of the new sprite  sheet that will be used for your tiles. Does not mean that Game Maker will  actually recognize it. In fact, you will be very disappointed when you go the  the Asset Browser and see that your new tile sprite sheet is not sitting  there.  </p>
-<img src="Images/12.jpg" width="538" height="259">
+   <p class="MsoNormal">Just because you saved your image file of the new sprite  sheet that will be used for your tiles. Does not mean that Game Maker will  actually recognize it. In fact, you will be very disappointed when you go the  the Asset Browser and see that your new tile sprite sheet is not sitting  there.  </p>
+   <img src="Creating_Tiles_files/image015.png" width="547" height="271">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You will need to create the new sprite tile set. Right click  on the <strong><span style="font-family:'Calibri',sans-serif; ">Sprite folder</span></strong> and select <strong><span style="font-family:'Calibri',sans-serif; ">Create</span></strong>- Sprite</p>
-<img src="Images/13.jpg" width="513" height="373">
+   <p class="MsoNormal">You will need to create the new sprite tile set. Right click  on the <strong><span style="font-family:'Calibri',sans-serif; ">Sprite folder</span></strong> and select <strong><span style="font-family:'Calibri',sans-serif; ">Create</span></strong>- Sprite</p>
+   <img src="Creating_Tiles_files/image016.png" width="517" height="377">
 <p class="MsoNormal">Here you come into a big Creation Panel. It is here that you  can import your Sprite for the tile set into the Game.</p>
-<img src="Images/14.jpg" width="634" height="381">
+  <img src="Creating_Tiles_files/image017.png" width="1023" height="605">
 <p class="MsoNormal">I named it here spr_tls_base. This way we know it is a  sprite, but it will be used as a tile set. Hit <strong><span style="font-family:'Calibri',sans-serif; ">Import </span></strong>and then browse to where you saved your tile set in your Sprite  folder in Game Maker.</p>
-<img src="Images/15.jpg" width="298" height="296">
-<p class="MsoNormal">It will look bad.  A  tiny little blur</p>
-<img src="Images/16.jpg" width="526" height="343">
+   <img src="Creating_Tiles_files/image019.png" width="294" height="302">
+<p class="MsoNormal">The tiles will be small</p>
+  <img src="Creating_Tiles_files/image020.png" width="414" height="296">
 <p class="MsoNormal">Click on Edit Sprite here- Left Panel</p>
-<img src="Images/17.jpg" width="436" height="444">
+  <img src="Creating_Tiles_files/image021.png" width="447" height="445">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You will not have the Image menu show up at the top of the  app, until you open the Edit Image Panel</p>
-<img src="Images/18.jpg" width="248" height="225">
+   <p class="MsoNormal">You will not have the Image menu show up at the top of the  app, until you open the Edit Image Panel</p>
+   <img src="Creating_Tiles_files/image022.png" width="290" height="268">
 <p class="MsoNormal">Now look at the very top of the app, you will see that an  Image menu has appeared. Click on the Image menu.</p>
-<img src="Images/19.jpg" width="620" height="491">
-<p class="MsoNormal">Now you want to select <strong><span style="font-family:'Calibri',sans-serif; ">Convert  to Frames</span></strong> from the Image Menu.</p>
-<img src="Images/20.jpg" width="423" height="321">
-<p class="MsoNormal">Now the white outline encircles the little tile properly.  Our grid was set to <strong><span style="font-family:'Calibri',sans-serif; ">32px x 32px</span></strong> so this is set right. Now Hit the <strong><span style="font-family:'Calibri',sans-serif; ">Convert Button</span></strong> at the bottom.</p>
-<img src="Images/21.jpg" width="630" height="425">
-<p class="MsoNormal">And you have your sprite.</p>
-<img src="Images/22.jpg" width="397" height="418">
-<h1>Turning your tile sprite into a Tile Set</h1>
-<p class="MsoNormal">Now that you finally have a sprite to represent the floor  tile, you will need to turn this sprite into an actual Tile Set. Go to the <strong><span style="font-family:'Calibri',sans-serif; ">Tile Sets folder</span></strong> inside of the  Asset Browser on the right side of the application.</p>
-<img src="Images/23.jpg" width="193" height="215">
+   <p class="MsoNormal">Now here we want to take the eye dropper and select the  image to select the color. The floor is dark brown. Fill the first square with  dark brown. Here is the eye dropper tool and the selection tool Draw a square  around the first square after getting the color. Fill the color of dark brown  to match your second square.</p>
+   <img src="Creating_Tiles_files/image024.png" width="207" height="100">
+<p class="MsoNormal"><img src="Creating_Tiles_files/image025.png" width="235" height="165"></p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Hit Escape to deselect</p>
+   <img src="Creating_Tiles_files/image027.png" width="191" height="124">
+<p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <h1>Turning your tile sprite into a Tile Set</h1>
+   <p class="MsoNormal">Now that you finally have a sprite to represent the floor  tile, you will need to turn this sprite into an actual Tile Set. Go to the <strong><span style="font-family:'Calibri',sans-serif; ">Tile Sets folder</span></strong> inside of the  Asset Browser on the right side of the application.</p>
+   <img src="Creating_Tiles_files/image028.png" width="194" height="206">
 <p class="MsoNormal">Right click on the at folder to get to the sub menu.</p>
-<p class="MsoNormal"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">Tile Sets Folder- Create</span></span> – Tile Sets.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Images/24.jpg" width="336" height="301">
+   <p class="MsoNormal"><span class="strongEmphasisChar"><span style="font-size:14.0pt; ">Tile Sets Folder- Create</span></span> – Tile Sets.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Creating_Tiles_files/image029.png" width="329" height="295">
 <p class="MsoNormal">You will find that by clicking on the Tile Set link in the  menu above, that you have entered a whole new world in Game Maker, and here we  will be doing every thing that we need to do concerning the creation of tile  sets. This panel will open in the center section of your Game Maker App.</p>
-<img src="Images/25.jpg" width="700" height="290">
+   
+   <img src="Creating_Tiles_files/image030.png" width="1093" height="446">
 <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">On the left side of this new panel, you can <strong><span style="font-family:'Calibri',sans-serif; ">name your new tile set</span></strong>. And  also choose the sprite that you just created to represent it. Browse to your Sprite to select it. Click on the 3  dots at the end of the line that says No Sprite, to find your tile set sprite. </p>
+   <img src="Creating_Tiles_files/image032.png" width="1211" height="570">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">On the left side of this new panel, you can <strong><span style="font-family:'Calibri',sans-serif; ">name your new tile set</span></strong>. And  also choose the sprite that you just created to represent it. Browse to your Sprite to select it. Click on the 3  dots at the end of the line that says No Sprite, to find your tile set sprite. </p>
-<img src="Images/26.jpg" width="678" height="279">
+   <p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Watch it,</span></span> you have  your tile set size set to 32 x 32, but is it being interpreted correctly in the  Tile Properties section? You will find the Tile Properties, are displayed in  the same panel. If your tile properties are not set to 32 x 32, the floor tile  will be misrepresented in the room. They will be too small, and there are a lot  of other things that can be screwed up as well. </p>
+   <p class="MsoNormal">Here, you will see that my own Tile properties for this  sheet have come in a 16 x 16. This is bad. Very easy to change. Just highlight  the little 16s here and change them to 32.</p>
+   <img src="Creating_Tiles_files/image034.png" width="573" height="294">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Watch it,</span></span> you have your  tile set size set to 32 x 32, but is it being interpreted correctly in the Tile  Properties section? You will find the Tile Properties, are displayed in the  same panel. If your tile properties are not set to 32 x 32, the floor tile will  be misrepresented in the room. They will be too small, and there are a lot of  other things that can be screwed up as well. </p>
-<p class="MsoNormal">Here, you will see that my own Tile properties for this  sheet have come in a 16 x 16. This is bad. Very easy to change. Just highlight  the little 16s here and change them to 32.</p>
-<img src="Images/27.jpg" width="567" height="291">
+   <p class="MsoNormal">If it has this little white border that does not seem to fit  the tile, try setting the Output Border of both X and Y to 0, in the Tile  Properties on the right side of the tile creation panel. </p>
+   <p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Warning -</span></span>Do not try  and set something like 32 into the x value for horizontal X, it will make the  tile disappear when you try to use it from the palette in the room.</p>
+   <img src="Creating_Tiles_files/image035.png" width="1233" height="562">
+<p class="MsoNormal">You can rename your tileset for this</p>
+   <img src="Creating_Tiles_files/image037.png" width="294" height="192">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">If it has this little white border that does not seem to fit  the tile, try setting the Output Border of both X and Y to 0, in the Tile Properties  on the right side of the tile creation panel.</p>
-
-<img src="Images/28.jpg" width="538" height="364">
+   <p class="MsoNormal">&nbsp;</p>
+   <h1>Rooms</h1>
+   <p class="MsoNormal">So, now you have your tile for the floor inside of Game  Maker; Go to your Rooms to be able to add tiles.</p>
+   <img src="Creating_Tiles_files/image038.png" width="462" height="173">
+<h1>Moving the Palette Around.</h1>
+   <p class="MsoNormal">If you do not see your tile. Hit the <strong><span style="font-family:'Calibri',sans-serif; ">square</span></strong> at the end of the tool  menu above it.</p>
+   <p class="MsoNormal">To Zoom, use the <strong><span style="font-family:'Calibri',sans-serif; ">Zoom</span></strong> button,  To Move around, hold down the space bar and move the palette around with your  mouse.</p>
+   <img src="Creating_Tiles_files/image040.png" width="492" height="187">
 <p class="MsoNormal">&nbsp;</p>
+  <img src="Creating_Tiles_files/image042.png" width="574" height="570">
+<p class="MsoNormal">To add a tile to the board, just click on the tile you want  to add and then drag and drop it onto the board.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <img src="Creating_Tiles_files/image044.png" width="641" height="331">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-
-<p class="MsoNormal">So, now you have your tile for the floor inside of Game  Maker</p>
-<img src="Images/29.jpg" width="630" height="251">
-<p class="MsoNormal">Next week, we will be bringing our floor into a room.</p>
+   <p class="MsoNormal">&nbsp;</p>
+   <p class="MsoNormal">Finish laying all the tiles and now you have the floor.</p>
+  <img src="Creating_Tiles_files/image045.png" width="1178" height="578">
+<p>&nbsp;</p>
 
 
 
