@@ -4,39 +4,14 @@
 
 
 <head>
-    <meta name="description" content="Learn tkinter and python fundamentals in this tutorial.">
+    <meta name="description" content="Learn how to place a label onto a form in Tkinter and Python">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Enlightenment</title>
     
    
- <meta name="title" content="4 Frames as Canvases ">
- 
- 
- <meta name="title" content="Frames for Canvases ">
-
-<meta name="author" content="StarsInDust ">
-<meta name="Designer" content="StarsInDust ">
-
-<meta name="keywords" content=" Python, Tk, Tkinter, Programming "/>
-
-
-<meta name="description" content="This article explains how a programmer would go about creating a frame in Tkinter, which would help section off different parts of the User Interface. "/>
-
-<meta name="category" content="Python, Tk, Tkinter, Programming">
-
-<meta name="rating" content="General">
-
-
-<meta name="robots" content="index,follow" />
-
-<meta name="revised" content="Tuesday, October 9, 2025" />
-
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/2_The_Artist_Toolkit/4%20Frames%20as%20Canvases/4_Frames_As_Canvases.html">
-
-
- 
+ <meta name="title" content="Labels, the Unsung Heroes of UI Forms ">
 
  
     
@@ -55,18 +30,6 @@
 </style>
 
 
-<style type="text/css">
-<!--
-span.strongEmphasisChar {
-color:#002060;
-font-weight:bold;
-}
-span.RecipeeBodyChar {
-color:#2F5496;
-font-weight:bold;
-}
--->
-</style>
 </head>
 
 
@@ -91,102 +54,75 @@ font-weight:bold;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~4 Frames as Canvases~</p>
+  <p class="h2Black" >~5 Labels, the Unsung Heroes of UI Forms~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >11/10/2025</p>
+   <p class="articleDate" style="text-align:right" >11/17/2025</p>
    
 <p>&nbsp;</p>
-<img src="Articles/2025/2_The_Artist_Toolkit/4 Frames as Canvases/Images/1.png" width="281" height="258">
-<p class="MsoNormal">&nbsp;</p>
-<h1>What Is a Frame in Tkinter?</h1>
-<p class="MsoNormal">Imagine a <span class="strongEmphasisChar"><span style="line-height:115%; font-size:14.0pt; ">frame</span></span> as a blank canvas  within your window. It doesn&rsquo;t show off by itself—it waits patiently to hold  your brushstrokes. In Tkinter, a Frame is a widget that helps you organize  other widgets. It&rsquo;s like a painter&rsquo;s panel, ready to hold a cluster of buttons,  labels, or dropdowns in one tidy space.</p>
-<h4>In a python file</h4>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">frame = tk.Frame(root)</p>
-<p class="code">frame.pack(pady=10)</p>
-<p class="code">&nbsp;</p>
-<h1>Why Use Frames?</h1>
-<ul>
-  <li>To group related widgets together (like a  palette of fruit options).</li>
-  <li>To control layout more precisely.</li>
-  <li>To keep your code organized and modular.</li>
-  <li>&nbsp;</li>
-</ul>
-<p class="MsoNormal">Think of each frame as a stitched panel in a quilt—each one  tells part of the story.</p>
-<h1>Creating Your First Frame</h1>
-<p>Let&rsquo;s build a frame to hold our fruit selection widgets. Instead of placing  everything directly on <span class="strongEmphasisChar"><span style="font-size:14.0pt; ">root</span></span>, we&rsquo;ll place them inside a frame.</p>
-<h4>In a python file</h4>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">fruit_frame = tk.Frame(root)</p>
-<p class="code">fruit_frame.pack(pady=10)</p>
-<p class="code">&nbsp;</p>
-<p>Now, place your widgets inside <span class="RecipeeBodyChar"><span style="font-size:14.0pt; ">fruit_frame</span></span>:</p>
-<h4>In a python file</h4>
-<p class="MsoNormal">&nbsp;</p>
-<p class="code">fruit_label = tk.Label(fruit_frame, text=&quot;Select your  favorite fruit:&quot;)</p>
-<p class="code">fruit_label.pack()</p>
-<p class="code">&nbsp;</p>
-<p class="code">fruit_dropdown = ttk.Combobox(fruit_frame,  values=[&quot;Apple&quot;, &quot;Banana&quot;, &quot;Cherry&quot;,  &quot;Date&quot;])</p>
-<p class="code">fruit_dropdown.pack()</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2025/2_The_Artist_Toolkit/4 Frames as Canvases/Images/2.png" width="335" height="304">
-<p class="code">&nbsp;</p>
-<h1>Adding a Button Frame</h1>
-<p class="MsoNormal">Let&rsquo;s create a second frame just for the button. This keeps  your layout clean and lets you style it separately if you wish.</p>
-<p class="code">&nbsp;</p>
-<h4>In a python file</h4>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<p class="code">button_frame = tk.Frame(root)</p>
-<p class="code">button_frame.pack(pady=10)</p>
-<p class="code">&nbsp;</p>
-<p class="code">submit_button = tk.Button(button_frame, text=&quot;Submit&quot;,  command=lambda: on_button_click())</p>
-<p class="code">submit_button.pack()</p>
-<p class="code">&nbsp;</p>
-<p class="code">&nbsp;</p>
-<img src="Articles/2025/2_The_Artist_Toolkit/4 Frames as Canvases/Images/3.png" width="354" height="300">
-<p class="code">&nbsp;</p>
-<h1>The Full Code Example</h1>
-<p class="code">import tkinter as tk</p>
-<p class="code">from tkinter import ttk</p>
-<p class="code">&nbsp;</p>
-<p class="code">root = tk.Tk()</p>
-<p class="code">root.title(&quot;Frames as Canvases&quot;)</p>
-<p class="code">root.geometry(&quot;400x300&quot;)</p>
-<p class="code">&nbsp;</p>
-<p class="code"><span style="color:#538135; "># Fruit selection frame</span></p>
-<p class="code">fruit_frame = tk.Frame(root)</p>
-<p class="code">fruit_frame.pack(pady=10)</p>
-<p class="code">&nbsp;</p>
-<p class="code">fruit_label = tk.Label(fruit_frame, text=&quot;Select your  favorite fruit:&quot;)</p>
-<p class="code">fruit_label.pack()</p>
-<p class="code">&nbsp;</p>
-<p class="code">fruit_dropdown = ttk.Combobox(fruit_frame,  values=[&quot;Apple&quot;, &quot;Banana&quot;, &quot;Cherry&quot;,  &quot;Date&quot;])</p>
-<p class="code">fruit_dropdown.pack()</p>
-<p class="code">&nbsp;</p>
-<p class="code"><span style="color:#538135; "># Label to show selection</span></p>
-<p class="code">submit_label = tk.Label(root, text=&quot;&quot;)</p>
-<p class="code">submit_label.pack(pady=5)</p>
-<p class="code">&nbsp;</p>
-<p class="code">def on_button_click():</p>
-<p class="code">    selected_value =  fruit_dropdown.get()</p>
-<p class="code">     submit_label.config(text=f&quot;You selected: {selected_value}&quot;)</p>
-<p class="code">&nbsp;</p>
-<p class="code"><span style="color:#538135; "># Button frame</span></p>
-<p class="code">button_frame = tk.Frame(root)</p>
-<p class="code">button_frame.pack(pady=10)</p>
-<p class="code">&nbsp;</p>
-<p class="code">submit_button = tk.Button(button_frame, text=&quot;Submit&quot;,  command=lambda: on_button_click())</p>
-<p class="code">submit_button.pack()</p>
-<p class="code">&nbsp;</p>
-<p class="code">root.mainloop()</p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">Just like a painter chooses where to place each stroke, you  now have the power to place your widgets with intention. Frames give your  application structure, rhythm, and clarity. They&rsquo;re not just containers—they&rsquo;re  canvases for your creativity.</p>
-<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2025/2_The_Artist_Toolkit/5_Labels_the_Unsung_heroes_of_UI/Images/1.png" width="285" height="263">
+<h1>What is a Label in the Tk World?</h1>
+<p>The label is like one of the most overlooked things when  creating a form, using TK and Python. If it were not for the label, you wouldn&rsquo;t  understand what to do with any of the other elements on the form. The label  will tell you stuff, like write your name here, or check this box there. Not  only can you use it for guidance, but you can also use it for communication.  You can give a message, show the user what the computer just calculated, and  screen readers rely on the label to give directions for accessibility reasons  too. Yes, the label is certainly a very important part, and you really could  not get by in creating a form without it.</p>
+<h1>How should you go about using a label?</h1>
+<p>First of all, a label needs to be as descriptive as possible,  do not use vague names or terms, or you will just confuse your readers all the  more.</p>
+<h1>How do you create a label on the form?</h1>
+<p>Start off with your basic code.</p>
+<p>#=======Tkinter Library Imports ======= </p>
+<p>import tkinter as tk <br>
+  from tkinter import ttk <br>
+  <br>
+  <br>
+  # Creating the visiable application window <br>
+  root = tk.Tk()</p>
+<p># Optional: Set window properties <br>
+  root.title(&quot;My Tkinter Application&quot;) &nbsp;# Title of the window <br>
+  root.geometry(&quot;400x300&quot;)  &nbsp;# Set the window size (width x height)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p># This will show you the  window <br>
+  root.mainloop()</p>
+<p>&nbsp;</p>
+<p>Next just add a label. With intellisense this is a whole lot  easier than it has been in the past. Basically all you have to do is to type  out something like &lsquo;myLabel&rsquo; and intellisense will take off and write the rest  of the code for you.</p>
+<img src="Articles/2025/2_The_Artist_Toolkit/5_Labels_the_Unsung_heroes_of_UI/Images/2.png" width="326" height="270">
+<p>&nbsp;</p>
+<p>myLabel = tk.Label(root, text=&quot;Hello World!&quot;)<br>
+  myLabel.pack(pady=10) # Add some padding </p>
+<p>&nbsp;</p>
+<h1>Add some styling through config</h1>
+<p><img src="Articles/2025/2_The_Artist_Toolkit/5_Labels_the_Unsung_heroes_of_UI/Images/3.png" width="270" height="227"></p>
+<p>&nbsp;</p>
+<p> Attach your label to the config method, which is a built in  method of TK, use the dot operator to attach it.
+  </p>
+</p>
+<p>myLabel = tk.Label(root, text=&quot;Hello World!&quot;)<br>
+  myLabel.config(font=(&quot;Arial&quot;, 20), fg=&quot;blue&quot;, bg=&quot;lightgray&quot;, border=2, relief=&quot;ridge&quot;, padx=10, pady=10)<br>
+  myLabel.pack(pady=20) # Add some padding</p>
+<p>&nbsp;</p>
+<h1>How to bind the Label to a click event</h1>
+<p>Here we are going to write a very simple function. Look how event is  used as the parameter. So, it knows everything it needs to know to be an event,  just by placing that word in there. You do not need to know how an event works,  all you need to do is snag it, throw it into the little parenthesis in the  function definition, and now it knows how to be an event. </p>
+<img src="Articles/2025/2_The_Artist_Toolkit/5_Labels_the_Unsung_heroes_of_UI/Images/4.png" width="416" height="347">
+<p>&nbsp;</p>
+<p>def on_label_click(event):</p>
+<p>&nbsp;</p>
+<p>In your definition, you want to do sort of what you did  above, using the config method, but this time it is being done inside of a  function so it can be dynamic. All we are doing with the config method is  changing the text on the label. So,, when you click on the label, it will  change what it is saying, to instead say what is passed to it through its  little parenthesis.<br>
+  def on_label_click(event):<br>
+  &nbsp; &nbsp; myLabel.config(text=&quot;You clicked the  label!&quot;)</p>
+<p>&nbsp;</p>
+<p>Now you told it what you wanted it to do in the function,  but it still isn&rsquo;t actually doing anything. That is because we need to bind the  label to the function that we just wrote. If you do not bind it – it will not  work. So, we had better bind it. </p>
+<p>&nbsp;</p>
+<p>def on_label_click(event):<br>
+  &nbsp; &nbsp; myLabel.config(text=&quot;You clicked the  label!&quot;)</p>
+<p>myLabel.bind(&quot;&lt;Button-1&gt;&quot;, on_label_click)</p>
+<p>&nbsp;</p>
+<p>And now when you click on the label, this is what it is  telling you. <br>
+  </p>
+  
+  <p><img src="Articles/2025/2_The_Artist_Toolkit/5_Labels_the_Unsung_heroes_of_UI/Images/5.png" width="322" height="267"></p>
+  <p>&nbsp; </p>
+  <p>Well, that&rsquo;s just about all there is to a label. Its not all  that hard to make these things, but once you start using them (at the very beginning,  I hope), you won&rsquo;t want to ever make a website form, without one.</p>
+<p>&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
 
 
