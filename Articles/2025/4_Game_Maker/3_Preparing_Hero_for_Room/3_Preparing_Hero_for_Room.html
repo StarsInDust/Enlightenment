@@ -57,6 +57,13 @@
 </style>
 
 
+<style type="text/css">
+<!--
+span.BigDarkBoldChar {
+font-weight:bold;
+}
+-->
+</style>
 </head>
 
 
@@ -88,55 +95,67 @@
   
    <p class="articleDate" style="text-align:right" >1/26/2026</p>
    
+  <p><img src="Images/1.jpg" width="292" height="263"> </p>
+  <p>Well, last week, you saw how we can bring our floor in,  first as a sprite, then turn it into tile set. This week we will work on  bringing our hero in. <br>
+    In our first tutorial for this series, we create a sprite,  and yes, we could use that pitiful one for our game, but…<br>
+    <img src="Images/2.jpg" width="81" height="80"> </p>
+  <p>So, instead we will create a new hero that we can bring in.<span class="BigDarkBoldChar"><span style="line-height:115%; font-family:'Calibri',sans-serif; font-size:14.0pt; "> 64px</span></span><span style="line-height:115%; font-family:'Calibri',sans-serif; font-size:11.0pt; "> X </span><span class="BigDarkBoldChar"><span style="font-family:'Calibri',sans-serif; font-size:14.0pt; ">64px</span></span> </p>
+  <p><img src="Images/3.jpg" width="199" height="201"><br>
+ 
+ 
+    Bring your Sprite into your sprite folder, from windows  explorer and outside of your game. Find your folder here. Move your hero  sprites in<br>
+    C:\Users\User-Name\GameMakerProjects<br>
+    
+    <img src="Images/4.jpg" width="603" height="208"> Now you need to bring this sprite into the Game. Because you  have only brought it into the folder. You must bring it into the game using a  Create method, because game maker will create its own folders of stuff that is  needed to be used in the game.<br>
+    Go to the Asset Browser, on the right side of the app. Go  down the list until you find the sprite folder. Right click on the Sprite  folder.<br>
+    Create - Sprite</p>
+  </p>
+  <img src="Images/5.jpg" width="492" height="481">
+<p>
+  
+  You will want to hit the import button here to import the  sprite you added to your folder. After importing, you will see the sprite  listed in this section. Make sure you give your sprite a name. Here we named it  sprite_hero_left<br>
+  We put the red outline around him so that he was more  visible inside of the room with the dark floor.</p>
 <p>&nbsp;</p>
-<img src="Images/1.jpg" width="292" height="263">
-<p class="MsoNormal">Well, last week, you saw how we can bring our floor in,  first we create the sprite, then turn that into the tile set. This week we will prepare the hero to bring him into the room.</p>
-<p class="MsoNormal">In our first tutorial for this series, we create a sprite,  and yes, we could use that pitiful one for our game, but…</p>
+<p>&nbsp;</p>
 
-<p class="MsoNormal"><img src="Images/2.jpg" width="81" height="80"></p>
-<p class="MsoNormal">Yes, this little critter does make a pretty bad hero. Let&rsquo;s  instead bring in this little guy from final fantasy, the red mage. I have a  right and left facing little hero here. At the 32 x 32 size he is little, but  it is a good size for the game.</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Images/3.jpg" width="263" height="247">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Bring your Sprite into your sprite folder, from windows  explorer and outside of your game. Find your folder here. Move your hero  sprites in.w</p>
-<p class="MsoNormal">C:\Users\User-Name\GameMakerProjects</p>
-<img src="Images/4.jpg" width="572" height="191">
-<p class="MsoNormal">Now you need to bring this sprite into the Game. You must  also bring it into the game, because game maker will create its own stuff that  is needed to be used in the game.</p>
-<p class="MsoNormal">Go to the Asset Browser, on the right side of the app. Go  down the list until you find the sprite folder. Right click on the Sprite  folder.</p>
-<p class="MsoNormal">Create – Sprite</p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Images/5.jpg" width="492" height="481">
-<p class="MsoNormal">You will want to hit the import button here to import the  sprite you added to your folder. After importing, you will see the sprite  listed in this section. Make sure you give your sprite a name. Here we named it  spr_hero_left</p>
-<img src="Images/6.jpg" width="591" height="650">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You want to do the exact same thing you did for the left  facing hero, but this time bring in the <strong><span style="font-family:'Calibri',sans-serif; ">Right facing</span></strong> hero.</p>
-<img src="Images/7.jpg" width="213" height="131">
-<p class="MsoNormal">&nbsp;</p>
+<img src="Images/6.jpg" width="575" height="658">
+<p>You want to do the exact same thing you did for the left  facing hero, but this time bring in the <strong>Right facing</strong> hero.<br>
+  
+  </p>
+  
+  <img src="Images/7.jpg" width="253" height="128">
 <h1>To sharpen the image</h1>
-<p class="MsoNormal">At this small size it can be sharpened a bit, unfortunately  like a lot of Game Maker stuff, the steps you have to take to find it is  extensive.</p>
-<p class="MsoNormal">Look on the right side of your app. Where your Asset Browser  is. You will find that 3- line hamburger menu. You want to click that menu.</p>
-<img src="Images/8.jpg" width="391" height="182">
-<p class="MsoNormal">Select <strong><span style="font-family:'Calibri',sans-serif; ">Game Options</span></strong>.</p>
-<img src="Images/9.jpg" width="170" height="156">
-<p class="MsoNormal">To move to the correct panel, you must actually click  directly on the word <strong><span style="font-family:'Calibri',sans-serif; ">Windows</span></strong> here.</p>
-<img src="Images/10.jpg" width="193" height="188">
-<p class="MsoNormal">Click on <strong><span style="font-family:'Calibri',sans-serif; ">Graphic</span></strong> here,  and then uncheck the box that says <strong><span style="font-family:'Calibri',sans-serif; ">Interpolate colors between  pixels</span></strong>. </p>
-<img src="Images/11.jpg" width="478" height="272">
+<p>At this small size it can be sharpened a bit, unfortunately  like a lot of Game Maker stuff, the steps you have to take to find it is  extensive.<br>
+  Look on the right side of your app. Where your Asset Browser  is. You will find that 3- line hamburger menu. You want to click that menu.<br>
+  
+  <img src="Images/8.jpg" width="391" height="182"> <br>
+  Select <strong>Game Options</strong>.<br>
+
+  <img src="Images/9.jpg" width="170" height="156"> To move to the correct panel, you must actually click  directly on the word <strong>Windows</strong> here.<br>
+  
+  <img src="Images/10.jpg" width="193" height="188"></p>
+<p> Click on <strong>Graphic</strong> here,  and then uncheck the box that says <strong>Interpolate colors between  pixels</strong>. <br>
+  
+  </p>
+  
+  <img src="Images/11.jpg" width="478" height="272">
 <h1>Using the sprite to create the Object</h1>
-<p class="MsoNormal">The sprite is only the image that is used. You actually need  to create an object and then use the sprite to give that object a face.</p>
-<p class="MsoNormal">So, in order to get an object, you need to create it. The  process is pretty much the same as creating a sprite. Go to your Asset Browser  on the right-hand side of the app, and right click on the Objects folder.</p>
-<img src="Images/12.jpg" width="196" height="129">
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Create – Object</span></strong></p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
-<img src="Images/13.jpg" width="442" height="200">
-<p class="MsoNormal">Fill in the name and browse to the hero sprite. You need to  make a object for the left and right hero</p>
-<img src="Images/14.jpg" width="314" height="290">
-<p class="MsoNormal">So, now create the right facing hero object. After creating  the other right facing hero object, you will have 2 object in the Asset Browser  for the hero.</p>
-<img src="Images/15.jpg" width="236" height="100">
-<p class="MsoNormal">In our next tutorial, we will be bringing the hero into the  room.</p>
+<p>The sprite is only the image that is used. You actually need  to create an object and then use the sprite to give that object a face.<br>
+  So, in order to get an object, you need to create it. The  process is pretty much the same as creating a sprite. Go to your Asset Browser  on the right-hand side of the app, and right click on the Objects folder.<br>
+  
+  <br>
+  
+  <img src="Images/12.jpg" width="196" height="129"></p>
+<p> <strong>Create – Object</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>
+<img src="Images/13.jpg" width="442" height="200"><br>
+  Fill in the name and browse to the hero sprite. You need to  make a object for the left and right hero<br>
+  <img src="Images/14.jpg" width="279" height="264"> <br>
+  So, now create the right facing hero object. After creating  the other right facing hero object, you will have 2 object in the Asset Browser  for the hero.<br>
+  
+  <img src="Images/15.jpg" width="231" height="141"><br>
+  In our next tutorial, we will be bringing the hero into the  room.</p>
 <p class="MsoNormal">&nbsp;</p>
 
 
