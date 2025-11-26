@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Creating the Main Hero Object</title>
+    
+   
+ <meta name="title" content="Welcome to Enlightenment ">
+
+ <meta name="title" content="6 Creating the Main Hero Object">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="In this tutorial, we are creating a couple more versions of our hero so he can move in 4 different directions "/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="November, 25th, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2025/4_Game_Maker/6_Creating_the_Main_Hero_Object/6_Creating_the_Main_Hero_Object.html">
+
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+p.greenBold {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:10.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:#00B050;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~6 Creating the Main Hero Object~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >2/16/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="290" height="263">
+<h1>Another Angle for the Hero</h1>
+<p class="MsoNormal">Ok, we started out with our right and left facing hero. But  now since we will be going at the hero character a bit differently, we need a  front facing character too. Why? Because, our left and right facing hero will  be brought in using the arrow keys only. And that means when we enter our room,  we do not see the hero at all. So, we need to create a front facing hero. This  will be what will be shown to the player when the hero is at rest, or just  standing inside of a room.</p>
+<img src="Images/2.png" width="147" height="203">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">So, go into Photoshop, and throw this guy into a canvas with  the dimensions of 64 x 64.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/3.png" width="572" height="220">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Drag in and resize your hero</p>
+<img src="Images/4.png" width="89" height="90">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now save him to the sprite folder in side of Game Maker, but  remember until you actually officially bring the sprite in as a sprite, he will  not be recognized in the game. Game Maker does its own thing to your sprite.</p>
+<p class="MsoNormal">C:\Users\Your_User_Name\GameMakerProjects\My First Game</p>
+<p class="MsoNormal">Drag him into your sprite folder in the game folder.</p>
+<img src="Images/5.png" width="479" height="318">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Asset Browser- Sprites -Create-Sprite</p>
+<img src="Images/6.png" width="512" height="351">
+<p class="MsoNormal">Name him and import the sprite</p>
+<img src="Images/7.png" width="285" height="232">
+<p class="MsoNormal">We put a red stroke around him so he can be seen better.</p>
+<img src="Images/8.png" width="630" height="384">
+<h1>Creating the Object</h1>
+<p class="MsoNormal">Ok, this time we will actually be creating an object for  this guy, and we will physically throw this poor fella into the room.</p>
+<p class="MsoNormal">So, create the object for the front facing guy. You know the  drill. Just right click on the Object folder and create the object. Just  remember to give the object the face of our front facing sprite.</p>
+<img src="Images/9.png" width="258" height="247">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Step event inside of the hero</h1>
+<p class="MsoNormal">Here we are starting to code. Make sure you have clicked on  the object_hero, you will be having all of your code for the hero inside of  this guy.</p>
+<p class="MsoNormal">Click on <strong><span style="font-family:'Calibri',sans-serif; ">Add Event</span></strong>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/10.png" width="630" height="710">
+<p class="MsoNormal">Here it will ask you how you want to code. Choose the first  option, <strong><span style="font-family:'Calibri',sans-serif; ">GML Code</span></strong>. Click <strong><span style="font-family:'Calibri',sans-serif; ">OK</span></strong>. </p>
+<img src="Images/11.png" width="462" height="343">
+<p class="greenBold">// Movement input</p>
+<p class="code">var move = keyboard_check(vk_right) - keyboard_check(vk_left);</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// Apply movement</p>
+<p class="code">x += move * 4; // Adjust speed as needed</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// Sprite switching logic</p>
+<p class="code">if (move &gt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_right;</p>
+<p class="code">} else if (move &lt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_left;</p>
+<p class="code">} else {</p>
+<p class="code">    sprite_index =  sprite_hero;</p>
+<p class="code">}</p>
+<h1>The Room</h1>
+<p class="MsoNormal">Now go to the room tab. This will switch you to the room.</p>
+<img src="Images/12.png" width="452" height="85">
+<p class="MsoNormal">Now throw this guy into the room.</p>
+<img src="Images/13.png" width="636" height="386">
+<p class="MsoNormal">You can now hit the left and right arrow keys and the guy  will travel left and right. But when he stops he always faces forward.</p>
+<img src="Images/14.png" width="256" height="197">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Creating the Back Image of the hero</h1>
+<p class="MsoNormal">Before we can have him 4 directional we need to also create  the back of the hero. I just mirrored him in Photoshop, and threw the red sash  around the back of him, and a red painted line for the edges of his head scarf.</p>
+<img src="Images/15.png" width="107" height="142">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">I saved him to my Game Maker sprite folder so that I could  pull him into the game through the sprite folder in the Asset Browser.</p>
+<p class="MsoNormal">C:\Users\Your_User_Name\GameMakerProjects\My First  Game\sprites</p>
+<p class="MsoNormal">Right click on the Sprite folder in the Asset Browser and  pull this back image in.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/16.png" width="635" height="242">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Updated Step Code for the object_hero</h1>
+<p class="MsoNormal">This code will allow for 4 directional movement of our hero.</p>
+<p class="greenBold">// Movement input</p>
+<p class="code">var move_x = keyboard_check(vk_right) - keyboard_check(vk_left);</p>
+<p class="code">var move_y = keyboard_check(vk_down) - keyboard_check(vk_up);</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// Apply movement</p>
+<p class="code">x += move_x * 4;</p>
+<p class="code">y += move_y * 4;</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// Sprite switching logic</p>
+<p class="code">if (move_y &lt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_back;</p>
+<p class="code">} else if (move_x &gt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_right;</p>
+<p class="code">} else if (move_x &lt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_left;</p>
+<p class="code">} else {</p>
+<p class="code">    sprite_index =  sprite_hero;</p>
+<h1>Testing The Arrow Keys</h1>
+<p class="MsoNormal">To test the arrow keys to see if they work. You must first  shut down the game if it is running and restart it again for the code to  register in with the game. Now press all 4 arrow keys to make sure that the  character is switching correctly.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/17.png" width="283" height="294">
+<h1>&nbsp;</h1>
+<p class="MsoNormal">So, now you have your character walking in all four  directions in the room.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
