@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Wall Collision</title>
+  <meta name="title" content="7 Wall Collision">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="In this article, we will be taking a look at preventing the hero object from going through the wall. "/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="November 25, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2025/4_Game_Maker/7_Wall_Collisions/7_Wall_Collisions.html">
+
+
+  
+   
+ <meta name="title" content="Welcome to Enlightenment ">
+
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+p.greenBold {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:10.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:#00B050;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~7 Wall Collision~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >2/23/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="288" height="259">
+<h1>The Controller Object</h1>
+<p class="MsoNormal">In order to have our little character crash into a wall and  actually have that wall push back, or prevent the little guy from going through  it, we are going to have to create this this controller object. The controller  object is a very important element in the game, even though it is more of a  ghost, which means for the most part, it is invisible.</p>
+<h2>Main purposes </h2>
+<img src="Images/2.png" width="643" height="338">
+<p class="MsoNormal">Without a controller the tilemap ID is not stored, and we  need to store it so that our hero can check for collision with the wall, and  other things. When you have a controller, it controls things, and when it says  &ldquo;Thou shall not go through them thar walls&rdquo; well, you are not going to be going  through any walls.</p>
+<h1>Create the Controller</h1>
+<p class="MsoNormal">if you are in the room tab, you want to go back to the  Workspace 1 tab, to find the Asset Browser again.</p>
+<img src="Images/3.png" width="420" height="65">
+<p class="MsoNormal">Now go to <strong><span style="font-family:'Calibri',sans-serif; ">Objects </span></strong>in  the <strong><span style="font-family:'Calibri',sans-serif; ">Asset Browser</span></strong>.</p>
+<img src="Images/4.png" width="184" height="140">
+<p class="MsoNormal">Right click on the object&rsquo;s folder and then go to Create  -Object</p>
+<img src="Images/5.png" width="407" height="332">
+<p class="MsoNormal">You can name it obj_controller, it will be invisible in the  room, so no sprite is needed for it.</p>
+<img src="Images/6.png" width="302" height="250">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Controller Create Event</h1>
+<p class="MsoNormal">Click on the obj_controller in the Asset Browser to come  into its code. Add a Create event, and put this code into the controllers  create event.</p>
+<p class="code">global.tilemap_wall =  layer_tilemap_get_id(&quot;Wall_Tiles&quot;);</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/7.png" width="637" height="213">
+<p class="MsoNormal">&nbsp;</p>
+<h1>The object_hero step event, with collision</h1>
+<p class="MsoNormal">Now double click on the object_hero</p>
+<img src="Images/8.png" width="635" height="293">
+<p class="code">&nbsp;</p>
+<p class="greenBold">// Movement input</p>
+<p class="code">var move_x = keyboard_check(vk_right) - keyboard_check(vk_left);</p>
+<p class="code">var move_y = keyboard_check(vk_down)  - keyboard_check(vk_up);</p>
+<p class="code">&nbsp;</p>
+<p class="code">var spd = 4;</p>
+<p class="code">var dx  = move_x * spd;</p>
+<p class="code">var dy  = move_y * spd;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// First move on X</p>
+<p class="code">if (dx != 0) {</p>
+<p class="code">    var nx_left   = bbox_left   + dx;</p>
+<p class="code">    var nx_right  = bbox_right + dx;</p>
+<p class="code">    var ny_top    = bbox_top;</p>
+<p class="code">    var ny_bottom =  bbox_bottom;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var hit_x =</p>
+<p class="code">         wall_is_solid(nx_left,   ny_top)    ||</p>
+<p class="code">         wall_is_solid(nx_left,  ny_bottom)  ||</p>
+<p class="code">         wall_is_solid(nx_right, ny_top)     ||</p>
+<p class="code">         wall_is_solid(nx_right, ny_bottom);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    if (!hit_x) x += dx;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// Then move on Y</p>
+<p class="code">if (dy != 0) {</p>
+<p class="code">    var ny_top    = bbox_top    + dy;</p>
+<p class="code">    var ny_bottom = bbox_bottom  + dy;</p>
+<p class="code">    var nx_left   = bbox_left;</p>
+<p class="code">    var nx_right  = bbox_right;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var hit_y =</p>
+<p class="code">         wall_is_solid(nx_left,   ny_top)    ||</p>
+<p class="code">         wall_is_solid(nx_right, ny_top)     ||</p>
+<p class="code">         wall_is_solid(nx_left,  ny_bottom)  ||</p>
+<p class="code">         wall_is_solid(nx_right, ny_bottom);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    if (!hit_y) y += dy;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// Sprite switching </p>
+<p class="code">if (move_y &lt; 0)        sprite_index = sprite_hero_back;</p>
+<p class="code">else if (move_x &gt; 0)   sprite_index = sprite_hero_right;</p>
+<p class="code">else if (move_x &lt; 0)   sprite_index = sprite_hero_left;</p>
+<p class="code">else                   sprite_index = sprite_hero;</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// Sprite switching logic</p>
+<p class="code">if (move_y &lt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_back;</p>
+<p class="code">} else if (move_x &gt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_right;</p>
+<p class="code">} else if (move_x &lt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_left;</p>
+<p class="code">} else {</p>
+<p class="code">    sprite_index =  sprite_hero;</p>
+<p class="code">}</p>
+<h1><span style="line-height:115%; font-family:'Courier New'; font-size:10.0pt; color:windowtext; font-weight:normal; ">&nbsp;</span></h1>
+<h1>A script Asset</h1>
+<p class="MsoNormal">Next we are going to create a script asset. It is not a  sprite, nor an object.  It is a script,  and to create a script, we need to right click on this Script folder in the  Asset browser.</p>
+<img src="Images/9.png" width="224" height="193">
+<p class="MsoNormal">Name it: <strong><span style="font-family:'Calibri',sans-serif; ">scr_collision_helpers</span></strong>, </p>
+<img src="Images/10.png" width="222" height="101">
+<p class="MsoNormal">Put this code into the script.</p>
+<p class="code">function wall_is_solid(px, py) {</p>
+<p class="code">    var rx = px -  global.wall_layer_x;</p>
+<p class="code">    var ry = py -  global.wall_layer_y;</p>
+<p class="code">    return  tilemap_get_at_pixel(global.tilemap_wall, rx, ry) != 0;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<h1>Editing the collision Mask</h1>
+<p class="MsoNormal">When I tested to have my hero run up beside the right wall,  I found that he was blocked, as if there was a wall in front of him. I was on  the floor and yet when I hit the up arrow, my hero was blocked. That is because  the collision on the mask of the hero is too far out to the right, and it needs  to be editing. This seemed to only effect the hero when facing backwards.</p>
+<p class="MsoNormal">Inset the Collision Mask</p>
+<p class="MsoNormal">•             Open your  hero sprite in the Sprite Editor.</p>
+<p class="MsoNormal"> •            Go to the Collision Mask tab.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/11.png" width="290" height="302">
+<ul>
+  <li>Go to Manual here</li>
+</ul>
+<img src="Images/12.png" width="636" height="357">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">•             Shrink  the mask by 1–2 pixels on the right side.</p>
+<img src="Images/13.png" width="306" height="307">
+<p class="MsoNormal">•             This  prevents the corner from &ldquo;touching&rdquo; the wall tile when you&rsquo;re flush against it.</p>
+<p class="MsoNormal">This keeps the checks inside the hero&rsquo;s mask, avoiding false  positives at the wall edge</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
