@@ -168,24 +168,65 @@ font-weight:bold;
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
 <h1>Updated Step Code for the object_hero</h1>
-<p class="MsoNormal">This code will allow for 4 directional movement of our hero.</p>
+
+<p class="MsoNormal">This code will allow for 4 directional movement of our hero.  It will also allow the hero to glide along the walls, without getting stuck,  which can be a problem in Game Makers mazes.</p>
 <p class="greenBold">// Movement input</p>
 <p class="code">var move_x = keyboard_check(vk_right) - keyboard_check(vk_left);</p>
-<p class="code">var move_y = keyboard_check(vk_down) - keyboard_check(vk_up);</p>
+<p class="code">var move_y = keyboard_check(vk_down)  - keyboard_check(vk_up);</p>
 <p class="code">&nbsp;</p>
-<p class="greenBold">// Apply movement</p>
-<p class="code">x += move_x * 4;</p>
-<p class="code">y += move_y * 4;</p>
+<p class="code">var spd = 4;</p>
+<p class="code">var dx  = move_x * spd;</p>
+<p class="code">var dy  = move_y * spd;</p>
 <p class="code">&nbsp;</p>
-<p class="greenBold">// Sprite switching logic</p>
-<p class="code">if (move_y &lt; 0) {</p>
-<p class="code">    sprite_index =  sprite_hero_back;</p>
-<p class="code">} else if (move_x &gt; 0) {</p>
-<p class="code">    sprite_index =  sprite_hero_right;</p>
-<p class="code">} else if (move_x &lt; 0) {</p>
-<p class="code">    sprite_index =  sprite_hero_left;</p>
-<p class="code">} else {</p>
-<p class="code">    sprite_index =  sprite_hero;</p>
+<p class="greenBold">// --- Attempt full diagonal move first ---</p>
+<p class="code">if (dx != 0 || dy != 0) {</p>
+<p class="code">    var nx_left   = bbox_left   + dx;</p>
+<p class="code">    var nx_right  = bbox_right + dx;</p>
+<p class="code">    var ny_top    = bbox_top    + dy;</p>
+<p class="code">    var ny_bottom =  bbox_bottom+ dy;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var hit_diag =</p>
+<p class="code">         wall_is_solid(nx_left,   ny_top)    ||</p>
+<p class="code">         wall_is_solid(nx_right, ny_top)     ||</p>
+<p class="code">         wall_is_solid(nx_left,  ny_bottom)  ||</p>
+<p class="code">         wall_is_solid(nx_right, ny_bottom);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    if (!hit_diag) {</p>
+<p class="greenBold">        // Move freely  if no diagonal collision</p>
+<p class="code">        x += dx;</p>
+<p class="code">        y += dy;</p>
+<p class="code">    } else {</p>
+<p class="greenBold">        // --- If  diagonal blocked, try X only ---</p>
+<p class="code">        var hit_x =</p>
+<p class="code">             wall_is_solid(bbox_left+dx, bbox_top)     ||</p>
+<p class="code">             wall_is_solid(bbox_right+dx, bbox_top)    ||</p>
+<p class="code">             wall_is_solid(bbox_left+dx, bbox_bottom) ||</p>
+<p class="code">             wall_is_solid(bbox_right+dx, bbox_bottom);</p>
+<p class="code">&nbsp;</p>
+<p class="code">        if (!hit_x) {</p>
+<p class="code">            x += dx;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">        // --- Then  try Y only ---</p>
+<p class="code">        var hit_y =</p>
+<p class="code">             wall_is_solid(bbox_left, bbox_top+dy)     ||</p>
+<p class="code">             wall_is_solid(bbox_right, bbox_top+dy)    ||</p>
+<p class="code">             wall_is_solid(bbox_left, bbox_bottom+dy) ||</p>
+<p class="code">             wall_is_solid(bbox_right, bbox_bottom+dy);</p>
+<p class="code">&nbsp;</p>
+<p class="code">        if (!hit_y) {</p>
+<p class="code">            y += dy;</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// --- Sprite switching ---</p>
+<p class="code">if (move_y &lt; 0)        sprite_index = sprite_hero_back;</p>
+<p class="code">else if (move_x &gt; 0)   sprite_index = sprite_hero_right;</p>
+<p class="code">else if (move_x &lt; 0)   sprite_index = sprite_hero_left;</p>
+<p class="code">else                   sprite_index = sprite_hero;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
 <h1>Testing The Arrow Keys</h1>
 <p class="MsoNormal">To test the arrow keys to see if they work. You must first  shut down the game if it is running and restart it again for the code to  register in with the game. Now press all 4 arrow keys to make sure that the  character is switching correctly.</p>
 <p class="MsoNormal">&nbsp;</p>
