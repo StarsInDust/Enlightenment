@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 Exiting the Room</title>
+    
+   
+
+ 
+ 
+<meta name="title" content="9 Exiting the Room ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="In this tutorial, we will be learning how we can get the hero to exit the room. "/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content=" November 29, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2025/4_Game_Maker/9_Exiting_the_Room/9_Exiting_the_Room.html ">
+
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.boldBlueChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+p.greenBold {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:10.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:#00B050;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~9 Exiting the Room~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >3/9/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="314" height="288">
+<p class="MsoNormal">Now we have our maze and the doorways, next we need to be  able to allow the hero to actually exit the maze and the room.</p>
+<h1>Creating a New Tile Map</h1>
+<p class="MsoNormal">We need to create another room to this maze for the hero to  escape to. I want to make a few changes to this maze. Actually, I will be  creating a new tile map. Our hero is 64 px, size. Mainly because it looks  better at this size. My wall pieces are 32px, and they actually look better at  this size. But I want this new room to have a grid that is 64px so it interacts  better with the hero.</p>
+<p class="MsoNormal">Go to Photoshop</p>
+<img src="Images/2.png" width="82" height="88">
+<p class="MsoNormal">Create your canvas size to be <strong><span style="font-family:'Calibri',sans-serif; ">1024 x 1024</span></strong>. Remember that we  created the tile map for the 32px sprites, at the size of 512 x 512. We got  this figure, by taking the size of the sprite 32px, and multiplying it by 16.  Now since we are working with the tile set with sprites that are sized at 64 x  64, we want to multiply 64 x 16, and this will give us our size of 1024.</p>
+<img src="Images/3.png" width="308" height="149">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Set the grid line to be created 64px increments, on the  canvas.</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Edit-Preferences-Guide, Grid,  Slices…</span></strong> Set this to be <strong><span style="font-family:'Calibri',sans-serif; ">64px</span></strong>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/4.png" width="646" height="312">
+<p class="MsoNormal">View-Show-Grid</p>
+<img src="Images/5.png" width="332" height="389">
+<p class="MsoNormal">This is an image of the 4 floor sprites</p>
+<img src="Images/6.png" width="238" height="247">
+<p class="MsoNormal">You want to separate these different floor tiles, and put  them in the photoshop canvas.</p>
+<img src="Images/7.png" width="427" height="428">
+<p class="MsoNormal">Turn this first into a sprite. Right click on the sprite  file, and create a sprite for this new 64px tile set.</p>
+<img src="Images/8.png" width="626" height="336">
+<h1>Create your tile set</h1>
+<p class="MsoNormal">Create your tile set. Right click on the tile Sets folder  and create the tile set.</p>
+<img src="Images/9.png" width="233" height="125">
+<p class="MsoNormal">Notice that my tile set came in with multiply images for my  4 tiles of the walls. </p>
+<img src="Images/10.png" width="451" height="239">
+<p class="MsoNormal">Looking in the left panel, for this tile set, I notice that  Game Maker mis interpreted the size of my tiles. I had tiles that were sized at  64 px, and yet for this tile set, Game Maker is saying that my tiles are 16px X  16px. So, I need to change this.</p>
+<img src="Images/11.png" width="629" height="397">
+<p class="MsoNormal">And now our floor tiles look how they are supposed to look.</p>
+<img src="Images/12.png" width="595" height="326">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Create your door image</h1>
+<img src="Images/13.png" width="220" height="206">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">64 X 64</p>
+<img src="Images/14.png" width="313" height="155">
+<p class="MsoNormal">Now save it to the sprite folder</p>
+<img src="Images/15.png" width="380" height="179">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Door Sprite</h1>
+<p class="MsoNormal">Now you need to create the door sprite.</p>
+<p class="MsoNormal">Right click on the sprite folder to create the sprite. And  give it the image of the door.</p>
+<img src="Images/16.png" width="623" height="303">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Create the Door Object</h1>
+<p class="MsoNormal">Now that the door sprite is created, create the door object.</p>
+<img src="Images/17.png" width="280" height="272">
+<h1>Create a New Room</h1>
+<p class="MsoNormal">Right click on the room folder, and create another room.</p>
+<img src="Images/18.png" width="257" height="134">
+<p class="MsoNormal">Make sure that your dimensions are set to 1344 X 768, or  things will be off. You can of course make a new size for the room, but it  needs to fit our grid size of 64 X 64, so for now it might just be easier to  keep the room at 1344 X 768.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Changing the Grid spacing </h1>
+<p class="MsoNormal">Click the down arrow next to the grid icon to get to options  for the room grid. Then just change the dimensions for this room to be 64 X 64  for the grid settings.</p>
+<img src="Images/19.png" width="638" height="262">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Create the Floor_Tile Layer</h1>
+<p class="MsoNormal">You will find that since you are on a new floor, you will  need to recreate, your Layers inside of the room</p>
+<img src="Images/20.png" width="311" height="211">
+<p class="MsoNormal">Now create a new tile layer for the floor.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/21.png" width="534" height="487">
+<p class="MsoNormal"><span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">Note,</span></span> Don&rsquo;t worry about the grid size changing back to 32, this will change back as  soon as you select your tile set which is set to 64px. We select the tile set  next.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">On the right-hand side of the app, change to <strong><span style="font-family:'Calibri',sans-serif; ">Room Editor</span></strong> tab.</p>
+<img src="Images/22.png" width="327" height="144">
+<p class="MsoNormal">Now select your tileset</p>
+
+<p class="MsoNormal">Pull in your floor</p>
+<img src="Images/24.png" width="629" height="334">
+<h1>Add a Wall tile layer. </h1>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/25.png" width="561" height="276">
+<p class="MsoNormal">Now place the wall around the edges. The wall object will be  your first tile map at 32 px, so choose that one. </p>
+<img src="Images/26.png" width="551" height="424">
+<h1>Collision Event with Door.</h1>
+<p class="MsoNormal">Place the door object on the same layer as the hero. It is  an instance, and any number of instances can share this same instance layer. </p>
+<img src="Images/27.png" width="631" height="266">
+<p class="MsoNormal">&nbsp;</p>
+<h1>The Door Collision code.</h1>
+<img src="Images/28.png" width="514" height="272">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now in order to go from room 1, to room 2, we need a  collision event with the hero object.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span style="line-height:115%; font-family:'Courier New'; font-size:10.0pt; ">if (place_meeting(x, y,  Object_Door)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     room_goto(room_floor_two);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<h1>The Full Code for the Hero Object</h1>
+<p class="MsoNormal">In the code, you want to place it in the hero, step event  right before the Sprite switching code.</p>
+<p class="greenBold">// Movement input</p>
+<p class="code">var move_x = keyboard_check(vk_right) - keyboard_check(vk_left);</p>
+<p class="code">var move_y = keyboard_check(vk_down)  - keyboard_check(vk_up);</p>
+<p class="code">&nbsp;</p>
+<p class="code">var spd = 4;</p>
+<p class="code">var dx  = move_x * spd;</p>
+<p class="code">var dy  = move_y * spd;</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// --- Attempt full diagonal move first ---</p>
+<p class="code">if (dx != 0 || dy != 0) {</p>
+<p class="code">    var nx_left   = bbox_left   + dx;</p>
+<p class="code">    var nx_right  = bbox_right + dx;</p>
+<p class="code">    var ny_top    = bbox_top    + dy;</p>
+<p class="code">    var ny_bottom =  bbox_bottom+ dy;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var hit_diag =</p>
+<p class="code">         wall_is_solid(nx_left,   ny_top)    ||</p>
+<p class="code">         wall_is_solid(nx_right, ny_top)     ||</p>
+<p class="code">         wall_is_solid(nx_left,  ny_bottom)  ||</p>
+<p class="code">         wall_is_solid(nx_right, ny_bottom);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    if (!hit_diag) {</p>
+<p class="code">        // Move freely if  no diagonal collision</p>
+<p class="code">        x += dx;</p>
+<p class="code">        y += dy;</p>
+<p class="code">    } else {</p>
+<p class="code">        // --- If diagonal  blocked, try X only ---</p>
+<p class="code">        var hit_x =</p>
+<p class="code">             wall_is_solid(bbox_left+dx, bbox_top)     ||</p>
+<p class="code">             wall_is_solid(bbox_right+dx, bbox_top)    ||</p>
+<p class="code">             wall_is_solid(bbox_left+dx, bbox_bottom) ||</p>
+<p class="code">             wall_is_solid(bbox_right+dx, bbox_bottom);</p>
+<p class="code">&nbsp;</p>
+<p class="code">        if (!hit_x) {</p>
+<p class="code">            x += dx;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">        // --- Then  try Y only ---</p>
+<p class="code">        var hit_y =</p>
+<p class="code">             wall_is_solid(bbox_left, bbox_top+dy)     ||</p>
+<p class="code">             wall_is_solid(bbox_right, bbox_top+dy)    ||</p>
+<p class="code">             wall_is_solid(bbox_left, bbox_bottom+dy) ||</p>
+<p class="code">             wall_is_solid(bbox_right, bbox_bottom+dy);</p>
+<p class="code">&nbsp;</p>
+<p class="code">        if (!hit_y) {</p>
+<p class="code">            y += dy;</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><span style="background:yellow; ">if  (place_meeting(x, y, Object_Door)) {</span></p>
+<p class="code"><span style="background:yellow; ">    room_goto(room_floor_two);</span></p>
+<p class="code"><span style="background:yellow; ">}</span></p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// --- Sprite switching ---</p>
+<p class="code">if (move_y &lt; 0)        sprite_index = sprite_hero_back;</p>
+<p class="code">else if (move_x &gt; 0)   sprite_index = sprite_hero_right;</p>
+<p class="code">else if (move_x &lt; 0)   sprite_index = sprite_hero_left;</p>
+<p class="code">else                   sprite_index = sprite_hero;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1>Test the Game</h1>
+<p class="MsoNormal">You will want to test the game now, and move the hero toward  the door, when he hits the door it should switch you to the next room. You will  get to the next room but you will find that the hero is not there yet.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p><img src="Images/29.png" width="476" height="554"></p>
+<p>&nbsp;</p>
+<p> <span style="line-height:115%; font-family:'Calibri',sans-serif; font-size:11.0pt; ">In our next tutorial, we will be making some  changes to the code, that will allow our hero to show up. But for now, I just show  you how the collision with the door worked to create the next room</span>
+</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
