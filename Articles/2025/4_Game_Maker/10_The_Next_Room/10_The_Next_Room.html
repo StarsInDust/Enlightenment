@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn how to begin moving the hero toward the next room">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 The Next Room</title>
+    
+  <meta name="title" content="10 The Next Room ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="In this article we will be learning how to move the hero to the next room. "/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Sunday, November 30, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/4_Game_Maker/10_The_Next_Room/10_The_Next_Room.html">
+ 
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+p.greenBold {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:10.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:#00B050;
+font-weight:bold;
+}
+span.greenBoldChar {
+color:#00B050;
+font-weight:bold;
+}
+span.boldBlueChar {
+font-family:"Times New Roman",serif;
+color:blue;
+font-weight:bold;
+}
+p.strongEmphasis {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:10.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:14.0pt;
+font-family:"Calibri",sans-serif;
+color:#002060;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~10 The Next Room~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >3/16/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="289" height="260">
+<p class="MsoNormal">If you have been following along from our last lesson, you  will have noticed, that we have indeed gotten to the next room, but this room  had no hero. We could have dragged the hero out of the Asset browser and placed  him into this room prior to running it, but that is not exactly the best way to  handle this, and our hero will be tied to some behavior, that we may not want  for every room. So, instead of that we will be updating the code in the hero.  First thing that we want to do is to make him persistent. Persistent means that  he will stay there even though we are changing from room to do, which is  exactly what we want him to do. </p>
+<img src="Images/2.png" width="163" height="240">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">To make him persistent write this code into the hero object.  We will be placing this code in the Create event, since as soon as this guy  shows up anywhere, or is created, we want him to persist to also be in the next  place we want to go.</p>
+<p class="code">persistent = true;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/3.png" width="619" height="183">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Spawning the Hero</h1>
+<p class="MsoNormal">Now we also want to spawn (*create) this new hero into the  room. The only thing we are doing now when the hero is crashing into the room,  is creating the room. So, we need to change our hero&rsquo;s step code a bit. We not  only want to create the room, but we also need to have our hero in it. So,  change out the hero_object step event to be this new code, with some hero  spawning code added to it.</p>
+<p class="code"> </p>
+<p class="greenBold">// Movement input</p>
+<p class="code">var move_x = keyboard_check(vk_right) - keyboard_check(vk_left);</p>
+<p class="code">var move_y = keyboard_check(vk_down)  - keyboard_check(vk_up);</p>
+<p class="code">&nbsp;</p>
+<p class="code">var spd = 4;</p>
+<p class="code">var dx  = move_x * spd;</p>
+<p class="code">var dy  = move_y * spd;</p>
+<p class="greenBold">&nbsp;</p>
+<p class="greenBold">// --- Attempt full diagonal move first ---</p>
+<p class="code">if (dx != 0 || dy != 0) {</p>
+<p class="code">    var nx_left   = bbox_left   + dx;</p>
+<p class="code">    var nx_right  = bbox_right + dx;</p>
+<p class="code">    var ny_top    = bbox_top    + dy;</p>
+<p class="code">    var ny_bottom =  bbox_bottom+ dy;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var hit_diag =</p>
+<p class="code">        wall_is_solid(nx_left,  ny_top)     ||</p>
+<p class="code">         wall_is_solid(nx_right, ny_top)     ||</p>
+<p class="code">         wall_is_solid(nx_left,  ny_bottom)  ||</p>
+<p class="code">         wall_is_solid(nx_right, ny_bottom);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    if (!hit_diag) {</p>
+<p class="code">        x += dx;</p>
+<p class="code">        y += dy;</p>
+<p class="code">    } else {</p>
+<p class="code">        var hit_x =</p>
+<p class="code">             wall_is_solid(bbox_left+dx, bbox_top)     ||</p>
+<p class="code">             wall_is_solid(bbox_right+dx, bbox_top)    ||</p>
+<p class="code">             wall_is_solid(bbox_left+dx, bbox_bottom) ||</p>
+<p class="code">             wall_is_solid(bbox_right+dx, bbox_bottom);</p>
+<p class="code">&nbsp;</p>
+<p class="code">        if (!hit_x) {</p>
+<p class="code">            x += dx;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code">        var hit_y =</p>
+<p class="code">             wall_is_solid(bbox_left, bbox_top+dy)     ||</p>
+<p class="code">             wall_is_solid(bbox_right, bbox_top+dy)    ||</p>
+<p class="code">             wall_is_solid(bbox_left, bbox_bottom+dy) ||</p>
+<p class="code">             wall_is_solid(bbox_right, bbox_bottom+dy);</p>
+<p class="code">&nbsp;</p>
+<p class="code">        if (!hit_y) {</p>
+<p class="code">            y += dy;</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// --- Door collision ---</p>
+<p class="code">if (place_meeting(x, y, Object_Door)) {<span style="background:yellow; "> </span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="greenBold">    // Store spawn  position for next room</p>
+<p class="code"><span style="background:yellow; ">    global.hero_spawn_x = 64;   // adjust as needed</span></p>
+<p class="code"><span style="background:yellow; ">    global.hero_spawn_y = 128;  // adjust as needed</span></p>
+<p class="code"><span style="background:yellow; ">    </span></p>
+<p class="code">     room_goto(room_floor_two);</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// --- Sprite switching ---</p>
+<p class="code">if (move_y &lt; 0)        sprite_index = sprite_hero_back;</p>
+<p class="code">else if (move_x &gt; 0)   sprite_index = sprite_hero_right;</p>
+<p class="code">else if (move_x &lt; 0)   sprite_index = sprite_hero_left;</p>
+<p class="code">else                   sprite_index = sprite_hero;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1>Adding a room Start Event</h1>
+<p class="MsoNormal">This is in the hero object, but you need to drill down to  find it, it will be located under the Other option in the menu.</p>
+<img src="Images/4.png" width="618" height="645">
+<p class="MsoNormal">In the window that appears, we want to paste this code.</p>
+<p class="greenBold">// Place hero at stored spawn point</p>
+<p class="code">// Place hero at stored spawn point</p>
+<p class="code">if (variable_global_exists(&quot;hero_spawn_x&quot;)) {</p>
+<p class="code">    x =  global.hero_spawn_x;</p>
+<p class="code">    y =  global.hero_spawn_y;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<img src="Images/5.png" width="621" height="153">
+<p class="code">&nbsp;</p>
+<h1>Door Linked Spawned System. </h1>
+<p class="MsoNormal">We are going to make the door smart. In this version of the  code, we take the collision code away from the hero object, and instead place  it into the the code for the door. In this lesson, we will teach the door where  to send the hero into the next room.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Remove this section from the Hero Code.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">if (place_meeting(x, y, Object_Door)) {</p>
+<p class="code">    global.hero_spawn_x =  64;</p>
+<p class="code">    global.hero_spawn_y =  128;</p>
+<p class="code">     room_goto(room_floor_two);</p>
+<p class="code">}</p>
+<h1>Add a Collision Event to the Door</h1>
+<img src="Images/6.png" width="287" height="239">
+<p class="MsoNormal">You want the collision to be with the object_hero</p>
+<img src="Images/7.png" width="441" height="404">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="greenBold">// Set spawn coordinates for hero in next room</p>
+<p class="code">global.hero_spawn_x = 64;   <span class="greenBoldChar">// adjust as needed</span></p>
+<p class="code">global.hero_spawn_y = 128;  <span class="greenBoldChar">// adjust as needed</span></p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// Go to the next room</p>
+<p class="code">room_goto(room_floor_two);</p>
+<p class="code">&nbsp;</p>
+<img src="Images/8.png" width="630" height="168">
+<h1>Update the Code to the Script</h1>
+<p class="MsoNormal">Remember that script code that we created in the Script  folder? Well we will be updating that here in order for it to work with the  next room.</p>
+<img src="Images/9.png" width="263" height="112">
+<p class="code">function wall_is_solid(x, y) {</p>
+<p class="code">    var layer_name =  &quot;Wall_Tiles&quot;; // update to match your wall layer name</p>
+<p class="code">    var layer_id =  layer_get_id(layer_name);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    if (layer_id != noone)  {</p>
+<p class="code">        var tilemap_id =  layer_tilemap_get_id(layer_id);</p>
+<p class="code">        if (tilemap_id !=  noone) {</p>
+<p class="code">            var tile =  tilemap_get_at_pixel(tilemap_id, x, y);</p>
+<p class="code">            return tile !=  0;</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">    // If no tilemap  found, assume no collision</p>
+<p class="code">     show_debug_message(&quot;<span style="font-family:'Segoe UI Emoji',sans-serif; ">⚠️</span> No wall tilemap found on  layer: &quot; + layer_name);</p>
+<p class="code">    return false;</p>
+<p class="code">}</p>
+<p class="BlueBolden">&nbsp;</p>
+<p class="BlueBolden">&nbsp;</p>
+<img src="Images/10.png" width="615" height="266">
+<p class="code">&nbsp;</p>
+<h1>Test Code</h1>
+<p class="MsoNormal">Test your Game and Make sure the hero is in the next level  and able to move.</p>
+<img src="Images/11.png" width="628" height="381">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Room Initializer With a Door Generator</h1>
+<p class="MsoNormal">There are certain things that we want when a room generates.  One of them is to have a door, and some other things, would be to make sure  that things arrive in an order that is least likely to throw an error. In other  things. certain things need to be in the room first for other things to work.</p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-size:14.0pt; color:#2E6682; ">New Script </span></strong></p>
+<p class="MsoNormal">So, for this we are going to create another script.</p>
+<img src="Images/12.png" width="242" height="91">
+<p class="MsoNormal">&nbsp;</p>
+<h1>The Code for the room_initialize script</h1>
+<p class="code">function room_initialize() {</p>
+<p class="greenBold">    // --- Reset ready  flag ---</p>
+<p class="code">    global.room_ready =  false;</p>
+<p class="greenBold">    // --- Wall  tilemap setup ---</p>
+<p class="code">    var layer_name =  &quot;Wall_Tiles&quot;; // update if needed</p>
+<p class="code">    var layer_id =  layer_get_id(layer_name);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    if (layer_id != noone)  {</p>
+<p class="code">        var tilemap_id =  layer_tilemap_get_id(layer_id);</p>
+<p class="code">        if (tilemap_id !=  noone) {</p>
+<p class="code">             global.wall_layer_id  = layer_id;</p>
+<p class="code">             global.tilemap_wall   =  tilemap_id;</p>
+<p class="code">             global.wall_layer_x   =  layer_get_x(layer_id);</p>
+<p class="code">             global.wall_layer_y   =  layer_get_y(layer_id);</p>
+<p class="code">             global.wall_tile_w    =  tilemap_get_tile_width(tilemap_id);</p>
+<p class="code">             global.wall_tile_h    =  tilemap_get_tile_height(tilemap_id);</p>
+<p class="code">&nbsp;</p>
+<p class="code">             global.room_ready = true;</p>
+<p class="code">        } else {</p>
+<p class="code">             show_debug_message(&quot;<span style="font-family:'Segoe UI Emoji',sans-serif; ">⚠️</span> No tilemap found on layer:  &quot; + layer_name);</p>
+<p class="code">        }</p>
+<p class="code">    } else {</p>
+<p class="code">         show_debug_message(&quot;<span style="font-family:'Segoe UI Emoji',sans-serif; ">⚠️</span> No layer found named: &quot; +  layer_name);</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">    // --- Door  generator ---</p>
+<p class="greenBold">    // Example: place  a door at bottom-right corner of the room</p>
+<p class="code">    var door_x = room_width  - 64; // adjust offset to align with tiles</p>
+<p class="code">    var door_y =  room_height - 64;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var door =  instance_create_layer(door_x, door_y, &quot;Instances&quot;, Object_Door);</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">    // Assign  destination info (customize per room)</p>
+<p class="code">    door.room_target =  room_floor_two; // target room</p>
+<p class="code">    door.spawn_x = 64;                 // hero spawn X in target room</p>
+<p class="code">    door.spawn_y =  128;                // hero spawn Y in  target room</p>
+<p class="code">}</p>
+<h1>Using this initialize Code in other objects</h1>
+<p class="MsoNormal">You might think that that is all we need to do to get things  to work, but not quite. That is just the code that other elements in the game  can use to get things working for them. So, this is sort of a 2, 3, 4, or how  many other things that you need to use this code to start things up.  </p>
+<p class="MsoNormal"><span class="boldBlueChar"><span style="line-height:115%; font-size:12.0pt; ">Note,</span></span> Now remember you added the room start event to the hero already, but this time  we need a room start even added to the controller object.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="strongEmphasis">In the controller object</p>
+<p class="MsoNormal">In your controller object&rsquo;s Room Start <strong><span style="font-family:'Calibri',sans-serif; ">Event</span></strong>, call:</p>
+<img src="Images/13.png" width="254" height="107">
+<p class="MsoNormal">Remember when you add the Event, the room <strong><span style="font-family:'Calibri',sans-serif; ">start event</span></strong> is found under <strong><span style="font-family:'Calibri',sans-serif; ">Other</span></strong> in the list of Events.</p>
+<p class="code">room_initialize();</p>
+<p class="code">&nbsp;</p>
+<img src="Images/14.png" width="621" height="146">
+<p class="code">&nbsp;</p>
+<p class="strongEmphasis">In the hero&rsquo;s step event</p>
+<p class="MsoNormal">You want to wrap the movement code for the hero with this  code.</p>
+<p class="code">if (global.room_ready) {</p>
+<p class="code">    // movement code</p>
+<p class="code">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Here is the Full hero code,  with the wrap included</span></strong></p>
+<p class="greenBold">// Movement input</p>
+<p class="code">var move_x = keyboard_check(vk_right) - keyboard_check(vk_left);</p>
+<p class="code">var move_y = keyboard_check(vk_down)  - keyboard_check(vk_up);</p>
+<p class="code">&nbsp;</p>
+<p class="code">var spd = 4;</p>
+<p class="code">var dx  = move_x * spd;</p>
+<p class="code">var dy  = move_y * spd;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// --- Attempt full diagonal move first ---</p>
+<p class="code"><span style="background:yellow; ">if  (global.room_ready) {</span></p>
+<p class="code">if (dx != 0 || dy != 0) {</p>
+<p class="code">    var nx_left   = bbox_left   + dx;</p>
+<p class="code">    var nx_right  = bbox_right + dx;</p>
+<p class="code">    var ny_top    = bbox_top    + dy;</p>
+<p class="code">    var ny_bottom =  bbox_bottom+ dy;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var hit_diag =</p>
+<p class="code">         wall_is_solid(nx_left,   ny_top)    ||</p>
+<p class="code">         wall_is_solid(nx_right, ny_top)     ||</p>
+<p class="code">         wall_is_solid(nx_left,  ny_bottom)  ||</p>
+<p class="code">         wall_is_solid(nx_right, ny_bottom);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    if (!hit_diag) {</p>
+<p class="code">        x += dx;</p>
+<p class="code">        y += dy;</p>
+<p class="code">    } else {</p>
+<p class="code">        var hit_x =</p>
+<p class="code">             wall_is_solid(bbox_left+dx, bbox_top)     ||</p>
+<p class="code">             wall_is_solid(bbox_right+dx, bbox_top)    ||</p>
+<p class="code">             wall_is_solid(bbox_left+dx, bbox_bottom) ||</p>
+<p class="code">             wall_is_solid(bbox_right+dx, bbox_bottom);</p>
+<p class="code">&nbsp;</p>
+<p class="code">        if (!hit_x) {</p>
+<p class="code">            x += dx;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code">        var hit_y =</p>
+<p class="code">             wall_is_solid(bbox_left, bbox_top+dy)     ||</p>
+<p class="code">             wall_is_solid(bbox_right, bbox_top+dy)    ||</p>
+<p class="code">             wall_is_solid(bbox_left, bbox_bottom+dy) ||</p>
+<p class="code">             wall_is_solid(bbox_right, bbox_bottom+dy);</p>
+<p class="code">&nbsp;</p>
+<p class="code">        if (!hit_y) {</p>
+<p class="code">            y += dy;</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><span style="background:yellow; ">}</span></p>
+<p class="code">&nbsp;</p>
+<p class="greenBold">// --- Sprite switching ---</p>
+<p class="code">if (move_y &lt; 0)        sprite_index = sprite_hero_back;</p>
+<p class="code">else if (move_x &gt; 0)   sprite_index = sprite_hero_right;</p>
+<p class="code">else if (move_x &lt; 0)   sprite_index = sprite_hero_left;</p>
+<p class="code">else                   sprite_index = sprite_hero;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="strongEmphasis">In your door object&rsquo;s Collision Event with hero:</p>
+<p class="code">global.hero_spawn_x = spawn_x;</p>
+<p class="code">global.hero_spawn_y = spawn_y;</p>
+<p class="code">room_goto(room_target);</p>
+<h1>Remove the Door inside the Room</h1>
+<p class="MsoNormal">Oh, and since your room is now spawning its own doors, you  will want to remove the one we placed into it manually.</p>
+<img src="Images/15.png" width="446" height="273">
+<p class="MsoNormal">Now go to Room 2, after taking the door out of the first  floor.</p>
+<img src="Images/16.png" width="625" height="439">
+<p class="MsoNormal">Now go to the Asset tab in the Asset Browser and pull the  controller into the second floor. This controller must be added to every floor  to work.</p>
+<img src="Images/17.png" width="272" height="139">
+<p class="MsoNormal">Now drag the controller object in.</p>
+<img src="Images/18.png" width="616" height="264">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Test the Game</h1>
+<p class="MsoNormal">With the controller on both floors, when you run the game,  you should be able to see the door automatically generate from the code, on  each of the floors. It will be created in the lower right-hand corner of the game. </p>
+<img src="Images/19.png" width="622" height="385">
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
