@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Bringing in Your Object Hero</title>
+    
+  <meta name="title" content="1 Introduction to Game Maker ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="In this article, we will be looking at bringing our hero onto the game board, with some code attached to him that will allow him to both move and switch the face of his sprite based on his direction. "/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="December 12, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2025/4_Game_Maker_2/5_Bringing_In_Your_Hero_Object/5_Bringing_In_Your_Hero_Object.html ">
+
+ 
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~5 Bringing in Your Object Hero~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >2/9/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="292" height="260">
+<h1>Where We Are Now</h1>
+<p class="MsoNormal">If you have been following along in this tutorial series,  you would have noticed that we already have an object for the hero. In fact, we  have 4 of them. The Hero, which is the front view, a right and left side view,  and a back view of him. In this way as the hero makes his way around the room  the face of the hero will be changing direction based on your view of him.</p>
+<img src="Images/2.png" width="249" height="246">
+<h1>Getting the Hero to Move</h1>
+<p class="MsoNormal">If we were to place our hero into the room right now, he  would just stand there and do nothing. That is because he does not have the  code to do anything. Without writing some code for this hero guy, he is not  going to go anywhere. </p>
+<h1>How to Write the Code</h1>
+<p class="MsoNormal">Double- click on the object_hero inside of the Asset  Browser. </p>
+<img src="Images/3.png" width="253" height="136">
+<p class="MsoNormal">This will bring up the stuff that we need to work with him,  in the center of the app. We want to click on <strong><span style="font-family:'Calibri',sans-serif; ">Add  Event</span></strong>. This will allow us to talk to Game Maker and tell it how  we want this hero guy to behave when we do certain things.</p>
+<img src="Images/4.png" width="462" height="405">
+<p class="MsoNormal">We want to add a Step Event. Actually this is a <strong><span style="font-family:'Calibri',sans-serif; ">Step-Step</span></strong> event because you  will be choosing Step twice in the menu, as you can see from the image below.</p>
+<img src="Images/5.png" width="457" height="254">
+<p class="MsoNormal">Next, you will get this dialog box. Choose <strong><span style="font-family:'Calibri',sans-serif; ">GML Code</span></strong>, as that is what we  will be doing this tutorial in. GML is the Game Makers own language that it  uses to code games. Hit <strong><span style="font-family:'Calibri',sans-serif; ">Ok</span></strong>, to  continue.</p>
+<img src="Images/6.png" width="611" height="474">
+<p class="MsoNormal">You can hold down the space bar and use your mouse to  situate things around better in the workspace. With the space bar held down,  just click on the top of an element you want to move around and move it to  where it is fully visible inside of the workspace.</p>
+<p class="MsoNormal">We will be writing our code inside of the large area that is  now provided for us here.  </p>
+<img src="Images/7.png" width="466" height="291">
+<p class="MsoNormal">Our hero needs to be able to move, using the arrow key, and  also switch the sprite that it will be using based on its direction. After all,  it doesn&rsquo;t make any sense to have the hero facing you when he is walking away.  He needs to have its back toward the player. And so now you see why we needed 4  sprites for our hero.</p>
+<p class="MsoNormal">Oh, and by the way, this script code, will also have code  for the door, which is the exit. We will be adding a door next. So, you might  as well just leave the code in there. Because we will need to be placing it  eventually, and this way you get to look at this hero step event in its  entirety, right from the start.</p>
+<h1>The Step-Step Code</h1>
+<p class="code">// --- Movement Input ---</p>
+<p class="code">var move_x = keyboard_check(vk_right) - keyboard_check(vk_left);</p>
+<p class="code">var move_y = keyboard_check(vk_down)  - keyboard_check(vk_up);</p>
+<p class="code">&nbsp;</p>
+<p class="code">var spd = 4;</p>
+<p class="code">var dx  = move_x * spd;</p>
+<p class="code">var dy  = move_y * spd;</p>
+<p class="code">&nbsp;</p>
+<p class="code">// --- Collision Check ---</p>
+<p class="code">if (dx != 0 || dy != 0) {</p>
+<p class="code">    // Check full diagonal  move</p>
+<p class="code">    if (!place_meeting(x +  dx, y + dy, obj_wall_plain) &amp;&amp;</p>
+<p class="code">        !place_meeting(x +  dx, y + dy, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">        !place_meeting(x +  dx, y + dy, obj_wall_crackedB)) {</p>
+<p class="code">        x += dx;</p>
+<p class="code">        y += dy;</p>
+<p class="code">    } else {</p>
+<p class="code">        // Try horizontal  only</p>
+<p class="code">        if  (!place_meeting(x + dx, y, obj_wall_plain) &amp;&amp;</p>
+<p class="code">             !place_meeting(x + dx, y, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">             !place_meeting(x + dx, y, obj_wall_crackedB)) {</p>
+<p class="code">            x += dx;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code">        // Try vertical  only</p>
+<p class="code">        if  (!place_meeting(x, y + dy, obj_wall_plain) &amp;&amp;</p>
+<p class="code">             !place_meeting(x, y + dy, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">             !place_meeting(x, y + dy, obj_wall_crackedB)) {</p>
+<p class="code">            y += dy;</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">// --- Check for Exit (always runs) ---</p>
+<p class="code">if (place_meeting(x, y, obj_door)) {</p>
+<p class="code">     show_debug_message(&quot;<span style="font-family:'Segoe UI Emoji',sans-serif; ">✨</span> Hero reached the dungeon  exit!&quot;);</p>
+<p class="code">    // Example:  room_goto_next();</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">// --- Sprite Switching ---</p>
+<p class="code">if (move_y &lt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_back;</p>
+<p class="code">} else if (move_x &gt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_right;</p>
+<p class="code">} else if (move_x &lt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_left;</p>
+<p class="code">} else {</p>
+<p class="code">    sprite_index =  sprite_hero;</p>
+<p class="code">}  </p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Now you should have your script in there. </p>
+<img src="Images/8.png" width="628" height="422">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go to the top of the workspace and switch your code from the  Workspace1 tab to your Room1 tab, to view the room.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/9.png" width="517" height="170">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now you should see your room with the outer wall</p>
+<img src="Images/10.png" width="587" height="391">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Moving to the Instances Layer</h1>
+<p class="MsoNormal">Go to the Layer panel and switch to the Instances layer. You  can move this Instance layer to the top of the layer stack, just by clicking on  it and dragging it to the top. Your hero object needs to go into the Instances  layer and not the Outer Walls layer. So, make sure that is the one that you  have selected.</p>
+<img src="Images/11.png" width="230" height="286">
+<p class="MsoNormal">Now slide your hero object out of the Asset Browser and into  the room.</p>
+<img src="Images/12.png" width="615" height="296">
+<p class="MsoNormal">Now drag the door object out of the room and set it in the  outer wall somewhere.</p>
+<img src="Images/13.png" width="432" height="380">
+<h1>Test the Game</h1>
+<p class="MsoNormal">We want to test the game by hitting the play button at the  top. It might take a bit for your game to show up. We want to test the arrow  keys to see if the hero is able to go in all 4 directions and that the sprite  is switching to the appropriate sprite when he changes direction. Also look at  the terminal for a message to pop up saying that the hero has hit the door. But  it should only pop up if the hero actually does hit the door.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/14.png" width="209" height="118">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Your hero should walk to the door and when he reaches it,  you should see your terminal message.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/15.png" width="620" height="212">
+<h1>Layering your Objects</h1>
+<p class="MsoNormal">To have your hero walk in front of the door. Just remove  your objects from the room. Bring in the door first and then the hero. The way  you bring in your objects matter, and it will represent how your objects are  layered on the game board.</p>
+<img src="Images/16.png" width="275" height="182">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Well, that is enough for this  tutorial, now you know how to bring your hero into the room and how to get him  to move to the door.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
