@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 The Overlay and the Maze</title>
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~6 The Overlay and the Maze~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >2/16/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="290" height="261">
+<h1>The Overlay</h1>
+<p class="MsoNormal">People who create games professionally will often use a maze  overlay to be able to create their mazes for the rooms. This is a process which  is used especially when a maze is extremely complicated. We will take a look at  creating this overlay for our room; however, we will be keeping our own maze  simple.</p>
+<h1>Create the Sprite</h1>
+<p class="MsoNormal">In the Asset Browser, you want to click on the room. So, we  can see the properties for the room, on the right side of the app.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="237" height="164">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">On the left-hand side, get the dimensions of your room. Your  rooms dimensions need to be divisible by 32px, or 64px. Because the walls will  be 32px and the hero and door will be 64px.</p>
+<img src="Images/3.png" width="222" height="258">
+<p class="MsoNormal">Go to Photoshop</p>
+<img src="Images/4.png" width="81" height="87">
+<p class="MsoNormal">Create your canvas at the same size as your room.</p>
+<img src="Images/5.png" width="304" height="155">
+<p class="MsoNormal">Just find a maze (online, image search) and place it on top  of your new canvas that you made in Photoshop. Turn on the 32 x32 grid to place  the wall map. Just remember the hero is scaled in at 64 x 64, so your path  needs to be at least two grid squares wide, in order to allow the hero to fit  through the maze.</p>
+<p class="MsoNormal">Double check your size in Photoshop for your grid size, you  want it set for 32, because our wall tile pieces will look better, and fit  better using this size.</p>
+<p class="MsoNormal">Edit -Preferences- Guides, Grids &amp; Slices…</p>
+<img src="Images/6.png" width="614" height="187">
+<p class="MsoNormal">Place the maze that you brought in from the web onto your  Photoshop canvas. You may have to scale it to fit the directions of the room.  Fit the Maze and turn down the opacity on the maze.</p>
+<img src="Images/7.png" width="610" height="213">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Start a new layer. Leave this new layer at full opacity.</p>
+<img src="Images/8.png" width="259" height="189">
+<p class="MsoNormal">Use your marquee tool to create selections for the wall.</p>
+<img src="Images/9.png" width="626" height="382">
+<p class="MsoNormal">Change your top color chip to be red</p>
+<img src="Images/10.png" width="66" height="81">
+<p class="MsoNormal">Now following (sort of) your guide start placing down a  colored wall around the room. <strong><span style="font-family:'Calibri',sans-serif; ">Shift – F5- Enter</span></strong>.  This will fill your selection with the fore color of red.</p>
+<img src="Images/11.png" width="635" height="374">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The maze being red helps it show up better on Game Makers  Dark theme. You want two openings in the outer one. One is the entrance and the  other is the exit. Remember we want at least a width of 2 grid squares for the  hero to be able to fit through. </p>
+<img src="Images/12.png" width="639" height="368">
+<p class="MsoNormal">You may find your original grid that you brought in to copy  might be a bit off. Just follow it as best as you can. Your final maze design  should look something like the image below when keeping with the rules that we  have set for creating our maze. Remember to turn off the underlying grid before  you save our new grid.</p>
+<img src="Images/13.png" width="613" height="350">
+<h1>Save Maze to your Game Maker Sprite Folder</h1>
+<p class="MsoNormal">Inside of the sprite folder, create a folder to put your  mazes inside of. This will keep them organized.</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Maze Overlay</span></strong></p>
+<img src="Images/14.png" width="144" height="167">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now <strong><span style="font-family:'Calibri',sans-serif; ">save</span></strong> your  maze to this new folder inside of your sprite folder inside of Game Maker</p>
+<p class="MsoNormal">C:\Users\Your_User_Name\GameMakerProjects\My First  Game\sprites\ Maze Overlay</p>
+<img src="Images/15.png" width="141" height="130">
+<p class="MsoNormal">We could save different mazes to our folder.</p>
+<img src="Images/16.png" width="637" height="141">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Create the Sprite for the Overlay</h1>
+<p class="MsoNormal">Create your Sprite for the overlay, by right clicking on the  sprite folder inside of Asset Browser panel. Import your Maze Overlay image to  represent the sprite image.</p>
+<img src="Images/17.png" width="255" height="253">
+<p class="MsoNormal">Import your maze image. Don&rsquo;t worry about the size being  shown in the sprite dialog box. It will change to the right size once it is  brought in.</p>
+<img src="Images/18.png" width="645" height="312">
+<h1>Create the Overlay Object</h1>
+<p class="MsoNormal">Now Create the overlay object, so it can be brought in on an  instance layer. You know the drill. Just right click on the Object folder and  create new object.</p>
+<img src="Images/19.png" width="291" height="270">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Add the sprite, we just created . Game Maker made this  sprite inside of the Sprite folder. So, don&rsquo;t go looking for it in the Maze  Overlay folder. </p>
+<img src="Images/20.png" width="267" height="268">
+<p class="MsoNormal">Now we need to create 2 Instance layers. One will be for the  maze Walls , and the other is for the Maze overlay.</p>
+<img src="Images/21.png" width="289" height="234">
+<p class="MsoNormal">Just make these Instance Layers in the same way that we have  been making them.</p>
+<img src="Images/22.png" width="175" height="238">
+<p class="MsoNormal">Make sure this <strong><span style="font-family:'Calibri',sans-serif; ">Maze_Overlay</span></strong> layer is indeed selected before dragging the maze object into the room. Also we  want it positioned under the <strong>Walls</strong> layer, so the wall will go over the  maze overlay.</p>
+<p class="MsoNormal"><strong><span style="color:#EE0000; ">Warning</span></strong>-Make sure  you did not place the hero on top of the outer wall, or any wall. He will be  stuck when the game starts if you did.</p>
+<img src="Images/23.png" width="636" height="361">
+<h1>To Move the hero and door. </h1>
+<p class="MsoNormal">Go to the Instance layer which they reside on. Then click on  the object that you want to move.</p>
+<img src="Images/24.png" width="440" height="198">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">To see the outer walls and the hero and door make sure they  are at the top of the list in the layer panel. Like this.</p>
+<img src="Images/25.png" width="645" height="670">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Placing the Maze Wall Pieces</h1>
+<p class="MsoNormal">Make sure you are on the Walls layer before brining in your  wall pieces.</p>
+<img src="Images/26.png" width="216" height="262">
+<p class="MsoNormal">Start bringing in your wall pieces. Drag the first wall  piece in that you want to use, and then you can hold down alt and paint. But  every time you start a new maze area, the first piece needs to be dragged in  first. Then you can paint.</p>
+<img src="Images/27.png" width="626" height="376">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Finish painting in the Walls.Drag in your alternate wall  styles and place them sporadically around the maze. </p>
+<img src="Images/28.png" width="642" height="372">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">In your layer panel. Turn off the eye of the Mask, so we do  not see the red mask anymore. We are done with it.</p>
+<img src="Images/29.png" width="212" height="207">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Test your maze.</p>
+<img src="Images/30.png" width="158" height="103">
+<h1>If the hero is not moving through tight corridors</h1>
+<p class="MsoNormal">If you find your hero is not moving smoothly through tight  corridors. Try shrinking the collision mask around him. Click on the Sprite,  and set the Collision mask to manual. This way you can resize it. You will have  to do this for all 4 hero sprites. You can even remove wall objects if the  collision mask doesn&rsquo;t work out.</p>
+<img src="Images/31.png" width="534" height="310">
+<p class="MsoNormal">Now just practice getting the hero to the door. </p>
+<img src="Images/32.png" width="603" height="359">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You should get a message in the terminal that you reached  it.</p>
+<img src="Images/33.png" width="311" height="203">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
