@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Code Flashcards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: #667eea;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .filter-btn.active {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .flashcard {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .flashcard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .category-tag {
+            padding: 5px 12px;
+            background: #667eea;
+            color: white;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .card-question {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .card-answer {
+            display: none;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .card-answer.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            overflow-x: auto;
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: background 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: #45a049;
+        }
+
+        .copy-btn.copied {
+            background: #2196F3;
+        }
+
+        .explanation {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .toggle-hint {
+            text-align: center;
+            color: #888;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .keyword { color: #ff79c6; }
+        .string { color: #f1fa8c; }
+        .number { color: #bd93f9; }
+        .comment { color: #6272a4; }
+        .function { color: #50fa7b; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐍 Python Code Flashcards</h1>
+            <p class="subtitle">Click any card to reveal the code snippet and explanation</p>
+        </header>
+
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="basics">Basics</button>
+            <button class="filter-btn" data-category="strings">Strings</button>
+            <button class="filter-btn" data-category="lists">Lists</button>
+            <button class="filter-btn" data-category="loops">Loops</button>
+            <button class="filter-btn" data-category="functions">Functions</button>
+            <button class="filter-btn" data-category="dictionaries">Dictionaries</button>
+            <button class="filter-btn" data-category="files">File I/O</button>
+        </div>
+
+        <div class="cards-grid" id="cardsContainer">
+            <!-- Cards will be generated by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        const flashcards = [
+            // BASICS
+            {
+                category: 'basics',
+                title: 'Print to Console',
+                question: 'How do I display text in the console?',
+                code: `print("Hello, World!")
+print("Multiple", "items", "separated by spaces")
+print(f"My name is {name}")  # f-string formatting`,
+                explanation: 'print() displays output to the console. Use f-strings with {variable} for easy formatting.'
+            },
+            {
+                category: 'basics',
+                title: 'Variables & Types',
+                question: 'How do I create and check variable types?',
+                code: `# Creating variables
+name = "Alice"        # string
+age = 25              # integer
+height = 5.6          # float
+is_student = True     # boolean
+
+# Check type
+print(type(name))     # <class 'str'>`,
+                explanation: 'Python automatically determines types. No need to declare them like in other languages.'
+            },
+            {
+                category: 'basics',
+                title: 'User Input',
+                question: 'How do I get input from the user?',
+                code: `name = input("What's your name? ")
+print(f"Hello, {name}!")
+
+# Convert input to number
+age = int(input("What's your age? "))`,
+                explanation: 'input() always returns a string. Use int() or float() to convert to numbers.'
+            },
+            {
+                category: 'basics',
+                title: 'If Statements',
+                question: 'How do I use conditional logic?',
+                code: `age = 18
+
+if age >= 18:
+    print("You are an adult")
+elif age >= 13:
+    print("You are a teenager")
+else:
+    print("You are a child")`,
+                explanation: 'Use if/elif/else for conditions. Indentation (4 spaces) is crucial in Python!'
+            },
+
+            // STRINGS
+            {
+                category: 'strings',
+                title: 'String Methods',
+                question: 'What are common string operations?',
+                code: `text = "Hello World"
+
+print(text.upper())      # HELLO WORLD
+print(text.lower())      # hello world
+print(text.replace("World", "Python"))  # Hello Python
+print(text.split())      # ['Hello', 'World']
+print(len(text))         # 11`,
+                explanation: 'Strings have many built-in methods. They return new strings (strings are immutable).'
+            },
+            {
+                category: 'strings',
+                title: 'String Slicing',
+                question: 'How do I extract parts of a string?',
+                code: `text = "Python"
+
+print(text[0])      # P (first character)
+print(text[-1])     # n (last character)
+print(text[0:3])    # Pyt (characters 0,1,2)
+print(text[2:])     # thon (from index 2 to end)
+print(text[::-1])   # nohtyP (reverse string)`,
+                explanation: 'Use [start:end:step] notation. Negative indices count from the end.'
+            },
+            {
+                category: 'strings',
+                title: 'Check String Content',
+                question: 'How do I check what a string contains?',
+                code: `text = "Python 3.10"
+
+print("Python" in text)      # True
+print(text.startswith("Py")) # True
+print(text.endswith(".10"))  # True
+print(text.isdigit())        # False
+print(text.isalpha())        # False`,
+                explanation: 'Use "in" to check if substring exists. Use is methods to check string type.'
+            },
+
+            // LISTS
+            {
+                category: 'lists',
+                title: 'Creating & Adding to Lists',
+                question: 'How do I work with lists?',
+                code: `# Create a list
+fruits = ["apple", "banana", "cherry"]
+
+# Add items
+fruits.append("orange")      # Add to end
+fruits.insert(0, "mango")    # Add at index 0
+fruits.extend(["grape", "kiwi"])  # Add multiple
+
+print(fruits)`,
+                explanation: 'Lists are ordered, mutable collections. append() adds one item, extend() adds multiple.'
+            },
+            {
+                category: 'lists',
+                title: 'Accessing & Modifying Lists',
+                question: 'How do I access and change list items?',
+                code: `fruits = ["apple", "banana", "cherry"]
+
+# Access
+print(fruits[0])        # apple
+print(fruits[-1])       # cherry
+
+# Modify
+fruits[1] = "blueberry"
+print(fruits)           # ['apple', 'blueberry', 'cherry']
+
+# Slicing
+print(fruits[0:2])      # ['apple', 'blueberry']`,
+                explanation: 'Lists use zero-based indexing. Negative indices count from the end.'
+            },
+            {
+                category: 'lists',
+                title: 'List Methods',
+                question: 'What are useful list operations?',
+                code: `numbers = [3, 1, 4, 1, 5, 9, 2]
+
+numbers.sort()           # Sort in place
+print(numbers)           # [1, 1, 2, 3, 4, 5, 9]
+
+numbers.reverse()        # Reverse in place
+print(numbers.count(1))  # 2 (how many times 1 appears)
+print(numbers.index(5))  # Find index of 5
+
+numbers.remove(1)        # Remove first occurrence of 1
+numbers.pop()            # Remove and return last item`,
+                explanation: 'sort() and reverse() modify the list in place. pop() removes and returns an item.'
+            },
+
+            // LOOPS
+            {
+                category: 'loops',
+                title: 'For Loop with Range',
+                question: 'How do I repeat code a specific number of times?',
+                code: `# Loop 5 times (0 to 4)
+for i in range(5):
+    print(i)
+
+# Loop from 1 to 5
+for i in range(1, 6):
+    print(i)
+
+# Loop with step
+for i in range(0, 10, 2):  # 0, 2, 4, 6, 8
+    print(i)`,
+                explanation: 'range(stop) or range(start, stop, step). Start defaults to 0, step defaults to 1.'
+            },
+            {
+                category: 'loops',
+                title: 'Loop Through Lists',
+                question: 'How do I iterate over a list?',
+                code: `fruits = ["apple", "banana", "cherry"]
+
+# Loop through items
+for fruit in fruits:
+    print(fruit)
+
+# Loop with index
+for i, fruit in enumerate(fruits):
+    print(f"{i}: {fruit}")`,
+                explanation: 'Use "for item in list" to loop. Use enumerate() to get both index and item.'
+            },
+            {
+                category: 'loops',
+                title: 'While Loop',
+                question: 'How do I loop until a condition is met?',
+                code: `count = 0
+while count < 5:
+    print(count)
+    count += 1
+
+# Loop with break
+while True:
+    user_input = input("Enter 'quit' to exit: ")
+    if user_input == "quit":
+        break`,
+                explanation: 'while loops continue as long as condition is True. Use break to exit early.'
+            },
+
+            // FUNCTIONS
+            {
+                category: 'functions',
+                title: 'Basic Function',
+                question: 'How do I create and call a function?',
+                code: `def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Alice")  # Call the function
+
+# Function with return value
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)  # 8`,
+                explanation: 'Use def to define functions. return sends a value back to the caller.'
+            },
+            {
+                category: 'functions',
+                title: 'Default Parameters',
+                question: 'How do I set default values for parameters?',
+                code: `def greet(name, greeting="Hello"):
+    print(f"{greeting}, {name}!")
+
+greet("Alice")              # Hello, Alice!
+greet("Bob", "Hi")          # Hi, Bob!
+greet("Charlie", greeting="Hey")  # Hey, Charlie!`,
+                explanation: 'Parameters with = have default values. Can call with or without them.'
+            },
+            {
+                category: 'functions',
+                title: 'Multiple Return Values',
+                question: 'How do I return multiple values?',
+                code: `def get_stats(numbers):
+    total = sum(numbers)
+    count = len(numbers)
+    average = total / count
+    return total, count, average
+
+# Unpack the returned values
+t, c, a = get_stats([1, 2, 3, 4, 5])
+print(f"Total: {t}, Count: {c}, Avg: {a}")`,
+                explanation: 'Return multiple values separated by commas. Python packs them into a tuple.'
+            },
+
+            // DICTIONARIES
+            {
+                category: 'dictionaries',
+                title: 'Creating & Accessing Dictionaries',
+                question: 'How do I use key-value pairs?',
+                code: `# Create dictionary
+person = {
+    "name": "Alice",
+    "age": 25,
+    "city": "New York"
+}
+
+# Access values
+print(person["name"])        # Alice
+print(person.get("age"))     # 25
+print(person.get("email", "N/A"))  # N/A (default if key missing)`,
+                explanation: 'Dictionaries store key-value pairs. Use get() to avoid errors when key might not exist.'
+            },
+            {
+                category: 'dictionaries',
+                title: 'Modifying Dictionaries',
+                question: 'How do I add, update, or remove dictionary items?',
+                code: `person = {"name": "Alice", "age": 25}
+
+# Add/Update
+person["email"] = "alice@example.com"
+person["age"] = 26
+
+# Remove
+del person["email"]
+# OR
+age = person.pop("age")  # Removes and returns value
+
+# Check if key exists
+if "name" in person:
+    print("Name exists")`,
+                explanation: 'Assign to add/update. Use del or pop() to remove. "in" checks if key exists.'
+            },
+            {
+                category: 'dictionaries',
+                title: 'Loop Through Dictionary',
+                question: 'How do I iterate over dictionaries?',
+                code: `person = {"name": "Alice", "age": 25, "city": "NYC"}
+
+# Loop through keys
+for key in person:
+    print(key)
+
+# Loop through values
+for value in person.values():
+    print(value)
+
+# Loop through both
+for key, value in person.items():
+    print(f"{key}: {value}")`,
+                explanation: 'Use .keys(), .values(), or .items() to loop through different parts of a dictionary.'
+            },
+
+            // FILE I/O
+            {
+                category: 'files',
+                title: 'Reading a File',
+                question: 'How do I read from a file?',
+                code: `# Read entire file
+with open("file.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+# Read line by line
+with open("file.txt", "r") as file:
+    for line in file:
+        print(line.strip())  # strip() removes \\n`,
+                explanation: '"with open()" automatically closes the file. "r" means read mode. strip() removes whitespace.'
+            },
+            {
+                category: 'files',
+                title: 'Writing to a File',
+                question: 'How do I write to a file?',
+                code: `# Write (overwrites existing content)
+with open("output.txt", "w") as file:
+    file.write("Hello World\\n")
+    file.write("Second line\\n")
+
+# Append (adds to end of file)
+with open("output.txt", "a") as file:
+    file.write("New line\\n")`,
+                explanation: '"w" mode overwrites, "a" mode appends. Always add \\n for new lines.'
+            },
+            {
+                category: 'files',
+                title: 'Check if File Exists',
+                question: 'How do I check if a file exists before opening?',
+                code: `import os
+
+# Check if file exists
+if os.path.exists("file.txt"):
+    print("File exists!")
+else:
+    print("File not found")
+
+# Check if it's a file (not a directory)
+if os.path.isfile("file.txt"):
+    print("It's a file")`,
+                explanation: 'Use os.path module for file system operations. Helps avoid errors when opening files.'
+            }
+        ];
+
+        let currentCategory = 'all';
+
+        function renderCards() {
+            const container = document.getElementById('cardsContainer');
+            container.innerHTML = '';
+
+            const filtered = currentCategory === 'all' 
+                ? flashcards 
+                : flashcards.filter(card => card.category === currentCategory);
+
+            filtered.forEach((card, index) => {
+                const cardElement = document.createElement('div');
+                cardElement.className = 'flashcard';
+                cardElement.innerHTML = `
+                    <div class="card-header">
+                        <div class="card-title">${card.title}</div>
+                        <div class="category-tag">${card.category}</div>
+                    </div>
+                    <div class="card-question">${card.question}</div>
+                    <div class="card-answer" id="answer-${index}">
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(${index}, event)">Copy</button>
+                            <pre>${escapeHtml(card.code)}</pre>
+                        </div>
+                        <div class="explanation">${card.explanation}</div>
+                    </div>
+                    <div class="toggle-hint">Click to reveal ↓</div>
+                `;
+
+                cardElement.addEventListener('click', () => toggleCard(index));
+                container.appendChild(cardElement);
+            });
+        }
+
+        function toggleCard(index) {
+            const answer = document.getElementById(`answer-${index}`);
+            answer.classList.toggle('show');
+        }
+
+        function copyCode(index, event) {
+            event.stopPropagation(); // Prevent card toggle
+            
+            const filtered = currentCategory === 'all' 
+                ? flashcards 
+                : flashcards.filter(card => card.category === currentCategory);
+            
+            const code = filtered[index].code;
+            
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = event.target;
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                
+                setTimeout(() => {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentCategory = btn.dataset.category;
+                renderCards();
+            });
+        });
+
+        // Initial render
+        renderCards();
+    </script>
+</body>
+</html>
