@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~Title Here~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >2/23/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="292" height="258">
+<h1>Saving Your Project</h1>
+<p class="MsoNormal">Before jumping into this section here, you may want to save  your project somewhere into a specifically named back up folder. We want to do  this because at this point, we have a perfectly good working game. And this  tutorial will be diving into some code — in fact, it will be diving into a lot  of code. We want our maze to automatically self- generate when the hero enters  the room. This will mean, we will not need to mess with trying to come up with  our own ideas for mazes or mess with those map overlays or anything. This means  that our game will simply randomly create its own mazes. This is a fascinating  idea, but it is also very code intensive. So, if you would like to follow along  with this tutorial (<span class="MsoIntenseEmphasis">please back up your game</span>)  then come join me because we are about to tread into some very murky waters  here.</p>
+<h1>Scripts, what are they?</h1>
+<p class="MsoNormal">Scripts is sort of like the GML code that you placed into  the hero object to make him move, and change sprites based on the direction  that our hero guy is moving in, except that scripts have no object attached to  it. It is pure code. You place these script files into a folder in your Asset  Browser, named Scripts. But, as you have learned in an earlier tutorial, and  with the latest updates of Game Maker, this folder already sitting there in the  Asset Browser, is no longer provided for us. So, we will have to create a  folder in the <strong><span style="font-family:'Calibri',sans-serif; ">Asset Browser</span></strong> and name it <strong><span style="font-family:'Calibri',sans-serif; ">Scripts</span></strong>. If you have not  already created this folder in your game, you will want to create it now.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Warning,</span></span> make sure  that you name everything correctly. The code will be looking for things exactly  as I have named them.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="244" height="303">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Create the Script Files</h1>
+<p class="MsoNormal">Now inside of the Script file, we want to right click and  create a few Scripts. In fact, we will want to create 4 Scripts. We will just  create the scripts now and name them. Then I will show you the code that you  want to go into them.</p>
+<img src="Images/3.png" width="625" height="293">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Again, you want to choose The GML Code Method for writing  code.</p>
+<img src="Images/4.png" width="446" height="340">
+<p class="MsoNormal">Name Your Scripts like this:</p>
+<img src="Images/5.png" width="303" height="187">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Start Writing Your Scripts</h1>
+<p class="MsoNormal">You will want to copy and paste all of your code into the  different script files in your game. You can read through the comments in green  to see what each part of this code is doing. Do not think that we are ready to  test our game after writing these scripts. We will need to also make a  controller object, which can be thrown into the room. and write some more code  for the hero. </p>
+<p class="MsoNormal">Since this code will be creating the hero, and door for us,  we also will be removing both of these objects   from the room. Along with all of your wall objects. The hero, door and  all of the walls will be created by these script files.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" align="center" style="margin-top:24.0pt;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;text-align:center;page-break-after:avoid;"><strong><span style="line-height:115%; font-family:'Calibri Light',sans-serif; font-size:14.0pt; color:#2F5496; ">//SCRIPTS</span></strong></p>
+<p class="MsoNormal" style="margin-top:10.0pt;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;page-break-after:avoid;"><strong><span style="line-height:115%; font-family:'Calibri Light',sans-serif; font-size:12.0pt; color:#4172AD; ">//~~~~~~~~~~~~~~~~~~~~~~~~~~     MAZE        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">function  maze(_style, _width, _height) constructor {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    style = _style;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    w = _width;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    h = _height;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// Generate  random positions for hero and door along outer walls</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var wall_positions =  get_random_wall_positions(w, h);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    heroWallSide = wall_positions[0]; <strong><span style="color:#00B050; ">// Which wall (0=top, 1=right, 2=bottom, 3=left)</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    heroPosition = wall_positions[1];      <strong><span style="color:#00B050; ">//  Position along that wall</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    doorWallSide = wall_positions[2];      <strong><span style="color:#00B050; ">// Which  wall for door</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    doorPosition = wall_positions[3];      <strong><span style="color:#00B050; ">//  Position along that wall</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// Convert  wall positions to interior cell coordinates</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var hero_coords =  wall_position_to_cell(heroWallSide, heroPosition, w, h);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var door_coords =  wall_position_to_cell(doorWallSide, doorPosition, w, h);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    startPoint = hero_coords;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    endPoint = door_coords;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    grid = [];</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    for (var i = 0; i &lt; w; i++) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        grid[i] = [];</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        for (var j = 0; j &lt; h; j++) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            grid[i][j] = new maze_grid_space();</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;=== RANDOM POSITIONING  ===&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">    show_debug_message(&quot;Hero on wall  &quot; + string(heroWallSide) + &quot; at position &quot; +  string(heroPosition) + &quot; -&gt; cell [&quot; + string(startPoint[0]) +  &quot;, &quot; + string(startPoint[1]) + &quot;]&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">    show_debug_message(&quot;Door on wall  &quot; + string(doorWallSide) + &quot; at position &quot; +  string(doorPosition) + &quot; -&gt; cell [&quot; + string(endPoint[0]) +  &quot;, &quot; + string(endPoint[1]) + &quot;]&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">//  IMPORTANT: Pre-carve opening from boundary to start cell based on wall side</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">     carve_entrance_opening_internal(heroWallSide, startPoint, self);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// Get random positions for hero and door on different walls</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">function  get_random_wall_positions(_width, _height) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;=== GENERATING RANDOM  POSITIONS ===&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">    show_debug_message(&quot;Maze dimensions:  &quot; + string(_width) + &quot; x &quot; + string(_height));</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// Ensure  hero and door are on different walls for variety</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var hero_wall = irandom(3);  <strong><span style="color:#00B050; ">// 0=top,  1=right, 2=bottom, 3=left</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var door_wall = hero_wall;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// Keep  trying until we get different walls</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var attempts = 0;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    while (door_wall == hero_wall &amp;&amp;  attempts &lt; 10) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        door_wall = irandom(3);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        attempts++;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;Hero wall: &quot; +  string(hero_wall) + &quot;, Door wall: &quot; + string(door_wall));</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// Get  random positions along each wall </span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var hero_pos, door_pos;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    if (hero_wall == 0 || hero_wall == 2) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        <strong><span style="color:#00B050; ">//  Top/bottom wall - position along width</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var max_pos = max(1, _width - 2);  <strong><span style="color:#00B050; ">// Ensure  valid range</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        hero_pos = 1 + irandom(max_pos - 1);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    } else {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        <strong><span style="color:#00B050; ">//  Left/right wall - position along height</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var max_pos = max(1, _height - 2);  // Ensure valid range</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        hero_pos = 1 + irandom(max_pos - 1);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    if (door_wall == 0 || door_wall == 2) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        <strong><span style="color:#00B050; ">//  Top/bottom wall - position along width</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var max_pos = max(1, _width - 2);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        door_pos = 1 + irandom(max_pos - 1);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    } else {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        <strong><span style="color:#00B050; ">//  Left/right wall - position along height</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var max_pos = max(1, _height - 2);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        door_pos = 1 + irandom(max_pos - 1);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;Hero position: &quot; +  string(hero_pos) + &quot;, Door position: &quot; + string(door_pos));</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">    show_debug_message(&quot;=== POSITION  GENERATION COMPLETE ===&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    return [hero_wall, hero_pos, door_wall,  door_pos];</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// Convert wall position to interior cell coordinates</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">function  wall_position_to_cell(_wallSide, _position, _width, _height) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    switch (_wallSide) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        case 0: <strong><span style="color:#00B050; ">//  Top wall</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            return [_position, 1];  <strong><span style="color:#00B050; ">// Interior  cell just below top wall</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        case 1: <strong><span style="color:#00B050; ">//  Right wall</span></strong><span style="color:#00B050; ">  </span></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            return [_width - 2,  _position];  <strong><span style="color:#00B050; ">//  Interior cell just left of right wall</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        case 2: <strong><span style="color:#00B050; ">//  Bottom wall</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            return [_position, _height -  2];  <strong><span style="color:#00B050; ">//  Interior cell just above bottom wall</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        case 3: <strong><span style="color:#00B050; ">//  Left wall</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            return [1, _position];  <strong><span style="color:#00B050; ">// Interior  cell just right of left wall</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    return [1, 1];  <strong><span style="color:#00B050; ">// Fallback</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// Carve entrance opening based on wall side (internal version  for constructor)</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">function  carve_entrance_opening_internal(_wallSide, _startPoint, _mazeInstance) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var start_x = _startPoint[0];</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var start_y = _startPoint[1];</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    switch (_wallSide) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        case 0: <strong><span style="color:#00B050; ">//  Top wall - carve down from boundary</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            if (start_y &gt; 0) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                 _mazeInstance.grid[start_x][start_y - 1].down = false;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            break;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        case 1: <strong><span style="color:#00B050; ">//  Right wall - carve left from boundary</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            if (start_x &lt; _mazeInstance.w -  1) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                 _mazeInstance.grid[start_x][start_y].right = false;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            break;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        case 2: <span style="color:#00B050; ">//  Bottom wall - carve up from boundary</span></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            if (start_y &lt; _mazeInstance.h -  1) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                 _mazeInstance.grid[start_x][start_y].down = false;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            break;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        case 3: <strong><span style="color:#00B050; ">//  Left wall - carve right from boundary</span></strong><span style="color:#00B050; ">  </span></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            if (start_x &gt; 0) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                _mazeInstance.grid[start_x -  1][start_y].right = false;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            break;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:10.0pt;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;page-break-after:avoid;"><strong><span style="font-family:'Calibri Light',sans-serif; font-size:12.0pt; color:#4172AD; ">//~~~~~~~~~~~~~~~~~~~~~~~~~~~~MAZE_GENERATE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">function  maze_generate(_mazeStruct) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var branches = ds_stack_create();</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var g = _mazeStruct.grid;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var cp = [_mazeStruct.startPoint[0],  _mazeStruct.startPoint[1]];</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    g[cp[0]][cp[1]].visited = true;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    ds_stack_push(branches, cp);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    while (!ds_stack_empty(branches)) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        cp = ds_stack_top(branches);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var pdir = ds_list_create();</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (cp[0] &gt; 0 &amp;&amp; !g[cp[0] -  1][cp[1]].visited) ds_list_add(pdir, [cp[0] - 1, cp[1]]);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (cp[0] &lt; _mazeStruct.w - 1  &amp;&amp; !g[cp[0] + 1][cp[1]].visited) ds_list_add(pdir, [cp[0] + 1, cp[1]]);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (cp[1] &gt; 0 &amp;&amp;  !g[cp[0]][cp[1] - 1].visited) ds_list_add(pdir, [cp[0], cp[1] - 1]);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (cp[1] &lt; _mazeStruct.h - 1  &amp;&amp; !g[cp[0]][cp[1] + 1].visited) ds_list_add(pdir, [cp[0], cp[1] + 1]);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (ds_list_size(pdir) == 0) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            ds_stack_pop(branches);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        } else {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            ds_list_shuffle(pdir);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            var np = pdir[| 0];</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            g[np[0]][np[1]].visited = true;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            ds_stack_push(branches, np);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            if (np[0] &gt; cp[0])  g[cp[0]][cp[1]].right = false;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            if (np[0] &lt; cp[0])  g[np[0]][np[1]].right = false;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            if (np[1] &gt; cp[1])  g[cp[0]][cp[1]].down = false;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            if (np[1] &lt; cp[1])  g[np[0]][np[1]].down = false;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        ds_list_destroy(pdir);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    ds_stack_destroy(branches);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:10.0pt;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;page-break-after:avoid;"><strong><span style="font-family:'Calibri Light',sans-serif; font-size:12.0pt; color:#4172AD; ">//~~~~~~~~~~~~~~~~~~~MAZE GRID  SPACE~~~~~~~~~~~~~~~~~~~~~~</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">function  maze_grid_space() constructor {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    visited = false;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    right = true;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    down = true;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:10.0pt;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;page-break-after:avoid;"><strong><span style="font-family:'Calibri Light',sans-serif; font-size:12.0pt; color:#4172AD; ">//~~~~~~~~~~~~~~~~~~~SCRIPT SPAWN  MAZE WALLS ~~~~~~~~~~~~~~~~~~~~~~</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// This function creates walls on a proper grid where:</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// - Each cell is _cellSize x _cellSize pixels</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// - Walls are placed at the edges between cells</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// - The maze algorithm's right/down properties indicate walls  between adjacent cells</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">function  spawn_maze_walls(_mazeStruct, _cellSize, _xOffset, _yOffset) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var m = _mazeStruct;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var s = _cellSize;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var xx = _xOffset;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var yy = _yOffset;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">    // Wall sprite size is  32px </span></strong><strong><span style="font-family:'Courier New'; font-size:10.0pt; "> </span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var wall_size = 32;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var walls_per_cell = s / wall_size;  <strong><span style="color:#00B050; ">// How many  wall tiles fit per cell edge</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;=== BUILDING GRID-BASED  MAZE WALLS ===&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">    show_debug_message(&quot;Maze size: &quot;  + string(m.w) + &quot; x &quot; + string(m.h) + &quot; cells&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">    show_debug_message(&quot;Cell size: &quot;  + string(s) + &quot;px, Wall tile size: &quot; + string(wall_size) +  &quot;px&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">    show_debug_message(&quot;Walls per cell  edge: &quot; + string(walls_per_cell));</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// Track  placed walls to prevent duplicates</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var placed_walls = ds_map_create();</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// Create  interior maze walls based on the maze algorithm</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    for (var i = 0; i &lt; m.w; i++) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        for (var j = 0; j &lt; m.h; j++) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            <strong><span style="color:#00B050; ">//  Calculate the TOP-LEFT corner of this cell in pixels</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            var cell_left = xx + i * s;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            var cell_top = yy + j * s;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            <strong><span style="color:#00B050; ">//  RIGHT WALL - Wall between cell [i,j] and cell [i+1,j]</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">            // Only place  if NOT at the rightmost column AND the maze says there's a wall</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            if (i &lt; m.w - 1 &amp;&amp;  m.grid[i][j].right == true) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                <strong><span style="color:#00B050; ">//  Wall goes along the right edge of this cell</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                var wall_x = cell_left +  s;  <strong><span style="color:#00B050; ">//  Right edge of cell</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                <strong><span style="color:#00B050; ">//  Place wall tiles along the full height of the cell edge</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                for (var tile = 0; tile &lt;  walls_per_cell; tile++) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    var wall_y = cell_top +  tile * wall_size;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    <strong><span style="color:#00B050; ">//  Create unique key to prevent duplicate walls</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    var wall_key =  string(wall_x) + &quot;_&quot; + string(wall_y);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    if  (!ds_map_exists(placed_walls, wall_key)) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        <strong><span style="color:#00B050; ">// Check if this position would collide with door</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        if  (!position_meeting(wall_x, wall_y, obj_door)) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                            var wall_inst =  instance_create_layer(wall_x, wall_y, &quot;Walls&quot;, obj_wall_plain);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                            <strong><span style="color:#00B050; ">// FORCE 32px size by scaling if sprite is 64px</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                             wall_inst.image_xscale = 0.5;  </span><strong><span style="font-family:'Courier New'; font-size:5.0pt; color:#00B050; ">// Scale down from 64px to 32px</span></strong><span style="font-family:'Courier New'; font-size:5.0pt; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                             wall_inst.image_yscale = 0.5;  </span><strong><span style="font-family:'Courier New'; font-size:6.0pt; color:#00B050; ">// Scale down from 64px to 32px</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                             ds_map_add(placed_walls, wall_key, true);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            <strong><span style="color:#00B050; ">//  DOWN WALL - Wall between cell [i,j] and cell [i,j+1]</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">            // Only place  if NOT at the bottom row AND the maze says there's a wall</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            if (j &lt; m.h - 1 &amp;&amp;  m.grid[i][j].down == true) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                <strong><span style="color:#00B050; ">//  Wall goes along the bottom edge of this cell</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                var wall_y = cell_top + s;  <strong><span style="color:#00B050; ">// Bottom edge  of cell</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                <strong><span style="color:#00B050; ">//  Place wall tiles along the full width of the cell edge</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                for (var tile = 0; tile &lt;  walls_per_cell; tile++) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    var wall_x = cell_left +  tile * wall_size;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    <strong><span style="color:#00B050; ">//  Create unique key to prevent duplicate walls</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    var wall_key =  string(wall_x) + &quot;_&quot; + string(wall_y);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    if  (!ds_map_exists(placed_walls, wall_key)) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        <strong><span style="color:#00B050; ">// Check if this position would collide with door</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        if  (!position_meeting(wall_x, wall_y, obj_door)) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                            var wall_inst =  instance_create_layer(wall_x, wall_y, &quot;Walls&quot;, obj_wall_plain);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                            <strong><span style="color:#00B050; ">// FORCE 32px size by scaling if sprite is 64px</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                             wall_inst.image_xscale = 0.5;  </span><strong><span style="font-family:'Courier New'; font-size:6.0pt; color:#00B050; ">// Scale down from 64px to 32px</span></strong><span style="font-family:'Courier New'; font-size:6.0pt; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                             wall_inst.image_yscale = 0.5;  </span><strong><span style="font-family:'Courier New'; font-size:6.0pt; color:#00B050; ">// Scale down from 64px to 32px</span></strong><span style="font-family:'Courier New'; font-size:6.0pt; color:#00B050; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                             ds_map_add(placed_walls, wall_key, true);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">                }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var total_walls =  ds_map_size(placed_walls);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// UPDATED:  Generate boundary walls with random entrance and exit openings</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;=== BUILDING BOUNDARY  WALLS ===&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">    show_debug_message(&quot;Maze area: &quot;  + string(m.w * s) + &quot;x&quot; + string(m.h * s) + &quot; pixels&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// Calculate  entrance and exit positions based on random wall assignments</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var hero_wall = m.heroWallSide;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var hero_pos = m.heroPosition;  </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var door_wall = m.doorWallSide;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var door_pos = m.doorPosition;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// TOP  BOUNDARY WALL - solid (no openings)</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;Creating TOP boundary  walls...&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    for (var wall_x_pos = 0; wall_x_pos &lt;  (m.w * s); wall_x_pos += wall_size) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var boundary_wall =  instance_create_layer(wall_x_pos, 0, &quot;Walls&quot;, obj_wall_plain);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        boundary_wall.image_xscale = 0.5;  <strong><span style="color:#00B050; ">// 32px</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        boundary_wall.image_yscale = 0.5;  <strong><span style="color:#00B050; ">// 32px</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        total_walls++;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (wall_x_pos == 0)  show_debug_message(&quot;First TOP wall at: (&quot; + string(wall_x_pos) +  &quot;, 0)&quot;);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;TOP boundary  complete.&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">//</span></strong><span style="color:#00B050; "> <strong>BOTTOM BOUNDARY WALL - solid (no openings)</strong></span><strong></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;Creating BOTTOM boundary  walls...&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var bottom_y = (m.h * s) - wall_size;  <strong><span style="color:#00B050; ">// Just inside  the room</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    for (var wall_x_pos = 0; wall_x_pos &lt;  (m.w * s); wall_x_pos += wall_size) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var boundary_wall =  instance_create_layer(wall_x_pos, bottom_y, &quot;Walls&quot;, obj_wall_plain);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        boundary_wall.image_xscale = 0.5;  <strong><span style="color:#00B050; ">// 32px</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        boundary_wall.image_yscale = 0.5;  <strong><span style="color:#00B050; ">// 32px</span></strong><span style="color:#00B050; "> </span></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        total_walls++;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (wall_x_pos == 0)  show_debug_message(&quot;First BOTTOM wall at: (&quot; + string(wall_x_pos) +  &quot;, &quot; + string(bottom_y) + &quot;)&quot;);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;BOTTOM boundary  complete.&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// LEFT  BOUNDARY WALL - solid (no openings)</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;Creating LEFT boundary  walls...&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    for (var wall_y_pos = 0; wall_y_pos &lt;  (m.h * s); wall_y_pos += wall_size) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var boundary_wall =  instance_create_layer(0, wall_y_pos, &quot;Walls&quot;, obj_wall_plain);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        boundary_wall.image_xscale = 0.5;  <strong><span style="color:#00B050; ">// 32px</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        boundary_wall.image_yscale = 0.5;  <strong><span style="color:#00B050; ">// 32px</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        total_walls++;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (wall_y_pos == 0)  show_debug_message(&quot;First LEFT wall at: (0, &quot; + string(wall_y_pos) +  &quot;)&quot;);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// RIGHT  BOUNDARY WALL - solid (no openings)</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;Creating RIGHT boundary  walls...&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var right_x = (m.w * s) - wall_size;  // Just inside the room</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;Right wall x position:  &quot; + string(right_x));</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    for (var wall_y_pos = 0; wall_y_pos &lt;  (m.h * s); wall_y_pos += wall_size) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var boundary_wall =  instance_create_layer(right_x, wall_y_pos, &quot;Walls&quot;, obj_wall_plain);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        boundary_wall.image_xscale = 0.5;  <strong><span style="color:#00B050; ">// 32px</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        boundary_wall.image_yscale = 0.5;  <strong><span style="color:#00B050; ">// 32px</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        total_walls++;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (wall_y_pos == 0)  show_debug_message(&quot;First RIGHT wall at: (&quot; + string(right_x) +  &quot;, &quot; + string(wall_y_pos) + &quot;)&quot;);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;Hero opening on wall  &quot; + string(hero_wall) + &quot; at position &quot; + string(hero_pos));</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">    show_debug_message(&quot;Door opening on  wall &quot; + string(door_wall) + &quot; at position &quot; +  string(door_pos));</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    ds_map_destroy(placed_walls);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;Total walls created:  &quot; + string(total_walls) + &quot; (interior + boundary)&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">    show_debug_message(&quot;=== MAZE WALL  GENERATION COMPLETE ===&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">}</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;">&nbsp;</p>
+<h1>Creating the Controller Object</h1>
+<p class="MsoNormal">If you have not already created your controller object  inside of the Asset Browser, now is the time to create it.</p>
+<img src="Images/6.png" width="321" height="275">
+<h1>Code for the Controller Object</h1>
+<p class="MsoNormal">Inside of the <strong><span style="font-family:'Calibri',sans-serif; ">Create</span></strong> Event</p>
+<p class="MsoNormal">We want to create a Create Event for this controller, so  that we can write some code inside of it. Add Event and then select Create from  the Menu. The Controller object will be invisible inside of the room, so it  will not be using a sprite at all.</p>
+<img src="Images/7.png" width="503" height="338">
+<p class="MsoNormal" style="margin-top:10.0pt;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;page-break-after:avoid;"><strong><span style="font-family:'Calibri Light',sans-serif; font-size:12.0pt; color:#4172AD; ">//~~~~~~~~~~ THE CONTROLLER  OBJECT CREATE EVENT ~~~~~~~~~~~~~~~~~~~~~~~~</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// for 1280x704 room size </span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">&nbsp;</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// Room dimensions: 1280 x 704 (your new requirements)</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// Cell size: 96px (allows 64px hero + movement space with 32px  walls)</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// Wall size: 32px (as requested)</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">var  target_width = 1280;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">var  target_height = 704;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">var cell_size = 128;  //  More space for 64px hero movement </span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// Calculate how many cells fit in the new room dimensions</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">var  maze_width = floor(target_width / cell_size);    </span><strong><span style="font-family:'Courier New'; font-size:8.0pt; color:#00B050; ">// Should be 13 cells (1280/96)</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">var  maze_height = floor(target_height / cell_size);  </span><strong><span style="font-family:'Courier New'; font-size:8.0pt; color:#00B050; ">// Should be 7 cells (704/96)</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">show_debug_message(&quot;===  CREATING MAZE FOR NEW ROOM SIZE ===&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">show_debug_message(&quot;Room  dimensions: &quot; + string(target_width) + &quot; x &quot; +  string(target_height));</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">show_debug_message(&quot;Creating  maze: &quot; + string(maze_width) + &quot; x &quot; + string(maze_height) +  &quot; cells&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">show_debug_message(&quot;Cell  size: &quot; + string(cell_size) + &quot;px&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">show_debug_message(&quot;Wall  size: 32px&quot;);</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">var  time_seed = get_timer();     </span><span style="font-family:'Courier New'; font-size:7.0pt; color:#00B050; ">// Get high-precision timer (avoid reserved 'current_time')</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">random_set_seed(time_seed);      <strong><span style="color:#00B050; ">// Set  specific seed</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">show_debug_message(&quot;Random  seed set to: &quot; + string(time_seed));</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">show_debug_message(&quot;Testing  random values: &quot; + string(irandom(100)) + &quot;, &quot; +  string(irandom(100)) + &quot;, &quot; + string(irandom(100)));</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; "> </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// Create and generate the maze</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">global.myMaze  = new maze(&quot;recursive_backtrack&quot;, maze_width, maze_height);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">maze_generate(global.myMaze);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// Spawn the maze walls with no offset (fills entire room)</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">spawn_maze_walls(global.myMaze,  cell_size, 0, 0);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:10.0pt;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;page-break-after:avoid;"><strong><span style="font-family:'Calibri Light',sans-serif; font-size:12.0pt; color:#4172AD; ">// NOTE: </span></strong></p>
+<p class="MsoNormal" style="margin-top:10.0pt;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;page-break-after:avoid;"><strong><span style="font-family:'Calibri Light',sans-serif; font-size:12.0pt; color:#4172AD; ">// Remove manual boundary walls  from room editor before using this code</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">spawn_object_in_opening(global.myMaze.heroWallSide,  global.myMaze.heroPosition, cell_size, global.myMaze.w, global.myMaze.h,  object_hero, &quot;Hero&quot;);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">spawn_object_in_opening(global.myMaze.doorWallSide,  global.myMaze.doorPosition, cell_size, global.myMaze.w, global.myMaze.h,  obj_door, &quot;Door&quot;);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">show_debug_message(&quot;===  MAZE SETUP COMPLETE ===&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// Position objects safely away from walls with collision  checking</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">function  spawn_object_in_opening(_wallSide, _position, _cellSize, _mazeWidth,  _mazeHeight, _objectType, _objectName) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;=== SPAWNING &quot; +  string(_objectName) + &quot; ON WALL ===&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">    show_debug_message(&quot;Wall: &quot; +  string(_wallSide) + &quot;, Position: &quot; + string(_position));</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// Calculate  safe position along the specified wall</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var result_x, result_y;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var safe_distance = 80;  <strong><span style="color:#00B050; ">// Increased  clearance from walls</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    switch (_wallSide) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        case 0: <strong><span style="color:#00B050; ">//  Top wall - position horizontally along top</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_x = _position * _cellSize +  (_cellSize / 2);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_y = safe_distance;  <strong><span style="color:#00B050; ">// Safe  distance from top boundary</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">            break;</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        case 1: <strong><span style="color:#00B050; ">//  Right wall - position vertically along right side</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_x = (_mazeWidth * _cellSize)  - safe_distance;  </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_y = _position * _cellSize +  (_cellSize / 2);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            break;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        case 2: <strong><span style="color:#00B050; ">//  Bottom wall - position horizontally along bottom</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_x = _position * _cellSize +  (_cellSize / 2);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_y = (_mazeHeight *  _cellSize) - safe_distance;  // Safe  distance from bottom boundary</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            break;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        case 3: <strong><span style="color:#00B050; ">//  Left wall - position vertically along left side</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_x = safe_distance;  <strong><span style="color:#00B050; ">// Safe  distance from left boundary</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_y = _position * _cellSize +  (_cellSize / 2);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            break;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        default:</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_x = 80;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_y = 80;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            break;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// COLLISION  CHECKING: Find a safe position if the calculated one has walls</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var attempts = 0;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var max_attempts = 20;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var search_radius = 32;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    while (attempts &lt; max_attempts) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        <strong><span style="color:#00B050; ">// Check  if current position collides with walls</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var wall_collision =  collision_circle(result_x, result_y, 16, obj_wall_plain, false, true);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (wall_collision == noone) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            <strong><span style="color:#00B050; ">//  Position is safe, stop searching</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            break;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        } else {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            <strong><span style="color:#00B050; ">//  Try alternative positions around the original spot</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            var angle = (attempts * 45) %  360;  // Try different angles</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            var offset_x =  lengthdir_x(search_radius, angle);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            var offset_y =  lengthdir_y(search_radius, angle);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_x = result_x + offset_x;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_y = result_y + offset_y;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            <strong><span style="color:#00B050; ">//  Keep within room bounds</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_x = clamp(result_x, 64,  (_mazeWidth * _cellSize) - 64);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_y = clamp(result_y, 64,  (_mazeHeight * _cellSize) - 64);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            attempts++;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    if (attempts &gt;= max_attempts) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        <strong><span style="color:#833C0B; ">show_debug_message(&quot;WARNING:  Could not find safe position for &quot; + _objectName + &quot;, using  fallback&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        result_x = 80 + (_position * 64) %  200;  <strong><span style="color:#00B050; ">//  Fallback positioning</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        result_y = 80 + (_wallSide * 80) % 200;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <span style="color:#00B050; ">// DISTANCE  CHECK: Ensure objects aren't too close together</span></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var min_distance = 200;  <strong><span style="color:#00B050; ">// Minimum  distance between hero and door</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var other_object = noone;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    if (_objectType == object_hero) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        other_object = instance_find(obj_door,  0);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    } else {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        other_object =  instance_find(object_hero, 0);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    if (other_object != noone) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var current_distance =  point_distance(result_x, result_y, other_object.x, other_object.y);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (current_distance &lt; min_distance)  {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            show_debug_message(&quot;Objects  too close (&quot; + string(current_distance) + &quot;px), adjusting  position...&quot;);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            <strong><span style="color:#00B050; ">//  Move away from the other object</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            var push_direction =  point_direction(other_object.x, other_object.y, result_x, result_y);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            var push_distance = min_distance -  current_distance + 50;  </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_x +=  lengthdir_x(push_distance, push_direction);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_y +=  lengthdir_y(push_distance, push_direction);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            <strong><span style="color:#00B050; ">//  Keep within room bounds</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_x = clamp(result_x, 80,  (_mazeWidth * _cellSize) - 80);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            result_y = clamp(result_y, 80,  (_mazeHeight * _cellSize) - 80);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">            </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#833C0B; ">            show_debug_message(&quot;Adjusted  position: (&quot; + string(result_x) + &quot;, &quot; + string(result_y) +  &quot;)&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// Find  existing instance and move it, or create new one</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    var existing_instance;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    if (_objectType == object_hero) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        existing_instance =  instance_find(object_hero, 0);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    } else {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        existing_instance =  instance_find(_objectType, 0);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    if (existing_instance != noone) {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        existing_instance.x = result_x;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        existing_instance.y = result_y;</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        <strong><span style="color:#833C0B; ">show_debug_message(_objectName +  &quot; moved to: (&quot; + string(result_x) + &quot;, &quot; + string(result_y)  + &quot;)&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    } else {</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var new_instance =  instance_create_layer(result_x, result_y, &quot;Instances&quot;, _objectType);</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">        <strong><span style="color:#833C0B; ">show_debug_message(_objectName +  &quot; created at: (&quot; + string(result_x) + &quot;, &quot; +  string(result_y) + &quot;)&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    }</span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#833C0B; ">show_debug_message(&quot;=== &quot; +  string(_objectName) + &quot; SPAWNING COMPLETE ===&quot;);</span></strong></span></p>
+<p class="MsoNormal" style="margin-bottom:3.0pt;line-height:normal;"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Hero Create Event</h1>
+<p class="MsoNormal">We will be adding another event to the hero. This time it  will be the <strong><span style="font-family:'Calibri',sans-serif; ">create </span></strong>event. It will be used  for creating or spawning the hero and door object automatically for us when we  enter the maze.</p>
+<img src="Images/8.png" width="596" height="369">
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h1>Pulling Everything out of the Room</h1>
+<p class="MsoNormal">Now we want to pull everything out of the room.</p>
+<p class="MsoNormal">Remember to reach its item, you must be on the right layer,  that it resides on and then you might have to click directly on the object in  the section under the search box, and then hit the delete key to remove it.</p>
+<img src="Images/9.png" width="502" height="328">
+<p class="MsoNormal">What you should have left in your room, is nothing.</p>
+<img src="Images/10.png" width="592" height="315">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>The Controller Enters the Room</h1>
+<p class="MsoNormal">Throw the Controller object into the room.</p>
+<img src="Images/11.png" width="631" height="284">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Test your Game</h1>
+<p class="MsoNormal">Hit the play button at the top and test your game. If it  says something like it does not recognize some variable, make sure that you  named everything correctly. The code will be looking for things exactly as I  have named them.</p>
+<img src="Images/12.png" width="622" height="384">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Yes, this was a code extensive one. But we are done. So, I  hope you enjoyed this week&rsquo;s maze generating code.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
