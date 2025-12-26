@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Objects To Throw Around Room</title>
+    
+   <meta name="title" content="8 Objects to Throw Around Room">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="This week, we will be looking at how we can create a few objects to throw around the room. This would be things like, hearts, apples, and bombs. "/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="December, 26th, 2025" />
+
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2025/4_Game_Maker_2/8_Obects_to_throw_around_room/8_Objects_To_Throw_Around_Room.html ">
+
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.MsoBookTitle {
+letter-spacing:.25pt;
+font-weight:bold;
+font-style:italic;
+}
+span.Style1Char {
+font-family:"Cambria",serif;
+color:#C45911;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~8 Objects To Throw Around Room~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >3/2/2026</p>
+   
+<p>&nbsp;</p>
+<img src="images/1.png" width="292" height="260">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Create your images</p>
+<img src="images/2.png" width="338" height="175">
+<p class="MsoNormal">Open PhotoShop</p>
+<img src="images/3.png" width="83" height="84">
+<h1>Turn on Your Grid</h1>
+<p class="MsoNormal">Open your image, and then set up your guides in Photoshop.</p>
+<p class="MsoNormal"><span class="MsoBookTitle">Photoshop-Edit-Preferences- Guides,  Grid, &amp; Slices</span></p>
+<img src="images/4.png" width="506" height="292">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Set it to 32px</p>
+<img src="images/5.png" width="614" height="241">
+<p class="MsoNormal">Grid needs to be turned on.</p>
+<p class="MsoNormal"><span class="MsoBookTitle">View -Show-Grid</span></p>
+<img src="images/6.png" width="360" height="444">
+<p class="MsoNormal">Shrink your elements down to fit into the grid space.</p>
+<img src="images/7.png" width="400" height="317">
+<p class="MsoNormal">Duplicate the layers into their own images. You can open a  new image, set the size to 32px X 32px, and then slide each of these into it.  Rememeber to save each image individually.</p>
+<h1>Save to Game Maker Sprite Folder</h1>
+<p class="MsoNormal">Now save each individual picture to your sprite folder  inside of Game Maker</p>
+<p class="MsoNormal"><span class="MsoBookTitle">C:\Users\YOUR_USER_NAME\GameMakerProjects\My  First Game Project</span></p>
+<p class="MsoNormal"><span class="MsoBookTitle">&nbsp;</span></p>
+<p class="MsoNormal"><span class="Style1Char">Note-</span>We Use sprites with  objects, not tile maps, for these throw around objects. It is easier to  individually code each of our objects that way.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Create Your Sprites</h1>
+<p class="MsoNormal">Just bringing your images into the Game Makers sprite folder  does not add a sprite to the game. You must go through the process of actually  creating the Sprite in Game Maker. This is because the app will be doing some  other stuff behind the scene, so that your sprite will work. </p>
+<img src="images/8.png" width="347" height="177">
+<p class="MsoNormal">You will want to do this process for each one of your  sprites.</p>
+<p class="MsoNormal">Right click on the Sprite folder. Select -Create -Sprite.</p>
+<p class="MsoNormal" style="margin-bottom:0in;">sprite_heart</p>
+<p class="MsoNormal" style="margin-bottom:0in;">sprite_apple</p>
+<p class="MsoNormal" style="margin-bottom:0in;">sprite_bomb</p>
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<img src="images/9.png" width="279" height="544">
+<p class="MsoNormal">With your new sprite created in the Asset Browser, Go to the  Middle of your workspace. Import the correct image of the sprite. Don&rsquo;t worry  about the size of the sprite that is showing in your workspace, before you add  the image. As soon as it grabs your sprite, (if you had set the size to 32px) the  app will pick up that size, and show it correctly.</p>
+<img src="images/10.png" width="646" height="303">
+<p class="MsoNormal">Now do the same thing for your other two elements. The  apple, and the bomb.</p>
+<img src="images/11.png" width="211" height="136">
+<p class="MsoNormal">With all of your sprites in there you can now create your  objects</p>
+<img src="images/12.png" width="275" height="222">
+<h1>Create Your Objects</h1>
+<p class="MsoNormal">Right click on the Objects folder, and then create each one  of your objects. Use the appropriate sprite for the face of each object.</p>
+<img src="images/13.png" width="308" height="266">
+<p class="MsoNormal">Do the Same thing, creating the object for your other two  sprites, and give them the appropriate face.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="images/14.png" width="334" height="350">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Next Section</h1>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">In our next section, we will learn how to create code to  have each of these item respond   appropriately in a collision event with the hero object. </p>
+<p class="MsoNormal">Typical approach:</p>
+<p class="code"><strong><span style="color:#00B050; ">// In player collision event with  obj_heart</span></strong></p>
+<p class="code">if (place_meeting(x, y, obj_heart)) {</p>
+<p class="code">    health += 10;</p>
+<p class="code">    instance_destroy(other);</p>
+<p class="code">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
