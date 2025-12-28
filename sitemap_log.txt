@@ -1,4 +1,0 @@
-
---- Validation Run: 2025-09-01 05:31:26 ---
-Checked 134 URLs
-No broken links found.

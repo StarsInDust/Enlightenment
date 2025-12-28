@@ -1,0 +1,599 @@
+Self Generating Working Code 12 20 2025
+
+
+//SCRIPTS
+//~~~~~~~~~~~~~~~~~~~~~~~~~~     MAZE       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function maze(_style, _width, _height) constructor {
+    style = _style;
+    w = _width;
+    h = _height;
+    
+    // Generate random positions for hero and door along outer walls
+    var wall_positions = get_random_wall_positions(w, h);
+    heroWallSide = wall_positions[0]; // Which wall (0=top, 1=right, 2=bottom, 3=left)
+    heroPosition = wall_positions[1];      // Position along that wall
+    doorWallSide = wall_positions[2];      // Which wall for door
+    doorPosition = wall_positions[3];      // Position along that wall
+    
+    // Convert wall positions to interior cell coordinates
+    var hero_coords = wall_position_to_cell(heroWallSide, heroPosition, w, h);
+    var door_coords = wall_position_to_cell(doorWallSide, doorPosition, w, h);
+    
+    startPoint = hero_coords;
+    endPoint = door_coords;
+
+    grid = [];
+    for (var i = 0; i < w; i++) {
+        grid[i] = [];
+        for (var j = 0; j < h; j++) {
+            grid[i][j] = new maze_grid_space();
+        }
+    }
+    
+    show_debug_message("=== RANDOM POSITIONING ===");
+    show_debug_message("Hero on wall " + string(heroWallSide) + " at position " + string(heroPosition) + " -> cell [" + string(startPoint[0]) + ", " + string(startPoint[1]) + "]");
+    show_debug_message("Door on wall " + string(doorWallSide) + " at position " + string(doorPosition) + " -> cell [" + string(endPoint[0]) + ", " + string(endPoint[1]) + "]");
+    
+    // IMPORTANT: Pre-carve opening from boundary to start cell based on wall side
+    carve_entrance_opening_internal(heroWallSide, startPoint, self);
+}
+
+// Get random positions for hero and door on different walls
+function get_random_wall_positions(_width, _height) {
+    
+    show_debug_message("=== GENERATING RANDOM POSITIONS ===");
+    show_debug_message("Maze dimensions: " + string(_width) + " x " + string(_height));
+    
+    // Ensure hero and door are on different walls for variety
+    var hero_wall = irandom(3);  // 0=top, 1=right, 2=bottom, 3=left
+    var door_wall = hero_wall;
+    
+    // Keep trying until we get different walls
+    var attempts = 0;
+    while (door_wall == hero_wall && attempts < 10) {
+        door_wall = irandom(3);
+        attempts++;
+    }
+    
+    show_debug_message("Hero wall: " + string(hero_wall) + ", Door wall: " + string(door_wall));
+    
+    // Get random positions along each wall 
+    var hero_pos, door_pos;
+    
+    if (hero_wall == 0 || hero_wall == 2) {
+        // Top/bottom wall - position along width
+        var max_pos = max(1, _width - 2);  // Ensure valid range
+        hero_pos = 1 + irandom(max_pos - 1);
+    } else {
+        // Left/right wall - position along height
+        var max_pos = max(1, _height - 2);  // Ensure valid range
+        hero_pos = 1 + irandom(max_pos - 1);
+    }
+    
+    if (door_wall == 0 || door_wall == 2) {
+        // Top/bottom wall - position along width
+        var max_pos = max(1, _width - 2);
+        door_pos = 1 + irandom(max_pos - 1);
+    } else {
+        // Left/right wall - position along height
+        var max_pos = max(1, _height - 2);
+        door_pos = 1 + irandom(max_pos - 1);
+    }
+    
+    show_debug_message("Hero position: " + string(hero_pos) + ", Door position: " + string(door_pos));
+    show_debug_message("=== POSITION GENERATION COMPLETE ===");
+    
+    return [hero_wall, hero_pos, door_wall, door_pos];
+}
+
+// Convert wall position to interior cell coordinates
+function wall_position_to_cell(_wallSide, _position, _width, _height) {
+    switch (_wallSide) {
+        case 0: // Top wall
+            return [_position, 1];  // Interior cell just below top wall
+        case 1: // Right wall  
+            return [_width - 2, _position];  // Interior cell just left of right wall
+        case 2: // Bottom wall
+            return [_position, _height - 2];  // Interior cell just above bottom wall
+        case 3: // Left wall
+            return [1, _position];  // Interior cell just right of left wall
+    }
+    return [1, 1];  // Fallback
+}
+
+// Carve entrance opening based on wall side (internal version for constructor)
+function carve_entrance_opening_internal(_wallSide, _startPoint, _mazeInstance) {
+    var start_x = _startPoint[0];
+    var start_y = _startPoint[1];
+    
+    switch (_wallSide) {
+        case 0: // Top wall - carve down from boundary
+            if (start_y > 0) {
+                _mazeInstance.grid[start_x][start_y - 1].down = false;
+            }
+            break;
+        case 1: // Right wall - carve left from boundary
+            if (start_x < _mazeInstance.w - 1) {
+                _mazeInstance.grid[start_x][start_y].right = false;
+            }
+            break;
+        case 2: // Bottom wall - carve up from boundary
+            if (start_y < _mazeInstance.h - 1) {
+                _mazeInstance.grid[start_x][start_y].down = false;
+            }
+            break;
+        case 3: // Left wall - carve right from boundary  
+            if (start_x > 0) {
+                _mazeInstance.grid[start_x - 1][start_y].right = false;
+            }
+            break;
+    }
+}
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~MAZE_GENERATE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function maze_generate(_mazeStruct) {
+    var branches = ds_stack_create();
+    var g = _mazeStruct.grid;
+
+    var cp = [_mazeStruct.startPoint[0], _mazeStruct.startPoint[1]];
+    g[cp[0]][cp[1]].visited = true;
+    ds_stack_push(branches, cp);
+
+    while (!ds_stack_empty(branches)) {
+        cp = ds_stack_top(branches);
+
+        var pdir = ds_list_create();
+        if (cp[0] > 0 && !g[cp[0] - 1][cp[1]].visited) ds_list_add(pdir, [cp[0] - 1, cp[1]]);
+        if (cp[0] < _mazeStruct.w - 1 && !g[cp[0] + 1][cp[1]].visited) ds_list_add(pdir, [cp[0] + 1, cp[1]]);
+        if (cp[1] > 0 && !g[cp[0]][cp[1] - 1].visited) ds_list_add(pdir, [cp[0], cp[1] - 1]);
+        if (cp[1] < _mazeStruct.h - 1 && !g[cp[0]][cp[1] + 1].visited) ds_list_add(pdir, [cp[0], cp[1] + 1]);
+
+        if (ds_list_size(pdir) == 0) {
+            ds_stack_pop(branches);
+        } else {
+            ds_list_shuffle(pdir);
+            var np = pdir[| 0];
+
+            g[np[0]][np[1]].visited = true;
+            ds_stack_push(branches, np);
+
+            if (np[0] > cp[0]) g[cp[0]][cp[1]].right = false;
+            if (np[0] < cp[0]) g[np[0]][np[1]].right = false;
+            if (np[1] > cp[1]) g[cp[0]][cp[1]].down = false;
+            if (np[1] < cp[1]) g[np[0]][np[1]].down = false;
+        }
+
+        ds_list_destroy(pdir);
+    }
+
+    ds_stack_destroy(branches);
+}
+
+//~~~~~~~~~~~~~~~~~~~MAZE GRID SPACE~~~~~~~~~~~~~~~~~~~~~~
+function maze_grid_space() constructor {
+    visited = false;
+    right = true;
+    down = true;
+}
+
+//~~~~~~~~~~~~~~~~~~~SCRIPT SPAWN MAZE WALLS ~~~~~~~~~~~~~~~~~~~~~~
+// This function creates walls on a proper grid where:
+// - Each cell is _cellSize x _cellSize pixels
+// - Walls are placed at the edges between cells
+// - The maze algorithm's right/down properties indicate walls between adjacent cells
+
+function spawn_maze_walls(_mazeStruct, _cellSize, _xOffset, _yOffset) {
+    var m = _mazeStruct;
+    var s = _cellSize;
+    var xx = _xOffset;
+    var yy = _yOffset;
+    
+    // Wall sprite size is 32px 
+    var wall_size = 32;
+    var walls_per_cell = s / wall_size;  // How many wall tiles fit per cell edge
+
+    show_debug_message("=== BUILDING GRID-BASED MAZE WALLS ===");
+    show_debug_message("Maze size: " + string(m.w) + " x " + string(m.h) + " cells");
+    show_debug_message("Cell size: " + string(s) + "px, Wall tile size: " + string(wall_size) + "px");
+    show_debug_message("Walls per cell edge: " + string(walls_per_cell));
+    
+    // Track placed walls to prevent duplicates
+    var placed_walls = ds_map_create();
+    
+    // Create interior maze walls based on the maze algorithm
+    for (var i = 0; i < m.w; i++) {
+        for (var j = 0; j < m.h; j++) {
+            // Calculate the TOP-LEFT corner of this cell in pixels
+            var cell_left = xx + i * s;
+            var cell_top = yy + j * s;
+            
+            // RIGHT WALL - Wall between cell [i,j] and cell [i+1,j]
+            // Only place if NOT at the rightmost column AND the maze says there's a wall
+            if (i < m.w - 1 && m.grid[i][j].right == true) {
+                // Wall goes along the right edge of this cell
+                var wall_x = cell_left + s;  // Right edge of cell
+                
+                // Place wall tiles along the full height of the cell edge
+                for (var tile = 0; tile < walls_per_cell; tile++) {
+                    var wall_y = cell_top + tile * wall_size;
+                    
+                    // Create unique key to prevent duplicate walls
+                    var wall_key = string(wall_x) + "_" + string(wall_y);
+                    
+                    if (!ds_map_exists(placed_walls, wall_key)) {
+                        // Check if this position would collide with door
+                        if (!position_meeting(wall_x, wall_y, obj_door)) {
+                            var wall_inst = instance_create_layer(wall_x, wall_y, "Walls", obj_wall_plain);
+                            // FORCE 32px size by scaling if sprite is 64px
+                            wall_inst.image_xscale = 0.5;  // Scale down from 64px to 32px
+                            wall_inst.image_yscale = 0.5;  // Scale down from 64px to 32px
+                            ds_map_add(placed_walls, wall_key, true);
+                        }
+                    }
+                }
+            }
+            
+            // DOWN WALL - Wall between cell [i,j] and cell [i,j+1]
+            // Only place if NOT at the bottom row AND the maze says there's a wall
+            if (j < m.h - 1 && m.grid[i][j].down == true) {
+                // Wall goes along the bottom edge of this cell
+                var wall_y = cell_top + s;  // Bottom edge of cell
+                
+                // Place wall tiles along the full width of the cell edge
+                for (var tile = 0; tile < walls_per_cell; tile++) {
+                    var wall_x = cell_left + tile * wall_size;
+                    
+                    // Create unique key to prevent duplicate walls
+                    var wall_key = string(wall_x) + "_" + string(wall_y);
+                    
+                    if (!ds_map_exists(placed_walls, wall_key)) {
+                        // Check if this position would collide with door
+                        if (!position_meeting(wall_x, wall_y, obj_door)) {
+                            var wall_inst = instance_create_layer(wall_x, wall_y, "Walls", obj_wall_plain);
+                            // FORCE 32px size by scaling if sprite is 64px
+                            wall_inst.image_xscale = 0.5;  // Scale down from 64px to 32px
+                            wall_inst.image_yscale = 0.5;  // Scale down from 64px to 32px
+                            ds_map_add(placed_walls, wall_key, true);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    var total_walls = ds_map_size(placed_walls);
+    
+    // UPDATED: Generate boundary walls with random entrance and exit openings
+    show_debug_message("=== BUILDING BOUNDARY WALLS ===");
+    show_debug_message("Maze area: " + string(m.w * s) + "x" + string(m.h * s) + " pixels");
+    
+    // Calculate entrance and exit positions based on random wall assignments
+    var hero_wall = m.heroWallSide;
+    var hero_pos = m.heroPosition;  
+    var door_wall = m.doorWallSide;
+    var door_pos = m.doorPosition;
+    
+    // TOP BOUNDARY WALL - solid (no openings)
+    show_debug_message("Creating TOP boundary walls...");
+    
+    for (var wall_x_pos = 0; wall_x_pos < (m.w * s); wall_x_pos += wall_size) {
+        var boundary_wall = instance_create_layer(wall_x_pos, 0, "Walls", obj_wall_plain);
+        boundary_wall.image_xscale = 0.5;  // 32px
+        boundary_wall.image_yscale = 0.5;  // 32px
+        total_walls++;
+        if (wall_x_pos == 0) show_debug_message("First TOP wall at: (" + string(wall_x_pos) + ", 0)");
+    }
+    show_debug_message("TOP boundary complete.");
+    
+    // BOTTOM BOUNDARY WALL - solid (no openings)
+    show_debug_message("Creating BOTTOM boundary walls...");
+    var bottom_y = (m.h * s) - wall_size;  // Just inside the room
+    
+    for (var wall_x_pos = 0; wall_x_pos < (m.w * s); wall_x_pos += wall_size) {
+        var boundary_wall = instance_create_layer(wall_x_pos, bottom_y, "Walls", obj_wall_plain);
+        boundary_wall.image_xscale = 0.5;  // 32px
+        boundary_wall.image_yscale = 0.5;  // 32px
+        total_walls++;
+        if (wall_x_pos == 0) show_debug_message("First BOTTOM wall at: (" + string(wall_x_pos) + ", " + string(bottom_y) + ")");
+    }
+    show_debug_message("BOTTOM boundary complete.");
+    
+    // LEFT BOUNDARY WALL - solid (no openings)
+    show_debug_message("Creating LEFT boundary walls...");
+    
+    for (var wall_y_pos = 0; wall_y_pos < (m.h * s); wall_y_pos += wall_size) {
+        var boundary_wall = instance_create_layer(0, wall_y_pos, "Walls", obj_wall_plain);
+        boundary_wall.image_xscale = 0.5;  // 32px
+        boundary_wall.image_yscale = 0.5;  // 32px
+        total_walls++;
+        if (wall_y_pos == 0) show_debug_message("First LEFT wall at: (0, " + string(wall_y_pos) + ")");
+    }
+    
+    // RIGHT BOUNDARY WALL - solid (no openings)
+    show_debug_message("Creating RIGHT boundary walls...");
+    var right_x = (m.w * s) - wall_size;  // Just inside the room
+    
+    show_debug_message("Right wall x position: " + string(right_x));
+    
+    for (var wall_y_pos = 0; wall_y_pos < (m.h * s); wall_y_pos += wall_size) {
+        var boundary_wall = instance_create_layer(right_x, wall_y_pos, "Walls", obj_wall_plain);
+        boundary_wall.image_xscale = 0.5;  // 32px
+        boundary_wall.image_yscale = 0.5;  // 32px
+        total_walls++;
+        if (wall_y_pos == 0) show_debug_message("First RIGHT wall at: (" + string(right_x) + ", " + string(wall_y_pos) + ")");
+    }
+    
+    show_debug_message("Hero opening on wall " + string(hero_wall) + " at position " + string(hero_pos));
+    show_debug_message("Door opening on wall " + string(door_wall) + " at position " + string(door_pos));
+    
+    ds_map_destroy(placed_walls);
+    
+    show_debug_message("Total walls created: " + string(total_walls) + " (interior + boundary)");
+    show_debug_message("=== MAZE WALL GENERATION COMPLETE ===");
+}
+
+
+
+
+
+
+
+
+
+//~~~~~~~~~~ THE CONTROLLER OBJECT CREATE EVENT ~~~~~~~~~~~~~~~~~~~~~~~~
+// for 1280x704 room size 
+
+// Room dimensions: 1280 x 704 (your new requirements)
+// Cell size: 96px (allows 64px hero + movement space with 32px walls)
+// Wall size: 32px (as requested)
+
+var target_width = 1280;
+var target_height = 704;
+var cell_size = 128;  // More space for 64px hero movement 
+
+// Calculate how many cells fit in the new room dimensions
+var maze_width = floor(target_width / cell_size);    // Should be 13 cells (1280/96)
+var maze_height = floor(target_height / cell_size);  // Should be 7 cells (704/96)
+
+show_debug_message("=== CREATING MAZE FOR NEW ROOM SIZE ===");
+show_debug_message("Room dimensions: " + string(target_width) + " x " + string(target_height));
+show_debug_message("Creating maze: " + string(maze_width) + " x " + string(maze_height) + " cells");
+show_debug_message("Cell size: " + string(cell_size) + "px");
+show_debug_message("Wall size: 32px");
+
+var time_seed = get_timer();     // Get high-precision timer (avoid reserved 'current_time')
+random_set_seed(time_seed);      // Set specific seed
+show_debug_message("Random seed set to: " + string(time_seed));
+show_debug_message("Testing random values: " + string(irandom(100)) + ", " + string(irandom(100)) + ", " + string(irandom(100)));
+
+// Create and generate the maze
+global.myMaze = new maze("recursive_backtrack", maze_width, maze_height);
+maze_generate(global.myMaze);
+
+// Spawn the maze walls with no offset (fills entire room)
+spawn_maze_walls(global.myMaze, cell_size, 0, 0);
+
+// NOTE: 
+// Remove manual boundary walls from room editor before using this code
+
+spawn_object_in_opening(global.myMaze.heroWallSide, global.myMaze.heroPosition, cell_size, global.myMaze.w, global.myMaze.h, object_hero, "Hero");
+spawn_object_in_opening(global.myMaze.doorWallSide, global.myMaze.doorPosition, cell_size, global.myMaze.w, global.myMaze.h, obj_door, "Door");
+
+show_debug_message("=== MAZE SETUP COMPLETE ===");
+
+// Position objects safely away from walls with collision checking
+function spawn_object_in_opening(_wallSide, _position, _cellSize, _mazeWidth, _mazeHeight, _objectType, _objectName) {
+    show_debug_message("=== SPAWNING " + string(_objectName) + " ON WALL ===");
+    show_debug_message("Wall: " + string(_wallSide) + ", Position: " + string(_position));
+    
+    // Calculate safe position along the specified wall
+    var result_x, result_y;
+    var safe_distance = 80;  // Increased clearance from walls
+    
+    switch (_wallSide) {
+        case 0: // Top wall - position horizontally along top
+            result_x = _position * _cellSize + (_cellSize / 2);
+            result_y = safe_distance;  // Safe distance from top boundary
+            break;
+        case 1: // Right wall - position vertically along right side
+            result_x = (_mazeWidth * _cellSize) - safe_distance;  
+            result_y = _position * _cellSize + (_cellSize / 2);
+            break;
+        case 2: // Bottom wall - position horizontally along bottom
+            result_x = _position * _cellSize + (_cellSize / 2);
+            result_y = (_mazeHeight * _cellSize) - safe_distance;  // Safe distance from bottom boundary
+            break;
+        case 3: // Left wall - position vertically along left side
+            result_x = safe_distance;  // Safe distance from left boundary
+            result_y = _position * _cellSize + (_cellSize / 2);
+            break;
+        default:
+            result_x = 80;
+            result_y = 80;
+            break;
+    }
+    
+    // COLLISION CHECKING: Find a safe position if the calculated one has walls
+    var attempts = 0;
+    var max_attempts = 20;
+    var search_radius = 32;
+    
+    while (attempts < max_attempts) {
+        // Check if current position collides with walls
+        var wall_collision = collision_circle(result_x, result_y, 16, obj_wall_plain, false, true);
+        
+        if (wall_collision == noone) {
+            // Position is safe, stop searching
+            break;
+        } else {
+            // Try alternative positions around the original spot
+            var angle = (attempts * 45) % 360;  // Try different angles
+            var offset_x = lengthdir_x(search_radius, angle);
+            var offset_y = lengthdir_y(search_radius, angle);
+            
+            result_x = result_x + offset_x;
+            result_y = result_y + offset_y;
+            
+            // Keep within room bounds
+            result_x = clamp(result_x, 64, (_mazeWidth * _cellSize) - 64);
+            result_y = clamp(result_y, 64, (_mazeHeight * _cellSize) - 64);
+            
+            attempts++;
+        }
+    }
+    
+    if (attempts >= max_attempts) {
+        show_debug_message("WARNING: Could not find safe position for " + _objectName + ", using fallback");
+        result_x = 80 + (_position * 64) % 200;  // Fallback positioning
+        result_y = 80 + (_wallSide * 80) % 200;
+    }
+    
+    // DISTANCE CHECK: Ensure objects aren't too close together
+    var min_distance = 200;  // Minimum distance between hero and door
+    var other_object = noone;
+    
+    if (_objectType == object_hero) {
+        other_object = instance_find(obj_door, 0);
+    } else {
+        other_object = instance_find(object_hero, 0);
+    }
+    
+    if (other_object != noone) {
+        var current_distance = point_distance(result_x, result_y, other_object.x, other_object.y);
+        
+        if (current_distance < min_distance) {
+            show_debug_message("Objects too close (" + string(current_distance) + "px), adjusting position...");
+            
+            // Move away from the other object
+            var push_direction = point_direction(other_object.x, other_object.y, result_x, result_y);
+            var push_distance = min_distance - current_distance + 50;  
+            
+            result_x += lengthdir_x(push_distance, push_direction);
+            result_y += lengthdir_y(push_distance, push_direction);
+            
+            // Keep within room bounds
+            result_x = clamp(result_x, 80, (_mazeWidth * _cellSize) - 80);
+            result_y = clamp(result_y, 80, (_mazeHeight * _cellSize) - 80);
+            
+            show_debug_message("Adjusted position: (" + string(result_x) + ", " + string(result_y) + ")");
+        }
+    }
+    
+    // Find existing instance and move it, or create new one
+    var existing_instance;
+    if (_objectType == object_hero) {
+        existing_instance = instance_find(object_hero, 0);
+    } else {
+        existing_instance = instance_find(_objectType, 0);
+    }
+    
+    if (existing_instance != noone) {
+        existing_instance.x = result_x;
+        existing_instance.y = result_y;
+        show_debug_message(_objectName + " moved to: (" + string(result_x) + ", " + string(result_y) + ")");
+    } else {
+        var new_instance = instance_create_layer(result_x, result_y, "Instances", _objectType);
+        show_debug_message(_objectName + " created at: (" + string(result_x) + ", " + string(result_y) + ")");
+    }
+    
+    show_debug_message("=== " + string(_objectName) + " SPAWNING COMPLETE ===");
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~  THE HERO CREATE EVENT  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+persistent = true;
+
+//Create Event
+// Hero startup - check for wall conflicts
+show_debug_message("=== HERO STARTUP CHECK ===");
+show_debug_message("Hero spawned at: (" + string(x) + ", " + string(y) + ")");
+
+// Check if any walls exist at hero position
+var wall_at_position = instance_position(x, y, obj_wall_plain);
+if (wall_at_position != noone) {
+    show_debug_message("WARNING: Wall found at hero position!");
+    show_debug_message("Wall ID: " + string(wall_at_position));
+}
+
+// Check area around hero for walls
+var walls_nearby = collision_rectangle(x - 32, y - 32, x + 32, y + 32, obj_wall_plain, false, true);
+
+// TYPE CHECK: Verify we got a ds_list
+show_debug_message("Type check - walls_nearby type: " + string(typeof(walls_nearby)));
+if (walls_nearby == noone) {
+    show_debug_message("No collision result (noone returned)");
+} else if (!ds_exists(walls_nearby, ds_type_list)) {
+    show_debug_message("ERROR: Expected ds_list but got different type!");
+    show_debug_message("Actual type: " + string(typeof(walls_nearby)));
+    // Handle non-list result - could be a single instance
+    if (instance_exists(walls_nearby)) {
+        show_debug_message("Got single wall instance instead of list");
+        show_debug_message("  Wall at (" + string(walls_nearby.x) + ", " + string(walls_nearby.y) + ")");
+    }
+} else {
+    // We have a valid ds_list - safe to use ds_list functions
+    if (ds_list_size(walls_nearby) > 0) {
+        show_debug_message("Walls found near hero position:");
+        for (var i = 0; i < ds_list_size(walls_nearby); i++) {
+            var wall_inst = walls_nearby[| i];
+            show_debug_message("  Wall " + string(i) + " at (" + string(wall_inst.x) + ", " + string(wall_inst.y) + ")");
+        }
+    } else {
+        show_debug_message("ds_list exists but is empty");
+    }
+    // Always destroy the ds_list to prevent memory leaks
+    ds_list_destroy(walls_nearby);
+}
+
+show_debug_message("=== HERO CHECK COMPLETE ===");
+
+//~~~~~~~~~~~~~~  HERO STEP EVENT  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// --- Movement Input ---
+var move_x = keyboard_check(vk_right) - keyboard_check(vk_left);
+var move_y = keyboard_check(vk_down)  - keyboard_check(vk_up);
+
+var spd = 4;
+var dx  = move_x * spd;
+var dy  = move_y * spd;
+
+// --- Collision Check ---
+if (dx != 0 || dy != 0) {
+    // Check full diagonal move
+    if (!place_meeting(x + dx, y + dy, obj_wall_plain) &&
+        !place_meeting(x + dx, y + dy, obj_wall_crackedA) &&
+        !place_meeting(x + dx, y + dy, obj_wall_crackedB)) {
+        x += dx;
+        y += dy;
+    } else {
+        // Try horizontal only
+        if (!place_meeting(x + dx, y, obj_wall_plain) &&
+            !place_meeting(x + dx, y, obj_wall_crackedA) &&
+            !place_meeting(x + dx, y, obj_wall_crackedB)) {
+            x += dx;
+        }
+
+        // Try vertical only
+        if (!place_meeting(x, y + dy, obj_wall_plain) &&
+            !place_meeting(x, y + dy, obj_wall_crackedA) &&
+            !place_meeting(x, y + dy, obj_wall_crackedB)) {
+            y += dy;
+        }
+    }
+}
+
+// --- Check for Exit (always runs) ---
+if (place_meeting(x, y, obj_door)) {
+    show_debug_message("? Hero reached the dungeon exit!");
+    // Example: room_goto_next();
+}
+
+// --- Sprite Switching ---
+if (move_y < 0) {
+    sprite_index = sprite_hero_back;
+} else if (move_x > 0) {
+    sprite_index = sprite_hero_right;
+} else if (move_x < 0) {
+    sprite_index = sprite_hero_left;
+} else {
+    sprite_index = sprite_hero;
+}
+
