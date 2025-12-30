@@ -206,6 +206,7 @@
         .number { color: #bd93f9; }
         .comment { color: #6272a4; }
         .function { color: #50fa7b; }
+        .user-defined { color: #00BFFF; font-weight: 600; }  /* Bright blue for user-defined names */
     </style>
 </head>
 <body>
@@ -217,6 +218,9 @@
 
         <div class="category-filter">
             <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="keywords">🔑 Keywords</button>
+            <button class="filter-btn" data-category="builtins">🛠️ Built-ins</button>
+            <button class="filter-btn" data-category="methods">📌 Methods</button>
             <button class="filter-btn" data-category="basics">Basics</button>
             <button class="filter-btn" data-category="strings">Strings</button>
             <button class="filter-btn" data-category="lists">Lists</button>
@@ -233,6 +237,380 @@
 
     <script>
         const flashcards = [
+            // KEYWORDS - MEMORIZE THESE!
+            {
+                category: 'keywords',
+                title: 'Control Flow Keywords',
+                question: 'What are the keywords for making decisions and controlling program flow?',
+                code: `if     # Start a condition
+elif   # "Else if" - additional condition
+else   # What to do if conditions are false
+
+while  # Loop while condition is true
+for    # Loop through items
+in     # Check membership or iterate
+
+break     # Exit a loop early
+continue  # Skip to next iteration
+pass      # Do nothing (placeholder)`,
+                explanation: '🔑 These 9 keywords control the FLOW of your program. You MUST spell them exactly as shown - no capital letters!'
+            },
+            {
+                category: 'keywords',
+                title: 'Function & Return Keywords',
+                question: 'What keywords are used to create functions?',
+                code: `def    # Define a function
+return # Send a value back from function
+lambda # Create a small anonymous function
+
+# Example:
+def <span class="user-defined">my_function</span>(<span class="user-defined">x</span>):
+    return <span class="user-defined">x</span> * 2
+
+# Lambda example:
+<span class="user-defined">double</span> = lambda <span class="user-defined">x</span>: <span class="user-defined">x</span> * 2`,
+                explanation: '🔑 def and return are the main function keywords. lambda is for quick one-line functions. Everything in <span class="user-defined" style="color: #00BFFF;">blue</span> is your choice!'
+            },
+            {
+                category: 'keywords',
+                title: 'Boolean & Logic Keywords',
+                question: 'What are the keywords for True/False logic?',
+                code: `True   # Boolean true value
+False  # Boolean false value
+None   # Represents "nothing" or "no value"
+
+and    # Both conditions must be true
+or     # At least one condition must be true
+not    # Reverse the boolean
+is     # Check if two things are the same object
+
+# Examples:
+if <span class="user-defined">age</span> > 18 and <span class="user-defined">has_license</span>:
+if <span class="user-defined">x</span> is None:
+if not <span class="user-defined">is_closed</span>:`,
+                explanation: '🔑 Note the capital T and F in True/False! These are EXACT spellings. and/or/not/is are always lowercase.'
+            },
+            {
+                category: 'keywords',
+                title: 'Import Keywords',
+                question: 'What keywords bring in external code?',
+                code: `import    # Bring in a module
+from      # Import specific parts
+as        # Rename what you import
+
+# Examples:
+import os
+import math as m
+from random import choice, randint
+from datetime import datetime as dt`,
+                explanation: '🔑 These 3 keywords let you use code from Python libraries. They always go at the top of your file!'
+            },
+            {
+                category: 'keywords',
+                title: 'Other Essential Keywords',
+                question: 'What are the other important keywords to know?',
+                code: `with   # Safely work with files (auto-closes)
+del    # Delete a variable or item
+
+class  # Create a custom object type (advanced)
+
+try / except / finally  # Handle errors gracefully
+raise  # Create an error
+
+global / nonlocal  # Access variables from outer scope
+yield  # Used in generators (advanced)`,
+                explanation: '🔑 with and del are most common for beginners. try/except handles errors. The others are for advanced topics.'
+            },
+            {
+                category: 'keywords',
+                title: 'Complete Keywords List',
+                question: 'Can you list ALL 35 Python keywords?',
+                code: `# Flow Control (9)
+if, elif, else, while, for, in, break, continue, pass
+
+# Functions (3)
+def, return, lambda
+
+# Boolean/Logic (7)
+True, False, None, and, or, not, is
+
+# Import (3)
+import, from, as
+
+# Context (1)
+with
+
+# Variables (1)
+del
+
+# Error Handling (4)
+try, except, finally, raise
+
+# Advanced (7)
+class, global, nonlocal, yield, assert, async, await`,
+                explanation: '🔑 Memorize these 35 words! If it\'s not on this list, it\'s either a built-in function or YOUR choice of name!'
+            },
+
+            // BUILT-IN FUNCTIONS
+            {
+                category: 'builtins',
+                title: 'Input/Output Functions',
+                question: 'What are the basic I/O built-in functions?',
+                code: `print()   # Display output to console
+input()   # Get text input from user
+
+# Examples:
+print("Hello")
+print("Age:", 25, "years")
+<span class="user-defined">name</span> = input("Your name? ")
+<span class="user-defined">age</span> = int(input("Your age? "))`,
+                explanation: '🛠️ print() and input() are the only 2 I/O functions you\'ll use constantly. input() ALWAYS returns a string!'
+            },
+            {
+                category: 'builtins',
+                title: 'Type Conversion Functions',
+                question: 'How do I convert between data types?',
+                code: `int()    # Convert to integer
+float()  # Convert to decimal number
+str()    # Convert to string (text)
+bool()   # Convert to True/False
+
+list()   # Convert to list
+tuple()  # Convert to tuple (immutable list)
+dict()   # Create a dictionary
+set()    # Create a set (unique items)
+
+# Examples:
+<span class="user-defined">age</span> = int("25")      # "25" → 25
+<span class="user-defined">price</span> = float("9.99")  # "9.99" → 9.99`,
+                explanation: '🛠️ These 8 functions convert data types. int(), float(), str() are the most common. Must use exact spelling!'
+            },
+            {
+                category: 'builtins',
+                title: 'Math & Number Functions',
+                question: 'What are the built-in math functions?',
+                code: `abs()    # Absolute value (remove negative)
+round()  # Round to nearest integer
+min()    # Find smallest value
+max()    # Find largest value
+sum()    # Add all numbers together
+pow()    # Power (x to the power of y)
+
+# Examples:
+print(abs(-10))           # 10
+print(round(3.7))         # 4
+print(min(5, 2, 8))       # 2
+print(max([1, 9, 3]))     # 9
+print(sum([1, 2, 3, 4]))  # 10`,
+                explanation: '🛠️ These 6 functions do math without needing to import anything. They work with numbers and lists of numbers.'
+            },
+            {
+                category: 'builtins',
+                title: 'List & Sequence Functions',
+                question: 'What built-in functions work with lists?',
+                code: `len()       # Length (how many items)
+range()     # Generate sequence of numbers
+enumerate() # Loop with index numbers
+zip()       # Combine multiple lists
+sorted()    # Return a sorted copy
+reversed()  # Return a reversed copy
+
+# Examples:
+print(len([1, 2, 3]))          # 3
+for <span class="user-defined">i</span> in range(5):          # 0,1,2,3,4
+for <span class="user-defined">i</span>, <span class="user-defined">item</span> in enumerate(<span class="user-defined">list</span>):`,
+                explanation: '🛠️ These 6 functions help you work with lists and sequences. len() and range() are used ALL the time!'
+            },
+            {
+                category: 'builtins',
+                title: 'Type Checking Functions',
+                question: 'How do I check what type something is?',
+                code: `type()       # Returns the type of an object
+isinstance() # Check if object is a specific type
+
+# Examples:
+print(type(42))           # <class 'int'>
+print(type("hello"))      # <class 'str'>
+print(type([1, 2]))       # <class 'list'>
+
+if isinstance(<span class="user-defined">x</span>, int):
+    print("It's a number!")
+    
+if isinstance(<span class="user-defined">items</span>, list):
+    print("It's a list!")`,
+                explanation: '🛠️ type() tells you what something is. isinstance() checks if something is a certain type. Useful for debugging!'
+            },
+            {
+                category: 'builtins',
+                title: 'File & System Functions',
+                question: 'What built-in functions work with files?',
+                code: `open()  # Open a file for reading/writing
+help()  # Get help about a function/object
+dir()   # List all methods/attributes
+id()    # Get unique ID of an object
+
+# Examples:
+with open("file.txt", "r") as <span class="user-defined">f</span>:
+    <span class="user-defined">content</span> = <span class="user-defined">f</span>.read()
+
+help(print)  # Shows print documentation
+dir(<span class="user-defined">my_list</span>)  # Shows all list methods`,
+                explanation: '🛠️ open() is crucial for files. help() and dir() are great when learning - they show you what functions/methods exist!'
+            },
+            {
+                category: 'builtins',
+                title: 'Complete Built-ins List (Most Common)',
+                question: 'What are the most important built-in functions to memorize?',
+                code: `# THE BIG 20 - Memorize these first!
+print()    input()     # I/O
+int()      float()     str()       # Type conversion
+len()      range()     # Lists/sequences
+type()     isinstance()  # Type checking
+min()      max()       sum()       # Math
+abs()      round()     # More math
+open()     # Files
+enumerate()  sorted()  # List helpers
+zip()      reversed()  # More list helpers
+
+# Less common but useful:
+help()  dir()  id()  all()  any()  format()
+map()  filter()  iter()  next()  ord()  chr()`,
+                explanation: '🛠️ Focus on the BIG 20 first! Once you know these by heart, the others will make sense when you need them.'
+            },
+
+            // METHODS - ORGANIZED BY TYPE
+            {
+                category: 'methods',
+                title: 'String Methods - Case & Format',
+                question: 'What methods change string capitalization?',
+                code: `<span class="user-defined">text</span> = "hello world"
+
+<span class="user-defined">text</span>.upper()       # "HELLO WORLD"
+<span class="user-defined">text</span>.lower()       # "hello world"
+<span class="user-defined">text</span>.capitalize()  # "Hello world"
+<span class="user-defined">text</span>.title()       # "Hello World"
+<span class="user-defined">text</span>.swapcase()    # "HELLO WORLD" → "hello world"
+
+<span class="user-defined">text</span>.strip()   # Remove whitespace from ends
+<span class="user-defined">text</span>.lstrip()  # Remove from left
+<span class="user-defined">text</span>.rstrip()  # Remove from right`,
+                explanation: '📌 These 8 methods CHANGE how text looks but don\'t modify the original string. Remember: strings are immutable!'
+            },
+            {
+                category: 'methods',
+                title: 'String Methods - Search & Check',
+                question: 'What methods search or check string content?',
+                code: `<span class="user-defined">text</span> = "Hello Python"
+
+<span class="user-defined">text</span>.startswith("He")   # True
+<span class="user-defined">text</span>.endswith("on")     # True
+<span class="user-defined">text</span>.find("Py")         # 6 (index where found)
+<span class="user-defined">text</span>.count("l")         # 2 (how many times)
+
+<span class="user-defined">text</span>.isalpha()   # All letters?
+<span class="user-defined">text</span>.isdigit()   # All numbers?
+<span class="user-defined">text</span>.isalnum()   # Letters/numbers only?
+<span class="user-defined">text</span>.isspace()   # All whitespace?`,
+                explanation: '📌 These 8 methods CHECK things about strings. The "is" methods return True or False. find() returns position.'
+            },
+            {
+                category: 'methods',
+                title: 'String Methods - Split & Join',
+                question: 'How do I split strings apart or join them together?',
+                code: `<span class="user-defined">text</span> = "apple,banana,cherry"
+
+<span class="user-defined">text</span>.split(",")     # ["apple", "banana", "cherry"]
+<span class="user-defined">text</span>.split()        # Splits on whitespace
+
+<span class="user-defined">words</span> = ["Hello", "World"]
+" ".join(<span class="user-defined">words</span>)    # "Hello World"
+",".join(<span class="user-defined">words</span>)   # "Hello,World"
+
+<span class="user-defined">text</span>.replace("apple", "orange")  # Replace text`,
+                explanation: '📌 .split() breaks a string into a list. .join() combines a list into a string. .replace() swaps text.'
+            },
+            {
+                category: 'methods',
+                title: 'List Methods - Adding Items',
+                question: 'What methods add items to lists?',
+                code: `<span class="user-defined">fruits</span> = ["apple", "banana"]
+
+<span class="user-defined">fruits</span>.append("cherry")      # Add to end
+<span class="user-defined">fruits</span>.insert(0, "mango")   # Add at position
+<span class="user-defined">fruits</span>.extend(["kiwi", "grape"])  # Add multiple
+
+# Results:
+# append:  ["apple", "banana", "cherry"]
+# insert:  ["mango", "apple", "banana"]
+# extend:  ["apple", "banana", "kiwi", "grape"]`,
+                explanation: '📌 These 3 methods ADD to lists. append() = one item at end. insert() = one at specific spot. extend() = multiple items.'
+            },
+            {
+                category: 'methods',
+                title: 'List Methods - Removing Items',
+                question: 'What methods remove items from lists?',
+                code: `<span class="user-defined">fruits</span> = ["apple", "banana", "cherry"]
+
+<span class="user-defined">fruits</span>.remove("banana")  # Remove by value
+<span class="user-defined">fruits</span>.pop()             # Remove & return last item
+<span class="user-defined">fruits</span>.pop(0)            # Remove & return at index
+<span class="user-defined">fruits</span>.clear()           # Remove everything
+
+# Also:
+del <span class="user-defined">fruits</span>[0]  # Delete by index (keyword, not method)`,
+                explanation: '📌 remove() finds and removes by value. pop() removes by position and gives it back. clear() empties the list.'
+            },
+            {
+                category: 'methods',
+                title: 'List Methods - Organizing',
+                question: 'What methods organize or search lists?',
+                code: `<span class="user-defined">numbers</span> = [3, 1, 4, 1, 5]
+
+<span class="user-defined">numbers</span>.sort()          # Sort in place
+<span class="user-defined">numbers</span>.reverse()       # Reverse in place
+<span class="user-defined">numbers</span>.count(1)        # How many 1's? → 2
+<span class="user-defined">numbers</span>.index(4)        # Where is 4? → 2
+
+<span class="user-defined">copy_list</span> = <span class="user-defined">numbers</span>.copy()  # Make a copy`,
+                explanation: '📌 .sort() and .reverse() CHANGE the original list. .count() and .index() just search. .copy() makes a duplicate.'
+            },
+            {
+                category: 'methods',
+                title: 'Dictionary Methods',
+                question: 'What are the essential dictionary methods?',
+                code: `<span class="user-defined">person</span> = {"name": "Alice", "age": 25}
+
+<span class="user-defined">person</span>.get("name")          # Get value safely
+<span class="user-defined">person</span>.get("email", "N/A")  # With default
+
+<span class="user-defined">person</span>.keys()      # Get all keys
+<span class="user-defined">person</span>.values()    # Get all values  
+<span class="user-defined">person</span>.items()     # Get key-value pairs
+
+<span class="user-defined">person</span>.pop("age")  # Remove and return value
+<span class="user-defined">person</span>.clear()     # Remove everything`,
+                explanation: '📌 .get() is safer than brackets []. .keys()/.values()/.items() used for looping. .pop() removes items.'
+            },
+            {
+                category: 'methods',
+                title: 'Methods Summary - Quick Reference',
+                question: 'What are the most important methods to memorize?',
+                code: `# STRING (Top 10)
+.upper()  .lower()  .strip()  .split()  .join()
+.replace()  .startswith()  .endswith()
+.find()  .count()
+
+# LIST (Top 10)
+.append()  .extend()  .insert()
+.remove()  .pop()  .clear()
+.sort()  .reverse()  .count()  .index()
+
+# DICTIONARY (Top 7)
+.get()  .keys()  .values()  .items()
+.pop()  .clear()  .update()`,
+                explanation: '📌 Master these 27 methods and you\'ll handle 90% of Python tasks! They all come AFTER a dot and use exact spelling.'
+            },
+
             // BASICS
             {
                 category: 'basics',
@@ -240,47 +618,47 @@
                 question: 'How do I display text in the console?',
                 code: `print("Hello, World!")
 print("Multiple", "items", "separated by spaces")
-print(f"My name is {name}")  # f-string formatting`,
-                explanation: 'print() displays output to the console. Use f-strings with {variable} for easy formatting.'
+print(f"My name is {<span class="user-defined">name</span>}")  # f-string formatting`,
+                explanation: 'print() displays output to the console. Use f-strings with {variable} for easy formatting. <strong>Note:</strong> <span class="user-defined" style="color: #00BFFF;">Blue text</span> = names you make up yourself!'
             },
             {
                 category: 'basics',
                 title: 'Variables & Types',
                 question: 'How do I create and check variable types?',
                 code: `# Creating variables
-name = "Alice"        # string
-age = 25              # integer
-height = 5.6          # float
-is_student = True     # boolean
+<span class="user-defined">name</span> = "Alice"        # string
+<span class="user-defined">age</span> = 25              # integer
+<span class="user-defined">height</span> = 5.6          # float
+<span class="user-defined">is_student</span> = True     # boolean
 
 # Check type
-print(type(name))     # <class 'str'>`,
-                explanation: 'Python automatically determines types. No need to declare them like in other languages.'
+print(type(<span class="user-defined">name</span>))     # <class 'str'>`,
+                explanation: 'Python automatically determines types. No need to declare them like in other languages. <span class="user-defined" style="color: #00BFFF;">Blue names</span> are ones you can choose yourself!'
             },
             {
                 category: 'basics',
                 title: 'User Input',
                 question: 'How do I get input from the user?',
-                code: `name = input("What's your name? ")
-print(f"Hello, {name}!")
+                code: `<span class="user-defined">name</span> = input("What's your name? ")
+print(f"Hello, {<span class="user-defined">name</span>}!")
 
 # Convert input to number
-age = int(input("What's your age? "))`,
-                explanation: 'input() always returns a string. Use int() or float() to convert to numbers.'
+<span class="user-defined">age</span> = int(input("What's your age? "))`,
+                explanation: 'input() and int() are built-in functions you must use. <span class="user-defined" style="color: #00BFFF;">name</span> and <span class="user-defined" style="color: #00BFFF;">age</span> are variable names you can choose!'
             },
             {
                 category: 'basics',
                 title: 'If Statements',
                 question: 'How do I use conditional logic?',
-                code: `age = 18
+                code: `<span class="user-defined">age</span> = 18
 
-if age >= 18:
+if <span class="user-defined">age</span> >= 18:
     print("You are an adult")
-elif age >= 13:
+elif <span class="user-defined">age</span> >= 13:
     print("You are a teenager")
 else:
     print("You are a child")`,
-                explanation: 'Use if/elif/else for conditions. Indentation (4 spaces) is crucial in Python!'
+                explanation: 'Keywords if/elif/else must be used as-is. <span class="user-defined" style="color: #00BFFF;">age</span> is your choice of variable name!'
             },
 
             // STRINGS
@@ -288,40 +666,40 @@ else:
                 category: 'strings',
                 title: 'String Methods',
                 question: 'What are common string operations?',
-                code: `text = "Hello World"
+                code: `<span class="user-defined">text</span> = "Hello World"
 
-print(text.upper())      # HELLO WORLD
-print(text.lower())      # hello world
-print(text.replace("World", "Python"))  # Hello Python
-print(text.split())      # ['Hello', 'World']
-print(len(text))         # 11`,
-                explanation: 'Strings have many built-in methods. They return new strings (strings are immutable).'
+print(<span class="user-defined">text</span>.upper())      # HELLO WORLD
+print(<span class="user-defined">text</span>.lower())      # hello world
+print(<span class="user-defined">text</span>.replace("World", "Python"))  # Hello Python
+print(<span class="user-defined">text</span>.split())      # ['Hello', 'World']
+print(len(<span class="user-defined">text</span>))         # 11`,
+                explanation: 'Methods like .upper(), .lower(), .replace(), .split() and len() are built-in. <span class="user-defined" style="color: #00BFFF;">text</span> is a name you choose!'
             },
             {
                 category: 'strings',
                 title: 'String Slicing',
                 question: 'How do I extract parts of a string?',
-                code: `text = "Python"
+                code: `<span class="user-defined">text</span> = "Python"
 
-print(text[0])      # P (first character)
-print(text[-1])     # n (last character)
-print(text[0:3])    # Pyt (characters 0,1,2)
-print(text[2:])     # thon (from index 2 to end)
-print(text[::-1])   # nohtyP (reverse string)`,
-                explanation: 'Use [start:end:step] notation. Negative indices count from the end.'
+print(<span class="user-defined">text</span>[0])      # P (first character)
+print(<span class="user-defined">text</span>[-1])     # n (last character)
+print(<span class="user-defined">text</span>[0:3])    # Pyt (characters 0,1,2)
+print(<span class="user-defined">text</span>[2:])     # thon (from index 2 to end)
+print(<span class="user-defined">text</span>[::-1])   # nohtyP (reverse string)`,
+                explanation: 'Bracket notation [] is required syntax. <span class="user-defined" style="color: #00BFFF;">text</span> is your variable name!'
             },
             {
                 category: 'strings',
                 title: 'Check String Content',
                 question: 'How do I check what a string contains?',
-                code: `text = "Python 3.10"
+                code: `<span class="user-defined">text</span> = "Python 3.10"
 
-print("Python" in text)      # True
-print(text.startswith("Py")) # True
-print(text.endswith(".10"))  # True
-print(text.isdigit())        # False
-print(text.isalpha())        # False`,
-                explanation: 'Use "in" to check if substring exists. Use is methods to check string type.'
+print("Python" in <span class="user-defined">text</span>)      # True
+print(<span class="user-defined">text</span>.startswith("Py")) # True
+print(<span class="user-defined">text</span>.endswith(".10"))  # True
+print(<span class="user-defined">text</span>.isdigit())        # False
+print(<span class="user-defined">text</span>.isalpha())        # False`,
+                explanation: 'Keywords/methods like in, .startswith(), .endswith(), .isdigit(), .isalpha() must be used exactly. <span class="user-defined" style="color: #00BFFF;">text</span> is your choice!'
             },
 
             // LISTS
@@ -330,50 +708,50 @@ print(text.isalpha())        # False`,
                 title: 'Creating & Adding to Lists',
                 question: 'How do I work with lists?',
                 code: `# Create a list
-fruits = ["apple", "banana", "cherry"]
+<span class="user-defined">fruits</span> = ["apple", "banana", "cherry"]
 
 # Add items
-fruits.append("orange")      # Add to end
-fruits.insert(0, "mango")    # Add at index 0
-fruits.extend(["grape", "kiwi"])  # Add multiple
+<span class="user-defined">fruits</span>.append("orange")      # Add to end
+<span class="user-defined">fruits</span>.insert(0, "mango")    # Add at index 0
+<span class="user-defined">fruits</span>.extend(["grape", "kiwi"])  # Add multiple
 
-print(fruits)`,
-                explanation: 'Lists are ordered, mutable collections. append() adds one item, extend() adds multiple.'
+print(<span class="user-defined">fruits</span>)`,
+                explanation: 'Methods .append(), .insert(), .extend() are built-in and required. <span class="user-defined" style="color: #00BFFF;">fruits</span> is a name you chose!'
             },
             {
                 category: 'lists',
                 title: 'Accessing & Modifying Lists',
                 question: 'How do I access and change list items?',
-                code: `fruits = ["apple", "banana", "cherry"]
+                code: `<span class="user-defined">fruits</span> = ["apple", "banana", "cherry"]
 
 # Access
-print(fruits[0])        # apple
-print(fruits[-1])       # cherry
+print(<span class="user-defined">fruits</span>[0])        # apple
+print(<span class="user-defined">fruits</span>[-1])       # cherry
 
 # Modify
-fruits[1] = "blueberry"
-print(fruits)           # ['apple', 'blueberry', 'cherry']
+<span class="user-defined">fruits</span>[1] = "blueberry"
+print(<span class="user-defined">fruits</span>)           # ['apple', 'blueberry', 'cherry']
 
 # Slicing
-print(fruits[0:2])      # ['apple', 'blueberry']`,
-                explanation: 'Lists use zero-based indexing. Negative indices count from the end.'
+print(<span class="user-defined">fruits</span>[0:2])      # ['apple', 'blueberry']`,
+                explanation: 'Bracket [] notation is required. <span class="user-defined" style="color: #00BFFF;">fruits</span> is your variable name!'
             },
             {
                 category: 'lists',
                 title: 'List Methods',
                 question: 'What are useful list operations?',
-                code: `numbers = [3, 1, 4, 1, 5, 9, 2]
+                code: `<span class="user-defined">numbers</span> = [3, 1, 4, 1, 5, 9, 2]
 
-numbers.sort()           # Sort in place
-print(numbers)           # [1, 1, 2, 3, 4, 5, 9]
+<span class="user-defined">numbers</span>.sort()           # Sort in place
+print(<span class="user-defined">numbers</span>)           # [1, 1, 2, 3, 4, 5, 9]
 
-numbers.reverse()        # Reverse in place
-print(numbers.count(1))  # 2 (how many times 1 appears)
-print(numbers.index(5))  # Find index of 5
+<span class="user-defined">numbers</span>.reverse()        # Reverse in place
+print(<span class="user-defined">numbers</span>.count(1))  # 2 (how many times 1 appears)
+print(<span class="user-defined">numbers</span>.index(5))  # Find index of 5
 
-numbers.remove(1)        # Remove first occurrence of 1
-numbers.pop()            # Remove and return last item`,
-                explanation: 'sort() and reverse() modify the list in place. pop() removes and returns an item.'
+<span class="user-defined">numbers</span>.remove(1)        # Remove first occurrence of 1
+<span class="user-defined">numbers</span>.pop()            # Remove and return last item`,
+                explanation: 'Methods .sort(), .reverse(), .count(), .index(), .remove(), .pop() are built-in. <span class="user-defined" style="color: #00BFFF;">numbers</span> is your choice!'
             },
 
             // LOOPS
@@ -382,48 +760,48 @@ numbers.pop()            # Remove and return last item`,
                 title: 'For Loop with Range',
                 question: 'How do I repeat code a specific number of times?',
                 code: `# Loop 5 times (0 to 4)
-for i in range(5):
-    print(i)
+for <span class="user-defined">i</span> in range(5):
+    print(<span class="user-defined">i</span>)
 
 # Loop from 1 to 5
-for i in range(1, 6):
-    print(i)
+for <span class="user-defined">i</span> in range(1, 6):
+    print(<span class="user-defined">i</span>)
 
 # Loop with step
-for i in range(0, 10, 2):  # 0, 2, 4, 6, 8
-    print(i)`,
-                explanation: 'range(stop) or range(start, stop, step). Start defaults to 0, step defaults to 1.'
+for <span class="user-defined">i</span> in range(0, 10, 2):  # 0, 2, 4, 6, 8
+    print(<span class="user-defined">i</span>)`,
+                explanation: 'Keywords for, in, and function range() are required. <span class="user-defined" style="color: #00BFFF;">i</span> is a variable name you can choose (commonly used for iteration)!'
             },
             {
                 category: 'loops',
                 title: 'Loop Through Lists',
                 question: 'How do I iterate over a list?',
-                code: `fruits = ["apple", "banana", "cherry"]
+                code: `<span class="user-defined">fruits</span> = ["apple", "banana", "cherry"]
 
 # Loop through items
-for fruit in fruits:
-    print(fruit)
+for <span class="user-defined">fruit</span> in <span class="user-defined">fruits</span>:
+    print(<span class="user-defined">fruit</span>)
 
 # Loop with index
-for i, fruit in enumerate(fruits):
-    print(f"{i}: {fruit}")`,
-                explanation: 'Use "for item in list" to loop. Use enumerate() to get both index and item.'
+for <span class="user-defined">i</span>, <span class="user-defined">fruit</span> in enumerate(<span class="user-defined">fruits</span>):
+    print(f"{<span class="user-defined">i</span>}: {<span class="user-defined">fruit</span>}")`,
+                explanation: 'Keywords for, in and function enumerate() are required. <span class="user-defined" style="color: #00BFFF;">fruits</span>, <span class="user-defined" style="color: #00BFFF;">fruit</span>, and <span class="user-defined" style="color: #00BFFF;">i</span> are names YOU chose!'
             },
             {
                 category: 'loops',
                 title: 'While Loop',
                 question: 'How do I loop until a condition is met?',
-                code: `count = 0
-while count < 5:
-    print(count)
-    count += 1
+                code: `<span class="user-defined">count</span> = 0
+while <span class="user-defined">count</span> < 5:
+    print(<span class="user-defined">count</span>)
+    <span class="user-defined">count</span> += 1
 
 # Loop with break
 while True:
-    user_input = input("Enter 'quit' to exit: ")
-    if user_input == "quit":
+    <span class="user-defined">user_input</span> = input("Enter 'quit' to exit: ")
+    if <span class="user-defined">user_input</span> == "quit":
         break`,
-                explanation: 'while loops continue as long as condition is True. Use break to exit early.'
+                explanation: 'Keywords while, if, break, and True are required. <span class="user-defined" style="color: #00BFFF;">count</span> and <span class="user-defined" style="color: #00BFFF;">user_input</span> are names you choose!'
             },
 
             // FUNCTIONS
@@ -431,45 +809,45 @@ while True:
                 category: 'functions',
                 title: 'Basic Function',
                 question: 'How do I create and call a function?',
-                code: `def greet(name):
-    print(f"Hello, {name}!")
+                code: `def <span class="user-defined">greet</span>(<span class="user-defined">name</span>):
+    print(f"Hello, {<span class="user-defined">name</span>}!")
 
-greet("Alice")  # Call the function
+<span class="user-defined">greet</span>("Alice")  # Call the function
 
 # Function with return value
-def add(a, b):
-    return a + b
+def <span class="user-defined">add</span>(<span class="user-defined">a</span>, <span class="user-defined">b</span>):
+    return <span class="user-defined">a</span> + <span class="user-defined">b</span>
 
-result = add(5, 3)
-print(result)  # 8`,
-                explanation: 'Use def to define functions. return sends a value back to the caller.'
+<span class="user-defined">result</span> = <span class="user-defined">add</span>(5, 3)
+print(<span class="user-defined">result</span>)  # 8`,
+                explanation: 'Keywords def and return are required. <span class="user-defined" style="color: #00BFFF;">greet</span>, <span class="user-defined" style="color: #00BFFF;">name</span>, <span class="user-defined" style="color: #00BFFF;">add</span>, <span class="user-defined" style="color: #00BFFF;">a</span>, <span class="user-defined" style="color: #00BFFF;">b</span>, <span class="user-defined" style="color: #00BFFF;">result</span> are all names you make up!'
             },
             {
                 category: 'functions',
                 title: 'Default Parameters',
                 question: 'How do I set default values for parameters?',
-                code: `def greet(name, greeting="Hello"):
-    print(f"{greeting}, {name}!")
+                code: `def <span class="user-defined">greet</span>(<span class="user-defined">name</span>, <span class="user-defined">greeting</span>="Hello"):
+    print(f"{<span class="user-defined">greeting</span>}, {<span class="user-defined">name</span>}!")
 
-greet("Alice")              # Hello, Alice!
-greet("Bob", "Hi")          # Hi, Bob!
-greet("Charlie", greeting="Hey")  # Hey, Charlie!`,
-                explanation: 'Parameters with = have default values. Can call with or without them.'
+<span class="user-defined">greet</span>("Alice")              # Hello, Alice!
+<span class="user-defined">greet</span>("Bob", "Hi")          # Hi, Bob!
+<span class="user-defined">greet</span>("Charlie", <span class="user-defined">greeting</span>="Hey")  # Hey, Charlie!`,
+                explanation: 'Keyword def is required. <span class="user-defined" style="color: #00BFFF;">greet</span>, <span class="user-defined" style="color: #00BFFF;">name</span>, and <span class="user-defined" style="color: #00BFFF;">greeting</span> are names you choose!'
             },
             {
                 category: 'functions',
                 title: 'Multiple Return Values',
                 question: 'How do I return multiple values?',
-                code: `def get_stats(numbers):
-    total = sum(numbers)
-    count = len(numbers)
-    average = total / count
-    return total, count, average
+                code: `def <span class="user-defined">get_stats</span>(<span class="user-defined">numbers</span>):
+    <span class="user-defined">total</span> = sum(<span class="user-defined">numbers</span>)
+    <span class="user-defined">count</span> = len(<span class="user-defined">numbers</span>)
+    <span class="user-defined">average</span> = <span class="user-defined">total</span> / <span class="user-defined">count</span>
+    return <span class="user-defined">total</span>, <span class="user-defined">count</span>, <span class="user-defined">average</span>
 
 # Unpack the returned values
-t, c, a = get_stats([1, 2, 3, 4, 5])
-print(f"Total: {t}, Count: {c}, Avg: {a}")`,
-                explanation: 'Return multiple values separated by commas. Python packs them into a tuple.'
+<span class="user-defined">t</span>, <span class="user-defined">c</span>, <span class="user-defined">a</span> = <span class="user-defined">get_stats</span>([1, 2, 3, 4, 5])
+print(f"Total: {<span class="user-defined">t</span>}, Count: {<span class="user-defined">c</span>}, Avg: {<span class="user-defined">a</span>}")`,
+                explanation: 'Keywords def, return and functions sum(), len() are required. All <span class="user-defined" style="color: #00BFFF;">blue names</span> are ones you choose!'
             },
 
             // DICTIONARIES
@@ -478,56 +856,56 @@ print(f"Total: {t}, Count: {c}, Avg: {a}")`,
                 title: 'Creating & Accessing Dictionaries',
                 question: 'How do I use key-value pairs?',
                 code: `# Create dictionary
-person = {
+<span class="user-defined">person</span> = {
     "name": "Alice",
     "age": 25,
     "city": "New York"
 }
 
 # Access values
-print(person["name"])        # Alice
-print(person.get("age"))     # 25
-print(person.get("email", "N/A"))  # N/A (default if key missing)`,
-                explanation: 'Dictionaries store key-value pairs. Use get() to avoid errors when key might not exist.'
+print(<span class="user-defined">person</span>["name"])        # Alice
+print(<span class="user-defined">person</span>.get("age"))     # 25
+print(<span class="user-defined">person</span>.get("email", "N/A"))  # N/A (default if key missing)`,
+                explanation: 'Curly braces {}, brackets [], and .get() method are required syntax. <span class="user-defined" style="color: #00BFFF;">person</span> is your variable name!'
             },
             {
                 category: 'dictionaries',
                 title: 'Modifying Dictionaries',
                 question: 'How do I add, update, or remove dictionary items?',
-                code: `person = {"name": "Alice", "age": 25}
+                code: `<span class="user-defined">person</span> = {"name": "Alice", "age": 25}
 
 # Add/Update
-person["email"] = "alice@example.com"
-person["age"] = 26
+<span class="user-defined">person</span>["email"] = "alice@example.com"
+<span class="user-defined">person</span>["age"] = 26
 
 # Remove
-del person["email"]
+del <span class="user-defined">person</span>["email"]
 # OR
-age = person.pop("age")  # Removes and returns value
+<span class="user-defined">age</span> = <span class="user-defined">person</span>.pop("age")  # Removes and returns value
 
 # Check if key exists
-if "name" in person:
+if "name" in <span class="user-defined">person</span>:
     print("Name exists")`,
-                explanation: 'Assign to add/update. Use del or pop() to remove. "in" checks if key exists.'
+                explanation: 'Keywords del, if, in and method .pop() are required. <span class="user-defined" style="color: #00BFFF;">person</span> and <span class="user-defined" style="color: #00BFFF;">age</span> are your choices!'
             },
             {
                 category: 'dictionaries',
                 title: 'Loop Through Dictionary',
                 question: 'How do I iterate over dictionaries?',
-                code: `person = {"name": "Alice", "age": 25, "city": "NYC"}
+                code: `<span class="user-defined">person</span> = {"name": "Alice", "age": 25, "city": "NYC"}
 
 # Loop through keys
-for key in person:
-    print(key)
+for <span class="user-defined">key</span> in <span class="user-defined">person</span>:
+    print(<span class="user-defined">key</span>)
 
 # Loop through values
-for value in person.values():
-    print(value)
+for <span class="user-defined">value</span> in <span class="user-defined">person</span>.values():
+    print(<span class="user-defined">value</span>)
 
 # Loop through both
-for key, value in person.items():
-    print(f"{key}: {value}")`,
-                explanation: 'Use .keys(), .values(), or .items() to loop through different parts of a dictionary.'
+for <span class="user-defined">key</span>, <span class="user-defined">value</span> in <span class="user-defined">person</span>.items():
+    print(f"{<span class="user-defined">key</span>}: {<span class="user-defined">value</span>}")`,
+                explanation: 'Keywords for, in and methods .values(), .items() are required. <span class="user-defined" style="color: #00BFFF;">person</span>, <span class="user-defined" style="color: #00BFFF;">key</span>, <span class="user-defined" style="color: #00BFFF;">value</span> are your choices!'
             },
 
             // FILE I/O
@@ -536,29 +914,29 @@ for key, value in person.items():
                 title: 'Reading a File',
                 question: 'How do I read from a file?',
                 code: `# Read entire file
-with open("file.txt", "r") as file:
-    content = file.read()
-    print(content)
+with open("file.txt", "r") as <span class="user-defined">file</span>:
+    <span class="user-defined">content</span> = <span class="user-defined">file</span>.read()
+    print(<span class="user-defined">content</span>)
 
 # Read line by line
-with open("file.txt", "r") as file:
-    for line in file:
-        print(line.strip())  # strip() removes \\n`,
-                explanation: '"with open()" automatically closes the file. "r" means read mode. strip() removes whitespace.'
+with open("file.txt", "r") as <span class="user-defined">file</span>:
+    for <span class="user-defined">line</span> in <span class="user-defined">file</span>:
+        print(<span class="user-defined">line</span>.strip())  # strip() removes \\n`,
+                explanation: 'Keywords with, open(), as, for, in and methods .read(), .strip() are required. <span class="user-defined" style="color: #00BFFF;">file</span>, <span class="user-defined" style="color: #00BFFF;">content</span>, <span class="user-defined" style="color: #00BFFF;">line</span> are names you choose!'
             },
             {
                 category: 'files',
                 title: 'Writing to a File',
                 question: 'How do I write to a file?',
                 code: `# Write (overwrites existing content)
-with open("output.txt", "w") as file:
-    file.write("Hello World\\n")
-    file.write("Second line\\n")
+with open("output.txt", "w") as <span class="user-defined">file</span>:
+    <span class="user-defined">file</span>.write("Hello World\\n")
+    <span class="user-defined">file</span>.write("Second line\\n")
 
 # Append (adds to end of file)
-with open("output.txt", "a") as file:
-    file.write("New line\\n")`,
-                explanation: '"w" mode overwrites, "a" mode appends. Always add \\n for new lines.'
+with open("output.txt", "a") as <span class="user-defined">file</span>:
+    <span class="user-defined">file</span>.write("New line\\n")`,
+                explanation: 'Keywords with, open(), as and method .write() are required. "w" and "a" are mode strings. <span class="user-defined" style="color: #00BFFF;">file</span> is your choice!'
             },
             {
                 category: 'files',
@@ -575,7 +953,7 @@ else:
 # Check if it's a file (not a directory)
 if os.path.isfile("file.txt"):
     print("It's a file")`,
-                explanation: 'Use os.path module for file system operations. Helps avoid errors when opening files.'
+                explanation: 'Keywords import, if, else and module os with os.path.exists(), os.path.isfile() are all required - no user-defined names in this example!'
             }
         ];
 
@@ -601,7 +979,7 @@ if os.path.isfile("file.txt"):
                     <div class="card-answer" id="answer-${index}">
                         <div class="code-block">
                             <button class="copy-btn" onclick="copyCode(${index}, event)">Copy</button>
-                            <pre>${escapeHtml(card.code)}</pre>
+                            <pre>${highlightCode(card.code)}</pre>
                         </div>
                         <div class="explanation">${card.explanation}</div>
                     </div>
@@ -625,7 +1003,9 @@ if os.path.isfile("file.txt"):
                 ? flashcards 
                 : flashcards.filter(card => card.category === currentCategory);
             
-            const code = filtered[index].code;
+            let code = filtered[index].code;
+            // Remove HTML tags for clean copy
+            code = code.replace(/<span class="user-defined">/g, '').replace(/<\/span>/g, '');
             
             navigator.clipboard.writeText(code).then(() => {
                 const btn = event.target;
@@ -639,10 +1019,20 @@ if os.path.isfile("file.txt"):
             });
         }
 
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
+        function highlightCode(code) {
+            // First escape dangerous HTML except our spans
+            let safe = code
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+            
+            // Now restore our user-defined spans
+            safe = safe
+                .replace(/&lt;span class=&quot;user-defined&quot;&gt;/g, '<span class="user-defined">')
+                .replace(/&lt;\/span&gt;/g, '</span>');
+            
+            return safe;
         }
 
         // Filter buttons
