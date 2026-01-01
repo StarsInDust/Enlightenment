@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 Code for the Dungeon Items</title>
+    
+  <meta name="title" content="9 Code for the Dungeon Items ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="In this article we will be learning how to write the code for generating items in the dungeons, this will be things like hearts, apples and bombs."/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="1/1/2026" />
+
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2026/2_Game_Maker_2/9_Code_for_the_Dungeon_Items/9_Code_For_Dungeon_Items.html">
+
+
+
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.MsoIntenseReference {
+font-variant:small-caps;
+color:#4472C4;
+letter-spacing:.25pt;
+font-weight:bold;
+}
+p.RecipeHeading {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:10.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:14.0pt;
+font-family:"Calibri",sans-serif;
+color:#8496B0;
+font-style:italic;
+}
+span.BoldMaroonListChar {
+color:#600020;
+font-weight:bold;
+}
+p.RecipeeBody {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:10.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:14.0pt;
+font-family:"Calibri",sans-serif;
+color:#2F5496;
+font-weight:bold;
+}
+p.BoldTeal {
+margin-top:24.0pt;
+margin-right:0in;
+margin-bottom:12.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:14.0pt;
+font-family:"Calibri Light",sans-serif;
+color:#2F5496;
+font-weight:bold;
+}
+span.redItalicChar {
+color:red;
+font-weight:bold;
+font-style:italic;
+}
+span.MsoBookTitle {
+letter-spacing:.25pt;
+font-weight:bold;
+font-style:italic;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~9 Code for the Dungeon Items~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >3/9/2026</p>
+   
+<p><img src="Images/1.png" width="297" height="260"></p>
+
+<p class="MsoNormal">In this chapter, we will be looking at how we can go about  writing the code for our new items. Instead of physically throwing the items  around the room, we will have a self- spawning code system. The code itself  will be responsible for creating our item objects, and the code will then be  also throwing them around the room.</p>
+<img src="Images/2.png" width="629" height="335">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We will have two different methods, for dispersing these  items. The first one is a random number of these objects that will be created  at different spots in the room, the second method, is where we can create a  number set by us, where a specific item count, can be implemented.</p>
+<h1>Creating Three New Scripts</h1>
+<p class="MsoNormal">We will start will creating three new scripts. Name those  scripts:</p>
+<p class="MsoNormal" style="margin-bottom:0in;">                <a name="_Hlk217813988">scr_item_system</a></p>
+<p class="MsoNormal" style="margin-bottom:0in;">                scr_spawn_items</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">spawn_object_in_opening</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal">These, as you can see will be created in addition to the  Scripts that you already have that is causing the creation of your  self-generating maze.</p>
+<img src="Images/3.png" width="340" height="241">
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;"><span class="MsoIntenseReference">Right  click-Create-Script</span></p>
+<img src="Images/4.png" width="413" height="406">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h3>Code that will Create the Item System</h3>
+<p class="MsoNormal">In this code we will be doing things that the game needs to  know, when dealing with items. On top of that, if the hero dies he needs to  start at the beginning of the room. But since the maze is self generating, the  beginning of the room could be anywhere on start. So, we need to store the  information when the hero enters the room as to where he is standing. This way  he will be returned to not just any starting position but the correct starting  position, for the room. </p>
+<p class="MsoNormal">The code for the item system consists of 7 functions all  together:</p>
+<ol style="margin-top:0in;" start="1" type="1">
+  <li class="MsoNormal" style="margin-bottom:0in;">save_hero_start_position()</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">reset_hero_to_start()</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">hero_take_damage(_damage_amount)</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">hero_heal(_heal_amount)</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">hero_collect_apple()</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">hero_collect_bomb()</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">hero_use_bomb(_target_x, _target_y)</li>
+</ol>
+<p class="MsoNormal">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~~~~ITEM SYSTEM FUNCTIONS  ~~~~~~~~~~~~~~~~~~</p>
+<p class="MsoNormal" style="margin-bottom:0in;">Use this script file that you just  created inside of the  Asset Browser and  paste this next code into <span class="BoldMaroonListChar"><span style="line-height:115%; font-size:12.0pt; ">scr_item_system</span></span></p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody">//~~~~~~~~~~ FUNCTION: Save Hero Starting Position  ~~~~~~~~~~~~~~</p>
+<p class="code"><a name="_Hlk217814229"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Call this AFTER the hero is spawned in the maze  to save respawn point</span></strong></a></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code">function  save_hero_start_position() {</p>
+<p class="code">    var hero = instance_find(object_hero, 0);</p>
+<p class="code">    </p>
+<p class="code">    if (hero != noone) {</p>
+<p class="code">        global.hero_start_x = hero.x;</p>
+<p class="code">        global.hero_start_y = hero.y;</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;===  HERO START POSITION SAVED ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">         show_debug_message(&quot;Position: (&quot; + string(global.hero_start_x)  + &quot;, &quot; + string(global.hero_start_y) + &quot;)&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">    } else {</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">         show_debug_message(&quot;ERROR: Could not find hero to save starting  position!&quot;);</span></strong></p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody">//  ~~~~~~~~~~~~~~~~FUNCTION: Reset Hero to Start Position ~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Call this  when hero loses all lives on current floor</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function  reset_hero_to_start() {</p>
+<p class="code">    var hero = instance_find(object_hero, 0);</p>
+<p class="code">    </p>
+<p class="code">    if (hero != noone) {</p>
+<p class="code">        hero.x = global.hero_start_x;</p>
+<p class="code">        hero.y = global.hero_start_y;</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset hearts to starting amount</span></strong></p>
+<p class="code">        global.hearts = 3;</p>
+<p class="code">        </p>
+<p class="code"><strong><span style="color:#C00000; ">         show_debug_message(&quot;=== HERO RESET TO START ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">         show_debug_message(&quot;Teleported to: (&quot; +  string(global.hero_start_x) + &quot;, &quot; + string(global.hero_start_y) +  &quot;)&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">         show_debug_message(&quot;Hearts restored to: &quot; +  string(global.hearts));</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">    } else {</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">         show_debug_message(&quot;ERROR: Could not find hero to</span></strong><span style="color:#C00000; "> <strong>reset!&quot;);</strong></span></p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody">//  ~~~~~~~~~~~~~~~~~FUNCTION: Take Damage ~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Call when  hero takes damage (bomb, trap, enemy, etc.)</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function  hero_take_damage(_damage_amount) {</p>
+<p class="code">    global.hearts -= _damage_amount;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Hero  took &quot; + string(_damage_amount) + &quot; damage! Hearts: &quot; +  string(global.hearts));</span></strong></p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Check if dead</span></strong></p>
+<p class="code">    if (global.hearts &lt;= 0) {</p>
+<p class="code">        show_debug_message(&quot;Hero died!  Resetting to floor start...&quot;);</p>
+<p class="code">        reset_hero_to_start();</p>
+<p class="code">        return true;  // Return true to indicate death occurred</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    return false;  <strong><span style="color:#00B050; ">// Still alive</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody">//  ~~~~~~~~~~~~~~~~~~~~~~ FUNCTION: Heal Hero~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Call when  hero collects a heart</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function  hero_heal(_heal_amount) {</p>
+<p class="code">    global.hearts += _heal_amount;</p>
+<p class="code">    </p>
+<p class="code"><strong><span style="color:#00B050; ">    //</span></strong><span style="color:#00B050; "> <strong>Cap at maximum</strong></span></p>
+<p class="code">    if (global.hearts &gt; global.max_hearts) {</p>
+<p class="code">        global.hearts = global.max_hearts;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Hero  healed &quot; + string(_heal_amount) + &quot;! Hearts: &quot; +  string(global.hearts) + &quot;/&quot; + string(global.max_hearts));</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody">// ~~~~~~~~~~~~~~FUNCTION:  Collect Apple ~~~~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Call when  hero collects an apple (Gysahi Greens effect)</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function  hero_collect_apple() {</p>
+<p class="code">    global.apples += 1;</p>
+<p class="code">    </p>
+<p class="code">  <strong><span style="color:#C00000; ">  show_debug_message(&quot;Collected apple!  Total: &quot; + string(global.</span></strong><span style="color:#C00000; ">apples));</span></p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Optional:  Add immediate effect like small heal or buff</span></strong></p>
+<p class="code">    <strong><span style="color:#2F5496; ">// hero_heal(1);   // Uncomment if apples should heal</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody">// ~~~~~~~~~~~~~~~~~FUNCTION:  Collect Bomb ~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Call when hero picks up a bomb item</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function  hero_collect_bomb() {</p>
+<p class="code">    global.bombs_held += 1;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Picked  up bomb! Total bombs: &quot; + string(global.bombs_held));</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody">//~~~~~~~~~~~~~~~~~~~~  FUNCTION: Use Bomb ~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Call when hero wants to throw/use a bomb</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function  hero_use_bomb(_target_x, _target_y) {</p>
+<p class="code">    if (global.bombs_held &gt; 0) {</p>
+<p class="code">        global.bombs_held -= 1;</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;Threw  bomb! Bombs remaining: &quot; + string(global.bombs_held));</span></strong></p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#00B050; ">//  Create bomb projectile or explosion at target position</span></strong></p>
+<p class="code">        <strong><span style="color:#00B050; ">//  instance_create_layer(_target_x, _target_y, &quot;Instances&quot;,  obj_bomb_thrown);</span></strong></p>
+<p class="code">        </p>
+<p class="code">        return true;  <strong><span style="color:#00B050; ">//  Successfully used bomb</span></strong></p>
+<p class="code">    } else {</p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;No  bombs to throw</span></strong>!<strong><span style="color:#C00000; ">&quot;);</span></strong></p>
+<p class="code">        return false;  <strong><span style="color:#00B050; ">// No bombs  available</span></strong></p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h3 class="BoldRed">End of the scr_item_system script</h3>
+<h3>Code that will Create the items</h3>
+<h2>Code for the scr_spawn_items</h2>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~~~~ITEM SPAWNING FUNCTIONS  ~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Create this as a SCRIPT in  GameMaker</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Contains two spawning methods -  use ONE in your controller</span></strong></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">//This might be a bit confusing, but even if we are writing  the code here for the two different types of spawning, we will not be commenting  it out in this script. This is because, the commenting out of which type of  method we will use to spawn our items ( a specific number, a random number)  will be done in the controller object.</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody">// ~~~~~~~~~~~Function: Spawn Items in Maze (Random  Spawning)~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Call this AFTER maze generation  to randomly place items in open cells</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function spawn_items_in_maze(_mazeStruct, _cellSize) {</p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;=== SPAWNING ITEMS IN MAZE  ===&quot;);</span></strong></p>
+<p class="code">    </p>
+<p class="code">    var m = _mazeStruct;</p>
+<p class="code">    var cell_size =  _cellSize;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Item spawn settings</span></strong></p>
+<p class="code">    var spawn_chance =  0.15;  <strong><span style="color:#00B050; ">//  15% chance per cell</span></strong></p>
+<p class="code">    var items_spawned = 0;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Item weights for random selection</span></strong></p>
+<p class="code">    var total_weight =  10;  // heart(2) + apple(5) + bomb(3)</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Go through  each cell in the maze</span></strong></p>
+<p class="code">    for (var i = 1; i &lt;  m.w - 1; i++) {</p>
+<p class="code">        for (var j = 1; j  &lt; m.h - 1; j++) {</p>
+<p class="code"><strong><span style="color:#00B050; ">            //</span></strong><span style="color:#00B050; "> <strong>Random chance to spawn an item</strong></span></p>
+<p class="code">            if (random(1)  &lt; spawn_chance) {</p>
+<p class="code">                <strong><span style="color:#00B050; ">// Calculate center of this cell</span></strong></p>
+<p class="code">                var item_x  = i * cell_size + (cell_size / 2);</p>
+<p class="code">                var item_y  = j * cell_size + (cell_size / 2);</p>
+<p class="code">                </p>
+<p class="code">                <strong><span style="color:#00B050; ">// Make sure not too close to hero or</span></strong><span style="color:#00B050; "> <strong>door</strong></span></p>
+<p class="code">                var hero =  instance_find(object_hero, 0);</p>
+<p class="code">                var door =  instance_find(obj_door, 0);</p>
+<p class="code">                </p>
+<p class="code">                var  too_close = false;</p>
+<p class="code">                var  min_distance = 150;</p>
+<p class="code">                </p>
+<p class="code">                if (hero !=  noone &amp;&amp; point_distance(item_x, item_y, hero.x, hero.y) &lt;  min_distance) {</p>
+<p class="code">                     too_close = true;</p>
+<p class="code">                }</p>
+<p class="code">                </p>
+<p class="code">                if (door !=  noone &amp;&amp; point_distance(item_x, item_y, door.x, door.y) &lt;  min_distance) {</p>
+<p class="code">                     too_close = true;</p>
+<p class="code">                }</p>
+<p class="code">                </p>
+<p class="code">                <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Check for  wall collision</span></strong></p>
+<p class="code">                if  (!too_close &amp;&amp; !position_meeting(item_x, item_y, obj_wall_plain)) {</p>
+<p class="code">                    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Randomly  select which item to spawn based on weights</span></strong></p>
+<p class="code">                    var  roll = irandom(total_weight - 1);</p>
+<p class="code">                    </p>
+<p class="code">                    if  (roll &lt; 2) {</p>
+<p class="code">                        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Spawn heart  (weight 2: 0-1)</span></strong></p>
+<p class="code">                         instance_create_layer(item_x, item_y, &quot;Instances&quot;, obj_heart);</p>
+<p class="code">                         items_spawned++;</p>
+<p class="code">                        <strong><span style="color:#C00000; ">show_debug_message(&quot;Spawned HEART at cell [&quot; +  string(i) + &quot;, &quot; + string(j) + &quot;]&quot;);</span></strong></p>
+<p class="code">                        </p>
+<p class="code">                    } else  if (roll &lt; 7) {</p>
+<p class="code">                        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Spawn apple  (weight 5: 2-6)</span></strong></p>
+<p class="code">                         instance_create_layer(item_x, item_y, &quot;Instances&quot;, obj_apple);</p>
+<p class="code">                         items_spawned++;</p>
+<p class="code">                        <strong><span style="color:#C00000; ">show_debug_message(&quot;Spawned APPLE at cell [&quot; +  string(i) + &quot;, &quot; + string(j) + &quot;]&quot;);</span></strong></p>
+<p class="code">                        </p>
+<p class="code">                    } else  {</p>
+<p class="code">                        <strong><span style="color:#00B050; ">// Spawn bomb (weight 3: 7-9)</span></strong></p>
+<p class="code">                         instance_create_layer(item_x, item_y, &quot;Instances&quot;, obj_bomb);</p>
+<p class="code">                         items_spawned++;</p>
+<p class="code">                        <strong><span style="color:#C00000; ">show_debug_message(&quot;Spawned BOMB at cell [&quot; +  string(i) + &quot;, &quot; + string(j) + &quot;]&quot;);</span></strong></p>
+<p class="code">                    }</p>
+<p class="code">                }</p>
+<p class="code">            }</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;Total items spawned: &quot; +  string(items_spawned));</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;=== ITEM SPAWNING COMPLETE</span></strong> <strong><span style="color:#C00000; ">===&quot;);</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// FUNCTION: Spawn Guaranteed Items (Exact Count  Spawning)</p>
+<p class="code"><strong><span style="color:#00B050; ">// Use this if you want guaranteed  item counts per floor</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function spawn_guaranteed_items(_mazeStruct, _cellSize, _hearts,  _apples, _bombs) {</p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;=== SPAWNING GUARANTEED ITEMS ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;Hearts: &quot; + string(_hearts) + &quot;,  Apples: &quot; + string(_apples) + &quot;, Bombs: &quot; + string(_bombs));</span></strong></p>
+<p class="code">    </p>
+<p class="code">    var m = _mazeStruct;</p>
+<p class="code">    var cell_size =  _cellSize;</p>
+<p class="code">    </p>
+<p class="code"><strong><span style="color:#00B050; ">     //</span></strong><span style="color:#00B050; "> <strong>Create list of available  spawn positions</strong></span></p>
+<p class="code">    var spawn_positions =  ds_list_create();</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Collect all  valid spawn positions</span></strong></p>
+<p class="code">    for (var i = 1; i &lt;  m.w - 1; i++) {</p>
+<p class="code">        for (var j = 1; j  &lt; m.h - 1; j++) {</p>
+<p class="code">            var pos_x = i *  cell_size + (cell_size / 2);</p>
+<p class="code">            var pos_y = j *  cell_size + (cell_size / 2);</p>
+<p class="code">            </p>
+<p class="code">            <strong><span style="color:#00B050; ">// Check if position is valid (not wall, not too close to  hero/door)</span></strong></p>
+<p class="code">            var hero =  instance_find(object_hero, 0);</p>
+<p class="code">            var door =  instance_find(obj_door, 0);</p>
+<p class="code">            </p>
+<p class="code">            var too_close =  false;</p>
+<p class="code">            var  min_distance = 150;</p>
+<p class="code">            </p>
+<p class="code">            if (hero !=  noone &amp;&amp; point_distance(pos_x, pos_y, hero.x, hero.y) &lt;  min_distance) {</p>
+<p class="code">                too_close =  true;</p>
+<p class="code">            }</p>
+<p class="code">            if (door !=  noone &amp;&amp; point_distance(pos_x, pos_y, door.x, door.y) &lt;  min_distance) {</p>
+<p class="code">                too_close =  true;</p>
+<p class="code">            }</p>
+<p class="code">            </p>
+<p class="code">            if (!too_close  &amp;&amp; !position_meeting(pos_x, pos_y, obj_wall_plain)) {<strong><span style="color:#00B050; "> </span></strong></p>
+<p class="code"><strong>                <span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Add position  to list</span></strong></p>
+<p class="code">                 ds_list_add(spawn_positions, [pos_x, pos_y, i, j]);</p>
+<p class="code">            }</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Found &quot; +  string(ds_list_size(spawn_positions)) + &quot; valid spawn positions&quot;);</span></strong></p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Shuffle the  list</span></strong></p>
+<p class="code">     ds_list_shuffle(spawn_positions);</p>
+<p class="code">    </p>
+<p class="code">    var items_placed = 0;</p>
+<p class="code">    <strong><span style="color:#00B050; "> </span></strong></p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Spawn hearts</span></strong></p>
+<p class="code">    for (var h = 0; h &lt;  _hearts &amp;&amp; items_placed &lt; ds_list_size(spawn_positions); h++) {</p>
+<p class="code">        var pos =  spawn_positions[| items_placed];</p>
+<p class="code">         instance_create_layer(pos[0], pos[1], &quot;Instances&quot;, obj_heart);</p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;Placed HEART at cell [&quot; +  string(pos[2]) + &quot;, &quot; + string(pos[3]) + &quot;]&quot;);</span></strong></p>
+<p class="code">        items_placed++;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Spawn apples</span></strong></p>
+<p class="code">    for (var a = 0; a &lt;  _apples &amp;&amp; items_placed &lt; ds_list_size(spawn_positions); a++) {</p>
+<p class="code">        var pos =  spawn_positions[| items_placed];</p>
+<p class="code">         instance_create_layer(pos[0], pos[1], &quot;Instances&quot;, obj_apple);</p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;Placed APPLE at cell [&quot; +  string(pos[2]) + &quot;, &quot; + string(pos[3]) + &quot;]&quot;);</span></strong></p>
+<p class="code">        items_placed++;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Spawn bombs</span></strong></p>
+<p class="code">    for (var b = 0; b &lt;  _bombs &amp;&amp; items_placed &lt; ds_list_size(spawn_positions); b++) {</p>
+<p class="code">        var pos =  spawn_positions[| items_placed];</p>
+<p class="code">         instance_create_layer(pos[0], pos[1], &quot;Instances&quot;, obj_bomb);</p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;Placed BOMB at cell [&quot; +  string(pos[2]) + &quot;, &quot; + string(pos[3]) + &quot;]&quot;);</span></strong></p>
+<p class="code">        items_placed++;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">     ds_list_destroy(spawn_positions);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Total items placed: &quot; +  string(items_placed));</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;=== GUARANTEED ITEM SPAWNING COMPLETE</span></strong> <strong><span style="color:#C00000; ">===&quot;);</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h3 class="BoldRed">This is the end of the scr_spawn_items script</h3>
+<h1>Update your Controller Object</h1>
+<p class="MsoNormal">Open your <strong><span style="font-family:'Calibri',sans-serif; ">Objects</span></strong> folder and find your <strong><span style="font-family:'Calibri',sans-serif; ">obj_controller</span></strong>.</p>
+<p class="MsoNormal">This next code is where we will be updating the Controller  Object to use our new items. In this code, we will be setting the count for the  different items. </p>
+<p class="RecipeHeading">//~~~~~~~~~~ UPDATED CONTROLLER OBJECT CREATE EVENT  ~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Integrates item system with  maze generation</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// for 1280x704 room size </span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">//Replace all, and paste this code  into the Create event of your controller object</span></strong></p>
+<p class="code">&nbsp;</p>
+<img src="Images/5.png" width="265" height="135">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="BoldTeal">// STEP 1: INITIALIZE ITEM SYSTEM</p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;===  INITIALIZING ITEM SYSTEM</span></strong><span style="color:#C00000; "> <strong>===&quot;);</strong></span></p>
+<p class="code">&nbsp;</p>
+<p class="code">global.hearts = 3;              <strong><span style="color:#00B050; ">// Starting lives</span></strong></p>
+<p class="code">global.max_hearts = 5;          <span style="color:#00B050; ">// Maximum hearts</span></p>
+<p class="code">global.apples = 0;              <strong><span style="color:#00B050; ">// Gysahi Greens counter</span></strong></p>
+<p class="code">global.bombs_held = 0;          <strong><span style="color:#00B050; ">// Bombs in inventory</span></strong></p>
+<p class="code">global.current_floor = 1;       <strong><span style="color:#00B050; ">// Current dungeon floor</span></strong></p>
+<p class="code">global.hero_start_x = 0;        <strong><span style="color:#00B050; ">// Will be saved after spawn</span></strong></p>
+<p class="code">global.hero_start_y = 0;        <strong><span style="color:#00B050; ">// Will be saved after spawn</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;Hearts:  &quot; + string(global.hearts) + &quot;/&quot; + string(global.max_hearts));</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;Floor:  &quot; + string(global.current_floor));</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;=== ITEM  SYSTEM READY</span></strong><span style="color:#C00000; "> <strong>===&quot;);</strong></span></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody">// STEP 2: GENERATE MAZE (Your existing code)</p>
+<p class="code">var target_width = 1280;</p>
+<p class="code">var target_height = 704;</p>
+<p class="code">var cell_size = 128;</p>
+<p class="code">&nbsp;</p>
+<p class="code">var maze_width = floor(target_width / cell_size);</p>
+<p class="code">var maze_height = floor(target_height / cell_size);</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;===  CREATING MAZE FOR NEW ROOM SIZE ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;Room  dimensions: &quot; + string(target_width) + &quot; x &quot; +  string(target_height));</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;Creating  maze: &quot; + string(maze_width) + &quot; x &quot; + string(maze_height) +  &quot; cells&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;Cell  size: &quot; + string(cell_size) + &quot;px&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;Wall  size: 32px&quot;);</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">var time_seed = get_timer();</p>
+<p class="code">random_set_seed(time_seed);</p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;Random  seed set to: &quot; + string(time_seed));</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;Testing  random values: &quot; + string(irandom(100)) + &quot;, &quot; +  string(irandom(100)) + &quot;, &quot; + string(irandom</span></strong><span style="color:#C00000; ">(100)));</span></p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Create and generate the maze</span></strong></p>
+<p class="code">global.myMaze = new maze(&quot;recursive_backtrack&quot;,  maze_width, maze_height);</p>
+<p class="code">maze_generate(global.myMaze);</p>
+<p class="code">&nbsp;</p>
+<p class="code"><span style="color:#00B050; ">//</span> <strong><span style="color:#00B050; ">Spawn  the maze walls</span></strong></p>
+<p class="code">spawn_maze_walls(global.myMaze, cell_size, 0, 0);</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Spawn hero and door</span></strong></p>
+<p class="code">spawn_object_in_opening(global.myMaze.heroWallSide,  global.myMaze.heroPosition, cell_size, global.myMaze.w, global.myMaze.h,  object_hero, &quot;Hero&quot;);</p>
+<p class="code">spawn_object_in_opening(global.myMaze.doorWallSide,  global.myMaze.doorPosition, cell_size, global.myMaze.w, global.myMaze.h,  obj_door, &quot;Door&quot;);</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;=== MAZE  SETUP COMPLETE ===&quot;);</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody">// STEP 3: SAVE HERO STARTING POSITION</p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;===  SAVING HERO START POSITION ===&quot;);</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">var hero = instance_find(object_hero, 0);</p>
+<p class="code">if (hero != noone) {</p>
+<p class="code">    global.hero_start_x =  hero.x;</p>
+<p class="code">    global.hero_start_y =  hero.y;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Hero start position saved:  (&quot; + string(global.hero_start_x) + &quot;, &quot; +  string(global.hero_start_y) + &quot;)&quot;);</span></strong></p>
+<p class="code">} else {</p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;WARNING: Could not find hero to  save position!&quot;);</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody">// STEP 4: SPAWN ITEMS IN MAZE</p>
+<p class="code"><strong><span style="color:#00B050; ">// Balanced spawning: 1-2 of each  item type</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Random amount between 1-2 for  each item</span></strong></p>
+<p class="code">var hearts_to_spawn = irandom_range(1, 2);</p>
+<p class="code">var apples_to_spawn = irandom_range(1, 2);</p>
+<p class="code">var bombs_to_spawn = irandom_range(1, 2);</p>
+<p class="code">&nbsp;</p>
+<p class="code">spawn_guaranteed_items(global.myMaze, cell_size, hearts_to_spawn,  apples_to_spawn, bombs_to_spawn);</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Alternative methods (comment  out the above and uncomment one of these):</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// OPTION 1: Pure random spawning  (adjust spawn_chance in function)</span></strong></p>
+<p class="code"><strong><span style="color:#2F5496; ">// spawn_items_in_maze(global.myMaze, cell_size);</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// OPTION 2: Fixed exact counts</span></strong></p>
+<p class="code"><strong><span style="color:#2F5496; ">// spawn_guaranteed_items(global.myMaze, cell_size, 2, 2, 2);</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;===  DUNGEON FLOOR &quot; + string(global.current_floor) + &quot; READY ===&quot;);</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="color:#EE0000; ">End of controller object  script</span></strong></p>
+<h1>Hero Object Step Event</h1>
+<p class="MsoNormal">New features added:</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">- Item collection (hearts, apples, bombs)</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">- Bomb throwing with SPACE key</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">- Damage from hazards</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">- Auto-respawn at start position when hearts reach 0</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">- Floor progression tracking</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="RecipeHeading">//~~~~~~~~~~~~~~~~~ UPDATED HERO STEP EVENT  ~~~~~~~~~~~~~~~~~</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">// Includes item collection,  damage handling, and bomb throwing</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">// MOVEMENT INPUT (Your  existing code)</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">var move_x = keyboard_check(vk_right) -  keyboard_check(vk_left);</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">var move_y = keyboard_check(vk_down)  - keyboard_check(vk_up);</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">var spd = 4;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">var dx  = move_x * spd;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">var dy  = move_y * spd;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><span style="color:#00B050; ">//</span> <strong><span style="color:#00B050; ">COLLISION CHECK &amp; MOVEMENT (Your existing code)</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">if (dx != 0 || dy != 0) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Check full  diagonal move</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    if  (!place_meeting(x + dx, y + dy, obj_wall_plain) &amp;&amp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">         !place_meeting(x + dx, y + dy, obj_wall_crackedA) &amp;&amp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">         !place_meeting(x + dx, y + dy, obj_wall_crackedB)) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        x += dx;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        y += dy;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    } else {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><span style="color:#00B050; ">        <strong>//</strong></span> <strong><span style="color:#00B050; ">Try horizontal only</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        if  (!place_meeting(x + dx, y, obj_wall_plain) &amp;&amp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">             !place_meeting(x + dx, y, obj_wall_crackedA) &amp;&amp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">             !place_meeting(x + dx, y, obj_wall_crackedB)) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">            x += dx;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        }</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">        //</span></strong><span style="color:#00B050; "> <strong>Try vertical only</strong></span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        if  (!place_meeting(x, y + dy, obj_wall_plain) &amp;&amp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">             !place_meeting(x, y + dy, obj_wall_crackedA) &amp;&amp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">             !place_meeting(x, y + dy, obj_wall_crackedB)) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">            y += dy;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        }</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    }</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">}</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">// SPRITE SWITCHING (Your  existing code)</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">if (move_y &lt; 0) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    sprite_index =  sprite_hero_back;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">} else if (move_x &gt; 0) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    sprite_index =  sprite_hero_right;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">} else if (move_x &lt; 0) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    sprite_index =  sprite_hero_left;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">} else {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    sprite_index =  sprite_hero;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">}</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">// NEW: ITEM COLLECTION</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">--- Collect Heart ---</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">var item_heart = instance_place(x, y, obj_heart);</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">if (item_heart != noone) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">    //</span></strong><span style="color:#00B050; "> <strong>Heal  1 heart</strong></span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    global.hearts += 1;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    if (global.hearts  &gt; global.max_hearts) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        global.hearts =  global.max_hearts;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    }</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Collected heart! Hearts: &quot;  + string(global.hearts) + &quot;/&quot; + string(global.max_hearts));</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">     instance_destroy(item_heart);</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    <strong><span style="color:#00B050; ">// Optional: Play sound effect</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    <strong><span style="color:#2F5496; ">//  audio_play_sound(snd_collect_heart, 1, false);</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">}</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">// --- Collect Apple (Gysahi  Greens style) ---</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">var item_apple = instance_place(x, y, obj_apple);</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">if (item_apple != noone) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    global.apples += 1;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">     show_debug_message(&quot;Collected apple! Total: &quot; +  string(global.apples));</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">     instance_destroy(item_apple);</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    <strong><span style="color:#00B050; ">// Optional: Add special effect (like in Chocobo's  Dungeon)</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">    // Could heal 1 heart or give temporary  speed boost</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">    </span><span style="color:#2F5496; ">//  audio_play_sound(snd_collect_apple, 1, false);</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">}</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">// --- Collect Bomb ---</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">var item_bomb = instance_place(x, y, obj_bomb);</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">if (item_bomb != noone) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    global.bombs_held  += 1;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#C00000; ">    show_debug_message(&quot;Picked up bomb!  Total bombs: &quot; + string(global.bombs_held));</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#C00000; ">    instance_destroy(item_bomb);</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">    // Optional: Play sound effect</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    <strong><span style="color:#2F5496; ">//  audio_play_sound(snd_collect_bomb, 1, false);</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">}</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">// NEW: BOMB THROWING</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">// Press SPACE to throw a bomb</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">if (keyboard_check_pressed(vk_space)) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    if  (global.bombs_held &gt; 0) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">         global.bombs_held -= 1;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        <strong><span style="color:#00B050; ">// Determine throw direction based on last movement</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        var throw_x =  x;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        var throw_y =  y;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        var  throw_distance = 96;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">        // Throw in direction hero is facing  (based on sprite)</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        if  (sprite_index == sprite_hero_back) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">            throw_y -=  throw_distance;  // Throw up</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        } else if  (sprite_index == sprite_hero_right) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">            throw_x +=  throw_distance;  // Throw right</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        } else if  (sprite_index == sprite_hero_left) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">            throw_x -=  throw_distance;  // Throw left</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        } else {<strong></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">            throw_y +=  throw_distance;  // Throw down (default)</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        }</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        <span style="color:#00B050; ">// Create thrown bomb object (</span><span class="redItalicChar">you'll need to create this object</span><span style="color:#00B050; ">)</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        <strong><span style="color:#2F5496; ">//  instance_create_layer(throw_x, throw_y, &quot;Instances&quot;,  obj_bomb_thrown);</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#C00000; ">        show_debug_message(&quot;Threw bomb!  Bombs remaining: &quot; + string(global.bombs_held));</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">        // Optional: Play throw sound</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        <strong><span style="color:#2F5496; ">//  audio_play_sound(snd_throw_bomb, 1, false);</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    } else {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#C00000; ">        show_debug_message(&quot;No bombs to  throw!&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    }</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">}</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">// NEW: CHECK FOR HAZARDS  (Example: stepping on bomb damages you)</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">// If you have bomb hazard  objects placed in the maze</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">var hazard_bomb = instance_place(x, y, obj_hazard_bomb);</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">if (hazard_bomb != noone) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    <strong><span style="color:#00B050; ">// Take damage</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    global.hearts -= 1;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">     show_debug_message(&quot;Hit a bomb! Lost 1 heart. Hearts remaining:  &quot; + string(global.hearts));</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">    // Destroy the hazard</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">     instance_destroy(hazard_bomb);</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">    // Check if hero died</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    if (global.hearts  &lt;= 0) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">         show_debug_message(&quot;Hero died! Resetting to floor start...&quot;);</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">        // Teleport back to start</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        x =  global.hero_start_x;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        y =  global.hero_start_y;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">        // Reset hearts</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        global.hearts =  3;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">        </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#C00000; ">        show_debug_message(&quot;Respawned at:  (&quot; + string(x) + &quot;, &quot; + string(y) + &quot;)&quot;);</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#C00000; ">        show_debug_message(&quot;Hearts  restored to: &quot; + string(global.hearts));</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    }</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    <strong><span style="color:#00B050; ">// Optional: Play damage sound and show damage animation</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    <strong><span style="color:#2F5496; ">//  audio_play_sound(snd_take_damage, 1, false);</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">}</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">// CHECK FOR EXIT (Your  existing code)</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">if (place_meeting(x, y, obj_door)) {</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">     show_debug_message(&quot;Hero reached the dungeon exit!&quot;);</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    <strong><span style="color:#00B050; ">// Go to next floor</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">     global.current_floor += 1;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">     show_debug_message(&quot;Advancing to floor &quot; +  string(global.current_floor));</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">    // Optional: Restart room to generate new  maze</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    <strong><span style="color:#2F5496; ">//  room_restart();</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">    </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#00B050; ">    // Or go to next room</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><strong><span style="color:#2F5496; ">    //  room_goto_next();</span></strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">}</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><span class="MsoBookTitle"><span style="color:#EE0000; ">End of  the script Hero Step Event</span></span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"><span style="color:#EE0000; ">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="RecipeHeading">//~~~~~~~~~~~~~~~ SPAWN OBJECT IN OPENING  ~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p class="MsoNormal">This script will create the objects in the opening of the  door.</p>
+<p class="RecipeeBody">//~~~~~~~~~~~~~~~~Function: spawn_object_in_opening  ~~~~~~~~~~~~~~~~</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Create a new script in  GameMaker called &quot;spawn_object_in_opening&quot;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// This function positions hero  and door</span></strong><span style="color:#00B050; "> <strong>at their maze entrance  points</strong></span></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">function spawn_object_in_opening(_wallSide, _position, _cellSize,  _mazeWidth, _mazeHeight, _objectType, _objectName) {</p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;=== SPAWNING &quot; +  string(_objectName) + &quot; ON WALL ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;Wall: &quot; + string(_wallSide) + &quot;,  Position: &quot; + string(_positio</span></strong><span style="color:#C00000; ">n));</span></p>
+<p class="code">    </p>
+<p class="code">    var result_x, result_y;</p>
+<p class="code">    var safe_distance = 80;</p>
+<p class="code">    </p>
+<p class="code">    switch (_wallSide) {</p>
+<p class="code">        case 0: <strong><span style="color:#00B050; ">// Top wall</span></strong></p>
+<p class="code">            result_x =  _position * _cellSize + (_cellSize / 2);</p>
+<p class="code">            result_y =  safe_distance;</p>
+<p class="code">            break;</p>
+<p class="code">        case 1: <strong><span style="color:#00B050; ">// Right wall</span></strong></p>
+<p class="code">            result_x =  (_mazeWidth * _cellSize) - safe_distance;</p>
+<p class="code">            result_y =  _position * _cellSize + (_cellSize / 2);</p>
+<p class="code">            break;</p>
+<p class="code">        case 2: <strong><span style="color:#00B050; ">// Bottom wall</span></strong></p>
+<p class="code">            result_x =  _position * _cellSize + (_cellSize / 2);</p>
+<p class="code">            result_y =  (_mazeHeight * _cellSize) - safe_distance;</p>
+<p class="code">            break;</p>
+<p class="code">        case 3: <strong><span style="color:#00B050; ">// Left wall</span></strong></p>
+<p class="code">            result_x =  safe_distance;</p>
+<p class="code">            result_y =  _position * _cellSize + (_cellSize / 2);</p>
+<p class="code">            break;</p>
+<p class="code">        default:</p>
+<p class="code">            result_x = 80;</p>
+<p class="code">            result_y = 80;</p>
+<p class="code">            break;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// COLLISION CHECKING: Find safe position if current one  has</span></strong><span style="color:#00B050; "> <strong>walls</strong></span></p>
+<p class="code">    var attempts = 0;</p>
+<p class="code">    var max_attempts = 20;</p>
+<p class="code">    var search_radius = 32;</p>
+<p class="code">    </p>
+<p class="code">    while (attempts &lt;  max_attempts) {</p>
+<p class="code">        var wall_collision  = collision_circle(result_x, result_y, 16, obj_wall_plain, false, true);</p>
+<p class="code">        </p>
+<p class="code">        if (wall_collision  == noone) {</p>
+<p class="code">            break;</p>
+<p class="code">        } else {</p>
+<p class="code">            var angle =  (attempts * 45) % 360;</p>
+<p class="code">            var offset_x =  lengthdir_x(search_radius, angle);</p>
+<p class="code">            var offset_y =  lengthdir_y(search_radius, angle);</p>
+<p class="code">            </p>
+<p class="code">            result_x =  result_x + offset_x;</p>
+<p class="code">            result_y =  result_y + offset_y;</p>
+<p class="code">            </p>
+<p class="code">            result_x =  clamp(result_x, 64, (_mazeWidth * _cellSize) - 64);</p>
+<p class="code">            result_y =  clamp(result_y, 64, (_mazeHeight * _cellSize) - 64);</p>
+<p class="code">            </p>
+<p class="code">            attempts++;</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    if (attempts &gt;=  max_attempts) {</p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;WARNING: Could not find safe  position for &quot; + _objectName);</span></strong></p>
+<p class="code">        result_x = 80 +  (_position * 64) % 200;</p>
+<p class="code">        result_y = 80 +  (_wallSide * 80) % 200;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// DISTANCE CHECK: Ensure hero and door aren't too close</span></strong></p>
+<p class="code">    var min_distance = 200;</p>
+<p class="code">    var other_object =  noone;</p>
+<p class="code">    </p>
+<p class="code">    if (_objectType ==  object_hero) {</p>
+<p class="code">        other_object =  instance_find(obj_door, 0);</p>
+<p class="code">    } else {</p>
+<p class="code">        other_object =  instance_find(object_hero, 0);</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    if (other_object !=  noone) {</p>
+<p class="code">        var  current_distance = point_distance(result_x, result_y, other_object.x,  other_object.y);</p>
+<p class="code">        </p>
+<p class="code">        if (current_distance  &lt; min_distance) {</p>
+<p class="code">            <strong><span style="color:#C00000; ">show_debug_message(&quot;Objects too close,  adjusting...&quot;);</span></strong></p>
+<p class="code">            </p>
+<p class="code">            var  push_direction = point_direction(other_object.x, other_object.y, result_x,  result_y);</p>
+<p class="code">            var  push_distance = min_distance - current_distance + 50;</p>
+<p class="code">            </p>
+<p class="code">            result_x +=  lengthdir_x(push_distance, push_direction);</p>
+<p class="code">            result_y +=  lengthdir_y(push_distance, push_direction);</p>
+<p class="code">            </p>
+<p class="code">            result_x =  clamp(result_x, 80, (_mazeWidth * _cellSize) - 80);</p>
+<p class="code">            result_y =  clamp(result_y, 80, (_mazeHeight * _cellSize) - 80);</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Find  existing instance and move it, or create new one</span></strong></p>
+<p class="code">    var existing_instance;</p>
+<p class="code">    if (_objectType ==  object_hero) {</p>
+<p class="code">        existing_instance =  instance_find(object_hero, 0);</p>
+<p class="code">    } else {</p>
+<p class="code">        existing_instance =  instance_find(_objectType, 0);</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    if (existing_instance  != noone) {</p>
+<p class="code">        existing_instance.x  = result_x;</p>
+<p class="code">        existing_instance.y  = result_y;</p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(_objectName + &quot; moved to: (&quot;  + string(result_x) + &quot;, &quot; + string(result_y) + &quot;)&quot;);</span></strong></p>
+<p class="code">    } else {</p>
+<p class="code">        var new_instance =  instance_create_layer(result_x, result_y, &quot;Instances&quot;, _objectType);</p>
+<p class="code">        show_debug_message(_objectName  + &quot; created at: (&quot; + string(result_x) + &quot;, &quot; +  string(result_y) + &quot;)&quot;);</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">     show_debug_message(&quot;=== &quot; + string(_objectName) + &quot;  SPAWNING COMPLETE ===&quot;);</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal"><strong><span style="color:#EE0000; ">End of spawn_object_in_opening  script</span></strong></p>
+<h1>The Hazard Bomb</h1>
+<p class="MsoNormal">In this new code we have above, we actually have two  different types of bombs. Well, in actuallality we have 3 bombs, and in our  next chapter, we will be creating this new type of throwing bomb, when we step  into a section in which we deal specifically with this bomb system. But for  now, let&rsquo;s just look at our two bomgs, the good bomb, that can be used as a  pickup item and the bad bomb. If you step on the bad bomb it will blow you up.  If you have good bombs in your possession, you can use the space bar and throw  them. So, let&rsquo;s start on creating this new bomb system. </p>
+<p class="MsoNormal">Create your image of the sprite in photoshop, just take the  bomb you have and change the color to something else. Like this.</p>
+<img src="Images/6.png" width="266" height="132">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You will need to create a new sprite and obj named: </p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">spr_hazard_bomb, and obj_hazard_bomb</p>
+<img src="Images/7.png" width="578" height="236">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now the object will be used in code, so make sure you name  it exactly that. Our code for the new bomb has already been written inside of  the code that we implemented above.</p>
+<p class="MsoNormal">&nbsp;</p>
+<span style="line-height:115%; font-family:'Calibri',sans-serif; font-size:11.0pt; ">You can Test Your game now, and it should work</span>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
