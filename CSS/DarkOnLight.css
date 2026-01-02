@@ -316,6 +316,32 @@ h1 {
   color: #333; /* Change color on hover */
 }
 
+
+p.RecipeHeading {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:10.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:14.0pt;
+font-family:"Calibri",sans-serif;
+color:#8496B0;
+font-style:italic;
+}
+p.RecipeeBody {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:10.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:14.0pt;
+font-family:"Calibri",sans-serif;
+color:#2F5496;
+font-weight:bold;
+}
+
+
+
 /* Media Queries */
 @media all and (max-width: 250px) {
   .main {
