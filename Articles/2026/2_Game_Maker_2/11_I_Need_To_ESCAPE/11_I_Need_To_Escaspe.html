@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 I Need to ESCAPE</title>
+    
+   <meta name="title" content="11 I Need to Escape ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="This will be a bit of error fixing code, in case our hero gets into trouble, and finds that he spawn himself right inside of the wall inside of a dungeon. "/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="January, 4th, 2026" />
+
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2026/2_Game_Maker_2/11_I_Need_To_ESCAPE/11_I_Need_To_Escaspe.htm">
+
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+p.redItalic {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:10.0pt;
+margin-left:0in;
+line-height:115%;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:red;
+font-weight:bold;
+font-style:italic;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~11 I Need to ESCAPE~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >3/23/2026</p>
+   
+<p>&nbsp;</p>
+<p><img src="Images/1.png" width="293" height="261">
+  </p>
+<p>&nbsp;</p>
+<p><img src="Images/2.png" width="653" height="352">
+</p>
+<p class="MsoNormal">Sometimes for no apparent reason, the game might glitch, and  trap the player with no way to get out.   Above you can see that the hero object spawned it self into a wall, and  he can not move.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Improving the <span style="color:windowtext; ">spawn_object_in_opening </span>code </h1>
+<p class="MsoNormal">In this code, we will be able to strengthen the code that  spawns the hero, and prevent him from showing up on a new floor of the dungeon,  and stuck inside of some wall. Being in a wall, makes our hero unable to move,  and this is not a good thing for our game.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code"> </p>
+<p class="RecipeHeading">// ~~~~~~~~~~SPAWN OBJECT IN OPENING  ~~~~~~~~~</p>
+<img src="Images/3.png" width="326" height="216">
+<p class="code"><strong><span style="color:#00B050; ">// </span></strong><span style="color:#00B050; ">This function positions hero and door at their maze  entrance points</span></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">function spawn_object_in_opening(_wallSide, _position, _cellSize,  _mazeWidth, _mazeHeight, _<strong>objectType</strong>, _objectName) {</p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;=== SPAWNING &quot; +  string(_objectName) + &quot; ON WALL </span></strong><span style="color:#C00000; ">===&quot;);</span></p>
+<p class="code"><span style="color:#C00000; ">    <strong>show_debug_message(&quot;Wall: &quot; + string(_wallSide) + &quot;,  Position: &quot; + string(_position));</strong></span><strong></strong></p>
+<p class="code">    </p>
+<p class="code">    var result_x, result_y;</p>
+<p class="code">    var safe_distance =  _cellSize / 2;  <strong><span style="color:#00B050; ">// Half a cell from the edge</span></strong></p>
+<p class="code">    </p>
+<p class="code">    switch (_wallSide) {</p>
+<p class="code">        case 0: <strong><span style="color:#00B050; ">// Top wall - spawn BELOW the top wall</span></strong></p>
+<p class="code">            result_x =  _position * _cellSize + (_cellSize / 2);</p>
+<p class="code">            result_y =  _cellSize;  <strong><span style="color:#00B050; ">//  One full cell down from top</span></strong></p>
+<p class="code">            break;</p>
+<p class="code">        case 1: <strong><span style="color:#00B050; ">// Right wall - spawn LEFT of the right wall</span></strong></p>
+<p class="code">            result_x =  (_mazeWidth * _cellSize) - _cellSize;  //  One cell left from right edge</p>
+<p class="code">            result_y =  _position * _cellSize + (_cellSize / 2);</p>
+<p class="code">            break;</p>
+<p class="code">        case 2: <strong><span style="color:#00B050; ">// Bottom wall - spawn ABOVE the bottom wall</span></strong></p>
+<p class="code">            result_x =  _position * _cellSize + (_cellSize / 2);</p>
+<p class="code">            result_y =  (_mazeHeight * _cellSize) - _cellSize;   // One cell up from bottom</p>
+<p class="code">            break;</p>
+<p class="code">        case 3: <strong><span style="color:#00B050; ">// Left wall - spawn RIGHT of the left wall</span></strong></p>
+<p class="code">            result_x =  _cellSize;  // One full cell right from  left edge</p>
+<p class="code">            result_y =  _position * _cellSize + (_cellSize / 2);</p>
+<p class="code">            break;</p>
+<p class="code">        default:</p>
+<p class="code">            result_x =  _cellSize;</p>
+<p class="code">            result_y =  _cellSize;</p>
+<p class="code">            break;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">COLLISION  CHECKING: Find safe position if current one has walls</span></strong></p>
+<p class="code">    var attempts = 0;</p>
+<p class="code">    var max_attempts = 20;</p>
+<p class="code">    var search_radius = 32;</p>
+<p class="code">    </p>
+<p class="code">    while (attempts &lt;  max_attempts) {</p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Check for  collision with ALL wall types</span></strong></p>
+<p class="code">        var wall_plain =  collision_circle(result_x, result_y, 16, obj_wall_plain, false, true);</p>
+<p class="code">        var wall_crackedA =  collision_circle(result_x, result_y, 16, obj_wall_crackedA, false, true);</p>
+<p class="code">        var wall_crackedB =  collision_circle(result_x, result_y, 16, obj_wall_crackedB, false, true);</p>
+<p class="code">        </p>
+<p class="code">        if (wall_plain ==  noone &amp;&amp; wall_crackedA == noone &amp;&amp; wall_crackedB == noone) {</p>
+<p class="code">            break;</p>
+<p class="code">        } else {</p>
+<p class="code">            var angle =  (attempts * 45) % 360;</p>
+<p class="code">            var offset_x =  lengthdir_x(search_radius, angle);</p>
+<p class="code">            var offset_y =  lengthdir_y(search_radius, angle);</p>
+<p class="code">            </p>
+<p class="code">            result_x =  result_x + offset_x;</p>
+<p class="code">            result_y =  result_y + offset_y;</p>
+<p class="code">            </p>
+<p class="code">            result_x =  clamp(result_x, 64, (_mazeWidth * _cellSize) - 64);</p>
+<p class="code">            result_y =  clamp(result_y, 64, (_mazeHeight * _cellSize) - 64);</p>
+<p class="code">            </p>
+<p class="code">            attempts++;</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    if (attempts &gt;=  max_attempts) {</p>
+<p class="code">         show_debug_message(&quot;WARNING: Could not find safe position for  &quot; + _objectName);</p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Fallback to  center-ish area</span></strong></p>
+<p class="code">        result_x =  (_mazeWidth * _cellSize) / 2;</p>
+<p class="code">        result_y =  (_mazeHeight * _cellSize) / 2;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">DISTANCE  CHECK: Ensure hero and door aren't too close</span></strong></p>
+<p class="code">    var min_distance = 200;</p>
+<p class="code">    var other_object =  noone;</p>
+<p class="code">    </p>
+<p class="code">    if (_objectType ==  object_hero) {</p>
+<p class="code">        other_object =  instance_find(obj_door, 0);</p>
+<p class="code">    } else {</p>
+<p class="code">        other_object =  instance_find(object_hero, 0);</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    if (other_object !=  noone) {</p>
+<p class="code">        var  current_distance = point_distance(result_x, result_y, other_object.x,  other_object.y);</p>
+<p class="code">        </p>
+<p class="code">        if  (current_distance &lt; min_distance) {</p>
+<p class="code">            <strong><span style="color:#C00000; ">show_debug_message(&quot;Objects too close,  adjusting...&quot;);</span></strong></p>
+<p class="code">            </p>
+<p class="code">            var  push_direction = point_direction(other_object.x, other_object.y, result_x,  result_y);</p>
+<p class="code">            var  push_distance = min_distance - current_distance + 50;</p>
+<p class="code">            </p>
+<p class="code">            result_x +=  lengthdir_x(push_distance, push_direction);</p>
+<p class="code">            result_y +=  lengthdir_y(push_distance, push_direction);</p>
+<p class="code">            </p>
+<p class="code">            result_x =  clamp(result_x, 80, (_mazeWidth * _cellSize) - 80);</p>
+<p class="code">            result_y =  clamp(result_y, 80, (_mazeHeight * _cellSize) - 80);</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Find  existing instance and move it, or create new one</span></strong></p>
+<p class="code">    var existing_instance;</p>
+<p class="code">    if (_objectType ==  object_hero) {</p>
+<p class="code">        existing_instance =  instance_find(object_hero, 0);</p>
+<p class="code">    } else {</p>
+<p class="code">        existing_instance =  instance_find(_objectType, 0);</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    if (existing_instance  != noone) {</p>
+<p class="code">        existing_instance.x  = result_x;</p>
+<p class="code">        existing_instance.y  = result_y;</p>
+<p class="code">        <strong><span style="color:#EE0000; ">show_debug_message(_objectName + &quot; moved to: (&quot;  + string(result_x) + &quot;, &quot; + string(result_y) + &quot;)&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#EE0000; ">     } else {</span></strong></p>
+<p class="code"><strong><span style="color:#EE0000; ">        var new_instance =  instance_create_layer(result_x, result_y, &quot;Instances&quot;, _objectType);</span></strong></p>
+<p class="code"><strong><span style="color:#EE0000; ">        show_debug_message(_objectName + &quot;  created at: (&quot; + string(result_x) + &quot;, &quot; + string(result_y) +  &quot;)&quot;);</span></strong></p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Final  validation: ensure no wall overlap after spawn</span></strong></p>
+<p class="code">    var final_instance =  (_objectType == object_hero) ? instance_find(object_hero, 0) :  instance_find(_objectType, 0);</p>
+<p class="code">    if (final_instance !=  noone) {</p>
+<p class="code">        if  (place_meeting(final_instance.x, final_instance.y, obj_wall_plain) ||</p>
+<p class="code">             place_meeting(final_instance.x, final_instance.y, obj_wall_crackedA) ||</p>
+<p class="code">             place_meeting(final_instance.x, final_instance.y, obj_wall_crackedB)) {</p>
+<p class="code">            <strong><span style="color:#C00000; ">show_debug_message(&quot;WARNING: &quot; + _objectName +  &quot; spawned in wall! Moving to safe fallback position...&quot;);</span></strong></p>
+<p class="code">            <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Move to  center of maze</span></strong></p>
+<p class="code">             final_instance.x = (_mazeWidth * _cellSize) / 2;</p>
+<p class="code">             final_instance.y = (_mazeHeight * _cellSize) / 2;</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;=== &quot; + string(_objectName)  + &quot; SPAWNING COMPLETE ===&quot;);</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="redItalic">End of the spawn_object_in_opening code.</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">       ~~~~~~~~~~~HERO Step CODE  ~~~~~~~~~~~~~~~</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This code, that we changed here will include an escape  clause for the hero. Actually 2 types of escape clauses, one will be an auto  escape, where the hero will attempt to move 8 times to free itself from the  wall, and a second type of escape clause that the player can initiate  themselves. If the player wishes to turn on this escape clause with a key press,  just press the <strong><span style="line-height:115%; font-size:16.0pt; color:black; ">R</span></strong> key and the hero will jump away from the  wall and escape the tomb that he was encased in.</p>
+<img src="Images/4.png" width="323" height="295">
+<p class="MsoNormal">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Includes item collection,  damage handling, and bomb throwing</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// MOVEMENT INPUT (Your existing</span></strong><span style="color:#00B050; "> <strong>code)</strong></span></p>
+<p class="code">var move_x = keyboard_check(vk_right) - keyboard_check(vk_left);</p>
+<p class="code">var move_y = keyboard_check(vk_down)  - keyboard_check(vk_up);</p>
+<p class="code">&nbsp;</p>
+<p class="code">var spd = 4;</p>
+<p class="code">var dx  = move_x * spd;</p>
+<p class="code">var dy  = move_y * spd;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">COLLISION CHECK &amp; MOVEMENT with WALL GLIDING</span></strong></p>
+<p class="code">if (dx != 0 || dy != 0) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">// Check full diagonal move</span></strong></p>
+<p class="code">    if (!place_meeting(x +  dx, y + dy, obj_wall_plain) &amp;&amp;</p>
+<p class="code">        !place_meeting(x +  dx, y + dy, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">        !place_meeting(x +  dx, y + dy, obj_wall_crackedB)) {</p>
+<p class="code">        x += dx;</p>
+<p class="code">        y += dy;</p>
+<p class="code">    } else {</p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Wall  gliding: Try to slide along walls smoothly</span></strong></p>
+<p class="code">        var moved = false;</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <span style="color:#00B050; ">Try horizontal  only</span></p>
+<p class="code">        if (dx != 0  &amp;&amp; !place_meeting(x + dx, y, obj_wall_plain) &amp;&amp;</p>
+<p class="code">             !place_meeting(x + dx, y, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">             !place_meeting(x + dx, y, obj_wall_crackedB)) {</p>
+<p class="code">            x += dx;</p>
+<p class="code">            moved = true;</p>
+<p class="code">        }</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">        //</span></strong><span style="color:#00B050; "> <strong>Try vertical only</strong></span></p>
+<p class="code">        if (dy != 0  &amp;&amp; !place_meeting(x, y + dy, obj_wall_plain) &amp;&amp;</p>
+<p class="code">             !place_meeting(x, y + dy, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">             !place_meeting(x, y + dy, obj_wall_crackedB)) {</p>
+<p class="code">            y += dy;</p>
+<p class="code">            moved = true;</p>
+<p class="code">        }</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">If still  stuck in wall - AGGRESSIVE AUTO-ESCAPE</span></strong></p>
+<p class="code">        if  (place_meeting(x, y, obj_wall_plain) ||</p>
+<p class="code">             place_meeting(x, y, obj_wall_crackedA) ||</p>
+<p class="code">             place_meeting(x, y, obj_wall_crackedB)) {</p>
+<p class="code">            </p>
+<p class="code">            <strong><span style="color:#C00000; ">show_debug_message(&quot;HERO STUCK IN WALL - AUTO</span></strong> <strong><span style="color:#C00000; ">ESCAPING!&quot;);</span></strong></p>
+<p class="code">            </p>
+<p class="code">            <strong><span style="color:#00B050; ">// Try to nudge out in 8 directions with larger distance</span></strong></p>
+<p class="code">            var  nudge_distance = 16;  <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Increased  from 4 to 16</span></strong></p>
+<p class="code">            var escaped =  false;</p>
+<p class="code">            </p>
+<p class="code">            for (var angle  = 0; angle &lt; 360; angle += 45) {</p>
+<p class="code">                var nudge_x  = lengthdir_x(nudge_distance, angle);</p>
+<p class="code">                var nudge_y  = lengthdir_y(nudge_distance, angle);</p>
+<p class="code">                </p>
+<p class="code">                if  (!place_meeting(x + nudge_x, y + nudge_y, obj_wall_plain) &amp;&amp;</p>
+<p class="code">                     !place_meeting(x + nudge_x, y + nudge_y, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">                     !place_meeting(x + nudge_x, y + nudge_y, obj_wall_crackedB)) {</p>
+<p class="code">                    x +=  nudge_x;</p>
+<p class="code">                    y +=  nudge_y;</p>
+<p class="code">                    escaped  = true;</p>
+<p class="code">                    <strong><span style="color:#C00000; ">show_debug_message(&quot;Hero auto-escaped from wall at  angle &quot; + string(angle) + &quot;!&quot;);</span></strong></p>
+<p class="code">                    break;</p>
+<p class="code">                }</p>
+<p class="code">            }</p>
+<p class="code">            </p>
+<p class="code">            <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">If 16px  didn't work, try 32px</span></strong></p>
+<p class="code">            if (!escaped) {</p>
+<p class="code">                <strong><span style="color:#C00000; ">show_debug_message(&quot;Trying larger escape  distance...&quot;);</span></strong></p>
+<p class="code">                 nudge_distance = 32;</p>
+<p class="code">                </p>
+<p class="code">                for (var  angle = 0; angle &lt; 360; angle += 45) {</p>
+<p class="code">                    var  nudge_x = lengthdir_x(nudge_distance, angle);</p>
+<p class="code">                    var  nudge_y = lengthdir_y(nudge_distance, angle);</p>
+<p class="code">                    </p>
+<p class="code">                    if  (!place_meeting(x + nudge_x, y + nudge_y, obj_wall_plain) &amp;&amp;</p>
+<p class="code">                         !place_meeting(x + nudge_x, y + nudge_y, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">                         !place_meeting(x + nudge_x, y + nudge_y, obj_wall_crackedB)) {</p>
+<p class="code">                        x  += nudge_x;</p>
+<p class="code">                        y  += nudge_y;</p>
+<p class="code">                         escaped = true;</p>
+<p class="code">                        <strong><span style="color:#C00000; ">show_debug_message(&quot;Hero escaped at 32px  distance!&quot;);</span></strong></p>
+<p class="code">                         break;</p>
+<p class="code">                    }</p>
+<p class="code">                }</p>
+<p class="code">            }</p>
+<p class="code">            </p>
+<p class="code">            <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Last resort  - teleport to calculated safe position</span></strong></p>
+<p class="code">            if (!escaped) {</p>
+<p class="code">                <strong><span style="color:#C00000; ">show_debug_message(&quot;Could not auto-escape - finding  safe location!&quot;);</span></strong></p>
+<p class="code">                </p>
+<p class="code">                <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Calculate  center of room as fallback</span></strong></p>
+<p class="code">                var safe_x  = room_width / 2;</p>
+<p class="code">                var safe_y  = room_height / 2;</p>
+<p class="code">                </p>
+<p class="code">                <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">If center is  also in wall, try a grid search for ANY safe spot</span></strong></p>
+<p class="code">                if  (place_meeting(safe_x, safe_y, obj_wall_plain) ||</p>
+<p class="code">                     place_meeting(safe_x, safe_y, obj_wall_crackedA) ||</p>
+<p class="code">                     place_meeting(safe_x, safe_y, obj_wall_crackedB)) {</p>
+<p class="code">                    </p>
+<p class="code">                    <strong><span style="color:#C00000; ">show_debug_message(&quot;Center blocked - searching for  safe spot...&quot;);</span></strong></p>
+<p class="code">                    var  found_safe = false;</p>
+<p class="code">                    </p>
+<p class="code">                    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Search in a  grid pattern for a safe spot</span></strong></p>
+<p class="code">                    for  (var check_x = 128; check_x &lt; room_width - 128; check_x += 64) {</p>
+<p class="code">                        for  (var check_y = 128; check_y &lt; room_height - 128; check_y += 64) {</p>
+<p class="code">                             if (!place_meeting(check_x, check_y, obj_wall_plain) &amp;&amp;</p>
+<p class="code">                                 !place_meeting(check_x, check_y, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">                                 !place_meeting(check_x, check_y, obj_wall_crackedB)) {</p>
+<p class="code">                                 safe_x = check_x;</p>
+<p class="code">                                 safe_y = check_y;</p>
+<p class="code">                                 found_safe = true;</p>
+<p class="code">                                 break;</p>
+<p class="code">                             }</p>
+<p class="code">                        }</p>
+<p class="code">                        if  (found_safe) break;</p>
+<p class="code">                    }</p>
+<p class="code">                }</p>
+<p class="code">                </p>
+<p class="code">                x = safe_x;</p>
+<p class="code">                y = safe_y;</p>
+<p class="code">                <strong><span style="color:#C00000; ">show_debug_message(&quot;Teleported to safe location:  (&quot; + string(safe_x) + &quot;, &quot; + string(safe_y) + &quot;)&quot;);</span></strong></p>
+<p class="code">            }</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// EMERGENCY ESCAPE SYSTEM</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Press R to find a safe position  (doesn't rely on spawn being safe)</span></strong></p>
+<p class="code">if (keyboard_check_pressed(ord(&quot;R&quot;))) {</p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;=== EMERGENCY ESCAPE ACTIVATED ===&quot;);</span></strong></p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">First try  the original spawn position</span></strong></p>
+<p class="code">    if  (!place_meeting(global.hero_start_x, global.hero_start_y, obj_wall_plain)  &amp;&amp;</p>
+<p class="code">         !place_meeting(global.hero_start_x, global.hero_start_y,  obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">         !place_meeting(global.hero_start_x, global.hero_start_y,  obj_wall_crackedB)) {</p>
+<p class="code">        x =  global.hero_start_x;</p>
+<p class="code">        y =  global.hero_start_y;</p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;Returned to spawn: (&quot; +  string(x) + &quot;, &quot; + string(y) + &quot;)&quot;);</span></strong></p>
+<p class="code">    } else {</p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Spawn is  blocked, find a safe spot</span></strong></p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;Spawn blocked - searching for  safe location...&quot;);</span></strong></p>
+<p class="code">        </p>
+<p class="code">        var safe_x =  room_width / 2;</p>
+<p class="code">        var safe_y =  room_height / 2;</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">If center is  also in wall, do a grid search</span></strong></p>
+<p class="code">        if  (place_meeting(safe_x, safe_y, obj_wall_plain) ||</p>
+<p class="code">             place_meeting(safe_x, safe_y, obj_wall_crackedA) ||</p>
+<p class="code">             place_meeting(safe_x, safe_y, obj_wall_crackedB)) {</p>
+<p class="code">            </p>
+<p class="code">            var found_safe  = false;</p>
+<p class="code">            </p>
+<p class="code">            <strong><span style="color:#00B050; ">// Search in a grid pattern for ANY safe spot</span></strong></p>
+<p class="code">            for (var  check_x = 128; check_x &lt; room_width - 128; check_x += 64) {</p>
+<p class="code">                for (var  check_y = 128; check_y &lt; room_height - 128; check_y += 64) {</p>
+<p class="code">                    if  (!place_meeting(check_x, check_y, obj_wall_plain) &amp;&amp;</p>
+<p class="code">                         !place_meeting(check_x, check_y, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">                         !place_meeting(check_x, check_y, obj_wall_crackedB)) {</p>
+<p class="code">                         safe_x = check_x;</p>
+<p class="code">                         safe_y = check_y;</p>
+<p class="code">                         found_safe = true;</p>
+<p class="code">                         break;</p>
+<p class="code">                    }</p>
+<p class="code">                }</p>
+<p class="code">                if  (found_safe) break;</p>
+<p class="code">            }</p>
+<p class="code">        }</p>
+<p class="code">        </p>
+<p class="code">        x = safe_x;</p>
+<p class="code">        y = safe_y;</p>
+<p class="code">         show_debug_message(&quot;Escaped to safe location: (&quot; +  string(safe_x) + &quot;, &quot; + string(safe_y) + &quot;)&quot;);</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Optional:  Play a sound effect</span></strong></p>
+<p class="code">    <strong><span style="color:#2F5496; ">//</span></strong> <strong><span style="color:#2F5496; ">audio_play_sound(snd_teleport,  1, false);</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// DEBUG: FORCE HERO INTO WALL  (TEMPORARY - REMOVE AFTER TESTING)</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Press T to teleport hero into a  wall for testing the escape system</span></strong></p>
+<p class="code">if (keyboard_check_pressed(ord(&quot;T&quot;))) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">// Find a wall and teleport hero into it</span></strong></p>
+<p class="code">    var test_wall =  instance_find(obj_wall_plain, 0);</p>
+<p class="code">    </p>
+<p class="code">    if (test_wall != noone)  {</p>
+<p class="code">        x = test_wall.x;</p>
+<p class="code">        y = test_wall.y;</p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;=== DEBUG:  TELEPORTED INTO WALL FOR TESTING ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;Position:  (&quot; + string(x) + &quot;, &quot; + string(y) + &quot;)&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;Press R to  test emergency escape!&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     } else {</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;No walls found  to teleport into.&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     }</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">SPRITE SWITCHING (Your existing code)</span></strong></p>
+<p class="code">if (move_y &lt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_back;</p>
+<p class="code">} else if (move_x &gt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_right;</p>
+<p class="code">} else if (move_x &lt; 0) {</p>
+<p class="code">    sprite_index =  sprite_hero_left;</p>
+<p class="code">} else {</p>
+<p class="code">    sprite_index =  sprite_hero;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// NEW: ITEM COLLECTION</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// --- Collect Heart ---</span></strong></p>
+<p class="code">var item_heart = instance_place(x, y, obj_heart);</p>
+<p class="code">if (item_heart != noone) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">// Heal 1 heart</span></strong></p>
+<p class="code">    global.hearts += 1;</p>
+<p class="code">    if (global.hearts &gt;  global.max_hearts) {</p>
+<p class="code">        global.hearts =  global.max_hearts;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Collected heart! Hearts: &quot;  + string(global.hearts) + &quot;/&quot; + string(global.max_hearts));</span></strong></p>
+<p class="code">     instance_destroy(item_heart);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Optional:  Play sound effect</span></strong></p>
+<p class="code">    <strong><span style="color:#2F5496; ">//  audio_play_sound(snd_collect_heart, 1, false);</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">--- Collect Apple (Gysahi Greens style) ---</span></strong></p>
+<p class="code">var item_apple = instance_place(x, y, obj_apple);</p>
+<p class="code">if (item_apple != noone) {</p>
+<p class="code">    global.apples += 1;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Collected apple! Total: &quot; +  string(global.apples));</span></strong></p>
+<p class="code">     instance_destroy(item_apple);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Optional: Add special effect (like in Chocobo's  Dungeon)</span></strong></p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Could heal 1  heart or give temporary speed boost</span></strong></p>
+<p class="code">    <strong><span style="color:#2F5496; ">//</span></strong> <strong><span style="color:#2F5496; ">audio_play_sound(snd_collect_apple,  1, false);</span></strong></p>
+<p class="code"><strong><span style="color:#2F5496; ">}</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">--- Collect Bomb (Gold pickup) ---</span></strong></p>
+<p class="code">var item_bomb = instance_place(x, y, obj_bomb);</p>
+<p class="code">if (item_bomb != noone) {</p>
+<p class="code">    global.bombs_held += 1;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Picked up bomb! Total bombs:  &quot; + string(global.bombs_held));</span></strong></p>
+<p class="code">     instance_destroy(item_bomb);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Optional: Play sound effect</span></strong></p>
+<p class="code">    <strong><span style="color:#2F5496; ">//</span></strong> <strong><span style="color:#2F5496; ">audio_play_sound(snd_collect_bomb,  1, false);</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// NEW: BOMB THROWING</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Press SPACE to throw a bomb</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">if (keyboard_check_pressed(vk_space)) {</p>
+<p class="code">    if (global.bombs_held  &gt; 0) {</p>
+<p class="code">        global.bombs_held  -= 1;</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Determine  throw direction based on sprite</span></strong></p>
+<p class="code">        var throw_direction  = 270;  // Default: down</p>
+<p class="code">        </p>
+<p class="code">        if (sprite_index ==  sprite_hero_back) {</p>
+<p class="code">            throw_direction  = 90;   <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Throw up</span></strong></p>
+<p class="code">        } else if  (sprite_index == sprite_hero_right) {</p>
+<p class="code">            throw_direction  = 0;    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Throw right</span></strong></p>
+<p class="code">        } else if  (sprite_index == sprite_hero_left) {</p>
+<p class="code">            throw_direction  = 180;  <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Throw left</span></strong></p>
+<p class="code">        } else {</p>
+<p class="code">            throw_direction  = 270;  <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Throw down</span></strong></p>
+<p class="code">        }</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#00B050; ">// Create the bomb projectile slightly ahead of hero</span></strong></p>
+<p class="code">        var offset_distance  = 32;  <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Spawn bomb 32 pixels ahead</span></strong></p>
+<p class="code">        var bomb_x = x +  lengthdir_x(offset_distance, throw_direction);</p>
+<p class="code">        var bomb_y = y +  lengthdir_y(offset_distance, throw_direction);</p>
+<p class="code">        </p>
+<p class="code">        var bomb =  instance_create_layer(bomb_x, bomb_y, &quot;Instances&quot;, obj_bomb_thrown);</p>
+<p class="code">        bomb.direction =  throw_direction;</p>
+<p class="code">        bomb.image_angle =  throw_direction;</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;Threw bomb! Bombs remaining:  &quot; + string(global.bombs_held));</span></strong></p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Optional:  Play throw sound</span></strong></p>
+<p class="code">        <strong><span style="color:#2F5496; ">//</span></strong> <strong><span style="color:#2F5496; ">audio_play_sound(snd_throw_bomb,  1, false);</span></strong></p>
+<p class="code">    } else {</p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;No bombs to throw!&quot;);</span></strong></p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// NEW: CHECK FOR HAZARDS (Black  hazard bomb damages you)</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// obj_hazard_bomb is the BLACK  hazard bomb that damages the</span></strong><span style="color:#00B050; "> <strong>hero</strong></span></p>
+<p class="code">&nbsp;</p>
+<p class="code">var hazard_bomb = instance_place(x, y, obj_hazard_bomb);</p>
+<p class="code">if (hazard_bomb != noone) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Take damage</span></strong></p>
+<p class="code">    global.hearts -= 1;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Hit a black bomb! Lost 1 heart.  Hearts remaining: &quot; + string(global.hearts));</span></strong></p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Destroy the  hazard</span></strong></p>
+<p class="code">     instance_destroy(hazard_bomb);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Check if  hero died</span></strong></p>
+<p class="code">    if (global.hearts &lt;=  0) {</p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;Hero died!  Resetting to floor start...&quot;);</span></strong></p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Teleport  back to start</span></strong></p>
+<p class="code">        x =  global.hero_start_x;</p>
+<p class="code">        y =  global.hero_start_y;</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset hearts</span></strong></p>
+<p class="code">        global.hearts = 3;</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;Respawned at: (&quot; +  string(x) + &quot;, &quot; + string(y) + &quot;</span></strong><span style="color:#C00000; ">)&quot;);</span></p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;Hearts  restored to: &quot; + string(global.hearts));</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     }</span></strong></p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Optional:  Play damage sound and show damage animation</span></strong></p>
+<p class="code">    <strong><span style="color:#2F5496; ">//</span></strong> <strong><span style="color:#2F5496; ">audio_play_sound(snd_take_damage,  1, false);</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// CHECK FOR EXIT (Your existing  code)</span></strong></p>
+<p class="code">if (place_meeting(x, y, obj_door)) {</p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;Hero reached the dungeon exit!&quot;);</span></strong></p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Go to next  floor</span></strong></p>
+<p class="code">    global.current_floor +=  1;</p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;Advancing to floor &quot; +  string(global.current_floor));</span></strong></p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Restart room  to generate new maze (prevents infinite loop)</span></strong></p>
+<p class="code">    room_restart();</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Or go to  next room</span></strong></p>
+<p class="code">    <strong><span style="color:#2F5496; ">//</span></strong> <strong><span style="color:#2F5496; ">room_goto_next();</span></strong></p>
+<p class="code">}</p>
+<p class="redItalic">End of the Hero Step Code</p>
+<p class="redItalic">&nbsp;</p>
+<h1>Temporary Code to test the <span style="line-height:115%; font-size:22.0pt; color:black; ">R</span> Excape Clause.</h1>
+<p class="MsoNormal">Temporary Code to test the <strong><span style="font-size:16.0pt; color:black; ">R</span></strong> escape key. We  want to place this code right above the sprite switching code inside of the  hero step Event. With this next code in place, we can press the <strong><span style="font-size:16.0pt; color:black; ">T </span></strong>key  to teleport the hero into a wall for testing purposes. </p>
+<img src="Images/5.png" width="631" height="454">
+<p class="MsoNormal">&nbsp;</p>
+<p class="RecipeHeading">// DEBUG: FORCE HERO INTO WALL (TEMPORARY - REMOVE AFTER  TESTING)</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Press T to teleport hero into a  wall for testing the escape system</span></strong></p>
+<p class="code">if (keyboard_check_pressed(ord(&quot;T&quot;))) {</p>
+<p class="code">    // <strong><span style="color:#00B050; ">Find a wall and teleport hero into it</span></strong></p>
+<p class="code">    var test_wall =  instance_find(obj_wall_plain, 0);</p>
+<p class="code">    </p>
+<p class="code">    if (test_wall != noone)  {</p>
+<p class="code">        x = test_wall.x;</p>
+<p class="code">        y = test_wall.y;</p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;=== DEBUG: TELEPORTED INTO WALL  FOR TESTING ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;Position:  (&quot; + string(x) + &quot;, &quot; + string(y) + &quot;)&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;Press R to  test emergency escape!&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     } else {</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;No walls found  to teleport into.&quot;);</span></strong></p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<h1>Remove Testing Code</h1>
+<p class="MsoNormal">You will probably want to remove the above code that creates  the peril for our hero and throws him into the wall when the player presses the <strong><span style="line-height:115%; font-family:'Calibri',sans-serif; font-size:14.0pt; ">T</span></strong> key, And we  would certainly want to do it before sending the game out in its final  production mode.</p>
+<p class="MsoNormal">Well, that is about all there is to this Escape code. This  code is a good addition to any game as it is added to protect the game from  forcing the player into a position that they can not get out of.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
