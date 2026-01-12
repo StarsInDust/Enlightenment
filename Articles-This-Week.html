@@ -4,36 +4,35 @@
 
 
 <head>
-    <meta name="description" content="Learn web design fundamentals in this tutorial.">
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Enlightenment</title>
+    <title>1 Introduction to Game Maker</title>
     
-   
- <meta name="title" content="7 Screen Reader Compatibility ">
-
- <meta name="title" content="7 Screen Reader Compatibility ">
+   <meta name="title" content="1 Introduction to Game Maker ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" Python, Tk, Tkinter, Programming "/>
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
 
 
-<meta name="description" content="This article explains how a programmer would go about having screen reader capabilities for their program. "/>
+<meta name="description" content="This is our first article in a new series of Game Maker, where we will be introducing you to it. "/>
 
-<meta name="category" content="Python, Tk, Tkinter, Programming">
+<meta name="category" content="Game Maker, Games Programming">
 
 <meta name="rating" content="General">
 
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="Tuesday, October 27, 2025" />
+<meta name="revised" content="December, 9th, 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2025/3_The_Tool_Tip/7_Screen_Reader_Compatibility/7_Screen_Reading_Compatibility.html">
+<meta name="url" content=" Enlightenment/Articles/2025/4_Game_Maker_2/1_Introductionto_Game_Maker/1_Introduction_to_Game_Maker.html">
 
+ 
+ 
     
     
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
@@ -50,14 +49,6 @@
 </style>
 
 
-<style type="text/css">
-<!--
-span.MsoIntenseEmphasis {
-color:#4472C4;
-font-style:italic;
-}
--->
-</style>
 </head>
 
 
@@ -65,7 +56,7 @@ font-style:italic;
 
 <div class="wrapper">
 <header class="header">
-    <meta name="description" content="Learn Python and Tkinter screen reader compatibility in this tutorial.">Header</header>
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
   
   <ul class="navigation">
    <li><a href="index.html" class="active"title="Home">Home</a></li>
@@ -82,74 +73,107 @@ font-style:italic;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~7 Screen Reader Compatibility~</p>
+  <p class="h2Black" >~1 Introduction to Game Maker~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >1/5/2026</p>
+   <p class="articleDate" style="text-align:right" >1/12/2026</p>
    
 <p>&nbsp;</p>
-<img src="Articles/2026/1_Screen_Reader_Compatibility/Images/1.png" width="315" height="282">
-<p class="MsoNormal">Last Week we looked a bit at the technology which can be  used to aid the accessibility of people who rely on Screen Readers, and this  week, we will be taking a deeper dive into looking at the screen reader side of  things.</p>
-<h1>What are Screen Readers?</h1>
-<p class="MsoNormal">A screen reader is software that interprets what's on a  screen—text, buttons, images, menus—and presents it to the user through:</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">Speech synthesis (spoken output)</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">Braille displays (tactile output)</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
-<p class="MsoNormal">Users navigate using keyboard shortcuts rather than a mouse.  The screen reader announces content, metadata (like alt text), and structural  elements (like headings or form fields).</p>
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">Popular screen readers  include:</span></p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">JAWS (Job Access with Speech) – commercial, Windows-based</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"> NVDA (NonVisual  Desktop Access) – free and open-source for Windows</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"> VoiceOver – built into  macOS and iOS</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">Narrator – built into Windows</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
-<h1>Who Invented Screen Readers?</h1>
-<p class="MsoNormal">The story is as inspiring as it is technical.</p>
-<p class="MsoNormal">Ted Henter, a motorcycle racer, lost his sight in a car  accident in 1978. He retrained as a programmer, and co-developed JAWS, one of  the first widely adopted screen readers.</p>
-<p class="MsoNormal">Early screen readers like Versatile Speech in the 1980s were  hardware-based, converting text to speech via synthesizers.</p>
-<p class="MsoNormal">Many innovations came from blind programmers themselves,  building tools their communities needed when mainstream tech lagged behind.  This makes a lot of sense since, a blind person would truly understand the  needs of another blind person much better than anyone else could.</p>
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">How Do Screen Readers Work?</span></p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">They act as a bridge between the operating system and the  user, parsing:</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"> UI elements (buttons,  labels, menus)</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">Text content</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"> Accessibility metadata  (roles, states, descriptions)</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
-<p class="MsoNormal"><span class="MsoIntenseEmphasis">They rely on accessibility  APIs like:</span></p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">MSAA/UIA on Windows</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"> AT-SPI on Linux</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"> AXAPI on macOS</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
-<p class="MsoNormal">These APIs expose widget information to assistive  technologies.</p>
-<h1>Implementing Screen Reader Support in Python + Tkinter</h1>
-<p class="MsoNormal" style="line-height:normal;"><span class="MsoIntenseEmphasis">Best Practices</span></p>
-<p class="MsoNormal" style="margin-bottom:0in;margin-left:.5in;line-height:normal;">Use Label widgets with clear text: Screen readers can  often detect these<span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">.</span></p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">Associate labels with inputs using layout and naming  conventions.</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">Avoid custom-drawn widgets unless you manually expose  accessibility info.</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
-<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
-<p class="MsoNormal">What You Can Do in Your Own Tkinter Projects</p>
-<p class="MsoNormal">Here are coding strategies to make your GUI more accessible:</p>
-<p class="MsoNormal">1. Use Clear, Text-Based Widgets</p>
-<p class="MsoNormal" style="margin-bottom:0in;">                Stick  to standard widgets like <strong><span style="font-family:'Calibri',sans-serif; ">Label, Button, Entry</span></strong>,  and <strong><span style="font-family:'Calibri',sans-serif; ">Text</span></strong></p>
-<p class="MsoNormal" style="margin-bottom:0in;">                Avoid  custom canvas drawings unless you add narration manually.</p>
-<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
-<p class="MsoNormal"> 2. Label Your Inputs  Clearly</p>
-<p class="MsoNormal">                Use <strong><span style="font-family:'Calibri',sans-serif; ">Label</span></strong> widgets placed near <strong><span style="font-family:'Calibri',sans-serif; ">Entry</span></strong> fields.</p>
-<p class="MsoNormal">                <span class="MsoIntenseEmphasis">Example:</span></p>
-<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">&nbsp;</span></p>
-<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">Label</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tk</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">Label</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">text</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CE9178; ">&quot;Username:&quot;</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
-<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">entry</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; "> </span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">tk</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#4EC9B0; ">Entry</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">root</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
-<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">label</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">grid</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">row</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#B5CEA8; ">0</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">column</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#B5CEA8; ">0</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
-<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">entry</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">.</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">grid</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">(</span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">row</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#B5CEA8; ">0</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">, </span><span style="font-family:Consolas; font-size:10.5pt; color:#9CDCFE; ">column</span><span style="font-family:Consolas; font-size:10.5pt; color:#D4D4D4; ">=</span><span style="font-family:Consolas; font-size:10.5pt; color:#B5CEA8; ">1</span><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">)</span></p>
-<p class="MsoNormal" style="margin-bottom:0in;line-height:10.5pt;background:#1F1F1F;"><span style="font-family:Consolas; font-size:10.5pt; color:#CCCCCC; ">&nbsp;</span></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">&nbsp;</p>
+<h1>What is Game Maker?</h1>
+<img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/1.png" width="453" height="400">
+<p> Game Maker is a free Game Making platform. You can download  Game Maker here.<br>
+  <a href="https://gamemaker.io/en/download">Game Maker  Download Site</a><br>
+  In Game Maker, you can use either a drag and drop visual programming  for your game, or use the GML language, which is sort of like either JavaScript  or C-like languages, but it is the language that was created for and used by  the Game Maker app.</p>
+<h1>To Create Your First Game</h1>
+<p><br>
+  Click on Game and Blank Game will show up below it. Then  click on Blank game to start.<br>
+  
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/2.png" width="628" height="380"> Give a name to the Project, and the hit the <strong>Let&rsquo;s Go!</strong> button.<br>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/3.png" width="528" height="239"> </p>
+<p>This is the Game Interface, when it first starts up.</p>
+<p><br>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/4.png" width="627" height="464"> </p>
+<p>If you are used to earlier versions of Game Maker, you might  be confused with the new look of your Asset Browser</p>
+<h1>Bringing Back in your Folders</h1>
+<p>Before, when you opened game maker, you would see all kinds  of folder. You would have folders for Objects, Scripts, Sprites etc. <br>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/5.png" width="189" height="278">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Now when you open Game Maker, you will only find one room,  and it is not inside a folder like it used to be.<br>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/6.png" width="247" height="330"> </p>
+<p>Right Click inside the Asset Browser, to get to a context  menu<br>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/7.png" width="199" height="338">\</p>
+<p> Select <strong>Create Group</strong>.<br>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/8.png" width="191" height="99"> 
+<p>To start with we want to Create Groups for Objects, Sprites,  Rooms, and Scripts. Drag Room1 into the folder for Rooms.<br>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/9.png" width="229" height="162">
+<h1>Layers</h1>
+<p>Double Click on Rooms<br>
+  When you <strong>double click</strong> on Room1, in the list, you will then see the <strong>instance  layer</strong> pop up on the left side of the screen. You will be adding  new layers for most things that you want to add to the room.  Hit the plus key to add a new layer to your  room.
+<p><br>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/10.png" width="268" height="307">
+<h1>Asset Layer</h1>
+<p>For a drawn sprite, we are only allowed to place it on an  Asset Layer. So, we need to create one.<br>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/11.png" width="321" height="366">
+<h1>Preparing Your  First Sprite: The Face of the Hero</h1>
+<p>Let&rsquo;s make a sprite. Not a perfect one—just something that exists. This  is your first act of creation.</p>
+<h2> Steps to Create a Sprite</h2>
+<p>Right-click &ldquo;Sprites&rdquo; in the Asset Browser: Create &gt;Sprite<br>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/12.png" width="251" height="185"> </p>
+  
+  
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/13.png" width="253" height="122">
+<p>Name it <strong>sprite_hero_idle</strong>  (naming matters later), You want to have  prefixes of Sprites, or objects or scripts to tell one from another.<br>
+</p>
+<p>double click on your new sprite in the <strong>Asset Browser,</strong> and you should  see the name in the center area with a section to work with your new sprite.  Notice he is 64 X 64. This is fine.<br>
+  </p>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/14.png" width="311" height="228">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Click &ldquo;Edit Image&rdquo; → You&rsquo;ll enter the sprite editor</p>
+<img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/15.png" width="232" height="171">
+<p>choose your tool to draw with from the brush pallet. And your  color<br>
+  </p>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/16.png" width="273" height="265">
+<p>Draw something simple: A dot, a square, a smiley face. I  choose the largest circle for a face<br>
+  
+  </p>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/17.png" width="510" height="430">
+<p>Now if you do not like it, choose the size of the eraser tool  in the brushes. Then go to the bottom of that panel, to find your eraser tool.</p>
+
+<img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/18.png" width="381" height="343">
+<p>&nbsp;</p>
+<h1>Switching Tabs</h1>
+<p>&nbsp;</p>
+<p>Closing the panel, or switching to  another panel will save the sprite automatically.</p>
+<p>Switch between Room and Assets in the workspace, here using  the tabs at the top of the workspace.<br>
+  
+  </p>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/19.png" width="503" height="181">
+<p>Click on the room in the Asset Browser, and then change the  size of the room to fit the size of your sprites<br>
+  
+  </p>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/20.png" width="490" height="311">
+<p>Make sure your workspace is in your room tab to see the room<br>
+  
+  <br>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/21.png" width="430" height="126"> </p>
+<p>Now just drag your sprite into the room, not that you would  probably use a sprite for a hero, because you can&rsquo;t attach any behavior to it  but you can see it in the room<br>
+  
+  </p>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/22.png" width="489" height="252">
+<h1>How to Run your Game</h1>
+<p>Hit the Play button at the top<br>
+  
+  <br>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/23.png" width="373" height="158"> </p>
+<p>And you will see your sprite on the screen.<br>
+  
+  </p>
+  <img src="Articles/2026/2_Game_Maker_2/1_Introductionto_Game_Maker/Images/24.png" width="646" height="402">
 <p class="MsoNormal">&nbsp;</p>
 
 
