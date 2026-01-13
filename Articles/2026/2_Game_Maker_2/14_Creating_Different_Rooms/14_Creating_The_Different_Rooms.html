@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 Creating the Different Rooms</title>
+    
+ <meta name="title" content="14 Creating the Different Rooms">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="In this tutorial, we will be taking a look at how to create the different room, or areas, in which our new doors can take us to."/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="January, 12th, 2026" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2026/2_Game_Maker_2/14_Creating_Different_Rooms/14_Creating_The_Different_Rooms.html">
+  
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~14 Creating the Different Rooms ~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >4/13/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="288" height="261">
+<p class="MsoNormal">For this next part of the tutorial, you will want to collect  different background images, and throw them into a folder in your GameMaker  Folder. In the image below, you can see that we have a few extra images that we  can add later, but for now we will be working with just 6 backgrounds.</p>
+<img src="Images/2.png" width="631" height="337">
+<p class="MsoNormal">Well, I suppose you could just have your hero going through  the maze in the dungeon forever, but it would be more exciting that when our hero  does reach a specific door in the dungeon, that he could be transported to any  number of areas in the game, and not simply trapped int the dungeon with no  door out. </p>
+<p class="MsoNormal">Take your images into Photoshop and make sure they fit your  room dimensions (1280 X 704).</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="boldBlue">&nbsp;</p>
+<img src="Images/3.png" width="646" height="527">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Step-by-step: Using a background sprite in a room</h1>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">1. Create a Sprite from Your Background Image</p>
+<p class="MsoNormal">•             In the  Asset Browser, right-click the Sprites folder.</p>
+<p class="MsoNormal">•             Choose  Create Sprite.</p>
+<p class="MsoNormal">•             Name it  something like:</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">  <span class="MsoIntenseEmphasis">spr_background_town</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"> <span class="MsoIntenseEmphasis">spr_background_cave</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">  <span class="MsoIntenseEmphasis">spr_background_forest</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"> <span class="MsoIntenseEmphasis">spr_background_waterfall</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">  <span class="MsoIntenseEmphasis">spr_background_boss</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;"> <span class="MsoIntenseEmphasis">spr_background_shop</span></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Click <strong><span style="font-family:'Calibri',sans-serif; ">Import</span></strong> and  select your image from the <span class="MsoIntenseEmphasis">sprites_Background</span> folder. Set the sprite size to match your room dimensions (1280 X 704).</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/4.png" width="638" height="588">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We will not need to create any objects from these sprites,  since backgrounds do not need code, and only use images, we can stop after  creating the sprites. </p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal"><strong>2. Create these rooms in Game Maker:</strong></p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.25in;">rm_town</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.25in;">rm_cave</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.25in;">rm_forest</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.25in;">rm_waterfall </p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.25in;">rm_boss</p>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.25in;">rm_shop</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">We can right click inside of the Asset Browser, and create a  new group. Name it <strong><span style="font-family:'Calibri',sans-serif; ">Rooms</span></strong>, and  place all of the rooms inside of it. Don&rsquo;t worry about the code not working after  the move, the code will work just fine.</p>
+<img src="Images/5.png" width="389" height="213">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">After creating the sprite, go to the <strong><span style="font-family:'Calibri',sans-serif; ">Rooms</span></strong> tab.</p>
+<img src="Images/6.png" width="334" height="307">
+<p class="MsoNormal">If you do not see your Layers, on the left hand side after  switching to the  Rooms tab, Just click  at the top of the Inspector panel and double-click on the Layers tab to open  it.</p>
+<img src="Images/7.png" width="326" height="156">
+<p class="MsoNormal">Then click on the Background Layer to make sure it is  selected.</p>
+<img src="Images/8.png" width="327" height="218">
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">3. <strong>Place on Background Layer</strong></p>
+<ul>
+  <li>Make sure it is on the Background layer</li>
+</ul>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Note,</span></span> it will try and  constantly go back to Instances Layer, if you do not see an option for Sprites  in the Editor, make sure you are on the correct layer.<strong></strong></p>
+<img src="Images/9.png" width="332" height="216">
+<p class="MsoNormal"><strong>4. In the properties on the left, you'll see:</strong></p>
+<ul style="margin-top:0in;" type="disc">
+  <li class="MsoNormal"><strong>Visible</strong>&nbsp;<span style="font-family:'Segoe UI Symbol',sans-serif; ">✓</span> (CHECK THIS - you want it visible!)</li>
+  <li class="MsoNormal"><strong>Sprite:</strong>&nbsp;(click       here to choose a background image, you will only see this <strong><span style="font-family:'Calibri',sans-serif; ">Sprite</span></strong> option in the       background layer)</li>
+</ul>
+<img src="Images/10.png" width="325" height="364">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><strong>6. Choose your background sprite</strong>&nbsp;from the sprite  list</p>
+<img src="Images/11.png" width="286" height="335">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Make sure the Size of the room is 1280 x 704 to match your  background image. If it is not, change it.</p>
+<img src="Images/12.png" width="343" height="426">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Testing a New Door</h1>
+<p class="MsoNormal">Ok, in order to test out each of our doors, we will need to  add that door to the maze. Because right now the only door that the auto maze  system is generating is the regular progression door. We will be testing the  town door first. So, drag that door into Room1, which is the default room.</p>
+<p class="MsoNormal">Note, Make sure you are on the Instance Layer to drag your  door onto. Objects do not work on the Background layer and should not be there.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/13.png" width="636" height="469">
+<h1><a name="_Write_the_Town"></a>Write the Town Code in the Hero Collision  Event</h1>
+<p class="MsoNormal">Open Object hero</p>
+<img src="Images/14.png" width="277" height="163">
+<p class="MsoNormal">Ok this collision step, is down a bit of a rabbit hole on  this Event Creation panel.</p>
+<p class="MsoNormal">&nbsp;</p>
+<ul>
+  <li>Add  Event → Collision → obj_door_town</li>
+</ul>
+<img src="Images/15.png" width="519" height="474">
+<p class="MsoNormal"><strong>2. Add this code</strong>&nbsp;(using room_restart for  testing):</p>
+<p class="code"><span style="color:#00B050; ">// Collision Event with obj_door_town</span></p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#C00000; ">show_debug_message(&quot;Hero  touched Town Door!</span></strong><span style="color:#C00000; ">&quot;);</span></p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <span style="color:#00B050; ">Now when hero hits door it should go to the town</span></p>
+<p class="code">room_goto(rm_town);</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal" style="margin-left:.25in;">Save and test your game</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/16.png" width="628" height="376">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Getting the hero out of the Sky</h1>
+<p class="MsoNormal">Ok, well when we run the game it works, but he shows up  where the door was at in the dungeon, and that places the hero, up in the sky,  and on the roof. Probably not what we want</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">Room Start Event - Object Hero</span></p>
+<p class="MsoNormal">Add a <strong><span style="font-family:'Calibri',sans-serif; ">Room Start</span></strong> Event  to <strong><span style="font-family:'Calibri',sans-serif; ">object_hero</span></strong>:</p>
+<img src="Images/17.png" width="445" height="516">
+<p class="MsoNormal">In object_hero, Add Event → Other → Room Start</p>
+<p class="MsoNormal">Replace the code that you have in Room Start right now with  this code. This is because in the self generating maze the hero needs to  remember where he was, but in other areas, the hero needs to end up at the  bottom center of the playing field. This code will additionally grow the hero a  bit by scaling him up a bit, so he does not appear so puny, and in the land of  giants, when he shows up in our massively expansive scenic areas.</p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">//</span></strong><span style="line-height:115%; font-family:'Courier New'; font-size:10.0pt; "> <strong><span style="color:#00B050; ">Room Start Event</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// Check if we're in  the dungeon (Room1)</span></strong></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">if (room == Room1) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Dungeon  room - use maze generation spawn point</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     if (variable_global_exists(&quot;hero_spawn_x&quot;)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        x = global.hero_spawn_x;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        y = global.hero_spawn_y;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Keep  normal size in dungeon</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     image_xscale = 1;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     image_yscale = 1;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">else {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// All other rooms - spawn at bottom  center</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     x = room_width / 2;        <strong><span style="color:#00B050; ">// Center horizontally</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     y = room_height - 150;      <strong><span style="color:#00B050; ">// Near bottom (adjust this number if needed)</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// Scale up the hero for town/other rooms</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     image_xscale = 2;          <strong><span style="color:#00B050; ">// Make hero 2x bigger</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     image_yscale = 2;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<h1>Collision Events</h1>
+<p class="MsoNormal">Now we have the collision event completed, when the hero  hits the town door. So, our next steps will be to  create separate collision events inside of the  hero, that will deal with the other doors.</p>
+<p class="MsoNormal">We can actually figure this out just by reviewing the way we  created the code in the hero for the <a href="#_Write_the_Town">collision with  the door</a>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">So, after completing all of those steps, I think I will end  this section of the tutorial here. Next we will be working on adding a bit of  animation to each door. Since our regular dungeon door is quite flashy with its  plulsing yellow light. But it tends to make our other doors look just a bit  dull.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>

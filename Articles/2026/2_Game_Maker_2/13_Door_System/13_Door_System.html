@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 Door System</title>
+    
+   <meta name="title" content="13 Door System ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="In this tutorial, we will be starting to build our door system. In the Dungeon Crawler game, we will want to have a variety of different doors, which can be coded to take the hero to various areas, in the game."/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="January, 12th, 2026" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2026/2_Game_Maker_2/13_Door_System/13_Door_System.html">
+
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~13 Door System~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >4/6/2026</p>
+   
+<p>&nbsp;</p>
+<h1>Creating the Door System</h1>
+<img src="Images/1.png" width="289" height="263">
+<p class="MsoNormal">We will be starting out with these types of doors.</p>
+<img src="Images/2.png" width="351" height="311">
+<h1>Create 2 New Groups</h1>
+<p class="MsoNormal">We are going to start to create a Door System. Since we have  a number of doors, we are going to want to throw these doors into their own  folders in the Game Maker Sprite, and Object Folders. In Game Maker, folders  are referred to as <strong><span style="font-family:'Calibri',sans-serif; ">Groups.</span></strong> So,  if you right click on either the Sprites, or the Object folder, you will not  find an option to create a new folder, but you will find an option to create a  new Group. So, that is what we want to do. And then just name this new Group <strong><span style="font-family:'Calibri',sans-serif; ">&lsquo;Doors&rsquo;</span></strong> in both the Sprite, and  the Object folder.</p>
+<img src="Images/3.png" width="350" height="515">
+<h1>Go to Photoshop</h1>
+<img src="Images/4.png" width="83" height="83">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">In Photo shop, inside of the the layers panel, we are going  to want to separate these Doors onto Different Layers</p>
+<img src="Images/5.png" width="269" height="365">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now our doors can be <strong><span style="font-family:'Calibri',sans-serif; ">64px</span></strong>. So,  make sure your grid is set to 64 in your <strong><span style="font-family:'Calibri',sans-serif; ">Edit-- Preferences= Guides,  Grid &amp; Slices</span></strong>.</p>
+<p><img src="Images/6.png" width="613" height="273"></p>
+<p>&nbsp; </p>
+<p class="MsoNormal">Turn this grid on so we can see it. In Photoshop, go to the  top menu and select:</p>
+<p class="MsoNormal">View- Show -Grid</p>
+<img src="Images/7.png" width="479" height="448">
+<p class="MsoNormal">Resize Each Door to fit inside of your grid</p>
+<img src="Images/8.png" width="622" height="133">
+<p class="MsoNormal">Now create another photo shop document at size 64px and save  each of these, in their own image file to be used for the door sprites.</p>
+<p class="MsoNormal">Also create a new Doors folder to hold your new door sprites  and then, Save these new Sprites to your Game Maker Sprites-Doors folder.</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">C:\Users\YOUR_USER_NAME\GameMakerProjects\My  First Game Project </span></strong></p>
+<img src="Images/9.png" width="623" height="283">
+<p class="MsoNormal">&nbsp;</p>
+<h2>Go Back to Game Maker</h2>
+<img src="Images/10.png" width="458" height="131">
+<h1>Create Your Door Sprites and Objects</h1>
+<p class="MsoNormal">Now remember with GameMaker, just dragging in the images of  our sprites will not work. GameMaker needs to work its own magic with each one  of these sprites, so we will need to also create a sprite for each of these  images through the GameMaker Asset Browser. We already have the normal Dungeon  door, which right now is represented by the red door object and sprite. So, we  need to make just 6 more door types.</p>
+<p class="MsoNormal"><strong>YOUR CURRENT TASK:</strong></p>
+<ol style="margin-top:0in;" start="1" type="1">
+  <li class="MsoNormal" style="margin-bottom:0in;">Create 6 new sprites in GameMaker (in a Doors folder)</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">Create 6 new objects in GameMaker (in a Doors folder)</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">Assign each sprite to its matching object</li>
+</ol>
+<p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal"><strong>SPRITE NAMES:</strong></p>
+<ul style="margin-top:0in;" type="disc">
+  <li class="MsoNormal" style="margin-bottom:0in;">spr_door_town</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">spr_door_cave</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">spr_door_forest</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">spr_door_water</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">spr_door_boss</li>
+  <li class="MsoNormal">spr_door_shop</li>
+</ul>
+<img src="Images/11.png" width="253" height="209">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><a name="_Hlk219014948"><strong>OBJECT NAMES:</strong></a></p>
+<ul style="margin-top:0in;" type="disc">
+  <li class="MsoNormal" style="margin-bottom:0in;">obj_door_town</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">obj_door_cave</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">obj_door_forest</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">obj_door_water</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">obj_door_boss</li>
+  <li class="MsoNormal">obj_door_shop</li>
+</ul>
+<img src="Images/12.png" width="326" height="206">
+<h1>OBJECT DOOR CODE</h1>
+<p class="MsoNormal">Your first door, that we have been using all along to  transport the hero to the next floor, will be the first object that we will be  working with. This door will be used as a normal progression door, and just allow  the hero to travel to the next dungeon floor. The score board will be showing  the next floor number, and the automatic maze generation will create a new maze  for this floor, with treasures to collect. And eventually, , we will have  monsters to fight. So, in other words, this door will be doing the same thing  that it has always done.</p>
+<img src="Images/13.png" width="207" height="192">
+<p class="MsoNormal">Open your <strong><span style="font-family:'Calibri',sans-serif; ">obj_door</span></strong>, so  we can get to this door&rsquo;s <strong><span style="font-family:'Calibri',sans-serif; ">Create</span></strong> Code</p>
+<img src="Images/14.png" width="319" height="202">
+<p class="MsoNormal">If you double click on this door object you will find, we  already have a few events sitting there.</p>
+<img src="Images/15.png" width="227" height="172">
+<p class="MsoNormal">We want to take this next code and place it before the  animation code.</p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type = &quot;progression&quot;;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Your <strong><span style="font-family:'Calibri',sans-serif; ">Create</span></strong> code  for the <strong><span style="font-family:'Calibri',sans-serif; ">obj_door</span></strong> should now look like  this:</p>
+<img src="Images/16.png" width="559" height="250">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Adding Create Code for the other Door Objects</h1>
+<p class="MsoNormal">We will be adding simple code like we did for the first door  to each of the other doors. </p>
+<img src="Images/17.png" width="256" height="215">
+<h2><a name="_Hlk219015124">Town Door</a></h2>
+<p class="MsoNormal">Next up will be <span class="MsoIntenseEmphasis">the obj_door_town</span>. So, add a Create event, and  write this next code for it.</p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type =  &quot;town&quot;;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/18.png" width="592" height="192">
+<p class="MsoNormal">&nbsp;</p>
+<h2>Cave Door</h2>
+<p class="MsoNormal"><a name="_Hlk219015175">Now for the <span class="MsoIntenseEmphasis">obj_door_cave</span>.</a></p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type =  &quot;cave&quot;;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/19.png" width="590" height="144">
+<p class="code">&nbsp;</p>
+<h1>Forest Door</h1>
+<p class="MsoNormal"><a name="_Hlk218941230">Now for the <span class="MsoIntenseEmphasis">obj_door_forest</span>.</a></p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type =  &quot;forest&quot;;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/20.png" width="625" height="178">
+<p class="code">&nbsp;</p>
+<h1>Water Door</h1>
+<p class="MsoNormal"><a name="_Hlk219015204">Now for the <span class="MsoIntenseEmphasis">obj_door_water</span>.</a></p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type =  &quot;water&quot;;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/21.png" width="614" height="178">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Boss Door</h1>
+<p class="MsoNormal"><a name="_Hlk219015217">Now for the <span class="MsoIntenseEmphasis">obj_door_boss</span>.</a></p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type =  &quot;boss&quot;;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/22.png" width="607" height="171">
+<h1>Shop Door</h1>
+<p class="MsoNormal"><a name="_Hlk219015229">Now for the <span class="MsoIntenseEmphasis">obj_door_shop</span>.</a></p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type =  &quot;shop&quot;;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/23.png" width="630" height="173">
+<p class="MsoNormal">&nbsp;</p>
+<h2>Escape Door</h2>
+<p class="MsoNormal">After thinking about this a bit, I have decided to add  another door. This can be the final escape door, and will only appear after we  have defeated the boss in the dungeon. It will be the ultimate door out of the  dungeon, and one that can be used to go to any location. </p>
+<img src="Images/24.png" width="380" height="242">
+<p class="MsoNormal">So, this means we need to create another sprite and object  for it. Create a 64 x 64 canvas inside of Photoshop and drag this door into it.</p>
+<img src="Images/25.png" width="217" height="309">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Save it to your Game Maker Sprite Door Folder</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">C:\Users\YOUR_USER_NAME\GameMakerProjects\My  First Game Project \sprites\Doors</span></strong></p>
+<p class="MsoNormal">Create your sprite and your object in Game Maker and give  them the following names.</p>
+<p class="MsoNormal">spr_door_escape</p>
+<p class="MsoNormal"><a name="_Hlk219015321"></a><a name="_Hlk219015008">obj_door_escape</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type =  &quot;escape&quot;;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/26.png" width="648" height="243">
+<p class="code">&nbsp;</p>
+<h1>Object Controller</h1>
+<p class="MsoNormal">We need to add a line to obj_controller.</p>
+<img src="Images/27.png" width="304" height="186">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">In the <strong><span style="font-family:'Calibri',sans-serif; ">Create </span></strong>Event,  inside of the <strong><span style="font-family:'Calibri',sans-serif; ">obj_controller</span></strong>, find the  section where we are assigning global variables. We need to add one more global  variable to it. So, find this global section at the top.</p>
+<img src="Images/28.png" width="619" height="310">
+<p class="MsoNormal">We want to add this global variable to it.</p>
+<p class="code">global.dungeon_completed = false;   <strong><span style="color:#00B050; ">// Track if  player beat the dungeon</span></strong></p>
+<img src="Images/29.png" width="608" height="244">
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">We will end this tutorial here, because before we can go on  we will need to create a few rooms, and that will be what we will be moving  onto Next.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
