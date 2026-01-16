@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 Animation for Doors</title>
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+p.MsoNoSpacing {
+margin:0in;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:black;
+}
+span.MsoBookTitle {
+letter-spacing:.25pt;
+font-weight:bold;
+font-style:italic;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~15 Animation for Doors~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >4/20/2026</p>
+   
+<p>&nbsp;</p>
+<p class="MsoNormal">Ok, in this tutorial we will be taking a deeper dive into  animation. </p>
+<img src="Images/1.png" width="296" height="269">
+<h1>The Boss Door</h1>
+<p class="MsoNormal">Let&rsquo;s start with the boss door animation, and create some  flames for it. This will indicate to the user to enter at their own risk, as  danger lurks behind this door. So, let&rsquo;s get to flickering a few of those fiery  flames.</p>
+<p class="MsoNormal">Open the <strong><span style="font-family:'Calibri',sans-serif; ">obj_door_boss</span></strong></p>
+<img src="Images/2.png" width="318" height="105">
+<p class="MsoNormal">Create a <strong><span style="font-family:'Calibri',sans-serif; ">Draw</span></strong> Event.</p>
+<img src="Images/3.png" width="235" height="261">
+<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Note,</span></span> Remember to  drag the Boss door on to the Instance layer in the room, or you will not see  it.</p>
+<img src="Images/4.png" width="442" height="222">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This is what the dancing flames will look like once the code  is placed inside of the Draw event, and the Game is ran, to test it.</p>
+<img src="Images/5.png" width="252" height="297">
+<p class="MsoNormal">&nbsp;</p>
+<p class="RecipeHeading">//~~~~~~~~~~~~ obj_door_boss - DRAW EVENT  ~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Dancing flames at bottom of door</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Draw the door sprite normally</span></strong></p>
+<p class="code">draw_self();</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// --- Dancing Flame Licks ---</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Random flicker</span></strong> <strong><span style="color:#00B050; ">intensity</span></strong></p>
+<p class="code">var flicker = random_range(0.7, 1.0);</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Draw flame streaks rising from bottom edges</span></strong></p>
+<p class="code">for (var i = 0; i &lt; 4; i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">// Position flames at bottom corners and sides</span></strong></p>
+<p class="code">    var flame_x = bbox_left  + (sprite_width / 5) * (i + 0.5);</p>
+<p class="code">    var flame_y =  bbox_bottom;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Random  height for flame</span></strong></p>
+<p class="code">    var flame_height =  random_range(8, 20);</p>
+<p class="code">    var flame_width =  random_range(3, 6);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Draw </span></strong><span style="color:#00B050; ">elongated  flame (vertical ellipse)</span></p>
+<p class="code"><span style="color:#00B050; ">     // Orange base</span></p>
+<p class="code">     draw_set_color(c_orange);</p>
+<p class="code">    draw_set_alpha(0.4 *  flicker);</p>
+<p class="code">    draw_ellipse(</p>
+<p class="code">        flame_x - flame_width, </p>
+<p class="code">        flame_y -  flame_height, </p>
+<p class="code">        flame_x +  flame_width, </p>
+<p class="code">        flame_y, </p>
+<p class="code">        false</p>
+<p class="code">    );</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Yellow tip</span></strong></p>
+<p class="code">     draw_set_color(c_yellow);</p>
+<p class="code">    draw_set_alpha(0.5 *  flicker);</p>
+<p class="code">    draw_ellipse(</p>
+<p class="code">        flame_x -  flame_width * 0.6, </p>
+<p class="code">        flame_y -  flame_height, </p>
+<p class="code">        flame_x +  flame_width * 0.6, </p>
+<p class="code">        flame_y -  flame_height * 0.6, </p>
+<p class="code">        false</p>
+<p class="code">    );</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset draw settings</span></strong></p>
+<p class="code">draw_set_alpha(1);</p>
+<p class="code">draw_set_color(c_white);</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody"><a name="_Hlk219195684">Test the Door</a></p>
+<p class="RecipeeBody">&nbsp;</p>
+<p class="RecipeeBody">&nbsp;</p>
+<h1>The Escape door</h1>
+<p class="MsoNormal">Next let&rsquo;s try a few stars coming out of our escape door.  Drag the Escape door into the room, so we can test it.</p>
+<img src="Images/6.png" width="474" height="559">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We will be using 3 Events for the Escape Door, </p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">1. Draw Event</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">2. Create Event</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">3. Step Event</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<img src="Images/7.png" width="305" height="335">
+<p class="MsoNormal">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~     obj_door_escape - DRAW EVENT ~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Rising stars from icy blue  portal</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Draw the door sprite (blue  portal)</span></strong></p>
+<p class="code">draw_self();</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">--- Draw Rising Stars ---</span></strong></p>
+<p class="code">for (var i = 0; i &lt; array_length(star_y); i++) {</p>
+<p class="code">     draw_set_alpha(star_alpha[i]);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">White star  with slight blue tint</span></strong></p>
+<p class="code">     draw_set_color(c_white);</p>
+<p class="code">    draw_circle(star_x[i],  star_y[i], star_size[i], false);</p>
+<p class="code">    </p>
+<p class="code"><strong><span style="color:#00B050; ">     //</span></strong><span style="color:#00B050; "> <strong>Add a sparkle effect  (4-pointed star)</strong></span></p>
+<p class="code">    draw_set_color(c_aqua);</p>
+<p class="code">    draw_line_width(</p>
+<p class="code">        star_x[i] -  star_size[i] * 1.5, </p>
+<p class="code">        star_y[i], </p>
+<p class="code">        star_x[i] +  star_size[i] * 1.5, </p>
+<p class="code">        star_y[i], </p>
+<p class="code">        1</p>
+<p class="code">    );</p>
+<p class="code">    draw_line_width(</p>
+<p class="code">        star_x[i], </p>
+<p class="code">        star_y[i] -  star_size[i] * 1.5, </p>
+<p class="code">        star_x[i], </p>
+<p class="code">        star_y[i] + star_size[i]  * 1.5, </p>
+<p class="code">        1</p>
+<p class="code">    );</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset draw settings</span></strong></p>
+<p class="code">draw_set_alpha(1);</p>
+<p class="code">draw_set_color(c_white);</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~    obj_door_escape - CREATE EVENT ~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Initialize star particle system</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type = &quot;escape&quot;;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Star particle arrays</span></strong></p>
+<p class="code">star_x = [];</p>
+<p class="code">star_y = [];</p>
+<p class="code">star_speed = [];</p>
+<p class="code">star_alpha = [];</p>
+<p class="code">star_size = [];</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Create initial stars</span></strong></p>
+<p class="code">for (var i = 0; i &lt; 15; i++) {</p>
+<p class="code">    star_x[i] = x +  (sprite_width / 2) + random_range(-20, 20);  <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Center  on door</span></strong></p>
+<p class="code">    star_y[i] = y +  random_range(0, 64);</p>
+<p class="code">    star_speed[i] =  random_range(0.5, 1.5);</p>
+<p class="code">    star_alpha[i] =  random(1);</p>
+<p class="code">    star_size[i] =  random_range(2, 5);</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~     obj_door_escape - STEP EVENT ~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Update rising stars</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Update each</span></strong><span style="color:#00B050; "> <strong>star</strong></span></p>
+<p class="code">for (var i = 0; i &lt; array_length(star_y); i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Move star  upward</span></strong></p>
+<p class="code">    star_y[i] -=  star_speed[i];</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Fade in/out  effect</span></strong></p>
+<p class="code">    star_alpha[i] +=  random_range(-0.05, 0.05);</p>
+<p class="code">    star_alpha[i] =  clamp(star_alpha[i], 0.2, 1);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Slight  horizontal drift</span></strong></p>
+<p class="code">    star_x[i] +=  random_range(-0.3, 0.3);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset star  when it goes too high</span></strong></p>
+<p class="code">    if (star_y[i] &lt; y -  64) {</p>
+<p class="code">        star_y[i] = y + 32;</p>
+<p class="code">        star_x[i] = x +  (sprite_width / 2) + random_range(-20, 20);  <strong><span style="color:#00B050; ">// Center on door</span></strong></p>
+<p class="code">        star_alpha[i] =  0.2;</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeeBody">Test the Door</p>
+<p class="code">&nbsp;</p>
+<h1>The Water Door</h1>
+<p class="MsoNormal">So, go to the Doors, and double click on the obj_door_water,  so we can get to its code.</p>
+<img src="Images/8.png" width="328" height="231">
+<p class="MsoNormal">If you look at the obj_door_water, you will see that it  already has a Create event associated with it. We will not be making any  changes to that one though. We will need to add a Draw event to it, and all of  the animation code for the Water door will be enclosed all inside of that one event.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/9.png" width="589" height="345">
+<p class="MsoNormal">Before testing the door, remember to drag the water door  object into the room.</p>
+<img src="Images/10.png" width="632" height="397">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This is what the water animation will look like on the  screen when we put the code in.</p>
+<img src="Images/11.png" width="273" height="258">
+<p class="MsoNormal">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~~~~~~~~ obj_door_water - DRAW EVENT  ~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Flowing water droplets (no  glow)</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Draw the door sprite normally</span></strong></p>
+<p class="code">draw_self();</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">--- Falling Water Droplets ---</span></strong></p>
+<p class="code">var time = current_time / 100;</p>
+<p class="code">&nbsp;</p>
+<p class="code">// <strong><span style="color:#00B050; ">Create 5 water droplets falling  down (constrained to door width)</span></strong></p>
+<p class="code">for (var i = 0; i &lt; 5; i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Calculate  droplet position within door bounds</span></strong></p>
+<p class="code">    var drop_x = bbox_left  + (sprite_width * 0.2) + (sprite_width * 0.6 / 5) * i;</p>
+<p class="code">    var drop_y = bbox_top +  8 + ((time + i * 15) % (sprite_height - 8));</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Gentle side-to-side wave motion</span></strong></p>
+<p class="code">    var wave = sin((time +  i * 20) / 10) * 3;</p>
+<p class="code">    drop_x += wave;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Draw water  droplet (vertical ellipse) </span></strong></p>
+<p class="code">    draw_set_color(c_aqua);</p>
+<p class="code">    draw_set_alpha(0.7);</p>
+<p class="code">    draw_ellipse(</p>
+<p class="code">        drop_x - 2, </p>
+<p class="code">        drop_y - 4, </p>
+<p class="code">        drop_x + 2, </p>
+<p class="code">        drop_y + 4, </p>
+<p class="code">        false</p>
+<p class="code">    );</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">White  highlight on top</span></strong></p>
+<p class="code">     draw_set_color(c_white);</p>
+<p class="code">    draw_set_alpha(0.5);</p>
+<p class="code">    draw_circle(drop_x,  drop_y - 2, 1, false);</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Reset draw settings</span></strong></p>
+<p class="code">draw_set_alpha(1);</p>
+<p class="code">draw_set_color(c_white);</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<img src="Images/12.png" width="629" height="211">
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">With the Code in place, </p>
+<p class="RecipeeBody">Test the Door</p>
+<p class="RecipeeBody">&nbsp;</p>
+<h1>Forest Door</h1>
+<p class="MsoNormal">Forest door is up next - swirling magical leaves! That one  will need CREATE, STEP, and DRAW events like the escape door did.</p>
+<img src="Images/13.png" width="323" height="195">
+<p class="MsoNormal">Since we already have a Create event sitting there, just add  a Draw, and a Step event.</p>
+<img src="Images/14.png" width="607" height="342">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Drag the Forest Door onto the Game board</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/15.png" width="509" height="522">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Tree Door Animation Version One</h1>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~    obj_door_forest - CREATE EVENT ~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Initialize leaf particle system</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type = &quot;forest&quot;;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Leaf particle arrays</span></strong></p>
+<p class="code">leaf_x = [];</p>
+<p class="code">leaf_y = [];</p>
+<p class="code">leaf_angle = [];</p>
+<p class="code">leaf_speed = [];</p>
+<p class="code">leaf_alpha = [];</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// C</span></strong><span style="color:#00B050; ">reate<strong> initial leaves orbiting around door</strong></span></p>
+<p class="code">for (var i = 0; i &lt; 8; i++) {</p>
+<p class="code">    leaf_angle[i] = (360 /  8) * i;  <strong><span style="color:#00B050; ">//  Evenly spaced around circle</span></strong></p>
+<p class="code">    leaf_speed[i] =  random_range(0.8, 1.5);</p>
+<p class="code">    leaf_alpha[i] =  random_range(0.5, 0.8);</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">x and y will  be calculated in step event based on angle</span></strong></p>
+<p class="code">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~~    obj_door_forest - STEP EVENT   ~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Update swirling leaves</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Update each</span></strong><span style="color:#00B050; "> <strong>leaf</strong></span></p>
+<p class="code">for (var i = 0; i &lt; array_length(leaf_angle); i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">// Circular motion around door (tighter orbit)</span></strong></p>
+<p class="code">    var orbit_radius = 28;</p>
+<p class="code">    leaf_angle[i] +=  leaf_speed[i];</p>
+<p class="code">    </p>
+<p class="code">    leaf_x[i] = x + (sprite_width  / 2) + cos(degtorad(leaf_angle[i])) * orbit_radius;</p>
+<p class="code">    leaf_y[i] = y +  (sprite_height / 2) + sin(degtorad(leaf_angle[i])) * orbit_radius;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Gentle alpha pulse</span></strong></p>
+<p class="code">    leaf_alpha[i] +=  random_range(-0.02, 0.02);</p>
+<p class="code">    leaf_alpha[i] =  clamp(leaf_alpha[i], 0.4, 0.9);</p>
+<p class="code">}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~    obj_door_forest - DRAW EVENT   ~~~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Magical swirling leaves </span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Draw the door sprite</span></strong></p>
+<p class="code">draw_self();</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// --- Draw Swirling Leaves</span></strong><span style="color:#00B050; "> </span>---</p>
+<p class="code">for (var i = 0; i &lt; array_length(leaf_angle); i++) {</p>
+<p class="code">     draw_set_alpha(leaf_alpha[i]);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Alternate  between green colors for variety</span></strong></p>
+<p class="code">    if (i % 2 == 0) {</p>
+<p class="code">         draw_set_color(c_green);</p>
+<p class="code">    } else {</p>
+<p class="code">         draw_set_color(c_lime);</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Draw leaf as  small ellipse</span></strong></p>
+<p class="code">    draw_ellipse(</p>
+<p class="code">        leaf_x[i] - 3, </p>
+<p class="code">        leaf_y[i] - 5, </p>
+<p class="code">        leaf_x[i] + 3, </p>
+<p class="code">        leaf_y[i] + 5, </p>
+<p class="code">        false</p>
+<p class="code">    );</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset draw settings</span></strong></p>
+<p class="code">draw_set_alpha(1);</p>
+<p class="code">draw_set_color(c_white);</p>
+<p class="code">                                  </p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Tree Door Animation Version 2</h1>
+<p class="MsoNormal">We could also use Png images of leaves.</p>
+<img src="Images/16.png" width="94" height="42">
+<p class="MsoNormal"><strong><span style="line-height:115%; font-size:20.0pt; ">ADOBE ILLUSTRATOR</span></strong></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">To get a good tight outline, you might have to take it in  <a href="../../../External_Tutorials/Illustrator/Illustrator_Leaves_to_24_Pixel_Size.html" target="_blank">Illustrator </a>and do a trace on it, and then shrink it down from there.</p>
+<img src="Images/17.png" width="102" height="95">
+<p class="MsoNormal">For Game Maker, you cannot use SVG, so do not save as SVG.  But after preforming the needed steps in  Illustrator for tracing, you can then shrink those images down, and they will  maintain their crisp sharp edges, and not become just blurry blobs of colors.</p>
+<p class="MsoNormal">After finishing creating your vector images in Illustrator:</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoBookTitle">Go Back to Game Maker</span></p>
+<img src="Images/18.png" width="467" height="119">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You will only need sprites</p>
+<ol style="margin-top:0in;" start="1" type="1">
+  <li class="MsoNormal"><strong>Import       the 3 leaf PNGs as sprites:</strong></li>
+  <ul style="margin-top:0in;" type="circle">
+    <li class="MsoNormal">spr_leaf_1        (oak leaf)</li>
+    <li class="MsoNormal">spr_leaf_2        (simple leaf)</li>
+    <li class="MsoNormal">spr_leaf_3        (pointed leaf)</li>
+  </ul>
+</ol>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/19.png" width="248" height="328">
+<p class="MsoNormal">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~      obj_door_forest - CREATE EVENT   ~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Initialize falling leaf system with real leaf sprites</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type = &quot;forest&quot;;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Leaf particle arrays</span></strong></p>
+<p class="code">leaf_x = [];</p>
+<p class="code">leaf_y = [];</p>
+<p class="code">leaf_fall_speed = [];</p>
+<p class="code">leaf_drift_speed = [];</p>
+<p class="code">leaf_rotation = [];</p>
+<p class="code">leaf_rotation_speed = [];</p>
+<p class="code">leaf_sprite = [];</p>
+<p class="code">leaf_alpha = [];</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Create 5 falling leaves with variety</span></strong></p>
+<p class="code">for (var i = 0; i &lt; 5; i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <span style="color:#00B050; ">Random  horizontal position within door area</span></p>
+<p class="code">    leaf_x[i] = x +  random_range(sprite_width * 0.2, sprite_width * 0.8);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> Start from middle/lower area of door</p>
+<p class="code">    leaf_y[i] = y +  sprite_height * 0.4 + random(sprite_height * 0.4);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Random fall  speed</span></strong></p>
+<p class="code">    leaf_fall_speed[i] =  random_range(0.5, 1.2);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Random  horizontal drift</span></strong></p>
+<p class="code">    leaf_drift_speed[i] =  random_range(-0.3, 0.3);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Random  starting rotation</span></strong></p>
+<p class="code">    leaf_rotation[i] =  random(360);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Random  rotation speed (some spin faster)</span></strong></p>
+<p class="code">    leaf_rotation_speed[i]  = random_range(-2, 2);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Randomly  assign one of the 3 leaf sprites</span></strong></p>
+<p class="code">    var leaf_choice =  irandom(2);  <strong><span style="color:#00B050; ">//  0, 1, or 2</span></strong></p>
+<p class="code">    if (leaf_choice == 0) {</p>
+<p class="code">        leaf_sprite[i] =  spr_leaf_1;</p>
+<p class="code">    } else if (leaf_choice  == 1) {</p>
+<p class="code">        leaf_sprite[i] =  spr_leaf_2;</p>
+<p class="code">    } else {</p>
+<p class="code">        leaf_sprite[i] =  spr_leaf_3;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Random alpha  for depth</span></strong></p>
+<p class="code">    leaf_alpha[i] =  random_range(0.6, 0.9);</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~~~~     obj_door_forest - STEP EVENT   ~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Update falling leaves</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Update each leaf</span></strong></p>
+<p class="code">for (var i = 0; i &lt; array_length(leaf_y); i++) {</p>
+<p class="code">    <span style="color:#00B050; ">//</span> <strong><span style="color:#00B050; ">Fall downward</span></strong></p>
+<p class="code">    leaf_y[i] +=  leaf_fall_speed[i];</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Gentle horizontal drift</span></strong></p>
+<p class="code">    leaf_x[i] +=  leaf_drift_speed[i];</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Rotate the leaf as it falls</span></strong></p>
+<p class="code">    leaf_rotation[i] +=  leaf_rotation_speed[i];</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Gentle alpha  pulse</span></strong></p>
+<p class="code">    leaf_alpha[i] +=  random_range(-0.01, 0.01);</p>
+<p class="code">    leaf_alpha[i] =  clamp(leaf_alpha[i], 0.5, 0.95);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset leaf  when it falls below the door</span></strong></p>
+<p class="code">    if (leaf_y[i] &gt; y +  sprite_height + 10) {</p>
+<p class="code">        leaf_y[i] = y +  sprite_height * 0.4;  <strong><span style="color:#00B050; ">// Start from middle of door</span></strong></p>
+<p class="code">        leaf_x[i] = x +  random_range(sprite_width * 0.2, sprite_width * 0.8);</p>
+<p class="code">        leaf_rotation[i] =  random(360);</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~     obj_door_forest - DRAW EVENT   ~~~~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Draw falling leaf sprites</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Draw the door sprite</span></strong></p>
+<p class="code">draw_self();</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// --- Draw Falling Leaves ---</span></strong></p>
+<p class="code">for (var i = 0; i &lt; array_length(leaf_y); i++) {</p>
+<p class="code">   <strong><span style="color:#00B050; "> //</span></strong><span style="color:#00B050; "> <strong>Draw the actual leaf sprite with rotation</strong></span></p>
+<p class="code">    draw_sprite_ext(</p>
+<p class="code">         leaf_sprite[i],      <strong><span style="color:#00B050; ">// Which leaf sprite to draw</span></strong></p>
+<p class="code">        0,                   <strong><span style="color:#00B050; ">//  Image index (0 for non-animated)</span></strong></p>
+<p class="code">        leaf_x[i],          <strong><span style="color:#00B050; ">// X  position</span></strong></p>
+<p class="code">        leaf_y[i],          <strong><span style="color:#00B050; ">// Y  position</span></strong></p>
+<p class="code">        1,                  <strong><span style="color:#00B050; ">//  X scale (1 = normal size)</span></strong></p>
+<p class="code">        1,                  <strong><span style="color:#00B050; ">//  Y scale (1 = normal size)</span></strong></p>
+<p class="code">         leaf_rotation[i],   <strong><span style="color:#00B050; ">// Rotation angle</span></strong></p>
+<p class="code">        c_white,            <strong><span style="color:#00B050; ">//  Color tint (white = no tint)</span></strong></p>
+<p class="code">        leaf_alpha[i]       <strong><span style="color:#00B050; ">// Alpha  transparency</span></strong></p>
+<p class="code">    );</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset draw settings</span></strong></p>
+<p class="code">draw_set_alpha(1);</p>
+<p class="code">draw_set_color(c_white);</p>
+<h1>   The Cave Images and the Shop  Images         </h1>
+<p class="MsoNormal">I just created some coins for the animation for the shop and  some rocks for the animation for the Cave door.</p>
+<img src="Images/20.png" width="160" height="120">
+<p class="MsoNormal">&nbsp;</p>
+<h2>The Cave Door Animation</h2>
+<p class="MsoNormal">We want to start this just like we did the other images.  Turn them into sprites, and remember to throw the cave door into the room so  that we can test it.</p>
+<ul style="margin-top:0in;" type="disc">
+  <li class="MsoNormal">spr_rock_1&nbsp;(small       rock)</li>
+  <li class="MsoNormal">spr_rock_2&nbsp;(medium       rock)</li>
+  <li class="MsoNormal">spr_rock_3&nbsp;(large       rock)</li>
+</ul>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/21.png" width="238" height="125">
+<p class="MsoNormal">Now go up to your objects in the Game Maker Asset Browser,  and drag that <strong><span style="font-family:'Calibri',sans-serif; ">obj_cave_door</span></strong> into the room.</p>
+<img src="Images/22.png" width="540" height="276">
+<p class="MsoNormal">This one will take 3 different events to pull off. So, open  up the <strong><span style="font-family:'Calibri',sans-serif; ">obj_cave_door</span></strong>, so we can start  writing some code.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/23.png" width="650" height="708">
+<p class="MsoNormal">&nbsp;</p>
+<p class="RecipeHeading">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~~~     obj_door_cave - CREATE EVENT    ~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Initialize floating rocks with  sparkles</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type = &quot;cave&quot;;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Rock arrays</span></strong></p>
+<p class="code">rock_x = [];</p>
+<p class="code">rock_y = [];</p>
+<p class="code">rock_angle = [];</p>
+<p class="code">rock_rotation = [];</p>
+<p class="code">rock_rotation_speed = [];</p>
+<p class="code">rock_sprite = [];</p>
+<p class="code">rock_alpha = [];</p>
+<p class="code">rock_orbit_speed = [];</p>
+<p class="code">&nbsp;</p>
+<p class="code">// <strong><span style="color:#00B050; ">Sparkle arrays (multiple  sparkles per rock)</span></strong></p>
+<p class="code">sparkle_x = [];</p>
+<p class="code">sparkle_y = [];</p>
+<p class="code">sparkle_rock_index = [];  <strong><span style="color:#00B050; ">// Which rock this sparkle belongs to</span></strong></p>
+<p class="code">sparkle_orbit_angle = [];</p>
+<p class="code">sparkle_orbit_radius = [];</p>
+<p class="code">sparkle_orbit_speed = [];</p>
+<p class="code">sparkle_alpha = [];</p>
+<p class="code">sparkle_size = [];</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Create 3 floating rocks</span></strong></p>
+<p class="code">for (var i = 0; i &lt; 3; i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Position  rocks in circular orbit around door</span></strong></p>
+<p class="code">    rock_angle[i] = (360 /  3) * i;  <strong><span style="color:#00B050; ">//  Evenly spaced</span></strong></p>
+<p class="code">    rock_orbit_speed[i] =  random_range(0.3, 0.6);  <strong><span style="color:#00B050; ">// Slow float</span></strong></p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Random  starting rotation</span></strong></p>
+<p class="code">    rock_rotation[i] =  random(360);</p>
+<p class="code">    rock_rotation_speed[i]  = random_range(-0.5, 0.5);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Assign rock  sprite (rotate through all 3)</span></strong></p>
+<p class="code">    if (i == 0) {</p>
+<p class="code">        rock_sprite[i] =  spr_rock_1;</p>
+<p class="code">    } else if (i == 1) {</p>
+<p class="code">        rock_sprite[i] =  spr_rock_2;</p>
+<p class="code">    } else {</p>
+<p class="code">        rock_sprite[i] =  spr_rock_3;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    rock_alpha[i] =  random_range(0.7, 0.9);</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Create sparkles (2 sparkles per  rock = 6 total)</span></strong></p>
+<p class="code">var sparkle_count = 0;</p>
+<p class="code">for (var i = 0; i &lt; 3; i++) {  <strong><span style="color:#00B050; ">// For each rock</span></strong></p>
+<p class="code">    for (var j = 0; j &lt;  2; j++) {  <strong><span style="color:#00B050; ">//  Create 2 sparkles</span></strong></p>
+<p class="code">         sparkle_rock_index[sparkle_count] = i;  <strong><span style="color:#00B050; ">// Which rock this sparkle belongs to</span></strong></p>
+<p class="code">         sparkle_orbit_angle[sparkle_count] = random(360);</p>
+<p class="code">        sparkle_orbit_radius[sparkle_count]  = random_range(12, 20);</p>
+<p class="code">         sparkle_orbit_speed[sparkle_count] = random_range(2, 4);  <strong><span style="color:#00B050; ">// Fast orbit</span></strong></p>
+<p class="code">         sparkle_alpha[sparkle_count] = random(1);</p>
+<p class="code">         sparkle_size[sparkle_count] = random_range(1, 3);</p>
+<p class="code">        sparkle_count++;</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~~       obj_door_cave - STEP EVENT   ~~~~~~~~~~~~~~~~~~~</p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">//</span></strong><span style="line-height:115%; font-family:'Courier New'; font-size:10.0pt; "> <strong><span style="color:#00B050; ">Update floating rocks and  orbiting sparkles</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">//</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; "> <strong><span style="color:#00B050; ">Update rocks floating in circle</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">for (var i = 0; i &lt;  array_length(rock_angle); i++) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Slow  circular float around door center (tighter orbit)</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     var orbit_radius = 20;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     rock_angle[i] += rock_orbit_speed[i];</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     rock_x[i] = x + (sprite_width / 2) + cos(degtorad(rock_angle[i])) *  orbit_radius;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     rock_y[i] = y + (sprite_height / 2) + sin(degtorad(rock_angle[i])) *  orbit_radius;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Slow  rotation of the rock itself</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     rock_rotation[i] += rock_rotation_speed[i];</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Gentle  alpha pulse</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     rock_alpha[i] += random_range(-0.01, 0.01);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     rock_alpha[i] = clamp(rock_alpha[i], 0.6, 0.95);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">//</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; "> <strong><span style="color:#00B050; ">Update sparkles orbiting around  rocks</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">for (var i = 0; i &lt;  array_length(sparkle_orbit_angle); i++) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     var rock_idx = sparkle_rock_index[i];</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Orbit  around the rock</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     sparkle_orbit_angle[i] += sparkle_orbit_speed[i];</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     sparkle_x[i] = rock_x[rock_idx] + cos(degtorad(sparkle_orbit_angle[i]))  * sparkle_orbit_radius[i];</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     sparkle_y[i] = rock_y[rock_idx] + sin(degtorad(sparkle_orbit_angle[i]))  * sparkle_orbit_radius[i];</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <strong><span style="color:#00B050; ">// Sparkle twinkle effect</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     sparkle_alpha[i] += random_range(-0.05, 0.05);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     sparkle_alpha[i] = clamp(sparkle_alpha[i], 0.2, 1);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~~~~~~~   obj_door_cave - DRAW EVENT   ~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Draw floating rocks with  sparkles (no glow)</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Draw the door</span></strong><span style="color:#00B050; "> <strong>sprite</strong></span></p>
+<p class="code">draw_self();</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// --- Draw Sparkles (behind  rocks) ---</span></strong></p>
+<p class="code">for (var i = 0; i &lt; array_length(sparkle_orbit_angle); i++) {</p>
+<p class="code">     draw_set_alpha(sparkle_alpha[i]);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Yellow/white  sparkles</span></strong></p>
+<p class="code">     draw_set_color(c_yellow);</p>
+<p class="code">     draw_circle(sparkle_x[i], sparkle_y[i], sparkle_size[i], false);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">White center</span></strong></p>
+<p class="code">     draw_set_color(c_white);</p>
+<p class="code">     draw_circle(sparkle_x[i], sparkle_y[i], sparkle_size[i] * 0.4, false);</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// --- Draw Floating Rocks ---</span></strong></p>
+<p class="code">for (var i = 0; i &lt; array_length(rock_angle); i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Draw rock  sprite with rotation</span></strong></p>
+<p class="code">    draw_sprite_ext(</p>
+<p class="code">         rock_sprite[i],      <strong><span style="color:#00B050; ">// Which rock sprite</span></strong></p>
+<p class="code">        0,                   <strong><span style="color:#00B050; ">//  Image index</span></strong></p>
+<p class="code">        rock_x[i],          <strong><span style="color:#00B050; ">// X  position</span></strong></p>
+<p class="code">        rock_y[i],          <strong><span style="color:#00B050; ">// Y  position</span></strong></p>
+<p class="code">        1,                  <strong><span style="color:#00B050; ">//  X scale</span></strong></p>
+<p class="code">        1,                  <strong><span style="color:#00B050; ">//  Y scale</span></strong></p>
+<p class="code">         rock_rotation[i],   <strong><span style="color:#00B050; ">// Rotation</span></strong></p>
+<p class="code">        c_white,            <strong><span style="color:#00B050; ">//  Color tint</span></strong></p>
+<p class="code">        rock_alpha[i]       <strong><span style="color:#00B050; ">// Alpha</span></strong></p>
+<p class="code">    );</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset draw settings</span></strong></p>
+<p class="code">draw_set_alpha(1);</p>
+<p class="code">draw_set_color(c_white);</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<h2>The Shop Door Animation</h2>
+<p class="MsoNormal">Now we are getting ready to do the shop animation, and we  can use the coins for that.</p>
+<img src="Images/24.png" width="163" height="59">
+<p class="MsoNormal">Create your Sprites</p>
+<img src="Images/25.png" width="237" height="184">
+<p class="MsoNormal">Put your Shop door into the room.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/26.png" width="425" height="212">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Write the code for the animation.</p>
+<p class="MsoNormal"><strong>Update all 3 events in obj_door_shop:</strong></p>
+<ol style="margin-top:0in;" start="1" type="1">
+  <li class="MsoNormal" style="margin-bottom:0in;">CREATE EVENT</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">STEP EVENT</li>
+  <li class="MsoNormal" style="margin-bottom:0in;">DRAW EVENT</li>
+</ol>
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<img src="Images/27.png" width="637" height="597">
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<p class="RecipeHeading">//~~~~~~~~~~~~~~        obj_door_shop - CREATE EVENT    ~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Initialize falling coins with golden sparkles</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type = &quot;shop&quot;;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Coin arrays</span></strong></p>
+<p class="code">coin_x = [];</p>
+<p class="code">coin_y = [];</p>
+<p class="code">coin_fall_speed = [];</p>
+<p class="code">coin_sprite_index = [];  <strong><span style="color:#00B050; ">// Which frame (1, 2, or 3)</span></strong></p>
+<p class="code">coin_frame_speed = [];   <strong><span style="color:#00B050; ">// How fast to cycle through frames</span></strong></p>
+<p class="code">coin_frame_counter = [];</p>
+<p class="code">coin_alpha = [];</p>
+<p class="code">&nbsp;</p>
+<p class="code">// <strong><span style="color:#00B050; ">Sparkle arrays</span></strong></p>
+<p class="code">sparkle_x = [];</p>
+<p class="code">sparkle_y = [];</p>
+<p class="code">sparkle_life = [];</p>
+<p class="code">sparkle_size = [];</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Create 3 falling coins</span></strong></p>
+<p class="code">for (var i = 0; i &lt; 3; i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Random  horizontal position within door area</span></strong></p>
+<p class="code">    coin_x[i] = x +  random_range(sprite_width * 0.2, sprite_width * 0.8);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Start from  upper area</span></strong></p>
+<p class="code">    coin_y[i] = y +  sprite_height * 0.1 + random(sprite_height * 0.3);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Slowing down  fall speed</span></strong></p>
+<p class="code">    coin_fall_speed[i] =  random_range(0.3, 0.6);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Start with  random sprite</span></strong></p>
+<p class="code">    coin_sprite_index[i] =  irandom(2);  // 0, 1, or 2</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">How fast the  coin rotates (cycles through sprites)</span></strong></p>
+<p class="code">    coin_frame_speed[i] =  random_range(0.15, 0.3);</p>
+<p class="code">    coin_frame_counter[i] =  0;</p>
+<p class="code">    </p>
+<p class="code">    coin_alpha[i] =  random_range(0.7, 0.9);</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Create 5 sparkles</span></strong></p>
+<p class="code">for (var i = 0; i &lt; 5; i++) {</p>
+<p class="code">    sparkle_x[i] = x +  random_range(sprite_width * 0.2, sprite_width * 0.8);</p>
+<p class="code">    sparkle_y[i] = y +  random_range(sprite_height * 0.1, sprite_height);</p>
+<p class="code">    sparkle_life[i] =  random(60);  <strong><span style="color:#00B050; ">//  Lifetime in frames</span></strong></p>
+<p class="code">    sparkle_size[i] =  random_range(2, 4);</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">//~~~~~~~~~~~~~~~~~~~~     obj_door_shop - STEP EVENT   ~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Update falling coins and  sparkles</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Update</span></strong><span style="color:#00B050; "> <strong>coins</strong></span></p>
+<p class="code">for (var i = 0; i &lt; array_length(coin_y); i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Fall  downward</span></strong></p>
+<p class="code">    coin_y[i] +=  coin_fall_speed[i];</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Animate coin  rotation (cycle through sprites</span></strong>)</p>
+<p class="code">    coin_frame_counter[i]  += coin_frame_speed[i];</p>
+<p class="code">    if (coin_frame_counter[i]  &gt;= 1) {</p>
+<p class="code">         coin_frame_counter[i] = 0;</p>
+<p class="code">         coin_sprite_index[i] = (coin_sprite_index[i] + 1) % 3;  <strong><span style="color:#00B050; ">// Cycle  0→1→2→0</span></strong></p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Gentle alpha  pulse</span></strong><span style="color:#00B050; "> </span></p>
+<p class="code">    coin_alpha[i] +=  random_range(-0.01, 0.01);</p>
+<p class="code">    coin_alpha[i] =  clamp(coin_alpha[i], 0.6, 0.95);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset coin  when it falls below door</span></strong></p>
+<p class="code">    if (coin_y[i] &gt; y +  sprite_height + 10) {</p>
+<p class="code">        coin_y[i] = y +  sprite_height * 0.1;</p>
+<p class="code">        coin_x[i] = x +  random_range(sprite_width * 0.2, sprite_width * 0.8);</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Update sparkles</span></strong></p>
+<p class="code">for (var i = 0; i &lt; array_length(sparkle_life); i++) {</p>
+<p class="code">    sparkle_life[i] += 1;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset  sparkle when lifetime expires</span></strong></p>
+<p class="code">    if (sparkle_life[i]  &gt; 60) {</p>
+<p class="code">        sparkle_x[i] = x +  random_range(sprite_width * 0.2, sprite_width * 0.8);</p>
+<p class="code">        sparkle_y[i] = y +  random_range(sprite_height * 0.1, sprite_height);</p>
+<p class="code">        sparkle_life[i] =  0;</p>
+<p class="code">        sparkle_size[i] =  random_range(2, 4);</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~~       obj_door_shop - DRAW EVENT    ~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Draw falling coins with golden  sparkles</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Draw the door</span></strong> <strong><span style="color:#00B050; ">sprite</span></strong></p>
+<p class="code">draw_self();</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">--- Draw Silver/Blue Sparkles ---</span></strong></p>
+<p class="code">for (var i = 0; i &lt; array_length(sparkle_life); i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Calculate  sparkle alpha based on lifetime (fade in/out)</span></strong></p>
+<p class="code">    var life_ratio =  sparkle_life[i] / 60;</p>
+<p class="code">    var sparkle_alpha =  sin(life_ratio * pi);  <strong><span style="color:#00B050; ">// Smooth fade in/out</span></strong></p>
+<p class="code">    </p>
+<p class="code">     draw_set_alpha(sparkle_alpha * 0.8);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Silver/blue  sparkle (alternating)</span></strong></p>
+<p class="code">    if (i % 2 == 0) {</p>
+<p class="code">        draw_set_color(c_aqua);  <strong><span style="color:#00B050; ">// Blue  sparkle</span></strong></p>
+<p class="code">    } else {</p>
+<p class="code">         draw_set_color(c_silver);  <strong><span style="color:#00B050; ">// Silver sparkle</span></strong></p>
+<p class="code">    }</p>
+<p class="code">     draw_circle(sparkle_x[i], sparkle_y[i], sparkle_size[i], false);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// White center highlight</span></strong></p>
+<p class="code">     draw_set_color(c_white);</p>
+<p class="code">     draw_circle(sparkle_x[i], sparkle_y[i], sparkle_size[i] * 0.5, false);</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// --- Draw Falling Coins ---</span></strong></p>
+<p class="code">for (var i = 0; i &lt; array_length(coin_y); i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Choose which  coin sprite to draw based on index</span></strong></p>
+<p class="code">    var  current_coin_sprite;</p>
+<p class="code">    if (coin_sprite_index[i]  == 0) {</p>
+<p class="code">        current_coin_sprite  = spr_coin_1;</p>
+<p class="code">    } else if  (coin_sprite_index[i] == 1) {</p>
+<p class="code">        current_coin_sprite  = spr_coin_2;</p>
+<p class="code">    } else {</p>
+<p class="code">        current_coin_sprite  = spr_coin_3;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Draw the coin sprite</span></strong></p>
+<p class="code">    draw_sprite_ext(</p>
+<p class="code">         current_coin_sprite,  <strong><span style="color:#00B050; ">// Which coin sprite</span></strong></p>
+<p class="code">        0,                    <strong><span style="color:#00B050; ">//  Image index</span></strong></p>
+<p class="code">        coin_x[i],           <strong><span style="color:#00B050; ">// X  position</span></strong></p>
+<p class="code">        coin_y[i],           <strong><span style="color:#00B050; ">// Y  position</span></strong></p>
+<p class="code">        1,                   <strong><span style="color:#00B050; ">//  X scale</span></strong></p>
+<p class="code">        1,                   <strong><span style="color:#00B050; ">//  Y scale</span></strong></p>
+<p class="code">        0,                   <strong><span style="color:#00B050; ">//  Rotation (0 - coins don't rotate, just change frames)</span></strong></p>
+<p class="code">        c_white,             <strong><span style="color:#00B050; ">//  Color tint</span></strong></p>
+<p class="code">        coin_alpha[i]        <strong><span style="color:#00B050; ">// Alpha</span></strong></p>
+<p class="code">    );</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Reset draw settings</span></strong></p>
+<p class="code">draw_set_alpha(1);</p>
+<p class="code">draw_set_color(c_white);</p>
+<p class="code">&nbsp;</p>
+<h1>The Town Door                                                                                 </h1>
+<p class="MsoNormal">This will be the last door, we will be doing today. The town  door will have just a simple shimmer. This will tell the player which doors in  town that they can enter and which doors that is just artwork, and if they were  to walk into a door without a shimmer…well, nothing really would happen. </p>
+<img src="Images/28.png" width="564" height="202">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now Drag your door into the room</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/29.png" width="465" height="440">
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// obj_door_town - CREATE EVENT</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong><span style="color:#00B050; "> <strong>Simple shimmer effect with subtle sparkles</strong></span></p>
+<p class="code">&nbsp;</p>
+<p class="code">depth = -100;</p>
+<p class="code">door_type = &quot;town&quot;;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Sparkle arrays for shimmer effect</span></strong></p>
+<p class="code">sparkle_x = [];</p>
+<p class="code">sparkle_y = [];</p>
+<p class="code">sparkle_life = [];</p>
+<p class="code">sparkle_max_life = [];</p>
+<p class="code">sparkle_size = [];</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Create 7 subtle sparkles (mix  of white and blue)</span></strong></p>
+<p class="code">for (var i = 0; i &lt; 7; i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Random  position around door edges</span></strong></p>
+<p class="code">    sparkle_x[i] = x +  random_range(sprite_width * 0.15, sprite_width * 0.85);</p>
+<p class="code">    sparkle_y[i] = y +  random_range(sprite_height * 0.15, sprite_height * 0.85);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Lifetime for fade in/out</span></strong></p>
+<p class="code">    sparkle_max_life[i] =  random_range(80, 120);  // Slower, more  subtle</p>
+<p class="code">    sparkle_life[i] =  random(sparkle_max_life[i]);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Small  sparkle size</span></strong></p>
+<p class="code">    sparkle_size[i] =  random_range(1.5, 3);</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~     obj_door_town - STEP EVENT    ~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Update shimmer sparkles</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Update each</span></strong><span style="color:#00B050; "> <strong>sparkle</strong></span></p>
+<p class="code">for (var i = 0; i &lt; array_length(sparkle_life); i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Increment  lifetime</span></strong></p>
+<p class="code">    sparkle_life[i]++;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">If sparkle  has completed its cycle, respawn it</span></strong></p>
+<p class="code">    if (sparkle_life[i]  &gt;= sparkle_max_life[i]) {</p>
+<p class="code">        sparkle_x[i] = x +  random_range(sprite_width * 0.15, sprite_width * 0.85);</p>
+<p class="code">        sparkle_y[i] = y +  random_range(sprite_height * 0.15, sprite_height * 0.85);</p>
+<p class="code">        sparkle_max_life[i]  = random_range(80, 120);</p>
+<p class="code">        sparkle_life[i] =  0;</p>
+<p class="code">        sparkle_size[i] =  random_range(1.5, 3);</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">//~~~~~~~~~~~~~~~~~     obj_door_town - DRAW EVENT  ~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Draw subtle shimmer sparkles</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">&nbsp;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Draw the door</span></strong> <strong><span style="color:#00B050; ">sprite</span></strong></p>
+<p class="code">draw_self();</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Draw sparkles with smooth fade in/out</span></strong></p>
+<p class="code">for (var i = 0; i &lt; array_length(sparkle_life); i++) {</p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Calculate  alpha based on lifetime (smooth fade in and out)</span></strong></p>
+<p class="code">    var life_ratio =  sparkle_life[i] / sparkle_max_life[i];</p>
+<p class="code">    var sparkle_alpha =  sin(life_ratio * pi);  // Smooth sine  wave fade</p>
+<p class="code">    </p>
+<p class="code">     draw_set_alpha(sparkle_alpha * 0.6);   // Subtle intensity</p>
+<p class="code">    </p>
+<p class="code">    // <strong><span style="color:#00B050; ">Alternate between white and light blue sparkles</span></strong></p>
+<p class="code">    if (i % 2 == 0) {</p>
+<p class="code">         draw_set_color(c_white);  <strong><span style="color:#00B050; ">// White sparkle</span></strong></p>
+<p class="code">    } else {</p>
+<p class="code">         draw_set_color(make_color_rgb(176, 224, 230));   // Powder blue sparkle</p>
+<p class="code">    }</p>
+<p class="code">     draw_circle(sparkle_x[i], sparkle_y[i], sparkle_size[i], false);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Tiny bright  center</span></strong></p>
+<p class="code">     draw_set_alpha(sparkle_alpha * 0.9);</p>
+<p class="code">     draw_circle(sparkle_x[i], sparkle_y[i], sparkle_size[i] * 0.4, false);</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset draw settings</span></strong></p>
+<p class="code">draw_set_alpha(1);</p>
+<p class="code">draw_set_color(c_white);</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Well, that is quite enough for this week, next week we will  be looking at creating a few monsters for our hero to fight with inside of the  dungeon.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
