@@ -32,7 +32,14 @@ sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
 """
 
 # === Save File ===
+# Save timestamped backup
 with open(output_path, "w", encoding="utf-8") as f:
     f.write(sitemap)
 
+# Save main sitemap.xml to site root
+main_sitemap_path = os.path.join(site_folder, "sitemap.xml")
+with open(main_sitemap_path, "w", encoding="utf-8") as f:
+    f.write(sitemap)
+
 print(f"Sitemap generated: {output_path}")
+print(f"Main sitemap updated: {main_sitemap_path}")
