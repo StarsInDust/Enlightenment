@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 Creating Enemies</title>
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+p.MsoNoSpacing {
+margin:0in;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:black;
+}
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~16 Creating Enemies~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >4/27/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="290" height="264">
+<p class="MsoNormal" align="center" style="text-align:center;">&nbsp;</p>
+<p class="MsoNormal">In this tutorial, we will be looking at creating an enemy.  But basically our enemies will all be using the same enemy, or in other words,  we will create just one fighting enemy object, and then this single object will  be used by all of the enemies, which want to beat up our poor hero guy. </p>
+<img src="Images/2.png" width="275" height="164">
+<p class="MsoNormal">Oh, you can add different behaviors to each different fiend,  but the object that will be controlling it will still just be the same object. </p>
+<p class="MsoNormal">But, before wrestling with the creation of this creature,  let&rsquo;s take a look at the main dungeon floor that is being used inside of our  maze. I tried adding brick or stone floors, but the elements did not show up  very well, so I finally decided on a darker floor. Yes, this black marble,  which I chose, isn&rsquo;t exactly what is on most dungeon floors, but it just looked  so cool, I decided to keep it.</p>
+<img src="Images/3.png" width="479" height="270">
+<p class="MsoNormal">We need our floor to come in at a size of <strong><span style="font-family:'Calibri',sans-serif; ">1280 x 704</span></strong>. This is really  quite simple. Just create a sprite for this black marble image, through the  sprite panel, and then just assign the sprite to the room&rsquo;s background layer.  Make sure you have double clicked on Room 1 in the Asset Browser, if Room 1 is  not already open.</p>
+
+<img src="Images/4.png" width="310" height="199">
+<p class="MsoNormal">Or just click on the tab for the room at the top of the  middle screen, if you are in the Workspace 1 tab, and you already had the room  1 tab sitting there next to it, just waiting for you to click on it.</p>
+
+<img src="Images/5.png" width="367" height="140">
+<p class="MsoNormal">This is so we can have access to Room 1 properties in the  left hand panel. Click on the Background layer and then scroll down to find  where you can bring your image for the floor in, Hit the three dots, browse to  the sprite file for the background image, and just import it.</p>
+
+<img src="Images/6.png" width="545" height="373">
+<p class="MsoNormal">And this is what our black marble floor will look like in  the maze.</p>
+<img src="Images/7.png" width="617" height="365">
+<h1>&nbsp;</h1>
+<h1>Creating the Folder Structure</h1>
+<p class="MsoNormal">Because we want to keep everything organized, and a game can  get quite messy with all of its elements, we will start by creating a folder  structure to hold our Furry Slime creature. We are just starting with one  creature, but we will be adding other monsters later that can be wrestled with.  Open the Sprite folder inside of Game Maker, we will be creating these folders  inside of there. </p>
+<p class="MsoNormal">Here we are starting with  one main folder called Enemies, inside that  folder, we have a folder for each type of enemy, then inside of each enemy  folder, you will need 4 folders to hold each phase of the film strip. </p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">We need a different film strip for each phase of monster  behavior.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">Idle</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">Attack</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">Hit</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">Death</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">&nbsp;</p>
+<img src="Images/8.png" width="555" height="466">
+<p class="MsoNoSpacing" style="margin-left:.5in;">&nbsp;</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">&nbsp;</p>
+<h1>Blue Furry Slime</h1>
+<p class="MsoNoSpacing" style="margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal">This can get intense, so this is why I am only going to  start with one creature, and explain the creation for this. Most of the other  monsters will basically follow the same pattern, with slight variations on the  way they might move or attack.  The size  of the blue furry slime guy is 128px. What you will see next is its 4 phases of  animation. Each one is placed inside of its own 4 image film strip.</p>
+<img src="Images/9.png" width="509" height="404">
+<img src="Images/10.png" width="486" height="390">
+<h1>The Hero</h1>
+<p class="MsoNormal">I started out with the hero being the same size as the  slime, but realized that he was being dwarfed by the enemy object, and I wanted  my hero to be much more fierce looking in the battle, so the size of the hero  ended up being 292 x 265. Since our fight will take place in a separate room,  we are not restricted to the same rules in setting the sizes for our objects.  We can set them to any size. In the dungeon, it is restricted by the code, the  maze building process, and walls, and such. But in the fighting room we have a  lot more freedom.</p>
+<img src="Images/11.png" width="401" height="158">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now we will need to create a new folder for our hero. Place  this folder inside of the Sprite Folder, in Game Maker.</p>
+<img src="Images/12.png" width="103" height="137">
+<p class="MsoNormal">Our hero will also have several images associated with each  phase of the fight. Notice, that we are not restricted by the number of images  that we can put into each phase of this film strip creation.</p>
+<img src="Images/13.png" width="618" height="327">
+<img src="Images/14.png" width="550" height="294">
+<img src="Images/15.png" width="555" height="237">
+<img src="Images/16.png" width="600" height="189">
+<p class="MsoNoSpacing">&nbsp;</p>
+<h1>Creating a Special Fighting Room</h1>
+<p class="MsoNormal">As, I have already mentioned, we will be using  this special fighting room that the characters  in this battle can dual inside of. It will be a separate room from the room  that holds the dungeon itself. Every time the hero encounters an enemy, both of  them will be sent into this room to work out their differences. So, the first  thing that we need to do is to  create  the image for our room. We will create the fighting room at the same dimensions  as the dungeon room size. So, our dimensions for this room will be <strong><span style="font-family:'Calibri',sans-serif; ">1280px X 704px</span></strong>. </p>
+<img src="Images/17.png" width="625" height="363">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This is what we will be working toward, but we won&rsquo;t really  get there until we do a bit, (actually a whole lot) of coding first.</p>
+<img src="Images/18.png" width="627" height="366">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">After creating the image at the right size, we will need to  bring the background into the game. Now remember for a background to work, all  we need to do is to create a sprite, we do not need to create an object for it.</p>
+<p class="MsoNormal">spr_fight</p>
+<img src="Images/19.png" width="646" height="310">
+<p class="MsoNormal">Then we need to create the room itself. Go to the <strong><span style="font-family:'Calibri',sans-serif; ">Rooms</span></strong> folder where we have all  of our rooms, at the right side of the app, inside of the Asset Browser. Name  this room:</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">rm_fight</span></strong></p>
+<img src="Images/20.png" width="258" height="233">
+<p class="MsoNormal">You must be in the <strong><span style="font-family:'Calibri',sans-serif; ">tab</span></strong> for the <strong><span style="font-family:'Calibri',sans-serif; ">rm_fight</span></strong>, to see the properties  for it.</p>
+<img src="Images/21.png" width="233" height="96">
+<p class="MsoNormal">Go to the Left Panel, and click on <strong><span style="font-family:'Calibri',sans-serif; ">Layers </span></strong>if it is not open. There  you will see the <strong><span style="font-family:'Calibri',sans-serif; ">background</span></strong> Layer. If you do not see the Background layer, just like this, make sure you  have actually clicked on the <strong><span style="font-family:'Calibri',sans-serif; ">rm_fight</span></strong> tab.  If you have done this correctly you will see the room displayed, in the middle  section of the workspace.</p>
+<img src="Images/22.png" width="500" height="178">
+<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Double Check</span></span> your  dimensions for the room, it needs to be set to <strong><span style="font-family:'Calibri',sans-serif; ">1280px  X 704px</span></strong>. If you are not seeing the dimensions in the left hand  panel, then you will need to click back on the <strong><span style="font-family:'Calibri',sans-serif; ">rm_fight</span></strong> tab at the top of the middle section to see the section to set the dimensions.  This is an important check because a lot of times, Game Maker will have changed  this setting at this stage, without your knowledge. So, Make this Check!</p>
+<img src="Images/23.png" width="507" height="217">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Your room background should now look like this.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/24.png" width="456" height="352">
+<h1>Creating Your Sprites to Work as a short movie</h1>
+<p class="MsoNormal">Below, you will see the steps for creating multiple frames  for our sprites, since we want the fight scene to have the fighters to be  animated, and not simply just static images, looking menacingly at one another.</p>
+<p class="MsoNormal">1. Create a Sprite with Multiple Frames</p>
+<ul>
+  <li>Go to Sprites → Create Sprite.</li>
+  <li>Click Import and select all your PNGs (Idle_1.png,  Idle_2.png, etc.).</li>
+  <li>GameMaker will automatically add each image as a  separate frame in the sprite.</li>
+</ul>
+<p class="MsoNormal" style="line-height:normal;"><span class="MsoIntenseEmphasis">Create the Enemy Sprites</span></p>
+<p class="MsoNoSpacing">      spr_enemy_idle_128</p>
+<p class="MsoNoSpacing">       spr_enemy_attack_128</p>
+<p class="MsoNoSpacing">       spr_enemy_hit_128</p>
+<p class="MsoNoSpacing">      spr_enemy_death_128</p>
+<p class="MsoNoSpacing"><a name="_Hlk220142162">      spr_hero_idle_128</a></p>
+<p class="MsoNoSpacing">      spr_hero_attack_128</p>
+<p class="MsoNoSpacing">      spr_hero_hit_128</p>
+<p class="MsoNoSpacing">      spr_hero_death_128 </p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<p class="MsoNoSpacing">Remember to add  the correct sprite multi-image sequence for each sprite. It is easy, just grab  all the images when browsing for it and Game Maker will put them into a strip,  instead of a single image.</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<img src="Images/25.png" width="656" height="390">
+<p class="MsoNoSpacing">Do this for all  of the different states for the enemy fight scene.</p>
+<img src="Images/26.png" width="251" height="143">
+<h1>Create the Hero  Sprites</h1>
+<p class="MsoNormal">Keep the 128, at the end of the name, even though the hero  is larger than 128, he will be using this exact name in the code, so just keep  it like this.</p>
+<p class="MsoNoSpacing">      spr_hero_idle_128</p>
+<p class="MsoNoSpacing">       spr_hero_attack_128</p>
+<p class="MsoNoSpacing">      spr_hero_hit_128</p>
+<p class="MsoNoSpacing">       spr_hero_death_128</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<img src="Images/27.png" width="604" height="535">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Fixing our Hero Step Event</h1>
+<p class="MsoNormal">But before we can begin writing code for each of the objects  in our fight scene, we need to do a bit of back tracking, and make a few coding  changes to our Hero object.</p>
+<p class="MsoNormal">Open the <strong><span style="font-family:'Calibri',sans-serif; ">object_hero</span></strong></p>
+<img src="Images/28.png" width="262" height="224">
+<p class="MsoNormal">Double click on it to open up the Object code. Go into the <strong><span style="font-family:'Calibri',sans-serif; ">step</span></strong> event. We will be placing  this new code, right before <strong><span style="font-family:'Calibri',sans-serif; ">Check for Exit</span></strong> code.</p>
+<img src="Images/29.png" width="485" height="380">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Code for the Hero Step object. Go <a href="Html_Code_Files/1_Hero_Object_Step_Event.html" target="_blank">here</a> for the code to write inside of the Hero Step Event.</p>
+<h1>2 Scripts</h1>
+<img src="Images/30.png" width="300" height="241">
+<p class="MsoNormal">Name these two Scripts just like this:</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">scr_take_damage</p>
+<p class="code">scr_take_damage_enemy</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go <a href="Html_Code_Files/2_Scripts_for_Taking_Damage.html" target="_blank">Here</a> to find the code for these two TAKING DAMAGE Scripts</p>
+<h1>Fixing the HUD Code</h1>
+<p class="MsoNormal">Open your <strong><span style="font-family:'Calibri',sans-serif; ">obj_hud</span></strong>. in  order to get the score board in the fight room from showing up inside of the  dungeon (which makes no sense, because you are not fighting any monsters there,  and this second unnecessary score mechanism is just confusing). So, you will  need to make some changes to the <strong><span style="font-family:'Calibri',sans-serif; ">obj_hud</span></strong> object. Double - click on it,  open it up,  and make changes to its code.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/31.png" width="304" height="238">
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">You should already have the <strong><span style="font-family:'Calibri',sans-serif; ">DRAW  GUI EVENT</span></strong> there, we will just make changes to it.</p>
+<p class="MsoNormal">You are basically adding this top code to it.</p>
+<img src="Images/32.png" width="628" height="302">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go <a href="Html_Code_Files/3_The HUD_Draw_GUI_Event.html" target="_blank">Here</a> for the Full code for the Draw GUI</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Getting the Bomb throwing action to still work in the Maze</h1>
+<p class="MsoNormal">Open the Main Controller, we need to set a variable in there.  This is because we want our bomb throwing to still be active in the maze. We  shut it off in the fight room, so that we could use the space bar to control  the hero&rsquo;s sword fighting instead.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/33.png" width="300" height="275">
+<p class="MsoNormal">To fix this, we basically only need to change one line of  code. Add this one line of code to the bottom of the list of global variables,  that we are setting in the<strong><span style="font-family:'Calibri',sans-serif; "> Create</span></strong> event  of <strong><span style="font-family:'Calibri',sans-serif; ">obj_controller</span></strong>.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="code">global.in_fight = false;        <strong><span style="color:#00B050; ">//  Initialize fight state flag</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Go <a href="Html_Code_Files/4_Code_for_the_Object_Controller.html" target="_blank">here</a> for the full Code.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>The Code for each of the 3 Fight Objects</h1>
+<p class="MsoNormal">In this next part we will be dealing with writing the actual  code for each of the 3 fight objects.</p>
+<p class="MsoNormal">The <strong><span style="font-family:'Calibri',sans-serif; ">enemy fight object, the hero  fight object, and the controller fight object</span></strong>, which will  control the code inside of this fight room.</p>
+<h1>Creating the Objects</h1>
+<p class="MsoNormal">Ok, we have all of these sprites, but when we go about  creating the objects, we will only need 3 objects for the fight room. Create a  Group called <strong><span style="font-family:'Calibri',sans-serif; ">Fight_Objects</span></strong> to put them in,  inside of the <strong><span style="font-family:'Calibri',sans-serif; ">Asset Browser</span></strong>.</p>
+<p><img src="Images/34.png" width="317" height="174"></p>
+<p>&nbsp; </p>
+<p class="MsoNormal">You can go to the next 3 hyperlinks to be able to see this  code.</p>
+
+
+<p class="MsoNormal">&nbsp;</p>
+<ul>
+  <li><a href="Html_Code_Files/5_Code_For_The_Enemy_Fight_Object.html" target="_blank">obj_enemy_fight</a></li>
+  <li><a href="Html_Code_Files/6_Code_For_The_Hero_Fight_Object.html" target="_blank">obj_hero_fight</a></li>
+  <li><a href="Html_Code_Files/7_Code_For_The_Controller_Fight_Object.html" target="_blank">obj_fight_controller</a></li>
+</ul>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Each of these objects will have 3 events. </p>
+<ul>
+  <li>Create</li>
+  <li>Step</li>
+  <li>Draw</li>
+</ul>
+<p class="MsoNormal">I know this enemy system, for our furry slime, consisted of  a lot of code. Just take your time with it, and when you get done. Test your  game to make sure that it works. </p>
+<p class="MsoNormal">And so this brings us to the end of this chapter. Next, we  want to try and get our blue furry slime in the maze to be a bit smaller, and  perhaps even have a bit of a bouncing action as he moves around the halls, in  search of attacking his favorite hero guy.</p>
+<p class="MsoNormal"><footer class="footer">~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</p></article></body>
+</html>
