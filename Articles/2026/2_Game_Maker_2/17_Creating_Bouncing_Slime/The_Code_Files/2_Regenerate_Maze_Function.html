@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Script Regenerate Maze Function</title>
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~2 Script Regenerate Maze Function~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/4/2026</p>
+   
+<p>&nbsp;</p>
+<p class="RecipeHeading">//  ~~~~~~~~~~~~~~~~~REGENERATE MAZE FUNCTION ~~~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Call this function to  regenerate the maze without restarting the room</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// This preserves all global  variables (treasures, floor number, etc.)</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Uses your existing maze  generation system</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function regenerate_maze() {</p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;=== REGENERATING MAZE  ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;Floor: &quot; + string(global.current_floor));</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;Hearts: &quot; + string(global.hearts) +  &quot;, Apples: &quot; + string(global.apples) + &quot;, Bombs: &quot; +  string(global.bombs_held));</span></strong></p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// STEP 1: Clean up existing maze objects</span></strong></p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Destroying old maze  objects...&quot;);</span></strong></p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Destroy walls</span></strong></p>
+<p class="code">    with (obj_wall_plain) {  instance_destroy(); }</p>
+<p class="code">    with  (obj_wall_crackedA) { instance_destroy(); }</p>
+<p class="code">    with  (obj_wall_crackedB) { instance_destroy(); }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Destroy items</span></strong></p>
+<p class="code">    with (obj_heart) {  instance_destroy(); }</p>
+<p class="code">    with (obj_apple) {  instance_destroy(); }</p>
+<p class="code">    with (obj_bomb) {  instance_destroy(); }</p>
+<p class="code">    with (obj_hazard_bomb)  { instance_destroy(); }  // Fixed name!</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Destroy door and thrown bombs</span></strong></p>
+<p class="code">    with (obj_door) {  instance_destroy(); }</p>
+<p class="code">    with (obj_bomb_thrown)  { instance_destroy(); }</p>
+<p class="code">&nbsp;</p>
+<p class="code">    <strong><span style="color:#00B050; background:yellow; ">// Destroy maze</span></strong><span style="color:#00B050; background:yellow; "> <strong>slimes</strong></span><span style="background:yellow; "> </span></p>
+<p class="code"><span style="background:yellow; ">    with (obj_blue_bouncing_directional_slime)  { instance_destroy(); }</span></p>
+<p class="code"><span style="background:yellow; ">    </span></p>
+<p class="code"><span style="background:yellow; ">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Old  objects destroyed.&quot;);</span></strong></span></p>
+<p class="code">    </p>
+<p class="code">    </p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// STEP 2: Generate new maze using existing system</span></strong></p>
+<p class="code">    </p>
+<p class="code">     show_debug_message(&quot;Generating new maze...&quot;);</p>
+<p class="code">    </p>
+<p class="code">    var target_width =  1280;</p>
+<p class="code">    var target_height =  704;</p>
+<p class="code">    var cell_size = 128;</p>
+<p class="code">    var maze_width =  floor(target_width / cell_size);</p>
+<p class="code">    var maze_height =  floor(target_height / cell_size);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// New random seed</span></strong></p>
+<p class="code">    var time_seed =  get_timer();</p>
+<p class="code">     random_set_seed(time_seed);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Use your existing maze generation system</span></strong></p>
+<p class="code">    global.myMaze = new  maze(&quot;recursive_backtrack&quot;, maze_width, maze_height);</p>
+<p class="code">     maze_generate(global.myMaze);</p>
+<p class="code">     spawn_maze_walls(global.myMaze, cell_size, 0, 0);</p>
+<p class="code">    </p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// STEP 3: Reposition hero and spawn door</span></strong></p>
+<p class="code">     spawn_object_in_opening(global.myMaze.heroWallSide,  global.myMaze.heroPosition, cell_size, global.myMaze.w, global.myMaze.h,  object_hero, &quot;Hero&quot;);</p>
+<p class="code">     spawn_object_in_opening(global.myMaze.doorWallSide,  global.myMaze.doorPosition, cell_size, global.myMaze.w, global.myMaze.h,  obj_door, &quot;Door&quot;);</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// Update hero start position</span></strong></p>
+<p class="code">    var hero =  instance_find(object_hero, 0);</p>
+<p class="code">    if (hero != noone) {</p>
+<p class="code">        global.hero_start_x  = hero.x;</p>
+<p class="code">        global.hero_start_y  = hero.y;</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">    <span style="background:yellow; ">// STEP 3.5: Spawn  maze</span></span></strong><span style="color:#00B050; background:yellow; "> <strong>slimes</strong></span><span style="background:yellow; "> </span></p>
+<p class="code"><span style="background:yellow; ">    var slimes_to_spawn = 1;</span></p>
+<p class="code"><span style="background:yellow; ">    spawn_maze_slimes(global.myMaze, cell_size,  obj_blue_bouncing_directional_slime, slimes_to_spawn);</span></p>
+<p class="code">    </p>
+<p class="code">    </p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">// STEP 4: Spawn items using existing system</span></strong></p>
+<p class="code">    </p>
+<p class="code">    var hearts_to_spawn =  irandom_range(1, 2);</p>
+<p class="code">    var apples_to_spawn =  irandom_range(1, 2);</p>
+<p class="code">    var bombs_to_spawn =  irandom_range(1, 2);</p>
+<p class="code">    var hazards_to_spawn =  irandom_range(0, 2);</p>
+<p class="code">    </p>
+<p class="code">     spawn_guaranteed_items(global.myMaze, cell_size, hearts_to_spawn,  apples_to_spawn, bombs_to_spawn, hazards_to_spawn);</p>
+<p class="code">    </p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;=== MAZE REGENERATION COMPLETE ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;Now on Floor &quot; +  string(global.current_floor));</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">}</span></strong></p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>

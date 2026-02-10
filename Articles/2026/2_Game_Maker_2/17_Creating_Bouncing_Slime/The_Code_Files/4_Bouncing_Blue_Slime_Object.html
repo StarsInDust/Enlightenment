@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Bouncing Blue Slime Object</title>
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~4 Bouncing Blue Slime Object~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/4/2026</p>
+   
+<p>&nbsp;</p>
+<p class="RecipeHeading">//~~~~~~~~~~~~~~~~~~~~~~~~CREATE EVENT  ~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p class="RecipeHeading">// ~~~~~~~~ obj_blue_bouncing_directional_slime -  CREATE EVENT ~~~~~~~~~~</p>
+<p class="RecipeHeading">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//  obj_blue_bouncing_directional_slime - CREATE EVENT</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Small maze slime setup  (directional bounce)</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">move_speed = 2;</p>
+<p class="code">lunge_speed = 14;</p>
+<p class="code">lunge_distance = 192;</p>
+<p class="code">lunge_align_tolerance = 48;</p>
+<p class="code">lunge_align_speed = 2;</p>
+<p class="code">lunge_time_max = 20;</p>
+<p class="code">lunge_timer = 0;</p>
+<p class="code">lunge_windup_max = 12;</p>
+<p class="code">lunge_windup = 0;</p>
+<p class="code">lunge_pending = false;</p>
+<p class="code">lunge_dir = 0;</p>
+<p class="code">lunge_target_x = 0;</p>
+<p class="code">lunge_target_y = 0;</p>
+<p class="code">lunge_cooldown_max = 60;</p>
+<p class="code">lunge_cooldown = 0;</p>
+<p class="code">move_dir = choose(0, 90, 180, 270);</p>
+<p class="code">&nbsp;</p>
+<p class="code">sprite_up = spr_blue_bouncing_slime_up;</p>
+<p class="code">sprite_down = spr_blue_bouncing_slime_down;</p>
+<p class="code">sprite_left = spr_blue_bouncing_slime_left;</p>
+<p class="code">sprite_right = spr_blue_bouncing_slime_right;</p>
+<p class="code">&nbsp;</p>
+<p class="code">sprite_index = sprite_down;</p>
+<p class="code">image_speed = 0.2;</p>
+<p class="code">&nbsp;</p>
+<p class="code">image_xscale = 0.5;</p>
+<p class="code">image_yscale = 0.5;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">//~~~~~~~~~~~~~~~~~~~~~~~~STEP EVENT  ~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p class="RecipeHeading">&nbsp;</p>
+<p class="RecipeHeading">// ~~ obj_blue_bouncing_directional_slime - STEP EVENT  ~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Bounce through maze hallways  and switch sprites by direction</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">var hero = instance_find(object_hero, 0);</p>
+<p class="code">&nbsp;</p>
+<p class="code">if (lunge_cooldown &gt; 0) lunge_cooldown--;</p>
+<p class="code">if (lunge_timer &gt; 0) lunge_timer--;</p>
+<p class="code">if (lunge_windup &gt; 0) {</p>
+<p class="code">    lunge_windup--;</p>
+<p class="code">    if (lunge_windup == 0  &amp;&amp; lunge_pending) {</p>
+<p class="code">        move_dir =  lunge_dir;</p>
+<p class="code">        lunge_timer =  lunge_time_max;</p>
+<p class="code">        lunge_cooldown =  lunge_cooldown_max;</p>
+<p class="code">        lunge_pending =  false;</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">if (lunge_windup &gt; 0 &amp;&amp; lunge_pending) {</p>
+<p class="code">    if (lunge_dir == 90 ||  lunge_dir == 270) {</p>
+<p class="code">        var align_dx =  clamp(lunge_target_x - x, -lunge_align_speed, lunge_align_speed);</p>
+<p class="code">        if  (!place_meeting(x + align_dx, y, obj_wall_plain) &amp;&amp;</p>
+<p class="code">             !place_meeting(x + align_dx, y, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">             !place_meeting(x + align_dx, y, obj_wall_crackedB)) {</p>
+<p class="code">            x += align_dx;</p>
+<p class="code">        }</p>
+<p class="code">    } else {</p>
+<p class="code">        var align_dy =  clamp(lunge_target_y - y, -lunge_align_speed, lunge_align_speed);</p>
+<p class="code">        if  (!place_meeting(x, y + align_dy, obj_wall_plain) &amp;&amp;</p>
+<p class="code">             !place_meeting(x, y + align_dy, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">             !place_meeting(x, y + align_dy, obj_wall_crackedB)) {</p>
+<p class="code">            y += align_dy;</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">if (hero != noone &amp;&amp; lunge_timer &lt;= 0 &amp;&amp;  lunge_cooldown &lt;= 0 &amp;&amp; lunge_windup &lt;= 0 &amp;&amp;  !lunge_pending) {</p>
+<p class="code">    var dist_to_hero =  point_distance(x, y, hero.x, hero.y);</p>
+<p class="code">    if (dist_to_hero &lt;=  lunge_distance) {</p>
+<p class="code">        var blocked_line =  collision_line(x, y, hero.x, hero.y, obj_wall_plain, false, true) ||</p>
+<p class="code">                            collision_line(x, y, hero.x, hero.y, obj_wall_crackedA, false, true) ||</p>
+<p class="code">                            collision_line(x, y, hero.x, hero.y, obj_wall_crackedB, false, true);</p>
+<p class="code">        if (!blocked_line)  {</p>
+<p class="code">            var dx = hero.x  - x;</p>
+<p class="code">            var dy = hero.y  - y;</p>
+<p class="code">            var aligned_h =  abs(dy) &lt;= lunge_align_tolerance;</p>
+<p class="code">            var aligned_v =  abs(dx) &lt;= lunge_align_tolerance;</p>
+<p class="code">&nbsp;</p>
+<p class="code">            if (aligned_h  || aligned_v) {</p>
+<p class="code">                if  (aligned_h &amp;&amp; !aligned_v) {</p>
+<p class="code">                     lunge_dir = (dx &gt; 0) ? 0 : 180;</p>
+<p class="code">                } else if  (aligned_v &amp;&amp; !aligned_h) {</p>
+<p class="code">                     lunge_dir = (dy &gt; 0) ? 270 : 90;</p>
+<p class="code">                } else {</p>
+<p class="code">                     lunge_dir = (abs(dx) &gt; abs(dy)) ? ((dx &gt; 0) ? 0 : 180) : ((dy &gt;  0) ? 270 : 90);</p>
+<p class="code">                }</p>
+<p class="code">                 lunge_target_x = hero.x;</p>
+<p class="code">                 lunge_target_y = hero.y;</p>
+<p class="code">                 lunge_windup = lunge_windup_max;</p>
+<p class="code">                 lunge_pending = true;</p>
+<p class="code">            } else {</p>
+<p class="code">                var  align_dir;</p>
+<p class="code">                if (abs(dx)  &gt; abs(dy)) {</p>
+<p class="code">                     align_dir = (dy &gt; 0) ? 270 : 90;</p>
+<p class="code">                } else {</p>
+<p class="code">                     align_dir = (dx &gt; 0) ? 0 : 180;</p>
+<p class="code">                }</p>
+<p class="code">&nbsp;</p>
+<p class="code">                var  align_blocked = false;</p>
+<p class="code">                if  (align_dir == 0) {</p>
+<p class="code">                     align_blocked = place_meeting(x + move_speed, y, obj_wall_plain) ||</p>
+<p class="code">                                     place_meeting(x + move_speed, y, obj_wall_crackedA) ||</p>
+<p class="code">                                     place_meeting(x + move_speed, y, obj_wall_crackedB);</p>
+<p class="code">                } else if  (align_dir == 180) {</p>
+<p class="code">                     align_blocked = place_meeting(x - move_speed, y, obj_wall_plain) ||</p>
+<p class="code">                                     place_meeting(x - move_speed, y, obj_wall_crackedA) ||</p>
+<p class="code">                                     place_meeting(x - move_speed, y, obj_wall_crackedB);</p>
+<p class="code">                } else if  (align_dir == 90) {</p>
+<p class="code">                     align_blocked = place_meeting(x, y - move_speed, obj_wall_plain) ||</p>
+<p class="code">                                     place_meeting(x, y - move_speed, obj_wall_crackedA) ||</p>
+<p class="code">                                     place_meeting(x, y - move_speed, obj_wall_crackedB);</p>
+<p class="code">                } else if  (align_dir == 270) {</p>
+<p class="code">                     align_blocked = place_meeting(x, y + move_speed, obj_wall_plain) ||</p>
+<p class="code">                                     place_meeting(x, y + move_speed, obj_wall_crackedA) ||</p>
+<p class="code">                                     place_meeting(x, y + move_speed, obj_wall_crackedB);</p>
+<p class="code">                }</p>
+<p class="code">&nbsp;</p>
+<p class="code">                if  (!align_blocked) {</p>
+<p class="code">                     move_dir = align_dir;</p>
+<p class="code">                }</p>
+<p class="code">            }</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">var current_speed = (lunge_windup &gt; 0) ? 0 : ((lunge_timer  &gt; 0) ? lunge_speed : move_speed);</p>
+<p class="code">&nbsp;</p>
+<p class="code">var hsp = 0;</p>
+<p class="code">var vsp = 0;</p>
+<p class="code">&nbsp;</p>
+<p class="code">switch (move_dir) {</p>
+<p class="code">    case 0:   hsp = current_speed;  break; <strong><span style="color:#00B050; ">//  right</span></strong></p>
+<p class="code">    case 180: hsp =  -current_speed; break; <strong><span style="color:#00B050; ">// left</span></strong></p>
+<p class="code">    case 90:  vsp = -current_speed; break; <strong><span style="color:#00B050; ">// up</span></strong></p>
+<p class="code">    case 270: vsp =  current_speed;  break; <strong><span style="color:#00B050; ">// down</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">var blocked = place_meeting(x + hsp, y + vsp, obj_wall_plain) ||</p>
+<p class="code">               place_meeting(x + hsp, y + vsp, obj_wall_crackedA) ||</p>
+<p class="code">               place_meeting(x + hsp, y + vsp, obj_wall_crackedB);</p>
+<p class="code">&nbsp;</p>
+<p class="code">if (blocked) {</p>
+<p class="code">    var options = [];</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var open_right =  !(place_meeting(x + current_speed, y, obj_wall_plain) ||</p>
+<p class="code">                        place_meeting(x + current_speed, y, obj_wall_crackedA) ||</p>
+<p class="code">                        place_meeting(x + current_speed, y, obj_wall_crackedB));</p>
+<p class="code">    if (open_right)  array_push(options, 0);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var open_left =  !(place_meeting(x - current_speed, y, obj_wall_plain) ||</p>
+<p class="code">                       place_meeting(x - current_speed, y, obj_wall_crackedA) ||</p>
+<p class="code">                       place_meeting(x - current_speed, y, obj_wall_crackedB));</p>
+<p class="code">    if (open_left)  array_push(options, 180);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var open_up =  !(place_meeting(x, y - current_speed, obj_wall_plain) ||</p>
+<p class="code">                     place_meeting(x, y - current_speed, obj_wall_crackedA) ||</p>
+<p class="code">                     place_meeting(x, y - current_speed, obj_wall_crackedB));</p>
+<p class="code">    if (open_up)  array_push(options, 90);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var open_down =  !(place_meeting(x, y + current_speed, obj_wall_plain) ||</p>
+<p class="code">                       place_meeting(x, y + current_speed, obj_wall_crackedA) ||</p>
+<p class="code">                       place_meeting(x, y + current_speed, obj_wall_crackedB));</p>
+<p class="code">    if (open_down)  array_push(options, 270);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    if  (array_length(options) &gt; 0) {</p>
+<p class="code">        move_dir =  options[irandom(array_length(options) - 1)];</p>
+<p class="code">    } else {</p>
+<p class="code">        move_dir =  (move_dir + 180) mod 360;</p>
+<p class="code">    }</p>
+<p class="code">} else {</p>
+<p class="code">    x += hsp;</p>
+<p class="code">    y += vsp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">if (move_dir == 0) {</p>
+<p class="code">    sprite_index =  sprite_right;</p>
+<p class="code">} else if (move_dir == 180) {</p>
+<p class="code">    sprite_index =  sprite_left;</p>
+<p class="code">} else if (move_dir == 90) {</p>
+<p class="code">    sprite_index =  sprite_up;</p>
+<p class="code">} else if (move_dir == 270) {</p>
+<p class="code">    sprite_index =  sprite_down;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>

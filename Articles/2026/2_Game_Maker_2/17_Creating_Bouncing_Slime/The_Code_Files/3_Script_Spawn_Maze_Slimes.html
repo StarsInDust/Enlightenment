@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Script Spawn Maze Slimes</title>
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~3 Script Spawn Maze Slimes~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/4/2026</p>
+   
+<p>&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~     SPAWN MAZE SLIMES - Standalone Script ~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Create a script in GameMaker  called &quot;spawn_maze_slimes&quot;</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">// Spawns a set number of slimes  in open maze cells</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function spawn_maze_slimes(_mazeStruct, _cellSize, _objectType,  _count) {</p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;=== SPAWNING MAZE SLIMES  ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;Count: &quot; + string(_count));</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">    var m = _mazeStruct;</p>
+<p class="code">    var cell_size =  _cellSize;</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var spawn_positions =  ds_list_create();</p>
+<p class="code">&nbsp;</p>
+<p class="code">    for (var i = 1; i &lt;  m.w - 1; i++) {</p>
+<p class="code">        for (var j = 1; j  &lt; m.h - 1; j++) {</p>
+<p class="code">            var pos_x = i *  cell_size + (cell_size / 2);</p>
+<p class="code">            var pos_y = j *  cell_size + (cell_size / 2);</p>
+<p class="code">&nbsp;</p>
+<p class="code">            var hero =  instance_find(object_hero, 0);</p>
+<p class="code">            var door =  instance_find(obj_door, 0);</p>
+<p class="code">&nbsp;</p>
+<p class="code">            var too_close =  false;</p>
+<p class="code">            var  min_distance = 180;</p>
+<p class="code">&nbsp;</p>
+<p class="code">            if (hero !=  noone &amp;&amp; point_distance(pos_x, pos_y, hero.x, hero.y) &lt;  min_distance) {</p>
+<p class="code">                too_close =  true;</p>
+<p class="code">            }</p>
+<p class="code">            if (door !=  noone &amp;&amp; point_distance(pos_x, pos_y, door.x, door.y) &lt;  min_distance) {</p>
+<p class="code">                too_close =  true;</p>
+<p class="code">            }</p>
+<p class="code">&nbsp;</p>
+<p class="code">            if (!too_close  &amp;&amp; !position_meeting(pos_x, pos_y, obj_wall_plain) &amp;&amp;</p>
+<p class="code">                 !position_meeting(pos_x, pos_y, obj_wall_crackedA) &amp;&amp;</p>
+<p class="code">                 !position_meeting(pos_x, pos_y, obj_wall_crackedB)) {</p>
+<p class="code">                 ds_list_add(spawn_positions, [pos_x, pos_y, i, j]);</p>
+<p class="code">            }</p>
+<p class="code">        }</p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Valid slime spawn positions:  &quot; + string(ds_list_size(spawn_position</span></strong><span style="color:#C00000; ">s)));</span></p>
+<p class="code">&nbsp;</p>
+<p class="code">     ds_list_shuffle(spawn_positions);</p>
+<p class="code">&nbsp;</p>
+<p class="code">    var placed = 0;</p>
+<p class="code">    var max_place =  min(_count, ds_list_size(spawn_positions));</p>
+<p class="code">&nbsp;</p>
+<p class="code">    for (var s = 0; s &lt;  max_place; s++) {</p>
+<p class="code">        var pos =  spawn_positions[| s];</p>
+<p class="code">         instance_create_layer(pos[0], pos[1], &quot;Instances&quot;,  _objectType);</p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;Placed slime at cell [&quot; +  string(pos[2]) + &quot;, &quot; + string(pos[3]) + &quot;]&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">        placed++;</span></strong></p>
+<p class="code">    }</p>
+<p class="code">&nbsp;</p>
+<p class="code">     ds_list_destroy(spawn_positions);</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;Total slimes placed: &quot; + string(placed));</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">     show_debug_message(&quot;=== MAZE SLIME SPAWNING COMPLETE ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">}</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
