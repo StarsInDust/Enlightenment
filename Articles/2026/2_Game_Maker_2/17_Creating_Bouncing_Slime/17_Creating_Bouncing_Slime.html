@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 Creating a Bouncing Slime</title>
+    
+   <meta name="title" content="17 Creating a Bouncing Slime">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="In this tutorial, we will be concentrating on creating a different slime from the one that we are using in the Fight room. That is because the slime in the dungeon maze  should be smaller to fit comfortably inside of the corridors, and we will also be animating it with a bit of a bounce and a lunge whenever, the hero comes within sight of the creature."/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="February, 10th, 2026" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2026/2_Game_Maker_2/17_Creating_Bouncing_Slime/17_Creating_Bouncing_Slime.html">
+ 
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+span.MsoIntenseReference {
+font-variant:small-caps;
+color:#4472C4;
+letter-spacing:.25pt;
+font-weight:bold;
+}
+p.MsoNoSpacing {
+margin:0in;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:black;
+}
+span.MsoIntenseEmphasis {
+color:#4472C4;
+font-style:italic;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~17 Creating a Bouncing Slime~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/4/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="280" height="251">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">In this tutorial, we want to create a smaller bouncing slime.  This way we can use it inside of the dungeon, and it will look more as if it  really belongs there.  We wanted our  fight room slime to be a bit bigger, so that our opponents would be able to  take center stage, but our dungeon maze is constrained to size limitations, and  so different sizes for the enemy, in these two separate areas, will work out a  whole lot better.</p>
+<img src="Images/2.png" width="570" height="317">
+<p class="MsoNormal">So, we will look at shrinking him down to a size of <strong><span style="font-family:'Calibri',sans-serif; ">64px X 64px</span></strong>.</p>
+<h1>Creating our Folders</h1>
+<p class="MsoNormal">Inside the slime folder, create another folder named  something like <strong><span style="font-family:'Calibri',sans-serif; ">Dungeon Bounce</span></strong>.</p>
+<img src="Images/3.png" width="563" height="246">
+<p class="MsoNormal">Inside this <strong><span style="font-family:'Calibri',sans-serif; ">Dungeon Bounce</span></strong> folder, create another 4 folders, for each direction that the enemy will travel  inside of the maze.</p>
+<img src="Images/4.png" width="493" height="149">
+
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/5.png" width="374" height="653">
+<p class="MsoNormal"><a name="_Toc221179260"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Note, </span></span>Remember  to remove the original larger, enemy Slimes that you placed in the dungeon  earlier, or you will have the big original slimes, and these smaller animated slimes  (that we will be creating) in there together, and that is not what we want.</a></p>
+<img src="Images/6.png" width="440" height="249">
+<h1>Code Preperations</h1>
+<p class="MsoNormal"><strong>Naming used:</strong></p>
+<p class="MsoNormal" style="margin-left:.25in;"><span class="MsoIntenseReference">Sprites</span></p>
+<ul style="margin-top:0in;" type="disc">
+  <ul style="margin-top:0in;" type="disc">
+    <li class="MsoNormal" style="margin-bottom:0in;">spr_blue_bouncing_slime_up</li>
+    <li class="MsoNormal" style="margin-bottom:0in;">spr_blue_bouncing_slime_down</li>
+    <li class="MsoNormal" style="margin-bottom:0in;">&nbsp;spr_blue_bouncing_slime_left</li>
+    <li class="MsoNormal" style="margin-bottom:0in;">&nbsp;spr_blue_bouncing_slime_right</li>
+  </ul>
+</ul>
+<p class="MsoNormal" style="margin-bottom:0in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-left:.25in;"><span class="MsoIntenseReference">Object</span></p>
+<ul style="margin-top:0in;" type="disc">
+  <ul style="margin-top:0in;" type="disc">
+    <li class="MsoNormal">obj_blue_bouncing_directional_slime</li>
+  </ul>
+</ul>
+<p class="MsoNormal" style="margin-left:.25in;"><span class="MsoIntenseReference">Script</span></p>
+<ul style="margin-top:0in;" type="disc">
+  <ul style="margin-top:0in;" type="disc">
+    <li class="MsoNormal">&nbsp;spawn_maze_slimes</li>
+    <li class="MsoNormal">Add to:        scr_regenerate_maze </li>
+  </ul>
+</ul>
+<h1><a name="_Toc221179261">Object Controller Create Event</a></h1>
+<p class="MsoNormal">Open the <strong><span style="font-family:'Calibri',sans-serif; ">Object Controller</span></strong>, </p>
+<img src="Images/7.png" width="352" height="204">
+<p class="MsoNormal">After writing, and  implementing the following 4 code files, your  little bouncing critter should look more like this in the maze, traveling the  hallways, bouncing along and lunging at your hero, whenever this little blue  guy might see him.</p>
+<img src="Images/8.png" width="534" height="294">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Write this Code inside of the <strong><span style="font-family:'Calibri',sans-serif; ">Create Event</span></strong>.</p>
+<p class="MsoNormal">Click file below to see code.</p>
+
+<p class="RecipeHeading"><a href="The_Code_Files/1_Controller_Object_Create_Event.html" target="_blank">//~~~~~~~~~~   CONTROLLER OBJECT CREATE EVENT ~~~~~~~~~~~~~~~~~~~~~~~~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc221179262">Script - </a><a name="_Hlk221178703">Regenerate Maze </a>Function</h1>
+<p class="MsoNormal">Open this script, that you should already have, inside of  your <strong><span style="font-family:'Calibri',sans-serif; ">Scripts f</span></strong>older in the <strong><span style="font-family:'Calibri',sans-serif; ">Asset</span></strong> Browser.</p>
+<img src="Images/9.png" width="331" height="179">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">You will need to add onto this script. Remember, a script  will not have any events associated with it, you merely open the Script file  and write your code. </p>
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">Click file below to see code.</p>
+<p class="RecipeHeading"><a href="The_Code_Files/2_Regenerate_Maze_Function.html" target="_blank">// ~~~~~~~~~~~~~~ REGENERATE MAZE FUNCTION  ~~~~~~~~~~~~~~</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<h1><a name="_Toc221179263">A Script to spawn the Slimes in the Maze</a></h1>
+<p class="MsoNormal">Now this second script that we are going to write, is going  to be a brand-new script; and it will be used to automatically create the  slimes in the maze. This will prevent these slimes from just popping up in  weird places, like on top of the walls. Since our maze is self – generating, we  have no idea where the walls will show up, so it just make sense to let the  system take over and automatically delegate the placement of these critters.</p>
+<img src="Images/10.png" width="338" height="264">
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">Click file below to see code.</p>
+<p class="RecipeHeading"><a href="The_Code_Files/3_Script_Spawn_Maze_Slimes.html" target="_blank">// ~~~~~~~~~     SPAWN MAZE SLIMES - Standalone Script ~~~~~~~~~~~~~~~~~~</a></p>
+
+<p class="code">&nbsp;</p>
+<h1><a name="_Toc221179264">The Blue Slime Object</a></h1>
+<img src="Images/11.png" width="605" height="266">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Your blue slime object will have these 2 events associated  with it.</p>
+<p class="MsoNormal">&nbsp;</p>
+<ul>
+  <li>The Create Event</li>
+  <li>The Step Event</li>
+</ul>
+
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">Click file below to see code.</p>
+<p class="RecipeHeading"><a href="The_Code_Files/4_Bouncing_Blue_Slime_Object.html" target="_blank">// ~ obj_blue_bouncing_directional_slime – CREATE &amp; STEP Event ~~~~~</a></a></p>
+<h1>Hero Object</h1>
+<p class="MsoNormal">Open up the Hero object, we need to make some changes to the  collision event with the hero.</p>
+<img src="Images/12.png" width="296" height="273">
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="RecipeHeading"><a href="The_Code_Files/5_Hero_Object_Step_Event.html" target="_blank">//~~~~~~~~~~~~~~~~~~~~~~~~~   Hero Object -STEP Event ~~~~~~~~~~~~~</a></p>
+<h1><a name="_Toc221179265">How to Control the slime generation</a></h1>
+<p class="code">&nbsp;</p>
+<p class="MsoNormal">I added one slime per floor in the controller create event  and in maze regeneration:</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">obj_controller</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">Regenerate Maze Function</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal">If you want more than 1 slime per floor, just change&nbsp;<strong><span style="font-family:'Calibri',sans-serif; ">slimes_to_spawn</span></strong>&nbsp;in those  two files.<br>
+</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseEmphasis">obj_controller</span></p>
+<img src="Images/13.png" width="343" height="119">
+<p class="MsoNormal">Scroll down in the code to find <strong><span style="font-family:'Calibri',sans-serif; ">section 3.5</span></strong> in the Create code,  and just change that number here.</p>
+<img src="Images/14.png" width="577" height="129">
+<p class="MsoNormal">Now go to the <strong><span style="font-family:'Calibri',sans-serif; ">script</span></strong> section of the code, and find <strong><span style="font-family:'Calibri',sans-serif; ">scr_regenerate_maze</span></strong>.</p>
+<img src="Images/15.png" width="325" height="174">
+<p class="MsoNormal"><span class="BoldRedChar"><span style="font-size:12.0pt; ">Remember,</span></span> this is  just a single file, we are not needing to deal with any events. Just open the  script file.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now scroll down in the <strong><span style="font-family:'Calibri',sans-serif; ">Script</span></strong> file, and find this section and change the number of slimes you want in your  dungeon.</p>
+<img src="Images/16.png" width="634" height="114">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<p class="MsoNormal">If you want those little blue furry dungeon slimes to be  either, smaller or larger, adjust&nbsp;<strong><span style="font-family:'Calibri',sans-serif; ">image_xscale&nbsp;</span></strong>and<strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;image_yscale</span></strong>&nbsp;in the <strong><span style="font-family:'Calibri',sans-serif; ">Create</span></strong> Event.</p>
+<p class="MsoNormal">Open back up that file that we created earlier for the blue  furry slime. This time (IF YOU WANT TO MAKE CHANGES) you can change the size of  this critter, by going herel</p>
+<p class="RecipeHeading">// ~ obj_blue_bouncing_directional_slime – CREATE</p>
+<img src="Images/17.png" width="627" height="507">
+<p class="RecipeHeading">&nbsp;</p>
+<p class="MsoNormal">Well, that is just about all we need to know right now about  creating some blue furry slimes for your dungeon. You should now know enough to  create an enemy. Just remember, the main enemy will be the same. You will just  be adding different behaviors in the code. This will be done to enable  different reactions from each of the characters, when they come in contact with  our hero.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
