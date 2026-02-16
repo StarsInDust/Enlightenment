@@ -4,8 +4,10 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 
 # === CONFIGURATION ===
-sitemap_folder = "./sitemaps"
-log_file = "sitemap_log.txt"
+# Get the script's directory and construct absolute paths
+script_dir = os.path.dirname(os.path.abspath(__file__))
+sitemap_folder = os.path.join(os.path.dirname(script_dir), "sitemapBackup")
+log_file = os.path.join(script_dir, "sitemap_log.txt")
 
 # === Find the latest sitemap file ===
 sitemaps = sorted([f for f in os.listdir(sitemap_folder) if f.startswith("sitemap-") and f.endswith(".xml")])

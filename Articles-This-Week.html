@@ -8,9 +8,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5 Bringing in Your Object Hero</title>
+    <title>6 The Overlay and the Maze</title>
     
-  <meta name="title" content="1 Introduction to Game Maker ">
+   <meta name="title" content="6 The OverLay and the Maze ">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
@@ -18,7 +18,7 @@
 <meta name="keywords" content=" Game Maker, Games, Programming "/>
 
 
-<meta name="description" content="In this article, we will be looking at bringing our hero onto the game board, with some code attached to him that will allow him to both move and switch the face of his sprite based on his direction. "/>
+<meta name="description" content="In this tutorial, we will be taking a look at how we can create the maze section of the room by using a maze guide that will be explained here on how to create. "/>
 
 <meta name="category" content="Game Maker, Games Programming">
 
@@ -27,11 +27,11 @@
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="December 12, 2025" />
+<meta name="revised" content="December, 15th 2025" />
 
-<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2025/4_Game_Maker_2/5_Bringing_In_Your_Hero_Object/5_Bringing_In_Your_Hero_Object.html ">
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2025/4_Game_Maker_2/6_The_OverLay_and_the_Maze/6_The_OverLay_and_the_Maze.html ">
 
- 
+
  
  
     
@@ -74,116 +74,108 @@
   
   <!--Main Article -->
   
-  <p class="h2Black" >~5 Bringing in Your Object Hero~</p>
+  <p class="h2Black" >~6 The Overlay and the Maze~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >2/9/2026</p>
+   <p class="articleDate" style="text-align:right" >2/16/2026</p>
    
 <p>&nbsp;</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/1.png" width="292" height="260">
-<h1>Where We Are Now</h1>
-<p class="MsoNormal">If you have been following along in this tutorial series,  you would have noticed that we already have an object for the hero. In fact, we  have 4 of them. The Hero, which is the front view, a right and left side view,  and a back view of him. In this way as the hero makes his way around the room  the face of the hero will be changing direction based on your view of him.</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/2.png" width="249" height="246">
-<h1>Getting the Hero to Move</h1>
-<p class="MsoNormal">If we were to place our hero into the room right now, he  would just stand there and do nothing. That is because he does not have the  code to do anything. Without writing some code for this hero guy, he is not  going to go anywhere. </p>
-<h1>How to Write the Code</h1>
-<p class="MsoNormal">Double- click on the object_hero inside of the Asset  Browser. </p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/3.png" width="253" height="136">
-<p class="MsoNormal">This will bring up the stuff that we need to work with him,  in the center of the app. We want to click on <strong><span style="font-family:'Calibri',sans-serif; ">Add  Event</span></strong>. This will allow us to talk to Game Maker and tell it how  we want this hero guy to behave when we do certain things.</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/4.png" width="462" height="405">
-<p class="MsoNormal">We want to add a Step Event. Actually this is a <strong><span style="font-family:'Calibri',sans-serif; ">Step-Step</span></strong> event because you  will be choosing Step twice in the menu, as you can see from the image below.</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/5.png" width="457" height="254">
-<p class="MsoNormal">Next, you will get this dialog box. Choose <strong><span style="font-family:'Calibri',sans-serif; ">GML Code</span></strong>, as that is what we  will be doing this tutorial in. GML is the Game Makers own language that it  uses to code games. Hit <strong><span style="font-family:'Calibri',sans-serif; ">Ok</span></strong>, to  continue.</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/6.png" width="611" height="474">
-<p class="MsoNormal">You can hold down the space bar and use your mouse to  situate things around better in the workspace. With the space bar held down,  just click on the top of an element you want to move around and move it to  where it is fully visible inside of the workspace.</p>
-<p class="MsoNormal">We will be writing our code inside of the large area that is  now provided for us here.  </p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/7.png" width="466" height="291">
-<p class="MsoNormal">Our hero needs to be able to move, using the arrow key, and  also switch the sprite that it will be using based on its direction. After all,  it doesn&rsquo;t make any sense to have the hero facing you when he is walking away.  He needs to have its back toward the player. And so now you see why we needed 4  sprites for our hero.</p>
-<p class="MsoNormal">Oh, and by the way, this script code, will also have code  for the door, which is the exit. We will be adding a door next. So, you might  as well just leave the code in there. Because we will need to be placing it  eventually, and this way you get to look at this hero step event in its  entirety, right from the start.</p>
-<h1>The Step-Step Code</h1>
-<p class="code">// --- Movement Input ---</p>
-<p class="code">var move_x = keyboard_check(vk_right) - keyboard_check(vk_left);</p>
-<p class="code">var move_y = keyboard_check(vk_down)  - keyboard_check(vk_up);</p>
-<p class="code">&nbsp;</p>
-<p class="code">var spd = 4;</p>
-<p class="code">var dx  = move_x * spd;</p>
-<p class="code">var dy  = move_y * spd;</p>
-<p class="code">&nbsp;</p>
-<p class="code">// --- Collision Check ---</p>
-<p class="code">if (dx != 0 || dy != 0) {</p>
-<p class="code">    // Check full diagonal  move</p>
-<p class="code">    if (!place_meeting(x +  dx, y + dy, obj_wall_plain) &amp;&amp;</p>
-<p class="code">        !place_meeting(x +  dx, y + dy, obj_wall_crackedA) &amp;&amp;</p>
-<p class="code">        !place_meeting(x +  dx, y + dy, obj_wall_crackedB)) {</p>
-<p class="code">        x += dx;</p>
-<p class="code">        y += dy;</p>
-<p class="code">    } else {</p>
-<p class="code">        // Try horizontal  only</p>
-<p class="code">        if  (!place_meeting(x + dx, y, obj_wall_plain) &amp;&amp;</p>
-<p class="code">             !place_meeting(x + dx, y, obj_wall_crackedA) &amp;&amp;</p>
-<p class="code">             !place_meeting(x + dx, y, obj_wall_crackedB)) {</p>
-<p class="code">            x += dx;</p>
-<p class="code">        }</p>
-<p class="code">&nbsp;</p>
-<p class="code">        // Try vertical  only</p>
-<p class="code">        if  (!place_meeting(x, y + dy, obj_wall_plain) &amp;&amp;</p>
-<p class="code">             !place_meeting(x, y + dy, obj_wall_crackedA) &amp;&amp;</p>
-<p class="code">             !place_meeting(x, y + dy, obj_wall_crackedB)) {</p>
-<p class="code">            y += dy;</p>
-<p class="code">        }</p>
-<p class="code">    }</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">// --- Check for Exit (always runs) ---</p>
-<p class="code">if (place_meeting(x, y, obj_door)) {</p>
-<p class="code">     show_debug_message(&quot;<span style="font-family:'Segoe UI Emoji',sans-serif; ">✨</span> Hero reached the dungeon  exit!&quot;);</p>
-<p class="code">    // Example:  room_goto_next();</p>
-<p class="code">}</p>
-<p class="code">&nbsp;</p>
-<p class="code">// --- Sprite Switching ---</p>
-<p class="code">if (move_y &lt; 0) {</p>
-<p class="code">    sprite_index =  sprite_hero_back;</p>
-<p class="code">} else if (move_x &gt; 0) {</p>
-<p class="code">    sprite_index =  sprite_hero_right;</p>
-<p class="code">} else if (move_x &lt; 0) {</p>
-<p class="code">    sprite_index =  sprite_hero_left;</p>
-<p class="code">} else {</p>
-<p class="code">    sprite_index =  sprite_hero;</p>
-<p class="code">}  </p>
-<p class="code">&nbsp;</p>
-<p class="MsoNormal">Now you should have your script in there. </p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/8.png" width="628" height="422">
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/1.png" width="290" height="261">
+<h1>The Overlay</h1>
+<p class="MsoNormal">People who create games professionally will often use a maze  overlay to be able to create their mazes for the rooms. This is a process which  is used especially when a maze is extremely complicated. We will take a look at  creating this overlay for our room; however, we will be keeping our own maze  simple.</p>
+<h1>Create the Sprite</h1>
+<p class="MsoNormal">In the Asset Browser, you want to click on the room. So, we  can see the properties for the room, on the right side of the app.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/2.png" width="237" height="164">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">On the left-hand side, get the dimensions of your room. Your  rooms dimensions need to be divisible by 32px, or 64px. Because the walls will  be 32px and the hero and door will be 64px.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/3.png" width="222" height="258">
+<p class="MsoNormal">Go to Photoshop</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/4.png" width="81" height="87">
+<p class="MsoNormal">Create your canvas at the same size as your room.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/5.png" width="304" height="155">
+<p class="MsoNormal">Just find a maze (online, image search) and place it on top  of your new canvas that you made in Photoshop. Turn on the 32 x32 grid to place  the wall map. Just remember the hero is scaled in at 64 x 64, so your path  needs to be at least two grid squares wide, in order to allow the hero to fit  through the maze.</p>
+<p class="MsoNormal">Double check your size in Photoshop for your grid size, you  want it set for 32, because our wall tile pieces will look better, and fit  better using this size.</p>
+<p class="MsoNormal">Edit -Preferences- Guides, Grids &amp; Slices…</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/6.png" width="614" height="187">
+<p class="MsoNormal">Place the maze that you brought in from the web onto your  Photoshop canvas. You may have to scale it to fit the directions of the room.  Fit the Maze and turn down the opacity on the maze.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/7.png" width="610" height="213">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Start a new layer. Leave this new layer at full opacity.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/8.png" width="259" height="189">
+<p class="MsoNormal">Use your marquee tool to create selections for the wall.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/9.png" width="626" height="382">
+<p class="MsoNormal">Change your top color chip to be red</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/10.png" width="66" height="81">
+<p class="MsoNormal">Now following (sort of) your guide start placing down a  colored wall around the room. <strong><span style="font-family:'Calibri',sans-serif; ">Shift – F5- Enter</span></strong>.  This will fill your selection with the fore color of red.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/11.png" width="635" height="374">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The maze being red helps it show up better on Game Makers  Dark theme. You want two openings in the outer one. One is the entrance and the  other is the exit. Remember we want at least a width of 2 grid squares for the  hero to be able to fit through. </p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/12.png" width="639" height="368">
+<p class="MsoNormal">You may find your original grid that you brought in to copy  might be a bit off. Just follow it as best as you can. Your final maze design  should look something like the image below when keeping with the rules that we  have set for creating our maze. Remember to turn off the underlying grid before  you save our new grid.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/13.png" width="613" height="350">
+<h1>Save Maze to your Game Maker Sprite Folder</h1>
+<p class="MsoNormal">Inside of the sprite folder, create a folder to put your  mazes inside of. This will keep them organized.</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">Maze Overlay</span></strong></p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/14.png" width="144" height="167">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Now <strong><span style="font-family:'Calibri',sans-serif; ">save</span></strong> your  maze to this new folder inside of your sprite folder inside of Game Maker</p>
+<p class="MsoNormal">C:\Users\Your_User_Name\GameMakerProjects\My First  Game\sprites\ Maze Overlay</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/15.png" width="141" height="130">
+<p class="MsoNormal">We could save different mazes to our folder.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/16.png" width="637" height="141">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Create the Sprite for the Overlay</h1>
+<p class="MsoNormal">Create your Sprite for the overlay, by right clicking on the  sprite folder inside of Asset Browser panel. Import your Maze Overlay image to  represent the sprite image.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/17.png" width="255" height="253">
+<p class="MsoNormal">Import your maze image. Don&rsquo;t worry about the size being  shown in the sprite dialog box. It will change to the right size once it is  brought in.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/18.png" width="645" height="312">
+<h1>Create the Overlay Object</h1>
+<p class="MsoNormal">Now Create the overlay object, so it can be brought in on an  instance layer. You know the drill. Just right click on the Object folder and  create new object.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/19.png" width="291" height="270">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Add the sprite, we just created . Game Maker made this  sprite inside of the Sprite folder. So, don&rsquo;t go looking for it in the Maze  Overlay folder. </p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/20.png" width="267" height="268">
+<p class="MsoNormal">Now we need to create 2 Instance layers. One will be for the  maze Walls , and the other is for the Maze overlay.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/21.png" width="289" height="234">
+<p class="MsoNormal">Just make these Instance Layers in the same way that we have  been making them.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/22.png" width="175" height="238">
+<p class="MsoNormal">Make sure this <strong><span style="font-family:'Calibri',sans-serif; ">Maze_Overlay</span></strong> layer is indeed selected before dragging the maze object into the room. Also we  want it positioned under the <strong>Walls</strong> layer, so the wall will go over the  maze overlay.</p>
+<p class="MsoNormal"><strong><span style="color:#EE0000; ">Warning</span></strong>-Make sure  you did not place the hero on top of the outer wall, or any wall. He will be  stuck when the game starts if you did.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/23.png" width="636" height="361">
+<h1>To Move the hero and door. </h1>
+<p class="MsoNormal">Go to the Instance layer which they reside on. Then click on  the object that you want to move.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/24.png" width="440" height="198">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">To see the outer walls and the hero and door make sure they  are at the top of the list in the layer panel. Like this.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/25.png" width="645" height="670">
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Go to the top of the workspace and switch your code from the  Workspace1 tab to your Room1 tab, to view the room.</p>
+<h1>Placing the Maze Wall Pieces</h1>
+<p class="MsoNormal">Make sure you are on the Walls layer before brining in your  wall pieces.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/26.png" width="216" height="262">
+<p class="MsoNormal">Start bringing in your wall pieces. Drag the first wall  piece in that you want to use, and then you can hold down alt and paint. But  every time you start a new maze area, the first piece needs to be dragged in  first. Then you can paint.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/27.png" width="626" height="376">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/9.png" width="517" height="170">
+<p class="MsoNormal">Finish painting in the Walls.Drag in your alternate wall  styles and place them sporadically around the maze. </p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/28.png" width="642" height="372">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Now you should see your room with the outer wall</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/10.png" width="587" height="391">
+<p class="MsoNormal">In your layer panel. Turn off the eye of the Mask, so we do  not see the red mask anymore. We are done with it.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/29.png" width="212" height="207">
 <p class="MsoNormal">&nbsp;</p>
-<h1>Moving to the Instances Layer</h1>
-<p class="MsoNormal">Go to the Layer panel and switch to the Instances layer. You  can move this Instance layer to the top of the layer stack, just by clicking on  it and dragging it to the top. Your hero object needs to go into the Instances  layer and not the Outer Walls layer. So, make sure that is the one that you  have selected.</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/11.png" width="230" height="286">
-<p class="MsoNormal">Now slide your hero object out of the Asset Browser and into  the room.</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/12.png" width="615" height="296">
-<p class="MsoNormal">Now drag the door object out of the room and set it in the  outer wall somewhere.</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/13.png" width="432" height="380">
-<h1>Test the Game</h1>
-<p class="MsoNormal">We want to test the game by hitting the play button at the  top. It might take a bit for your game to show up. We want to test the arrow  keys to see if the hero is able to go in all 4 directions and that the sprite  is switching to the appropriate sprite when he changes direction. Also look at  the terminal for a message to pop up saying that the hero has hit the door. But  it should only pop up if the hero actually does hit the door.</p>
+<p class="MsoNormal">Test your maze.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/30.png" width="158" height="103">
+<h1>If the hero is not moving through tight corridors</h1>
+<p class="MsoNormal">If you find your hero is not moving smoothly through tight  corridors. Try shrinking the collision mask around him. Click on the Sprite,  and set the Collision mask to manual. This way you can resize it. You will have  to do this for all 4 hero sprites. You can even remove wall objects if the  collision mask doesn&rsquo;t work out.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/31.png" width="534" height="310">
+<p class="MsoNormal">Now just practice getting the hero to the door. </p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/32.png" width="603" height="359">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/14.png" width="209" height="118">
+<p class="MsoNormal">You should get a message in the terminal that you reached  it.</p>
+<img src="Articles/2026/2_Game_Maker_2/6_The_OverLay_and_the_Maze/Images/33.png" width="311" height="203">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Your hero should walk to the door and when he reaches it,  you should see your terminal message.</p>
-<p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/15.png" width="620" height="212">
-<h1>Layering your Objects</h1>
-<p class="MsoNormal">To have your hero walk in front of the door. Just remove  your objects from the room. Bring in the door first and then the hero. The way  you bring in your objects matter, and it will represent how your objects are  layered on the game board.</p>
-<img src="Articles/2026/2_Game_Maker_2/5_Bringing_In_Your_Hero_Object/Images/16.png" width="275" height="182">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Well, that is enough for this  tutorial, now you know how to bring your hero into the room and how to get him  to move to the door.</p>
 <p class="MsoNormal">&nbsp;</p>
 
 
