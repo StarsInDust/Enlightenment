@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 obj_hero_fight</title>
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~2 obj_hero_fight~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/11/2026</p>
+   
+<p>&nbsp;</p>
+<p class="RecipeHeading">//~~~~~~~~~~~~~~   obj_hero_fight - CREATE EVENT   ~~~~~~~~~~~~~~~~~~~</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Sprite References</span></strong></p>
+<p class="code">spr_hero_idle = spr_hero_idle_128;</p>
+<p class="code">spr_hero_attack = spr_hero_attack_128;</p>
+<p class="code">spr_hero_hit = spr_hero_hit_128;</p>
+<p class="code">spr_hero_death = spr_hero_death_128;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Animation Settings</span></strong></p>
+<p class="code">image_speed = 0;</p>
+<p class="code">image_index = 0;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// State Machine</span></strong></p>
+<p class="code">enum HERO_STATE {</p>
+<p class="code">    IDLE,</p>
+<p class="code">    ATTACK,</p>
+<p class="code">    LUNGING,</p>
+<p class="code">    RETURNING,</p>
+<p class="code">    HIT,</p>
+<p class="code">    DEATH,</p>
+<p class="code">    DEAD</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">current_state = HERO_STATE.IDLE;</p>
+<p class="code">sprite_index = spr_hero_idle;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Combat Stats</span></strong></p>
+<p class="code">if (variable_global_exists(&quot;hero_max_hp&quot;) &amp;&amp;  global.hero_max_hp != undefined) {</p>
+<p class="code">    max_hp =  global.hero_max_hp;</p>
+<p class="code">    current_hp =  global.hero_current_hp;</p>
+<p class="code">} else {</p>
+<p class="code">    max_hp = 100;</p>
+<p class="code">    current_hp = max_hp;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">attack_damage = 20;</p>
+<p class="code">is_player_turn = true;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Lunge System</span></strong></p>
+<p class="code">home_x = room_width * 0.35;</p>
+<p class="code">home_y = room_height * 0.5;</p>
+<p class="code">lunge_target_x = home_x;</p>
+<p class="code">lunge_target_y = home_y;</p>
+<p class="code">lunge_speed = 12;</p>
+<p class="code">return_speed = 8;</p>
+<p class="code">lunge_stop_distance = 170;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Knockback</span></strong></p>
+<p class="code">knockback_x = 0;</p>
+<p class="code">knockback_friction = 0.8;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Animation Tracking</span></strong></p>
+<p class="code">animation_complete = false;</p>
+<p class="code">attack_has_dealt_damage = false;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Visual Effects</span></strong></p>
+<p class="code">hit_flash_timer = 0;</p>
+<p class="code">image_xscale = 1;</p>
+<p class="code">image_yscale = 1;</p>
+<p class="code">is_dead = false;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Position</span></strong></p>
+<p class="code">x = home_x;</p>
+<p class="code">y = home_y;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~     obj_hero_fight - STEP EVENT    ~~~~~~~~~~~~~~</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Animation Completion Check</span></strong></p>
+<p class="code">if (floor(image_index) &gt;= image_number - 1) {</p>
+<p class="code">    animation_complete =  true;</p>
+<p class="code">} else {</p>
+<p class="code">    animation_complete =  false;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Update Timers</span></strong></p>
+<p class="code">if (hit_flash_timer &gt; 0) hit_flash_timer--;</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Apply Knockback</span></strong></p>
+<p class="code">if (abs(knockback_x) &gt; 0.5) {</p>
+<p class="code">    x += knockback_x;</p>
+<p class="code">    knockback_x *=  knockback_friction;</p>
+<p class="code">} else {</p>
+<p class="code">    knockback_x = 0;</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">State Machine</span></strong></p>
+<p class="code">switch (current_state) {</p>
+<p class="code">&nbsp;</p>
+<p class="code">    case HERO_STATE.IDLE:</p>
+<p class="code">        if (sprite_index !=  spr_hero_idle) {</p>
+<p class="code">            sprite_index =  spr_hero_idle;</p>
+<p class="code">            image_index =  0;</p>
+<p class="code">            image_speed =  0;</p>
+<p class="code">        }</p>
+<p class="code">        </p>
+<p class="code">        if (abs(x - home_x)  &gt; 2) {</p>
+<p class="code">            x = lerp(x,  home_x, 0.1);</p>
+<p class="code">        }</p>
+<p class="code">        </p>
+<p class="code">        if (is_player_turn  &amp;&amp; !is_dead) {</p>
+<p class="code">            if  (keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_left)) {</p>
+<p class="code">                if  (instance_exists(obj_enemy_fight)) {</p>
+<p class="code">                    var  enemy_home = obj_enemy_fight.home_x;</p>
+<p class="code">                    var  enemy_y = obj_enemy_fight.home_y;</p>
+<p class="code">                     lunge_target_x = enemy_home - lunge_stop_distance;</p>
+<p class="code">                     lunge_target_y = enemy_y;</p>
+<p class="code">                }</p>
+<p class="code">                 current_state = HERO_STATE.LUNGING;</p>
+<p class="code">                 attack_has_dealt_damage = false;</p>
+<p class="code">                 is_player_turn = false;</p>
+<p class="code">            }</p>
+<p class="code">        }</p>
+<p class="code">        break;</p>
+<p class="code">    </p>
+<p class="code">    case  HERO_STATE.LUNGING:</p>
+<p class="code">        var dist_to_target  = point_distance(x, y, lunge_target_x, lunge_target_y);</p>
+<p class="code">        </p>
+<p class="code">        if (dist_to_target  &gt; lunge_speed) {</p>
+<p class="code">            var move_dir =  point_direction(x, y, lunge_target_x, lunge_target_y);</p>
+<p class="code">            x +=  lengthdir_x(lunge_speed, move_dir);</p>
+<p class="code">            y +=  lengthdir_y(lunge_speed, move_dir);</p>
+<p class="code">        } else {</p>
+<p class="code">            x =  lunge_target_x;</p>
+<p class="code">            y =  lunge_target_y;</p>
+<p class="code">            current_state =  HERO_STATE.ATTACK;</p>
+<p class="code">            sprite_index =  spr_hero_attack;</p>
+<p class="code">            image_index =  0;</p>
+<p class="code">            image_speed =  0.2;</p>
+<p class="code">        }</p>
+<p class="code">        break;</p>
+<p class="code">    </p>
+<p class="code">    case HERO_STATE.ATTACK:</p>
+<p class="code">        if (sprite_index !=  spr_hero_attack) {</p>
+<p class="code">            sprite_index =  spr_hero_attack;</p>
+<p class="code">            image_index =  0;</p>
+<p class="code">            image_speed =  0.2;</p>
+<p class="code">        }</p>
+<p class="code">        </p>
+<p class="code">        if  (floor(image_index) &gt;= 2 &amp;&amp; !attack_has_dealt_damage) {</p>
+<p class="code">             attack_has_dealt_damage = true;</p>
+<p class="code">            </p>
+<p class="code">            if  (instance_exists(obj_enemy_fight)) {</p>
+<p class="code">                with  (obj_enemy_fight) {</p>
+<p class="code">                     scr_take_damage_enemy(other.attack_damage);</p>
+<p class="code">                     knockback_x = 15;</p>
+<p class="code">                }</p>
+<p class="code">                </p>
+<p class="code">                var fx_x =  obj_enemy_fight.x - 40;</p>
+<p class="code">                var fx_y =  obj_enemy_fight.y;</p>
+<p class="code">                </p>
+<p class="code">                if  (object_exists(obj_hit_effect)) {</p>
+<p class="code">                     instance_create_depth(fx_x, fx_y, -200, obj_hit_effect);</p>
+<p class="code">                }</p>
+<p class="code">            }</p>
+<p class="code">        }</p>
+<p class="code">        </p>
+<p class="code">        if  (animation_complete) {</p>
+<p class="code">            current_state =  HERO_STATE.RETURNING;</p>
+<p class="code">        }</p>
+<p class="code">        break;</p>
+<p class="code">    </p>
+<p class="code">    case  HERO_STATE.RETURNING:</p>
+<p class="code">        var dist_to_home =  point_distance(x, y, home_x, home_y);</p>
+<p class="code">        </p>
+<p class="code">        if (dist_to_home  &gt; return_speed) {</p>
+<p class="code">            var move_dir =  point_direction(x, y, home_x, home_y);</p>
+<p class="code">            x +=  lengthdir_x(return_speed, move_dir);</p>
+<p class="code">            y +=  lengthdir_y(return_speed, move_dir);</p>
+<p class="code">        } else {</p>
+<p class="code">            x = home_x;</p>
+<p class="code">            y = home_y;</p>
+<p class="code">            current_state =  HERO_STATE.IDLE;</p>
+<p class="code">            sprite_index =  spr_hero_idle;</p>
+<p class="code">            image_index =  0;</p>
+<p class="code">            image_speed =  0;</p>
+<p class="code">            is_player_turn  = true;</p>
+<p class="code">        }</p>
+<p class="code">        break;</p>
+<p class="code">    </p>
+<p class="code">    case HERO_STATE.HIT:</p>
+<p class="code">        if (sprite_index !=  spr_hero_hit) {</p>
+<p class="code">            sprite_index =  spr_hero_hit;</p>
+<p class="code">            image_index =  0;</p>
+<p class="code">            image_speed =  0.15;</p>
+<p class="code">            hit_flash_timer  = 10;</p>
+<p class="code">        }</p>
+<p class="code">        </p>
+<p class="code">        if  (animation_complete) {</p>
+<p class="code">            if (current_hp  &lt;= 0) {</p>
+<p class="code">                 current_state = HERO_STATE.DEATH;</p>
+<p class="code">                if  (sprite_exists(spr_hero_death)) {</p>
+<p class="code">                     sprite_index = spr_hero_death;</p>
+<p class="code">                }</p>
+<p class="code">                image_index  = 0;</p>
+<p class="code">            } else {</p>
+<p class="code">                 current_state = HERO_STATE.IDLE;</p>
+<p class="code">                 sprite_index = spr_hero_idle;</p>
+<p class="code">                image_index  = 0;</p>
+<p class="code">                image_speed  = 0;</p>
+<p class="code">                 is_player_turn = true;</p>
+<p class="code">            }</p>
+<p class="code">        }</p>
+<p class="code">        break;</p>
+<p class="code">    </p>
+<p class="code">    case HERO_STATE.DEATH:</p>
+<p class="code">        if (sprite_index !=  spr_hero_death &amp;&amp; sprite_exists(spr_hero_death)) {</p>
+<p class="code">            sprite_index =  spr_hero_death;</p>
+<p class="code">            image_index =  0;</p>
+<p class="code">            image_speed =  0.1;</p>
+<p class="code">        }</p>
+<p class="code">        </p>
+<p class="code">        if  (animation_complete) {</p>
+<p class="code">            current_state =  HERO_STATE.DEAD;</p>
+<p class="code">            is_dead = true;</p>
+<p class="code">            image_speed =  0;</p>
+<p class="code">            </p>
+<p class="code">            if  (instance_exists(obj_fight_controller)) {</p>
+<p class="code">                 obj_fight_controller.fight_lost = true;</p>
+<p class="code">            }</p>
+<p class="code">        }</p>
+<p class="code">        break;</p>
+<p class="code">    </p>
+<p class="code">    case HERO_STATE.DEAD:</p>
+<p class="code">        image_speed = 0;</p>
+<p class="code">        break;</p>
+<p class="code">}</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>

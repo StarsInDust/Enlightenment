@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 Perfecting the Fight</title>
+    
+  <meta name="title" content="18 Perfecting the Fight ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="In this tutorial, we will be going back into our fight room object code and making a few changes, to create a more convincing fighting illusion, between the two characters. "/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="February 17th, 2026" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2026/2_Game_Maker_2/18_Perfecting_The_Fight/19_Perfecting_the_Fight.html">
+ 
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+p.MsoNoSpacing {
+margin-top:0in;
+margin-right:0in;
+margin-bottom:0in;
+margin-left:1.0in;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:black;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~18 Perfecting the Fight~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/11/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="295" height="267">
+<p class="MsoNormal" align="center" style="text-align:center;">&nbsp;</p>
+<p class="MsoNormal">In a previous tutorial, we created our fight room, and we  threw our characters into this room, but are they truly performing in the  manner that we would expect them to? They seem to be sizing each other up, and  looking at each other menacingly, but when it comes to this fight, do we really  have any true interaction between the two. </p>
+<p class="MsoNormal">After all, this insane fight is taking place with our  characters clear across the room from one another. No connecting blows, no  flying sparks of magic, NOTHING. What? Are these two fighting telepathically? Sure  we have the score board progression bar moving, but visually we can&rsquo;t  understand what it is measuring. I think this room needs a bit of help, and in  this tutorial, we are going to enhance the code, so that it gets it.</p>
+<p class="MsoNormal">These are the 3 code files, that we will be interacting  with.</p>
+<ol>
+  <li>obj_hit_effect <span class="blueEmphasis">(New Code File)</span></li>
+</ol>
+<ol>
+  <li>obj_hero_fight</li>
+</ol>
+<p class="MsoNoSpacing">CREATE &amp; STEP</p>
+<ol>
+  <li>obj_enemy_fight</li>
+</ol>
+<p class="MsoNoSpacing">CREATE &amp; STEP</p>
+<h1>The Object Hit Effect</h1>
+<p class="MsoNormal">We are going to create a brand-new object, and we will be  calling this new object,<strong><span style="font-family:'Calibri',sans-serif; "> obj_hit_effect</span></strong>.</p>
+<img src="Images/2.png" width="288" height="207">
+<p class="MsoNormal">This new object will have 3 Events attached to it.</p>
+<img src="Images/3.png" width="299" height="152">
+<p class="MsoNormal">Go here to find the Code for these 3 Events.</p>
+<p class="MsoNormal"><a href="The_Code_Files/1_obj_hit_effect.html" target="_blank">obj_hit_effect</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>The Fight Hero Object</h1>
+<p class="MsoNormal">obj_hero_fight</p>
+<p class="MsoNormal">If you look in your Asset browser, you will see that this  particular object already exists. So, we will only need to open it back up, and  make a few changes to the code. </p>
+<img src="Images/4.png" width="256" height="187">
+<p class="MsoNormal">This object will have 3 events attached to it, but we will  only be messing with two of them. </p>
+<p class="MsoNormal">CREATE &amp; STEP</p>
+<img src="Images/5.png" width="305" height="157">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Go here to find the code for these Events.</p>
+<p class="MsoNormal"><a href="The_Code_Files/2_obj_hero_fight.html" target="_blank">2  obj hero fight CREATE &amp; STEP</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>The Fight Enemy Object</h1>
+<p class="MsoNormal">obj_enemy_fight</p>
+<img src="Images/6.png" width="295" height="196">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Next up will be the <strong><span style="font-family:'Calibri',sans-serif; ">enemy fight object</span></strong>.  It also already exists, and has 3 events attach to it. But again, we will only  be messing around with 2 of these events.</p>
+<p class="MsoNormal">CREATE &amp; STEP</p>
+<img src="Images/7.png" width="307" height="159">
+<p class="MsoNormal">Go here to find the code for these Events.</p>
+<p class="MsoNormal"><a href="The_Code_Files/3_obj_enemy_fight.html" target="_blank">3  obj_enemy_fight</a></p>
+<h1>Fixing Errors</h1>
+<p class="MsoNormal">If the two entities seem to be moving through each other,  instead of hitting each other and then hitting open air. We will need to adjust  the lunge_stop_distance in the <strong><span style="font-family:'Calibri',sans-serif; ">obj_hero_fight</span></strong> CREATE event. If the hero is moving through to the backside of the slime you  would think that you need to decrease the stop distance, but actually reducing  the space he moves here is an increase of the lunge stop distance.</p>
+<p class="MsoNormal">Here is the Hero&rsquo;s Create code for the fighting Hero</p>
+<img src="Images/8.png" width="647" height="537">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Changing the lunge_stop_distance on the Slime</h1>
+<p class="MsoNormal">Just increasing this setting for the hero, is not enough.  Especially if you find your enemy object is also moving through the hero. He  has his own lunge_stop_distance, and you will need to change the code in here  too, if you want things to look right.</p>
+<img src="Images/9.png" width="614" height="526">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Working with the 3 files that we have here, seems to do a  pretty good job of enhancing the movements of these characters. They are not  using any flying magic or any other projectiles, but beginning with this simple  lunge manuver, is a great starting point. So, I will end this tutorial here.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>

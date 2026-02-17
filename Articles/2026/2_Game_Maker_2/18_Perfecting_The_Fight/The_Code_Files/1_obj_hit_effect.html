@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obj_hit_effect</title>
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~obj_hit_effect~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/11/2026</p>
+   
+<p>&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~    obj_hit_effect - CREATE EVENT   ~~~~~~~~~~~~~~~~~~~</p>
+<p class="code">&nbsp;</p>
+<p class="code">lifetime = 15;</p>
+<p class="code">max_lifetime = 15;</p>
+<p class="code">&nbsp;</p>
+<p class="code">effect_alpha = 1.0;</p>
+<p class="code">effect_scale = 1.0;</p>
+<p class="code">effect_color = c_white;</p>
+<p class="code">&nbsp;</p>
+<p class="code">expand_speed = 0.15;</p>
+<p class="code">float_speed = -1;</p>
+<p class="code">&nbsp;</p>
+<p class="code">image_angle = irandom(360);</p>
+<p class="code">effect_scale = 0.8 + random(0.4);</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">//  ~~~~~~~~~~~~~~  obj_hit_effect - STEP EVENT ~~~~~~~~~~~~~~~~~~~</p>
+<p class="code">&nbsp;</p>
+<p class="code">lifetime -= 1;</p>
+<p class="code">&nbsp;</p>
+<p class="code">var progress = lifetime / max_lifetime;</p>
+<p class="code">effect_alpha = progress;</p>
+<p class="code">&nbsp;</p>
+<p class="code">effect_scale += expand_speed;</p>
+<p class="code">&nbsp;</p>
+<p class="code">y += float_speed;</p>
+<p class="code">&nbsp;</p>
+<p class="code">if (lifetime &lt;= 0) {</p>
+<p class="code">    instance_destroy();</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~   obj_hit_effect - DRAW EVENT   ~~~~~~~~~~~~~</p>
+<p class="code">&nbsp;</p>
+<p class="code">if (effect_alpha &gt; 0) {</p>
+<p class="code">    </p>
+<p class="code">     draw_set_alpha(effect_alpha * 0.5);</p>
+<p class="code">     draw_set_color(c_white);</p>
+<p class="code">    draw_circle(x, y, 25 *  effect_scale, false);</p>
+<p class="code">    </p>
+<p class="code">     draw_set_alpha(effect_alpha);</p>
+<p class="code">    var slash_len = 35 *  effect_scale;</p>
+<p class="code">    </p>
+<p class="code">     draw_set_color(c_white);</p>
+<p class="code">    draw_line_width(</p>
+<p class="code">        x -  lengthdir_x(slash_len, image_angle),</p>
+<p class="code">        y -  lengthdir_y(slash_len, image_angle),</p>
+<p class="code">        x +  lengthdir_x(slash_len, image_angle),</p>
+<p class="code">        y +  lengthdir_y(slash_len, image_angle),</p>
+<p class="code">        4</p>
+<p class="code">    );</p>
+<p class="code">    </p>
+<p class="code">    draw_line_width(</p>
+<p class="code">        x -  lengthdir_x(slash_len * 0.6, image_angle + 90),</p>
+<p class="code">        y -  lengthdir_y(slash_len * 0.6, image_angle + 90),</p>
+<p class="code">        x +  lengthdir_x(slash_len * 0.6, image_angle + 90),</p>
+<p class="code">        y +  lengthdir_y(slash_len * 0.6, image_angle + 90),</p>
+<p class="code">        3</p>
+<p class="code">    );</p>
+<p class="code">    </p>
+<p class="code">     draw_set_color(c_yellow);</p>
+<p class="code">    draw_circle(x, y, 10 *  effect_scale, false);</p>
+<p class="code">    </p>
+<p class="code">    draw_set_alpha(1);</p>
+<p class="code">     draw_set_color(c_white);</p>
+<p class="code">}</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
