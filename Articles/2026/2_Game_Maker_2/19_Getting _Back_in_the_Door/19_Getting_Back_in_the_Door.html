@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19 Getting Back in the Door</title>
+    <meta name="title" content="19 Getting Back in the Door ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Game Maker, Games, Programming "/>
+
+
+<meta name="description" content="In this tutorial, we will be throwing a door into the town, so when we are kicked out, when the hero dies, we can get back in without having to restart the entire game. We will also be writing a small bit of code, to create a keypress event to get back to the fight room. The fight room is not using a door, but a monster collision event, so to test it we will simply create a temporary F1 keypress."/>
+
+<meta name="category" content="Game Maker, Games Programming">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="February, 23rd, 2026" />
+
+<meta name="url" content=" https://starsindust.github.io/Enlightenment/Articles/2026/2_Game_Maker_2/19_Getting%20_Back_in_the_Door/19_Getting_Back_in_the_Door.html">
+
+
+
+
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+p.MsoNoSpacing {
+margin:0in;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:black;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~19 Getting Back in the Door~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/18/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="363" height="321">
+<h1>The Problem</h1>
+<p class="MsoNormal">When we are playing the game, and we have been killed in the  fight, our hero is kicked out of the dungeon, and is thrown somewhere else,  such as into the town. Except that he hasn&rsquo;t shown up in town. We are viewing  the town, but where did our player go?</p>
+<img src="Images/2.png" width="550" height="324">
+<p class="MsoNormal">Of course, we could restart the game everytime, and run the  hero through its paces to get to another area, but this takes time. It would be  much faster if we could continue playing the game, and do our testing. This way  we could just have the hero run back through a door, and BAM, we are back where  we need to be.</p>
+<p class="MsoNormal">One of the problems is that when he is in the fight room,  and the hero dies, his object is destroyed. Once he is destroyed, he isn&rsquo;t being  spawned anywhere. So, therefore, we are getting this image of an empty town  with no hero in it. </p>
+<p class="MsoNormal">For getting back into the fight room itself, we will not be  using a door, we will be using a keypress. This is because, colliding with a  monster, and not the door, in the dungeon will thtow you into the fight room. Of  couse we could just throw the blue slime into town, but for testing the key  press will work fine, and I will describe how to do that at the end of this  tutorial.</p>
+<img src="Images/3.png" width="94" height="95">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Besides that little re-spawning issue that we are having  with our hero, we also are experiencing a little problem with the door itself.  The door works on a collision event. So, we can throw a door into the town, but  without the hero showing up to collide with it, we are never getting back into  the dungeon.</p>
+<img src="Images/4.png" width="101" height="110">
+<p class="MsoNormal">We also have a scaling issue, and this problem is causing  havoc with both the hero object, and the door. Unless we write some code to  change the size of these elements, they are going to show up in town, really,  really small. And that is certainly not what we will be wanting. </p>
+<img src="Images/5.png" width="630" height="343">
+<p class="MsoNormal" align="right" style="text-align:right;">&nbsp;</p>
+<h1>The Solution</h1>
+<p class="MsoNormal">You will need a new controller.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNoSpacing"><strong><span style="font-family:'Calibri',sans-serif; ">obj_enviroment_controller</span></strong> - Spawns and scales the hero when entering any new  scenic enviroment</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The controller is required because it CREATES the hero if it  doesn't exist. And in our case, it is not being created, because we destroyed  his instance at the end of the fight when he died. (sort of)</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>The Enviroment Controller</h1>
+<p class="MsoNormal">We could create a different controller for each door we  have, but it is really unnecessary because it just uses the same code. So, we  can create a generic Controller for Everything.</p>
+<p class="MsoNormal">In GameMaker, create a new object: <strong><span style="font-family:'Calibri',sans-serif; ">obj_enviroment_controller</span></strong></p>
+<img src="Images/6.png" width="298" height="234">
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">&nbsp;</span></strong></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Add a <strong><span style="font-family:'Calibri',sans-serif; ">Create</span></strong> Event</p>
+<img src="Images/7.png" width="228" height="243">
+<p class="MsoNormal">Go <a href="The_Code_Files/1_obj_environment_controller.html" target="_blank">Here</a> to find the  code  for the code for the create event: <a href="The_Code_Files/The Code Text Files/1 obj_environment_controller.docx">1  </a>obj_enviroment_controller</p>
+<img src="Images/8.png" width="653" height="312">
+<h1>Place your Controller in the Room</h1>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Place ONE <strong><span style="font-family:'Calibri',sans-serif; ">obj_enviroment_controller</span></strong> in your <strong><span style="font-family:'Calibri',sans-serif; ">rm_town room</span></strong></p>
+<p class="MsoNormal">Open your Rooms folder and then place your town controller</p>
+<img src="Images/9.png" width="412" height="209">
+<p class="MsoNormal">Now move your controller object into the room.</p>
+<img src="Images/10.png" width="591" height="206">
+<h1>WHAT THE CONTROLLER DOES</h1>
+<p class="MsoNoSpacing" style="margin-left:.5in;">Spawns object_hero if it doesn't  exist</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">Scales hero to 3x size</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">Positions hero at bottom center  of the room</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">Scales ALL doors to 3x to match  the scene</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>Changing the Scale of the Hero</h1>
+<p class="MsoNormal">The Scale of the Hero is inside of the obj_hero START EVENT.  You can change this to be 3x if the hero appears to be too small inside of the  town.</p>
+<p class="MsoNormal">Under Objects, you want to open the obj_hero</p>
+<img src="Images/11.png" width="304" height="181">
+<p class="MsoNormal">In the Room Start code for the Hero. You already have this  code, so all you need to do is find the section of the code, where it says,  image_xscale and image_yscale, and change both of these setting to match with a  visual good size of these elements inside the room. For me, the best size was  3, but you may find that you would like it to be a different size for your own  project.</p>
+<img src="Images/12.png" width="620" height="352">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">TROUBLESHOOTING</p>
+<p class="MsoNormal">&nbsp;</p>
+<h2>Hero doesn't appear in town:</h2>
+<p class="MsoNormal" style="margin-left:.5in;">Make sure obj_town_controller is  placed in the room</p>
+<p class="MsoNormal">&nbsp;</p>
+<h2>Hero appears but is tiny:</h2>
+<p class="MsoNormal" style="margin-left:.5in;">Check that the controller is  running and scaling is applied</p>
+<p class="MsoNormal">&nbsp;</p>
+<h2>Door is still small:</h2>
+<p class="MsoNoSpacing" style="margin-left:.5in;">Make sure the door object name  matches what's in the controller</p>
+<p class="MsoNoSpacing" style="margin-left:.5in;">Check for typos like  obj_door_Boss vs obj_door_boss</p>
+<p class="MsoNormal">&nbsp;</p>
+<h2>Hero spawns in wrong position:</h2>
+<p class="MsoNormal">Adjust the spawn coordinates in the controller. To move the  guy up, increase the number in Y position here here. To move the hero down in  the room decrease the number here.</p>
+<p class="MsoNormal"><strong><span style="font-family:'Calibri',sans-serif; ">object_hero - ROOM START</span></strong></p>
+<img src="Images/13.png" width="614" height="365">
+<p class="MsoNormal">You can use decimals on the scaling to make an object fit  better. I added .3 to the end of scaling the door, and it fits better.</p>
+<img src="Images/14.png" width="541" height="552">
+<p class="MsoNormal">When you place the door in the room it may not fit because  we will be dynamically scaling it in the code, just move it around until it  looks good in the game</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/15.png" width="554" height="436">
+<p class="MsoNormal">The tiny door scales well in the game. It looks fine. You  can walk into it and you can go to the boss room.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/16.png" width="620" height="336">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>To Test the Fight Room</h1>
+<p class="MsoNormal">You will notice that you do not have a fight room door. That  is because the only way you get into the fight room is if you collide with the  enemy. So, you do not need one. </p>
+<p class="MsoNormal">However, you might want to easily get back into the room to  test. The best way to handle this is to add a debug, with a key press, near the  bottom of the step event for the hero.</p>
+<p class="MsoNormal">Open up your object hero.</p>
+<img src="Images/17.png" width="283" height="140">
+<p class="MsoNormal">&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Debug: Press F1 to enter fight  room</span></strong></p>
+<p class="code">if (keyboard_check_pressed(vk_f1)) {</p>
+<p class="code">     room_goto(rm_fight);  <strong><span style="color:#00B050; ">// or whatever your fight room is named</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">}</span></strong></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">I placed this code right before the hero is checking for an  exit.</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/18.png" width="623" height="384">
+<p class="MsoNormal">This should be enough to get you started with being able to  test your project, without having to shut down the Game. So, I guess I will end  this tutorial for the week right here.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
