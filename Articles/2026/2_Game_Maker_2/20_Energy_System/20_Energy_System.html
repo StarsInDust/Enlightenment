@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~20 Energy System~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/25/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="458" height="304">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">In this tutorial, we will be working on the energy system.  You may have noticed from the game that we have pick-up items that are apples.  These apples are going to be like food for the hero. If he is fighting too long  and he doesn&rsquo;t eat some food, he will run out of energy. </p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="40" height="40">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">This is referred to as the <strong><span style="font-family:'Calibri',sans-serif; ">energy</span></strong> system, as it will provide energy for the hero. We will be making changes to 4  files to bring this system in.</p>
+<ul>
+  <li>obj_controller</li>
+  <li>obj_hero</li>
+  <li>obj_hud</li>
+  <li>scr_item_system</li>
+</ul>
+<p class="MsoNormal" style="margin-bottom:0in;line-height:normal;">&nbsp;</p>
+<h1>Adding Code to the obj_controller</h1>
+<p class="MsoNormal">Since this file already exists, all we need to do is to go  to the obj_controller object in the Asset Browser. You will find this browser  on the right-hand side, inside of Game Maker, scroll down to find it, and then  just open the code file for it.</p>
+<img src="Images/3.png" width="291" height="184">
+<p class="MsoNormal">Go to this link below, for full CREATE EVENT</p>
+<p class="MsoNormal">This object only has a <strong><span style="font-family:'Calibri',sans-serif; ">Create</span></strong> Event, at this point. So, open the <strong><span style="font-family:'Calibri',sans-serif; ">Create</span></strong> Code,  and paste this <a href="file:///C:/xampp/htdocs/Enlightenment/Articles/2026/2_Game_Maker_2/20_Energy_System/The_Code_Files/1%20obj_controller%20CREATE%20EVENT.docx" target="_blank">1  obj_controller </a>code into it.</p>
+<img src="Images/4.png" width="510" height="341">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Adding Code to the obj_hero</h1>
+<img src="Images/5.png" width="274" height="153">
+<p class="MsoNormal">Now we need to make some changes to the hero. So, inside of  the Hero object, we will be dealing with both the <strong><span style="font-family:'Calibri',sans-serif; ">Create</span></strong> and the <strong><span style="font-family:'Calibri',sans-serif; ">Step</span></strong> Event. The only reason, we  are going into the Create event is to clean it up. It is really a mess with a  huge amount of code that we do not need. These massive amount of code lines  were only being used for testing. We can now just start with one clean line in  the Create Event. </p>
+<p class="MsoNormal">This next link for the file will show both the <strong><span style="font-family:'Calibri',sans-serif; ">Create</span></strong> event shrunk down to  just one line, and the changes that were made to the <strong><span style="font-family:'Calibri',sans-serif; ">Step</span></strong> event.</p>
+<p class="MsoNormal"><a href="The_Code_Files/2_obj_hero_CREATE_and_STEP_Event.html" target="_blank">2_obj_hero  CREATE and STEP Event</a></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">The Create Event</p>
+<img src="Images/6.png" width="404" height="247">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Step Event For Full Code Go <a href="file:///C:/xampp/htdocs/Enlightenment/Articles/2026/2_Game_Maker_2/20_Energy_System/The_Code_Files/2%20obj_hero%20CREATE%20and%20STEP%20Events.docx">Here</a></p>
+<img src="Images/7.png" width="572" height="383">
+<h1>Adding Code to the obj_hud</h1>
+<p class="MsoNormal">The <strong>CREATE </strong>Event here, will be staying<strong> the </strong>same,  and we will only be making changes to the <strong>DRAW </strong>Event.</p>
+<img src="Images/8.png" width="300" height="121">
+<p class="MsoNormal">Go Here to see the Code for the <strong>DRAW</strong> Event</p>
+<p class="MsoNormal"><a href="The_Code_Files/3_obj_hud_DRAW_Event.html" target="_blank">3  obj_hud DRAW Event</a></p>
+<img src="Images/9.png" width="623" height="210">
+<p class="MsoNormal">&nbsp;</p>
+<h1>SCRIPT FILE</h1>
+<h2>scr_item_system</h2>
+<p class="MsoNormal">Now remember a <strong><span style="font-family:'Calibri',sans-serif; ">script</span></strong> file, is only a file.  You do not click on an object or mess with events, when dealing with a <strong><span style="font-family:'Calibri',sans-serif; ">SCRIPT</span></strong> file, you only are  dealing with a file.</p>
+<img src="Images/10.png" width="302" height="145">
+<p class="MsoNormal">Go <a href="The_Code_Files/4_scr_item_system_SCRIPT_File.html" target="_blank">Here</a> to get to the code for this SCRIPT file</p>
+<img src="Images/11.png" width="628" height="489">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Testing New Energy System</h1>
+<p class="MsoNormal">Now Start the Game to Test the new  energy system. You should see your hero running low on energy in the HUD score  board, and so he needs to eat up those apples to keep himself going.</p>
+<p class="MsoNormal">And that is all there is to,  activating an energy system inside of your own game. I hope you enjoyed this  little tutorial that I provided for you this week.</p>
+<p class="MsoNormal">Next week, we will be creating a  money system where the hero, when he is kicked out of town can spend some of  this money, and either rest up at a motel; or at some point, when we get to  weapons, he can go to a merchant, and get some really cool weapons. This future  weapon system will enable our hero to fight some even better, and more powerful  monsters.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+</article>
+
+<p class="MsoNormal"><footer class="footer">~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</p></body>
+</html>

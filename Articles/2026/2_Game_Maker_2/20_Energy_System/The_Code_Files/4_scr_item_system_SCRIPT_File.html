@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~4 scr_item_system SCRIPT File~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/25/2026</p>
+   
+<p>&nbsp;</p>
+<p class="code"><strong><span style="color:#00B050; ">// Call this AFTER the hero is  spawned in the maze to save respawn point</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function save_hero_start_position() {</p>
+<p class="code">    var hero =  instance_find(object_hero, 0);</p>
+<p class="code">    </p>
+<p class="code">    if (hero != noone) {</p>
+<p class="code">        global.hero_start_x  = hero.x;</p>
+<p class="code">        global.hero_start_y  = hero.y;</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;=== HERO START POSITION SAVED  ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;Position:  (&quot; + string(global.hero_start_x) + &quot;, &quot; +  string(global.hero_start_y) + &quot;)&quot;);</span></strong></p>
+<p class="code">    } else {</p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;ERROR: Could not find hero to  save starting position!&quot;);</span></strong></p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~FUNCTION: Reset Hero to Start  Position ~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Call this when hero loses all  lives on current floor</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function reset_hero_to_start() {</p>
+<p class="code">    var hero =  instance_find(object_hero, 0);</p>
+<p class="code">    </p>
+<p class="code">    if (hero != noone) {</p>
+<p class="code">        hero.x =  global.hero_start_x;</p>
+<p class="code">        hero.y =  global.hero_start_y;</p>
+<p class="code">        </p>
+<p class="code">        <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Reset hearts  to starting amount</span></strong></p>
+<p class="code">        global.hearts = 3;</p>
+<p class="code">        if (variable_global_exists(&quot;max_energy&quot;))  {</p>
+<p class="code">            global.energy =  global.max_energy;</p>
+<p class="code">        }</p>
+<p class="code">        if  (variable_global_exists(&quot;energy_move_accumulator&quot;)) {</p>
+<p class="code">             global.energy_move_accumulator = 0;</p>
+<p class="code">        }</p>
+<p class="code">        </p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;=== HERO RESET  TO START ===&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;Teleported to:  (&quot; + string(global.hero_start_x) + &quot;, &quot; +  string(global.hero_start_y) + &quot;)&quot;);</span></strong></p>
+<p class="code"><strong><span style="color:#C00000; ">        show_debug_message(&quot;Hearts  restored to: &quot; + string(global.hearts));</span></strong></p>
+<p class="code">        if  (variable_global_exists(&quot;energy&quot;) &amp;&amp;  variable_global_exists(&quot;max_energy&quot;)) {</p>
+<p class="code">            <strong><span style="color:#C00000; ">show_debug_message(&quot;Energy restored to: &quot; +  string(global.energy) + &quot;/&quot; + string(global.max_energy));</span></strong></p>
+<p class="code">        }</p>
+<p class="code">    } else {</p>
+<p class="code">        <strong><span style="color:#C00000; ">show_debug_message(&quot;ERROR: Could not find hero to  reset!&quot;);</span></strong></p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~~FUNCTION: Take Damage  ~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Call when hero takes damage (bomb, trap, enemy, etc.)</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function hero_take_damage(_damage_amount) {</p>
+<p class="code">    global.hearts -=  _damage_amount;</p>
+<p class="code">    </p>
+<p class="code">     show_debug_message(&quot;Hero took &quot; + string(_damage_amount) +  &quot; damage! Hearts: &quot; + string(global.hearts));</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Check if  dead</span></strong></p>
+<p class="code">    if (global.hearts &lt;=  0) {</p>
+<p class="code">         show_debug_message(&quot;Hero died! Resetting to floor start...&quot;);</p>
+<p class="code">         reset_hero_to_start();</p>
+<p class="code">        return true;  <strong><span style="color:#00B050; ">// Return true  to indicate death occurred</span></strong></p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    return false;  <strong><span style="color:#00B050; ">// Still alive</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~~~~~~~ FUNCTION: Heal  Hero~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Call when hero collects a heart</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function hero_heal(_heal_amount) {</p>
+<p class="code">    global.hearts +=  _heal_amount;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Cap at  maximum</span></strong></p>
+<p class="code">    if (global.hearts &gt;  global.max_hearts) {</p>
+<p class="code">        global.hearts =  global.max_hearts;</p>
+<p class="code">    }</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Hero healed &quot; +  string(_heal_amount) + &quot;! Hearts: &quot; + string(global.hearts) +  &quot;/&quot; + string(global.max_hearts));</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading"><span style="background:yellow; ">//  ~~~~~~~~~~~~~~FUNCTION: Collect Apple ~~~~~~~~~~~~~~~~~~~~~</span></p>
+<p class="code"><strong><span style="color:#00B050; background:yellow; ">// Call when hero collects an apple (Gysahi Greens effect)</span></strong></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">function  hero_collect_apple() {</span></p>
+<p class="code"><span style="background:yellow; ">    global.apples += 1;</span></p>
+<p class="code"><span style="background:yellow; ">    </span></p>
+<p class="code"><span style="background:yellow; ">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Collected  apple! Total: &quot; + string(global.apples));</span></strong></span></p>
+<p class="code"><span style="background:yellow; ">    </span></p>
+<p class="code"><span style="background:yellow; ">    <strong><span style="color:#00B050; ">// Optional:  Add immediate effect like small heal or buff</span></strong></span></p>
+<p class="code"><span style="background:yellow; ">    <strong><span style="color:#2F5496; ">//</span></strong> <span style="color:#2F5496; ">hero_heal(1);  // Uncomment if apples should heal</span></span></p>
+<p class="code"><span style="background:yellow; ">}</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="RecipeHeading"><span style="background:yellow; ">//  ~~~~~~~~~~~~~~FUNCTION: Use Apple for Energy ~~~~~~~~~~~~~~~~~~~~~</span></p>
+<p class="code"><strong><span style="color:#00B050; background:yellow; ">// Call when hero manually consumes an apple</span></strong></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">function  hero_use_apple_for_energy() {</span></p>
+<p class="code"><span style="background:yellow; ">    if  (!variable_global_exists(&quot;energy&quot;) ||  !variable_global_exists(&quot;max_energy&quot;)) {</span></p>
+<p class="code"><span style="background:yellow; ">        return false;</span></p>
+<p class="code"><span style="background:yellow; ">    }</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">    if (global.apples &lt;= 0) {</span></p>
+<p class="code"><span style="background:yellow; ">        show_debug_message(&quot;No apples left  to eat.&quot;);</span></p>
+<p class="code"><span style="background:yellow; ">        return false;</span></p>
+<p class="code"><span style="background:yellow; ">    }</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">    if (global.energy &gt;= global.max_energy)  {</span></p>
+<p class="code"><span style="background:yellow; ">        show_debug_message(&quot;Energy already  full.&quot;);</span></p>
+<p class="code"><span style="background:yellow; ">        return false;</span></p>
+<p class="code"><span style="background:yellow; ">    }</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">    global.apples -= 1;</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">    var restore_amount = 10;</span></p>
+<p class="code"><span style="background:yellow; ">    if (variable_global_exists(&quot;energy_restore_per_apple&quot;))  {</span></p>
+<p class="code"><span style="background:yellow; ">        restore_amount =  global.energy_restore_per_apple;</span></p>
+<p class="code"><span style="background:yellow; ">    }</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">    global.energy += restore_amount;</span></p>
+<p class="code"><span style="background:yellow; ">    if (global.energy &gt; global.max_energy) {</span></p>
+<p class="code"><span style="background:yellow; ">        global.energy = global.max_energy;</span></p>
+<p class="code"><span style="background:yellow; ">    }</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Ate  apple. Energy: &quot; + string(global.energy) + &quot;/&quot; +  string(global.max_energy) + &quot; | Apples left: &quot; +  string(global.apples));</span></strong></span></p>
+<p class="code"><span style="background:yellow; ">    return true;</span></p>
+<p class="code"><span style="background:yellow; ">}</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="RecipeHeading"><span style="background:yellow; ">//  ~~~~~~~~~~~~~~FUNCTION: Drain Energy from Movement ~~~~~~~~~~~~</span></p>
+<p class="code"><strong><span style="color:#00B050; background:yellow; ">//</span></strong><span style="background:yellow; "> <strong><span style="color:#00B050; ">_distance_moved should be pixel distance moved this step</span></strong></span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">function  hero_drain_energy_by_movement(_distance_moved) {</span></p>
+<p class="code"><span style="background:yellow; ">    if  (!variable_global_exists(&quot;energy&quot;) ||  !variable_global_exists(&quot;max_energy&quot;)) {</span></p>
+<p class="code"><span style="background:yellow; ">        return;</span></p>
+<p class="code"><span style="background:yellow; ">    }</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">    if (_distance_moved &lt;= 0) {</span></p>
+<p class="code"><span style="background:yellow; ">        return;</span></p>
+<p class="code"><span style="background:yellow; ">    }</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">    if  (!variable_global_exists(&quot;energy_move_accumulator&quot;)) {</span></p>
+<p class="code"><span style="background:yellow; ">        global.energy_move_accumulator = 0;</span></p>
+<p class="code"><span style="background:yellow; ">    }</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">    var pixels_per_point = 96;</span></p>
+<p class="code"><span style="background:yellow; ">    if  (variable_global_exists(&quot;energy_pixels_per_point&quot;)) {</span></p>
+<p class="code"><span style="background:yellow; ">        pixels_per_point = max(1,  global.energy_pixels_per_point);</span></p>
+<p class="code"><span style="background:yellow; ">    }</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">    global.energy_move_accumulator +=  _distance_moved;</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">    while (global.energy_move_accumulator &gt;=  pixels_per_point) {</span></p>
+<p class="code"><span style="background:yellow; ">        global.energy_move_accumulator -=  pixels_per_point;</span></p>
+<p class="code"><span style="background:yellow; ">        global.energy -= 1;</span></p>
+<p class="code"><span style="background:yellow; ">&nbsp;</span></p>
+<p class="code"><span style="background:yellow; ">        if (global.energy &lt;= 0) {</span></p>
+<p class="code"><span style="background:yellow; ">            global.energy = 0;</span></p>
+<p class="code"><span style="background:yellow; ">            break;</span></p>
+<p class="code"><span style="background:yellow; ">        }</span></p>
+<p class="code"><span style="background:yellow; ">    }</span></p>
+<p class="code"><span style="background:yellow; ">}</span></p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">// ~~~~~~~~~~~~~~~~~FUNCTION: Collect Bomb  ~~~~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">// Call when hero picks up a bomb  item</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function hero_collect_bomb() {</p>
+<p class="code">    global.bombs_held += 1;</p>
+<p class="code">    </p>
+<p class="code">    <strong><span style="color:#C00000; ">show_debug_message(&quot;Picked up bomb! Total bombs:  &quot; + string(global.bombs_held));</span></strong></p>
+<p class="code">}</p>
+<p class="code">&nbsp;</p>
+<p class="code">&nbsp;</p>
+<p class="RecipeHeading">//~~~~~~~~~~~~~~~~~~~~ FUNCTION: Use Bomb  ~~~~~~~~~~~~~~~~~~~~~~~</p>
+<p class="code"><strong><span style="color:#00B050; ">//</span></strong> <strong><span style="color:#00B050; ">Call when hero wants to throw/use a bomb</span></strong></p>
+<p class="code">&nbsp;</p>
+<p class="code">function hero_use_bomb(_target_x, _target_y) {</p>
+<p class="code">    if (global.bombs_held  &gt; 0) {</p>
+<p class="code">        global.bombs_held  -= 1;</p>
+<p class="code">        </p>
+<p class="code">         show_debug_message(&quot;Threw bomb! Bombs remaining: &quot; +  string(global.bombs_held));</p>
+<p class="code">        <strong><span style="color:#00B050; "> </span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">        // Create bomb projectile or explosion  at target position</span></strong></p>
+<p class="code"><strong><span style="color:#00B050; ">        // instance_create_layer(_target_x,  _target_y, &quot;Instances&quot;, obj_bomb_thrown);</span></strong></p>
+<p class="code">        </p>
+<p class="code">        return true;  <strong><span style="color:#00B050; ">//  Successfully used bomb</span></strong></p>
+<p class="code">    } else {</p>
+<p class="code">         show_debug_message(&quot;No bombs to throw!&quot;);</p>
+<p class="code">        return false;  <strong><span style="color:#00B050; ">// No bombs  available</span></strong></p>
+<p class="code">    }</p>
+<p class="code">}</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>

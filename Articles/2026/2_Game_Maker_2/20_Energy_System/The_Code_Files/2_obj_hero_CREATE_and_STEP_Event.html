@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta name="description" content="Learn Game Maker fundamentals in this tutorial.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+   
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~2 obj_hero CREATE and STEP Events~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >5/25/2026</p>
+   
+<p>&nbsp;</p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-family:'Calibri Light',sans-serif; font-size:14.0pt; color:#2F5496; ">// ~~~~~~~~~~~~~~~~~~~~ HERO CREATE EVENT ~~~~~~~~~~~~~~~~~</span></strong></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span style="line-height:115%; font-family:'Courier New'; font-size:10.0pt; ">persistent = true;</span>&nbsp;</p>
+<p class="MsoNormal"><br>
+</p>
+
+<p class="MsoNormal"><strong><span style="line-height:115%; font-family:'Calibri Light',sans-serif; font-size:14.0pt; color:#2F5496; ">// ~~~~~~~~~~~~~~~~~~~~ HERO STEP EVENT ~~~~~~~~~~~~~~~~~</span></strong></p>
+
+
+
+
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">//</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; "> <strong><span style="color:#00B050; ">MOVEMENT INPUT</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">var move_x =  keyboard_check(vk_right) - keyboard_check(vk_left);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">var move_y = keyboard_check(vk_down)  - keyboard_check(vk_up);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">var spd = 4;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">var dx  = move_x * spd;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">var dy  = move_y * spd;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">//</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; "> <strong><span style="color:#00B050; ">COLLISION AND MOVEMENT</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">if (dx != 0 || dy != 0) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     if (!place_meeting(x + dx, y + dy, obj_wall_plain) &amp;&amp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        !place_meeting(x + dx, y + dy,  obj_wall_crackedA) &amp;&amp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        !place_meeting(x + dx, y + dy,  obj_wall_crackedB)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        x += dx;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        y += dy;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     } else {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (dx != 0 &amp;&amp; !place_meeting(x  + dx, y, obj_wall_plain) &amp;&amp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            !place_meeting(x + dx, y,  obj_wall_crackedA) &amp;&amp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            !place_meeting(x + dx, y,  obj_wall_crackedB)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            x += dx;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (dy != 0 &amp;&amp;  !place_meeting(x, y + dy, obj_wall_plain) &amp;&amp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            !place_meeting(x, y + dy,  obj_wall_crackedA) &amp;&amp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            !place_meeting(x, y + dy,  obj_wall_crackedB)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            y += dy;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (place_meeting(x, y, obj_wall_plain)  ||</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            place_meeting(x, y,  obj_wall_crackedA) ||</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            place_meeting(x, y,  obj_wall_crackedB)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            var nudge_distance = 16;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            var escaped = false;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            for (var angle = 0; angle &lt; 360;  angle += 45) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                var nudge_x =  lengthdir_x(nudge_distance, angle);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                var nudge_y =  lengthdir_y(nudge_distance, angle);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                if (!place_meeting(x + nudge_x,  y + nudge_y, obj_wall_plain) &amp;&amp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    !place_meeting(x + nudge_x,  y + nudge_y, obj_wall_crackedA) &amp;&amp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    !place_meeting(x + nudge_x,  y + nudge_y, obj_wall_crackedB)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    x += nudge_x;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    y += nudge_y;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    escaped = true;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    break;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            if (!escaped) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                nudge_distance = 32;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                for (var angle = 0; angle &lt;  360; angle += 45) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    var nudge_x =  lengthdir_x(nudge_distance, angle);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    var nudge_y =  lengthdir_y(nudge_distance, angle);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    if (!place_meeting(x +  nudge_x, y + nudge_y, obj_wall_plain) &amp;&amp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        !place_meeting(x +  nudge_x, y + nudge_y, obj_wall_crackedA) &amp;&amp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        !place_meeting(x +  nudge_x, y + nudge_y, obj_wall_crackedB)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        x += nudge_x;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        y += nudge_y;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        escaped = true;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        break;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            if (!escaped) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                var safe_x = room_width / 2;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                var safe_y = room_height / 2;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                if (place_meeting(safe_x,  safe_y, obj_wall_plain) ||</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    place_meeting(safe_x,  safe_y, obj_wall_crackedA) ||</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    place_meeting(safe_x,  safe_y, obj_wall_crackedB)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    var found_safe = false;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    for (var check_x = 128;  check_x &lt; room_width - 128; check_x += 64) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        for (var check_y = 128;  check_y &lt; room_height - 128; check_y += 64) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                            if  (!place_meeting(check_x, check_y, obj_wall_plain) &amp;&amp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                                 !place_meeting(check_x, check_y, obj_wall_crackedA) &amp;&amp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                                 !place_meeting(check_x, check_y, obj_wall_crackedB)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                                safe_x =  check_x;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                                safe_y =  check_y;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                                found_safe =  true;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                                break;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                            }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                        if (found_safe) break;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                    }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                x = safe_x;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">                y = safe_y;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="line-height:115%; font-family:'Courier New'; font-size:10.0pt; background:yellow; ">// <strong><span style="color:#00B050; ">MOVEMENT ENERGY DRAIN</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">var moved_distance = point_distance(xprevious, yprevious, x, y);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">hero_drain_energy_by_movement(moved_distance);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">if (variable_global_exists(&quot;energy&quot;) &amp;&amp;  moved_distance &gt; 0 &amp;&amp; global.energy &lt;= 1) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    global.energy = 0;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">}</span><span style="font-family:'Courier New'; font-size:10.0pt; "> </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// ENERGY DEPLETED  FAILSAFE</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; "> </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">if (variable_global_exists(&quot;energy&quot;)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    if (!variable_global_exists(&quot;energy_kicked_to_town&quot;))  {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">         global.energy_kicked_to_town = false;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    if (global.energy &gt; 0) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">         global.energy_kicked_to_town = false;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    if (global.energy &lt;= 0  &amp;&amp; !global.energy_kicked_to_town) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">        global.energy = 0;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">         global.energy_kicked_to_town = true;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">        if  (variable_global_exists(&quot;energy_move_accumulator&quot;)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">             global.energy_move_accumulator = 0;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">        }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">        var town_room =  asset_get_index(&quot;rm_town&quot;);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">        if (town_room != -1  &amp;&amp; room != town_room) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">            room_goto(town_room);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">            exit;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">        }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">        var dungeon_room =  asset_get_index(&quot;Room1&quot;);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">        if (dungeon_room != -1  &amp;&amp; room != dungeon_room) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">             room_goto(dungeon_room);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">            exit;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">        }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">}</span><span style="font-family:'Courier New'; font-size:10.0pt; "> </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">//</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; "> <strong><span style="color:#00B050; ">SPRITE SWITCHING</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">if (move_y &lt; 0) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     sprite_index = sprite_hero_back;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">} else if (move_x &gt; 0) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     sprite_index = sprite_hero_right;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">} else if (move_x &lt; 0) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     sprite_index = sprite_hero_left;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">} else {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     sprite_index = sprite_hero;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">//</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; "> <strong><span style="color:#00B050; ">ITEM COLLECTION</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">var item_heart = instance_place(x,  y, obj_heart);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">if (item_heart != noone) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     global.hearts += 1;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     if (global.hearts &gt; global.max_hearts) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        global.hearts = global.max_hearts;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     instance_destroy(item_heart);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">var item_apple = instance_place(x, y, obj_apple);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">if (item_apple != noone) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    hero_collect_apple();</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    if  (variable_global_exists(&quot;energy&quot;) &amp;&amp;  variable_global_exists(&quot;max_energy&quot;)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">        global.energy =  global.max_energy;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    if  (variable_global_exists(&quot;energy_move_accumulator&quot;)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">         global.energy_move_accumulator = 0;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    if  (variable_global_exists(&quot;energy_kicked_to_town&quot;)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">        global.energy_kicked_to_town  = false;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">    }</span><span style="font-family:'Courier New'; font-size:10.0pt; "> </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">    <span style="background:yellow; ">instance_destroy(item_apple);</span></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; background:yellow; ">}</span><span style="font-family:'Courier New'; font-size:10.0pt; "> </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">var item_bomb = instance_place(x,  y, obj_bomb);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">if (item_bomb != noone) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     global.bombs_held += 1;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     instance_destroy(item_bomb);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// BOMB THROWING</span></strong></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">if  (keyboard_check_pressed(vk_space) &amp;&amp; !global.in_fight) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     if (global.bombs_held &gt; 0) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        global.bombs_held -= 1;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var throw_direction = 270;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        if (sprite_index == sprite_hero_back) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            throw_direction = 90;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        } else if (sprite_index ==  sprite_hero_right) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            throw_direction = 0;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        } else if (sprite_index ==  sprite_hero_left) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">            throw_direction = 180;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var offset_distance = 32;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var bomb_x = x +  lengthdir_x(offset_distance, throw_direction);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var bomb_y = y +  lengthdir_y(offset_distance, throw_direction);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        var bomb =  instance_create_layer(bomb_x, bomb_y, &quot;Instances&quot;, obj_bomb_thrown);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        bomb.direction = throw_direction;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        bomb.image_angle = throw_direction;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// HAZARD CHECK</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; "> </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">var hazard_bomb = instance_place(x,  y, obj_hazard_bomb);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">if (hazard_bomb != noone) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     global.hearts -= 1;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     instance_destroy(hazard_bomb);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     if (global.hearts &lt;= 0) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        x = global.hero_start_x;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        y = global.hero_start_y;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        global.hearts = 3;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">// ENEMY COLLISION</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; "> </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">if (place_meeting(x, y,  obj_blue_bouncing_directional_slime)) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     global.current_room = room;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     var enemy = instance_place(x, y, obj_blue_bouncing_directional_slime);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     if (enemy != noone) {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">        instance_destroy(enemy);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     }</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     room_goto(rm_fight);</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#00B050; ">//</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; "> <strong><span style="color:#00B050; ">EXIT CHECK</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">if (place_meeting(x, y, obj_door))  {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     global.current_floor += 1;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     regenerate_maze();</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><strong><span style="line-height:115%; font-family:'Courier New'; font-size:10.0pt; color:#C00000; ">// De</span></strong><span style="font-family:'Courier New'; font-size:10.0pt; color:#C00000; ">bug: Press F1 to enter fight room</span><span style="font-family:'Courier New'; font-size:10.0pt; "> </span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">if (keyboard_check_pressed(vk_f1))  {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     room_goto(rm_fight);  <strong><span style="color:#00B050; ">// or whatever your fight room is named</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">&nbsp;</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">if (keyboard_check_pressed(vk_f2))  {</span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">     room_goto(Room1);  <strong><span style="color:#00B050; ">// Gets You Back in Dungeon</span></strong></span></p>
+<p class="MsoNormal"><span style="font-family:'Courier New'; font-size:10.0pt; ">}</span></p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
