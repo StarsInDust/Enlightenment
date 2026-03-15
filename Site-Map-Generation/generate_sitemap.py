@@ -4,7 +4,7 @@ from datetime import datetime
 # === CONFIGURATION ===
 site_folder = "C:/xampp/htdocs/Enlightenment"  # Adjust if needed
 base_url = "https://starsindust.github.io/Enlightenment"
-output_folder = "./sitemapBackup"  # Optional subfolder to store generated sitemaps
+output_folder = "C:/xampp/htdocs/Enlightenment/sitemapBackup"  # Backup folder in site root
 
 # === TIMESTAMP ===
 today = datetime.today().strftime("%Y-%m-%d")
@@ -20,9 +20,15 @@ sitemap_entries = []
 for root, dirs, files in os.walk(site_folder):
     for file in files:
         if file.endswith(".html"):
-            rel_path = os.path.relpath(os.path.join(root, file), site_folder)
+            file_path = os.path.join(root, file)
+            rel_path = os.path.relpath(file_path, site_folder)
             url = f"{base_url}/{rel_path.replace(os.sep, '/')}"
-            sitemap_entries.append(f"  <url>\n    <loc>{url}</loc>\n  </url>")
+            
+            # Get last modification time
+            mod_time = os.path.getmtime(file_path)
+            lastmod = datetime.fromtimestamp(mod_time).strftime("%Y-%m-%d")
+            
+            sitemap_entries.append(f"  <url>\n    <loc>{url}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>")
 
 # === Build XML ===
 sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
