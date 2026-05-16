@@ -434,3 +434,6 @@ p.tableOfContents a:hover {
     height: 430px;
   }
 }
+.main .blueEmphasis {
+	text-align: center;
+}
