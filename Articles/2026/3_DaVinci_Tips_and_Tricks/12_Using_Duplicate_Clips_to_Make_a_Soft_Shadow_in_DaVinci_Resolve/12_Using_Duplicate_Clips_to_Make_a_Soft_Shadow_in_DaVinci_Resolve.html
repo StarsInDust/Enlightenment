@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+  <meta name="title" content="12 Using Duplicate Clips to Make a Soft Shadow in DaVinci Resolve">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" DaVinci Resolve, Resolve tutorial, soft shadow effect, duplicate clip shadow, Gaussian blur shadow, input sizing Resolve, pan and tilt Resolve, shadow offset Resolve, video editing tips, Resolve animation shadow, floating object shadow, compositing basics Resolve, beginner Resolve tutorial, Resolve shadow fix, how to add shadows Resolve"/>
+
+
+<meta name="description" content="Create a soft, natural shadow in DaVinci Resolve using duplicate clips, blur, and Input Sizing. Learn how to offset and shape shadows for animated objects."/>
+
+<meta name="category" content=" DaVinci, Movie Maker, Editing tool ">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="May 29, 2026" />
+
+<meta name="url" content=" https://starsindust.github.io/ Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/12_Using_Duplicate_Clips_to_Make_a_Soft_Shadow_in_DaVinci_Resolve/12_Using_Duplicate_Clips_to_Make_a_Soft_Shadow_in_DaVinci_Resolve.html">
+
+ 
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+p.MsoNoSpacing {
+margin:0in;
+font-size:11.0pt;
+font-family:"Calibri",sans-serif;
+color:black;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~12 Using Duplicate Clips to Make a Soft Shadow in DaVinci Resolve~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >8/17/2026</p>
+   
+<p>&nbsp;</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<img src="Images/1.png" width="551" height="379">
+<p class="MsoNoSpacing">&nbsp;</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<p class="MsoNoSpacing">Let&rsquo;s make a shadow. Ok, well maybe not quite like this  one. But it will be a shadow.</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<img src="Images/2.png" width="363" height="329">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">In DaVinci Resolve, duplicate the track you want to add a  shadow to, then pull it under the main track. </p>
+<img src="Images/3.png" width="245" height="236">
+<h1>Go to the Color page</h1>
+<img src="Images/4.png" width="145" height="59">
+<p class="MsoNormal">Use <strong><span style="font-family:'Calibri',sans-serif; ">Gain</span></strong> on the  Color page to do this. Gain controls Highlights or Brightness. On the color  page you do not turn something black by increasing the shadow&rsquo;s setting, you  turn it to black by removing the brightness, and Gain is how you remove  brightness.</p>
+<img src="Images/5.png" width="630" height="509">
+<p class="MsoNormal">I decided on 0.71</p>
+<img src="Images/6.png" width="266" height="269">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Just pull gain down until the teapot, which is on the bottom  track looks like a shadow.</p>
+<img src="Images/7.png" width="416" height="312">
+<p class="MsoNormal">&nbsp;</p>
+<h1>Effect – Gaussian Blur</h1>
+<p class="MsoNormal">Go Back to the Edit Page. Now go to Effects at the top and  choose Gaussian Blur</p>
+<img src="Images/8.png" width="369" height="358">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Just drag that text that says Gaussian Blur, in the Effects  panel, down onto the teapot to give it a blur. I lowered my strength a bit to  0.481</p>
+<img src="Images/9.png" width="440" height="270">
+<h1>To Offset the Bottom Shadow Layer</h1>
+<p class="MsoNormal">Go to the Color page</p>
+<img src="Images/10.png" width="151" height="56">
+<p class="MsoNormal">Make sure you have the correct layer selected here. Remember  we added a gaussian Blur, So, it should have an <strong><span style="font-family:'Calibri',sans-serif; ">fx</span></strong> in the right-hand bottom corner.</p>
+<img src="Images/11.png" width="448" height="176">
+<p class="MsoNormal">Go to the bottom of this page where your color wheels are. </p>
+<img src="Images/12.png" width="648" height="237">
+<p class="MsoNormal">We want <strong><span style="font-family:'Calibri',sans-serif; ">Input Sizing</span></strong>,  so go to this icon here.</p>
+<img src="Images/13.png" width="359" height="129">
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">Inside <strong>Input Sizing</strong>, the controls you want are:</span></p>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">&nbsp;</span></p>
+<p class="MsoNoSpacing"><strong><span style="font-family:'Calibri',sans-serif; ">Pan (X)</span></strong> →  moves the shadow left/right</p>
+<p class="MsoNoSpacing"><strong><span style="font-family:'Calibri',sans-serif; ">Tilt (Y) </span></strong>→  moves the shadow up/down</p>
+<p class="MsoNoSpacing"><strong><span style="font-family:'Calibri',sans-serif; ">Zoom</span></strong> → makes  the shadow slightly smaller or larger</p>
+<p class="MsoNormal" style="line-height:normal;"><strong><span style="font-family:'Times New Roman',serif; font-size:13.5pt; ">&nbsp;</span></strong></p>
+<p class="MsoNormal">These are the numbers that I finally used for my teapot</p>
+<ul>
+  <li><strong>Pan:</strong> <code><span style="font-size:10.0pt; ">0.600</span></code></li>
+  <li><strong>Tilt:</strong> <code><span style="font-size:10.0pt; ">-0.600</span></code></li>
+  <li><strong>Zoom:</strong> <code><span style="font-size:10.0pt; ">0.986</span></code></li>
+</ul>
+<p>This is the shadow that it created</p>
+<img src="Images/14.png" width="527" height="397">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">As you finish this step, take a moment to appreciate how  much control you now have over the look and feel of your animation. A simple  shadow can completely change the depth, mood, and realism of a scene, and now  you know how to shape it exactly the way you want. Keep experimenting with  small adjustments — that&rsquo;s where the magic lives — and you&rsquo;ll find your  confidence growing with every project you touch.</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
