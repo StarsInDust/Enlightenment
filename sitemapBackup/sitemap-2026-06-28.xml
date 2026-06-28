@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles-This-Week.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/google955f12002b382ef9.html</loc>
@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/index.html</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-06-28</lastmod>
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/2024/1-Flexbox/1-What-Is-Flexbox/1-What-Is-Flexbox.html</loc>
@@ -330,7 +330,7 @@
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/1-Object-Mode/1-Exploring-the-Interface/4-The-Sub-Menu-Part-1/4-The-Sub-Menu-Part-1.html</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2026-06-01</lastmod>
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/1-Object-Mode/1-Exploring-the-Interface/4-The-Sub-Menu-Part-2/4-The-Sub-Menu-Part-2.html</loc>
@@ -370,7 +370,7 @@
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/3-The-Bevel-Tool/The-Bevel-Menu.html</loc>
-    <lastmod>2025-04-20</lastmod>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/2-Edit-Mode/1-The-Menus/1-The-Tools-Menu/4-The-Loop-Cut-Tool/4-The-Loop-Cut-Tool.html</loc>
@@ -414,7 +414,7 @@
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/6-Making-a-3D-Object-from-a-2D-Image/Making-a-3D-Object-From-a-2D-Image.html</loc>
-    <lastmod>2025-04-22</lastmod>
+    <lastmod>2026-06-04</lastmod>
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/7-Loop-Tools/1-Introduction-To-Loop-Tools/1-Introduction-To-Loop-Tools.html</loc>
@@ -426,7 +426,7 @@
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/7-Loop-Tools/3-Circle/3-Circles.html</loc>
-    <lastmod>2025-04-23</lastmod>
+    <lastmod>2026-06-04</lastmod>
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/2025/1-Blender-Continued/7-Loop-Tools/4-Curves/4-Curves.html</loc>
@@ -741,8 +741,60 @@
     <lastmod>2026-01-01</lastmod>
   </url>
   <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/10_How_to_Change_Clip_Speed_and_Duration_in_DaVinci_Resolve/10_How_to_Change_Clip_Speed_and_Duration_in_DaVinci_Resolve.html</loc>
+    <lastmod>2026-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/11_Fix_Slow_Clips_Render_in_Place/11_How_to_Fix_Slow_or_Choppy_Clips_in_DaVinci_Resolve_Using_Render_in_Place.html</loc>
+    <lastmod>2026-05-26</lastmod>
+  </url>
+  <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/12_Using_Duplicate_Clips_to_Make_a_Soft_Shadow_in_DaVinci_Resolve/12_Using_Duplicate_Clips_to_Make_a_Soft_Shadow_in_DaVinci_Resolve.html</loc>
+    <lastmod>2026-05-29</lastmod>
+  </url>
+  <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/13_CapCut_Glitter_Effect_in_DaVinci_Resolve.html</loc>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking.html</loc>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+  <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/1_What_is_DaVinci/1_What_Is_DaVinci.html</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+  <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/2_To_Locate_Keyframes_in_your_Video/2_To_Locate_Keyframes_in_your_Video.html</loc>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+  <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/3_Fixing_Image_Scaling_in_DaVinci_Resolve/3_Fixing_Image_Scaling_in_DaVinci.html</loc>
+    <lastmod>2026-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/4_How_to_Export_an_MP4_in_DaVinci_Resolve/4_How_to_Export_an_MP4_in_DaVinci_Resolve.html</loc>
+    <lastmod>2026-06-22</lastmod>
+  </url>
+  <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/5_How_to_Nudge_and_Align_Clips_in_DaVinci_Resolve/5_How_to_Nudge_and_Align_Clips_in_DaVinci_Resolve.html</loc>
+    <lastmod>2026-05-13</lastmod>
+  </url>
+  <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/6_Understanding_Node_Connectors_in_DaVinci_Resolve/6_Understanding_Node_Connectors_in_DaVinci_Resolve.html</loc>
+    <lastmod>2026-05-14</lastmod>
+  </url>
+  <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/7_How_to_Create_Smooth_Transitions_Between_Clips_in_DaVinci_Resolve/7_How_to_Create_Smooth_Transitions_Between_Clips_in_DaVinci_Resolve.html</loc>
+    <lastmod>2026-05-15</lastmod>
+  </url>
+  <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/8_How_to_Copy_and_Paste_Keyframes_in_DaVinci_Resolve_on_Edit_Page/8_How_to_Copy_and_Paste_Keyframes_in_DaVinci_Resolve_on_Edit_Page.html</loc>
+    <lastmod>2026-05-21</lastmod>
+  </url>
+  <url>
+    <loc>https://starsindust.github.io/Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/9_How_to_Copy_and_Paste_Keyframes_in_DaVinci_Resolve_Fusion_Page/9_How_to_Copy_and_Paste_Keyframes_in_DaVinci_Resolve_on_Fusion_Page.html</loc>
+    <lastmod>2026-05-22</lastmod>
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/External_Tutorials/Illustrator/Illustrator_Leaves_to_24_Pixel_Size.html</loc>
@@ -754,7 +806,7 @@
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/Generic-Web-Pages/Generic-Article-With-Image-Toggle-Script.html</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2026-05-10</lastmod>
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/Generic-Web-Pages/Generic-Article.html</loc>
@@ -782,7 +834,7 @@
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/Main-Yearly-Archive-Webpages/2026-Achives.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
     <loc>https://starsindust.github.io/Enlightenment/Articles/Main-Yearly-Archive-Webpages/Z Generic Archive Page.html</loc>
