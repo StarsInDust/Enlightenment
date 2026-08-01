@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+   
+ <meta name="title" content=" 5 Checking Normals with Face Orientation ">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Checking Normals with Face Orientation, Blender, 3D Modeling, Animation, Graphic Art "/>
+
+
+<meta name="description" content="This article explains how to Check Normals with Face Orientation in Blender/>
+
+<meta name="category" content="Bringing in a Reference Image, Blender, 3D Modeling, Animation, Graphic Art">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="Friday, July 31, 2026" />
+
+<meta name="url" content="https://starsindust.github.io/Enlightenment/Articles/2026/4_Blender_Tips_and_Tricks/5_Checking_Normals_with_Face_Orientation/5_Checking_Normals_With_Face_Orientation.html">
+
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~5 Checking Normals with Face Orientation~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >10/5/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="399" height="360">
+<h1>What are Normals?</h1>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">Normals determine which side of a face is considered outside and which  side is inside.</span></p>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">In Blender 5, the easiest way to visualize normals is by using the <strong>Face  Orientation</strong> display.</span></p>
+<p class="MsoNormal">Blender uses normals to determine how light, shading, and  many modifiers interact with the surface of a model.</p>
+<p class="MsoNormal">Think of a Normal as an invisible arrow attached to every  face. Blender reads that arrow to determine which side of the face is outside  and which side is inside.</p>
+<h1>How to turn on Normals</h1>
+<p class="MsoNormal">Go to Viewport Overlay&rsquo;s tab located at the top left of  viewport. Check the box that says Face Orientation</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/2.png" width="385" height="580">
+<p class="MsoNormal">&nbsp;</p>
+<img src="Images/3.png" width="633" height="355">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>How Fix broken Normals.</h1>
+<img src="Images/4.png" width="313" height="494">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">I found a small sliver of flipped normals. It was so small I  barely noticed it.</p>
+<img src="Images/5.png" width="313" height="349">
+<h1>Step 1 — Recalculate the Entire Mesh</h1>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">This is the first thing I would do.</span></p>
+<ol start="1" type="1">
+  <li class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">Go into <strong>Edit       Mode</strong>. </span></li>
+  <li class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">Press <strong>A</strong> to select <strong>everything</strong>. </span></li>
+  <li class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">Press <strong>Shift       + N</strong> (<strong>Recalculate Outside</strong>). </span></li>
+</ol>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">Now look again.</span></p>
+<p class="MsoNormal" style="line-height:normal;"><strong><span style="font-family:'Times New Roman',serif; font-size:13.5pt; ">If the red disappears...</span></strong></p>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">If the red face disappears, your normals have been corrected.</span></p>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">&nbsp;</span><img src="Images/6.png" width="444" height="444"></p>
+<p><span class="BoldRedChar">Watch It!</span>    Sometimes <strong data-start="3730" data-end="3743">Shift + N</strong> will not fix every red face.</p>
+<p>If a face is disconnected, duplicated, or has bad geometry, you may need to  investigate the mesh further instead of simply recalculating the normals.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+
+
+</article>
+
+  
+<footer class="footer"> ~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</body>
+</html>
