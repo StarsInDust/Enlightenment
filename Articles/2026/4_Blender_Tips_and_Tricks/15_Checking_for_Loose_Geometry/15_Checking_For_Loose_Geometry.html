@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Enlightenment</title>
+    
+ <meta name="title" content=" 15 Checking for Loose Geometry">
+
+<meta name="author" content="StarsInDust ">
+<meta name="Designer" content="StarsInDust ">
+
+<meta name="keywords" content=" Checking for Loose Geometry, Blender, 3D Modeling, Animation, Graphic Art "/>
+
+
+<meta name="description" content="This article explains how to check for Loose Geometry in Blender/>
+
+<meta name="category" content=" Checking for Loose Geometry, Blender, 3D Modeling, Animation, Graphic Art">
+
+<meta name="rating" content="General">
+
+
+<meta name="robots" content="index,follow" />
+
+<meta name="revised" content="August 11, 2026" />
+
+<meta name="url" content="https://starsindust.github.io/Enlightenment/Articles/2026/4_Blender_Tips_and_Tricks/15_Checking_for_Loose_Geometry/15_Checking_For_Loose_Geometry.html">
+  
+ 
+ 
+    
+    
+    <link rel="shortcut icon" href="../../../../Images/favicon.ico" type="image/x-icon">
+
+
+    
+
+<link href="../../../../CSS/myStyles.css" rel="stylesheet" type="text/css">
+<link href="../../../../CSS/DarkOnLight.css" rel="stylesheet" type="text/css">
+
+
+<style type="text/css">
+  /* Add custom styles here if needed */
+</style>
+
+
+<style type="text/css">
+<!--
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
+}
+-->
+</style>
+</head>
+
+
+<body>
+
+<div class="wrapper">
+<header class="header">
+    <meta name="description" content="Learn web design fundamentals in this tutorial.">Header</header>
+  
+  <ul class="navigation">
+   <li><a href="../../../../index.html" class="active"title="Home">Home</a></li>
+  <li><a href="../../../../Articles-This-Week.html" class="active"title="Articles This Week">&#9729;</a></li>
+  <li><a href="../../../../Articles-By-Year.html" title= "Articles By Year">Articles By Year</a></li>
+  <li><a href="../../../../About.html" title="About">About</a></li>
+</ul>
+
+<div class = "backgroundBlack"> <p class="h2Silver"><span class="h2Gold"><span class="h2Gold">~Articles This Week~</span></span></p></div>
+
+<article class="main">
+  
+  
+  
+  <!--Main Article -->
+  
+  <p class="h2Black" >~15 Checking for Loose Geometry~</p>
+  
+  
+  <p class="author">By StarsInDust</p> 
+  
+   <p class="articleDate" style="text-align:right" >12/14/2026</p>
+   
+<p>&nbsp;</p>
+<img src="Images/1.png" width="349" height="319">
+<h1>Test One -Loose Geometry</h1>
+<p class="MsoNormal">Edit Mode </p>
+<img src="Images/2.png" width="248" height="93">
+<p class="MsoNormal">Deselect everything, then go to Select → Select All by Trait  → Loose Geometry. Blender will select any geometry that is not connected to the  main mesh.</p>
+<img src="Images/3.png" width="496" height="365">
+<p class="MsoNormal">Aha! Blender found a disconnected face in the ear.</p>
+<img src="Images/4.png" width="244" height="264">
+<h1><span style="line-height:115%; font-family:'Calibri',sans-serif; font-size:11.0pt; color:windowtext; font-weight:normal; ">So, delete  that wayward face—it does not belong on our model.</span></h1>
+<h1>Test Two- Extra Vertices</h1>
+<ol start="1" type="1">
+  <li class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">Stay in <strong>Edit       Mode</strong>. </span></li>
+  <li class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">Select just a <strong>small       patch of vertices in a trouble spot</strong>—enough to cover the       bumpy/deforming region, </span></li>
+</ol>
+<img src="Images/5.png" width="184" height="182">
+<ol start="3" type="1">
+  <li class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">Press </span><strong><span style="font-family:'Courier New'; font-size:10.0pt; ">M, </span></strong>or       go to the Mesh menu<strong><span style="font-family:'Courier New'; font-size:10.0pt; "> </span></strong><strong><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">Merge → Merge by Distance</span></strong><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">. </span></li>
+</ol>
+<p class="MsoNormal" style="line-height:normal;"><span class="BoldRedChar"><span style="font-size:12.0pt; ">WATCH IT</span></span><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">: Don't use a large Merge Distance  just to make Blender remove something. If the distance is too high, Blender can  merge nearby vertices that were supposed to remain separate.</span></p>
+<img src="Images/6.png" width="476" height="373">
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">&nbsp;</span></p>
+<ol start="4" type="1">
+  <li class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">Watch the       little message Blender gives us afterward. It should say something like <strong>&ldquo;Removed       0 vertices&rdquo;</strong> or <strong>&ldquo;Removed X vertices.&rdquo;</strong></span></li>
+</ol>
+<p><img src="Images/7.png" width="626" height="305"></p>
+<p>&nbsp; </p>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">If it says <strong>0</strong>, excellent—we've ruled out doubles within the <strong>Merge  Distance</strong> we tested.</span></p>
+<p class="MsoNormal" style="line-height:normal;"><span style="font-family:'Times New Roman',serif; font-size:12.0pt; ">If it says 1, 2, 3... then AHA! We may have caught some stowaways.</span></p>
+
+</article>
+
+<p class="MsoNormal"><footer class="footer">~ by StarsInDust ~  &#169 2023 –
+<script type="text/javascript" src ="../../../../JavaScript/FooterYearlyDate.js">
+</script></footer>
+
+
+  <script type="text/javascript" src ="../../../../JavaScript/responsiveImage.js">
+</script>   
+       
+</p></article></body>
+</html>
