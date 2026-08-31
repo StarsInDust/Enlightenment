@@ -10,15 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Enlightenment</title>
     
-   <meta name="title" content=" 13 CapCut Glitter Effect in DaVinci Resolve">
+   <meta name="title" content="14 Remove a Logo in DaVinci Resolve Using Masking and Tracking">
 
 <meta name="author" content="StarsInDust ">
 <meta name="Designer" content="StarsInDust ">
 
-<meta name="keywords" content=" CapCut effects, CapCut glitter effect, DaVinci Resolve tutorial, DaVinci compositing, import CapCut to DaVinci, glitter overlay video, video editing effects, blend black background, screen blend mode, color page DaVinci, transparency fix DaVinci, CapCut to DaVinci workflow, video effects tutorial"/>
+<meta name="keywords" content=" Davinci resolve, remove logo, masking in Davinci resolve, power window, color page tutorial, soften mask edges, tracking in Davinci resolve, object removal, video editing tips, resolve color grading, patching footage, resolve tracker, remove objects from video, logo removal tutorial"/>
 
 
-<meta name="description" content="Learn how to export a glitter effect from CapCut and blend it seamlessly into DaVinci Resolve using color adjustments and screen mode for clean transparency."/>
+<meta name="description" content="Learn how to remove a logo in DaVinci Resolve using masking, softening, and tracking inside the Color page. This step‑by‑step tutorial shows you how to isolate the logo, blend the patch naturally, and track the correction through movement for a clean, seamless result."/>
 
 <meta name="category" content=" DaVinci, Movie Maker, Editing tool ">
 
@@ -27,9 +27,9 @@
 
 <meta name="robots" content="index,follow" />
 
-<meta name="revised" content="May 30, 2026" />
+<meta name="revised" content="June 1, 2026 " />
 
-<meta name="url" content="https://starsindust.github.io/ Enlightenment /Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/13_CapCut_Glitter_Effect_in_DaVinci_Resolve.html">
+<meta name="url" content="https://starsindust.github.io/ Enlightenment/Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking.html">
 
  
  
@@ -63,17 +63,10 @@ font-size:11.0pt;
 font-family:"Calibri",sans-serif;
 color:black;
 }
-p.MsoQuote {
-margin-top:10.0pt;
-margin-right:.6in;
-margin-bottom:8.0pt;
-margin-left:.6in;
-text-align:center;
-line-height:115%;
-font-size:11.0pt;
-font-family:"Calibri",sans-serif;
-color:#404040;
-font-style:italic;
+span.BoldRedChar {
+font-family:"Times New Roman",serif;
+color:red;
+font-weight:bold;
 }
 -->
 </style>
@@ -101,106 +94,96 @@ font-style:italic;
   
   <!--Main Article -->
   
-  <p class="h2Black" >~13 CapCut Glitter Effect in DaVinci Resolve~</p>
+  <p class="h2Black" >~14 Remove a Logo in DaVinci Resolve Using Masking and Tracking~</p>
   
   
   <p class="author">By StarsInDust</p> 
   
-   <p class="articleDate" style="text-align:right" >8/24/2026</p>
+   <p class="articleDate" style="text-align:right" >8/31/2026</p>
    
 <p>&nbsp;</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/1.png" width="628" height="412">
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/1.png" width="551" height="364">
-<p class="MsoNormal"><span class="MsoIntenseReference">What you Need</span></p>
-<ul>
-  <li>CapCut (web or desktop)</li>
-  <li>DaVinci Resolve</li>
-  <li>A black background image </li>
-</ul>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/2.png" width="403" height="363">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="MsoIntenseReference">In Davinci</span></p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/3.png" width="212" height="200">
+<p class="MsoNormal">Masking in the Color panel lets you fix distractions without  leaving the Color page.</p>
+<p class="MsoNormal">Bring something onto the timeline that you want to mask. In  other words, we are trying to remove an unwanted obstacle from our image. It  could be a street sign, or it could in my case be the removal of a logo from a  man&rsquo;s shirt. As you can see this logo is a mangled mess.</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/4.png" width="227" height="241">
+<p class="MsoNormal">Go to the Color panel</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/5.png" width="384" height="135">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Find the Power Window tab. Grab the Rectangle tool</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/6.png" width="649" height="322">
+<p class="MsoNormal">It might come in way too big and you will need to resize it.  And you will probably need to zoom out to find the corners of your box. Resize  it to fit the logo.</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/7.png" width="313" height="304">
+<p class="MsoNormal">Look at your node to see if your Power window is being shown  in the node. If you do not see our specified shape in the node. It did not  take. Try redoing it. In our case, it is quite small, but it is there.</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/8.png" width="625" height="167">
+<p class="MsoNormal">Now with it targeting just this area, we should get the  setting that we change with the color wheel to only affect this area.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">To get to the Color Wheels, click on this button</p>
+<p class="MsoNormal">Black fabric often needs a slight lift in shadows, and a  cooler temperature to blend patches naturally.</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/9.png" width="632" height="337">
+<p class="MsoNormal">You will want to move these color wheels, to match or cover  up something that needs to be covered. In our instance, we wanted to remove a  logo, and turn the logo to match the color of the shirt. If this is a problem,  you can also add a patch of color in a clip on the timeline above this clip.  And use that to cover up the trade mark.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">Change the setting to be this, for the black shirt.</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/10.png" width="649" height="262">
+<p class="MsoNoSpacing">Gain: 0.01</p>
+<p class="MsoNoSpacing">Offset: 30:00</p>
+<p class="MsoNoSpacing">Lift: 0.08</p>
+<p class="MsoNoSpacing">Temp: -2.5</p>
+<p class="MsoNoSpacing">Tint: 0.23</p>
+<p class="MsoNoSpacing">MD: -40.50</p>
 <p class="MsoNoSpacing">&nbsp;</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/2.png" width="304" height="275">
-<p class="MsoNoSpacing"><span class="MsoIntenseReference">&nbsp;</span></p>
-<h1>CapCut</h1>
-<p class="MsoNormal">In this tutorial, we will be looking at another video  editing app, which we can use to help us create some effects in DaVinci.</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/3.png" width="133" height="124">
-<p class="MsoNormal">CapCut is a free video editing program that you can also get  on the web.</p>
-<p class="MsoNormal"><a href="https://www.capcut.com/tools/desktop-video-editor?download_channel=capcutpc_bing&utm_medium=sem&ad_platform_id=bingads_int&utm_source=bingads_int&utm_campaign=brand&pid=359289&af_c_id=485866114&adset_id=1224857022303216&ad_id=&placement=&keyword_name=CapCut%20download&targetid=kwd-76553901400784:loc-190&matchtype=e&msclkid=0c413fa9b1901b78a9a955b3535816a9&utm_term=CapCut%20download&utm_content=brand_relevant_EM">CapCut  Download</a></p>
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal"><strong>PART 1 — CREATE THE EFFECT IN CAPCUT</strong></p>
-<ol style="margin-top:0in;" start="1" type="1">
-  <li class="MsoNormal">Open       CapCut </li>
-  <li class="MsoNormal">Create       a <strong>new project</strong></li>
-</ol>
-<p class="MsoNormal">Create a black background in something like photoshop, and  then just slide it in. </p>
-<p class="MsoQuote" style="margin-left:31.5pt;text-indent:-.5in;"><span style="color:#2F5597; "><span style="color:windowtext; ">&ldquo;Black is easiest to key or blend because it  disappears cleanly when we use Screen mode.&rdquo;</span></span></p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/4.png" width="437" height="360">
-<p class="MsoNormal">Add the black background to the timeline at the bottom of  the app</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/5.png" width="643" height="184">
-<p class="MsoNormal">Go to the top of the app, and click on the tab that says  Effects.</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/6.png" width="424" height="102">
-<p class="MsoNormal">Do a search for <strong><span style="font-family:'Calibri',sans-serif; ">glitter fall</span></strong> and  hit enter, to have a list of glitter effects show up. I will be using the first  effect.</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/7.png" width="515" height="443">
-<p class="MsoNormal"><strong>Add your effect ONLY</strong></p>
-<ul style="margin-top:0in;" type="disc">
-  <li class="MsoNormal">Drop       in the <strong>&ldquo;glitter fall&rdquo;</strong> effect. (Drag it to the track above the       background)</li>
-</ul>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/8.png" width="649" height="233">
-<p class="MsoNormal"><strong>Two of the most important things when creating this effect.</strong></p>
-<ul style="margin-top:0in;" type="disc">
-  <li class="MsoNormal">Make       background <strong>BLACK</strong></li>
-  <li class="MsoNormal">Make       glitter <strong>bright (white or warm)</strong></li>
-</ul>
-<h1>Export Effect Video</h1>
-<p class="MsoNormal"><strong>Go to the top left side and click on Export.</strong></p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/9.png" width="422" height="85">
-<p class="MsoNormal"><strong>Fill in the form here, and then hit the teal export  button at the bottom</strong></p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/10.png" width="643" height="600">
-<p class="MsoNormal">&nbsp;</p>
-<h1>DaVinci</h1>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/11.png" width="225" height="205">
-<p class="MsoNormal">Ok, now we need to drag this effect into our DaVinci app.</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/12.png" width="493" height="287">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Then just drag this movie clip down on the Timeline</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/13.png" width="503" height="272">
-<p class="MsoNormal">&nbsp;</p>
-<h1>Color Tab</h1>
-<p class="MsoNormal">Click on the Color tab at the bottom to go to the Color page</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/14.png" width="260" height="90">
-<p class="MsoNormal">Make sure you have the right clip selected</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/15.png" width="340" height="172">
-<p class="MsoNormal">&nbsp;</p>
-<h2>How to Blend our Shadows into the black for Transparency</h2>
-<p class="MsoNormal">Effects come in with an off black, and we need to blend that  in, and get it to be black in order to get transparency.</p>
-<p class="MsoNormal"><strong>In Color Page (on the glitter clip):</strong></p>
-<p class="MsoNormal">Hit <strong><span style="font-family:'Calibri',sans-serif; ">Alt-S</span></strong> to add  a node</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/16.png" width="441" height="273">
-<ol style="margin-top:0in;" start="1" type="1">
-  <li class="MsoNormal">Lower <strong>Lift</strong> (shadows)<br>
-    Lower <strong><span style="font-family:'Calibri',sans-serif; ">Lift </span></strong>until the background       disappears (you&rsquo;ll see it turn fully black).</li>
-  <li class="MsoNormal">Increase <strong>Contrast</strong> slightly </li>
-  <li class="MsoNormal">Adjust <strong>Gamma</strong> carefully </li>
-</ol>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/17.png" width="628" height="244">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">Go back to the <strong><span style="font-family:'Calibri',sans-serif; ">Edit</span></strong> Page.</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/18.png" width="233" height="82">
-<p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">In the inspector on the right- hand side, </p>
-<ul>
-  <li>Set <strong><span style="font-family:'Calibri',sans-serif; ">Composite Mode</span></strong> to <strong><span style="font-family:'Calibri',sans-serif; ">Screen</span></strong></li>
-  <li>Turn down the <strong><span style="font-family:'Calibri',sans-serif; ">Opacity</span></strong>,  just a tad bit.</li>
-</ul>
+<p class="MsoNormal">Of course, for your own image, you will just have to play  around until you get something that you like. This just happened to work for  the black satin shirt. The color of your own element might be entirely  different.</p>
 <p class="MsoNoSpacing">&nbsp;</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/19.png" width="434" height="134">
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">You should see the Glitter effect blend into the black  background</p>
+<h1>Softening</h1>
+<p class="MsoNormal">If you find that your edges are still too strong, you might  want to soften them. Go back to the edit page, so we can view the shirt without  the Power window</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/11.png" width="280" height="101">
+<p class="MsoNormal">We can certainly see where we patched things up at.</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/12.png" width="360" height="378">
+<p class="MsoNormal">Softness feathers the edges of your mask so the correction  blends into the fabric instead of sitting on top of it.&rdquo;</p>
 <p class="MsoNormal">&nbsp;</p>
-<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/13_CapCut_Glitter_Effect_in_DaVinci_Resolve/Images/20.png" width="416" height="277">
+<p class="MsoNormal">To soften, we actually need to go to the <strong><span style="font-family:'Calibri',sans-serif; ">Power Window</span></strong> tab. By Default,  we have 1.25 for each one.</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/13.png" width="646" height="325">
+<p class="MsoNoSpacing">Let&rsquo;s change each one to 3.00, and see what we get. You  do not want to go too far or the logo will be visible. We want to find the  sweet spot.</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<p class="MsoNoSpacing">&nbsp;</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/14.png" width="606" height="392">
+<h1>Tracker</h1>
+<p class="MsoNormal">The color panel has its own tracker. As the movie plays, it  should track and move with the area that you have targeted with the Power  window.</p>
 <p class="MsoNormal">&nbsp;</p>
-<p class="MsoNormal">And that&rsquo;s all it takes to bring a CapCut effect into  DaVinci Resolve and make it blend beautifully. This workflow opens the door to  hundreds of creative overlays you can customize, color<span style="font-family:'Cambria Math',serif; "></span>grade, and  shape to fit your style. Keep experimenting, keep layering, and you&rsquo;ll discover just how much these small effects can elevate your  edits. </p>
+<p class="MsoNormal">You will need to hit this button here on the color page, to  be able to get to the tools used to track something.</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/15.png" width="626" height="242">
+<p class="MsoNormal">First hit the Tracker button at the top of this window to op</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/16.png" width="520" height="166">
+<p class="MsoNormal">Then hit the track forward button here.</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/17.png" width="568" height="334">
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">As the movie plays it will track the logo throughout any  movements that is made. This means that no matter how the man moves in the  clip, the tracker will automatically keep the power window covering this logo  area, and keep the logo completely covered with the color that we used to mask  the emblem.</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span class="BoldRedChar"><span style="line-height:115%; font-size:12.0pt; ">Warning- </span></span>If the  tracker loses the logo, stop playback, reposition the mask, and continue  tracking from that frame.</p>
+<p class="MsoNormal">&nbsp;</p>
+<h1>The Other Tracking Buttons</h1>
+<p class="MsoNormal">You will notice that we have other options that we can use  besides the Track forward button that we did. </p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
+<img src="Articles/2026/3_DaVinci_Tips_and_Tricks/14_Remove_a_Logo_in_DaVinci_Resolve_Using_Masking_and_Tracking/Images/18.png" width="461" height="181">
+<p class="MsoNormal">&nbsp;</p>
+<ul>
+  <li>Track  one Frame Reverse (more control tracking one frame at a time)</li>
+  <li>Track  Reverse</li>
+  <li>Stop  Tracking</li>
+  <li>Track  Forward and Reverse</li>
+  <li>Track  Forward</li>
+  <li>Track  one Frame Forward</li>
+</ul>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">And that&rsquo;s it — you&rsquo;ve successfully removed a logo using  nothing more than a Power Window, a little softness, and Resolve&rsquo;s built<span style="font-family:'Cambria Math',serif; ">‑</span>in  tracker. Once you get comfortable with these tools, you&rsquo;ll  be able to fix all kinds of small distractions in your footage. Keep  experimenting, keep adjusting, and you&rsquo;ll be  amazed at how seamless your edits start to look.</p>
 <p class="MsoNormal">&nbsp;</p>
 
 
