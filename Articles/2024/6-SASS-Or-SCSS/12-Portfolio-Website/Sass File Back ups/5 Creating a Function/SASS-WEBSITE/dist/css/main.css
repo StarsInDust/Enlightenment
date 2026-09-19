@@ -10,7 +10,7 @@
   overflow: hidden;
   align-items: center;
   text-align: center;
-  background: url("../img/home-image.jpg");
+  background: url(../img/home-image.jpg);
   background-size: cover;
 }
 .home__name {
