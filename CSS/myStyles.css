@@ -437,3 +437,29 @@ p.tableOfContents a:hover {
 .main .blueEmphasis {
 	text-align: center;
 }
+.main .Intensive_Care {
+	height: 300px;
+	width: 300px;
+	text-align: center;
+}
+.main .Intensive_Care .LH2Silver {
+	width: 250px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	line-height: 0;
+	text-align: center;
+}
+.main .Intensive_Care .LH2Silver img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.main .Intensive_Care .LeftPMidBlack {
+	width: 250px;
+	max-width: 100%;
+	margin: 4px auto 0;
+	padding: 0;
+	text-align: center;
+}
