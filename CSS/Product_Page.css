@@ -1,0 +1,319 @@
+@charset "utf-8";
+/* CSS Document - Product Page Specific Styles */
+
+/* ==================== 
+   TYPOGRAPHY - Consistent Main Title
+   ==================== */
+
+/* Main Title - Consistent with Home Page */
+.mainTitle, 
+header .mainTitle,
+#container header .mainTitle {
+    font-family: Georgia, "Times New Roman", Times, serif !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
+    color: #E7C88F !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ==================== 
+   EXISTING STYLES
+   ==================== */
+
+         
+.policy a {
+    
+    font-family: 'Open+Sans', normal;
+    font-size:18px;
+    line-height: 2px;
+    font-weight: bold;
+    color: #E8E8E8;
+    font-style: normal;
+    padding: 10px;
+    padding-top: 50px;
+    margin-top: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+
+    text-decoration:none;
+    text-justify:center;
+}
+
+body footer {
+    justify-content: center;
+    margin-top: 5 auto;
+    text-align: center;
+    align-items: center;
+    padding:30px;
+    width: 95%;
+    height: 60px;
+    border-radius: 1em;
+  
+  box-shadow: 1px 3px 8px black ;
+
+    background-color: #ba5984;
+}
+/*.flex section aside button {
+    justify-content: center;
+}*/
+.flex section img {
+    padding: -30px;
+    width:auto;
+}
+.gridLayout {
+    
+    max-width:1100px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 250px,1fr));
+    gap: 20px;
+    justify-items: start; /* Align each grid item (book section) to the left */
+}
+
+.responsiveItem {
+    padding:20px;
+    font-size: 0.77rem;
+    line-height: 1.7;
+    overflow: hidden;
+    text-align: center; /* Center everything for elegant layout */
+}
+
+/* Control h2 text wrapping and alignment - center just the title */
+.responsiveItem h2 {
+    width: 100%;
+    max-width: 250px; /* Match the grid min-width */
+    margin: 10px auto; /* Center the h2 block itself */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-align: center; /* Center only the h2 text */
+    line-height: 1.3;
+    padding: 0 10px; /* Add some padding for breathing room */
+}
+
+/* Keep images centered and responsive */
+.responsiveItem img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the images */
+}
+
+.gridLayout .responsiveItem img {
+    width: auto;
+}
+.gridLayout .responsiveItem aside ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Center the price/icon pair */
+    align-items: center; /* Keep them vertically aligned */
+    gap: 8px; /* Small gap between price and icon */
+    margin: 10px 0; /* Add some spacing */
+}
+.gridLayout .responsiveItem aside button {
+    background-color: #035f16;
+    background-repeat: no-repeat;
+    background-position: 2em 50%;
+    background-size: 2em;
+    padding-left: 6em;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    display: block;
+    width: auto; /* Change from 1fr to auto for better centering */
+    margin: 10px auto; /* Center the button */
+    box-shadow: 3px 5px 10px black;
+    padding-top: 2.5;
+    padding-right: 3em;
+    padding-bottom: 2.5;
+}
+
+.gridLayout .responsiveItem aside button:hover {
+    
+    color: #f0eade;
+    
+    
+}
+
+
+/* Duplicate rules removed - using the main definitions above */
+    
+    .gridLayout .responsiveItem aside button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+    
+    ul button {
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+
+}
+    
+    
+    
+.gridLayout .responsiveItem img {
+    width: auto;
+}
+/* Duplicate aside ul rule removed - using the centered version above */
+
+.gridLayout .responsiveItem aside ul li {
+    background: #000000;
+    font-weight:700;
+    padding: 0.3em 0.6em;
+    border-radius:3px;
+    box-shadow: 2px 3px 8px black;
+    width:auto;
+}
+
+
+body {
+    font: 16px "Titillium Web", sans-serif;
+        max-width: 95vw;
+    margin: 0 auto; 
+background-color: #000000;
+}
+
+
+
+
+
+.h1Special {
+    text-align: left;
+    font-family: 'Stalemate', cursive;
+    font-size: 34px;
+    font-weight: 800;
+    color: #f5e5c6;
+    padding-top: 30px;
+    margin-top: 0px;
+    margin-right: 20;
+    margin-bottom: 1.6em;
+    margin-left: 8px;
+    padding-left: 25px;
+    font-weight: lighter;
+    padding-bottom: 30px;
+}
+
+
+
+@media screen and (max-width: 835px){
+
+.gridLayout {
+    
+    display: block;
+    padding-left: 30px;
+    
+}
+
+
+
+
+}
+
+@media screen and (max-width: 1190px) {      
+
+.gridLayout .responsiveItem aside button {
+    
+    justify-content: center;
+    
+    text-align: center;
+    align-items: center;
+    padding:15px;
+
+    
+    
+    }
+    
+    
+
+
+}
+
+h1.center {
+    
+    padding-top: 50px;
+    color: #8A0D3C;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.gridLayout .responsiveItem aside button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+ body {
+    background-color: #000000;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+ul button {
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+}
+
+.book-format {
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #fff;
+  background: #2e8b57; /* or #0074d9, #b22222, etc. */
+  padding: 0.2em 0.8em;
+  border-radius: 1em;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.15);
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #2226;
+  margin-bottom: 0.3em;
+}
+
+
+
+
+
+
+
+/* ==================== 
+   RESPONSIVE TYPOGRAPHY
+   ==================== */
+
+/* Ensure typography stays consistent across all screen sizes */
+@media screen and (min-width: 300px) {
+    .mainTitle, 
+    header .mainTitle,
+    #container header .mainTitle {
+        font-family: Georgia, "Times New Roman", Times, serif !important;
+        font-size: 24px !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mainTitle, 
+    header .mainTitle,
+    #container header .mainTitle {
+        font-family: Georgia, "Times New Roman", Times, serif !important;
+        font-size: 28px !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .mainTitle, 
+    header .mainTitle,
+    #container header .mainTitle {
+        font-family: Georgia, "Times New Roman", Times, serif !important;
+        font-size: 32px !important;
+    }
+}
+
+
+
